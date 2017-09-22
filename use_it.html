@@ -1,0 +1,252 @@
+<!doctype html>
+<html class="no-js">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>SolAR</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+    <!-- IE 10 Metro tile icon (Metro equivalent of apple-touch-icon) -->
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="msapplication-TileImage" content="https://solarframework.github.io//assets/static/favicon-144.png">
+
+    <!-- Touch icon for iOS 2.0+ and Android 2.1+ -->
+    <link rel="apple-touch-icon-precomposed" href="https://solarframework.github.io//assets/static/favicon-152.png">
+
+    <link rel="icon" type="image/x-icon" href="https://solarframework.github.io//assets/static/favicon.ico">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css assets/styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="https://solarframework.github.io//assets/styles/bootstrap.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css assets/styles/main.css -->
+    <link rel="stylesheet" href="https://solarframework.github.io//assets/styles/coderay.css">
+    <link rel="stylesheet" href="https://solarframework.github.io//assets/styles/asciidoctor.css">
+    <link rel="stylesheet" href="https://solarframework.github.io//assets/styles/font-awesome.min.css">
+    <link rel="stylesheet" href="https://solarframework.github.io//assets/styles/solar-bootstrap-theme.css">
+    <link rel="stylesheet" href="https://solarframework.github.io//assets/styles/main.css">
+    <link rel="stylesheet" href="https://solarframework.github.io//assets/styles/media.css">
+    <!-- endbuild -->
+    <script src="https://solarframework.github.io//js/vendor/jquery.js"></script><!--needed with bootstrap-->
+    <script src="https://solarframework.github.io//js/toc.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() { 
+        /* Set up style for active page in submenu and matching navbar entry This code cannot be put in navbar.html because each default.html template imports a brand new navbar so the activate class will be overwriten by brand new navbar DOM*/
+          var pageHasSubmenu = false;
+          $("#submenuconfig + .sectionbody ul li a").each(function(){
+              if ($(this).prop("href") == window.location.href) {
+                  /* Set up style for active page in submenu */
+                  pageHasSubmenu = true;
+                  $(this).addClass("active"); 
+                  $(this).parents("p").addClass("active");
+                  return false; /* same as break, specific for jquery each() function */
+              }
+          });
+          var matchingNavbarURL = window.location.href;
+          if (pageHasSubmenu) {
+              var urlParts = window.location.href.split("/");
+              var matchingNavbarItem = urlParts[urlParts.length-3];
+              matchingNavbarURL = window.location.href.substring(0, window.location.href.indexOf(matchingNavbarItem))+matchingNavbarItem+".html";       
+          }
+          /* Set up style for active item in navbar (no click on submenu yet) This code cannot be put in navbar.html because each default.html template imports a brand new navbar so the activate class will be overwriten by brand new navbar DOM*/
+          $("#navbar-collapse ul.navbar-nav a").each(function(){
+              if ($(this).prop("href") == matchingNavbarURL) {
+                  $(this).addClass('active'); 
+                  $(this).parents('li').addClass('active');
+                  return false; /* same as break, specific for jquery each() function */
+              }
+          });
+          /* Fix padding-top on anchor with TOC */
+          window.addEventListener("hashchange", function() { scrollBy(0, -65) })
+  
+          /* Configure TOC to take into account all titles */
+          $("#toc").toc(  { headers: "h2, h3, h4, h5, h6",
+                              listType: "ul",
+                              title: "<div id='toctitle'>Table of Contents</div>",
+                              noBackToTopLinks: true /*usefull to avoid tag <i class="icon-arrow-up back-to-top"> </i> to be placed between #submenuconfig and sectionbody and screw the submenu css style*/
+           });
+        });
+      </script>
+</head>
+
+    <body>
+        <!--[if lt IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div><div class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-mg-3">
+                <div class="navbar-header">
+                    <ul class="nav navbar-nav navbar-brand">
+                        <li><a href="https://solarframework.github.io//" class="link">* SolAR *</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-9">
+                <div class="collapse navbar-collapse tabs" id="navbar-collapse">
+                    <ul class="nav navbar-nav navbar-left">
+
+                        
+                        
+                        
+                        
+                        
+                        <li>
+                            <a href="https://solarframework.github.io//discover.html">
+                                <span>Discover</span>
+                            </a>
+                        </li>                          
+                        
+                        
+                        
+                        <li>
+                            <a href="https://solarframework.github.io//contribute.html">
+                                <span>Contribute</span>
+                            </a>
+                        </li>                          
+                        
+                        
+                        
+                        <li>
+                            <a href="https://solarframework.github.io//use_it.html">
+                                <span>Use it</span>
+                            </a>
+                        </li>                          
+                        
+                        
+                        
+                        <li>
+                            <a href="https://solarframework.github.io//community.html">
+                                <span>Community</span>
+                            </a>
+                        </li>                          
+                        
+                        
+
+                        <li>
+                          <form action="https://solarframework.github.io//search.html" method="get" class="navbar-form" role="search">
+                            <div class="input-group">
+                                <input type="text" id="search" class="form-control" placeholder="Search"
+                                       name="q" class="span1" type="text" size="15">
+                                <div class="input-group-btn">
+                                    <button class="btn btn-default" type="submit">
+                                      <i class="fa fa-search"></i>
+                                    </button>
+                                </div>
+                            </div>
+                          </form>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+</div>
+
+        <div class="container">
+            <div class="well">
+              <h1>Use it !</h1>
+<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#submenuconfig">submenuconfig</a></li>
+<li><a href="#please_contribute">Please contribute</a>
+<ul class="sectlevel3">
+<li><a href="#solar_framework_is_open_source">SolAR framework is Open-source</a></li>
+</ul>
+</li>
+<li><a href="#please_have_a_look_at_features_coming_soon">Please have a look at features coming soon</a></li>
+<li><a href="#how_to_use">How to use</a></li>
+</ul>
+</div>
+<div class="sect1">
+<h2 id="submenuconfig"><a class="anchor" href="#submenuconfig"></a><a class="link" href="#submenuconfig">submenuconfig</a></h2>
+<div class="sectionbody">
+<div class="ulist none">
+<ul class="none">
+<li>
+<p><a href="https://solarframework.github.io//use_it/downloads/">downloads</a></p>
+</li>
+<li>
+<p><a href="https://solarframework.github.io//use_it/getting_started/">getting started</a></p>
+</li>
+<li>
+<p><a href="https://solarframework.github.io//use_it/api_documentation/">API documentation</a></p>
+</li>
+<li>
+<p><a href="https://solarframework.github.io//use_it/tutorials/">tutorials</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="please_contribute"><a class="anchor" href="#please_contribute"></a><a class="link" href="#please_contribute">Please contribute</a></h2>
+<div class="sectionbody">
+<div class="sect3">
+<h4 id="solar_framework_is_open_source"><a class="anchor" href="#solar_framework_is_open_source"></a><a class="link" href="#solar_framework_is_open_source">SolAR framework is Open-source</a></h4>
+<div class="paragraph">
+<p>his framework is open-source, under <a href="https://www.apache.org/licenses/LICENSE-2.0"><strong>Apache v2 licence</strong></a>,
+that lets you use it <strong>for research</strong> as well as <strong>commercial purposes</strong>
+adressing various domains (smart factory, smart home, real estate,
+e-health, etc).</p>
+</div>
+<div class="paragraph">
+<p>Nevertheless, the components you will connect to develop your own solution can be under various licences. Always check the compatibility of the components licences, the SolAR community can not be held reponsible for a violation of the licenses of the components that you use.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="please_have_a_look_at_features_coming_soon"><a class="anchor" href="#please_have_a_look_at_features_coming_soon"></a><a class="link" href="#please_have_a_look_at_features_coming_soon">Please have a look at features coming soon</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Unresolved directive in use_it.adoc - include::roadmap.adoc[]</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="how_to_use"><a class="anchor" href="#how_to_use"></a><a class="link" href="#how_to_use">How to use</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>SOlAR framework can be used by :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>pose estimation developers (using a C++ API) and</p>
+</li>
+<li>
+<p>designers (using an editor),</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>to create a good pose estimation solution.</p>
+</div>
+<div class="paragraph">
+<p>It can be used  by the developer of AR application in their IDE.</p>
+</div>
+</div>
+</div>
+            </div>
+        </div>
+
+        <!-- build:js scripts/vendor.js -->
+        <!-- bower:js -->
+
+        <!-- endbower -->
+        <!-- endbuild -->
+
+    <!-- build:js({.tmp,src/main/webapp}) scripts/app.js -->
+    <script src="https://solarframework.github.io//js/vendor/modernizr.js"></script>
+    <!-- endbuild -->
+    
+    </body>
+</html>

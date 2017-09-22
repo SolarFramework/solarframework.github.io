@@ -1,0 +1,538 @@
+<!doctype html>
+<html class="no-js">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>SolAR</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+    <!-- IE 10 Metro tile icon (Metro equivalent of apple-touch-icon) -->
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="msapplication-TileImage" content="https://solarframework.github.io//assets/static/favicon-144.png">
+
+    <!-- Touch icon for iOS 2.0+ and Android 2.1+ -->
+    <link rel="apple-touch-icon-precomposed" href="https://solarframework.github.io//assets/static/favicon-152.png">
+
+    <link rel="icon" type="image/x-icon" href="https://solarframework.github.io//assets/static/favicon.ico">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css assets/styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="https://solarframework.github.io//assets/styles/bootstrap.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css assets/styles/main.css -->
+    <link rel="stylesheet" href="https://solarframework.github.io//assets/styles/coderay.css">
+    <link rel="stylesheet" href="https://solarframework.github.io//assets/styles/asciidoctor.css">
+    <link rel="stylesheet" href="https://solarframework.github.io//assets/styles/font-awesome.min.css">
+    <link rel="stylesheet" href="https://solarframework.github.io//assets/styles/solar-bootstrap-theme.css">
+    <link rel="stylesheet" href="https://solarframework.github.io//assets/styles/main.css">
+    <link rel="stylesheet" href="https://solarframework.github.io//assets/styles/media.css">
+    <!-- endbuild -->
+    <script src="https://solarframework.github.io//js/vendor/jquery.js"></script><!--needed with bootstrap-->
+    <script src="https://solarframework.github.io//js/toc.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() { 
+        /* Set up style for active page in submenu and matching navbar entry This code cannot be put in navbar.html because each default.html template imports a brand new navbar so the activate class will be overwriten by brand new navbar DOM*/
+          var pageHasSubmenu = false;
+          $("#submenuconfig + .sectionbody ul li a").each(function(){
+              if ($(this).prop("href") == window.location.href) {
+                  /* Set up style for active page in submenu */
+                  pageHasSubmenu = true;
+                  $(this).addClass("active"); 
+                  $(this).parents("p").addClass("active");
+                  return false; /* same as break, specific for jquery each() function */
+              }
+          });
+          var matchingNavbarURL = window.location.href;
+          if (pageHasSubmenu) {
+              var urlParts = window.location.href.split("/");
+              var matchingNavbarItem = urlParts[urlParts.length-3];
+              matchingNavbarURL = window.location.href.substring(0, window.location.href.indexOf(matchingNavbarItem))+matchingNavbarItem+".html";       
+          }
+          /* Set up style for active item in navbar (no click on submenu yet) This code cannot be put in navbar.html because each default.html template imports a brand new navbar so the activate class will be overwriten by brand new navbar DOM*/
+          $("#navbar-collapse ul.navbar-nav a").each(function(){
+              if ($(this).prop("href") == matchingNavbarURL) {
+                  $(this).addClass('active'); 
+                  $(this).parents('li').addClass('active');
+                  return false; /* same as break, specific for jquery each() function */
+              }
+          });
+          /* Fix padding-top on anchor with TOC */
+          window.addEventListener("hashchange", function() { scrollBy(0, -65) })
+  
+          /* Configure TOC to take into account all titles */
+          $("#toc").toc(  { headers: "h2, h3, h4, h5, h6",
+                              listType: "ul",
+                              title: "<div id='toctitle'>Table of Contents</div>",
+                              noBackToTopLinks: true /*usefull to avoid tag <i class="icon-arrow-up back-to-top"> </i> to be placed between #submenuconfig and sectionbody and screw the submenu css style*/
+           });
+        });
+      </script>
+</head>
+
+    <body>
+        <!--[if lt IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div><div class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-mg-3">
+                <div class="navbar-header">
+                    <ul class="nav navbar-nav navbar-brand">
+                        <li><a href="https://solarframework.github.io//" class="link">* SolAR *</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-9">
+                <div class="collapse navbar-collapse tabs" id="navbar-collapse">
+                    <ul class="nav navbar-nav navbar-left">
+
+                        
+                        
+                        
+                        
+                        
+                        <li>
+                            <a href="https://solarframework.github.io//discover.html">
+                                <span>Discover</span>
+                            </a>
+                        </li>                          
+                        
+                        
+                        
+                        <li>
+                            <a href="https://solarframework.github.io//contribute.html">
+                                <span>Contribute</span>
+                            </a>
+                        </li>                          
+                        
+                        
+                        
+                        <li>
+                            <a href="https://solarframework.github.io//use_it.html">
+                                <span>Use it</span>
+                            </a>
+                        </li>                          
+                        
+                        
+                        
+                        <li>
+                            <a href="https://solarframework.github.io//community.html">
+                                <span>Community</span>
+                            </a>
+                        </li>                          
+                        
+                        
+
+                        <li>
+                          <form action="https://solarframework.github.io//search.html" method="get" class="navbar-form" role="search">
+                            <div class="input-group">
+                                <input type="text" id="search" class="form-control" placeholder="Search"
+                                       name="q" class="span1" type="text" size="15">
+                                <div class="input-group-btn">
+                                    <button class="btn btn-default" type="submit">
+                                      <i class="fa fa-search"></i>
+                                    </button>
+                                </div>
+                            </div>
+                          </form>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+</div>
+
+        <div class="container">
+            <div class="well">
+              <h1>Contribute to Core</h1>
+<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#submenuconfig">submenuconfig</a></li>
+<li><a href="#solar_core_presentation">SolAR Core presentation</a></li>
+<li><a href="#containers_and_components">Containers and components</a></li>
+<li><a href="#the_solar_core">The SolAR core</a></li>
+<li><a href="#solar_core_git">Solar Core GIT</a></li>
+<li><a href="#best_practises">Best practises</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</div>
+<div id="preamble">
+<div class="sectionbody">
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+NOT VALIDATED
+TIP: Write here if you validate with your name and your comment
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Please contribute to SolAR !</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The SolAR initiative is looking for contributors for architecture, development and documentation on the Core of the framework.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="submenuconfig"><a class="anchor" href="#submenuconfig"></a><a class="link" href="#submenuconfig">submenuconfig</a></h2>
+<div class="sectionbody">
+<div class="ulist none">
+<ul class="none">
+<li>
+<p><a href="https://solarframework.github.io//contribute/how_it_works/">how it works</a></p>
+</li>
+<li>
+<p><a href="https://solarframework.github.io//contribute/how_to_build/">getting started</a></p>
+</li>
+<li>
+<p><a href="https://solarframework.github.io//contribute/create_component/">create a component</a></p>
+</li>
+<li>
+<p><a href="https://solarframework.github.io//contribute/contribute_to_core/">contribute to core</a></p>
+</li>
+<li>
+<p><a href="https://solarframework.github.io//contribute/best_practises/">best practises</a></p>
+</li>
+<li>
+<p><a href="https://solarframework.github.io//contribute/tools/">tools</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="solar_core_presentation"><a class="anchor" href="#solar_core_presentation"></a><a class="link" href="#solar_core_presentation">SolAR Core presentation</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The <strong>SolAR</strong> core handles</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>the <strong>dynamic load of different components</strong> embedded in <strong>containers</strong> downloaded from different distant servers.</p>
+</li>
+<li>
+<p>the <strong>connection</strong> between some of these components, their configuration</p>
+</li>
+<li>
+<p>the feature of <strong>saving the  pose estimator scheme</strong> (the required components, their configurations as well as their connectivities)</p>
+</li>
+<li>
+<p>to <strong>build a dynamic library</strong> that could be directly used by third applications.</p>
+</li>
+<li>
+<p><strong>multi-threading</strong> management (?) A VALIDER</p>
+</li>
+<li>
+<p>local and distant <strong>distributed architecture</strong> management</p>
+</li>
+</ul>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="literalblock">
+<div class="content">
+<pre>Moreover, the *SolAR core* has to manage the compatibility between components licenses and supported  plateforms by informing the user of conflicting components due to incompatible license or plateform //availability.</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Core SolAR is the main part of SolAR, where components can be connected to realize a pose estimation.</p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>The whole solution for pose estimation, connecting different vision SolAR components is called a "pose estimation scheme" or a "pose estimation peipeline".
+Pose estimation scheme is currently done with the SLAM technique.</p>
+</div>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>SLAM schema, since the Parallel Tracking And Mapping implementation, takes advantage of multi-threading to be able to execute the camera pose estimation as well as mapping and loop closure detection in real-time on low ressources terminals.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>In this way, camera pose can be estimated at frame rate while mapping and loop closure detection that are processor-consuming can be executed in parallel when needed according to pre-defined criteria.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Moreover, augmented reality applications generally require very low latency tracking (even more when executed on see-through displays) requiring local computation, but mapping or loop closure detection can be remotely executed to reduce local terminal load.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="containers_and_components"><a class="anchor" href="#containers_and_components"></a><a class="link" href="#containers_and_components">Containers and components</a></h2>
+<div class="sectionbody">
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+A container contains several components .
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>For Example, SolarContainerOpenCV includes 10 components.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="the_solar_core"><a class="anchor" href="#the_solar_core"></a><a class="link" href="#the_solar_core">The SolAR core</a></h2>
+<div class="sectionbody">
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+NOT VALIDATED
+TIP: Write here if you validate with your name and your comment
+</td>
+</tr>
+</table>
+</div>
+<div class="sect2">
+<h3 id="solar_core_architecture"><a class="anchor" href="#solar_core_architecture"></a><a class="link" href="#solar_core_architecture">SolAR Core architecture</a></h3>
+<div class="paragraph">
+<p>SolAR Editor (roadmap 2018) will totally rely on SolAR Core architecture, that is why Core architecture has been conceived to be <strong>modular</strong>.</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+cécile: je pense que qqs chémas d&#8217;architecture logicelle de SolAR Core seraient utiles ici.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="solar_core_repository_structure"><a class="anchor" href="#solar_core_repository_structure"></a><a class="link" href="#solar_core_repository_structure">SolAR Core repository structure</a></h3>
+<div class="paragraph">
+<p>|- config |- doc |- interfaces |- libs |- models |- scripts |- src |-
+resources |- samples |- tests |- tools</p>
+</div>
+<div class="paragraph">
+<p>config/</p>
+</div>
+<div class="paragraph">
+<p>*application’s configuration (can be embedded in the application through a bundle or setup, or deployed in the OS' specific configuration folder  - for instance /etc on unixes)</p>
+</div>
+<div class="paragraph">
+<p>doc/</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>documentation</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>interfaces/</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>library public API (for C/C++ packages). Can also contain client/server remoting interface description files (Corba’s IDL, COM/DCOM, dbus' xml, C header file for in house stub/skeleton code generators for  pcz etc…)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>libs/</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>project directory entry point for all the submodules library the main project depends on (NOTE : submodules can also be included at other levels of the project tree, depending on their purpose)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>model/</p>
+</div>
+<div class="paragraph">
+<p>conception models (UML, Merise …)</p>
+</div>
+<div class="paragraph">
+<p>scripts/</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>scripts (database creation, packages installation, deployment …) not
+used during project build</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>src/</p>
+</div>
+<div class="paragraph">
+<p>main product/executable source code</p>
+</div>
+<div class="paragraph">
+<p>resources/</p>
+</div>
+<div class="paragraph">
+<p>main product/executable resources (deployed in /usr/share in linux, or
+bundled in the application)</p>
+</div>
+<div class="paragraph">
+<p>samples/</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>usage samples</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>tests/</p>
+</div>
+<div class="paragraph">
+<p>main product/executable’s tests</p>
+</div>
+<div class="paragraph">
+<p>tools/</p>
+</div>
+<div class="paragraph">
+<p>main product/executable’s tools used for project build(code generators
+…)</p>
+</div>
+<div class="paragraph">
+<p>libs/libname/doc</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>libname&#8217;s documentation</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>libs/libname/interfaces/</p>
+</div>
+<div class="paragraph">
+<p>libname&#8217;s public interface</p>
+</div>
+<div class="paragraph">
+<p>libs/libname/src/</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>libname&#8217;s source code</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>libs/libname/samples/</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>libname&#8217;s use samples</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>libs/libname/tests/</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>libname&#8217;s tests</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>[<a href="https://forge.b-com.com/plugins/docman/?group_id=" class="bare">https://forge.b-com.com/plugins/docman/?group_id=</a> 251&amp;action= show&amp;id= 935
+typical header of your source files]</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="solar_core_git"><a class="anchor" href="#solar_core_git"></a><a class="link" href="#solar_core_git">Solar Core GIT</a></h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="best_practises"><a class="anchor" href="#best_practises"></a><a class="link" href="#best_practises">Best practises</a></h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="contact"><a class="anchor" href="#contact"></a><a class="link" href="#contact">Contact</a></h2>
+<div class="sectionbody">
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+NOT VALIDATED
+TIP: Write here if you validate with your name and your comment
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>For any request, <a href="mailto:jerome.royan@b-com.com">Please Contact Us</a></p>
+</div>
+</div>
+</div>
+            </div>
+        </div>
+
+        <!-- build:js scripts/vendor.js -->
+        <!-- bower:js -->
+
+        <!-- endbower -->
+        <!-- endbuild -->
+
+    <!-- build:js({.tmp,src/main/webapp}) scripts/app.js -->
+    <script src="https://solarframework.github.io//js/vendor/modernizr.js"></script>
+    <!-- endbuild -->
+    
+    </body>
+</html>

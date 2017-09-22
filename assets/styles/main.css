@@ -1,0 +1,102 @@
+p.mandatory {
+    text-align: right;
+    font-size: 12px;
+    margin-bottom: 0px;
+}
+
+body {
+   font-family: Arial, sans-serif;
+   font-size: 14px;
+   line-height: 1.42857143;
+   color: #000;
+   background-color: #f6f6f6;
+   /*padding-bottom: 163px;*/
+}
+
+.navbar{
+  z-index: 1000;
+  position: fixed;
+  width: 100%;
+}
+.navbar-header ul {
+  padding: 0px;
+}
+
+.container{
+  padding-top: 110px;
+}
+h1 {
+  margin-top: 0px;
+}
+
+@media screen and (min-width: 1650px) {
+  #toc.toc {
+      margin-top: 0!important;
+      background-color: #f8f8f7;
+      position: fixed;
+      width: 20em;
+      left: 0;
+      top: 60px;
+      border-right: 1px solid #efefed;
+      border-top-width: 0!important;
+      border-bottom-width: 0!important;
+      z-index: 2;
+      padding: 1.25em 1em;
+      height: 100%;
+      overflow: auto;
+  }
+}
+
+.well {
+  background-color: #f6f6f6;
+  border: none;
+  border-radius: 0px;
+}
+
+
+/*information/loading text in navbar*/
+.text-warning, .text-info, .text-error {
+  padding-top:15px;
+  font-weight: bold;
+  font-size: 16px;
+}
+.text-warning {
+  color: #FFB400;
+}
+.text-info {
+  color: #FFFFFF;
+}
+.text-error {
+  color: #FF4F4F;
+}
+
+/* submenu display part */
+#submenuconfig, #toc a[href="#submenuconfig"] {
+  display: none;
+}
+#submenuconfig + .sectionbody{
+  background-color: gray;
+  position: fixed;
+  top: 52px;
+  left: 0px;
+  height: 30px;
+  padding-left: 117px;
+  width: 100%;
+  z-index: 3;
+}
+#submenuconfig + .sectionbody ul li, #submenuconfig + .sectionbody ul li p {
+  display: inline;
+}
+#submenuconfig + .sectionbody ul li {
+  padding-left: 20px;
+}
+#submenuconfig + .sectionbody ul li:last-child {
+  padding-right: 20px;
+}
+#submenuconfig + .sectionbody ul li a {
+  color: white;
+}
+#submenuconfig + .sectionbody ul li a:focus, #submenuconfig + .sectionbody ul li a:hover, #submenuconfig + .sectionbody ul li a.active {
+  text-decoration: none;
+  color: #00beef;
+}

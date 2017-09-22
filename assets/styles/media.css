@@ -1,0 +1,32 @@
+#our_contributors + .ulist.none li .exampleblock .paragraph p, #our_contributors + .ulist.none li .exampleblock .hdlist {
+  float: left;
+  padding-left: 30px;
+}
+#our_contributors + .ulist.none li .exampleblock .hdlist1 {
+  padding-left: 30px;
+}
+#our_contributors + .ulist.none li .exampleblock .hdlist:last-child {
+  float: none;
+  min-height: 130px;
+}
+#our_contributors + .ulist.none li .exampleblock .hdlist td {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  font-size:1.0625rem;
+}
+#our_contributors + .ulist.none li p {
+  margin-bottom: 0px;
+}
+#our_partners + .ulist.none li {
+  display: inline-block;
+  float: left;
+  margin-right: 10px;
+}
+#our_partners + .ulist.none li .exampleblock .content {
+  height: 157px;
+  line-height: 120px; 
+  white-space: nowrap;
+}
+#our_partners + .ulist.none li:last-child {
+  float: none;
+}

@@ -1,0 +1,237 @@
+<!doctype html>
+<html class="no-js">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>SolAR</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+    <!-- IE 10 Metro tile icon (Metro equivalent of apple-touch-icon) -->
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="msapplication-TileImage" content="https://solarframework.github.io//assets/static/favicon-144.png">
+
+    <!-- Touch icon for iOS 2.0+ and Android 2.1+ -->
+    <link rel="apple-touch-icon-precomposed" href="https://solarframework.github.io//assets/static/favicon-152.png">
+
+    <link rel="icon" type="image/x-icon" href="https://solarframework.github.io//assets/static/favicon.ico">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css assets/styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="https://solarframework.github.io//assets/styles/bootstrap.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css assets/styles/main.css -->
+    <link rel="stylesheet" href="https://solarframework.github.io//assets/styles/coderay.css">
+    <link rel="stylesheet" href="https://solarframework.github.io//assets/styles/asciidoctor.css">
+    <link rel="stylesheet" href="https://solarframework.github.io//assets/styles/font-awesome.min.css">
+    <link rel="stylesheet" href="https://solarframework.github.io//assets/styles/solar-bootstrap-theme.css">
+    <link rel="stylesheet" href="https://solarframework.github.io//assets/styles/main.css">
+    <link rel="stylesheet" href="https://solarframework.github.io//assets/styles/media.css">
+    <!-- endbuild -->
+    <script src="https://solarframework.github.io//js/vendor/jquery.js"></script><!--needed with bootstrap-->
+    <script src="https://solarframework.github.io//js/toc.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() { 
+        /* Set up style for active page in submenu and matching navbar entry This code cannot be put in navbar.html because each default.html template imports a brand new navbar so the activate class will be overwriten by brand new navbar DOM*/
+          var pageHasSubmenu = false;
+          $("#submenuconfig + .sectionbody ul li a").each(function(){
+              if ($(this).prop("href") == window.location.href) {
+                  /* Set up style for active page in submenu */
+                  pageHasSubmenu = true;
+                  $(this).addClass("active"); 
+                  $(this).parents("p").addClass("active");
+                  return false; /* same as break, specific for jquery each() function */
+              }
+          });
+          var matchingNavbarURL = window.location.href;
+          if (pageHasSubmenu) {
+              var urlParts = window.location.href.split("/");
+              var matchingNavbarItem = urlParts[urlParts.length-3];
+              matchingNavbarURL = window.location.href.substring(0, window.location.href.indexOf(matchingNavbarItem))+matchingNavbarItem+".html";       
+          }
+          /* Set up style for active item in navbar (no click on submenu yet) This code cannot be put in navbar.html because each default.html template imports a brand new navbar so the activate class will be overwriten by brand new navbar DOM*/
+          $("#navbar-collapse ul.navbar-nav a").each(function(){
+              if ($(this).prop("href") == matchingNavbarURL) {
+                  $(this).addClass('active'); 
+                  $(this).parents('li').addClass('active');
+                  return false; /* same as break, specific for jquery each() function */
+              }
+          });
+          /* Fix padding-top on anchor with TOC */
+          window.addEventListener("hashchange", function() { scrollBy(0, -65) })
+  
+          /* Configure TOC to take into account all titles */
+          $("#toc").toc(  { headers: "h2, h3, h4, h5, h6",
+                              listType: "ul",
+                              title: "<div id='toctitle'>Table of Contents</div>",
+                              noBackToTopLinks: true /*usefull to avoid tag <i class="icon-arrow-up back-to-top"> </i> to be placed between #submenuconfig and sectionbody and screw the submenu css style*/
+           });
+        });
+      </script>
+</head>
+
+    <body>
+        <!--[if lt IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div><div class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-mg-3">
+                <div class="navbar-header">
+                    <ul class="nav navbar-nav navbar-brand">
+                        <li><a href="https://solarframework.github.io//" class="link">* SolAR *</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-9">
+                <div class="collapse navbar-collapse tabs" id="navbar-collapse">
+                    <ul class="nav navbar-nav navbar-left">
+
+                        
+                        
+                        
+                        
+                        
+                        <li>
+                            <a href="https://solarframework.github.io//discover.html">
+                                <span>Discover</span>
+                            </a>
+                        </li>                          
+                        
+                        
+                        
+                        <li>
+                            <a href="https://solarframework.github.io//contribute.html">
+                                <span>Contribute</span>
+                            </a>
+                        </li>                          
+                        
+                        
+                        
+                        <li>
+                            <a href="https://solarframework.github.io//use_it.html">
+                                <span>Use it</span>
+                            </a>
+                        </li>                          
+                        
+                        
+                        
+                        <li>
+                            <a href="https://solarframework.github.io//community.html">
+                                <span>Community</span>
+                            </a>
+                        </li>                          
+                        
+                        
+
+                        <li>
+                          <form action="https://solarframework.github.io//search.html" method="get" class="navbar-form" role="search">
+                            <div class="input-group">
+                                <input type="text" id="search" class="form-control" placeholder="Search"
+                                       name="q" class="span1" type="text" size="15">
+                                <div class="input-group-btn">
+                                    <button class="btn btn-default" type="submit">
+                                      <i class="fa fa-search"></i>
+                                    </button>
+                                </div>
+                            </div>
+                          </form>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+</div>
+
+        <div class="container">
+            <div class="well">
+              <div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#submenuconfig">submenuconfig</a></li>
+<li><a href="#solar_initiative">SolAR initiative</a></li>
+<li><a href="#our_roadmap">Our roadmap</a></li>
+</ul>
+</div>
+<div class="sect1">
+<h2 id="submenuconfig"><a class="anchor" href="#submenuconfig"></a><a class="link" href="#submenuconfig">submenuconfig</a></h2>
+<div class="sectionbody">
+<div class="ulist none">
+<ul class="none">
+<li>
+<p><a href="https://solarframework.github.io//discover/what/">what</a></p>
+</li>
+<li>
+<p><a href="https://solarframework.github.io//discover/why/">why</a></p>
+</li>
+<li>
+<p><a href="https://solarframework.github.io//discover/who/">who</a></p>
+</li>
+<li>
+<p><a href="https://solarframework.github.io//discover/how/">how</a></p>
+</li>
+<li>
+<p><a href="https://solarframework.github.io//discover/when/">when</a></p>
+</li>
+<li>
+<p><a href="https://solarframework.github.io//discover/for_whom/">for whom</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="solar_initiative"><a class="anchor" href="#solar_initiative"></a><a class="link" href="#solar_initiative">SolAR initiative</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>SolAR initiative started in November 2016.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="our_roadmap"><a class="anchor" href="#our_roadmap"></a><a class="link" href="#our_roadmap">Our roadmap</a></h2>
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="data:image/PNG;base64,iVBORw0KGgoAAAANSUhEUgAAA8AAAALQCAMAAAEfrtkQAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADkUExURQAAAGhoaKampiQkJG9vb39/fzAwMHNzc3t7e////xoaGk5OTlNTU21tbX19fXJycioqKgYGBsnJyfv7+01NTaenpzIyMvX19cPDw52dnff39x4eHl1dXZGRkZycnDQ0NAUFBd7e3hEREVBQUJaWlklJSWJiYjk5OQsLC+rq6kNDQ2NjY3d3dwoKCoeHh+zs7MjIyB8fH6GhoRAQED4+PlhYWKWlpeXl5S8vL+Hh4YyMjBUVFTw8PEtLSzo6OvHx8RgYGNPT02FhYYKCgpmZmVFRUVlZWdvb25SUlMzMzMHBwQAAAO/3tLwAAABMdFJOU////////////////////////////////////////////////////////////////////////////////////////////////////wCejeTMAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAyA0lEQVR4Xu3dy7KiShCFYQxHFcEU5zokCHkJJuz3f6CTmZUgeLePiFX+X3crIm67drooQC7Fv9j4/cdVfv9xvPHH8MYfE9843NLY00t48MZHe3oJi7c4yJ9h6KSrhNzbm3Q6TWhCKKqqDqHWsUv9qvV9xzeu7Fa1fv+hN75msTfW37Xc+9uoIsivebTYp7qsrF/0t7m02Bt/bY6XfuMV8MYfwxt/zOJv3Ba13E67RBNn1bdnIEstCKzXO635xp3c+9uIs//DUr/qg7zxTu7ju1Rd1/Rx8BDv6Bbf6FffeAW88cfwxh+T8RvXlcyfit22lPXvkXaLH2izvKN1uP5QyFpqt8ove2ixz5kvLTWvnr1xEXahqrd9Kw/LEJcIFtvqE9/3dotX29z0sTfW7T2VLnIVcctP/i2ebuNSH3vjJrT1dNk621/1CnjjT/FZ5scNW28/Tt620/Xjj5M3thXzz+u66uCDH7Z4heOClsyHzyz/0SqLfeuDU/GNfc586S3z6mvv++iNV9sisFq3+KkWH20poCrHZYFsN77421zijd8nvvEKeOOP4Y0/hjf+GN74Y1Z7YwD4fxpfir7kEyxlhTeuS71d9I11n5uwrecbl3xrk75xrbugyjqLvp3exNWaONnb6fvq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" alt="roadmap">
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+NOT VALIDATED
+TIP: Write here if you validate with your name and your comment
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>WARNING : mettre la roadmap ici</p>
+</div>
+</div>
+</div>
+            </div>
+        </div>
+
+        <!-- build:js scripts/vendor.js -->
+        <!-- bower:js -->
+
+        <!-- endbower -->
+        <!-- endbuild -->
+
+    <!-- build:js({.tmp,src/main/webapp}) scripts/app.js -->
+    <script src="https://solarframework.github.io//js/vendor/modernizr.js"></script>
+    <!-- endbuild -->
+    
+    </body>
+</html>
