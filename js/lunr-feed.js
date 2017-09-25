@@ -37,7 +37,7 @@ index.add({
 
 index.add({
     title: null,
-    content: "\n\n  \n    SolAR\n    SolAR\n    https://solarframework.github.io//\n    \n    Mon, 25 Sep 2017 08:55:57 +0000\n    Mon, 25 Sep 2017 08:55:57 +0000\n    Jekyll v3.5.1\n    \n  \n\n",
+    content: "\n\n  \n    SolAR\n    SolAR\n    https://solarframework.github.io//\n    \n    Mon, 25 Sep 2017 09:04:36 +0000\n    Mon, 25 Sep 2017 09:04:36 +0000\n    Jekyll v3.5.1\n    \n  \n\n",
     id: 4
   });
   
@@ -125,7 +125,7 @@ index.add({
 
     index.add({
       title: "who",
-      content: "\nTable of Contents\n\nsubmenuconfig\nWho ?\n\n\n\nsubmenuconfig\n\n\n\n\nwhat\n\n\nhow\n\n\nwho\n\n\nwhy\n\n\nwhen\n\n\nfor whom\n\n\n\n\n\n\nWho ?\n\n\nSolAR initiative has been launched by the Technological Research Institute b&lt;&gt;com, and is open to any contributors or users who share the  SolAR philosophy.\n\n\nOur Partners\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOur Contributors\n\n\n\n\n\n\n\n\n\n\n\n\n\nFirst Name\n\n\nNam Duong\n\n\n\n\nName\n\n\nDuong\n\n\n\n\nSurname\n\n\ntest\n\n\n\n\nEntity\n\n\nIRT b&lt;&gt;com\n\n\n\n\n\n\n\n\nRole\n\n\nPHD Student\n\n\n\n\nMail\n\n\nnam-duong.duong@b-com.com\n\n\n\n\nSkills\n\n\nMachine Learning\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFirst Name\n\n\nAmine\n\n\n\n\nName\n\n\nKacete\n\n\n\n\nSurname\n\n\nAmine\n\n\n\n\nEntity\n\n\nIRT b&lt;&gt;com\n\n\n\n\n\n\n\n\nRole\n\n\nResearch Engineer\n\n\n\n\nMail\n\n\namine.kacete@b-com.com\n\n\n\n\nSkills\n\n\nMachine Learning\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFirst Name\n\n\nNicole\n\n\n\n\nName\n\n\nLeminous\n\n\n\n\nSurname\n\n\nNicole\n\n\n\n\nEntity\n\n\nIRT b&lt;&gt;com\n\n\n\n\n\n\n\n\nRole\n\n\nProject Leader\n\n\n\n\nMail\n\n\nnicole.leminous@b-com.com\n\n\n\n\nSkills\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFirst Name\n\n\nCécile\n\n\n\n\nName\n\n\nMarc\n\n\n\n\nSurname\n\n\nCess\n\n\n\n\nEntity\n\n\nIRT b&lt;&gt;com\n\n\n\n\n\n\n\n\nRole\n\n\nResearch Engineer\n\n\n\n\nMail\n\n\ncecile.marc@b-com.com\n\n\n\n\nSkills\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFirst Name\n\n\nJean-Bernard\n\n\n\n\nName\n\n\nRault\n\n\n\n\nSurname\n\n\nJean-Marc\n\n\n\n\nEntity\n\n\nIRT b&lt;&gt;com\n\n\n\n\n\n\n\n\nRole\n\n\nResearch Engineer\n\n\n\n\nMail\n\n\njean-bernard.rault@b-com.com\n\n\n\n\nSkills\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFirst Name\n\n\nJérôme\n\n\n\n\nName\n\n\nRoyan\n\n\n\n\nSurname\n\n\nGranger\n\n\n\n\nEntity\n\n\nIRT b&lt;&gt;com\n\n\n\n\n\n\n\n\nRole\n\n\nProduct Owner\n\n\n\n\nMail\n\n\njerome.royan@b-com.com\n\n\n\n\nSkills\n\n\nAugmented reality, Virtual reality\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFirst Name\n\n\nAzdine\n\n\n\n\nName\n\n\nTadrist\n\n\n\n\nSurname\n\n\nAzdine\n\n\n\n\nEntity\n\n\nIRT b&lt;&gt;com\n\n\n\n\n\n\n\n\nRole\n\n\nResearch Engineer\n\n\n\n\nMail\n\n\nazdine.tadrist@b-com.com\n\n\n\n\nSkills\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFirst Name\n\n\nThomas\n\n\n\n\nName\n\n\nWentz\n\n\n\n\nSurname\n\n\nThomas\n\n\n\n\nEntity\n\n\nIRT b&lt;&gt;com\n\n\n\n\n\n\n\n\nRole\n\n\nResearch Engineer\n\n\n\n\nMail\n\n\nthomas.wentz@b-com.com\n\n\n\n\nSkills\n\n\nRGB-D pose estimation\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFirst Name\n\n\nSylvain\n\n\n\n\nName\n\n\nDuchene\n\n\n\n\nSurname\n\n\nSylvain\n\n\n\n\nEntity\n\n\nIRT b&lt;&gt;com\n\n\n\n\n\n\n\n\nRole\n\n\nResearch Engineer\n\n\n\n\nMail\n\n\nsylvain.duchene@b-com.com\n\n\n\n\nSkills\n\n\nComputer Vision / Computer Graphics\n\n\n\n\n\n\n\n\n\n\n\n",
+      content: "\nTable of Contents\n\nsubmenuconfig\nWho ?\n\n\n\nsubmenuconfig\n\n\n\n\nwhat\n\n\nhow\n\n\nwho\n\n\nwhy\n\n\nwhen\n\n\nfor whom\n\n\n\n\n\n\nWho ?\n\n\nSolAR initiative has been launched by the Technological Research Institute b&lt;&gt;com, and is open to any contributors or users who share the  SolAR philosophy.\n\n\nOur Partners\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
       id: 15
     });
     
@@ -143,7 +143,7 @@ index.add({
 
     index.add({
       title: "when",
-      content: "\nTable of Contents\n\nsubmenuconfig\nSolAR initiative\nOur roadmap\n\n\n\nsubmenuconfig\n\n\n\n\nwhat\n\n\nhow\n\n\nwho\n\n\nwhy\n\n\nwhen\n\n\nfor whom\n\n\n\n\n\n\nSolAR initiative\n\n\nSolAR initiative started in November 2016.\n\n\n\n\nOur roadmap\n\n\n\n\n\n\n\n\n\n\n\n\n\nNOT VALIDATED\nTIP: Write here if you validate with your name and your comment\n\n\n\n\n\nWARNING : mettre la roadmap ici\n\n\n",
+      content: "\nTable of Contents\n\nsubmenuconfig\nSolAR initiative\nOur roadmap\n\n\n\nsubmenuconfig\n\n\n\n\nwhat\n\n\nhow\n\n\nwho\n\n\nwhy\n\n\nwhen\n\n\nfor whom\n\n\n\n\n\n\nSolAR initiative\n\n\nSolAR initiative started in November 2016.\n\n\n\n\nOur roadmap\n\n\n\n\n\n\n\nWARNING : mettre la roadmap ici\n\n\n",
       id: 17
     });
     
