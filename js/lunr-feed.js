@@ -44,7 +44,7 @@ index.add({
 
 index.add({
     title: null,
-    content: "\n\n  \n    SolAR\n    SolAR\n    https://solarframework.github.io//\n    \n    Thu, 28 Sep 2017 13:21:08 +0000\n    Thu, 28 Sep 2017 13:21:08 +0000\n    Jekyll v3.5.1\n    \n  \n\n",
+    content: "\n\n  \n    SolAR\n    SolAR\n    https://solarframework.github.io//\n    \n    Thu, 28 Sep 2017 15:15:38 +0000\n    Thu, 28 Sep 2017 15:15:38 +0000\n    Jekyll v3.5.1\n    \n  \n\n",
     id: 5
   });
   
