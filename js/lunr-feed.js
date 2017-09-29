@@ -9,7 +9,7 @@ var index = lunr(function () {
 
 index.add({
     title: "API",
-    content: "API\n\nTable of Contents\n\nsubmenuconfig\nSolAR API\n\n\n\nsubmenuconfig\n\n\n\n\n\nSolAR API\n\n\nThere are several ways to contribute to SolAR framework.\n\n\nYou can :\n\n\n\n\ncontribute to Core framework, by defining API, architecture, framework tools &#8230;&#8203; this typically needs software engineering and architecture skills.\n\n\ncontribute to Components, by creating a new SolAR component, that can be used in a pose estimation solution&#8230;&#8203; this typically needs computer vision skills (and software skills).\n\n\n\n\n",
+    content: "API\n\nTable of Contents\n\nsubmenuconfig\nSolAR API\n\n\n\nsubmenuconfig\n\n\n\n\n\nSolAR API\n\n\n\n",
     id: 0
   });
   
@@ -44,14 +44,14 @@ index.add({
 
 index.add({
     title: null,
-    content: "\n\n  \n    SolAR\n    SolAR\n    https://solarframework.github.io//\n    \n    Thu, 28 Sep 2017 15:15:38 +0000\n    Thu, 28 Sep 2017 15:15:38 +0000\n    Jekyll v3.5.1\n    \n  \n\n",
+    content: "\n\n  \n    SolAR\n    SolAR\n    https://solarframework.github.io//\n    \n    Fri, 29 Sep 2017 09:55:35 +0000\n    Fri, 29 Sep 2017 09:55:35 +0000\n    Jekyll v3.5.1\n    \n  \n\n",
     id: 5
   });
   
 
 index.add({
     title: "welcome",
-    content: "\nTable of Contents\n\nDiscover Solar\nSolAR helps you to develop customized Augmented Reality solutions\nSolAR is always improving\n\n\n\nDiscover Solar\n\n\n\n\n\nSolAR helps you to develop customized Augmented Reality solutions\n\n\nSolAR is an open-source framework making possible to easily create your own camera pose estimation solution to develop augmented reality applications.\n\n\nBy using SolAR, you can easily build augmented reality applications by testing different vision based localization solutions, create and share to the community your own localization pipeline, and even develop efficient components to meet specific requirements.\n\n\nSolAR is a modular framework improving interoperability for Augmented Reality applications , and offering efficiency and robustness to your augmented reality applications.\n\n\n\n\nSolAR is always improving\n\n\nAs SolAR is an open-souce project, join the community and contribute to the SolAR framework.\n\n\n",
+    content: "\nTable of Contents\n\nSolAR, Solution for Augmented Reality\nSolAR helps you to develop customized Augmented Reality solutions\nSolAR is always improving\n\n\n\nSolAR, Solution for Augmented Reality\n\n\n\n\n\n\n\n\n\nSolAR helps you to develop customized Augmented Reality solutions\n\n\nSolAR is an open-source framework making possible to easily create your own camera pose estimation solution to develop augmented reality applications.\n\n\n\n\n\n\n\nBy using SolAR, you can easily build augmented reality applications by testing different vision based localization solutions, create and share to the community your own localization pipeline, and even develop efficient components to meet specific requirements.\n\n\nSolAR is a modular framework improving interoperability for Augmented Reality applications , and offering efficiency and robustness to your augmented reality applications.\n\n\n\n\nSolAR is always improving\n\n\nAs SolAR is an open-souce project, join the community and contribute to the SolAR framework.\n\n\n",
     id: 6
   });
   
