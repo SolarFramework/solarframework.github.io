@@ -34,9 +34,10 @@ h1 {
       margin-top: 0!important;
       background-color: #f8f8f7;
       position: fixed;
-      width: 25em;
+      max-width: 20em;
+      min-width: 15em;
       left: 0;
-      top: 60px;
+      top: 52px;
       border-right: 1px solid #efefed;
       border-top-width: 0!important;
       border-bottom-width: 0!important;
@@ -47,8 +48,15 @@ h1 {
   }
 }
 
+.container {
+  margin-left: 20em;
+  width: auto;
+}
+
 .well {
   background-color: #f6f6f6;
+  -webkit-box-shadow: none;
+  box-shadow: none;
   border: none;
   border-radius: 0px;
 }
@@ -83,6 +91,7 @@ h1 {
   padding-left: 57px;
   width: 100%;
   z-index: 3;
+  overflow: hidden;
 }
 #submenuconfig + .sectionbody ul li, #submenuconfig + .sectionbody ul li p {
   display: inline;
