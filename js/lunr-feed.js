@@ -37,7 +37,7 @@ index.add({
 
 index.add({
     title: null,
-    content: "\n\n  \n    SolAR\n    SolAR\n    https://solarframework.github.io//\n    \n    Mon, 09 Oct 2017 14:35:44 +0000\n    Mon, 09 Oct 2017 14:35:44 +0000\n    Jekyll v3.5.1\n    \n  \n\n",
+    content: "\n\n  \n    SolAR\n    SolAR\n    https://solarframework.github.io//\n    \n    Mon, 09 Oct 2017 15:17:43 +0000\n    Mon, 09 Oct 2017 15:17:43 +0000\n    Jekyll v3.5.1\n    \n  \n\n",
     id: 4
   });
   
@@ -125,7 +125,7 @@ index.add({
 
     index.add({
       title: "who",
-      content: "\nTable of Contents\n\nsubmenuconfig\nWho ?\nContact Mail\n\n\n\nsubmenuconfig\n\n\n\n\nwhat\n\n\nhow\n\n\nwho\n\n\nwhen\n\n\nfor whom\n\n\nprogrammer&#8217;s guide\n\n\nlegal notice\n\n\n\n\n\n\nWho ?\n\n\nSolAR initiative has been launched by the Technology Research Institute b&lt;&gt;com, and is open to any contributors or users who share the  SolAR philosophy.\n\n\nOur Contributors\n\n\n\n\n\n\n\n\n\nContact Mail\n\n\nFor any request, Please Contact Us\n\n\n",
+      content: "\nTable of Contents\n\nsubmenuconfig\nWho ?\nContact Mail\n\n\n\nsubmenuconfig\n\n\n\n\nwhat\n\n\nhow\n\n\nwho\n\n\nwhen\n\n\nfor whom\n\n\nprogrammer&#8217;s guide\n\n\nlegal notice\n\n\n\n\n\n\nWho ?\n\n\nSolAR initiative has been launched by the link: Technology Research Institute b&lt;&gt;com, and is open to any contributors or users who share the SolAR philosophy.\n\n\n\n\n\n\n\nOur Contributors\n\n\n\n\n\nContact Mail\n\n\nFor any request, Please Contact Us\n\n\n",
       id: 15
     });
     
