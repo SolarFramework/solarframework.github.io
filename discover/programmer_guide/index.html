@@ -124,7 +124,12 @@ window.cookieconsent.initialise({
             <div class="col-mg-3">
                 <div class="navbar-header">
                     <ul class="nav navbar-nav navbar-brand">
-                        <li><a href="https://solarframework.github.io//" class="link"> <image src="https://solarframework.github.io///assets/static/logo_solAR_blue.svg" </a></li>
+                        <li><a href="https://solarframework.github.io//" class="link">&lsaquo;SolAR&rsaquo;</a></li>		
+                        <!--<li><a href="https://solarframework.github.io//" class="link"><image src="https://solarframework.github.io///assets/static/logo_solAR_blue.svg" height="70"></a></li>-->
+                         <!--test local ok<li><a href="https://solarframework.github.io//" class="link"><image src="C:/DEV/test1306/argo-site/assets/static/logo_solAR_blue.svg" height="70"></a></li>     -->
+                                                 <!--apparait pas<li><image href="https://solarframework.github.io//" class="link" src="https://solarframework.github.io///assets/static/logo_solAR_blue.svg" height="70"></li>-->
+                      <!--test local ok <li><image href="" class="link" src="C:/DEV/test1306/argo-site/assets/static/logo_solAR_blue.svg" height="70"></li>
+                        <li><image href="https://solarframework.github.io//" class="link" src="https://solarframework.github.io///assets/static/logo_solAR_blue.svg" height="40"></li>-->
                     </ul>
                 </div>
             </div>
@@ -174,11 +179,11 @@ window.cookieconsent.initialise({
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
 <li><a href="#submenuconfig">submenuconfig</a></li>
-<li><a href="#guide">Guide</a></li>
+<li><a href="#the_programmer_s_guide">The programmer&#8217;s guide</a></li>
 <li><a href="#solar_overview">SolAR Overview</a></li>
-<li><a href="#solar_data_structure">SolAR Data Structure</a></li>
-<li><a href="#solar_components_interface">SolAR components interface</a></li>
-<li><a href="#solar_component_manager">SolAR component manager</a></li>
+<li><a href="#solar_data_structures">SolAR Data Structures</a></li>
+<li><a href="#solar_components_interfaces">SolAR components interfaces</a></li>
+<li><a href="#solar_components_handling">SolAR components handling</a></li>
 <li><a href="#frequently_asked_questions">Frequently Asked Questions</a></li>
 <li><a href="#contact">Contact</a></li>
 <li><a href="#contact_mail">Contact Mail</a></li>
@@ -215,7 +220,7 @@ window.cookieconsent.initialise({
 </div>
 </div>
 <div class="sect1">
-<h2 id="guide"><a class="anchor" href="#guide"></a><a class="link" href="#guide">Guide</a></h2>
+<h2 id="the_programmer_s_guide"><a class="anchor" href="#the_programmer_s_guide"></a><a class="link" href="#the_programmer_s_guide">The programmer&#8217;s guide</a></h2>
 <div class="sectionbody">
 
 </div>
@@ -224,7 +229,7 @@ window.cookieconsent.initialise({
 <h2 id="solar_overview"><a class="anchor" href="#solar_overview"></a><a class="link" href="#solar_overview">SolAR Overview</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>SolAR framework is a solution to easily and quickly implement customized camera pose estimation pipelines based on a set of vision/mathematic components in order to publish them for AR application developers.</p>
+<p>The SolAR framework is a solution to easily and quickly implement custom camera pose estimation pipelines based on a set of vision and mathematics components in order to make them available to AR application developers.</p>
 </div>
 <div class="paragraph">
 <p>The <strong>SolAR core</strong> handles everything that will allow the implementation of a pipeline:</p>
@@ -232,18 +237,18 @@ window.cookieconsent.initialise({
 <div class="ulist">
 <ul>
 <li>
-<p><strong>SolAR Data Structure</strong> defines the information that flows in the pipelines and exchanged between components.</p>
+<p><strong>SolAR Data Structures</strong> define the information that flows in the pipelines and is exchanged between components.</p>
 </li>
 <li>
-<p><strong>SolAR components interface</strong> defines a standard interface for the different categories of basic processing elements required to implement a camera pose estimation (ex: key point extractor, descriptor computation, etc.). This unique interface is required to ensure interoperability between components allowing to easily swap one by another to improve the final camera pose estimation pipeline. Please refer to API definition to know more about <a href="../API.adoc">SolAR interfaces</a>.</p>
+<p><strong>SolAR Components Interfaces</strong> define a standardized interfaces for the different categories of basic processing elements required to implement camera pose estimation (i.e.: key point extractor, descriptor computation, etc.). This unified interface is required to ensure interoperability between components allowing to easily swap one with another to improve the final camera pose estimation pipeline. Please refer to the API documentation to know more about <a href="../API.adoc">SolAR components interfaces</a>.</p>
 </li>
 <li>
-<p><strong>SolAR components manager</strong> handles the implementation of a pipeline by loading components, connecting them, and running the pipeline.</p>
+<p>The <strong>SolAR Pipeline Manager</strong> handles the implementation of a pipeline by loading components, connecting them, and running the pipeline.</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>The <strong>SolAR Components</strong> are implementation of basic processing elements compliant with the SolAR components interface. Several components can implement the same component interface. In general, these components are created by wrapping computer vision libraries that could be either open-source (OpenCV, PCL, ROS, etc.) or proprietary. Each component can define its own parameters that will be used to tune the camera pose estimation solution.</p>
+<p>The <strong>SolAR Components</strong> are implementations of basic processing elements compliant with the SolAR components interfaces. Several components can implement the same component interface. In general, these components are created by wrapping computer vision libraries that could be either open-source (OpenCV, PCL, ROS, etc.) or proprietary. Each component can define its own parameters that will be used to tune the camera pose estimation solution.</p>
 </div>
 <div class="imageblock center">
 <div class="content">
@@ -253,30 +258,30 @@ window.cookieconsent.initialise({
 <div class="ulist">
 <ul>
 <li>
-<p>Coming soon: configure component on the fly, pipeline, multithread, metadata. Please refer to the <a href="../_discover/when.adoc">roadmap</a> for more information.</p>
+<p>Coming soon: configure components on the fly, pipeline, multithread, metadata. Please refer to the <a href="../_discover/when.adoc">roadmap</a> for more information.</p>
 </li>
 </ul>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="solar_data_structure"><a class="anchor" href="#solar_data_structure"></a><a class="link" href="#solar_data_structure">SolAR Data Structure</a></h2>
+<h2 id="solar_data_structures"><a class="anchor" href="#solar_data_structures"></a><a class="link" href="#solar_data_structures">SolAR Data Structures</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The SolAR pipeline consists in a chain of basic processing elements arranged so that the outputs of each element are the inputs of the next ones. In order to provide modularity, SolAR provides standard data structures corresponding to the information exchanged between successive components required to implement a camera pose estimation solution.</p>
+<p>The SolAR pipeline consists of a chain of basic processing elements arranged so that the outputs of each element are the inputs of the next one. In order to provide modularity, SolAR defines standard data structures corresponding to the information exchanged between successive components required to implement a camera pose estimation solution.</p>
 </div>
 <div class="paragraph">
-<p>You will find next the first data structures organized by categories that are currently defined by the SolAR framework.</p>
+<p>The following categories list the currently implemented data structures within the SolAR framework.</p>
 </div>
 <div class="sect2">
 <h3 id="image"><a class="anchor" href="#image"></a><a class="link" href="#image">Image</a></h3>
 <div class="paragraph">
-<p>A SolAR image is a array of pixels where each pixel is defined by a set of color components coded with a given number of bits. Each pixel can be encoded with a dedicated colorimetric space (RGB, YUV, LAB, etc.). Contrary to OpenCV, an image is not just a Matrix, but is clearly defined as an image object to ensure that a component waiting for an image in input will not receive a matrix such as a pose what does not make sense. Thus, an image is defined by:</p>
+<p>A SolAR image is an array of pixels where each pixel is defined by a set of color components coded with a given number of bits. Each pixel can be encoded with a dedicated colorimetric space (RGB, YUV, LAB, etc.). Contrary to OpenCV, an image is not just a Matrix, but is clearly defined as an image object to ensure that a component waiting for an image as an input will not receive a random matrix such as a pose which would not make sense. Thus, an image is defined by:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>the image <strong>size</strong> <em>(width, height)</em>,</p>
+<p>The image <strong>size</strong> <em>(width, height)</em>,</p>
 </li>
 <li>
 <p>the <strong>image layout</strong> such as <em>LAYOUT_GRB, LAYOUT_BGR, LAYOUT_GREY, LAYOUT_RGBA, LAYOUT_RGBX, LAYOUT_UNDEFINED</em>,</p>
@@ -285,7 +290,7 @@ window.cookieconsent.initialise({
 <p>the <strong>pixel order</strong> either <em>INTERLEAVED</em> or <em>PER_CHANNEL</em>,</p>
 </li>
 <li>
-<p>the size of each color component, so called <strong>data type</strong> among <em>TYPE_8U, TYPE_16U, TYPE_32U, TYPE_64U</em>,</p>
+<p>the size of each color component, also called <strong>data type</strong> which can be either <em>TYPE_8U, TYPE_16U, TYPE_32U, TYPE_64U</em>,</p>
 </li>
 <li>
 <p>a pointer to the <strong>raw data</strong></p>
@@ -293,7 +298,7 @@ window.cookieconsent.initialise({
 </ul>
 </div>
 <div class="paragraph">
-<p>In order to limit memory allocations and copies, what could drastically impact the efficiency of the camera pose estimation implementation, an image can point the raw data instantiated by third party libraries such as OpenCV or OpenVX.</p>
+<p>In order to limit memory allocations and copies, which can drastically impact the efficiency of the camera pose estimation implementation, an image can point to the raw data instantiated by third party libraries such as OpenCV or OpenVX.</p>
 </div>
 <div class="paragraph">
 <p><a href="https://forge.b-com.com/www/argo/api_documentation/class_sol_a_r_1_1_i_sol_a_r_image.html" target="_blank" rel="noopener">API Documentation</a> to be updated</p>
@@ -302,42 +307,42 @@ window.cookieconsent.initialise({
 <div class="sect2">
 <h3 id="matrix"><a class="anchor" href="#matrix"></a><a class="link" href="#matrix">Matrix</a></h3>
 <div class="paragraph">
-<p>The matrix implementation is based on the third party <em>eigen</em>. SolAR framework redefines the following matrices:</p>
+<p>The matrix implementation is based on the third party open source <em>Eigen</em> linear algebra library. The SolAR framework redefines the following matrices:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><em>SolARVector4f</em>  corresponding to a 4x1 matrix of floats,</p>
+<p><em>SolARVector4f</em>  equates to a 4x1 matrix of floats,</p>
 </li>
 <li>
-<p><em>SolARVector4d</em>  corresponding to a 4x1 matrix of doubles,</p>
+<p><em>SolARVector4d</em>  equates to a 4x1 matrix of doubles,</p>
 </li>
 <li>
-<p><em>SolARVector3f</em>  corresponding to a 3x1 matrix of floats,</p>
+<p><em>SolARVector3f</em>  equates to a 3x1 matrix of floats,</p>
 </li>
 <li>
-<p><em>SolARVector3d</em>  corresponding to a 3x1 matrix of doubles,</p>
+<p><em>SolARVector3d</em>  equates to a 3x1 matrix of doubles,</p>
 </li>
 <li>
-<p><em>SolARTranslationVectorf</em> corresponding to a 3x1 matrix used to define a translation,</p>
+<p><em>SolARTranslationVectorf</em> equates to a 3x1 matrix of floats used to define a translation,</p>
 </li>
 <li>
-<p><em>SolARPoint_3Df</em> corresponding to a 3x1 matrix of float used to define a 3D point,</p>
+<p><em>SolARPoint_3Df</em> equates to a 3x1 matrix of floats used to define a 3D point,</p>
 </li>
 <li>
-<p><em>SolARPoint_2Df</em> corresponding to a 2x1 matrix of float used to define a 2D point,</p>
+<p><em>SolARPoint_2Df</em> equates to a 2x1 matrix of floats used to define a 2D point,</p>
 </li>
 <li>
-<p><em>SolARPoseMatrixf</em> corresponding to a 4x4 matrix of floats used to define a pose,</p>
+<p><em>SolARPoseMatrixf</em> equates to a 4x4 matrix of floats used to define a pose,</p>
 </li>
 <li>
-<p><em>SolARMatrix33d</em> corresponding to a 3x3 matrix of doubles,</p>
+<p><em>SolARMatrix33d</em> equates to a 3x3 matrix of doubles,</p>
 </li>
 <li>
-<p><em>SolARRotationMatrixf</em> corresponding to a 3x3 matrix of float used to define a rotation,</p>
+<p><em>SolARRotationMatrixf</em> equates to a 3x3 matrix of floats used to define a rotation,</p>
 </li>
 <li>
-<p><em>SolARQuaternionf</em> corresponding to a Quaternion in float used to define a rotation.</p>
+<p><em>SolARQuaternionf</em> equates to a Quaternion in floats used to define a rotation.</p>
 </li>
 </ul>
 </div>
@@ -345,7 +350,8 @@ window.cookieconsent.initialise({
 <div class="sect2">
 <h3 id="pose"><a class="anchor" href="#pose"></a><a class="link" href="#pose">Pose</a></h3>
 <div class="paragraph">
-<p>ToDo</p>
+<p>The pose data structure is based on a standard homogeneous 4x4 matrix defined as row major.
+Euler angle, quaternion can be directly extracted from this structure built on the third party library Eigen.</p>
 </div>
 </div>
 <div class="sect2">
@@ -357,16 +363,19 @@ window.cookieconsent.initialise({
 <div class="sect2">
 <h3 id="features"><a class="anchor" href="#features"></a><a class="link" href="#features">Features</a></h3>
 <div class="paragraph">
-<p>ToDo</p>
+<p>The current feature datastructure is not the final implementation we are aiming for.
+For now, this data structure takes advantage of the cv::Features2D definition coming from openCV.
+However, we are currently working on an abstract API to handle multiple keypoints, features descriptors and extractors
+implementations using tech such as CUDA and openVX while managing properly memory and avoiding useless copy.</p>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="solar_components_interface"><a class="anchor" href="#solar_components_interface"></a><a class="link" href="#solar_components_interface">SolAR components interface</a></h2>
+<h2 id="solar_components_interfaces"><a class="anchor" href="#solar_components_interfaces"></a><a class="link" href="#solar_components_interfaces">SolAR components interfaces</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>SolAR components are vision or mathematic basic processing elements compliant with the SolAR component interface defined by the SolAR framework.</p>
+<p>SolAR components are vision or mathematics processing elements compliant with the SolAR component interface defined by the SolAR framework.</p>
 </div>
 <div class="imageblock center">
 <div class="content">
@@ -422,18 +431,41 @@ window.cookieconsent.initialise({
 </div>
 </div>
 <div class="sect2">
-<h3 id="solar_third_party_connector"><a class="anchor" href="#solar_third_party_connector"></a><a class="link" href="#solar_third_party_connector">SolAR third Party Connector</a></h3>
+<h3 id="solar_third_party_connector"><a class="anchor" href="#solar_third_party_connector"></a><a class="link" href="#solar_third_party_connector">SolAR Third Party Connector</a></h3>
 <div class="paragraph">
-<p>ToDo</p>
+<p>The SolAR third party connector is a special SolAR Component use to exchange internal SolAR pose data with any third party outside of the SolAR framework. It is used to safely provide access to a SolARImage and its associated SolARPose in a thread safe race free fashion. It internally implements a mutex locked circular buffer, allowing safe producer/consumer access. It allows synchronous and asynchronous read access for the consumer.</p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="data:image/PNG;base64," alt="ThirdPartyConnector">
+</div>
+</div>
+<div class="paragraph">
+<p>The internal buffer size of the container is currently set at <strong>one</strong> which means only the latest image and pose are available to the consumer at any given time. In the near future, WolAR will allow users to provide initialization parameters when creating components so the users will be able to specify the size of the buffer they desire.</p>
+</div>
+<div class="sect3">
+<h4 id="producer"><a class="anchor" href="#producer"></a><a class="link" href="#producer">Producer</a></h4>
+<div class="paragraph">
+<p>Any component wishing to expose its pose data to an external third party must use a Third Party Connector. It can then use the <em>set</em> method to set the current SolARImage and its associated SolARPose. The <em>set</em> method is thread safe and blocking. It will not return until the lock on the internal buffer is released by the reader.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="consumer"><a class="anchor" href="#consumer"></a><a class="link" href="#consumer">Consumer</a></h4>
+<div class="paragraph">
+<p>Any third party external to SolAR that needs access to internal pose data of a component must connect to its Third Party Connector. It can then use either the <em>get</em> method or the <em>tryGet</em> method to get the latest SolARImage and its associated SolARPose. The <em>get</em> method is thread safe and blocking. This means it will not return until the lock on the internal buffer is released by the writer. The <em>tryGet</em> method is also thread safe but non blocking. It will return immediately after being called. It will return <em>true</em> if it was able to acquire the lock and read the data, or <em>false</em> if it was unable to obtain the lock.</p>
+</div>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="solar_component_manager"><a class="anchor" href="#solar_component_manager"></a><a class="link" href="#solar_component_manager">SolAR component manager</a></h2>
+<h2 id="solar_components_handling"><a class="anchor" href="#solar_components_handling"></a><a class="link" href="#solar_components_handling">SolAR components handling</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>ToDo</p>
+<p>SolAR relies on XPCF (the Cross Platform Component Framework), a versatile framework that provides dynamic component instantiation and loading from modules. Basically, modules are libraries that gather components sharing a common purpose, framework, etc. XPCF also provides uniform component parametrization. Using XPCF, and thanks to the unified Solar interfaces,  it will be possible to build applications by picking up different components in different modules at runtime.</p>
+</div>
+<div class="paragraph">
+<p>For more details, please refer to the XPCF website (coming soon).</p>
 </div>
 </div>
 </div>
@@ -444,19 +476,19 @@ window.cookieconsent.initialise({
 <ol>
 <li>
 <p><em>What is SolAR?</em></p>
-<p>This is an open source initiative to develop a framework for pose estimation that can be used for Augmented Reality applications.</p>
+<p>SolAR is an open source initiative to develop a framework for pose estimation that can be used for Augmented Reality applications.</p>
 </li>
 <li>
-<p><em>Who initiated SolAR project?</em></p>
-<p>The french Institute of reseach and Technology b&lt;&gt;com initiated the SolAR project, after collecting the feedback of AR actors, among AR end-users (Industry, real-estate, medical, etc.), AR developers (essentially SME), computer vision expert (Academic researcher and research engineers from companies).</p>
+<p><em>Who initiated the SolAR project?</em></p>
+<p>The b&lt;&gt;com Institute of Research and Technology initiated the SolAR project, after collecting the feedback of AR actors, AR end-users (industry, real-estate, medical, etc.), AR developers (essentially SMEs) and computer vision experts (Academic researchers and research engineers from companies).</p>
 </li>
 <li>
-<p><em>Who can contribute to SolAR project?</em></p>
-<p>Anyone can contribute to SolAR project. This requires C++ and computer vision skills.</p>
+<p><em>Who can contribute to the SolAR project?</em></p>
+<p>Anyone can contribute to the SolAR project. Contributors only need to be proficient in C++ and computer vision skills.</p>
 </li>
 <li>
-<p><em>Can I use SolAR framework for my AR applications?</em></p>
-<p>Of course, just check the licenses of the components used by the pose estimation pipelines you choose.</p>
+<p><em>Can I use the SolAR framework for my AR applications?</em></p>
+<p>Of course! Just be wary of the licenses of the components used by the pose estimation pipelines you choose as each component can be under its own license, independently of the encompassing SolAR <a href="https://www.apache.org/licenses/LICENSE-2.0"><strong>Apache v2 license</strong></a>.</p>
 </li>
 </ol>
 </div>
@@ -472,7 +504,7 @@ window.cookieconsent.initialise({
 <h2 id="contact_mail"><a class="anchor" href="#contact_mail"></a><a class="link" href="#contact_mail">Contact Mail</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>For any request, <a href="mailto:framework.solar@b-com.com">Please Contact Us</a></p>
+<p>For any requests, <a href="mailto:framework.solar@b-com.com">Please Contact Us</a></p>
 </div>
 </div>
 </div>
