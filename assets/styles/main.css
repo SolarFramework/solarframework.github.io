@@ -109,3 +109,13 @@ h1 {
   text-decoration: none;
   color: #00beef;
 }
+
+@media screen and (max-width: 768px) { 
+#submenuconfig + .sectionbody{ 
+top: 245px; /* to be updated if number of entries of navbar change */ 
+} 
+.container { 
+padding-top: 250px; /* to be updated if number of entries of navbar change */ 
+margin-left: 2em; 
+} 
+}
