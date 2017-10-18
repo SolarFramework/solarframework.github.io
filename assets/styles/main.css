@@ -112,10 +112,11 @@ h1 {
 
 @media screen and (max-width: 768px) { 
 #submenuconfig + .sectionbody{ 
-top: 245px; /* to be updated if number of entries of navbar change */ 
+top: 123px; /* to be updated if number of entries of navbar change */ 
+padding-left: 2px;
 } 
 .container { 
-padding-top: 250px; /* to be updated if number of entries of navbar change */ 
-margin-left: 2em; 
+padding-top: 128px; /* to be updated if number of entries of navbar change */ 
+margin-left: 1em; 
 } 
 }
