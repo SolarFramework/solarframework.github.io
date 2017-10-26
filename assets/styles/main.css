@@ -21,6 +21,11 @@ body {
 .navbar-header ul {
   padding: 0px;
 }
+.navbar-default .navbar-nav a.active, .navbar-default .navbar-nav a.active:hover, .navbar-default .navbar-nav a.active:focus
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+  color: #fff;
+  background-color: #000;
+}
 
 .container{
   padding-top: 110px;
@@ -37,7 +42,7 @@ h1 {
       max-width: 20em;
       min-width: 15em;
       left: 0;
-      top: 52px;
+      top: 60px;
       border-right: 1px solid #efefed;
       border-top-width: 0!important;
       border-bottom-width: 0!important;
@@ -46,6 +51,10 @@ h1 {
       height: 100%;
       overflow: auto;
   }
+}
+
+#toc > ul{
+  padding-bottom: 30px;
 }
 
 .container {
@@ -87,12 +96,12 @@ h1 {
   position: fixed;
   top: 52px;
   left: 0px;
-  height: 30px;
   padding-left: 57px;
   width: 100%;
   z-index: 3;
   overflow: hidden;
 }
+
 #submenuconfig + .sectionbody ul li, #submenuconfig + .sectionbody ul li p {
   display: inline;
 }
@@ -105,18 +114,27 @@ h1 {
 #submenuconfig + .sectionbody ul li a {
   color: white;
 }
+
 #submenuconfig + .sectionbody ul li a:focus, #submenuconfig + .sectionbody ul li a:hover, #submenuconfig + .sectionbody ul li a.active {
   text-decoration: none;
   color: #00beef;
 }
 
 @media screen and (max-width: 767px) { 
-#submenuconfig + .sectionbody{ 
-top: 123px; /* to be updated if number of entries of navbar change */ 
-padding-left: 2px;
-} 
-.container { 
-padding-top: 128px; /* to be updated if number of entries of navbar change */ 
-margin-left: 1em; 
-} 
+  #submenuconfig + .sectionbody{ 
+  padding-left: 2px;
+  } 
+  .container { 
+  margin-left: 1em; 
+  } 
+  #submenuconfig + .sectionbody ul{
+    padding: 0px 5px;
+  }
+  #submenuconfig + .sectionbody ul li:first-child {
+    padding-left: 0px;
+  }
+  video{
+    width : 100% ;
+    max-width : 100% ;
+  }  
 }

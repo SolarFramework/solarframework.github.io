@@ -25,12 +25,14 @@
     <!-- build:css assets/styles/main.css -->
     <link rel="stylesheet" href="https://solarframework.github.io//assets/styles/coderay.css">
     <link rel="stylesheet" href="https://solarframework.github.io//assets/styles/asciidoctor.css">
+    <link rel="stylesheet" href="https://solarframework.github.io//assets/styles/solar-asciidoctor-theme.css">
     <link rel="stylesheet" href="https://solarframework.github.io//assets/styles/font-awesome.min.css">
     <link rel="stylesheet" href="https://solarframework.github.io//assets/styles/solar-bootstrap-theme.css">
     <link rel="stylesheet" href="https://solarframework.github.io//assets/styles/main.css">
     <link rel="stylesheet" href="https://solarframework.github.io//assets/styles/media.css">
     <!-- endbuild -->
     <script src="https://solarframework.github.io//js/vendor/jquery.js"></script><!--needed with bootstrap-->
+    <script src="https://solarframework.github.io//js/vendor/bootstrap.js"></script>
     <script src="https://solarframework.github.io//js/toc.js"></script>
     <script type="text/javascript">
         $(document).ready(function() { 
@@ -118,57 +120,49 @@ window.cookieconsent.initialise({
         <!--[if lt IE 9]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <div><div class="navbar navbar-default" role="navigation">
+        <div><div class="navbar navbar-default">
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-mg-3">
-                <div class="navbar-header">
-                    <ul class="nav navbar-nav navbar-brand">
-                        <li><a href="https://solarframework.github.io//" class="link">&lsaquo;SolAR&rsaquo;</a></li>		
-                        <!--<li><a href="https://solarframework.github.io//" class="link"><image src="https://solarframework.github.io///assets/static/logo_solAR_blue.svg" height="70"></a></li>-->
-                         <!--test local ok<li><a href="https://solarframework.github.io//" class="link"><image src="C:/DEV/test1306/argo-site/assets/static/logo_solAR_blue.svg" height="70"></a></li>     -->
-                                                 <!--apparait pas<li><image href="https://solarframework.github.io//" class="link" src="https://solarframework.github.io///assets/static/logo_solAR_blue.svg" height="70"></li>-->
-                      <!--test local ok <li><image href="" class="link" src="C:/DEV/test1306/argo-site/assets/static/logo_solAR_blue.svg" height="70"></li>
-                        <li><image href="https://solarframework.github.io//" class="link" src="https://solarframework.github.io///assets/static/logo_solAR_blue.svg" height="40"></li>-->
-                    </ul>
-                </div>
-            </div>
-            <div class="col-lg-9">
-                <div class="navbar-collapse tabs" id="navbar-collapse">
-                    <ul class="nav navbar-nav navbar-left">
-
-                        
-                        
-                        
-                        
-                        
-                        <li>
-                            <a href="https://solarframework.github.io//discover.html">
-                                <span>Discover</span>
-                            </a>
-                        </li>                          
-                        
-                        
-
-                       <li>
-                       <!-- <form action="https://solarframework.github.io//search.html" method="get" class="navbar-form" role="search">
-                            <div class="input-group">
-                                <input type="text" id="search" class="form-control" placeholder="Search"
-                                       name="q" class="span1" type="text" size="15">
-                                <div class="input-group-btn">
-                                    <button class="btn btn-default" type="submit">
-                                      <i class="fa fa-search"></i>
-                                    </button>
-                                </div>
-                            </div>
-                            -->
-                          </form>
-                        </li>
-						
-                    </ul>
-                </div>
-            </div>
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand link" href="https://solarframework.github.io//">&lsaquo;SolAR&rsaquo;</a>
         </div>
+
+        <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
+            <ul class="nav navbar-nav">
+                
+                
+                
+                
+                
+                    <li>
+                        <a class="active" href="https://solarframework.github.io//discover.html">
+                            <span>Discover</span>
+                        </a>
+                    </li>                          
+                
+                
+
+                <!--li>
+                    <form action="https://solarframework.github.io//search.html" method="get" class="navbar-form" role="search">
+                        <div class="input-group">
+                            <input type="text" id="search" class="form-control" placeholder="Search"
+                                    name="q" class="span1" type="text" size="15">
+                            <div class="input-group-btn">
+                                <button class="btn btn-default" type="submit">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </li-->
+            </ul>
+        </div><!--/.nav-collapse -->
+        
     </div>
 
 </div>
@@ -243,7 +237,7 @@ window.cookieconsent.initialise({
 </div>
 <div class="videoblock">
 <div class="content">
-<video src="../videos/solARConcept.mp4" width="100%" controls>
+<video src="../videos/solARConcept.mp4" width="960px" controls>
 Your browser does not support the video tag.
 </video>
 </div>
@@ -256,6 +250,15 @@ Your browser does not support the video tag.
 <div class="paragraph">
 <p>This framework is open-source and released under <a href="https://www.apache.org/licenses/LICENSE-2.0" class="external" target="_blank" rel="noopener"><strong>Apache license 2.0</strong></a>,
 that lets you use it <strong>for research</strong> as well as <strong>commercial purposes</strong>.</p>
+</div>
+<div class="paragraph">
+<p>Nevertheless, only the SolAR framework is provided under Apache 2.0. The components you can use with the help of the framework to develop your own solution have their own license, which may not be compatible with Apache 2.0 or your own legal framework. Always check the compatibility of the components' licenses with themselves and with your own project. The SolAR community gives absolutely no warranty as to the legality of any solution that may result from your use of the framework, and cannot be held responsible for your use of the framework and of the components.</p>
+</div>
+<div class="paragraph">
+<p>All components that are to be hosted on SolAR’s Github repositories must be released by their copyright holders under Apache 2.0, and can only make use of third-party software released under licenses compatible with Apache 2.0. Otherwise the components have to be externally hosted.</p>
+</div>
+<div class="paragraph">
+<p>b&lt;&gt;com and the SolAR community will try their best to review the components hosted on SolAR’s Github, but cannot warrant that all these components will respect the aforementioned conditions. Thus, you must always check the legal conditions of any component you intend to use.</p>
 </div>
 </div>
 </div>

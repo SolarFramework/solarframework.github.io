@@ -328,7 +328,7 @@ hr {
     background-color: #000;
 }
 
-.navbar .nav a.link {
+.navbar a.link, .navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover {
     color: #00bee6;
 }
 .navbar-brand,
@@ -355,9 +355,6 @@ hr {
   background-repeat: repeat-x;
   -webkit-box-shadow: inset 0 3px 9px rgba(0, 0, 0, .25);
           box-shadow: inset 0 3px 9px rgba(0, 0, 0, .25);
-}
-.navbar-brand {
-  padding: 7px 15px;
 }
 .navbar-inverse .navbar-brand,
 .navbar-inverse .navbar-nav > li > a {
