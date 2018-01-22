@@ -1,12 +1,17 @@
 /* overrides asciidoctor.css */
-div,dl,dt,dd,ul,ol,li,h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6,pre,form,p,blockquote,th,td {
+div,dl,dt,dd,ul,ol,li,#toctitle,.sidebarblock>.content>.title,pre,form,p,blockquote,th,td {
     margin:0;
     padding:0;
   }
+
+  h1, h2, h3, h4, h5 {
+    margin-top: 15px;
+  }
   
-  a {
+  a, a:hover, a:focus {
     color:#00D2F8;
   }
+
 
   h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6,
   #content h1>a.link,h2>a.link,h3>a.link,#toctitle>a.link,.sidebarblock>.content>.title>a.link,h4>a.link,h5>a.link,h6>a.link {
@@ -25,6 +30,17 @@ div,dl,dt,dd,ul,ol,li,h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6,
     font-size: 1.2375em;
     margin-left: 20px;
     padding-left: 20px;
+  }
+
+  .sect1 + .sect1 {
+    border-top: none;
+  }
+
+  .literalblock pre.nowrap, .literalblock pre[class].nowrap, .listingblock pre.nowrap, .listingblock pre[class].nowrap,
+  .literalblock pre.nowrap code, .literalblock pre[class].nowrap code, .listingblock pre.nowrap code, .listingblock pre[class].nowrap code {
+    white-space: pre;
+    word-wrap: break-word;
+    overflow: auto;
   }
 
   @media only screen and (min-width:768px) {

@@ -1,0 +1,715 @@
+<!doctype html>
+<html class="no-js">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>SolAR</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+    <!-- IE 10 Metro tile icon (Metro equivalent of apple-touch-icon) -->
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="msapplication-TileImage" content="https://solarframework.github.io//assets/static/favicon-144.png">
+
+    <!-- Touch icon for iOS 2.0+ and Android 2.1+ -->
+    <link rel="apple-touch-icon-precomposed" href="https://solarframework.github.io//assets/static/favicon-152.png">
+
+    <link rel="icon" type="image/x-icon" href="https://solarframework.github.io//assets/static/favicon.ico">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css assets/styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="https://solarframework.github.io//assets/styles/bootstrap.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css assets/styles/main.css -->
+    <link rel="stylesheet" href="https://solarframework.github.io//assets/styles/coderay.css">
+    <link rel="stylesheet" href="https://solarframework.github.io//assets/styles/asciidoctor.css">
+    <link rel="stylesheet" href="https://solarframework.github.io//assets/styles/solar-asciidoctor-theme.css">
+    <link rel="stylesheet" href="https://solarframework.github.io//assets/styles/font-awesome.min.css">
+    <link rel="stylesheet" href="https://solarframework.github.io//assets/styles/solar-bootstrap-theme.css">
+    <link rel="stylesheet" href="https://solarframework.github.io//assets/styles/main.css">
+    <link rel="stylesheet" href="https://solarframework.github.io//assets/styles/media.css">
+    <!-- endbuild -->
+    <script src="https://solarframework.github.io//js/vendor/jquery.js"></script><!--needed with bootstrap-->
+    <script src="https://solarframework.github.io//js/vendor/bootstrap.js"></script>
+    <script src="https://solarframework.github.io//js/toc.js"></script>
+    <script src="https://solarframework.github.io//js/block-folding.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() { 
+        /* Set up style for active page in submenu and matching navbar entry This code cannot be put in navbar.html because each default.html template imports a brand new navbar so the activate class will be overwriten by brand new navbar DOM*/
+          var pageHasSubmenu = false;
+          $("#submenuconfig + .sectionbody ul li a").each(function(){
+              if ($(this).prop("href") == window.location.href) {
+                  /* Set up style for active page in submenu */
+                  pageHasSubmenu = true;
+                  $(this).addClass("active"); 
+                  $(this).parents("p").addClass("active");
+                  return false; /* same as break, specific for jquery each() function */
+              }
+          });
+          var matchingNavbarURL = window.location.href;
+          if (pageHasSubmenu) {
+              var urlParts = window.location.href.split("/");
+              var matchingNavbarItem = urlParts[urlParts.length-3];
+              matchingNavbarURL = window.location.href.substring(0, window.location.href.indexOf(matchingNavbarItem))+matchingNavbarItem+".html";       
+          }
+          /* Set up style for active item in navbar (no click on submenu yet) This code cannot be put in navbar.html because each default.html template imports a brand new navbar so the activate class will be overwriten by brand new navbar DOM*/
+          $("#navbar-collapse ul.navbar-nav a").each(function(){
+              if ($(this).prop("href") == matchingNavbarURL) {
+                  $(this).addClass('active'); 
+                  $(this).parents('li').addClass('active');
+                  return false; /* same as break, specific for jquery each() function */
+              }
+          });
+  
+          /* Configure TOC to take into account all titles */
+          $("#toc").toc(  { headers: "h2, h3, h4, h5, h6",
+                              listType: "ul",
+                              title: "<div id='toctitle'>Table of Contents</div>",
+                              noBackToTopLinks: true /*usefull to avoid tag <i class="icon-arrow-up back-to-top"> </i> to be placed between #submenuconfig and sectionbody and screw the submenu css style*/
+           });
+        });
+      </script>
+  <!-- Google Analytics -->
+  <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-107058603-1', 'auto');
+          ga('send', 'pageview');
+  </script>  <!-- End Google Analytics --> 
+<link rel="stylesheet" type="text/css" href="https://solarframework.github.io//js/cookieconsent/cookieconsent.min.css" />
+<script src="https://solarframework.github.io//js/cookieconsent/cookieconsent.min.js"></script>
+<script>
+var userLang = navigator.language || navigator.userLanguage; 
+if (userLang == "fr") {
+  message="En poursuivant votre navigation sur ce site, vous acceptez que des cookies soient utilisés afin d’améliorer votre expérience d’utilisateur.";
+  link="En savoir plus";
+  href="https://b-com.com/fr/mentions-l%C3%A9gales";
+}
+else {
+  message="By proceeding beyond this page, you consent to the cookies usage, in order to improve your experience on this website.";
+  link="More information";
+  href="https://b-com.com/en/legal-notice";
+}
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#252e39"
+    },
+    "button": {
+      "background": "#14a7d0"
+    }
+  },
+  "position": "bottom-left",
+  "theme": "edgeless",
+  "content": {
+    "message": message,
+    "dismiss": "OK",
+    "link": link,
+    "href": href
+  }
+})});
+</script>  
+</head>
+
+    <body>
+        <!--[if lt IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div><div class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand link" href="https://solarframework.github.io//">&lsaquo;SolAR&rsaquo;</a>
+        </div>
+
+        <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
+            <ul class="nav navbar-nav">
+                
+                
+                
+                
+                
+                    <li>
+                        <a href="https://solarframework.github.io//discover.html">
+                            <span>Discover</span>
+                        </a>
+                    </li>                          
+                
+                
+                
+                    <li>
+                        <a href="https://solarframework.github.io//API.html">
+                            <span>API</span>
+                        </a>
+                    </li>                          
+                
+                
+                
+                    <li>
+                        <a href="https://solarframework.github.io//contribute.html">
+                            <span>Contribute</span>
+                        </a>
+                    </li>                          
+                
+                
+                
+                    <li>
+                        <a class="active" href="https://solarframework.github.io//use_it.html">
+                            <span>Use it</span>
+                        </a>
+                    </li>                          
+                
+                
+
+                <!--li>
+                    <form action="https://solarframework.github.io//search.html" method="get" class="navbar-form" role="search">
+                        <div class="input-group">
+                            <input type="text" id="search" class="form-control" placeholder="Search"
+                                    name="q" class="span1" type="text" size="15">
+                            <div class="input-group-btn">
+                                <button class="btn btn-default" type="submit">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </li-->
+            </ul>
+        </div><!--/.nav-collapse -->
+        
+    </div>
+
+</div>
+</div>
+
+        <div class="container">
+            <div class="well">
+              <div class="paragraph">
+<p>This tutorial will walk you through the implementation of one of the first solution to do augmented reality: The fiducial marker. The tutorial will take approximately one hour to complete.</p>
+</div>
+<div class="sect2">
+<h3 id="prerequisites"><a class="anchor" href="#prerequisites"></a><a class="link" href="#prerequisites">Prerequisites</a></h3>
+<div class="ulist">
+<ul>
+<li>
+<p>A PC configured with the correct tools.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="project_files"><a class="anchor" href="#project_files"></a><a class="link" href="#project_files">Project files</a></h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Download the files required by the project.</p>
+</li>
+<li>
+<p>Unarchive the files to your desktop.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="fiducial_pipeline_overview"><a class="anchor" href="#fiducial_pipeline_overview"></a><a class="link" href="#fiducial_pipeline_overview">Fiducial pipeline overview</a></h3>
+<div class="paragraph">
+<p>Fiducial markers are generally white and black 2D patterns that are easily identifiable in an image and that holds all information required to easily compute the pose of a camera that records it. They could be squared, circular, or defined by a set of binary points, and they have been and are still widely used as they offer robustness to estimate the pose of a camera for augmented reality applications. Fiducial maker based approaches are mostly build according to the following steps:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Initialization:</strong> to load the fiducial marker and start the camera.</p>
+</li>
+<li>
+<p><strong>Detection:</strong> to find fiducial patterns in the current image captured by the camera.</p>
+</li>
+<li>
+<p><strong>Recognition:</strong> to select among the fiducial patterns detected in the current image the one we are looking for.</p>
+</li>
+<li>
+<p><strong>Camera pose estimation:</strong> to estimate the position and orientation of the camera in the coordinate system of the fiducial marker.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>In this tutorial, we focus on the squared binary marker based on pattern defined by a squared grid of black and white cells surrounded by a black border:</p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="data:image/gif;base64," alt="300" width="300">
+</div>
+</div>
+<div class="paragraph">
+<p>In our implementation, the number of cells in height and width must be similar, and the thickness of the border must be equal to the thickness of a cell of the pattern.
+We will now provide much more details concerning the different components and how we will connect them to implement a pose estimation pipeline based on squared fiducial markers.
+The following schema presents the full pipeline we will implement next:</p>
+</div>
+<div id="FiducialMarkerPipeline" class="imageblock">
+<div class="content">
+<img src="data:image/png;base64," alt="FiducialMarkerPipeline">
+</div>
+<div class="title">Figure 1. camera pose estimation pipeline based on a fiducial marker.</div>
+</div>
+<div class="paragraph">
+<p>This pipeline seems quite complex, but you will see that its implementation  will take few minutes thanks to the SolAR framework. Following, we detail each component used during the four steps of our pipeline:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Initialization step</strong></p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Marker2DSquaredBinary:</strong> This component load a file describing the squared binary marker. It is a yaml file defining the real size of the marker (including borders) in the user-defined unit (centimeter, meter, &#8230;&#8203;) as well as the squared binary pattern where 1 defined a white cell and 0 a black cell. Following, an example of file defining a squared binary marker:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="yaml"><span class="doctype">%YAML:1.0</span>
+<span class="head"><span class="head">---</span></span>
+<span class="key">MarkerWidth</span>: <span class="string"><span class="content">0.157</span></span>
+<span class="key">MarkerHeight</span>: <span class="string"><span class="content">0.157</span></span>
+<span class="key">Pattern</span>: <span class="error">!!opencv-matrix</span>
+   <span class="key">rows</span>: <span class="string"><span class="content">6</span></span>
+   <span class="key">cols</span>: <span class="string"><span class="content">6</span></span>
+   <span class="key">dt</span>: <span class="string"><span class="content">u</span></span>
+   <span class="key">data</span>: <span class="string"><span class="content">[ 1,0,0,0,1,1,1,0,0,1,1,1,1,1,0,1,0,1,0,0,1,0,0,1,1,0,0,1,1,0,1,1,1,0,0,1 ]</span></span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The user-defined unit have to be common for your whole pipeline, including camera calibration or for the unit defining your augmentations. For example, when you set the size of a cell of a chessboard used for camera calibration, be careful that this size is defined according to the same user-defined unit used for defining the marker size.</p>
+</div>
+</li>
+<li>
+<p><strong>DescriptorExtractorSBPattern:</strong> A squared binary pattern is represented by a matrix of Boolean, and this component simply concatenate each row of this matrix to create a vector of boolean (DescriptorBuffer) representing the descriptor of the squared binary pattern.</p>
+</li>
+<li>
+<p><strong>Camera:</strong>  Now that the squared binary marker is loaded, we can create a camera component. This component load a file describing the intrinsic parameters of the camera estimated thanks to a calibration tool (here, add a link to this calibration tutorial). Without a good calibration, the pose estimated by this pipeline will be certainly wrong. Then, the component will start the camera by giving its id, and you can now get the current image by calling the nextImage() method in a loop.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p><strong>Detection step</strong></p>
+<div class="olist arabic">
+<ol class="arabic" start="4">
+<li>
+<p><strong>ImageConvertor:</strong> This component convert the color image captured by the camera to a grey image.</p>
+</li>
+<li>
+<p><strong>ImageFilter:</strong> This component applies a filter to the image. Here, we apply a binarize filter to obtain a black and white (or binary) image. This filter requires a threshold between 0 and 255 to select if a grey pixel becomes black or white. If you set this threshold to -1, the threshold is automatically computed according to the OTSU method based on a histogram computed on the whole image. This filter is the weak point of this pipeline as the binarize threshold should be locally computed by region of the current image to reduce the impact of local specular reflections on the marker or overexposure.</p>
+</li>
+<li>
+<p><strong>ContoursExtractor:</strong> This component extracts contours from the previous binary image. In order to focus on contours of interest, we can set the minimum edges of the contours to 4.</p>
+</li>
+<li>
+<p><strong>ContoursFilterBinaryMarker:</strong> This component first keeps only contours that are closed and approximates low curves defined by a set of successive edges by a single edge. Then, it selects only contours with four edges. You can set the minimum size of the contours you want to keep (size defined in pixels) in order to exclude small quad contours.</p>
+</li>
+<li>
+<p><strong>PerspectiveControllers:</strong> This component warps and crops the binary image to extract a set of sub-images whose borders are defined by the contours kept by the previous filter.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p><strong>Recognition step</strong></p>
+<div class="olist arabic">
+<ol class="arabic" start="9">
+<li>
+<p><strong>SBPatternDescriptorExtractor:</strong>  First, this component checks if each sub-image that have been created by the previous component corresponds to a squared binary marker (by detecting if the borders of the sub-image are black). Then, if this is the case then it extracts its squared binary pattern descriptors (by detecting the color of each cell of the pattern, and this for the four rotations of the sub-image).</p>
+</li>
+<li>
+<p><strong>DescriptorMatcherRadius:</strong> This component compares the squared binary pattern of the marker we are looking for with the squared binary patterns extracted from the current image. It does it by computing the hamming distance between the descriptors.</p>
+</li>
+<li>
+<p><strong>SBPatternReindexer:</strong> By setting in parameter the size of teh pattern (number of cells defining the pattern, for example 5 if it is a 5x5 pattern), and by knowing the contours extracted from the current image that match with the marker we are looking for, this component creates two vector of points: the first one with the 4 corners of the marker (in cells, meaning in the pattern space), and the second one with the 4 corners of the marker extracted from the image (in pixel, meaning in image space).</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p><strong>Camera pose estimation step</strong></p>
+<div class="olist arabic">
+<ol class="arabic" start="12">
+<li>
+<p><strong>Image2WorldMapper4Marker2D:</strong> This component computes the 3D position of the four corners of the marker in the 3D coordinate system of the real space. To do that, we have to set as parameters the size of the pattern (in cells) as well as the size of the marker (in world unit defined by the user) to apply a cross-multiplication to the 4 corners of the marker given by the previous SBPatternReindexer component.</p>
+</li>
+<li>
+<p><strong>PoseEstimation:</strong> This component applies a P4P (Perspective 4-Points) algorithm on the four corners of the marker to estimate the pose of the camera. This algorithm consists in solving the non-linear system that defines the pose of the camera knowing the position of 4 points in the real space as well as their projections in the image plane of the camera.</p>
+</li>
+</ol>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="instructions"><a class="anchor" href="#instructions"></a><a class="link" href="#instructions">Instructions</a></h3>
+<div class="sect3">
+<h4 id="initialize_your_development_project"><a class="anchor" href="#initialize_your_development_project"></a><a class="link" href="#initialize_your_development_project">Initialize your development project</a></h4>
+<div class="sect4">
+<h5 id="visual_studio"><a class="anchor" href="#visual_studio"></a><a class="link" href="#visual_studio">Visual Studio</a></h5>
+<div class="paragraph">
+<p>To do
+===== QT Creator
+If you are using QT Creator, open it and create a new project (in File menu). Choose "Non-Qt project" and "Plain C++ Application", set the location and the name of your project (for example SolARFiducialTutorial), and select as build system "qmake", and then the building kit of your choice. Finally, click on finish to create your project.
+Now, you need to select the file called "SolARFiducialTutorial.pro" in your project tree, and you have to add the following line before defining your source files:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code>DEPENDENCIESCONFIG = sharedlib
+include ($$(BCOMDEVROOT)/builddefs/qmake/templateappconfig.pri)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Be sure to have defined your environment variable <em>$BCOMDEVROOT$</em> and to have copied in this folder all the files defining your build pipeline downloadable <a href="https://github.com/b-com-software-basis/builddefs-qmake/releases/tag/solar_v1.0.0">here</a>. If not, download the zip file, unzip it, and copy the content of the folder <em>builddefs-qmake-solar_v1.0.0</em> in <em>$BCOMDEVROOT$/builddefs/qmake/</em>.</p>
+</div>
+<div class="paragraph">
+<p>Then, create in your project folder a file called <em>packagedependencies.txt</em> and add in it your dependencies, namely the basic dependencies required by the SolARFramework (SolARFramework, xpcf, boost, eigen and spdlog) as well as the one required for the openCV module (SolARModuleOpencv and opencv):</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code>SolARFramework|1.0.0|SolARFramework|bcomBuild|url_repo_artifactory
+SolARContainerOpenCV|1.0.0|SolARContainerOpenCV|bcomBuild|url_repo_artifactory
+xpcf|1.0.0|xpcf|bcomBuild|http://repository.b-com.com/
+boost|1.64.0|boost|thirdParties|http://repository.b-com.com/
+opencv|3.2.0|opencv|thirdParties|http://repository.b-com.com/
+spdlog|1.0.0|spdlog|thirdParties|http://repository.b-com.com/
+eigen|3.3.4|eigen|thirdParties|http://repository.b-com.com/amc-generic</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Now you can run QMake (click right of your project in QT creator, and click on <em>run QMake</em>). Every pathes for headers and library links are now set.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="main_cpp"><a class="anchor" href="#main_cpp"></a><a class="link" href="#main_cpp">main.cpp</a></h5>
+<div class="paragraph">
+<p>Finally, replace the code of your main.cpp by the following one:</p>
+</div>
+<div class="listingblock">
+<div class="title">main.cpp</div>
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="c"><span class="preprocessor">#include</span> <span class="include">&quot;SolARModuleManagerOpencv.h&quot;</span>
+
+using namespace std;
+using namespace SolAR;
+namespace xpcf  = org::bcom::xpcf;
+
+<span class="directive">void</span> run(<span class="predefined-type">int</span> argc,<span class="predefined-type">char</span>** argv){
+
+    <span class="comment">// To redirect log to the console</span>
+    LOG_ADD_LOG_TO_CONSOLE();
+
+    <span class="comment">// ADD HERE: load your Opencv module</span>
+
+    <span class="comment">// ADD HERE: declarations and instantiation of components</span>
+    <span class="comment">// Example to declare and create a camera:</span>
+    <span class="comment">// SRef&lt;ISolARCamera&gt; camera = opencvModule.createComponent&lt;ISolARCamera&gt;(UUID::OPENCV::CAMERA);</span>
+
+
+    <span class="comment">// ADD HERE: declarations of data structures used to connect components</span>
+    <span class="comment">// Example to declare a SolARImage:</span>
+    <span class="comment">// SRef&lt;SolARImage&gt; inputImage;</span>
+
+
+    <span class="comment">// ADD HERE: Components configuration</span>
+    <span class="comment">// Generally through the method setParamerters of the components, except for the input components such as the camera or the marker that use specific methods to load configuration files</span>
+
+
+    <span class="comment">// ADD HERE: The pipeline loop</span>
+
+}
+
+<span class="predefined-type">int</span> printHelp(){
+        printf(<span class="string"><span class="delimiter">&quot;</span><span class="content"> usage :</span><span class="char">\n</span><span class="delimiter">&quot;</span></span>);
+        printf(<span class="string"><span class="delimiter">&quot;</span><span class="content"> fiducialMarker.exe FiducialMarkerFilename CameraCalibrationFile VideoFile|cameraId configFile</span><span class="char">\n</span><span class="char">\n</span><span class="delimiter">&quot;</span></span>);
+        printf(<span class="string"><span class="delimiter">&quot;</span><span class="content"> Escape key to exit</span><span class="delimiter">&quot;</span></span>);
+        <span class="keyword">return</span> <span class="integer">1</span>;
+}
+
+<span class="predefined-type">int</span> main(<span class="predefined-type">int</span> argc, <span class="predefined-type">char</span> *argv[])
+{
+    <span class="keyword">if</span>(argc==<span class="integer">3</span> || argc ==<span class="integer">4</span>){
+        run(argc,argv);
+        <span class="keyword">return</span> <span class="integer">1</span>;
+    }
+    <span class="keyword">else</span>
+        <span class="keyword">return</span>(printHelp());
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>As you can see, the executable takes 4 arguments:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>The url of a file describing the fiducial marker you are looking.</p>
+</li>
+<li>
+<p>The url of the file defining the calibration of your camera (generate it with the calibration tool).</p>
+</li>
+<li>
+<p>The Id of your camera.</p>
+</li>
+<li>
+<p>And finally, the configuration file defining where are the registery files and the dll pathes of the modules used in your sample (here we only need SolARModuleOpencv). An example of configuration file is available here.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Download and copy in your project folder the files describing the fiducial marker as well as the configuration file (here) and update this last with the good pathes. Similarly, copy the camera calibration file generate by the calibration tool in your project folder.</p>
+</div>
+<div class="paragraph">
+<p>Now, in your IDE, you can set the command line arguments of your executable with pathes relative to your executable folder:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>fiducialMarker.yml camera_calibration.yml 0 config.ini</p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Your development environment is now ready, now you just need to fill the main.cpp.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="load_your_module_s"><a class="anchor" href="#load_your_module_s"></a><a class="link" href="#load_your_module_s">Load your module(s)</a></h5>
+<div class="paragraph">
+<p>This is very simple. Create a SolARModuleManagerOpencv, set as constructor argument the url of the configuration file of the Opencv module (pass as the fourth argument of your executable).</p>
+</div>
+<div class="listingblock">
+<div class="title">main.cpp</div>
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="c"><span class="comment">// ADD HERE: load your Opencv module</span>
+SolARModuleManagerOpencv opencvModule(argv[<span class="integer">4</span>]);
+<span class="keyword">if</span> (!opencvModule.isLoaded()) <span class="comment">// xpcf library load has failed</span>
+{
+    LOG_ERROR(<span class="string"><span class="delimiter">&quot;</span><span class="content">XPCF library load has failed</span><span class="delimiter">&quot;</span></span>)
+    <span class="keyword">return</span>;
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>That is done, now you can easily instantiate any components embedded in the module.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="components_declaration_and_instanciation"><a class="anchor" href="#components_declaration_and_instanciation"></a><a class="link" href="#components_declaration_and_instanciation">Components declaration and instanciation</a></h5>
+<div class="paragraph">
+<p>The goal here is to declare and instanciate all components you will need for the camera pose estimation based on fiducial marker.
+In the main.cpp, you can find in comment how to easily declare and instanciate a camera component:</p>
+</div>
+<div class="listingblock blockShow">
+<div class="title">title</div>
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="c">SRef&lt;ISolARCamera&gt; camera = opencvModule.createComponent&lt;ISolARCamera&gt;(UUID::OPENCV::CAMERA);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can do it now for all 12 components of the pipeline described in figure 1  (SolARDescriptorsExtractorSBPattern is used twice, but can be instantiated only once).</p>
+</div>
+<div class="listingblock blockHide">
+<div class="title">main.cpp</div>
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="c"><span class="comment">// ADD HERE: declarations and instantiation of components</span>
+<span class="comment">// Example to declare and create a camera:</span>
+<span class="comment">// SRef&lt;ISolARCamera&gt; camera = opencvModule.createComponent(UUID::OPENCV::CAMERA);</span>
+SRef&lt;ISolARCamera&gt; camera = opencvModule.createComponent&lt;ISolARCamera&gt;(UUID::OPENCV::CAMERA);
+SRef&lt;ISolARMarker2DSquaredBinary&gt; binaryMarker = opencvModule.createComponent&lt;ISolARMarker2DSquaredBinary&gt;(UUID::OPENCV::MARKER2D_SQUARED_BINARY);
+SRef&lt;ISolARImageViewer&gt; imageViewerFilteredContours = opencvModule.createComponent&lt;ISolARImageViewer&gt;(UUID::OPENCV::IMAGE_VIEWER);
+SRef&lt;ISolARImageFilter&gt; imageFilter = opencvModule.createComponent&lt;ISolARImageFilter&gt;(UUID::OPENCV::IMAGE_FILTER);
+SRef&lt;ISolARImageConvertor&gt; imageConvertor = opencvModule.createComponent&lt;ISolARImageConvertor&gt;(UUID::OPENCV::IMAGE_CONVERTOR);
+SRef&lt;ISolARContoursExtractor&gt; contoursExtractor = opencvModule.createComponent&lt;ISolARContoursExtractor&gt;(UUID::OPENCV::CONTOURS_EXTRACTOR);
+SRef&lt;ISolARContoursFilter&gt; contoursFilter = opencvModule.createComponent&lt;ISolARContoursFilter&gt;(UUID::OPENCV::CONTOURS_FILTER_BINARY_MARKER);
+SRef&lt;ISolARPerspectiveController&gt; perspectiveController = opencvModule.createComponent&lt;ISolARPerspectiveController&gt;(UUID::OPENCV::PERSPECTIVE_CONTROLLER);
+SRef&lt;ISolARDescriptorsExtractorSBPattern&gt; patternDescriptorExtractor = opencvModule.createComponent&lt;ISolARDescriptorsExtractorSBPattern&gt;(UUID::OPENCV::DESCRIPTORS_EXTRACTOR_SBPATTERN);
+SRef&lt;ISolARDescriptorMatcher&gt; patternMatcher = opencvModule.createComponent&lt;ISolARDescriptorMatcher&gt;(UUID::OPENCV::DESCRIPTOR_MATCHER_RADIUS);
+SRef&lt;ISolARSBPatternReIndexer&gt; patternReIndexer = opencvModule.createComponent&lt;ISolARSBPatternReIndexer&gt;(UUID::OPENCV::SBPATTERN_REINDEXER);
+SRef&lt;ISolARImage2WorldMapper&gt; img2worldMapper = opencvModule.createComponent&lt;ISolARImage2WorldMapper&gt;(UUID::OPENCV::IMAGE2WORLD_MAPPER);
+SRef&lt;ISolARPoseEstimation&gt; PnP = opencvModule.createComponent&lt;ISolARPoseEstimation&gt;(UUID::OPENCV::POSE_ESTIMATION);</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="data_structures_declaration"><a class="anchor" href="#data_structures_declaration"></a><a class="link" href="#data_structures_declaration">Data structures declaration</a></h5>
+<div class="paragraph">
+<p>Your components will exchange data through data structures when running the pipeline. You need to declare all those shown in figure 1.</p>
+</div>
+<div class="listingblock minimizeHeight blockHide">
+<div class="title">main.cpp</div>
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="c"><span class="comment">// ADD HERE: declarations of data structures used to connect components</span>
+<span class="comment">// Example to declare a SolARImage:</span>
+<span class="comment">// SRef&lt;SolARImage&gt; inputImage;</span>
+
+SRef&lt;SolARImage&gt; inputImage;
+SRef&lt;SolARImage&gt; greyImage  = xpcf::utils::make_shared&lt;SolARImage&gt;(SolARImage::ImageLayout::LAYOUT_GREY,
+                                 SolARImage::PixelOrder::INTERLEAVED,SolARImage::DataType::TYPE_8U); <i class="conum" data-value="1"></i><b>(1)</b>
+SRef&lt;SolARImage&gt; binaryImage  = xpcf::utils::make_shared&lt;SolARImage&gt;(SolARImage::ImageLayout::LAYOUT_GREY,
+                                 SolARImage::PixelOrder::INTERLEAVED,SolARImage::DataType::TYPE_8U); <i class="conum" data-value="1"></i><b>(1)</b>
+
+SRef&lt;SolARImage&gt; contoursImage;
+SRef&lt;SolARImage&gt; filteredContoursImage;
+std::vector&lt;SRef&lt;SolARContour2Df&gt;&gt;              contours;
+std::vector&lt;SRef&lt;SolARContour2Df&gt;&gt;              filtered_contours;
+std::vector&lt;SRef&lt;SolARImage&gt;&gt;                   patches;
+std::vector&lt;SRef&lt;SolARContour2Df&gt;&gt;              recognizedContours;
+SRef&lt;SolARDescriptorBuffer&gt;                     recognizedPatternsDescriptors;
+SRef&lt;SolARDescriptorBuffer&gt;                     markerPatternDescriptor;
+std::vector&lt;SolARDescriptorMatch&gt;               patternMatches;
+std::vector&lt;SRef&lt;SolARPoint2Df&gt;&gt;                pattern2DPoints;
+std::vector&lt;SRef&lt;SolARPoint2Df&gt;&gt;                img2DPoints;
+std::vector&lt;SRef&lt;SolARPoint3Df&gt;&gt;                pattern3DPoints;
+SolARPose                                       pose;
+
+SolARCamCalibration K;
+SolARCamDistortion camDist;</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>here, the image converter and filter do not yet instantiate the output image, so you need to do it yourself.</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect4">
+<h5 id="components_configuration"><a class="anchor" href="#components_configuration"></a><a class="link" href="#components_configuration">Components configuration</a></h5>
+<div class="paragraph">
+<p>To complete</p>
+</div>
+<div class="listingblock">
+<div class="title">main.cpp</div>
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="c"><span class="comment">// ADD HERE: Components configuration</span>
+<span class="comment">// Generally through the method setParamerters of the components, except for the input components such as the camera or the marker that use specific methods to load configuration files</span>
+
+binaryMarker-&gt;loadMarker(argv[<span class="integer">1</span>]);
+patternDescriptorExtractor-&gt;extract(binaryMarker-&gt;getPattern(), markerPatternDescriptor);
+
+<span class="predefined-type">int</span> minContourSize = <span class="integer">4</span>;
+contoursExtractor-&gt;setParameters(minContourSize);
+
+<span class="predefined-type">int</span> minContourLength = <span class="integer">20</span>;
+contoursFilter-&gt;setParameters(minContourLength);
+
+SolARSizei CorrectedImagesSize = {<span class="integer">640</span>,<span class="integer">480</span>};
+perspectiveController-&gt;setParameters(CorrectedImagesSize);
+
+<span class="predefined-type">int</span> patternSize = binaryMarker-&gt;getPattern()-&gt;getSize();
+patternDescriptorExtractor-&gt;setParameters(patternSize);
+
+patternReIndexer-&gt;setParameters(patternSize);
+
+SolARSizei sbPatternSize;
+sbPatternSize.width = patternSize;
+sbPatternSize.height = patternSize;
+img2worldMapper-&gt;setParameters(sbPatternSize, binaryMarker-&gt;getSize());
+
+<span class="comment">//Load camera parameters and start it</span>
+camera-&gt;loadCameraParameters(argv[<span class="integer">2</span>]);
+
+PnP-&gt;setCameraParameters(camera-&gt;getIntrinsicsParameters(), camera-&gt;getDistorsionParameters());
+overlay3D-&gt;setCameraParameters(camera-&gt;getIntrinsicsParameters(), camera-&gt;getDistorsionParameters());
+
+<span class="keyword">if</span> (camera-&gt;start(atoi(argv[<span class="integer">3</span>])) != FrameworkReturnCode::_SUCCESS) <span class="comment">// Camera</span>
+{
+    LOG_ERROR (<span class="string"><span class="delimiter">&quot;</span><span class="content">Camera with id {} does not exist</span><span class="delimiter">&quot;</span></span>, argv[<span class="integer">3</span>]);
+    <span class="keyword">return</span> ;
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="the_pipeline_loop"><a class="anchor" href="#the_pipeline_loop"></a><a class="link" href="#the_pipeline_loop">The pipeline loop</a></h5>
+<div class="paragraph">
+<p>To complete</p>
+</div>
+<div class="listingblock">
+<div class="title">main.cpp</div>
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="c"><span class="predefined-type">bool</span> process = <span class="predefined-constant">true</span>;
+<span class="keyword">while</span> (process)
+{
+  <span class="keyword">if</span>(camera-&gt;getNextImage(inputImage)==SolAR::FrameworkReturnCode::_ERROR_)
+       <span class="keyword">break</span>;
+
+  <span class="comment">// Convert Image from RGB to grey</span>
+  imageConvertor-&gt;convert(inputImage, greyImage);
+
+  <span class="comment">// Convert Image from grey to black and white</span>
+  imageFilter-&gt;binarize(greyImage,binaryImage,-<span class="integer">1</span>,<span class="integer">255</span>);
+
+  <span class="comment">// Extract contours from binary image</span>
+  contoursExtractor-&gt;extract(binaryImage,contours);
+
+  <span class="comment">// Filter 4 edges contours to find those candidate for marker contours</span>
+  contoursFilter-&gt;filter(contours, filtered_contours);
+
+  <span class="comment">// Create one warpped and cropped image by contour</span>
+  perspectiveController-&gt;correct(binaryImage, filtered_contours, patches);
+
+  <span class="comment">// test if this last image is really a squared binary marker, and if it is the case, extract its descriptor</span>
+   <span class="keyword">if</span> (patternDescriptorExtractor-&gt;extract(patches, filtered_contours, recognizedPatternsDescriptors, recognizedContours) != FrameworkReturnCode::_ERROR_)
+   {
+       <span class="comment">// From extracted squared binary pattern, match the one corresponding to the squared binary marker</span>
+       <span class="keyword">if</span> (patternMatcher-&gt;match(markerPatternDescriptor, recognizedPatternsDescriptors, patternMatches) == SolAR::DescriptorMatcher::DESCRIPTORS_MATCHER_OK)
+       {
+
+           <span class="comment">// Reindex the pattern to create two vector of points, the first one corresponding to marker corner, the second one corresponding to the poitsn of the contour</span>
+           patternReIndexer-&gt;reindex(recognizedContours, patternMatches, pattern2DPoints, img2DPoints);
+
+           <span class="comment">// Compute the 3D position of each corner of the marker</span>
+           img2worldMapper-&gt;map(pattern2DPoints, pattern3DPoints);
+
+           <span class="comment">// Compute the pose of the camera using a Perspective n Points algorithm using only the 4 corners of the marker</span>
+           <span class="keyword">if</span> (PnP-&gt;poseFromSolvePNP(pose, img2DPoints, pattern3DPoints) == FrameworkReturnCode::_SUCCESS)
+           {
+               LOG_INFO(<span class="string"><span class="delimiter">&quot;</span><span class="content">Pose: {}</span><span class="delimiter">&quot;</span></span>, pose);
+           }
+       }
+   }
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="display_a_cube"><a class="anchor" href="#display_a_cube"></a><a class="link" href="#display_a_cube">Display a cube</a></h5>
+<div class="paragraph">
+<p>to complete</p>
+</div>
+</div>
+</div>
+</div>
+            </div>
+        </div>
+
+        <!-- build:js scripts/vendor.js -->
+        <!-- bower:js -->
+
+        <!-- endbower -->
+        <!-- endbuild -->
+
+    <!-- build:js({.tmp,src/main/webapp}) scripts/app.js -->
+    <script src="https://solarframework.github.io//js/vendor/modernizr.js"></script>
+    <!-- endbuild -->
+    <script type="text/javascript">
+      /* Fix padding-top on anchor with TOC */
+      window.addEventListener("hashchange", function() { scrollBy(0, -95) })
+    </script>
+    </body>
+</html>

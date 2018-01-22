@@ -1,0 +1,233 @@
+<!doctype html>
+<html class="no-js">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>SolAR</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+    <!-- IE 10 Metro tile icon (Metro equivalent of apple-touch-icon) -->
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="msapplication-TileImage" content="https://solarframework.github.io//assets/static/favicon-144.png">
+
+    <!-- Touch icon for iOS 2.0+ and Android 2.1+ -->
+    <link rel="apple-touch-icon-precomposed" href="https://solarframework.github.io//assets/static/favicon-152.png">
+
+    <link rel="icon" type="image/x-icon" href="https://solarframework.github.io//assets/static/favicon.ico">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css assets/styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="https://solarframework.github.io//assets/styles/bootstrap.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css assets/styles/main.css -->
+    <link rel="stylesheet" href="https://solarframework.github.io//assets/styles/coderay.css">
+    <link rel="stylesheet" href="https://solarframework.github.io//assets/styles/asciidoctor.css">
+    <link rel="stylesheet" href="https://solarframework.github.io//assets/styles/solar-asciidoctor-theme.css">
+    <link rel="stylesheet" href="https://solarframework.github.io//assets/styles/font-awesome.min.css">
+    <link rel="stylesheet" href="https://solarframework.github.io//assets/styles/solar-bootstrap-theme.css">
+    <link rel="stylesheet" href="https://solarframework.github.io//assets/styles/main.css">
+    <link rel="stylesheet" href="https://solarframework.github.io//assets/styles/media.css">
+    <!-- endbuild -->
+    <script src="https://solarframework.github.io//js/vendor/jquery.js"></script><!--needed with bootstrap-->
+    <script src="https://solarframework.github.io//js/vendor/bootstrap.js"></script>
+    <script src="https://solarframework.github.io//js/toc.js"></script>
+    <script src="https://solarframework.github.io//js/block-folding.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() { 
+        /* Set up style for active page in submenu and matching navbar entry This code cannot be put in navbar.html because each default.html template imports a brand new navbar so the activate class will be overwriten by brand new navbar DOM*/
+          var pageHasSubmenu = false;
+          $("#submenuconfig + .sectionbody ul li a").each(function(){
+              if ($(this).prop("href") == window.location.href) {
+                  /* Set up style for active page in submenu */
+                  pageHasSubmenu = true;
+                  $(this).addClass("active"); 
+                  $(this).parents("p").addClass("active");
+                  return false; /* same as break, specific for jquery each() function */
+              }
+          });
+          var matchingNavbarURL = window.location.href;
+          if (pageHasSubmenu) {
+              var urlParts = window.location.href.split("/");
+              var matchingNavbarItem = urlParts[urlParts.length-3];
+              matchingNavbarURL = window.location.href.substring(0, window.location.href.indexOf(matchingNavbarItem))+matchingNavbarItem+".html";       
+          }
+          /* Set up style for active item in navbar (no click on submenu yet) This code cannot be put in navbar.html because each default.html template imports a brand new navbar so the activate class will be overwriten by brand new navbar DOM*/
+          $("#navbar-collapse ul.navbar-nav a").each(function(){
+              if ($(this).prop("href") == matchingNavbarURL) {
+                  $(this).addClass('active'); 
+                  $(this).parents('li').addClass('active');
+                  return false; /* same as break, specific for jquery each() function */
+              }
+          });
+  
+          /* Configure TOC to take into account all titles */
+          $("#toc").toc(  { headers: "h2, h3, h4, h5, h6",
+                              listType: "ul",
+                              title: "<div id='toctitle'>Table of Contents</div>",
+                              noBackToTopLinks: true /*usefull to avoid tag <i class="icon-arrow-up back-to-top"> </i> to be placed between #submenuconfig and sectionbody and screw the submenu css style*/
+           });
+        });
+      </script>
+  <!-- Google Analytics -->
+  <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-107058603-1', 'auto');
+          ga('send', 'pageview');
+  </script>  <!-- End Google Analytics --> 
+<link rel="stylesheet" type="text/css" href="https://solarframework.github.io//js/cookieconsent/cookieconsent.min.css" />
+<script src="https://solarframework.github.io//js/cookieconsent/cookieconsent.min.js"></script>
+<script>
+var userLang = navigator.language || navigator.userLanguage; 
+if (userLang == "fr") {
+  message="En poursuivant votre navigation sur ce site, vous acceptez que des cookies soient utilisés afin d’améliorer votre expérience d’utilisateur.";
+  link="En savoir plus";
+  href="https://b-com.com/fr/mentions-l%C3%A9gales";
+}
+else {
+  message="By proceeding beyond this page, you consent to the cookies usage, in order to improve your experience on this website.";
+  link="More information";
+  href="https://b-com.com/en/legal-notice";
+}
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#252e39"
+    },
+    "button": {
+      "background": "#14a7d0"
+    }
+  },
+  "position": "bottom-left",
+  "theme": "edgeless",
+  "content": {
+    "message": message,
+    "dismiss": "OK",
+    "link": link,
+    "href": href
+  }
+})});
+</script>  
+</head>
+
+    <body>
+        <!--[if lt IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div><div class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand link" href="https://solarframework.github.io//">&lsaquo;SolAR&rsaquo;</a>
+        </div>
+
+        <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
+            <ul class="nav navbar-nav">
+                
+                
+                
+                
+                
+                    <li>
+                        <a href="https://solarframework.github.io//discover.html">
+                            <span>Discover</span>
+                        </a>
+                    </li>                          
+                
+                
+                
+                    <li>
+                        <a href="https://solarframework.github.io//API.html">
+                            <span>API</span>
+                        </a>
+                    </li>                          
+                
+                
+                
+                    <li>
+                        <a class="active" href="https://solarframework.github.io//contribute.html">
+                            <span>Contribute</span>
+                        </a>
+                    </li>                          
+                
+                
+                
+                    <li>
+                        <a href="https://solarframework.github.io//use_it.html">
+                            <span>Use it</span>
+                        </a>
+                    </li>                          
+                
+                
+
+                <!--li>
+                    <form action="https://solarframework.github.io//search.html" method="get" class="navbar-form" role="search">
+                        <div class="input-group">
+                            <input type="text" id="search" class="form-control" placeholder="Search"
+                                    name="q" class="span1" type="text" size="15">
+                            <div class="input-group-btn">
+                                <button class="btn btn-default" type="submit">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </li-->
+            </ul>
+        </div><!--/.nav-collapse -->
+        
+    </div>
+
+</div>
+</div>
+
+        <div class="container">
+            <div class="well">
+              <div class="sect3">
+<h4 id="camera"><a class="anchor" href="#camera"></a><a class="link" href="#camera">Camera</a></h4>
+<div class="paragraph">
+<p>ToDo</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="image_conversion"><a class="anchor" href="#image_conversion"></a><a class="link" href="#image_conversion">Image conversion</a></h4>
+<div class="paragraph">
+<p>ToDo</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="image_filters"><a class="anchor" href="#image_filters"></a><a class="link" href="#image_filters">Image filters</a></h4>
+<div class="paragraph">
+<p>ToDo</p>
+</div>
+</div>
+            </div>
+        </div>
+
+        <!-- build:js scripts/vendor.js -->
+        <!-- bower:js -->
+
+        <!-- endbower -->
+        <!-- endbuild -->
+
+    <!-- build:js({.tmp,src/main/webapp}) scripts/app.js -->
+    <script src="https://solarframework.github.io//js/vendor/modernizr.js"></script>
+    <!-- endbuild -->
+    <script type="text/javascript">
+      /* Fix padding-top on anchor with TOC */
+      window.addEventListener("hashchange", function() { scrollBy(0, -95) })
+    </script>
+    </body>
+</html>

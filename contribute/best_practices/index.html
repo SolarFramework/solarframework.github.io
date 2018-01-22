@@ -1,0 +1,1269 @@
+<!doctype html>
+<html class="no-js">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>SolAR</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+    <!-- IE 10 Metro tile icon (Metro equivalent of apple-touch-icon) -->
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="msapplication-TileImage" content="https://solarframework.github.io//assets/static/favicon-144.png">
+
+    <!-- Touch icon for iOS 2.0+ and Android 2.1+ -->
+    <link rel="apple-touch-icon-precomposed" href="https://solarframework.github.io//assets/static/favicon-152.png">
+
+    <link rel="icon" type="image/x-icon" href="https://solarframework.github.io//assets/static/favicon.ico">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css assets/styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="https://solarframework.github.io//assets/styles/bootstrap.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css assets/styles/main.css -->
+    <link rel="stylesheet" href="https://solarframework.github.io//assets/styles/coderay.css">
+    <link rel="stylesheet" href="https://solarframework.github.io//assets/styles/asciidoctor.css">
+    <link rel="stylesheet" href="https://solarframework.github.io//assets/styles/solar-asciidoctor-theme.css">
+    <link rel="stylesheet" href="https://solarframework.github.io//assets/styles/font-awesome.min.css">
+    <link rel="stylesheet" href="https://solarframework.github.io//assets/styles/solar-bootstrap-theme.css">
+    <link rel="stylesheet" href="https://solarframework.github.io//assets/styles/main.css">
+    <link rel="stylesheet" href="https://solarframework.github.io//assets/styles/media.css">
+    <!-- endbuild -->
+    <script src="https://solarframework.github.io//js/vendor/jquery.js"></script><!--needed with bootstrap-->
+    <script src="https://solarframework.github.io//js/vendor/bootstrap.js"></script>
+    <script src="https://solarframework.github.io//js/toc.js"></script>
+    <script src="https://solarframework.github.io//js/block-folding.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() { 
+        /* Set up style for active page in submenu and matching navbar entry This code cannot be put in navbar.html because each default.html template imports a brand new navbar so the activate class will be overwriten by brand new navbar DOM*/
+          var pageHasSubmenu = false;
+          $("#submenuconfig + .sectionbody ul li a").each(function(){
+              if ($(this).prop("href") == window.location.href) {
+                  /* Set up style for active page in submenu */
+                  pageHasSubmenu = true;
+                  $(this).addClass("active"); 
+                  $(this).parents("p").addClass("active");
+                  return false; /* same as break, specific for jquery each() function */
+              }
+          });
+          var matchingNavbarURL = window.location.href;
+          if (pageHasSubmenu) {
+              var urlParts = window.location.href.split("/");
+              var matchingNavbarItem = urlParts[urlParts.length-3];
+              matchingNavbarURL = window.location.href.substring(0, window.location.href.indexOf(matchingNavbarItem))+matchingNavbarItem+".html";       
+          }
+          /* Set up style for active item in navbar (no click on submenu yet) This code cannot be put in navbar.html because each default.html template imports a brand new navbar so the activate class will be overwriten by brand new navbar DOM*/
+          $("#navbar-collapse ul.navbar-nav a").each(function(){
+              if ($(this).prop("href") == matchingNavbarURL) {
+                  $(this).addClass('active'); 
+                  $(this).parents('li').addClass('active');
+                  return false; /* same as break, specific for jquery each() function */
+              }
+          });
+  
+          /* Configure TOC to take into account all titles */
+          $("#toc").toc(  { headers: "h2, h3, h4, h5, h6",
+                              listType: "ul",
+                              title: "<div id='toctitle'>Table of Contents</div>",
+                              noBackToTopLinks: true /*usefull to avoid tag <i class="icon-arrow-up back-to-top"> </i> to be placed between #submenuconfig and sectionbody and screw the submenu css style*/
+           });
+        });
+      </script>
+  <!-- Google Analytics -->
+  <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-107058603-1', 'auto');
+          ga('send', 'pageview');
+  </script>  <!-- End Google Analytics --> 
+<link rel="stylesheet" type="text/css" href="https://solarframework.github.io//js/cookieconsent/cookieconsent.min.css" />
+<script src="https://solarframework.github.io//js/cookieconsent/cookieconsent.min.js"></script>
+<script>
+var userLang = navigator.language || navigator.userLanguage; 
+if (userLang == "fr") {
+  message="En poursuivant votre navigation sur ce site, vous acceptez que des cookies soient utilisés afin d’améliorer votre expérience d’utilisateur.";
+  link="En savoir plus";
+  href="https://b-com.com/fr/mentions-l%C3%A9gales";
+}
+else {
+  message="By proceeding beyond this page, you consent to the cookies usage, in order to improve your experience on this website.";
+  link="More information";
+  href="https://b-com.com/en/legal-notice";
+}
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#252e39"
+    },
+    "button": {
+      "background": "#14a7d0"
+    }
+  },
+  "position": "bottom-left",
+  "theme": "edgeless",
+  "content": {
+    "message": message,
+    "dismiss": "OK",
+    "link": link,
+    "href": href
+  }
+})});
+</script>  
+</head>
+
+    <body>
+        <!--[if lt IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div><div class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand link" href="https://solarframework.github.io//">&lsaquo;SolAR&rsaquo;</a>
+        </div>
+
+        <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
+            <ul class="nav navbar-nav">
+                
+                
+                
+                
+                
+                    <li>
+                        <a href="https://solarframework.github.io//discover.html">
+                            <span>Discover</span>
+                        </a>
+                    </li>                          
+                
+                
+                
+                    <li>
+                        <a href="https://solarframework.github.io//API.html">
+                            <span>API</span>
+                        </a>
+                    </li>                          
+                
+                
+                
+                    <li>
+                        <a class="active" href="https://solarframework.github.io//contribute.html">
+                            <span>Contribute</span>
+                        </a>
+                    </li>                          
+                
+                
+                
+                    <li>
+                        <a href="https://solarframework.github.io//use_it.html">
+                            <span>Use it</span>
+                        </a>
+                    </li>                          
+                
+                
+
+                <!--li>
+                    <form action="https://solarframework.github.io//search.html" method="get" class="navbar-form" role="search">
+                        <div class="input-group">
+                            <input type="text" id="search" class="form-control" placeholder="Search"
+                                    name="q" class="span1" type="text" size="15">
+                            <div class="input-group-btn">
+                                <button class="btn btn-default" type="submit">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </li-->
+            </ul>
+        </div><!--/.nav-collapse -->
+        
+    </div>
+
+</div>
+</div>
+
+        <div class="container">
+            <div class="well">
+              <h1>Best practices</h1>
+<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#submenuconfig">submenuconfig</a></li>
+<li><a href="#best_practices">Best practices</a></li>
+<li><a href="#logs_to_help_debugging">Logs to help debugging</a></li>
+<li><a href="#coding_rules">coding rules</a></li>
+<li><a href="#project_organization">Project organization</a>
+<ul class="sectlevel2">
+<li><a href="#files">Files</a></li>
+</ul>
+</li>
+<li><a href="#c_c_coding_rules">C / C++ Coding Rules</a>
+<ul class="sectlevel2">
+<li><a href="#language_features">Language features</a></li>
+<li><a href="#libraries_and_headers">Libraries and headers</a></li>
+<li><a href="#naming_conventions">Naming conventions</a></li>
+<li><a href="#design_conventions">Design conventions</a></li>
+<li><a href="#layout_conventions">Layout conventions</a></li>
+<li><a href="#tracing_and_debugging">Tracing and debugging</a></li>
+<li><a href="#error_handling">Error handling</a></li>
+<li><a href="#miscellaneous_conventions">Miscellaneous conventions</a></li>
+<li><a href="#documentation">Documentation</a></li>
+<li><a href="#c_c_performance_rules">C/C++ Performance rules</a></li>
+<li><a href="#tools">Tools</a></li>
+</ul>
+</li>
+<li><a href="#appendix_a_code_sample">Appendix A.	Code sample</a>
+<ul class="sectlevel2">
+<li><a href="#i_prototype_c_header_file">I.	Prototype C++ header file</a></li>
+<li><a href="#ii_prototype_c_source_file">II.	 Prototype C++ source file</a></li>
+<li><a href="#iii_how_to_remove_goto">III.	How to remove ‘goto’</a></li>
+</ul>
+</li>
+<li><a href="#appendix_b_rules_management">Appendix B.	Rules management</a>
+<ul class="sectlevel2">
+<li><a href="#i_responsibility">I.	Responsibility</a></li>
+<li><a href="#ii_deviation">II.	Deviation</a></li>
+<li><a href="#iii_training">III.	Training</a></li>
+<li><a href="#iv_control">IV.	Control</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="sect1">
+<h2 id="submenuconfig"><a class="anchor" href="#submenuconfig"></a><a class="link" href="#submenuconfig">submenuconfig</a></h2>
+<div class="sectionbody">
+<div class="ulist none">
+<ul class="none">
+<li>
+<p><a href="https://solarframework.github.io//contribute/how_it_works/">how it works</a></p>
+</li>
+<li>
+<p><a href="https://solarframework.github.io//contribute/getting_started/">getting started</a></p>
+</li>
+<li>
+<p><a href="https://solarframework.github.io//contribute/create_component/">create a component</a></p>
+</li>
+<li>
+<p><a href="https://solarframework.github.io//contribute/contribute_to_core/">contribute to core</a></p>
+</li>
+<li>
+<p><a href="https://solarframework.github.io//contribute/best_practices/">best practices</a></p>
+</li>
+<li>
+<p><a href="https://solarframework.github.io//contribute/github_workflow/">contribution workflow</a></p>
+</li>
+<li>
+<p><a href="https://solarframework.github.io//contribute/tools/">tools</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="best_practices"><a class="anchor" href="#best_practices"></a><a class="link" href="#best_practices">Best practices</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>SolAR is a framework that defines interfaces (API) to computer vision components and a GUI that is used to graphically build Camera Pose Estimation schemes, based on the framework, for different applications/needs.
+The following rules shall be used for every addition/modification to the SolAR project.
+This encompasses the SolAR framework and the GUI interface and unless otherwise specified, these rules shall apply to both.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="logs_to_help_debugging"><a class="anchor" href="#logs_to_help_debugging"></a><a class="link" href="#logs_to_help_debugging">Logs to help debugging</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A SolARLog tool has been defined in order to help you to debug and test your programs.</p>
+</div>
+<div class="paragraph">
+<p>SolarLog is based on spdlog, and is managed as a singleton, so that you will have at maximum 2 loggers : 1 console and 1 file.</p>
+</div>
+<div class="paragraph">
+<p>You have  2 log modes</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>console</p>
+</li>
+<li>
+<p>file</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Please initiate your console logger with  LOG_ADD_LOG_TO_CONSOLE or file logger thanks to  LOG_ADD_LOG_TO_FILE.</p>
+</div>
+<div class="paragraph">
+<p>You will easily find examples in SolAR sample codes.</p>
+</div>
+<div class="paragraph">
+<p>Please use one of this macro to log your data, depending on the severity you want :</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>LOG_TRACE: create a TRACE of INFO level</p>
+</li>
+<li>
+<p>LOG_INFO(fmt, &#8230;&#8203;) : create a log of INFO level</p>
+</li>
+<li>
+<p>LOG_DEBUG(fmt, &#8230;&#8203;) : create a log of DEBUG level</p>
+</li>
+<li>
+<p>LOG_CRITICAL(fmt, &#8230;&#8203;) : create a log of CRITICIAL level</p>
+</li>
+<li>
+<p>LOG_WARNING(fmt, &#8230;&#8203;) : create a log of WARNING level</p>
+</li>
+<li>
+<p>LOG_ERROR(fmt, &#8230;&#8203;)  : create a log of ERROR level</p>
+</li>
+<li>
+<p>LOG_FLUSH : can be used to force logs flush (console or file mode)</p>
+</li>
+<li>
+<p>LOG_RELEASE : is used to release the logger (should be used at the end of a program).</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="coding_rules"><a class="anchor" href="#coding_rules"></a><a class="link" href="#coding_rules">coding rules</a></h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="project_organization"><a class="anchor" href="#project_organization"></a><a class="link" href="#project_organization">Project organization</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In order to ease the source code management, we should follow the same hierarchy for each module. A module typically becomes one dynamic or static library (dll or lib). To make the code more accessible and friendly for everyone, developers should follow the rules below:</p>
+</div>
+<div class="sect2">
+<h3 id="files"><a class="anchor" href="#files"></a><a class="link" href="#files">Files</a></h3>
+<table class="tableblock frame-all grid-cols spread">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">C++/C modules</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">- Project-wide definitions must be in a dedicated header file (for instance definitions.h)
+- Each module may have a common .h file that contains all common constants, macros, enum, structures… It should not contain elements that are not common to classes in the module.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">C++/C source files</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">C++/C source files should contain the implementation of only one class (except for very small private utility classes related to that class).
+See <a href="#naming_conventions">Naming conventions</a> for naming conventions.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">C++/C headers files</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">C++/C headers files should contain the declaration of only one class (except for very small public utility classes related to that class).
+See <a href="#naming_conventions">Naming conventions</a> for naming conventions.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Directory layout for each module</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The directory layout for each module should be as described in:
+ coding_rules.adoc chapter Project organisation</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="c_c_coding_rules"><a class="anchor" href="#c_c_coding_rules"></a><a class="link" href="#c_c_coding_rules">C / C++ Coding Rules</a></h2>
+<div class="sectionbody">
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+NOT VALIDATED
+TIP: Write here if you validate with your name and your comment
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><strong><em>Why restricting C++?</em></strong></p>
+</div>
+<div class="paragraph">
+<p>Even if compilers now correctly compile even the most advanced C++ language features, some advanced features make the code overly complex and difficult to maintain.</p>
+</div>
+<div class="paragraph">
+<p><strong><em>Why restricting C?</em></strong></p>
+</div>
+<div class="paragraph">
+<p>C can be written in many ways to do the same things but some ways are more obfuscated and offers less robustness.</p>
+</div>
+<div class="paragraph">
+<p><strong><em>Then, what language to use?</em></strong>
+<strong>b&lt;&gt;com</strong> is using a mix of C and C++ based on existing code, external dependencies (like platform types, SDK, etc).</p>
+</div>
+<div class="paragraph">
+<p>That’s why the following rules makes sense in our environment and, in order to facilitate porting and code review, developers must use the set of rules defined below. An example of code and header can be found in annexes A1 and A2.</p>
+</div>
+<div class="sect2">
+<h3 id="language_features"><a class="anchor" href="#language_features"></a><a class="link" href="#language_features">Language features</a></h3>
+<div class="paragraph">
+<p>As it is very easy to make unreadable and non-understandable C code, here are a few rules/restrictions to follow for the C language itself:</p>
+</div>
+<table class="tableblock frame-all grid-cols spread">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Templates</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Templates should be used following the "KISS" principle. Extreme template programming must be avoided and replaced with ad-hoc design to ensure code maintainability.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Exceptions</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Exceptions must not be used outside package boundary (i.e. outside a static or dynamic library no exception must be thrown).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Operator overload</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Operator overloading should be used appropriately.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Weird language features of C++</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Weird language features of C++ must not be used, especially:</p>
+<p class="tableblock">- static variables that invoke constructors at initialization time  (except for some very special cases, such as the singleton pattern)</p>
+<p class="tableblock">- run-time type information (‘casts’ can fail at run-time)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bit fields</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bit fields must not be used for the following reasons: they are not portable because the implementation of bit fields is left to the compiler manufacturer according to the platform; and usage of bit fields is usually inefficient in terms of code size. Use one variable instead of each bit field.</p>
+<p class="tableblock">Consider using the STL bitset template class instead.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Namespaces</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Namespaces may be used for std classes to avoid the full Class::methName statement. But for internal classes with ambiguous names, try to always use their full class name.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">'goto' keyword</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The 'goto' keyword should not be used, and if it is, it can only be used to jump to the end of a method for error recovery.</p>
+<p class="tableblock">By considering the architecture of a method, this keyword can nearly always be avoided.
+See annex A3 for examples.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">‘continue’ and ‘break’ keywords</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The ‘continue’ statement should not be used; the ‘break’ statement should not be used except inside switch statements.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">‘return’</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The 'return' keyword may be used anywhere in the code.</p>
+<p class="tableblock">However, it requires that the no dynamic allocation rule is respected (see below) and that no vital code is skipped.</p>
+<p class="tableblock">It also requires that all synchronization is made through C++11 lock_guard objects.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">C++ types</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Types such as bool, etc. may be used if they are not platform dependant.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">C++ iostreams</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Iostreams should be used.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dynamic memory allocations</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dynamic memory allocation should be avoided.</p>
+<p class="tableblock">Most of the time, C++ offers semantics that allows no dynamic allocation design.</p>
+<p class="tableblock">malloc/free, new/delete should be used during initialization sequence (in the class constructors for instance)</p>
+<p class="tableblock">During run time, explicit memory allocations should not be used to avoid memory fragmentation and leaks.
+If an array is needed at some point during the execution of the program, this need should preferably be planned and reserved at the initialization sequence.</p>
+<p class="tableblock">Local arrays are recommended if they are small in size (no more than 16-32 values).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Arrays</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">use STL&#8217;s vector&lt;T&gt; and array&lt;T&gt; instead of old C-style arrays, as C-style arrays don&#8217;t behave as expected with C++ objects.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dynamically allocation of member (aggregated/composed) object</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dynamic allocation of a "local" object must occur only when the inner object lifetime is different from the "hosting" class (aggregation case) OR when the used framework doesn&#8217;t allow the creation of the object upon class creation (for instance, when no default constructor is available).</p>
+<p class="tableblock">When dynamically allocating inner objects, prefer the use of STL&#8217;s shared_ptr or unique_ptr (depending on the inner object lifetime), to ensure proper behavior upon exception throwing &#8230;&#8203;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Class instantiations during run time</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">All the necessary classes, arrays, structures should be present, allocated and initialized before run time (during the initialization sequence) except for transient objects (objects operated by a pipeline should be created at the beginning and destroyed at the end for instance)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Constants</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Constants must be declared using static const or enum for enumeration of constants. #define must be avoided (language evolution tends to avoid #statements).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">const</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><em>const</em></strong> keyword MUST be used. It must be used appropriately.</p>
+<p class="tableblock">Used on method parameters, it clearly shows when a parameter is an input, input/output or output parameter.</p>
+<p class="tableblock">Used for methods, it clearly shows that const methods leave the underlying object members unmodified. (typically <strong>getters</strong> should be const methods).</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>C++11</p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Move semantics</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Move semantics must not be used. In most cases, move semantics can be replaced with designing the method using C++ references upon output parameters, or with the use of STL shared_ptr.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Lambdas expressions</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Threads</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">C++11 threads and related facilities (mutex, scoped lock_guard, future &#8230;&#8203;) must be used</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Literals</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Range for</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Range for must be used to work on containers as it improves the code readibility</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">auto</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong><em>auto</em></strong> keyword use is recommended when it simplifies the code readibility.</p>
+<p class="tableblock">It allows to avoid explicit typing of objects when there&#8217;s not a strong interest to :</p>
+<p class="tableblock">- for iterators</p>
+<p class="tableblock">- for temporary objects</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">smart pointers</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">STL&#8217;s smart pointers must be used. When possible, it should replace most of old C-style pointers (DLL boundary issue ?)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Function objects</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">std::function, std::bind, std::mem_fn &#8230;&#8203; readibility, maintainability issues ?</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">STL containers initializer list</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Date and time</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">STL chrono, useful also for performance counters</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">STL</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">array&lt;T&gt;, bitset&lt;T&gt;</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="libraries_and_headers"><a class="anchor" href="#libraries_and_headers"></a><a class="link" href="#libraries_and_headers">Libraries and headers</a></h3>
+<table class="tableblock frame-all grid-cols spread">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">STL containers</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">STL should be used for container types, such as vectors, lists, maps, etc. (but must not be used across DLL boundaries).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">C++ strings</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The C++ string object should be used for string manipulation (but must not be used across DLL boundaries).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">C++ 'cin', 'cout', 'cerr'</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The C++ 'cin', 'cout', 'cerr' must not be used (except inside unit test code and command line tools).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">C 'stdin', 'stdout', 'stderr'</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The C 'stdin', 'stdout', 'stderr' must not be used (except inside unit test code and command line tools).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">C headers/libraries</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">C headers/libraries may be used.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">System specific headers/libraries</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">System specific headers/libraries must not be used
+(except in system specific source code – in that case it should be clearly isolated and identified). The code should use as little as possible the windows SDKs (tradeoff between using existing code and code created from scratch).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Multiple header include</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">To avoid multiple definitions, each header must have:</p>
+<p class="tableblock">#ifndef HEADERNAME_H</p>
+<p class="tableblock">#define HEADERNAME_H</p>
+<p class="tableblock">&lt;header&gt;</p>
+<p class="tableblock">#endif // HEADERNAME_H</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Include inside header files</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">#include should not be inside header files in order to avoid include files obfuscation, and to prevent some cases of bad build of a project which shares dependencies with a non-rebuilt project.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Function and variable declaration</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Function and variable declarations must be done in header files (and not in other files).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">#pragma once</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Use of #pragma once is prohibited :</p>
+<p class="tableblock">- even if it is supported by a vast majority of c++ compilers, it is not a standard directive of the language</p>
+<p class="tableblock">- although it protects from header naming conflict, it doesn&#8217;t prevent from ncluding a header twice if it exists in more than one location in a project as files are excluded based on their filesystem-level identity.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="naming_conventions"><a class="anchor" href="#naming_conventions"></a><a class="link" href="#naming_conventions">Naming conventions</a></h3>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+NOT VALIDATED
+TIP: Write here if you validate with your name and your comment
+</td>
+</tr>
+</table>
+</div>
+<table class="tableblock frame-all grid-cols spread">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">About names</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">- Words must be in English.
+- Words inside the name must start with an uppercase letter. Other letters of the word must be lowercase letters (except for constants).
+- Names should not contain underscores '_' (except for constants and the prefixes as specified bellow).
+- Names should not contain abbreviations (except if the abbreviation is widely used in the particular field, such as ESDescriptor for “elementary stream descriptor”).
+- Names should be explicit according to what they will do, avoid generic names (like i, a, x…).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">C++ source files</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">C++ source files must begin with the name of the class followed by ‘.cpp’.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">C source files</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">C source files must begin with the name of the class followed by ‘.c’.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">C++/C headers files</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">C++/C header files must begin with the name of the class followed by ‘.h’.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">C++ template headers files</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">C++ template header files must begin with the name of the class followed by ‘.[inl|tpl]’.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">C++ template source files</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">C++ template source files must begin with the name of the class followed by ‘.[ipp|tcc]’.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Classes,
+structures,
+global functions, structure tags, typedefs,
+enumerated values</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Class names, structure names, global functions, structure tags, typedefs, enumerated values must have their name beginning with an uppercase.
+Example MatrixBase</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Methods</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Method names must begin with a lowercase letter (except for constructors and destructors).
+Example	readAccessUnit()</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Private members</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Private member variable names must be prefixed with 'm_' and start with a lowercase letter.
+Example	m_accessUnitList</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Private static members</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">If used, private static member variable names must be prefixed with 's_' and start with a lowercase.
+Example	s_socketCounter</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Local variables</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Local variable names must start with a lowercase letter.
+Example	dataLength</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Constants</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Constants must be all uppercase with each word separated by “_”.
+Example	MAX_LENGTH</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="design_conventions"><a class="anchor" href="#design_conventions"></a><a class="link" href="#design_conventions">Design conventions</a></h3>
+<table class="tableblock frame-all grid-cols spread">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Multiple inheritance
+Polymorphism</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Multiple inheritances should not be used, except if the additional classes are pure virtual (equivalent to Java interfaces).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Classes with public virtual methods</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Classes with public virtual methods must have a virtual destructor (or else the destructor will not be called). When possible, use the appropriate compiler warning to be warn when destructor isn&#8217;t declared virtual while some public methods are.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Static member variables</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Static member variables must not be used (these are basically “global variables”). (except for singleton design pattern)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Public member variables</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Public member variables must not be used (except in pure “struct-like” classes). Instead, getter and/or setter methods should be provided to access member variables.
+Example	int getMember()
+{
+&#8230;&#8203;.return m_member;
+}</p>
+<p class="tableblock">Error setMember(int variable)
+{
+&#8230;&#8203;.if (variable&#8230;&#8203;)
+&#8230;&#8203;.{
+&#8230;&#8203;&#8230;&#8203;..m_variable = variable;
+&#8230;&#8203;&#8230;&#8203;..return NoErr;
+&#8230;&#8203;.}
+&#8230;&#8203;.return Error_NUMBER;
+}</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unsigned/signed types</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Signed and unsigned computations should not be mixed. Signed and unsigned doesn’t work well together and are, in many cases, not comparable one another.
+Situations like “comparing unsigned values with potentially negative values” or “use signed computations to be casted into unsigned variables” makes the code vulnerable.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Signed types</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unsigned types  should be used.
+Signed types should only be used when the value for the variable or parameter in question could sensibly be negative.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">'enum' type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">For variables or parameters that may take one of a set of values whose representation is arbitrary, the enum type should be used.
+Example	enum CM_Colors { CM_RED, CM_GREEN, CM_BLUE };</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dynamic length structure</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">It is recommended to avoid structures with dynamic length. However, if they are used, the size should be bounded in size in order to avoid unlimited memory occupation.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Preprocessor definitions</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The definition and use of preprocessing flags (#ifdef/#ifndef) in the source code should be limited; in particular, there should not be any OS or compiler specific code.
+However, if specific code is present, it should be isolated and clearly identified.
+Most of the time, a different design approach allows to avoid inlined OS preprocessor definitions (namespace or inheritance usage for instance).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Code under conditional compilation flags</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Code under #if, #ifdef, #ifndef should be limited. Theses sections, if not build with the rest of the code, can easily be broken without notice.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Inline</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Inline may be used instead of macro for functions that are called often and when they are more than one line long.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Range of variables</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Consider the range of each variable: each variable should remain local to a code block as much as possible.
+Variable like the for iterator can remain local to the loop. If the if condition statement block needs a local variable: declare it inside the statement block. This variable will not be visible outside the block, preventing misuse.
+Note for Intel compilers: before ICC11, declaring a variable into a for statement for (int myVariable;…) resulted in having the variable defined locally to the function containing the for. With ICC11, this variable exists only with the for statement code block.
+Example	if (myCondFct())
+{
+&#8230;&#8203;.	int myLocalVar = methodVar * m_aMember;
+&#8230;&#8203;.useMyLocalVar(myLocalVar);
+}
+aMethodThatCanNotUseMyLocalVarHere();
+myLocalVar is only used in the if statement block. If someone attempts to use it outside, the project will not build. This variable only serves that code block and it is not useful outside. The code is easier to read, no need to monitor myLocalVar, or wonder if it is used elsewhere…</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Scope of variables</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Avoid using one variable for multiple purposes (the compiler handles this optimization process better than anybody).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Code organization</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">It is recommended to differentiate:
+- Functions dedicated to computing.
+- Functions dedicated to schedule and control the computing functions.
+- Functions dedicated to data flow management.
+Example	Error computeFunc(UInt32* res, UInt32* sourceTable)
+{
+&#8230;&#8203;.// compute code
+&#8230;&#8203;.<strong>res = sourceTable[0] * sourceTable[1] + MY_CONST;</p>
+<p class="tableblock">&#8230;&#8203;.return NoErr;
+}</p>
+<p class="tableblock">Error dataFlowFunc(MyStruct</strong> destStruct, MyStruct* sourceStruct)
+{
+&#8230;&#8203;.// copy struct
+&#8230;&#8203;.memcpy(destStruct, sourceStruct, sizeof(destStruct));</p>
+<p class="tableblock">&#8230;&#8203;.return NoErr;
+}</p>
+<p class="tableblock">Error controlFunc(MyStruct* destStruct, MyStruct* sourceStruct, UInt32* sourceTable)
+{
+&#8230;&#8203;.Error err;
+&#8230;&#8203;.UInt32 res;</p>
+<p class="tableblock">&#8230;&#8203;.err = computeFunc(&amp;res, sourceTable);
+&#8230;&#8203;.if (err == NoErr)
+&#8230;&#8203;.{
+&#8230;&#8203;&#8230;&#8203;..err = dataFlowFunc(destStruct, sourceStruct);
+&#8230;&#8203;.}</p>
+<p class="tableblock">&#8230;&#8203;.return err;
+}</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Thread concurrency</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Use threads with caution. It is recommended to ask architecture experts about the use of threads. Use C++11 threads' library.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Singleton design pattern</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">This pattern should not be used unless absolutely needed. When used, special care should be taken to consider concurrent access issues; the unique instance should be automatically created in the first call of “getInstance”; and the constructor should be declared as private.
+Sometimes, a statically created singleton is the prefered choice (more than the dynamically created one).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Casts</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Casts should not be used unless absolutely needed. C-style casts must be prohibited and replaced with C++ casts.
+Example	UInt16 var1;
+UInt32 var2;
+UInt64 myResult;</p>
+<p class="tableblock">myResult = var1 * var2;</p>
+<p class="tableblock">myResult = (UInt64) var1 * var2;</p>
+<p class="tableblock">myResult = UInt64(var1) * UInt64(var2);</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+Don&#8217;t put two methods calls on the same line. Don&#8217;t put break keyword in switch/case statement at the end of a processing line.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="layout_conventions"><a class="anchor" href="#layout_conventions"></a><a class="link" href="#layout_conventions">Layout conventions</a></h3>
+<table class="tableblock frame-all grid-cols spread">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tabs</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tabs must not be used. Spaces must be used for indentation. Editors should be set to fill with spaces, not tabs. Tab settings tend to be different for editors, printers and web pages.
+Note: This is obviously an arbitrary choice, but mixing tabs and spaces causes much difficulty in reviewing code…</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Indentation</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Indentation offset must be set to 4 spaces and is performed according to the following rules:
+- code surrounded by braces must be indented by one level.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Blank lines</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A blank line should be used to separate logically distinct sections of code.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Curly brackets</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Compound statements (if, else, else if, while, for, switch, do) must ALWAYS make use of curly brackets, even where the "associated" body only consists of a single line. Structures must use curly brackets around the clause.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Curly brackets</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Curly brackets should appear at the beginning of the next line or at the end of the line.
+Example	if (a == b) {
+&#8230;&#8203;.c = 0;
+}
+else {</p>
+<p class="tableblock">}</p>
+<p class="tableblock">if (a == b)
+{
+&#8230;&#8203;.c = 0;
+}
+else
+{</p>
+<p class="tableblock">}</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Parentheses</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Although C++ has precedence rules that should ensure a given expression is evaluated in the same order regardless of the compiler, additional parentheses should be used where the order of evaluation is not obvious.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Multiple parentheses</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Parentheses on multiple lines must be aligned on the previous parentheses with the same level. Operators must be at the end of the lines.
+Example	if (a == b) &amp;&amp; &#8230;&#8203;..(c == d ||
+&#8230;&#8203;.(e == f))
+if (a == b) &amp;&amp; (c == d ||
+&#8230;&#8203;.(e == f))</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Functions</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Each function should perform a single well-defined operation.
+Functions should not be too long. Up to 2 pages of printout or about 100 lines of source code is reasonable. These figures include comments and blank lines.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Source files</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sources files must be small. 1000 lines of source code is reasonable (including comments and blank lines).
+These files are easier to read and faster to compile (Intel compiler can compile several source files in parallel).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Header files</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Header files must be small. 100 lines for headers are reasonable.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Switch</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Case/default from a switch statement are written on the same column as the switch keyword. break; and other lines are indented.
+ The <strong><em>break</em></strong> keyword must ALWAYS be on its own line. Mixing the break keyword with processing code makes the code confused : it can be interpreted as "fall-off" code when <strong><em>break</em></strong> is at the end of long lines.
+Example	switch (getStyle(config))
+{
+case STYLE_GOOD:
+&#8230;&#8203;.// Ah, it&#8217;s so good!
+&#8230;&#8203;.break;</p>
+<p class="tableblock">case STYLE_BAD:
+&#8230;&#8203;.// Oh no, it&#8217;s bad!
+&#8230;&#8203;.break;</p>
+<p class="tableblock">default:
+&#8230;&#8203;.// Hmmm!
+&#8230;&#8203;.break;
+}</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Instructions</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Put one instruction per line.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">for</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Always put curly brackets in <strong><em>for</em></strong> clause. <strong><em>for</em></strong> instructions must be on their own lines (not on the <strong><em>for</em></strong> line)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="tracing_and_debugging"><a class="anchor" href="#tracing_and_debugging"></a><a class="link" href="#tracing_and_debugging">Tracing and debugging</a></h3>
+<table class="tableblock frame-all grid-cols spread">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Boost::log</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Boost::log is the recommended framework to log, as it provides great functionality out of the box without the need for extra/complex configuration</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="error_handling"><a class="anchor" href="#error_handling"></a><a class="link" href="#error_handling">Error handling</a></h3>
+<table class="tableblock frame-all grid-cols spread">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Default error codes and types</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The default error codes and error types should be declared in a common b&lt;&gt;com header file.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Type of value returned for error codes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The type of value returned for error codes should be Error.
+Example	Error parseString(char *str);</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Memory allocation</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A method that attempts to allocate memory must provide an allocation failure mechanism, typically by returning an error code. Note that other methods that call such a method must also provide a failure mechanism, and so on&#8230;&#8203; Memory allocation should not be performed in constructors as constructors don’t return error code.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">File management</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The success of a file opening must be checked and if not successful, the error must be handled appropriately.
+Files must be closed when no longer used or when an error to exit occurs.
+When closing the file, the return value must be checked.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Function call</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The success of a function call must be checked and if not successful, the error must be handled appropriately. The error codes returned by functions must be tested and treated.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Init/deinit functions</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">After calling constructors and before destructors, it is sometimes necessary to call init and deinit functions to permit error handling on structures that might fail (as these errors cannot be handled in constructors and destructors.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="miscellaneous_conventions"><a class="anchor" href="#miscellaneous_conventions"></a><a class="link" href="#miscellaneous_conventions">Miscellaneous conventions</a></h3>
+<table class="tableblock frame-all grid-cols spread">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Compiler warnings</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Source code must not have any warnings when compiled on any targeted platform with any targeted compiler (with a reasonably high warning level – at least level 3).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">C – C++ interfacing</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">All C public interfaces (*.h) which may be compiled with a C++ compiler must wrap the contents of the file with the pair of macros BEGIN_EXTERN_C and END_EXTERN_C.
+Example	BEGIN_EXTERN_C</p>
+<p class="tableblock">END_EXTERN_C</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">C++ interfacing</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">All C class headers (*.h) which may be compiled with a C compiler must include a C API and ensure the non visibility of C code by putting it within an “#ifdef __cplusplus … #endif” statement.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dynamic library export</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The definition of each class or function that is exported in a dynamic library must be preceded by the XX_EXTERN keyword, XX being the prefix for the module to which the class belongs.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Portability</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">See <a href="http://www.mozilla.org/hacking/portable-cpp.html" class="bare">http://www.mozilla.org/hacking/portable-cpp.html</a> for more miscellaneous recommendations on portability on various platforms. If a rule differs from <strong>b&lt;&gt;com</strong> coding rules, follow the <strong>b&lt;&gt;com</strong> coding rule.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="documentation"><a class="anchor" href="#documentation"></a><a class="link" href="#documentation">Documentation</a></h3>
+<table class="tableblock frame-all grid-cols spread">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Copyright</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Each <strong>b&lt;&gt;com</strong> source and header file must use the template copyright header comment.
+(See Annex A1: .h)
+Source from other origins (Open Source for example) may have their own license. In this case, the license must be respected. The headers of third party files must be left intact (then it should not be replaced by <strong>b&lt;&gt;com</strong> copyright).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Primary documentation
+of a class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The primary documentation of a class must appear in the header file.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Class description</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Each class must have a description before the class declaration.
+(see Annex A1: class description)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Methods</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Each method (public, protected and private) must have a short description before the method declaration.
+(see Annex A1: setup method description)
+A method that is already sufficiently documented in the superclass may omit the description or have a single-line comment '// see superclass'
+(see Annex A1: clone method description)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Member variable</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Each member variable must have a description either before the member variable declaration or on the same line.
+(see Annex A1: member description)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Comments</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Comments are written in English. Do not use accented characters in source files.
+All comments should be “DOxygen” compatible (see <a href="#tools">Tools</a>). All tags must start with ‘@’ and not ‘\’.
+Each block of code should be commented. Algorithms must be commented.
+Bugs from Bugzilla must not be referenced in the code.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">/<strong>*…</strong>/</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">This type of comment block must be used for comments that apply either to a class, a function, a structure, an enum, a member… which is present below the comment block.
+(see Annex A1: class description)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">//</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">This comment line should be used inside the code to comment lines in C++ sources. They should be used even for block of comments.
+(see Annex A2)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">/<strong>…</strong>/</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">This comment block should not be used for C++ except for the template copyright block on top of the file and for method and variable documentation.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="c_c_performance_rules"><a class="anchor" href="#c_c_performance_rules"></a><a class="link" href="#c_c_performance_rules">C/C++ Performance rules</a></h3>
+<div class="paragraph">
+<p>Because we need performance for all code types to achieve close-to-realtime target, these rules replace corresponding rules in previous chapters in order to ensure better software performance.
+For C++, to improve performance, classes must act as evolved structures/handlers. They must point at a set of non reentrant methods (avoiding static code, allowing parallelism, allowing instantiation).</p>
+</div>
+<table class="tableblock frame-all grid-cols spread">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">'goto' keyword</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The 'goto' keyword must not be used.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">‘continue’ and ‘break’ keywords</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The ‘continue’ statement must not be used; the ‘break’ statement must not be used outside of switch statements.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">C++ &#8594; C convertibility</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">C++ source must always be convertible into C code. If the rules associated with classes are followed, a class can be immediately converted into a structure and a bunch of methods with, as parameter, a handle on the structure that represents the former members.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Recursive code</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Recursive code must not be used for performance reasons and lack of control over the code and because no parallelization and optimization are possible.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>?No class as class member?</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A class must not contain another class as a member except through pointers.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Structures must not contain arrays</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A structure (class or struct) must not contain arrays except through pointers.
+The size of the structures must remain reasonable.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dynamic memory allocation</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dynamic memory allocation must not be used.
+malloc/free, new/delete must be used during initialization sequence (into the class creators for instance)
+During run time, explicit memory allocation must not be used to avoid memory fragmentation and leaks.
+If an array is needed at some point during the execution of the program, this need must be planned and reserved at the initialization sequence.
+Local arrays are tolerated if they are small in size (no more than 16-32 values).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Class instantiations during run time</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">All the necessary classes, arrays, structures must be present, allocated and initialized before run time (during the initialization sequence).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dynamic length structure</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dynamic length structures must not be used (in order to avoid unlimited memory occupation).</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="tools"><a class="anchor" href="#tools"></a><a class="link" href="#tools">Tools</a></h3>
+<table class="tableblock frame-all grid-cols spread">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Uncrustify</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Most of the code formatting rules described in this document can be enforced using “uncrustify”.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DOxygen</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DOxygen extract comments from the source code and generates documentation. It is recommended to check the comment structure with this tool.
+Refer to the online manual (<a href="http://www.stack.nl/~dimitri/doxygen/index.html" class="bare">http://www.stack.nl/~dimitri/doxygen/index.html</a>) for a complete description of DOxygen rules.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="appendix_a_code_sample"><a class="anchor" href="#appendix_a_code_sample"></a><a class="link" href="#appendix_a_code_sample">Appendix A.	Code sample</a></h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="i_prototype_c_header_file"><a class="anchor" href="#i_prototype_c_header_file"></a><a class="link" href="#i_prototype_c_header_file">I.	Prototype C++ header file</a></h3>
+<div class="listingblock">
+<div class="content">
+<pre></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ii_prototype_c_source_file"><a class="anchor" href="#ii_prototype_c_source_file"></a><a class="link" href="#ii_prototype_c_source_file">II.	 Prototype C++ source file</a></h3>
+<div class="listingblock">
+<div class="content">
+<pre></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="iii_how_to_remove_goto"><a class="anchor" href="#iii_how_to_remove_goto"></a><a class="link" href="#iii_how_to_remove_goto">III.	How to remove ‘goto’</a></h3>
+<div class="listingblock">
+<div class="content">
+<pre></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="appendix_b_rules_management"><a class="anchor" href="#appendix_b_rules_management"></a><a class="link" href="#appendix_b_rules_management">Appendix B.	Rules management</a></h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="i_responsibility"><a class="anchor" href="#i_responsibility"></a><a class="link" href="#i_responsibility">I.	Responsibility</a></h3>
+<div class="paragraph">
+<p>The Development group manager is responsible of these rules.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ii_deviation"><a class="anchor" href="#ii_deviation"></a><a class="link" href="#ii_deviation">II.	Deviation</a></h3>
+<div class="paragraph">
+<p>Any <strong>b&lt;&gt;com</strong> source code must follow these rules. Third party package follow their own rules and should not be modified to follow these rules.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="iii_training"><a class="anchor" href="#iii_training"></a><a class="link" href="#iii_training">III.	Training</a></h3>
+<div class="paragraph">
+<p>Any C/C++ developers and integrators must be trained to these rules.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="iv_control"><a class="anchor" href="#iv_control"></a><a class="link" href="#iv_control">IV.	Control</a></h3>
+<div class="paragraph">
+<p>The compliancy with these coding rules can be performed with Uncrustify tool with the appropriate config file (see tools).</p>
+</div>
+</div>
+</div>
+</div>
+            </div>
+        </div>
+
+        <!-- build:js scripts/vendor.js -->
+        <!-- bower:js -->
+
+        <!-- endbower -->
+        <!-- endbuild -->
+
+    <!-- build:js({.tmp,src/main/webapp}) scripts/app.js -->
+    <script src="https://solarframework.github.io//js/vendor/modernizr.js"></script>
+    <!-- endbuild -->
+    <script type="text/javascript">
+      /* Fix padding-top on anchor with TOC */
+      window.addEventListener("hashchange", function() { scrollBy(0, -95) })
+    </script>
+    </body>
+</html>

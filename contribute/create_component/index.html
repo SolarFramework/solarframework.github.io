@@ -25,13 +25,16 @@
     <!-- build:css assets/styles/main.css -->
     <link rel="stylesheet" href="https://solarframework.github.io//assets/styles/coderay.css">
     <link rel="stylesheet" href="https://solarframework.github.io//assets/styles/asciidoctor.css">
+    <link rel="stylesheet" href="https://solarframework.github.io//assets/styles/solar-asciidoctor-theme.css">
     <link rel="stylesheet" href="https://solarframework.github.io//assets/styles/font-awesome.min.css">
     <link rel="stylesheet" href="https://solarframework.github.io//assets/styles/solar-bootstrap-theme.css">
     <link rel="stylesheet" href="https://solarframework.github.io//assets/styles/main.css">
     <link rel="stylesheet" href="https://solarframework.github.io//assets/styles/media.css">
     <!-- endbuild -->
     <script src="https://solarframework.github.io//js/vendor/jquery.js"></script><!--needed with bootstrap-->
+    <script src="https://solarframework.github.io//js/vendor/bootstrap.js"></script>
     <script src="https://solarframework.github.io//js/toc.js"></script>
+    <script src="https://solarframework.github.io//js/block-folding.js"></script>
     <script type="text/javascript">
         $(document).ready(function() { 
         /* Set up style for active page in submenu and matching navbar entry This code cannot be put in navbar.html because each default.html template imports a brand new navbar so the activate class will be overwriten by brand new navbar DOM*/
@@ -59,8 +62,6 @@
                   return false; /* same as break, specific for jquery each() function */
               }
           });
-          /* Fix padding-top on anchor with TOC */
-          window.addEventListener("hashchange", function() { scrollBy(0, -65) })
   
           /* Configure TOC to take into account all titles */
           $("#toc").toc(  { headers: "h2, h3, h4, h5, h6",
@@ -70,80 +71,123 @@
            });
         });
       </script>
+  <!-- Google Analytics -->
+  <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-107058603-1', 'auto');
+          ga('send', 'pageview');
+  </script>  <!-- End Google Analytics --> 
+<link rel="stylesheet" type="text/css" href="https://solarframework.github.io//js/cookieconsent/cookieconsent.min.css" />
+<script src="https://solarframework.github.io//js/cookieconsent/cookieconsent.min.js"></script>
+<script>
+var userLang = navigator.language || navigator.userLanguage; 
+if (userLang == "fr") {
+  message="En poursuivant votre navigation sur ce site, vous acceptez que des cookies soient utilisés afin d’améliorer votre expérience d’utilisateur.";
+  link="En savoir plus";
+  href="https://b-com.com/fr/mentions-l%C3%A9gales";
+}
+else {
+  message="By proceeding beyond this page, you consent to the cookies usage, in order to improve your experience on this website.";
+  link="More information";
+  href="https://b-com.com/en/legal-notice";
+}
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#252e39"
+    },
+    "button": {
+      "background": "#14a7d0"
+    }
+  },
+  "position": "bottom-left",
+  "theme": "edgeless",
+  "content": {
+    "message": message,
+    "dismiss": "OK",
+    "link": link,
+    "href": href
+  }
+})});
+</script>  
 </head>
 
     <body>
         <!--[if lt IE 9]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <div><div class="navbar navbar-default" role="navigation">
+        <div><div class="navbar navbar-default">
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-mg-3">
-                <div class="navbar-header">
-                    <ul class="nav navbar-nav navbar-brand">
-                        <li><a href="https://solarframework.github.io//" class="link">* SolAR *</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-lg-9">
-                <div class="collapse navbar-collapse tabs" id="navbar-collapse">
-                    <ul class="nav navbar-nav navbar-left">
-
-                        
-                        
-                        
-                        
-                        
-                        <li>
-                            <a href="https://solarframework.github.io//discover.html">
-                                <span>Discover</span>
-                            </a>
-                        </li>                          
-                        
-                        
-                        
-                        <li>
-                            <a href="https://solarframework.github.io//contribute.html">
-                                <span>Contribute</span>
-                            </a>
-                        </li>                          
-                        
-                        
-                        
-                        <li>
-                            <a href="https://solarframework.github.io//use_it.html">
-                                <span>Use it</span>
-                            </a>
-                        </li>                          
-                        
-                        
-                        
-                        <li>
-                            <a href="https://solarframework.github.io//community.html">
-                                <span>Community</span>
-                            </a>
-                        </li>                          
-                        
-                        
-
-                        <li>
-                          <form action="https://solarframework.github.io//search.html" method="get" class="navbar-form" role="search">
-                            <div class="input-group">
-                                <input type="text" id="search" class="form-control" placeholder="Search"
-                                       name="q" class="span1" type="text" size="15">
-                                <div class="input-group-btn">
-                                    <button class="btn btn-default" type="submit">
-                                      <i class="fa fa-search"></i>
-                                    </button>
-                                </div>
-                            </div>
-                          </form>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand link" href="https://solarframework.github.io//">&lsaquo;SolAR&rsaquo;</a>
         </div>
+
+        <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
+            <ul class="nav navbar-nav">
+                
+                
+                
+                
+                
+                    <li>
+                        <a href="https://solarframework.github.io//discover.html">
+                            <span>Discover</span>
+                        </a>
+                    </li>                          
+                
+                
+                
+                    <li>
+                        <a href="https://solarframework.github.io//API.html">
+                            <span>API</span>
+                        </a>
+                    </li>                          
+                
+                
+                
+                    <li>
+                        <a class="active" href="https://solarframework.github.io//contribute.html">
+                            <span>Contribute</span>
+                        </a>
+                    </li>                          
+                
+                
+                
+                    <li>
+                        <a href="https://solarframework.github.io//use_it.html">
+                            <span>Use it</span>
+                        </a>
+                    </li>                          
+                
+                
+
+                <!--li>
+                    <form action="https://solarframework.github.io//search.html" method="get" class="navbar-form" role="search">
+                        <div class="input-group">
+                            <input type="text" id="search" class="form-control" placeholder="Search"
+                                    name="q" class="span1" type="text" size="15">
+                            <div class="input-group-btn">
+                                <button class="btn btn-default" type="submit">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </li-->
+            </ul>
+        </div><!--/.nav-collapse -->
+        
     </div>
 
 </div>
@@ -156,12 +200,10 @@
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
 <li><a href="#submenuconfig">submenuconfig</a></li>
-<li><a href="#containers_and_components">Containers and components</a></li>
 <li><a href="#install_cookiecutter">install cookiecutter</a></li>
 <li><a href="#get_the_templates">get the templates</a></li>
-<li><a href="#interface">interface</a></li>
 <li><a href="#component">component</a></li>
-<li><a href="#container">container</a></li>
+<li><a href="#package">package</a></li>
 <li><a href="#finalizing_installation">finalizing installation</a></li>
 <li><a href="#how_to_create_your_unit_test">How to create your Unit Test</a></li>
 <li><a href="#create_your_api_documentation">Create your API documentation</a></li>
@@ -173,6 +215,7 @@
 <li><a href="#share_your_component_to_the_solar_community">Share your component to the SolAR community</a></li>
 <li><a href="#component_manager_overview">Component manager overview</a></li>
 <li><a href="#contact">Contact</a></li>
+<li><a href="#contact_mail">Contact Mail</a></li>
 </ul>
 </div>
 <div class="sect1">
@@ -184,7 +227,7 @@
 <p><a href="https://solarframework.github.io//contribute/how_it_works/">how it works</a></p>
 </li>
 <li>
-<p><a href="https://solarframework.github.io//contribute/how_to_build/">getting started</a></p>
+<p><a href="https://solarframework.github.io//contribute/getting_started/">getting started</a></p>
 </li>
 <li>
 <p><a href="https://solarframework.github.io//contribute/create_component/">create a component</a></p>
@@ -193,7 +236,10 @@
 <p><a href="https://solarframework.github.io//contribute/contribute_to_core/">contribute to core</a></p>
 </li>
 <li>
-<p><a href="https://solarframework.github.io//contribute/best_practises/">best practises</a></p>
+<p><a href="https://solarframework.github.io//contribute/best_practices/">best practices</a></p>
+</li>
+<li>
+<p><a href="https://solarframework.github.io//contribute/github_workflow/">contribution workflow</a></p>
 </li>
 <li>
 <p><a href="https://solarframework.github.io//contribute/tools/">tools</a></p>
@@ -203,35 +249,22 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="containers_and_components"><a class="anchor" href="#containers_and_components"></a><a class="link" href="#containers_and_components">Containers and components</a></h2>
-<div class="sectionbody">
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-A container contains several components .
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>For Example, SolarContainerOpenCV includes 10 components.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
 <h2 id="install_cookiecutter"><a class="anchor" href="#install_cookiecutter"></a><a class="link" href="#install_cookiecutter">install cookiecutter</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>run:</p>
+<p>The easiest way to create a new component is to use our templates. SolAR templates
+are based on cookiecutter python package (see <a href="http://cookiecutter.readthedocs.io" class="external" target="_blank" rel="noopener">http://cookiecutter.readthedocs.io</a>).</p>
+</div>
+<div class="paragraph">
+<p>To install cookiecutter, simply run:</p>
 </div>
 <div class="literalblock">
 <div class="content">
 <pre>pip install cookiecutter</pre>
 </div>
+</div>
+<div class="paragraph">
+<p>Windows users: pip is located under the scripts folder of your python3 directory. Usually C:\python3\scripts.</p>
 </div>
 </div>
 </div>
@@ -239,7 +272,7 @@ A container contains several components .
 <h2 id="get_the_templates"><a class="anchor" href="#get_the_templates"></a><a class="link" href="#get_the_templates">get the templates</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>run the following command:</p>
+<p>Run the following command to get SolAR templates:</p>
 </div>
 <div class="literalblock">
 <div class="content">
@@ -250,22 +283,12 @@ cd templates</pre>
 </div>
 </div>
 <div class="sect1">
-<h2 id="interface"><a class="anchor" href="#interface"></a><a class="link" href="#interface">interface</a></h2>
-<div class="sectionbody">
-<div class="listingblock">
-<div class="content">
-<pre class="CodeRay highlight"><code data-lang="python"><span class="error">$</span> python template_interface/cookiecutter_runner.py</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Copy the generated .h file (inside the [new interface] folder) into
-your ArgoFramework/interfaces folder.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
 <h2 id="component"><a class="anchor" href="#component"></a><a class="link" href="#component">component</a></h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>In order to create a new component, all you have to do is run this command, and follow
+the instructions:</p>
+</div>
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="python"><span class="error">$</span> python template_component/cookiecutter_runner.py</code></pre>
@@ -274,11 +297,16 @@ your ArgoFramework/interfaces folder.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="container"><a class="anchor" href="#container"></a><a class="link" href="#container">container</a></h2>
+<h2 id="package"><a class="anchor" href="#package"></a><a class="link" href="#package">package</a></h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>In SolAR, components are wrapped into a library that we call a package. You can add you component
+into an existing package project, or create a brand new package projet. Creating a package is easy
+based on SolAR templates. Run this command, and follow the instructions:</p>
+</div>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="python"><span class="error">$</span> python template_container/cookiecutter_runner.py</code></pre>
+<pre class="CodeRay highlight"><code data-lang="python"><span class="error">$</span> python template_package/cookiecutter_runner.py</code></pre>
 </div>
 </div>
 </div>
@@ -287,7 +315,7 @@ your ArgoFramework/interfaces folder.</p>
 <h2 id="finalizing_installation"><a class="anchor" href="#finalizing_installation"></a><a class="link" href="#finalizing_installation">finalizing installation</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Do not forget:</p>
+<p>In order to use your component / package, do not forget:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -297,11 +325,11 @@ must be set, pointing to your installation folder</p>
 </li>
 <li>
 <p>that an XPCF_REGISTRY_PATH environment variable must be set, pointing to
-the containers XML file</p>
+the packages XML file</p>
 </li>
 <li>
 <p>the XML file itself must be modified, depending on your installation: precisely
-you will have to set the path to your container library</p>
+you will have to set the path to your package library</p>
 </li>
 </ol>
 </div>
@@ -314,7 +342,7 @@ you will have to set the path to your container library</p>
 <h3 id="write_your_unit_test"><a class="anchor" href="#write_your_unit_test"></a><a class="link" href="#write_your_unit_test">Write your unit test</a></h3>
 <div class="paragraph">
 <p>Define unit tests, based on boost framework .
-You can know more about boost with this link : <a href="http://www.boost.org/" class="bare">http://www.boost.org/</a></p>
+You can know more about boost with this link : <a href="http://www.boost.org/" class="external" target="_blank" rel="noopener">http://www.boost.org</a></p>
 </div>
 <div class="paragraph">
 <p>Your Unit tests for a specific component, should be placed in the component directory/unittest.
@@ -372,7 +400,7 @@ You can define several test cases.</p>
 <p>Inside your test, please write a kind of demo main function, but where you check results of your component function thanks to macro BOOST CHECK and/or BOOST_TEST.</p>
 </div>
 <div class="paragraph">
-<p>You will find easily information about BOOST macro on Internet <a href="http://www.boost.org/doc/libs/1_64_0/libs/test/doc/html/index.html" class="bare">http://www.boost.org/doc/libs/1_64_0/libs/test/doc/html/index.html</a>.</p>
+<p>You will find easily information about BOOST macro on Internet <a href="http://www.boost.org/doc/libs/1_64_0/libs/test/doc/html/index.html" class="bare">http://www.boost.org/doc/libs/1_64_0/libs/test/doc/html/index.html</a> [boost.org information,role="external", window="_blank"] .</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -884,21 +912,14 @@ rajouter lien ici
 <div class="sect1">
 <h2 id="contact"><a class="anchor" href="#contact"></a><a class="link" href="#contact">Contact</a></h2>
 <div class="sectionbody">
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-NOT VALIDATED
-TIP: Write here if you validate with your name and your comment
-</td>
-</tr>
-</table>
+
 </div>
+</div>
+<div class="sect1">
+<h2 id="contact_mail"><a class="anchor" href="#contact_mail"></a><a class="link" href="#contact_mail">Contact Mail</a></h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>For any request, <a href="mailto:jerome.royan@b-com.com">Please Contact Us</a></p>
+<p>For any requests, <a href="mailto:framework.solar@b-com.com">please contact us</a>.</p>
 </div>
 </div>
 </div>
@@ -914,6 +935,9 @@ TIP: Write here if you validate with your name and your comment
     <!-- build:js({.tmp,src/main/webapp}) scripts/app.js -->
     <script src="https://solarframework.github.io//js/vendor/modernizr.js"></script>
     <!-- endbuild -->
-    
+    <script type="text/javascript">
+      /* Fix padding-top on anchor with TOC */
+      window.addEventListener("hashchange", function() { scrollBy(0, -95) })
+    </script>
     </body>
 </html>

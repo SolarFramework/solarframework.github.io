@@ -27,9 +27,6 @@ body {
   background-color: #000;
 }
 
-.container{
-  padding-top: 110px;
-}
 h1 {
   margin-top: 0px;
 }
@@ -53,13 +50,69 @@ h1 {
   }
 }
 
-#toc > ul{
+#toc #toctitle {
+  display: none;
+}
+/* first child is for submenuconfig title*/
+#toc > ul > li:nth-child(2) a {
+  color: #FF5050;
+  font-size: 1.9875em;
+  line-height: 1.2;
+  word-spacing: -.05em;
+  font-family: "Open Sans","DejaVu Sans",sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  text-rendering: optimizeLegibility;
+  padding: 0;
+  margin: 0;
+}
+
+#toc > ul li {
   padding-bottom: 30px;
+  font-size: 1.4em;
+}
+#toc > ul li > ul li {
+  font-size: 0.8em;
+  padding-bottom: 0px;
 }
 
 .container {
+  padding-top: 110px;
   margin-left: 20em;
-  width: auto;
+  width: auto; 
+}
+
+.minimizeHeight .content {
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  border: 1px solid #dfdfdf;
+  height: 200px;
+  overflow: auto;
+}
+
+.listingblock.blockShow > .content, .listingblock.blockShow + .colist {
+  display: block;
+}
+
+.listingblock.blockHide > .content, .listingblock.blockHide + .colist {
+  display: none;
+}
+
+.listingblock.blockHide > .title > span,
+.listingblock.blockShow > .title > span {
+  cursor: pointer;
+  padding-left: 10px;
+  text-decoration: underline;
+  color: #00D2F8;
+}
+
+.literalblock.minimizeHeight pre.nowrap, .literalblock.minimizeHeight pre[class].nowrap, .listingblock.minimizeHeight pre.nowrap, .listingblock.minimizeHeight pre[class].nowrap,
+.literalblock.minimizeHeight pre.nowrap code, .literalblock.minimizeHeight pre[class].nowrap code, .listingblock.minimizeHeight pre.nowrap code, .listingblock.minimizeHeight pre[class].nowrap code {
+  overflow: unset;
+}
+
+.literalblock.minimizeHeight pre.nowrap.CodeRay, .literalblock.minimizeHeight pre[class].nowrap.CodeRay, .listingblock.minimizeHeight pre.nowrap.CodeRay, .listingblock.minimizeHeight pre[class].nowrap.CodeRay {
+  border: none;
 }
 
 .well {
@@ -70,6 +123,9 @@ h1 {
   border-radius: 0px;
 }
 
+.well a {
+  text-decoration: underline;
+}
 
 /*information/loading text in navbar*/
 .text-warning, .text-info, .text-error {
@@ -113,11 +169,11 @@ h1 {
 }
 #submenuconfig + .sectionbody ul li a {
   color: white;
+  text-decoration: none;
 }
 
 #submenuconfig + .sectionbody ul li a:focus, #submenuconfig + .sectionbody ul li a:hover, #submenuconfig + .sectionbody ul li a.active {
-  text-decoration: none;
-  color: #00beef;
+  color: #00d2f8;
 }
 
 @media screen and (max-width: 767px) { 

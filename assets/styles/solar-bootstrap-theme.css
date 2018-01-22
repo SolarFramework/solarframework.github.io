@@ -81,7 +81,7 @@ fieldset[disabled] .btn-danger {
 .btn-default:focus,
 .btn-default:active,
 .btn-default.active {
-  background-color: #00bee6;
+  background-color: #00d2f8;
 }
 .btn-default.disabled,
 .btn-default[disabled],
@@ -107,7 +107,7 @@ fieldset[disabled] .btn-default.active {
 }
 .btn-primary {
  color: #ffffff;
-  background-color: #00BEE6;
+  background-color: #00d2f8;
 }
 .btn-primary:hover,
 .btn-primary:focus {
@@ -118,7 +118,7 @@ fieldset[disabled] .btn-default.active {
 .btn-primary:active,
 .btn-primary.active {
   color: #ffffff;
-  background-color: #00BEE6;
+  background-color: #00d2f8;
   opacity: 0.75;
 }
 .btn-primary.disabled,
@@ -179,7 +179,7 @@ fieldset[disabled] .btn-success.active {
 }
 .btn-info {
   color: #ffffff;
-  background-color: #00bee6;
+  background-color: #00d2f8;
   background-repeat: repeat-x;
 }
 .btn-info:hover,
@@ -315,7 +315,7 @@ hr {
 }
 
 #loading-bar .bar {
-  background: #00bee6;
+  background: #00d2f8;
 }
 
 .navbar-default {
@@ -329,7 +329,7 @@ hr {
 }
 
 .navbar a.link, .navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover {
-    color: #00bee6;
+    color: #00d2f8;
 }
 .navbar-brand,
 .navbar-nav > li > a {
@@ -568,13 +568,13 @@ hr {
 }
 
 .navbar-default .navbar-nav > .active > a:hover{
-  color: #00bee6;
+  color: #00d2f8;
   background-color: gray;
 }
 
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-  color: #00bee6;
+  color: #00d2f8;
   background-color: transparent;
 }
 
