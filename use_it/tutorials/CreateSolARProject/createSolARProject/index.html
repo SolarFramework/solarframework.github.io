@@ -187,97 +187,129 @@ window.cookieconsent.initialise({
 
         <div class="container">
             <div class="well">
-              <div id="toc" class="toc">
-<div id="toctitle">Table of Contents</div>
-<ul class="sectlevel1">
-<li><a href="#submenuconfig">submenuconfig</a></li>
-<li><a href="#camera_calibration_program">Camera Calibration Program</a></li>
-</ul>
+              <div class="paragraph">
+<p>This tutorial will &#8230;&#8203; The tutorial will take approximately ??? to complete.</p>
 </div>
-<div class="sect1">
-<h2 id="submenuconfig"><a class="anchor" href="#submenuconfig"></a><a class="link" href="#submenuconfig">submenuconfig</a></h2>
-<div class="sectionbody">
-<div class="ulist none">
-<ul class="none">
-<li>
-<p><a href="https://solarframework.github.io//use_it/downloads/">setup</a></p>
-</li>
-<li>
-<p><a href="https://solarframework.github.io//use_it/samples/">samples</a></p>
-</li>
-<li>
-<p><a href="https://solarframework.github.io//use_it/tutorials/">tutorials</a></p>
-</li>
-<li>
-<p><a href="https://solarframework.github.io//use_it/tools/">tools</a></p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="camera_calibration_program"><a class="anchor" href="#camera_calibration_program"></a><a class="link" href="#camera_calibration_program">Camera Calibration Program</a></h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>This example helps you to calibrate your camera and it provides a camera calibration parameters set.
-These parameters stored in a file can be taken as input by any program to set the intrinsic parameters of your camera.
-Right now, we do not offer a solution for non-calibrated pose pipeline. Natural Marker and Fiducial Marker program samples
-assume you will provide the camera calibration parameters at runtime.</p>
-</div>
-<div class="paragraph">
-<p>In general, this tool is useful for any program you will create by yourself using SolAR.</p>
-</div>
-<div class="paragraph">
-<p>The calibration process is based on state of the art method and uses a chessboard.</p>
-</div>
-<div class="paragraph">
-<p>You can have one while printing the "chessboard.png" in this project.</p>
-</div>
-<div class="paragraph">
-<p>The input file used for this calibration program gives information about how to setup your chessboard: measure the squares on your chessboard sheet, aspect ratio and square size.</p>
-</div>
-<div class="paragraph">
-<p>To get more details, please read the readme.adoc file that you can find in the camera calibration folder.</p>
-</div>
-<div class="paragraph">
-<p>link: <a href="http://forge.b-com.com/git/argo/SolAR/Samples/CameraCalibration.git" class="bare">http://forge.b-com.com/git/argo/SolAR/Samples/CameraCalibration.git</a></p>
-</div>
-<div class="imageblock" style="text-align: center">
-<div class="content">
-<img src="data:image/png;base64," alt="camera calibration" width="400" height="400">
-</div>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="paragraph">
-<p>If you use QT creator, open the .pro file and configure your project as usual (see "getting started").</p>
-</div>
-<div class="paragraph">
-<p>Have a look at the ".cpp" file, which is clearly commented and explained step by step.</p>
-</div>
-<div class="paragraph">
-<p>2 files are used :</p>
-</div>
+<div class="sect2">
+<h3 id="prerequisites"><a class="anchor" href="#prerequisites"></a><a class="link" href="#prerequisites">Prerequisites</a></h3>
 <div class="ulist">
 <ul>
 <li>
-<p>calibration_config.yml, which is an input file</p>
-</li>
-<li>
-<p>camera_calibration.yml, which is an output file (but can be used as input file for other programs)</p>
+<p>A PC configured with the correct tools.</p>
 </li>
 </ul>
 </div>
+</div>
+<div class="sect2">
+<h3 id="project_files"><a class="anchor" href="#project_files"></a><a class="link" href="#project_files">Project files</a></h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Download the files required by the project.</p>
+</li>
+<li>
+<p>Unarchive the files to your desktop.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="instructions"><a class="anchor" href="#instructions"></a><a class="link" href="#instructions">Instructions</a></h3>
+<div class="sect3">
+<h4 id="initialize_your_development_project"><a class="anchor" href="#initialize_your_development_project"></a><a class="link" href="#initialize_your_development_project">Initialize your development project</a></h4>
 <div class="paragraph">
-<p>=== Fiducial Marker samples</p>
+<p>Open QTCreator and create a new project (in File menu). Choose "Non-Qt project" and "Plain C++ Application", set the location and the name of your project (for example SolARFiducialTutorial), and select as build system "qmake", and then the building kit of your choice. Finally, click on finish to create your project.
+Now, you need to select the file called "SolARFiducialTutorial.pro" in your project tree, and you have to add the following line before defining your source files:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code>DEPENDENCIESCONFIG = sharedlib
+include ($$(BCOMDEVROOT)/builddefs/qmake/templateappconfig.pri)</code></pre>
+</div>
 </div>
 <div class="paragraph">
-<p>Here is an example of Fiducial Image Marker based on SolAR.</p>
+<p>Be sure to have defined your environment variable <em>$BCOMDEVROOT$</em> and to have copied in this folder all the files defining your build pipeline downloadable <a href="https://github.com/b-com-software-basis/builddefs-qmake/releases/tag/solar_v1.0.0">here</a>. If not, download the zip file, unzip it, and copy the content of the folder <em>builddefs-qmake-solar_v1.0.0</em> in <em>$BCOMDEVROOT$/builddefs/qmake/</em>.</p>
 </div>
 <div class="paragraph">
-<p>For the three versions of it, you can see a visual feedback of natural marker estimation.  As for Natural Image, you can choose simple, static or dynamic mode (the differences are the same as for natural markers).</p>
+<p>Then, create in your project folder a file called <em>packagedependencies.txt</em> and add in it your dependencies, namely the basic dependencies required by the SolARFramework (SolARFramework, xpcf, boost, eigen and spdlog) as well as the one required for the openCV module (SolARModuleOpencv and opencv):</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code>SolARFramework|1.0.0|SolARFramework|bcomBuild|url_repo_artifactory
+SolARModuleOpenCV|1.0.0|SolARModuleOpenCV|bcomBuild|url_repo_artifactory
+xpcf|1.0.0|xpcf|thirdParties|http://repository.b-com.com/
+boost|1.64.0|boost|thirdParties|http://repository.b-com.com/
+opencv|3.2.0|opencv|thirdParties|http://repository.b-com.com/
+spdlog|1.0.0|spdlog|thirdParties|http://repository.b-com.com/
+eigen|3.3.4|eigen|thirdParties|http://repository.b-com.com/amc-generic</code></pre>
 </div>
 </div>
+<div class="paragraph">
+<p>Now you can run QMake (click right of your project in QT creator, and click on <em>run QMake</em>). Every pathes for headers and library links are now set.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="display_a_hello_world_image"><a class="anchor" href="#display_a_hello_world_image"></a><a class="link" href="#display_a_hello_world_image">Display a Hello World image</a></h4>
+<div class="paragraph">
+<p>Replace the code of your main.cpp by the following one:</p>
+</div>
+<div class="listingblock">
+<div class="title">main.cpp</div>
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="c"><span class="preprocessor">#include</span> <span class="include">&quot;SolARModuleManagerOpencv.h&quot;</span>
+
+using namespace std;
+using namespace SolAR;
+namespace xpcf  = org::bcom::xpcf;
+
+<span class="directive">void</span> run(<span class="predefined-type">int</span> argc,<span class="predefined-type">char</span>** argv){
+
+    <span class="comment">// To redirect log to the console</span>
+    LOG_ADD_LOG_TO_CONSOLE();
+
+    <span class="comment">// ADD HERE: load your Opencv module</span>
+
+    <span class="comment">// ADD HERE: declarations and instantiation of components</span>
+    <span class="comment">// Example to declare and create a camera:</span>
+    <span class="comment">// SRef&lt;ISolARCamera&gt; camera = opencvModule.createComponent&lt;ISolARCamera&gt;(UUID::OPENCV::CAMERA);</span>
+
+
+    <span class="comment">// ADD HERE: declarations of data structures used to connect components</span>
+    <span class="comment">// Example to declare a SolARImage:</span>
+    <span class="comment">// SRef&lt;SolARImage&gt; inputImage;</span>
+
+
+    <span class="comment">// ADD HERE: Components configuration</span>
+    <span class="comment">// Generally through the method setParamerters of the components, except for the input components such as the camera or the marker that use specific methods to load configuration files</span>
+
+
+    <span class="comment">// ADD HERE: The pipeline loop</span>
+
+}
+
+<span class="predefined-type">int</span> printHelp(){
+        printf(<span class="string"><span class="delimiter">&quot;</span><span class="content"> usage :</span><span class="char">\n</span><span class="delimiter">&quot;</span></span>);
+        printf(<span class="string"><span class="delimiter">&quot;</span><span class="content"> HelloWorld.exe ImagePath </span><span class="char">\n</span><span class="char">\n</span><span class="delimiter">&quot;</span></span>);
+        printf(<span class="string"><span class="delimiter">&quot;</span><span class="content"> Escape key to exit</span><span class="delimiter">&quot;</span></span>);
+        <span class="keyword">return</span> <span class="integer">1</span>;
+}
+
+<span class="predefined-type">int</span> main(<span class="predefined-type">int</span> argc, <span class="predefined-type">char</span> *argv[])
+{
+    <span class="keyword">if</span>(argc==<span class="integer">3</span> || argc ==<span class="integer">4</span>){
+        run(argc,argv);
+        <span class="keyword">return</span> <span class="integer">1</span>;
+    }
+    <span class="keyword">else</span>
+        <span class="keyword">return</span>(printHelp());
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>As you can see in the methor printHelp(), the executable takes as the only parameter the url of theter the url of the image you want to display.</p>
+</div>
+<div class="paragraph">
+<p>to complete</p>
 </div>
 </div>
 </div>
