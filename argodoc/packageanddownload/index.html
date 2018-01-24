@@ -163,7 +163,7 @@ window.cookieconsent.initialise({
 
     
 
-    <li id="contribute active">
+    <li id="contribute">
       <a href="/contribute/">
         Contribute
       </a>
@@ -349,7 +349,7 @@ window.cookieconsent.initialise({
       </ul>   
     </div> 
     
-    <div class="submenu active">
+    <div class="submenu">
       <ul class="nav" aria-expanded="false">
         
         
@@ -443,24 +443,107 @@ window.cookieconsent.initialise({
 
         <div class="container">
             <div class="well">
-              <div class="paragraph">
-<p>A SolAR Marker is a structure describing a convex area in a SolAR Image. A SolAR Marker allows managing different types of markers such ad fiducial markers or checker boards. It encodes shape and pose information as follows:</p>
-</div>
-<div class="ulist">
-<ul>
+              <h1>package &amp; download third parties</h1>
+<div class="sect1">
+<h2 id="packaging"><a class="anchor" href="#packaging"></a><a class="link" href="#packaging">packaging</a></h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
 <li>
-<p><strong>Edges</strong>: a set of <em>SolARPoint_2Df</em> defining the convex area. A fiducial marker can be described with four edges. The order of the points is important and impacts the structure of the marker</p>
+<p>clone the following git repository:
+git clone ssh://gitolite@forge.b-com.com/bcom-templates/builddefs/builddefs-scripts.git</p>
 </li>
-<li>
-<p><strong>Translation</strong>: a <em>SolARVector3f</em> defining the translation of the marker relative to the camera</p>
-</li>
-<li>
-<p><strong>Rotation</strong>: a <em>SolARRotationMatrixf</em>  defining the rotation of the marker relative to the camera</p>
-</li>
-</ul>
+</ol>
 </div>
 <div class="paragraph">
-<p>The SolAR Marker embeds information about the marker in a minimalist way. The reason is directly linked to the desired genericity across all the existing markers in the state-of-the-art methods.</p>
+<p>Starting from a fresh installed package (ie. result of a "make install"), run
+the following perl script (under builddefs-scripts/xplatform)</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>$ bcom-packager.pl</pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>  OPTIONS:
+      -s, --sourcedir                  =&gt; product root directory (where libs and includes are located)
+      -o, --osname                     =&gt; specify the operating system targeted by the product build. It is one of [win|mac|linux]. (defaults to the current OS environment)
+      -i, --includedir                 =&gt; relative path to include folder to export (defaults to the sourcedir provided with -s)
+      -l, --libdir                     =&gt; relative path to the library folder to export (defaults to the sourcedir provided with -s)
+      -r, --redistfile                 =&gt; relative path and filename of a redistribution file to use (such as redist.txt intel ipp's file). Only listed libraries in this file will be packaged
+      -d, --destinationdir             =&gt; package directory root destination (where the resulting packaging will be stored)
+      -p, --packagename                =&gt; package name
+      -v, --packageversion             =&gt; package version
+      -n, --ignore-mode                =&gt; forces the pkg-config generated file to ignore the mode when providing -L flags
+      -m, --mode [debug|release]       =&gt; specify the current product build mode. Binaries will be packaged in the appropriate [mode] folder
+      -a, --architecture [x86_64|i386] =&gt; specify the current product build architecture. Binaries will be packaged in the appropriate [architecture] folder
+      -w, --withsuffix suffix          =&gt; specify the suffix used by the thirdparty when building with mode mode
+      -u, --useOriginalPCfiles         =&gt; specify to search and use original pkgconfig files from the thirdparty, instead of generating them
+      -h, --help                       =&gt; display this help
+
+  EXAMPLES:
+      -s {path_to_root_sourcedir} --o win d {path_to_destination_dir} -p intel-tbb -v 2017.5 -l build/macos_intel64_clang_cc8.0.0_os10.11.6_release -m release -i include</pre>
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Use the artifactory packager scripts.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Under windows, use <strong>builddefs-scripts/win/artiPackager.bat</strong></p>
+</div>
+<div class="paragraph">
+<p>Under linux, use <strong>builddefs-scripts/unixes/artiPackager.sh</strong></p>
+</div>
+<div class="paragraph">
+<p>Usage: run the .bat / .sh scripts where the packages are.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="using_pkgm_bcom"><a class="anchor" href="#using_pkgm_bcom"></a><a class="link" href="#using_pkgm_bcom">Using pkgm-bcom</a></h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Source: <a href="https://forge.b-com.com/www/bcom-templates//tools/pkgm-bcom-index/" class="bare">https://forge.b-com.com/www/bcom-templates//tools/pkgm-bcom-index/</a></p>
+</li>
+<li>
+<p>You must have java installed on your machine: <a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" class="bare">http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html</a></p>
+</li>
+<li>
+<p>You will need to create an artifactory API_KEY: <a href="http://repository.b-com.com/webapp/#/profile" class="bare">http://repository.b-com.com/webapp/#/profile</a></p>
+</li>
+<li>
+<p>Download pkgm-bcom tool here: <a href="http://repository.b-com.com/bcom-devtools-generic-local/pkgm-bcom/1.0.0/multi/pkgm-1.0.0-fat.jar" class="bare">http://repository.b-com.com/bcom-devtools-generic-local/pkgm-bcom/1.0.0/multi/pkgm-1.0.0-fat.jar</a></p>
+</li>
+<li>
+<p>In order to download dependencies described in a packagedependencies.txt file, you will need to launch:</p>
+<div class="literalblock">
+<div class="content">
+<pre>java -jar [path to]/pkgm-1.0.0-fat.jar install -a x86_64 -c release -m shared -f packagedependencies.txt -k [YOUR artifactory API KEY]</pre>
+</div>
+</div>
+</li>
+<li>
+<p>NB: this will work only if third parties are available on artifactory repository</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>For example packagedependencies.txt can include the two following lines:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>opencv|3.2.0|opencv|thirdParties|http://repository.b-com.com/argo-generic
+boost|1.64.0|boost|thirdParties|http://repository.b-com.com/argo-generic</pre>
+</div>
+</div>
+</div>
 </div>
             </div>
         </div>

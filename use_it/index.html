@@ -142,7 +142,7 @@ window.cookieconsent.initialise({
 
     
 
-    <li id="use_it">
+    <li id="use_it active">
       <a href="/use_it/">
         Use it
       </a>
@@ -163,7 +163,7 @@ window.cookieconsent.initialise({
 
     
 
-    <li id="contribute active">
+    <li id="contribute">
       <a href="/contribute/">
         Contribute
       </a>
@@ -285,7 +285,7 @@ window.cookieconsent.initialise({
       </ul>   
     </div> 
     
-    <div class="submenu">
+    <div class="submenu active">
       <ul class="nav" aria-expanded="false">
         
         
@@ -349,7 +349,7 @@ window.cookieconsent.initialise({
       </ul>   
     </div> 
     
-    <div class="submenu active">
+    <div class="submenu">
       <ul class="nav" aria-expanded="false">
         
         
@@ -443,24 +443,66 @@ window.cookieconsent.initialise({
 
         <div class="container">
             <div class="well">
-              <div class="paragraph">
-<p>A SolAR Marker is a structure describing a convex area in a SolAR Image. A SolAR Marker allows managing different types of markers such ad fiducial markers or checker boards. It encodes shape and pose information as follows:</p>
+              <h1>Use it !</h1>
+<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#please_contribute">Please contribute</a></li>
+<li><a href="#how_to_use">How to use</a></li>
+<li><a href="#who">who</a></li>
+</ul>
+</div>
+<div class="sect1">
+<h2 id="please_contribute"><a class="anchor" href="#please_contribute"></a><a class="link" href="#please_contribute">Please contribute</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>SolAR framework is <strong>looking for contributors</strong>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="how_to_use"><a class="anchor" href="#how_to_use"></a><a class="link" href="#how_to_use">How to use</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You can start using SolAR Framework very quickly:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><strong>Edges</strong>: a set of <em>SolARPoint_2Df</em> defining the convex area. A fiducial marker can be described with four edges. The order of the points is important and impacts the structure of the marker</p>
+<p>download and execute the SolAR installer. It will install all you need to user SolAR Framework. <a href="downloads"><strong>binaries</strong></a>. It will only take 15 minutes.</p>
 </li>
 <li>
-<p><strong>Translation</strong>: a <em>SolARVector3f</em> defining the translation of the marker relative to the camera</p>
+<p>download and test solAR sample code : <a href="samples"><strong>sample codes</strong></a>, compile it and run it. You will learn about SolARFramework use (code organization, API call). It will take about 30 minutes.</p>
 </li>
 <li>
-<p><strong>Rotation</strong>: a <em>SolARRotationMatrixf</em>  defining the rotation of the marker relative to the camera</p>
+<p>implement your own program based on SolAR: to help you some tutorials will soon be available.
+<a href="tutorials"><strong>tutorials</strong></a> and do some exercises. You will learn more about SolARFramework, so that you will be able to program a code based on SolAR framework by your own.
+//It will take more time, depending on which level of expertise you want.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="who"><a class="anchor" href="#who"></a><a class="link" href="#who">who</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>SOlAR framework can be used by :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>pose estimation developers (using a C++ API) and</p>
+</li>
+<li>
+<p>designers (using an editor),</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>The SolAR Marker embeds information about the marker in a minimalist way. The reason is directly linked to the desired genericity across all the existing markers in the state-of-the-art methods.</p>
+<p>to create a good pose estimation solution.</p>
+</div>
+</div>
 </div>
             </div>
         </div>

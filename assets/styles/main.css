@@ -13,18 +13,23 @@ body {
    /*padding-bottom: 163px;*/
 }
 
-.navbar{
-  z-index: 1000;
+.navbar {
+  z-index: 999;
   position: fixed;
   width: 100%;
+  margin-bottom: 0px;
 }
+
+.navbar a {
+  text-decoration: none;
+}
+
 .navbar-header ul {
   padding: 0px;
 }
-.navbar-default .navbar-nav a.active, .navbar-default .navbar-nav a.active:hover, .navbar-default .navbar-nav a.active:focus
-.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
-  color: #fff;
-  background-color: #000;
+
+.navbar-default .navbar-collapse {
+  margin-top: 5px;
 }
 
 h1 {
@@ -53,8 +58,8 @@ h1 {
 #toc #toctitle {
   display: none;
 }
-/* first child is for submenuconfig title*/
-#toc > ul > li:nth-child(2) a {
+
+#toc > ul > li:nth-child(1) a {
   color: #FF5050;
   font-size: 1.9875em;
   line-height: 1.2;
@@ -144,51 +149,114 @@ h1 {
 }
 
 /* submenu display part */
-#submenuconfig, #toc a[href="#submenuconfig"] {
+.submenu {
+  z-index: 998;
+  position: fixed;
+  width: 100%;
+  top: 59px;
+  left: 0px;
+  margin-left: 0px;
+  background-color: #666666;
   display: none;
 }
-#submenuconfig + .sectionbody{
-  background-color: gray;
-  position: fixed;
-  top: 52px;
-  left: 0px;
-  padding-left: 57px;
-  width: 100%;
-  z-index: 3;
-  overflow: hidden;
+
+.submenu.active {
+  display: block;
 }
 
-#submenuconfig + .sectionbody ul li, #submenuconfig + .sectionbody ul li p {
+.btn {
+  text-align: left;
+}
+
+/* computer resolution */
+@media (min-width: 768px) {
+  li.active + .submenu,
+  li.dropdown.active > .submenu.active {
+    display: block;
+  }
+  .container {
+    padding-top: 70px;
+  }
+}
+
+/* smartphone resolution */
+@media (max-width: 767px) {
+  .collapse[aria-expanded='false'] > ul > li.active {
+    display: block;
+  }
+  .submenu {
+    display: none;
+    top: 52px;
+  }
+  #navbar.in ~ .submenu.active,
+  #navbar.collapsing ~ .submenu.active {
+    display: none;
+  }
+  .container {
+    margin-left: 1em;
+  }
+}
+
+.submenu > h4 {
   display: inline;
+  font-weight: bold;
+  margin: 0px 20px;
+  color: #00bee6;
 }
-#submenuconfig + .sectionbody ul li {
-  padding-left: 20px;
+.submenu > h4 > a {
+  color: inherit;
 }
-#submenuconfig + .sectionbody ul li:last-child {
-  padding-right: 20px;
+.submenu > h4 ~ ul {
+  display: inline-block;
 }
-#submenuconfig + .sectionbody ul li a {
-  color: white;
-  text-decoration: none;
+.submenu ul {
+  padding: 6px 0px;
+  padding: 0px;
+  margin: 0px;
+  color: #fff;
+  box-sizing: border-box;
+  margin: auto;
 }
 
-#submenuconfig + .sectionbody ul li a:focus, #submenuconfig + .sectionbody ul li a:hover, #submenuconfig + .sectionbody ul li a.active {
-  color: #00d2f8;
+.submenu li,
+.submenu li a {
+  left: auto;
+  padding: 0px;
+  margin: 0px;
+  line-height: 20px;
+  box-sizing: border-box;
 }
+
+.submenu li {
+  height: inherit;
+  padding: 5px 10px;
+  display: inline-block;
+}
+
+.submenu li a {
+  overflow: auto;
+  color: white;
+  display: inline;
+  font-size: 1em;
+}
+
+.submenu li a:active,
+.submenu li a:hover,
+.submenu li a:focus {
+  background: transparent !important;
+}
+
+.submenu li.active a,
+.submenu li.active a:active,
+.submenu li.active a:hover,
+.submenu li.active a:focus {
+  color: #00bee6;
+  border-bottom: none;
+  background: transparent !important;
+}
+
 
 @media screen and (max-width: 767px) { 
-  #submenuconfig + .sectionbody{ 
-  padding-left: 2px;
-  } 
-  .container { 
-  margin-left: 1em; 
-  } 
-  #submenuconfig + .sectionbody ul{
-    padding: 0px 5px;
-  }
-  #submenuconfig + .sectionbody ul li:first-child {
-    padding-left: 0px;
-  }
   video{
     width : 100% ;
     max-width : 100% ;

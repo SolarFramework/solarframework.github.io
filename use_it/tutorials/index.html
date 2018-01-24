@@ -6,63 +6,35 @@
     <title>SolAR</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
+    <meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+    <meta http-equiv="pragma" content="no-cache" />
 
     <!-- IE 10 Metro tile icon (Metro equivalent of apple-touch-icon) -->
     <meta name="msapplication-TileColor" content="#FFFFFF">
-    <meta name="msapplication-TileImage" content="https://solarframework.github.io//assets/static/favicon-144.png">
+    <meta name="msapplication-TileImage" content="/assets/static/favicon-144.png">
 
     <!-- Touch icon for iOS 2.0+ and Android 2.1+ -->
-    <link rel="apple-touch-icon-precomposed" href="https://solarframework.github.io//assets/static/favicon-152.png">
+    <link rel="apple-touch-icon-precomposed" href="/assets/static/favicon-152.png">
+    <link rel="icon" type="image/x-icon" href="/assets/static/favicon.ico">
 
-    <link rel="icon" type="image/x-icon" href="https://solarframework.github.io//assets/static/favicon.ico">
+    <link rel="stylesheet" href="/assets/styles/bootstrap.min.css" />
+    <link rel="stylesheet" href="/assets/styles/coderay-asciidoctor.css">
+    <link rel="stylesheet" href="/assets/styles/asciidoctor.css">
+    <link rel="stylesheet" href="/assets/styles/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/styles/solar-asciidoctor-theme.css">
+    <link rel="stylesheet" href="/assets/styles/solar-bootstrap-theme.css">
+    <link rel="stylesheet" href="/assets/styles/main.css">
+    <link rel="stylesheet" href="/assets/styles/media.css">
 
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    <!-- build:css assets/styles/vendor.css -->
-    <!-- bower:css -->
-    <link rel="stylesheet" href="https://solarframework.github.io//assets/styles/bootstrap.css" />
-    <!-- endbower -->
-    <!-- endbuild -->
-    <!-- build:css assets/styles/main.css -->
-    <link rel="stylesheet" href="https://solarframework.github.io//assets/styles/coderay.css">
-    <link rel="stylesheet" href="https://solarframework.github.io//assets/styles/asciidoctor.css">
-    <link rel="stylesheet" href="https://solarframework.github.io//assets/styles/solar-asciidoctor-theme.css">
-    <link rel="stylesheet" href="https://solarframework.github.io//assets/styles/font-awesome.min.css">
-    <link rel="stylesheet" href="https://solarframework.github.io//assets/styles/solar-bootstrap-theme.css">
-    <link rel="stylesheet" href="https://solarframework.github.io//assets/styles/main.css">
-    <link rel="stylesheet" href="https://solarframework.github.io//assets/styles/media.css">
-    <!-- endbuild -->
-    <script src="https://solarframework.github.io//js/vendor/jquery.js"></script><!--needed with bootstrap-->
-    <script src="https://solarframework.github.io//js/vendor/bootstrap.js"></script>
-    <script src="https://solarframework.github.io//js/toc.js"></script>
-    <script src="https://solarframework.github.io//js/block-folding.js"></script>
+    <script src="/js/vendor/jquery.js"></script><!--needed with bootstrap-->
+    <script src="/js/vendor/bootstrap.js"></script>
+    <script src="/js/toc.js"></script>
+    <script src="/js/block-folding.js"></script>
     <script type="text/javascript">
         $(document).ready(function() { 
-        /* Set up style for active page in submenu and matching navbar entry This code cannot be put in navbar.html because each default.html template imports a brand new navbar so the activate class will be overwriten by brand new navbar DOM*/
-          var pageHasSubmenu = false;
-          $("#submenuconfig + .sectionbody ul li a").each(function(){
-              if ($(this).prop("href") == window.location.href) {
-                  /* Set up style for active page in submenu */
-                  pageHasSubmenu = true;
-                  $(this).addClass("active"); 
-                  $(this).parents("p").addClass("active");
-                  return false; /* same as break, specific for jquery each() function */
-              }
-          });
-          var matchingNavbarURL = window.location.href;
-          if (pageHasSubmenu) {
-              var urlParts = window.location.href.split("/");
-              var matchingNavbarItem = urlParts[urlParts.length-3];
-              matchingNavbarURL = window.location.href.substring(0, window.location.href.indexOf(matchingNavbarItem))+matchingNavbarItem+".html";       
-          }
-          /* Set up style for active item in navbar (no click on submenu yet) This code cannot be put in navbar.html because each default.html template imports a brand new navbar so the activate class will be overwriten by brand new navbar DOM*/
-          $("#navbar-collapse ul.navbar-nav a").each(function(){
-              if ($(this).prop("href") == matchingNavbarURL) {
-                  $(this).addClass('active'); 
-                  $(this).parents('li').addClass('active');
-                  return false; /* same as break, specific for jquery each() function */
-              }
-          });
-  
           /* Configure TOC to take into account all titles */
           $("#toc").toc(  { headers: "h2, h3, h4, h5, h6",
                               listType: "ul",
@@ -81,8 +53,8 @@
           ga('create', 'UA-107058603-1', 'auto');
           ga('send', 'pageview');
   </script>  <!-- End Google Analytics --> 
-<link rel="stylesheet" type="text/css" href="https://solarframework.github.io//js/cookieconsent/cookieconsent.min.css" />
-<script src="https://solarframework.github.io//js/cookieconsent/cookieconsent.min.js"></script>
+<link rel="stylesheet" type="text/css" href="/js/cookieconsent/cookieconsent.min.css" />
+<script src="/js/cookieconsent/cookieconsent.min.js"></script>
 <script>
 var userLang = navigator.language || navigator.userLanguage; 
 if (userLang == "fr") {
@@ -130,42 +102,100 @@ window.cookieconsent.initialise({
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand link" href="https://solarframework.github.io//">&lsaquo;SolAR&rsaquo;</a>
+            <a class="navbar-brand link" href="/">&lsaquo;SolAR&rsaquo;</a>
         </div>
 
         <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
             <ul class="nav navbar-nav">
-                
-                
-                
-                
-                
-                    <li>
-                        <a href="https://solarframework.github.io//discover.html">
-                            <span>Discover</span>
-                        </a>
-                    </li>                          
-                
-                
-                
-                    <li>
-                        <a href="https://solarframework.github.io//API.html">
-                            <span>API</span>
-                        </a>
-                    </li>                          
-                
-                
-                
-                    <li>
-                        <a class="active" href="https://solarframework.github.io//use_it.html">
-                            <span>Use it</span>
-                        </a>
-                    </li>                          
-                
+
                 
 
+
+
+  
+  
+
+  
+
+  
+
+    
+
+    <li id="discover">
+      <a href="/discover/">
+        Discover
+      </a>
+    </li>
+    
+    
+
+  
+
+
+
+  
+  
+
+  
+
+  
+
+    
+
+    <li id="use_it active">
+      <a href="/use_it/">
+        Use it
+      </a>
+    </li>
+    
+    
+
+  
+
+
+
+  
+  
+
+  
+
+  
+
+    
+
+    <li id="contribute">
+      <a href="/contribute/">
+        Contribute
+      </a>
+    </li>
+    
+    
+
+  
+
+
+
+  
+  
+
+  
+
+  
+
+     
+
+    <li id="">
+      <a href="/api/">
+        API
+      </a>
+    </li>
+
+  
+
+
+
                 <!--li>
-                    <form action="https://solarframework.github.io//search.html" method="get" class="navbar-form" role="search">
+                    <form action="/search/index.html" method="get" class="navbar-form" role="search">
                         <div class="input-group">
                             <input type="text" id="search" class="form-control" placeholder="Search"
                                     name="q" class="span1" type="text" size="15">
@@ -178,7 +208,233 @@ window.cookieconsent.initialise({
                     </form>
                 </li-->
             </ul>
-        </div><!--/.nav-collapse -->
+        </div>
+        
+    <div class="submenu">
+      <ul class="nav" aria-expanded="false">
+        
+        
+
+	
+	
+
+		<li >
+			<a href="/discover/what/">
+				what
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/discover/how/">
+				how
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/discover/who/">
+				who
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/discover/when/">
+				when
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/discover/for_whom/">
+				for whom
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/discover/legal_notice/">
+				legal notice
+				
+			</a>
+		</li>
+	
+
+ 
+      </ul>   
+    </div> 
+    
+    <div class="submenu active">
+      <ul class="nav" aria-expanded="false">
+        
+        
+
+	
+	
+
+		<li >
+			<a href="/use_it/downloads/">
+				setup
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/use_it/samples/">
+				samples
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li  class="active currentPage">
+			<a href="/use_it/tutorials/">
+				tutorials
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/use_it/tools/">
+				tools
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/use_it/programmer_guide/">
+				programmer’s guide
+				
+			</a>
+		</li>
+	
+
+ 
+      </ul>   
+    </div> 
+    
+    <div class="submenu">
+      <ul class="nav" aria-expanded="false">
+        
+        
+
+	
+	
+
+		<li >
+			<a href="/contribute/how_it_works/">
+				how it works
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/contribute/getting_started/">
+				getting started
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/contribute/create_component/">
+				create a component
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/contribute/contribute_to_core/">
+				contribute to core
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/contribute/best_practices/">
+				best practices
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/contribute/github_workflow/">
+				contribution workflow
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/contribute/tools/">
+				tools
+				
+			</a>
+		</li>
+	
+
+ 
+      </ul>   
+    </div> 
+    
         
     </div>
 
@@ -191,64 +447,22 @@ window.cookieconsent.initialise({
 <div id="toc" class="toc">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#submenuconfig">submenuconfig</a></li>
-<li><a href="#tutorials">Tutorials</a></li>
-<li><a href="#1_create_your_first_solar_project">#1 Create your first SolAR Project</a></li>
+<li><a href="#prerequisites">Prerequisites</a></li>
 <li><a href="#configure_your_solar_project">Configure your SolAR project</a></li>
-<li><a href="#2_create_your_first_pipeline_to_extract_keypoints">#2 Create your first pipeline to extract keypoints</a></li>
-<li><a href="#3_match_an_image_with_your_video_stream">#3 Match an image with your video stream</a></li>
-<li><a href="#4_calibrate_your_camera">#4 Calibrate your camera</a></li>
-<li><a href="#5_estimate_a_camera_pose_with_a_natural_image_marker">#5 Estimate a camera pose with a natural image marker</a></li>
+<li><a href="#write_your_first_solar_hello_world">Write your first Solar "Hello World"</a></li>
+<li><a href="#create_your_first_pipeline_to_extract_keypoints">Create your first pipeline to extract keypoints</a></li>
+<li><a href="#match_an_image_with_your_video_stream">Match an image with your video stream</a></li>
+<li><a href="#calibrate_your_camera">Calibrate your camera</a></li>
+<li><a href="#estimate_a_camera_pose_with_a_natural_image_marker">Estimate a camera pose with a natural image marker</a></li>
 </ul>
 </div>
 <div class="sect1">
-<h2 id="submenuconfig"><a class="anchor" href="#submenuconfig"></a><a class="link" href="#submenuconfig">submenuconfig</a></h2>
+<h2 id="prerequisites"><a class="anchor" href="#prerequisites"></a><a class="link" href="#prerequisites">Prerequisites</a></h2>
 <div class="sectionbody">
-<div class="ulist none">
-<ul class="none">
-<li>
-<p><a href="https://solarframework.github.io//use_it/downloads/">setup</a></p>
-</li>
-<li>
-<p><a href="https://solarframework.github.io//use_it/samples/">samples</a></p>
-</li>
-<li>
-<p><a href="https://solarframework.github.io//use_it/tutorials/">tutorials</a></p>
-</li>
-<li>
-<p><a href="https://solarframework.github.io//use_it/tools/">tools</a></p>
-</li>
-<li>
-<p><a href="https://solarframework.github.io//use_it/programmer_guide/">programmer&#8217;s guide</a></p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="tutorials"><a class="anchor" href="#tutorials"></a><a class="link" href="#tutorials">Tutorials</a></h2>
-<div class="sectionbody">
-
-</div>
-</div>
-<div class="sect1">
-<h2 id="1_create_your_first_solar_project"><a class="anchor" href="#1_create_your_first_solar_project"></a><a class="link" href="#1_create_your_first_solar_project">#1 Create your first SolAR Project</a></h2>
-<div class="sectionbody">
-
-</div>
-</div>
-<div class="sect1">
-<h2 id="configure_your_solar_project"><a class="anchor" href="#configure_your_solar_project"></a><a class="link" href="#configure_your_solar_project">Configure your SolAR project</a></h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>This tutorial will &#8230;&#8203; The tutorial will take approximately ??? to complete.</p>
-</div>
-<div class="sect2">
-<h3 id="prerequisites"><a class="anchor" href="#prerequisites"></a><a class="link" href="#prerequisites">Prerequisites</a></h3>
 <div class="ulist">
 <ul>
 <li>
-<p>A PC configured with the SolAR framework (see <a href="use_it/downloads"><strong>setup</strong></a>.)</p>
+<p>A PC configured with the SolAR framework (see <a href="../downloads"><strong>setup</strong></a>.)</p>
 </li>
 <li>
 <p>A PC configured with a C++ IDE (please note QT creator is recommended).</p>
@@ -256,9 +470,12 @@ window.cookieconsent.initialise({
 </ul>
 </div>
 </div>
-<div class="sect2">
-<h3 id="instructions"><a class="anchor" href="#instructions"></a><a class="link" href="#instructions">Instructions</a></h3>
-
+</div>
+<div class="sect1">
+<h2 id="configure_your_solar_project"><a class="anchor" href="#configure_your_solar_project"></a><a class="link" href="#configure_your_solar_project">Configure your SolAR project</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This tutorial will take approximately ??? to complete.</p>
 </div>
 <div class="sect2">
 <h3 id="create_your_project"><a class="anchor" href="#create_your_project"></a><a class="link" href="#create_your_project">Create your project</a></h3>
@@ -409,13 +626,22 @@ win32 {
 <div class="paragraph">
 <p>Then build your project to be sure it is correctly configured.</p>
 </div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="write_your_hello_world"><a class="anchor" href="#write_your_hello_world"></a><a class="link" href="#write_your_hello_world">Write your Hello World</a></h3>
 <div class="paragraph">
-<p>This tutorial will help you to write a simple program that will dsplay an image
+<p>Compile it now.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="write_your_first_solar_hello_world"><a class="anchor" href="#write_your_first_solar_hello_world"></a><a class="link" href="#write_your_first_solar_hello_world">Write your first Solar "Hello World"</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This tutorial will help you to write a simple program that will dsplay an image and a camera input.
 Please replace the code of your main.cpp by the following one:</p>
+</div>
+<div class="paragraph">
+<p>The executable should take as the only parameter the url of the image you want to display.</p>
 </div>
 <div class="listingblock">
 <div class="title">main.cpp</div>
@@ -426,100 +652,119 @@ using namespace std;
 using namespace SolAR;
 namespace xpcf  = org::bcom::xpcf;
 
+using namespace SolAR::datastructure;
+using namespace SolAR::api;
+using namespace SolAR::api::solver::pose;
+using namespace SolAR::MODULES::OPENCV;
+<span class="comment">//using namespace SolAR::MODULES::TOOLS;</span>
+
 <span class="directive">void</span> run(<span class="predefined-type">int</span> argc,<span class="predefined-type">char</span>** argv){
+
+     cout&lt;&lt;<span class="string"><span class="delimiter">&quot;</span><span class="content">Load image</span><span class="delimiter">&quot;</span></span>;
 
     <span class="comment">// To redirect log to the console</span>
     LOG_ADD_LOG_TO_CONSOLE();
 
-    <span class="comment">// ADD HERE: load your Opencv module</span>
-
     <span class="comment">// ADD HERE: declarations and instantiation of components</span>
+    <span class="comment">// see API ref on SolAR website</span>
     <span class="comment">// Example to declare and create a camera:</span>
     <span class="comment">// SRef&lt;ISolARCamera&gt; camera = opencvModule.createComponent&lt;ISolARCamera&gt;(UUID::OPENCV::CAMERA);</span>
+    <span class="comment">// you need a component to load your image file (see API ref)</span>
 
 
-    <span class="comment">// ADD HERE: declarations of data structures used to connect components</span>
-    <span class="comment">// Example to declare a SolARImage:</span>
-    <span class="comment">// SRef&lt;SolARImage&gt; inputImage;</span>
 
-
-    <span class="comment">// ADD HERE: Components configuration</span>
-    <span class="comment">// Generally through the method setParamerters of the components, except for the input components such as the camera or the marker that use specific methods to load configuration files</span>
-
-
-    <span class="comment">// ADD HERE: The pipeline loop</span>
+    <span class="comment">// find how to display your image</span>
+    <span class="comment">// checks if display is ok (reurncode)</span>
 
 }
 
-<span class="predefined-type">int</span> printHelp(){
-        printf(<span class="string"><span class="delimiter">&quot;</span><span class="content"> usage :</span><span class="char">\n</span><span class="delimiter">&quot;</span></span>);
-        printf(<span class="string"><span class="delimiter">&quot;</span><span class="content"> HelloWorld.exe ImagePath </span><span class="char">\n</span><span class="char">\n</span><span class="delimiter">&quot;</span></span>);
-        printf(<span class="string"><span class="delimiter">&quot;</span><span class="content"> Escape key to exit</span><span class="delimiter">&quot;</span></span>);
-        <span class="keyword">return</span> <span class="integer">1</span>;
-}
 
 <span class="predefined-type">int</span> main(<span class="predefined-type">int</span> argc, <span class="predefined-type">char</span> *argv[])
 {
-    <span class="keyword">if</span>(argc==<span class="integer">3</span> || argc ==<span class="integer">4</span>){
-        run(argc,argv);
-        <span class="keyword">return</span> <span class="integer">1</span>;
-    }
-    <span class="keyword">else</span>
-        <span class="keyword">return</span>(printHelp());
+
+     run(argc,argv);
+
 }</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>The executable should take as the only parameter the url of the image you want to display.</p>
+<p>quelques tentatives</p>
 </div>
-<div class="paragraph">
-<p>to complete
-==== Build your project</p>
-</div>
-<div class="paragraph">
-<p>Now you can run QMake (click right of your project in QT creator, and click on <em>run QMake</em>). Every pathes for headers and library links are now set.</p>
-</div>
-<div class="sect3">
-<h4 id="check_your_empty_project_is_ok_pour_solar"><a class="anchor" href="#check_your_empty_project_is_ok_pour_solar"></a><a class="link" href="#check_your_empty_project_is_ok_pour_solar">Check your empty project is ok pour SolAR</a></h4>
+<div class="listingblock">
+<div class="title">main.cpp SOLUTION NOK</div>
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="c">ERROR
+using namespace SolAR::api::solver::pose;
+using namespace SolAR::MODULES::OPENCV;
+<span class="comment">//using namespace SolAR::MODULES::TOOLS;</span>
 
+<span class="directive">void</span> run(<span class="predefined-type">int</span> argc,<span class="predefined-type">char</span>** argv){
+
+     cout&lt;&lt;<span class="string"><span class="delimiter">&quot;</span><span class="content">Load image</span><span class="delimiter">&quot;</span></span>;
+
+    <span class="comment">// To redirect log to the console</span>
+    LOG_ADD_LOG_TO_CONSOLE();
+
+    <span class="comment">// ADD HERE: declarations and instantiation of components</span>
+    <span class="comment">// see API ref on SolAR website</span>
+    <span class="comment">// Example to declare and create a camera:</span>
+    <span class="comment">// SRef&lt;ISolARCamera&gt; camera = opencvModule.createComponent&lt;ISolARCamera&gt;(UUID::OPENCV::CAMERA);</span>
+    <span class="comment">// you need a component to load your image file (see API ref)</span>
+    SRef&lt;SolAR::datastructure::Image&gt; myImage;
+    SRef&lt;SolAR::api::image::IImageLoader&gt; myImageLoader;
+
+    <span class="keyword">if</span>(myImageLoader-&gt;loadImage(<span class="string"><span class="delimiter">&quot;</span><span class="content">HelloWorld.jpg</span><span class="delimiter">&quot;</span></span>, myImage)==SolAR::FrameworkReturnCode::_ERROR_)
+      {
+        cout&lt;&lt;<span class="string"><span class="delimiter">&quot;</span><span class="content">pb load image</span><span class="delimiter">&quot;</span></span>;
+       LOG_INFO(<span class="string"><span class="delimiter">&quot;</span><span class="content">pb load image</span><span class="delimiter">&quot;</span></span>);
+      }
+
+    <span class="keyword">else</span> {
+        cout&lt;&lt;<span class="string"><span class="delimiter">&quot;</span><span class="content">load image OK</span><span class="delimiter">&quot;</span></span>;
+       LOG_INFO(<span class="string"><span class="delimiter">&quot;</span><span class="content">pb load image</span><span class="delimiter">&quot;</span></span>);
+    }
+
+    <span class="comment">// find how to display your image</span>
+    SRef&lt;SolAR::api::display::IImageViewer&gt; myImageViewer;
+
+    <span class="keyword">if</span>(myImageViewer-&gt;display (<span class="string"><span class="delimiter">&quot;</span><span class="content">const char *title</span><span class="delimiter">&quot;</span></span>, myImage) ==SolAR::FrameworkReturnCode::_ERROR_)
+    {
+        cout&lt;&lt;<span class="string"><span class="delimiter">&quot;</span><span class="content">pb display image</span><span class="delimiter">&quot;</span></span>;
+       LOG_INFO(<span class="string"><span class="delimiter">&quot;</span><span class="content">pb affichage image</span><span class="delimiter">&quot;</span></span>);
+      }
+
+    <span class="keyword">else</span> {
+        cout&lt;&lt;<span class="string"><span class="delimiter">&quot;</span><span class="content">display image OK</span><span class="delimiter">&quot;</span></span>;
+       LOG_INFO(<span class="string"><span class="delimiter">&quot;</span><span class="content">pb load image</span><span class="delimiter">&quot;</span></span>);
+    }
+}</code></pre>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="2_create_your_first_pipeline_to_extract_keypoints"><a class="anchor" href="#2_create_your_first_pipeline_to_extract_keypoints"></a><a class="link" href="#2_create_your_first_pipeline_to_extract_keypoints">#2 Create your first pipeline to extract keypoints</a></h2>
+<h2 id="create_your_first_pipeline_to_extract_keypoints"><a class="anchor" href="#create_your_first_pipeline_to_extract_keypoints"></a><a class="link" href="#create_your_first_pipeline_to_extract_keypoints">Create your first pipeline to extract keypoints</a></h2>
 <div class="sectionbody">
 
 </div>
 </div>
 <div class="sect1">
-<h2 id="3_match_an_image_with_your_video_stream"><a class="anchor" href="#3_match_an_image_with_your_video_stream"></a><a class="link" href="#3_match_an_image_with_your_video_stream">#3 Match an image with your video stream</a></h2>
+<h2 id="match_an_image_with_your_video_stream"><a class="anchor" href="#match_an_image_with_your_video_stream"></a><a class="link" href="#match_an_image_with_your_video_stream">Match an image with your video stream</a></h2>
 <div class="sectionbody">
 
 </div>
 </div>
 <div class="sect1">
-<h2 id="4_calibrate_your_camera"><a class="anchor" href="#4_calibrate_your_camera"></a><a class="link" href="#4_calibrate_your_camera">#4 Calibrate your camera</a></h2>
+<h2 id="calibrate_your_camera"><a class="anchor" href="#calibrate_your_camera"></a><a class="link" href="#calibrate_your_camera">Calibrate your camera</a></h2>
 <div class="sectionbody">
 
 </div>
 </div>
 <div class="sect1">
-<h2 id="5_estimate_a_camera_pose_with_a_natural_image_marker"><a class="anchor" href="#5_estimate_a_camera_pose_with_a_natural_image_marker"></a><a class="link" href="#5_estimate_a_camera_pose_with_a_natural_image_marker">#5 Estimate a camera pose with a natural image marker</a></h2>
+<h2 id="estimate_a_camera_pose_with_a_natural_image_marker"><a class="anchor" href="#estimate_a_camera_pose_with_a_natural_image_marker"></a><a class="link" href="#estimate_a_camera_pose_with_a_natural_image_marker">Estimate a camera pose with a natural image marker</a></h2>
 <div class="sectionbody">
-<div class="sect3">
-<h4 id="tutorial"><a class="anchor" href="#tutorial"></a><a class="link" href="#tutorial">tutorial</a></h4>
 <div class="paragraph">
 <p>:include _NaturalImageMarkerdynamicetuto[Natural Image Marker Simple sample code]</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="exercise"><a class="anchor" href="#exercise"></a><a class="link" href="#exercise">exercise</a></h4>
-
-</div>
-<div class="sect3">
-<h4 id="exercise_correction"><a class="anchor" href="#exercise_correction"></a><a class="link" href="#exercise_correction">exercise correction</a></h4>
-
 </div>
 </div>
 </div>
@@ -533,7 +778,7 @@ namespace xpcf  = org::bcom::xpcf;
         <!-- endbuild -->
 
     <!-- build:js({.tmp,src/main/webapp}) scripts/app.js -->
-    <script src="https://solarframework.github.io//js/vendor/modernizr.js"></script>
+    <script src="/js/vendor/modernizr.js"></script>
     <!-- endbuild -->
     <script type="text/javascript">
       /* Fix padding-top on anchor with TOC */

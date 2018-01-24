@@ -163,7 +163,7 @@ window.cookieconsent.initialise({
 
     
 
-    <li id="contribute active">
+    <li id="contribute">
       <a href="/contribute/">
         Contribute
       </a>
@@ -184,7 +184,7 @@ window.cookieconsent.initialise({
 
      
 
-    <li id="">
+    <li id=" active">
       <a href="/api/">
         API
       </a>
@@ -349,7 +349,7 @@ window.cookieconsent.initialise({
       </ul>   
     </div> 
     
-    <div class="submenu active">
+    <div class="submenu">
       <ul class="nav" aria-expanded="false">
         
         
@@ -443,24 +443,17 @@ window.cookieconsent.initialise({
 
         <div class="container">
             <div class="well">
-              <div class="paragraph">
-<p>A SolAR Marker is a structure describing a convex area in a SolAR Image. A SolAR Marker allows managing different types of markers such ad fiducial markers or checker boards. It encodes shape and pose information as follows:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Edges</strong>: a set of <em>SolARPoint_2Df</em> defining the convex area. A fiducial marker can be described with four edges. The order of the points is important and impacts the structure of the marker</p>
-</li>
-<li>
-<p><strong>Translation</strong>: a <em>SolARVector3f</em> defining the translation of the marker relative to the camera</p>
-</li>
-<li>
-<p><strong>Rotation</strong>: a <em>SolARRotationMatrixf</em>  defining the rotation of the marker relative to the camera</p>
-</li>
+              <div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#solar_api">SolAR API</a></li>
 </ul>
 </div>
-<div class="paragraph">
-<p>The SolAR Marker embeds information about the marker in a minimalist way. The reason is directly linked to the desired genericity across all the existing markers in the state-of-the-art methods.</p>
+<div class="sect1">
+<h2 id="solar_api"><a class="anchor" href="#solar_api"></a><a class="link" href="#solar_api">SolAR API</a></h2>
+<div class="sectionbody">
+<iframe src="https://forge.b-com.com/www/argo/api_documentation/annotated.html" width="1000px" height="800px"/>
+</div>
 </div>
             </div>
         </div>

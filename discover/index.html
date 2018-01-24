@@ -121,7 +121,7 @@ window.cookieconsent.initialise({
 
     
 
-    <li id="discover">
+    <li id="discover active">
       <a href="/discover/">
         Discover
       </a>
@@ -163,7 +163,7 @@ window.cookieconsent.initialise({
 
     
 
-    <li id="contribute active">
+    <li id="contribute">
       <a href="/contribute/">
         Contribute
       </a>
@@ -210,7 +210,7 @@ window.cookieconsent.initialise({
             </ul>
         </div>
         
-    <div class="submenu">
+    <div class="submenu active">
       <ul class="nav" aria-expanded="false">
         
         
@@ -349,7 +349,7 @@ window.cookieconsent.initialise({
       </ul>   
     </div> 
     
-    <div class="submenu active">
+    <div class="submenu">
       <ul class="nav" aria-expanded="false">
         
         
@@ -443,24 +443,26 @@ window.cookieconsent.initialise({
 
         <div class="container">
             <div class="well">
-              <div class="paragraph">
-<p>A SolAR Marker is a structure describing a convex area in a SolAR Image. A SolAR Marker allows managing different types of markers such ad fiducial markers or checker boards. It encodes shape and pose information as follows:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Edges</strong>: a set of <em>SolARPoint_2Df</em> defining the convex area. A fiducial marker can be described with four edges. The order of the points is important and impacts the structure of the marker</p>
-</li>
-<li>
-<p><strong>Translation</strong>: a <em>SolARVector3f</em> defining the translation of the marker relative to the camera</p>
-</li>
-<li>
-<p><strong>Rotation</strong>: a <em>SolARRotationMatrixf</em>  defining the rotation of the marker relative to the camera</p>
-</li>
+              <div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#discover_solar">Discover Solar</a></li>
 </ul>
 </div>
+<div class="sect1">
+<h2 id="discover_solar"><a class="anchor" href="#discover_solar"></a><a class="link" href="#discover_solar">Discover Solar</a></h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>The SolAR Marker embeds information about the marker in a minimalist way. The reason is directly linked to the desired genericity across all the existing markers in the state-of-the-art methods.</p>
+<p>SolAR is an <strong>open-source framework</strong> released under <a href="https://www.apache.org/licenses/LICENSE-2.0"><strong>Apache license 2.0</strong></a> making it possible to easily <strong>create your own camera pose estimation</strong> solution to develop augmented reality applications.</p>
+</div>
+<div class="videoblock">
+<div class="content">
+<video src="videos/solArtutorial.mp4" width="860px" controls>
+Your browser does not support the video tag.
+</video>
+</div>
+</div>
+</div>
 </div>
             </div>
         </div>
