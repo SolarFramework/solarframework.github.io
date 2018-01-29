@@ -1,6 +1,6 @@
 # SolAR github repositories
 
-## [SolAR Framework]
+## SolAR Framework
 - [SolAR Framework](https://github.com/SolarFramework/SolARFramework)
 
 ## SolAR Modules
