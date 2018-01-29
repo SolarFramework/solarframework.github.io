@@ -4,12 +4,12 @@
 - [SolAR Framework](https://github.com/SolarFramework/SolARFramework)
 
 ## SolAR Modules
-- [SolAR Module OpenCV](https://github.com/SolarFramework/SolARContainerOpenCV)
-- [SolAR Module Tools](https://github.com/SolarFramework/SolARContainerOpenCV)
+- [SolAR Module OpenCV](https://github.com/SolarFramework/SolARModuleOpenCV)
+- [SolAR Module Tools](https://github.com/SolarFramework/SolARModuleTools)
 
 ## SolAR Samples
-
-## SolAR Tutorials
+- [SolAR Natural Marker Image sample](https://github.com/SolarFramework/NaturalImageMarker)
+- [SolAR Fiducial Marker sample](https://github.com/SolarFramework/FiducialMarker)
 
 ## SolAR Binaries
 - [Binaries](https://github.com/SolarFramework/binaries)
