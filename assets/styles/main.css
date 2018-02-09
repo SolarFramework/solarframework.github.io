@@ -28,8 +28,9 @@ body {
   padding: 0px;
 }
 
-.navbar-default .navbar-collapse {
-  margin-top: 5px;
+.logo {
+  width: 89px;
+  height: 30px;
 }
 
 h1 {
@@ -44,7 +45,7 @@ h1 {
       max-width: 20em;
       min-width: 15em;
       left: 0;
-      top: 60px;
+      top: 80px;
       border-right: 1px solid #efefed;
       border-top-width: 0!important;
       border-bottom-width: 0!important;
@@ -55,13 +56,19 @@ h1 {
   }
 }
 
+@media (min-width: 768px) {
+  .container-fluid > .navbar-header {
+    margin-top: 0px;
+  }
+}
+
 #toc #toctitle {
   display: none;
 }
 
 #toc > ul > li:nth-child(1) a {
   color: #FF5050;
-  font-size: 1.9875em;
+  font-size: 1.4em;
   line-height: 1.2;
   word-spacing: -.05em;
   font-family: "Open Sans","DejaVu Sans",sans-serif;
@@ -73,11 +80,11 @@ h1 {
 }
 
 #toc > ul li {
-  padding-bottom: 30px;
-  font-size: 1.4em;
+  padding-bottom: 10px;
+  font-size: 1.2em;
 }
 #toc > ul li > ul li {
-  font-size: 0.8em;
+  font-size: 0.9em;
   padding-bottom: 0px;
 }
 
@@ -128,6 +135,10 @@ h1 {
   border-radius: 0px;
 }
 
+.well h1 {
+  display: none;
+}
+
 .well a {
   text-decoration: underline;
 }
@@ -153,9 +164,10 @@ h1 {
   z-index: 998;
   position: fixed;
   width: 100%;
-  top: 59px;
+  top: 52px;
   left: 0px;
   margin-left: 0px;
+  padding-left: 57px;
   background-color: #666666;
   display: none;
 }
@@ -185,8 +197,7 @@ h1 {
     display: block;
   }
   .submenu {
-    display: none;
-    top: 52px;
+    padding-left: 0px;
   }
   #navbar.in ~ .submenu.active,
   #navbar.collapsing ~ .submenu.active {
@@ -237,7 +248,13 @@ h1 {
   overflow: auto;
   color: white;
   display: inline;
+  font-weight: normal;
   font-size: 1em;
+}
+
+.navbar .submenu > .nav > li > a {
+  font-weight: normal;
+  font-size: 1.2em;
 }
 
 .submenu li a:active,
@@ -261,4 +278,8 @@ h1 {
     width : 100% ;
     max-width : 100% ;
   }  
+}
+
+h2 {
+  border-bottom : 2px : solid #666666 ;
 }

@@ -1,7 +1,28 @@
 # User guide of Asciidoc use in solAR
 
 ## Add a new doc part 
-// TODO
+
+The structure of the documentation (chapters, subchapters) is described in ```_data/toc.yml```. In this file, ```horizontalnav``` represents the black navbar. It is composed of a chapters, described as a list of tuples (```title```, ```path```). If a chapter contains subchapters that you want to display in a submenu, then add a ```node``` attribute in your chapter tuple. This ```node``` attribute will reference a new part of toc.yml described after ```horizontalnav``` object.
+
+When you have described the structure you want, then you have to create matching directories and files.
+- for new chapter (without node)
+    - create a directory at root of this project, named with the path you use in ```toc.yml```
+    - inside this directory create an index.adoc with the content of your chapter
+- for new chapter node
+    - same as above
+    - create as many directories as you have of subchapters in the node, with an index.adoc file with the content of each subchapter in each directory
+- for a subchapter
+    - create a directory named with the path you use in ```toc.yml``` inside the directory of the chapter you want this subchapter in
+    - inside this directory create an index.adoc with the content of your chapter
+
+
+## Add a table of content (TOC)
+
+In each adoc page you can add the line ```:toc:``` in the meta data at top of the file. It will automatically generate a table of content from the title founded in the current page and the pages included from the current page.
+
+*Tip: To enable the TOC, the adoc page must be a 'standalone' page (i.e. referenced in ```_data/toc.yml```) not an adoc page included from another adoc page*
+
+*Tip: The table of content will take the first ```<h2>``` title of the page as title of the table of content part. So, in pages with toc activated, please remove the option ```:showtitle:```, and the ```<h1>``` title and replace it with an ```<h2>``` title.*
 
 ## Embed video
 

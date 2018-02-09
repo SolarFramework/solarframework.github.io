@@ -34,7 +34,9 @@ div,dl,dt,dd,ul,ol,li,#toctitle,.sidebarblock>.content>.title,pre,form,p,blockqu
 
   .sect1 + .sect1 {
     border-top: none;
+    border-bottom: 2px solid #666666;
   }
+
 
   .literalblock pre.nowrap, .literalblock pre[class].nowrap, .listingblock pre.nowrap, .listingblock pre[class].nowrap,
   .literalblock pre.nowrap code, .literalblock pre[class].nowrap code, .listingblock pre.nowrap code, .listingblock pre[class].nowrap code {
