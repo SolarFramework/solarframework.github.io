@@ -110,8 +110,8 @@ h1 {
   display: none;
 }
 
-.listingblock.blockHide > .title > span,
-.listingblock.blockShow > .title > span {
+.listingblock.blockHide > .title > .display-action,
+.listingblock.blockShow > .title > .display-action {
   cursor: pointer;
   padding-left: 10px;
   text-decoration: underline;
