@@ -1,0 +1,5 @@
+<map id="SolAR::ThirdPartyConnector" name="SolAR::ThirdPartyConnector">
+<area shape="rect" id="node3" href="$class_sol_a_r_1_1api_1_1sink_1_1_i_third_party_connector.html" title="The IThirdPartyConnector class. " alt="" coords="291,57,452,98"/>
+<area shape="rect" id="node5" href="$class_shared_circular_buffer.html" title="SharedCircularBuffer\l\&lt; connectorDataType \&gt;" alt="" coords="284,122,459,163"/>
+<area shape="rect" id="node6" href="$class_shared_fifo.html" title="SharedFifo\&lt; connectorData\lType \&gt;" alt="" coords="5,122,204,163"/>
+</map>

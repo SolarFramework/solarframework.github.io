@@ -1,0 +1,7 @@
+<map id="MACROS" name="MACROS">
+<area shape="rect" id="node2" href="$group__end__of__process.html" title="End_of_process" alt="" coords="132,5,255,32"/>
+<area shape="rect" id="node3" href="$group___log__levels.html" title="Log_levels" alt="" coords="149,56,237,83"/>
+<area shape="rect" id="node4" href="$group___add__sinks.html" title="Add_sinks" alt="" coords="150,107,237,133"/>
+<area shape="rect" id="node5" href="$group___log__styles.html" title="Log_styles" alt="" coords="149,157,238,184"/>
+<area shape="rect" id="node6" href="$group___flush__logs.html" title="Flush_logs" alt="" coords="149,208,237,235"/>
+</map>

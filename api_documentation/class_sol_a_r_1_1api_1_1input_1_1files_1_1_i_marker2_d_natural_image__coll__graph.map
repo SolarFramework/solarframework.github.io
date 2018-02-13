@@ -1,0 +1,5 @@
+<map id="SolAR::api::input::files::IMarker2DNaturalImage" name="SolAR::api::input::files::IMarker2DNaturalImage">
+<area shape="rect" id="node2" href="$class_sol_a_r_1_1api_1_1input_1_1files_1_1_i_marker2_d_squared.html" title="The abstract class defining all 2D marker. " alt="" coords="127,185,301,227"/>
+<area shape="rect" id="node3" href="$class_sol_a_r_1_1api_1_1input_1_1files_1_1_i_marker.html" title="SolAR::api::input::\lfiles::IMarker" alt="" coords="20,81,155,123"/>
+<area shape="rect" id="node5" href="$struct_sol_a_r_1_1datastructure_1_1_sizef.html" title="SolAR::datastructure\l::Sizef" alt="" coords="179,81,334,123"/>
+</map>

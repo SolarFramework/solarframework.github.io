@@ -1,0 +1,5 @@
+<map id="SolAR::api::input::files::IMarker2DSquared" name="SolAR::api::input::files::IMarker2DSquared">
+<area shape="rect" id="node4" href="$class_sol_a_r_1_1api_1_1input_1_1files_1_1_i_marker2_d_natural_image.html" title="The abstract class defining all 2D Natural Image markers representing any image. " alt="" coords="627,5,833,47"/>
+<area shape="rect" id="node5" href="$class_sol_a_r_1_1api_1_1input_1_1files_1_1_i_marker2_d_squared_binary.html" title="SolAR::api::input::\lfiles::IMarker2DSquaredBinary" alt="" coords="623,71,837,112"/>
+<area shape="rect" id="node2" href="$class_sol_a_r_1_1api_1_1input_1_1files_1_1_i_marker.html" title="SolAR::api::input::\lfiles::IMarker" alt="" coords="217,39,352,80"/>
+</map>
