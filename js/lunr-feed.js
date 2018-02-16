@@ -16,7 +16,7 @@ index.add({
 
 index.add({
     title: null,
-    content: "\n\n  \n    SolAR\n    SolAR\n    https://solarframework.github.io//\n    \n    Fri, 16 Feb 2018 13:29:46 +0000\n    Fri, 16 Feb 2018 13:29:46 +0000\n    Jekyll v3.5.1\n    \n  \n\n",
+    content: "\n\n  \n    SolAR\n    SolAR\n    https://solarframework.github.io//\n    \n    Fri, 16 Feb 2018 14:24:11 +0000\n    Fri, 16 Feb 2018 14:24:11 +0000\n    Jekyll v3.5.1\n    \n  \n\n",
     id: 1
   });
   
@@ -58,7 +58,7 @@ index.add({
 
 index.add({
     title: "Knowledge",
-    content: "Knowledge\n\nDocuments\n\n\nYou can find here a document describing use case identified for the industry.\n\n\nenglish version\n\n\nfrench version\n\n\n",
+    content: "Knowledge\n\nDocuments\n\n\nYou can find here a document describing use case identified for the industry.\n\n\nEnglish version\n\n\nFrench version\n\n\n",
     id: 7
   });
   
