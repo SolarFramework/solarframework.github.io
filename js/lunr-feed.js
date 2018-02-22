@@ -16,7 +16,7 @@ index.add({
 
 index.add({
     title: null,
-    content: "\n\n  \n    SolAR\n    SolAR\n    https://solarframework.github.io//\n    \n    Mon, 19 Feb 2018 13:36:25 +0000\n    Mon, 19 Feb 2018 13:36:25 +0000\n    Jekyll v3.5.1\n    \n  \n\n",
+    content: "\n\n  \n    SolAR\n    SolAR\n    https://solarframework.github.io//\n    \n    Thu, 22 Feb 2018 10:12:15 +0000\n    Thu, 22 Feb 2018 10:12:15 +0000\n    Jekyll v3.5.1\n    \n  \n\n",
     id: 1
   });
   
@@ -79,7 +79,7 @@ index.add({
 
 index.add({
     title: "legal notice",
-    content: "\nTable of Contents\n\nLegal notice\n\n\n\nLegal notice\n\n\nSince the SolAR project is managed and hosted by the b&lt;&gt;com Institute of Research and Technology, it falls under their legal notice.\n\n\n",
+    content: "\nTable of Contents\n\nLegal notice\n\n\n\nLegal notice\n\n\nEditorial information\n\nSite: www.solarframework.org\nMailing address: Fondation de Coopération Scientifique b&lt;&gt;com\nZAC DES CHAMPS BLANCS\n1219, AVENUE CHAMPS BLANCS\n35510 CESSON-SÉVIGNÉ (FR)\nPhone: +33(0)2 56 35 88 00\nE-mail: framework.solar@b-com.com\nDirector of publication: Bertrand Guilbaud\nSite host: GitHub Inc.\n\n\n\nCopyright\n\nThe pictures, logos and videos on this website \"solarframework.github.io\" are protected by intellectual property laws and may not be copied or imitated in whole or in part. None of them may be reproduced without the consent of their owners or copyright holders.\n\n\n\nHyperlinks\n\nThe website \"solarframework.github.io\" includes links to other sites.\nThese pages are not part of the site \"solarframework.github.io\", whose editorial staff is not responsible and cannot be held liable for the content and information published on those sites. Links to third-party sites are provided for the sake of convenience only, and their content cannot be guaranteed.\n\n\n\nCookies\n\nSome pages on this site use cookies, i.e. information that may be stored in your hard drive to remember you over a period of time. These cookies are from Google Analytics and they are used to measure the website’s usage (visits statistics, etc.). You may find more information on how Google collects data at www.google.com/policies/privacy/partners/. For the sake of privacy, Google Analytics is configured to anonymize all IP addresses it collects on this site.\nThe cookies will remain on your computer until you delete them or until they expire after 12 months.\nYou are free to deny or delete these cookies at any time by configuring your browser not to accept any cookie and by deleting the cookies already on your computer.\n\n\nThis website receives assistance from the French government under the Investissements d&#8217;Avenir program, with reference number ANR-A0-AIRT-07.\n\n\n\n",
     id: 10
   });
   
