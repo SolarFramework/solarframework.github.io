@@ -5,6 +5,7 @@
 
 ## SolAR Modules
 - [SolAR Module OpenCV](https://github.com/SolarFramework/SolARModuleOpenCV)
+- [SolAR Module Non Free OpenCV](https://github.com/SolarFramework/SolARModuleNonFreeOpenCV)
 - [SolAR Module Tools](https://github.com/SolarFramework/SolARModuleTools)
 
 ## SolAR Samples
