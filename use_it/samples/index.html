@@ -51,6 +51,7 @@
           })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
           ga('create', 'UA-107058603-1', 'auto');
+          ga('set', 'anonymizeIp', true);
           ga('send', 'pageview');
   </script>  <!-- End Google Analytics --> 
 <link rel="stylesheet" type="text/css" href="/js/cookieconsent/cookieconsent.min.css" />
@@ -102,7 +103,9 @@ window.cookieconsent.initialise({
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand link" href="/">&lsaquo;SolAR&rsaquo;</a>
+            <a class="navbar-brand link" href="/">
+                <img class="logo" alt="SolAR logo" src="../../assets/images/logo_solAR.svg">
+            </a>
         </div>
 
         <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
@@ -112,16 +115,18 @@ window.cookieconsent.initialise({
 
 
 
+
+
   
+  
+
   
 
   
 
   
 
-    
-
-    <li id="discover">
+    <li id="discover" class="">
       <a href="/discover/">
         Discover
       </a>
@@ -140,9 +145,9 @@ window.cookieconsent.initialise({
 
   
 
-    
+  
 
-    <li id="use_it active">
+    <li id="use_it" class=" active">
       <a href="/use_it/">
         Use it
       </a>
@@ -161,9 +166,9 @@ window.cookieconsent.initialise({
 
   
 
-    
+  
 
-    <li id="contribute">
+    <li id="contribute" class="">
       <a href="/contribute/">
         Contribute
       </a>
@@ -182,15 +187,17 @@ window.cookieconsent.initialise({
 
   
 
-     
+  
 
-    <li id="">
-      <a href="/api/">
-        API
+    <li id="" class="">
+      <a href="/knowledge/">
+        Applications
       </a>
     </li>
 
   
+
+
 
 
 
@@ -281,9 +288,9 @@ window.cookieconsent.initialise({
 		</li>
 	
 
- 
-      </ul>   
-    </div> 
+
+      </ul>
+    </div>
     
     <div class="submenu active">
       <ul class="nav" aria-expanded="false">
@@ -294,7 +301,7 @@ window.cookieconsent.initialise({
 	
 
 		<li >
-			<a href="/use_it/downloads/">
+			<a href="/use_it/setup/">
 				setup
 				
 			</a>
@@ -345,9 +352,20 @@ window.cookieconsent.initialise({
 		</li>
 	
 
- 
-      </ul>   
-    </div> 
+	
+	
+
+		<li >
+			<a href="/use_it/api/">
+				API
+				
+			</a>
+		</li>
+	
+
+
+      </ul>
+    </div>
     
     <div class="submenu">
       <ul class="nav" aria-expanded="false">
@@ -369,8 +387,8 @@ window.cookieconsent.initialise({
 	
 
 		<li >
-			<a href="/contribute/getting_started/">
-				getting started
+			<a href="/contribute/getting_started_linux/">
+				getting started on linux
 				
 			</a>
 		</li>
@@ -380,8 +398,8 @@ window.cookieconsent.initialise({
 	
 
 		<li >
-			<a href="/contribute/create_component/">
-				create a component
+			<a href="/contribute/getting_started_windows/">
+				getting started on windows
 				
 			</a>
 		</li>
@@ -413,7 +431,7 @@ window.cookieconsent.initialise({
 	
 
 		<li >
-			<a href="/contribute/github_workflow/">
+			<a href="/contribute/contribution_workflow/">
 				contribution workflow
 				
 			</a>
@@ -424,16 +442,16 @@ window.cookieconsent.initialise({
 	
 
 		<li >
-			<a href="/contribute/tools/">
-				tools
+			<a href="/contribute/GIT/">
+				GIT
 				
 			</a>
 		</li>
 	
 
- 
-      </ul>   
-    </div> 
+
+      </ul>
+    </div>
     
         
     </div>
@@ -462,7 +480,7 @@ window.cookieconsent.initialise({
 <h2 id="prerequesite"><a class="anchor" href="#prerequesite"></a><a class="link" href="#prerequesite">Prerequesite</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>You should have first installed SolAR binaries, please refer to the <a href="../downloads"><strong>binaries</strong></a> part. This will also provide you with the sample codes.</p>
+<p>You should have first installed SolAR binaries, please refer to the <a href="../setup"><strong>binaries</strong></a> part. This will also provide you with the sample codes.</p>
 </div>
 <div class="paragraph">
 <p>Please check your SolAR directory :</p>
@@ -551,11 +569,15 @@ To use it, you can print the Natural Image "graf1.png" present in the current di
 <ol>
 <li>
 <p><em>When I compile the sample code, I obtain the error "error: C2039: 'TOOLS': is not a member of 'SolAR::MODULES'": what is the problem? </em></p>
-<p>It probably means that your SolAR binaries are not up-to-date, try to close QT, and  re install SolAR see the <a href="../downloads"><strong>binaries</strong></a> part.</p>
+<p>It probably means that your SolAR binaries are not up-to-date, try to close QT, and  re install SolAR see the <a href="../setup"><strong>binaries</strong></a> part.</p>
 </li>
 <li>
 <p><em>When I compile the sample code, I obtain the error </em></p>
 <p>"SolARCameraOpencv.h" does not exist. This is probably due to a environment parameter problem. Please close and re open QT, and retry. Check your SolAR directory, as advised in this section.</p>
+</li>
+<li>
+<p><em>When I compile the sample code, I have the error "IComponentManager.h" does not exist: what should I do</em></p>
+<p>pkgconfig is probably missing on your computer. Please retry to setup SolAR, and take care about pkgconfig.</p>
 </li>
 <li>
 <p><em>When I run the sample code, I see "File readme.adoc does not exist", what does it mean? </em></p>
@@ -567,11 +589,12 @@ To use it, you can print the Natural Image "graf1.png" present in the current di
 </li>
 <li>
 <p><em>I&#8217;ve successfully tested the sample codes and decided to further investigate the Solar Framework. Yet, after updating the sample codes via the git hub repository, it turned out that the sample codes don&#8217;t compile any longer. What should I do ? </em></p>
-<p>The Solar binaries (the DLL&#8217;s) are likely to be outdated. You are encouraged to proceed to a full update of the whole Solar Framework, including the third parties. Then recompile the bcomBuild binaries : SolarFramework, SolarModuleTools and SolARContainerOpenCV.</p>
+<p>The Solar binaries (the DLL&#8217;s) are likely to be outdated. You are encouraged to proceed to a full update of the whole Solar Framework, including the third parties. Then recompile the bcomBuild binaries : SolarFramework, SolarModuleTools and SolARContainerOpenCV.
+When I run a dynamic sample code, my program crashes withou explanation. The .ini file must indicate a correct library. If the indicated library does not exist, it crashes. This is a known bug, that will ne soon corrected.</p>
 </li>
 <li>
-<p><em>When I compile the sample code, I have the error "IComponentManager.h" does not exist: what should I do</em></p>
-<p>pkgconfig is probably missing on your computer. Please retry to setup SolAR, and take care about pkgconfig.</p>
+<p><em>When I run the sample code, the image loading seems to be OK, but the program is crashing</em></p>
+<p>This is an identified Bug in SolAR, that if an image is missing the component loader does not return an error. Verify the image you try to load is in the working directory.</p>
 </li>
 </ol>
 </div>

@@ -51,6 +51,7 @@
           })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
           ga('create', 'UA-107058603-1', 'auto');
+          ga('set', 'anonymizeIp', true);
           ga('send', 'pageview');
   </script>  <!-- End Google Analytics --> 
 <link rel="stylesheet" type="text/css" href="/js/cookieconsent/cookieconsent.min.css" />
@@ -102,7 +103,9 @@ window.cookieconsent.initialise({
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand link" href="/">&lsaquo;SolAR&rsaquo;</a>
+            <a class="navbar-brand link" href="/">
+                <img class="logo" alt="SolAR logo" src="../../assets/images/logo_solAR.svg">
+            </a>
         </div>
 
         <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
@@ -112,16 +115,18 @@ window.cookieconsent.initialise({
 
 
 
+
+
   
+  
+
   
 
   
 
   
 
-    
-
-    <li id="discover">
+    <li id="discover" class="">
       <a href="/discover/">
         Discover
       </a>
@@ -140,9 +145,9 @@ window.cookieconsent.initialise({
 
   
 
-    
+  
 
-    <li id="use_it active">
+    <li id="use_it" class=" active">
       <a href="/use_it/">
         Use it
       </a>
@@ -161,9 +166,9 @@ window.cookieconsent.initialise({
 
   
 
-    
+  
 
-    <li id="contribute">
+    <li id="contribute" class="">
       <a href="/contribute/">
         Contribute
       </a>
@@ -182,15 +187,17 @@ window.cookieconsent.initialise({
 
   
 
-     
+  
 
-    <li id="">
-      <a href="/api/">
-        API
+    <li id="" class="">
+      <a href="/knowledge/">
+        Applications
       </a>
     </li>
 
   
+
+
 
 
 
@@ -281,9 +288,9 @@ window.cookieconsent.initialise({
 		</li>
 	
 
- 
-      </ul>   
-    </div> 
+
+      </ul>
+    </div>
     
     <div class="submenu active">
       <ul class="nav" aria-expanded="false">
@@ -294,7 +301,7 @@ window.cookieconsent.initialise({
 	
 
 		<li >
-			<a href="/use_it/downloads/">
+			<a href="/use_it/setup/">
 				setup
 				
 			</a>
@@ -345,9 +352,20 @@ window.cookieconsent.initialise({
 		</li>
 	
 
- 
-      </ul>   
-    </div> 
+	
+	
+
+		<li >
+			<a href="/use_it/api/">
+				API
+				
+			</a>
+		</li>
+	
+
+
+      </ul>
+    </div>
     
     <div class="submenu">
       <ul class="nav" aria-expanded="false">
@@ -369,8 +387,8 @@ window.cookieconsent.initialise({
 	
 
 		<li >
-			<a href="/contribute/getting_started/">
-				getting started
+			<a href="/contribute/getting_started_linux/">
+				getting started on linux
 				
 			</a>
 		</li>
@@ -380,8 +398,8 @@ window.cookieconsent.initialise({
 	
 
 		<li >
-			<a href="/contribute/create_component/">
-				create a component
+			<a href="/contribute/getting_started_windows/">
+				getting started on windows
 				
 			</a>
 		</li>
@@ -413,7 +431,7 @@ window.cookieconsent.initialise({
 	
 
 		<li >
-			<a href="/contribute/github_workflow/">
+			<a href="/contribute/contribution_workflow/">
 				contribution workflow
 				
 			</a>
@@ -424,16 +442,16 @@ window.cookieconsent.initialise({
 	
 
 		<li >
-			<a href="/contribute/tools/">
-				tools
+			<a href="/contribute/GIT/">
+				GIT
 				
 			</a>
 		</li>
 	
 
- 
-      </ul>   
-    </div> 
+
+      </ul>
+    </div>
     
         
     </div>
@@ -474,7 +492,7 @@ assume you will provide the camera calibration parameters at runtime.</p>
 <p>To get more details, please read the readme.adoc file that you can find in the camera calibration folder.</p>
 </div>
 <div class="paragraph">
-<p>link: <a href="http://forge.b-com.com/git/argo/SolAR/Samples/CameraCalibration.git" class="bare">http://forge.b-com.com/git/argo/SolAR/Samples/CameraCalibration.git</a></p>
+<p>link:http://forge.b-com.com/git/argo/SolAR/SolARContainerOpenCV.git</p>
 </div>
 <div class="imageblock" style="text-align: center">
 <div class="content">

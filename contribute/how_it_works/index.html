@@ -51,6 +51,7 @@
           })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
           ga('create', 'UA-107058603-1', 'auto');
+          ga('set', 'anonymizeIp', true);
           ga('send', 'pageview');
   </script>  <!-- End Google Analytics --> 
 <link rel="stylesheet" type="text/css" href="/js/cookieconsent/cookieconsent.min.css" />
@@ -102,7 +103,9 @@ window.cookieconsent.initialise({
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand link" href="/">&lsaquo;SolAR&rsaquo;</a>
+            <a class="navbar-brand link" href="/">
+                <img class="logo" alt="SolAR logo" src="../../assets/images/logo_solAR.svg">
+            </a>
         </div>
 
         <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
@@ -112,16 +115,18 @@ window.cookieconsent.initialise({
 
 
 
+
+
   
+  
+
   
 
   
 
   
 
-    
-
-    <li id="discover">
+    <li id="discover" class="">
       <a href="/discover/">
         Discover
       </a>
@@ -140,9 +145,9 @@ window.cookieconsent.initialise({
 
   
 
-    
+  
 
-    <li id="use_it">
+    <li id="use_it" class="">
       <a href="/use_it/">
         Use it
       </a>
@@ -161,9 +166,9 @@ window.cookieconsent.initialise({
 
   
 
-    
+  
 
-    <li id="contribute active">
+    <li id="contribute" class=" active">
       <a href="/contribute/">
         Contribute
       </a>
@@ -182,15 +187,17 @@ window.cookieconsent.initialise({
 
   
 
-     
+  
 
-    <li id="">
-      <a href="/api/">
-        API
+    <li id="" class="">
+      <a href="/knowledge/">
+        Applications
       </a>
     </li>
 
   
+
+
 
 
 
@@ -281,9 +288,9 @@ window.cookieconsent.initialise({
 		</li>
 	
 
- 
-      </ul>   
-    </div> 
+
+      </ul>
+    </div>
     
     <div class="submenu">
       <ul class="nav" aria-expanded="false">
@@ -294,7 +301,7 @@ window.cookieconsent.initialise({
 	
 
 		<li >
-			<a href="/use_it/downloads/">
+			<a href="/use_it/setup/">
 				setup
 				
 			</a>
@@ -345,9 +352,20 @@ window.cookieconsent.initialise({
 		</li>
 	
 
- 
-      </ul>   
-    </div> 
+	
+	
+
+		<li >
+			<a href="/use_it/api/">
+				API
+				
+			</a>
+		</li>
+	
+
+
+      </ul>
+    </div>
     
     <div class="submenu active">
       <ul class="nav" aria-expanded="false">
@@ -369,8 +387,8 @@ window.cookieconsent.initialise({
 	
 
 		<li >
-			<a href="/contribute/getting_started/">
-				getting started
+			<a href="/contribute/getting_started_linux/">
+				getting started on linux
 				
 			</a>
 		</li>
@@ -380,8 +398,8 @@ window.cookieconsent.initialise({
 	
 
 		<li >
-			<a href="/contribute/create_component/">
-				create a component
+			<a href="/contribute/getting_started_windows/">
+				getting started on windows
 				
 			</a>
 		</li>
@@ -413,7 +431,7 @@ window.cookieconsent.initialise({
 	
 
 		<li >
-			<a href="/contribute/github_workflow/">
+			<a href="/contribute/contribution_workflow/">
 				contribution workflow
 				
 			</a>
@@ -424,16 +442,16 @@ window.cookieconsent.initialise({
 	
 
 		<li >
-			<a href="/contribute/tools/">
-				tools
+			<a href="/contribute/GIT/">
+				GIT
 				
 			</a>
 		</li>
 	
 
- 
-      </ul>   
-    </div> 
+
+      </ul>
+    </div>
     
         
     </div>
@@ -443,9 +461,11 @@ window.cookieconsent.initialise({
 
         <div class="container">
             <div class="well">
-              <div id="toc" class="toc">
+              <h1>How it works</h1>
+<div id="toc" class="toc">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
+<li><a href="#how_it_works">How it works</a></li>
 <li><a href="#solar_overview">SolAR Overview</a></li>
 <li><a href="#solar_data_structures">SolAR Data Structures</a></li>
 <li><a href="#solar_components_interfaces">SolAR components interfaces</a></li>
@@ -453,6 +473,12 @@ window.cookieconsent.initialise({
 <li><a href="#frequently_asked_questions">Frequently Asked Questions</a></li>
 <li><a href="#contact_mail">Contact Mail</a></li>
 </ul>
+</div>
+<div class="sect1">
+<h2 id="how_it_works"><a class="anchor" href="#how_it_works"></a><a class="link" href="#how_it_works">How it works</a></h2>
+<div class="sectionbody">
+
+</div>
 </div>
 <div class="sect1">
 <h2 id="solar_overview"><a class="anchor" href="#solar_overview"></a><a class="link" href="#solar_overview">SolAR Overview</a></h2>
@@ -625,8 +651,11 @@ window.cookieconsent.initialise({
 </div>
 <div class="sect2">
 <h3 id="acquisition"><a class="anchor" href="#acquisition"></a><a class="link" href="#acquisition">Acquisition</a></h3>
+<div class="sect3">
+<h4 id="description"><a class="anchor" href="#description"></a><a class="link" href="#description">Description</a></h4>
 <div class="paragraph">
 <p>The Acquisition Interface manages the capturing strategy from a given device and provides the input signal to the next processing component.</p>
+</div>
 </div>
 <div class="sect3">
 <h4 id="image_2"><a class="anchor" href="#image_2"></a><a class="link" href="#image_2">Image</a></h4>
@@ -647,8 +676,11 @@ window.cookieconsent.initialise({
 </div>
 <div class="sect2">
 <h3 id="conversion"><a class="anchor" href="#conversion"></a><a class="link" href="#conversion">Conversion</a></h3>
+<div class="sect3">
+<h4 id="description_2"><a class="anchor" href="#description_2"></a><a class="link" href="#description_2">Description</a></h4>
 <div class="paragraph">
 <p>The Conversion Interface manages conversion for different data structure.</p>
+</div>
 </div>
 <div class="sect3">
 <h4 id="image_3"><a class="anchor" href="#image_3"></a><a class="link" href="#image_3">Image</a></h4>
@@ -659,8 +691,11 @@ window.cookieconsent.initialise({
 </div>
 <div class="sect2">
 <h3 id="filtering"><a class="anchor" href="#filtering"></a><a class="link" href="#filtering">Filtering</a></h3>
+<div class="sect3">
+<h4 id="description_3"><a class="anchor" href="#description_3"></a><a class="link" href="#description_3">Description</a></h4>
 <div class="paragraph">
 <p>The Filtering Interface manages filtering operations for different data structure.</p>
+</div>
 </div>
 <div class="sect3">
 <h4 id="image_4"><a class="anchor" href="#image_4"></a><a class="link" href="#image_4">Image</a></h4>
@@ -708,8 +743,11 @@ window.cookieconsent.initialise({
 </div>
 <div class="sect2">
 <h3 id="estimation"><a class="anchor" href="#estimation"></a><a class="link" href="#estimation">Estimation</a></h3>
+<div class="sect3">
+<h4 id="description_4"><a class="anchor" href="#description_4"></a><a class="link" href="#description_4">Description</a></h4>
 <div class="paragraph">
 <p>The Estimation Interface manages several pose estimation methods for cameras, objects and markers.</p>
+</div>
 </div>
 <div class="sect3">
 <h4 id="features_3"><a class="anchor" href="#features_3"></a><a class="link" href="#features_3">Features</a></h4>
@@ -729,6 +767,8 @@ window.cookieconsent.initialise({
 </div>
 <div class="sect2">
 <h3 id="solar_third_party_connector"><a class="anchor" href="#solar_third_party_connector"></a><a class="link" href="#solar_third_party_connector">SolAR Third Party Connector</a></h3>
+<div class="sect3">
+<h4 id="description_5"><a class="anchor" href="#description_5"></a><a class="link" href="#description_5">Description</a></h4>
 <div class="paragraph">
 <p>The SolAR third party connector is a special SolAR Component used to exchange internal SolAR pose data with any third party outside of the SolAR framework. It is used to safely provide access to a SolAR Image and its associated SolAR Pose in a thread safe race free fashion. It internally implements a mutex locked circular buffer, allowing safe producer/consumer access. It allows synchronous and asynchronous read access for the consumer.</p>
 </div>
@@ -739,6 +779,7 @@ window.cookieconsent.initialise({
 </div>
 <div class="paragraph">
 <p>The internal buffer size of the container is currently set at <strong>one</strong> which means only the latest image and pose are available to the consumer at any given time. In the near future, SolAR will allow users to provide initialization parameters when creating components so the users will be able to specify the size of the buffer they desire.</p>
+</div>
 </div>
 <div class="sect3">
 <h4 id="producer"><a class="anchor" href="#producer"></a><a class="link" href="#producer">Producer</a></h4>
