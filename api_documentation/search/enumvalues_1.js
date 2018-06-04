@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['interleaved',['INTERLEAVED',['../class_sol_a_r_1_1datastructure_1_1_image.html#a2aca93da4bee9657e2d3181fae2a317fabb0a72c3fc22d5eeb48b6d74c2aace9e',1,'SolAR::datastructure::Image']]]
+  ['akaze',['AKAZE',['../class_sol_a_r_1_1datastructure_1_1_descriptor_buffer.html#a7eb2a68cab40c18a962db6b27a88cbc0a51ecfc37081916b59c46554385be3d32',1,'SolAR::datastructure::DescriptorBuffer']]]
 ];

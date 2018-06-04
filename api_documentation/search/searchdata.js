@@ -7,7 +7,7 @@ var indexSectionsWithContent =
   4: "cdefgilmprst~",
   5: "m",
   6: "cdfip",
-  7: "_ilopst",
+  7: "_ailopst",
   8: "aeflm"
 };
 
