@@ -323,7 +323,7 @@ var index = lunr(function () {
     // because we don't know in wich (potentially) multiples page(s) these supages can be includedt items that are from subpages (title ==null), because we don't know in wich (potentially) multiples page(s) these supages can be included
     index.add({
       "title": "Real Estate Use Case",
-      "content": "\nTable of Contents\n\nReal Estate\nReal Estate\n\n\n\nReal Estate\n\n\n\n\n\nReal Estate\n\n\nUnresolved directive in realestate.adoc - include::_realestateUseCase.adoc[]\n\n\n",
+      "content": "\nTable of Contents\n\nReal Estate\nReal Estate\n\n\n\nReal Estate\n\n\n\n\n\nReal Estate\n\n\nDocument here english version\n\n\n",
       "id": 25
     });
     
