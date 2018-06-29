@@ -4,6 +4,7 @@
     var defaults = {
       noBackToTopLinks: false,
       minimumHeaders: 3,
+      maximumCollapsedHeaders: 5,
       headers: 'h1, h2, h3',
       listType: 'ol', // values: [ol|ul]
       showEffect: 'show', // values: [show|slideDown|fadeIn|none]
@@ -25,6 +26,7 @@
       return "<a href='#" + fixedEncodeURIComponent(header.id) + "'>" + innerText + "</a>";
     }
 
+    var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
     var headers = $(settings.headers).filter(function() {
       // get all headers with an ID
       var previousSiblingName = $(this).prev().attr( "name" );
@@ -33,8 +35,9 @@
       }
       return this.id;
     }), output = $(this);
-    if (!headers.length || headers.length < settings.minimumHeaders || !output.length) {
+    if (!headers.length || headers.length < settings.minimumHeaders || !output.length || width < 768) {
       $(this).hide();
+      $(this).addClass("hidden");
       return;
     }
 
@@ -53,7 +56,7 @@
     var highest_level = headers.map(function(_, ele) { return get_level(ele); }).get().sort()[0];
     var return_to_top = '<i class="icon-arrow-up back-to-top"> </i>';
 
-    var level = get_level(headers[0]),
+    var previous_level = get_level(headers[0]),
       this_level,
       html = settings.title + " <" +settings.listType + " class=\"" + settings.classes.list +"\">";
     headers.on('click', function() {
@@ -67,22 +70,22 @@
       if (!settings.noBackToTopLinks && this_level === highest_level) {
         $(header).addClass('top-level-header').after(return_to_top);
       }
-      if (this_level === level) // same level as before; same indenting
+      if (this_level === previous_level) // same level as before; same indenting
         html += "<li class=\"" + settings.classes.item + "\">" + createLink(header);
-      else if (this_level <= level){ // higher level than before; end parent ol
-        for(var i = this_level; i < level; i++) {
+      else if (this_level < previous_level){ // higher level than before; end parent ol
+        for(var i = this_level; i < previous_level; i++) {
           html += "</li></"+settings.listType+">"
         }
         html += "<li class=\"" + settings.classes.item + "\">" + createLink(header);
       }
-      else if (this_level > level) { // lower level than before; expand the previous to contain a ol
-        for(i = this_level; i > level; i--) {
+      else if (this_level > previous_level) { // lower level than before; expand the previous to contain a ol
+        for(i = this_level; i > previous_level; i--) {
           html += "<" + settings.listType + " class=\"" + settings.classes.list +"\">" +
                   "<li class=\"" + settings.classes.item + "\">"
         }
         html += createLink(header);
       }
-      level = this_level; // update for the next one
+      previous_level = this_level; // update for the next one
     });
     html += "</"+settings.listType+">";
     if (!settings.noBackToTopLinks) {
@@ -93,5 +96,19 @@
     }
 
     render[settings.showEffect]();
+
+    // rule to display "collapse arrow" in the right places in the DOM
+    var initCollapseClass = "hasArrow";
+    if ($("#toc > ul > li").length > settings.maximumCollapsedHeaders) {
+      initCollapseClass += " closed";
+    }
+    $("#toc > ul > li").filter(function() {
+      return $(this).children("ul").length > 0;
+    }).prepend("<span class='"+initCollapseClass+"'></span>");
+
+    // listen to click on hasArrow DOM items to collapse area
+    $("#toc .hasArrow").click(function() {
+      $(this).toggleClass("closed");
+    });
   };
 })(jQuery);

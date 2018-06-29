@@ -1,59 +1,107 @@
+.well.blue, .well.blue h2 a, .well.purple, .well.purple h2 a, .well.red, .well.red h2 a, .well.green, .well.green h2 a, .well.yellow, .well.yellow h2 a {
+  color: white; 
+}
 /* overrides asciidoctor.css */
 div,dl,dt,dd,ul,ol,li,#toctitle,.sidebarblock>.content>.title,pre,form,p,blockquote,th,td {
-    margin:0;
-    padding:0;
-  }
+  margin:0;
+  padding:0;
+}
 
-  h1, h2, h3, h4, h5 {
-    margin-top: 15px;
-  }
-  
-  a, a:hover, a:focus {
-    color:#00D2F8;
-  }
+h1, h2, h3, h4, h5 {
+  margin-top: 15px;
+}
 
+#content h1 > a.link:hover, h2 > a.link:hover, h3 > a.link:hover, #toctitle > a.link:hover, .sidebarblock > .content > .title > a.link:hover, h4 > a.link:hover, h5 > a.link:hover, h6 > a.link:hover {
+  color:white; /* To be overload by page's config */
+}
 
-  h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6,
-  #content h1>a.link,h2>a.link,h3>a.link,#toctitle>a.link,.sidebarblock>.content>.title>a.link,h4>a.link,h5>a.link,h6>a.link {
-    color:#FF5050;
-  }
-  
-  h1 small,h2 small,h3 small,#toctitle small,.sidebarblock>.content>.title small,h4 small,h5 small,h6 small {
-    font-size:60%;
-  }
+h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6,
+#content h1>a.link,h2>a.link,h3>a.link,#toctitle>a.link,.sidebarblock>.content>.title>a.link,h4>a.link,h5>a.link,h6>a.link {
+  color:#fff;
+}
 
+h1 small,h2 small,h3 small,#toctitle small,.sidebarblock>.content>.title small,h4 small,h5 small,h6 small {
+  font-size:60%;
+}
+
+#content h1 > a.anchor::before, h2 > a.anchor::before, h3 > a.anchor::before, #toctitle > a.anchor::before, .sidebarblock > .content > .title > a.anchor::before, h4 > a.anchor::before, h5 > a.anchor::before, h6 > a.anchor::before {
+  display: none;
+}
+
+h3::before, h3::after {
+  content: "";
+  background-image: url('../images/bullet_point_blue.png');
+  background-repeat: NO-REPEAT;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  background-size: 20px 20px;
+  background-position: 0px 4px;
+}
+
+h3 {
+  font-size: 17px;
+}
+
+h4 {
+  font-size: 16px;
+  display: inline-block;
+}
+
+.sect1 + .sect1 {
+  border-top: none;
+  border-bottom: 2px solid #666666;
+  border: 1px solid #006980;
+  margin-top: 30px;
+  padding: 20px 20px 10px 20px;
+  position: relative;
+}
+
+.sect3 {
+  margin-left: 20px;
+}
+
+.sect3 + .sect3 {
+  margin-top: 10px;
+}
+
+.literalblock pre.nowrap, .literalblock pre[class].nowrap, .listingblock pre.nowrap, .listingblock pre[class].nowrap,
+.literalblock pre.nowrap code, .literalblock pre[class].nowrap code, .listingblock pre.nowrap code, .listingblock pre[class].nowrap code {
+  white-space: pre;
+  word-wrap: break-word;
+  overflow: auto;
+}
+
+@media only screen and (min-width:768px) {
   h3,#toctitle,.sidebarblock>.content>.title {
-    font-size:1.575em
+    font-size:1.9875em
   }
-  
-  h4 {
-    font-size: 1.2375em;
-    margin-left: 20px;
-    padding-left: 20px;
+  h3::before, h3::after {
+    width: 39px;
+    height: 39px;
+    background-size: 39px 39px;
+    background-position: 0px 8px;
   }
+}
 
-  .sect1 + .sect1 {
-    border-top: none;
-    border-bottom: 2px solid #666666;
-  }
+#toctitle,.sidebarblock>.content>.title {
+  font-size:1.575em
+}
 
+.admonitionblock > table td.content, .hdlist table tr td, .quoteblock blockquote, .quoteblock blockquote p {
+  color:#fff;
+}
 
-  .literalblock pre.nowrap, .literalblock pre[class].nowrap, .listingblock pre.nowrap, .listingblock pre[class].nowrap,
-  .literalblock pre.nowrap code, .literalblock pre[class].nowrap code, .listingblock pre.nowrap code, .listingblock pre[class].nowrap code {
-    white-space: pre;
-    word-wrap: break-word;
-    overflow: auto;
-  }
+.sidebarblock .content {
+  color:#000;
+}
 
-  @media only screen and (min-width:768px) {
-    h3,#toctitle,.sidebarblock>.content>.title {
-      font-size:1.9875em
-    }
-    h4 {
-      line-height: 1.0125em;
-      font-size:1.4375em;
-      margin-left: 20px;
-      padding-left: 20px;
-    }
-  }
-  
+.subheader, .admonitionblock td.content > .title, .audioblock > .title, .exampleblock > .title, .imageblock > .title, .listingblock > .title, .literalblock > .title, .stemblock > .title, .openblock > .title, .paragraph > .title, .quoteblock > .title, table.tableblock > .title, .verseblock > .title, .videoblock > .title, .dlist > .title, .olist > .title, .ulist > .title, .qlist > .title, .hdlist > .title {
+  color: #CCCCCC;
+}
+
+.admonitionblock td.icon .icon-note::before {color:#00BEE6;}
+.admonitionblock td.icon .icon-tip:before{color:white}
+.admonitionblock td.icon .icon-warning:before{color:#ffb400}
+.admonitionblock td.icon .icon-caution:before{color:#ff5050}
+.admonitionblock td.icon .icon-important:before{color:#ff5050}

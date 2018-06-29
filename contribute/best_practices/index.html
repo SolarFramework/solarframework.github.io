@@ -30,13 +30,14 @@
     <link rel="stylesheet" href="/assets/styles/media.css">
 
     <script src="/js/vendor/jquery.js"></script><!--needed with bootstrap-->
-    <script src="/js/vendor/bootstrap.js"></script>
+    <script src="/js/lunr.min.js"></script>
+    <script src="/js/search.js"></script>
     <script src="/js/toc.js"></script>
     <script src="/js/block-folding.js"></script>
     <script type="text/javascript">
         $(document).ready(function() { 
           /* Configure TOC to take into account all titles */
-          $("#toc").toc(  { headers: "h2, h3, h4, h5, h6",
+          $("#toc").toc(  { headers: "h2, h3",
                               listType: "ul",
                               title: "<div id='toctitle'>Table of Contents</div>",
                               noBackToTopLinks: true /*usefull to avoid tag <i class="icon-arrow-up back-to-top"> </i> to be placed between #submenuconfig and sectionbody and screw the submenu css style*/
@@ -72,10 +73,10 @@ window.addEventListener("load", function(){
 window.cookieconsent.initialise({
   "palette": {
     "popup": {
-      "background": "#252e39"
+      "background": "#000000"
     },
     "button": {
-      "background": "#14a7d0"
+      "background": "#00bee6"
     }
   },
   "position": "bottom-left",
@@ -95,7 +96,7 @@ window.cookieconsent.initialise({
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         <div><div class="navbar navbar-default">
-    <div class="container-fluid">
+    <div>
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                 <span class="sr-only">Toggle navigation</span>
@@ -104,11 +105,11 @@ window.cookieconsent.initialise({
                 <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand link" href="/">
-                <img class="logo" alt="SolAR logo" src="../../assets/images/logo_solAR.svg">
+                <img class="logo" alt="SolAR logo" src="/assets/images/navbar/logo_solAR.svg">
             </a>
         </div>
 
-        <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
+        <div id="navbar" class="navbar-collapse" aria-expanded="false" style="height: 1px;">
             <ul class="nav navbar-nav">
 
                 
@@ -126,8 +127,11 @@ window.cookieconsent.initialise({
 
   
 
-    <li id="discover" class="">
+  
+
+    <li id="discover" class=" ">
       <a href="/discover/">
+        <img src="/assets/images/navbar/discover.svg" alt="discover" height="42" width="42">
         Discover
       </a>
     </li>
@@ -147,8 +151,11 @@ window.cookieconsent.initialise({
 
   
 
-    <li id="use_it" class="">
+  
+
+    <li id="use_it" class=" ">
       <a href="/use_it/">
+        <img src="/assets/images/navbar/use_it.svg" alt="use_it" height="42" width="42">
         Use it
       </a>
     </li>
@@ -168,8 +175,11 @@ window.cookieconsent.initialise({
 
   
 
-    <li id="contribute" class=" active">
+  
+
+    <li id="contribute" class=" active ">
       <a href="/contribute/">
+        <img src="/assets/images/navbar/contribute.svg" alt="contribute" height="42" width="42">
         Contribute
       </a>
     </li>
@@ -189,8 +199,11 @@ window.cookieconsent.initialise({
 
   
 
-    <li id="" class="">
+  
+
+    <li id="" class=" ">
       <a href="/knowledge/">
+        <img src="/assets/images/navbar/.svg" alt="" height="42" width="42">
         Applications
       </a>
     </li>
@@ -201,7 +214,7 @@ window.cookieconsent.initialise({
 
 
 
-                <!--li>
+                <li>
                     <form action="/search/index.html" method="get" class="navbar-form" role="search">
                         <div class="input-group">
                             <input type="text" id="search" class="form-control" placeholder="Search"
@@ -213,11 +226,16 @@ window.cookieconsent.initialise({
                             </div>
                         </div>
                     </form>
-                </li-->
+                    <div>
+                        <a href="/about_us">> About us</a>
+                        <a href="/contact_us">> Contact us</a>
+                    </div>
+                </li>
             </ul>
         </div>
         
-    <div class="submenu">
+    <div class="submenu ">
+      <div class="submenuHelper">&lt;</div>
       <ul class="nav" aria-expanded="false">
         
         
@@ -290,9 +308,11 @@ window.cookieconsent.initialise({
 
 
       </ul>
+      <div class="submenuHelper">&gt;</div>
     </div>
     
-    <div class="submenu">
+    <div class="submenu ">
+      <div class="submenuHelper">&lt;</div>
       <ul class="nav" aria-expanded="false">
         
         
@@ -365,9 +385,11 @@ window.cookieconsent.initialise({
 
 
       </ul>
+      <div class="submenuHelper">&gt;</div>
     </div>
     
-    <div class="submenu active">
+    <div class="submenu active ">
+      <div class="submenuHelper">&lt;</div>
       <ul class="nav" aria-expanded="false">
         
         
@@ -388,7 +410,7 @@ window.cookieconsent.initialise({
 
 		<li >
 			<a href="/contribute/getting_started_linux/">
-				getting started on linux
+				on linux
 				
 			</a>
 		</li>
@@ -399,7 +421,7 @@ window.cookieconsent.initialise({
 
 		<li >
 			<a href="/contribute/getting_started_windows/">
-				getting started on windows
+				on windows
 				
 			</a>
 		</li>
@@ -451,6 +473,7 @@ window.cookieconsent.initialise({
 
 
       </ul>
+      <div class="submenuHelper">&gt;</div>
     </div>
     
         
@@ -460,12 +483,24 @@ window.cookieconsent.initialise({
 </div>
 
         <div class="container">
-            <div class="well">
+            <div class="well ">
               <h1>Best practices</h1>
 <div id="toc" class="toc">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
 <li><a href="#best_practices">Best practices</a></li>
+<li><a href="#best_practices_guidelines">Best practices &amp; guidelines</a></li>
+<li><a href="#interfaces">Interfaces</a></li>
+<li><a href="#components">Components</a>
+<ul class="sectlevel2">
+<li><a href="#methods">Methods</a></li>
+<li><a href="#method_parameters">Method parameters</a></li>
+<li><a href="#attributes">Attributes</a></li>
+</ul>
+</li>
+<li><a href="#data_structure">Data Structure</a></li>
+<li><a href="#namespaces">Namespaces</a></li>
+<li><a href="#pipepline_management">Pipepline Management</a></li>
 <li><a href="#logs_to_help_debugging">Logs to help debugging</a></li>
 <li><a href="#coding_rules">coding rules</a></li>
 <li><a href="#project_organization">Project organization</a>
@@ -508,10 +543,155 @@ window.cookieconsent.initialise({
 <div class="sect1">
 <h2 id="best_practices"><a class="anchor" href="#best_practices"></a><a class="link" href="#best_practices">Best practices</a></h2>
 <div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="best_practices_guidelines"><a class="anchor" href="#best_practices_guidelines"></a><a class="link" href="#best_practices_guidelines">Best practices &amp; guidelines</a></h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>SolAR is a framework that defines interfaces (API) to computer vision components and a GUI that is used to graphically build Camera Pose Estimation schemes, based on the framework, for different applications/needs.
 The following rules shall be used for every addition/modification to the SolAR project.
 This encompasses the SolAR framework and the GUI interface and unless otherwise specified, these rules shall apply to both.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="interfaces"><a class="anchor" href="#interfaces"></a><a class="link" href="#interfaces">Interfaces</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>SolAR Interfaces should not contain attributes.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="components"><a class="anchor" href="#components"></a><a class="link" href="#components">Components</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Components should be implemented for processing.
+It should take in parameters and deliver out components and data.</p>
+</div>
+<div class="paragraph">
+<p>Components should be connectable .</p>
+</div>
+<div class="paragraph">
+<p>When you intent to  create a component, first verify that :
+- a SolAR interface already exists for your kind of components. If so, please use the specified interface.
+	if no, or if you think the existing interfaces do not totally fit your need, please contact the SolAR team.
+	if so, please respect the SolAR interface
+-a component already exists wit the same interface. If so, check what your new component will give for.</p>
+</div>
+<div class="paragraph">
+<p>Please look at the organization of existing modules and components.
+You will probably need to create a new module, in order to create your component. Please copy the existing structure of SolAR modules.</p>
+</div>
+<div class="paragraph">
+<p>Please also keep in mind that you component my herit from other components.</p>
+</div>
+<div class="paragraph">
+<p>Your components should have explicit names (that means, that ideally, we do not need to read documentation to understands what it is for).</p>
+</div>
+<div class="paragraph">
+<p>Components should be as modular as possible.</p>
+</div>
+<div class="paragraph">
+<p>Please refer to existinng components for naming examples, please use the same names if possible.</p>
+</div>
+<div class="paragraph">
+<p>Components can use parameters thanks to a XML configuration file.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Please refer to existing SolAR components and take them as examples.
+</td>
+</tr>
+</table>
+</div>
+<div class="sect2">
+<h3 id="methods"><a class="anchor" href="#methods"></a><a class="link" href="#methods">Methods</a></h3>
+<div class="paragraph">
+<p>Processing methods shoud not take configuration parameters.
+The parameters should only be used at the component creation or init.</p>
+</div>
+<div class="paragraph">
+<p>Your methods should have explicit names (that means, that ideally, we do not need to read documentation to understands what it is for).</p>
+</div>
+<div class="paragraph">
+<p>There is no need to implement a setParameter and a getParameter method in a SolAR component.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="method_parameters"><a class="anchor" href="#method_parameters"></a><a class="link" href="#method_parameters">Method parameters</a></h3>
+<div class="paragraph">
+<p>The parameters should be passed thanks to XML files (see XPCF documentation).</p>
+</div>
+<div class="paragraph">
+<p>Please indicate when a parameter is not modified by the method, thanks to the "const" type.</p>
+</div>
+<div class="paragraph">
+<p>Please don&#8217;t use &amp; in parameter when the element is not instantiated in the method.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="attributes"><a class="anchor" href="#attributes"></a><a class="link" href="#attributes">Attributes</a></h3>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Components should not store data. Please use datastructure for data.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Attributes should be configured thanks to the XPCF philosophy.</p>
+</div>
+<div class="paragraph">
+<p>Components should be connectable .</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="data_structure"><a class="anchor" href="#data_structure"></a><a class="link" href="#data_structure">Data Structure</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Data structure should be implemented for data storage.
+As pose estimation computes a lot of data, please take care of optimizing data usage and make tehe data structure as modular as possible.</p>
+</div>
+<div class="paragraph">
+<p>Please keep in mind that datasrtucure should be interoperable</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="namespaces"><a class="anchor" href="#namespaces"></a><a class="link" href="#namespaces">Namespaces</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Namespaces should use lower case.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="pipepline_management"><a class="anchor" href="#pipepline_management"></a><a class="link" href="#pipepline_management">Pipepline Management</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>SolAR architecture is based on a pipeline manager called XPCF and implemented by b&lt;&gt;com.
+Please refer to the XPCF github project link: <a href="https://github.com/b-com-software-basis/xpcf" class="bare">https://github.com/b-com-software-basis/xpcf</a> [XPCF GITHUB repository] to know more about XPCF.</p>
+</div>
+<div class="paragraph">
+<p>Please be aware that components must be interoperable thanks to XPCF, and that is why thoses guidelines should be used.</p>
+</div>
+<div class="paragraph">
+<p>Thanks to XPCF, it is very easy to configure components, to interconnect them to create a pipeline, and to create a SolAR plugin for Unity.</p>
 </div>
 </div>
 </div>
@@ -1484,6 +1664,7 @@ Refer to the online manual (<a href="http://www.stack.nl/~dimitri/doxygen/index.
 </div>
 </div>
 </div>
+              
             </div>
         </div>
 
@@ -1498,7 +1679,7 @@ Refer to the online manual (<a href="http://www.stack.nl/~dimitri/doxygen/index.
     <!-- endbuild -->
     <script type="text/javascript">
       /* Fix padding-top on anchor with TOC */
-      window.addEventListener("hashchange", function() { scrollBy(0, -95) })
+      window.addEventListener("hashchange", function() { scrollBy(0, -115) })
     </script>
     </body>
 </html>

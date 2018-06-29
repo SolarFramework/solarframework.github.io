@@ -30,13 +30,14 @@
     <link rel="stylesheet" href="/assets/styles/media.css">
 
     <script src="/js/vendor/jquery.js"></script><!--needed with bootstrap-->
-    <script src="/js/vendor/bootstrap.js"></script>
+    <script src="/js/lunr.min.js"></script>
+    <script src="/js/search.js"></script>
     <script src="/js/toc.js"></script>
     <script src="/js/block-folding.js"></script>
     <script type="text/javascript">
         $(document).ready(function() { 
           /* Configure TOC to take into account all titles */
-          $("#toc").toc(  { headers: "h2, h3, h4, h5, h6",
+          $("#toc").toc(  { headers: "h2, h3",
                               listType: "ul",
                               title: "<div id='toctitle'>Table of Contents</div>",
                               noBackToTopLinks: true /*usefull to avoid tag <i class="icon-arrow-up back-to-top"> </i> to be placed between #submenuconfig and sectionbody and screw the submenu css style*/
@@ -72,10 +73,10 @@ window.addEventListener("load", function(){
 window.cookieconsent.initialise({
   "palette": {
     "popup": {
-      "background": "#252e39"
+      "background": "#000000"
     },
     "button": {
-      "background": "#14a7d0"
+      "background": "#00bee6"
     }
   },
   "position": "bottom-left",
@@ -95,7 +96,7 @@ window.cookieconsent.initialise({
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         <div><div class="navbar navbar-default">
-    <div class="container-fluid">
+    <div>
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                 <span class="sr-only">Toggle navigation</span>
@@ -104,11 +105,11 @@ window.cookieconsent.initialise({
                 <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand link" href="/">
-                <img class="logo" alt="SolAR logo" src="../../assets/images/logo_solAR.svg">
+                <img class="logo" alt="SolAR logo" src="/assets/images/navbar/logo_solAR.svg">
             </a>
         </div>
 
-        <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
+        <div id="navbar" class="navbar-collapse" aria-expanded="false" style="height: 1px;">
             <ul class="nav navbar-nav">
 
                 
@@ -126,8 +127,11 @@ window.cookieconsent.initialise({
 
   
 
-    <li id="discover" class="">
+  
+
+    <li id="discover" class=" ">
       <a href="/discover/">
+        <img src="/assets/images/navbar/discover.svg" alt="discover" height="42" width="42">
         Discover
       </a>
     </li>
@@ -147,8 +151,11 @@ window.cookieconsent.initialise({
 
   
 
-    <li id="use_it" class=" active">
+  
+
+    <li id="use_it" class=" active ">
       <a href="/use_it/">
+        <img src="/assets/images/navbar/use_it.svg" alt="use_it" height="42" width="42">
         Use it
       </a>
     </li>
@@ -168,8 +175,11 @@ window.cookieconsent.initialise({
 
   
 
-    <li id="contribute" class="">
+  
+
+    <li id="contribute" class=" ">
       <a href="/contribute/">
+        <img src="/assets/images/navbar/contribute.svg" alt="contribute" height="42" width="42">
         Contribute
       </a>
     </li>
@@ -189,8 +199,11 @@ window.cookieconsent.initialise({
 
   
 
-    <li id="" class="">
+  
+
+    <li id="" class=" ">
       <a href="/knowledge/">
+        <img src="/assets/images/navbar/.svg" alt="" height="42" width="42">
         Applications
       </a>
     </li>
@@ -201,7 +214,7 @@ window.cookieconsent.initialise({
 
 
 
-                <!--li>
+                <li>
                     <form action="/search/index.html" method="get" class="navbar-form" role="search">
                         <div class="input-group">
                             <input type="text" id="search" class="form-control" placeholder="Search"
@@ -213,11 +226,16 @@ window.cookieconsent.initialise({
                             </div>
                         </div>
                     </form>
-                </li-->
+                    <div>
+                        <a href="/about_us">> About us</a>
+                        <a href="/contact_us">> Contact us</a>
+                    </div>
+                </li>
             </ul>
         </div>
         
-    <div class="submenu">
+    <div class="submenu ">
+      <div class="submenuHelper">&lt;</div>
       <ul class="nav" aria-expanded="false">
         
         
@@ -290,9 +308,11 @@ window.cookieconsent.initialise({
 
 
       </ul>
+      <div class="submenuHelper">&gt;</div>
     </div>
     
-    <div class="submenu active">
+    <div class="submenu active ">
+      <div class="submenuHelper">&lt;</div>
       <ul class="nav" aria-expanded="false">
         
         
@@ -365,9 +385,11 @@ window.cookieconsent.initialise({
 
 
       </ul>
+      <div class="submenuHelper">&gt;</div>
     </div>
     
-    <div class="submenu">
+    <div class="submenu ">
+      <div class="submenuHelper">&lt;</div>
       <ul class="nav" aria-expanded="false">
         
         
@@ -388,7 +410,7 @@ window.cookieconsent.initialise({
 
 		<li >
 			<a href="/contribute/getting_started_linux/">
-				getting started on linux
+				on linux
 				
 			</a>
 		</li>
@@ -399,7 +421,7 @@ window.cookieconsent.initialise({
 
 		<li >
 			<a href="/contribute/getting_started_windows/">
-				getting started on windows
+				on windows
 				
 			</a>
 		</li>
@@ -451,6 +473,7 @@ window.cookieconsent.initialise({
 
 
       </ul>
+      <div class="submenuHelper">&gt;</div>
     </div>
     
         
@@ -460,7 +483,7 @@ window.cookieconsent.initialise({
 </div>
 
         <div class="container">
-            <div class="well">
+            <div class="well ">
               <div class="paragraph">
 <p>This tutorial will walk you through the implementation of one of the first solution to do augmented reality: The fiducial marker.
 The tutorial will <strong>take approximately one hour</strong> to complete.</p>
@@ -538,8 +561,9 @@ The tutorial will <strong>take approximately one hour</strong> to complete.</p>
 </div>
 <div class="imageblock" style="text-align: center">
 <div class="content">
-<img src="data:image/gif;base64," alt="300" width="300">
+<a class="image" href="../images/FiducialMarker/fiducialMarker.gif"><img src="data:image/gif;base64," alt="300" width="300"></a>
 </div>
+<div class="title">Figure 1. fiducialMarker : click on it to print</div>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -559,9 +583,9 @@ The following schema presents the pipeline we will implement in this tutorial :<
 </div>
 <div id="FiducialMarkerPipeline" class="imageblock">
 <div class="content">
-<img src="data:image/png;base64," alt="FiducialMarkerPipeline">
+<a class="image" href="../images/FiducialMarker/FiducialMarkerPipeline.png"><img src="data:image/png;base64," alt="FiducialMarkerPipeline"></a>
 </div>
-<div class="title">Figure 1. camera pose estimation pipeline based on a fiducial marker.</div>
+<div class="title">Figure 2. camera pose estimation pipeline based on a fiducial marker.</div>
 </div>
 <div class="paragraph">
 <p>This pipeline seems quite complex, but you will see that its implementation  will take few minutes thanks to the SolAR framework. Following, we detail each component used during the four steps of our pipeline:</p>
@@ -751,7 +775,7 @@ SolARModuleTools|0.3.0|SolARModuleTools|bcomBuild|url_repo_artifactory</code></p
 </div>
 <div class="paragraph">
 <p>In this tutorial, we will use the following 6x6 marker:
-image::images/FiducialMarker/fiducialMarker.gif[300,300, align="center"]</p>
+image::images/FiducialMarker/fiducialMarker.gif[300,300, align="center", title="Fiducial Image Marker: click to print",link="../images/FiducialMarker/fiducialMarker.gif" ]</p>
 </div>
 <div class="paragraph">
 <p>You can print it now.</p>
@@ -1225,6 +1249,7 @@ my3DOverlay-&gt;setCameraParameters(myCamera-&gt;getIntrinsicsParameters(), myCa
 <div class="content">
 <img src="data:image/png;base64," alt="FiducialPoseImage">
 </div>
+<div class="title">Figure 3. Fiducial Maker Sample screenshot</div>
 </div>
 <div class="paragraph">
 <p>Following, the full source code of this tutorial:</p>
@@ -1400,6 +1425,7 @@ namespace xpcf = org::bcom::xpcf;
 </div>
 </div>
 </div>
+              
             </div>
         </div>
 
@@ -1414,7 +1440,7 @@ namespace xpcf = org::bcom::xpcf;
     <!-- endbuild -->
     <script type="text/javascript">
       /* Fix padding-top on anchor with TOC */
-      window.addEventListener("hashchange", function() { scrollBy(0, -95) })
+      window.addEventListener("hashchange", function() { scrollBy(0, -115) })
     </script>
     </body>
 </html>
