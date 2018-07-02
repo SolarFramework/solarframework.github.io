@@ -177,7 +177,7 @@ index.add({
 
 index.add({
     title: null,
-    content: "\n\n  \n    SolAR\n    SolAR\n    https://solarframework.github.io//\n    \n    Fri, 29 Jun 2018 14:45:59 +0000\n    Fri, 29 Jun 2018 14:45:59 +0000\n    Jekyll v3.5.1\n    \n  \n\n",
+    content: "\n\n  \n    SolAR\n    SolAR\n    https://solarframework.github.io//\n    \n    Mon, 02 Jul 2018 13:41:06 +0000\n    Mon, 02 Jul 2018 13:41:06 +0000\n    Jekyll v3.5.1\n    \n  \n\n",
     id: 24
   });
   
