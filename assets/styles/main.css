@@ -454,7 +454,7 @@ footer {
       color: #436b6e; }
 
 /* computer resolution */
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   #toc.toc {
     margin-top: 18px;
     background-color: black;
@@ -489,8 +489,8 @@ footer {
     width: 1000px; }
 
   .submenu .submenuHelper {
-    display: none; } }
-@media (min-width: 768px) {
+    display: none; }
+
   .container-fluid > .navbar-header {
     margin-top: 0px; }
 
@@ -498,8 +498,57 @@ footer {
   li.dropdown.active > .submenu.active {
     display: block; }
 
-  #toc + .sect1 {
+  .sect1 {
     padding-top: 90px; } }
+/* computer resolution under 1024px */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .container, .navbar .submenu ul {
+    width: 100%; }
+
+  .navbar.navbar-default > div {
+    width: 100%;
+    margin-right: 0px;
+    margin-left: 0px; }
+
+  .submenu.active {
+    top: 126px;
+    /* to be placed under the "two line height" navbar (because logo and nav ul doesn't fit under 1024px so it's a two line navbar */
+    height: 35px;
+    padding-left: 0px; }
+    .submenu.active li {
+      display: inline-block; }
+    .submenu.active .submenuHelper {
+      display: none; }
+
+  #toc {
+    display: none; }
+
+  .sect1 {
+    padding-top: 150px; }
+
+  .well header {
+    margin-top: 125px; }
+
+  .well article section .more, .well aside p {
+    text-align: justify; }
+
+  video {
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    width: 90%; } }
+@media screen and (min-width: 791px) and (max-width: 859px) {
+  ul.nav > li:last-child {
+    display: none; }
+
+  .submenu.active {
+    top: 76px; } }
+@media screen and (min-width: 768px) and (max-width: 790px) {
+  ul.nav > li:last-child {
+    display: none; }
+
+  .submenu.active {
+    top: 126px; } }
 /* smartphone resolution */
 @media (max-width: 767px) {
   /*.collapse[aria-expanded='false'] > ul > li.active {
@@ -539,7 +588,8 @@ footer {
       padding-left: 0px;
       display: flex;
       overflow: auto;
-      white-space: nowrap; }
+      white-space: nowrap;
+      background: black; }
       .navbar .submenu.active::-webkit-scrollbar {
         display: none; }
       .navbar .submenu.active li {
@@ -574,8 +624,8 @@ footer {
     .well article {
       margin-top: 0px; }
       .well article section {
-        padding: 0px 5px; } }
-@media screen and (max-width: 767px) {
+        padding: 0px 5px; }
+
   video {
     width: 100%;
     max-width: 100%; } }

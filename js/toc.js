@@ -35,7 +35,7 @@
       }
       return this.id;
     }), output = $(this);
-    if (!headers.length || headers.length < settings.minimumHeaders || !output.length || width < 768) {
+    if (!headers.length || headers.length < settings.minimumHeaders || !output.length || width < 1024) {
       $(this).hide();
       $(this).addClass("hidden");
       return;

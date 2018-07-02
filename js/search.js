@@ -220,7 +220,7 @@ var index = lunr(function () {
     // because we don't know in wich (potentially) multiples page(s) these supages can be includedt items that are from subpages (title ==null), because we don't know in wich (potentially) multiples page(s) these supages can be included
     index.add({
       "title": "Applications",
-      "content": "\nApplications\n\n\n\n\n\nApplications\n\n\n\n\n\nFactory\n\n\nYou can find here a document describing use case identified for the industry.\n\n\nenglish version\n\n\nfrench version\n\n\nYou can also read it in your web browser here factory.\n\n\n\n\nReal estate\n\n\nYou can find here a document describing use case identified for the real estate.\n\n\nenglish version\n\n\nYou can also read it in your web browser here real estate.\n\n\n",
+      "content": "\nApplications\n\n\n\n\n\nFactory\n\n\nYou can find here a document describing use case identified for the industry.\n\n\nEnglish version\n\n\nFrench version\n\n\nYou can also read it in your web browser here factory.\n\n\n\n\nReal estate\n\n\nYou can find here a document describing use case identified for the real estate.\n\n\nEnglish version\n\n\nYou can also read it in your web browser here real estate.\n\n\n",
       "id": 16
     });
     
