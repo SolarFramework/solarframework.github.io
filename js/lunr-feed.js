@@ -177,7 +177,7 @@ index.add({
 
 index.add({
     title: null,
-    content: "\n\n  \n    SolAR\n    SolAR\n    https://solarframework.github.io//\n    \n    Mon, 02 Jul 2018 16:36:13 +0000\n    Mon, 02 Jul 2018 16:36:13 +0000\n    Jekyll v3.5.1\n    \n  \n\n",
+    content: "\n\n  \n    SolAR\n    SolAR\n    https://solarframework.github.io//\n    \n    Tue, 03 Jul 2018 07:07:17 +0000\n    Tue, 03 Jul 2018 07:07:17 +0000\n    Jekyll v3.5.1\n    \n  \n\n",
     id: 24
   });
   
@@ -233,7 +233,7 @@ index.add({
 
 index.add({
     title: "Applications",
-    content: "\nApplications\n\n\n\n\n\nFactory\n\n\nYou can find here a document describing use case identified for the industry.\n\n\nEnglish version\n\n\nFrench version\n\n\nYou can also read it in your web browser here factory.\n\n\n\n\nReal estate\n\n\nYou can find here a document describing use case identified for the real estate.\n\n\nEnglish version\n\n\nYou can also read it in your web browser here real estate.\n\n\n",
+    content: "\nApplications\n\n\n\n\n\nFactory\n\n\nYou can find here a document describing use case identified for the industry.\n\n\nEnglish version\n\n\nFrench version\n\n\nYou can also read it in your web browser here factory.\n\n\n\n\nReal estate\n\n\nYou can find here a document describing use case identified for the real estate.\nenglish version\n\n\nYou can find here a document describing use case identified for the real estate.\nfrench version\n\n\nYou can also read it in your web browser here real estate.\n\n\n",
     id: 32
   });
   
@@ -310,7 +310,7 @@ index.add({
 
 index.add({
     title: "Real Estate Use Case",
-    content: ":page-layout: _auto\n:showtitle:\n:page-title: Real Estate Use Case\n:page-category: applications\n:page-description: Real Estate\n:page-liquid:\n:page-layout: default\n:toc:\n:toclevels: 1\n\n== Real Estate\n\n== Real Estate\n[[Real-estate-Use-Case]]\nDocument here https://github.com/SolarFramework/binaries/releases/download/Documentsrealestate/ARGO-Factory-Rapport-pour-publication-e.pdf[\"english version\"]\n//include::_realestateUseCase.adoc[]",
+    content: ":page-layout: _auto\n:showtitle:\n:page-title: Real Estate Use Case\n:page-category: applications\n:page-description: Real Estate\n:page-liquid:\n:page-layout: default\n:toc:\n:toclevels: 1\n\n== Real Estate\n\n== Real Estate\nYou can find here a document describing use case identified for the real estate.\nhttps://github.com/SolarFramework/binaries/releases/download/Documentsrealestate/ARGO-RealEstate-Rapport-pour-publication-e_EN-final.pdf[\"english version\"]\n\nYou can find here a document describing use case identified for the real estate.\nhttps://github.com/SolarFramework/binaries/releases/download/UsecaseImmobilier/ARGO-Immobilier-Rapport.pour.publication-FR.pdf[\"english version\"]\n\nYou can also read it in your web browser here link:realestate[*real estate*].\n\n//NOTE: Comming soon: inline document\n//include::_realestateUseCase.adoc[]",
     id: 43
   });
   
