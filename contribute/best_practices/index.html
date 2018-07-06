@@ -529,7 +529,7 @@ window.cookieconsent.initialise({
 </div>
 
         <div class="container">
-            <div class="well ">
+            <div class="well red">
               <h1>Best practices</h1>
 <div id="toc" class="toc">
 <div id="toctitle">Table of Contents</div>
@@ -537,6 +537,7 @@ window.cookieconsent.initialise({
 <li><a href="#best_practices">Best practices</a></li>
 <li><a href="#best_practices_guidelines">Best practices &amp; guidelines</a></li>
 <li><a href="#interfaces">Interfaces</a></li>
+<li><a href="#data_structures">Data Structures</a></li>
 <li><a href="#components">Components</a>
 <ul class="sectlevel2">
 <li><a href="#methods">Methods</a></li>
@@ -605,9 +606,117 @@ This encompasses the SolAR framework and the GUI interface and unless otherwise 
 <div class="sect1">
 <h2 id="interfaces"><a class="anchor" href="#interfaces"></a><a class="link" href="#interfaces">Interfaces</a></h2>
 <div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Solar interfaces are virtual base classes. They shall inherit from class <em>org::bcom::xpcf::IComponentIntrospect</em></p>
+</li>
+<li>
+<p>SolAR Interfaces are defined in a dedicated header file (.h) whose name shall begin with a capital I followed with  the name of the abstract class it refers to, e.g. <em>ICamera.h</em>.</p>
+</li>
+<li>
+<p>SolAR Interfaces shall not contain member variables.</p>
+</li>
+<li>
+<p>Solar Framework is organized hierarchically via dedicated directories and namespaces. Currently, concerning the interfaces, this organization is as follows :</p>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Directory</th>
+<th class="tableblock halign-left valign-top">namespace</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SolARFramework/interfaces/api/display</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SolAR::api::display</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SolARFramework/interfaces/api/features</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SolAR::api::features</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SolARFramework/interfaces/api/geom</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SolAR::api::geom</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SolARFramework/interfaces/api/image</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SolAR::api::image</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SolARFramework/interfaces/api/input/devices</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SolAR::api::input::devices</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SolARFramework/interfaces/api/input/files</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SolAR::api::input::files</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SolARFramework/interfaces/api/sink</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SolAR::api::sink</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SolARFramework/interfaces/api/solver/map</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SolAR::api::solver::map</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SolARFramework/interfaces/api/solver/pose</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SolAR::api::solver::pose</p></td>
+</tr>
+</tbody>
+</table>
 <div class="paragraph">
-<p>SolAR Interfaces should not contain attributes.</p>
+<p>Any new interface must fall into one of these categories. Yet, if needed, one may ask the Solar Team to add a new one to fulfill a particular need not covered by the current organization.</p>
 </div>
+</li>
+<li>
+<p>A 128-bit UUID (Universal Unique IDentifier) shall be associated to any virtual interface and explicitly quoted in the interface header file, preferably after the class definition.</p>
+<div class="paragraph">
+<p>The syntax is the following :<br></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="cpp">_XPCF_DEFINE_INTERFACE_TRAITS(SolARnamespaces::IInterfaceClassName,
+                             <span class="string"><span class="delimiter">&quot;</span><span class="content">aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee</span><span class="delimiter">&quot;</span></span>,
+                             <span class="string"><span class="delimiter">&quot;</span><span class="content">Interface description</span><span class="delimiter">&quot;</span></span>);_</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>An example :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="cpp">_XPCF_DEFINE_INTERFACE_TRAITS(SolAR::api::display::I2DOverlay,
+                             <span class="string"><span class="delimiter">&quot;</span><span class="content">62b8b0b5-9344-40e6-a288-e609eb3ff0f1</span><span class="delimiter">&quot;</span></span>,
+                             <span class="string"><span class="delimiter">&quot;</span><span class="content">SolAR::I2DOverlay interface</span><span class="delimiter">&quot;</span></span>);_</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>The header file shall contain Doxygen documentation code in order to automatically generate the interface description web page during the continuous integration process used by the Solar Integration Team.<br>
+In particular the purpose of the interface shall be documented, as well as each virtual method with its input/ouput parameters.<br>
+For instance :<br></p>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="cpp"><span class="comment">/// @brief Draw a Squared Binary Pattern.</span>
+<span class="comment">/// @param[in] pattern The squared binary pattern to display.</span>
+<span class="comment">/// @param[in,out] displayImage The image on which the squared binary pattern will be drawn (on the whole image).</span>
+<span class="directive">virtual</span> <span class="directive">void</span> drawSBPattern (SRef&lt;SquaredBinaryPattern&gt; pattern, SRef&lt;Image&gt; displayImage) = <span class="integer">0</span>;</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="data_structures"><a class="anchor" href="#data_structures"></a><a class="link" href="#data_structures">Data Structures</a></h2>
+<div class="sectionbody">
+
 </div>
 </div>
 <div class="sect1">
