@@ -38,6 +38,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
@@ -134,9 +135,6 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <tr class="memitem:aeb00bc75bc967f6353c9a40a7a978352"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1image_1_1_i_perspective_controller.html#aeb00bc75bc967f6353c9a40a7a978352">correct</a> (const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt; inputImg, SRef&lt; Contour2Df &gt; &amp;contour, SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt; &amp;patch)=0</td></tr>
 <tr class="memdesc:aeb00bc75bc967f6353c9a40a7a978352"><td class="mdescLeft">&#160;</td><td class="mdescRight">Warps and crops an image given a contour defined with four 2D points.  <a href="#aeb00bc75bc967f6353c9a40a7a978352">More...</a><br /></td></tr>
 <tr class="separator:aeb00bc75bc967f6353c9a40a7a978352"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a45ad9e54da2f5ee31ef200f1faa36ecc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a45ad9e54da2f5ee31ef200f1faa36ecc"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>XPCF_DECLARE_UUID</b> (&quot;4a7d5c34-cd6e-11e7-abc4-cec278b6b50a&quot;)</td></tr>
-<tr class="separator:a45ad9e54da2f5ee31ef200f1faa36ecc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>warps and crops an image given a contour defined with four 2D points. </p>
@@ -184,7 +182,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">inputImg</td><td>the original image on which we want to extract sub-images aligned on the set of 2D contours </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">contours</td><td>the set of contours each defined with four 2D points </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">pacthes</td><td>the set of sub-images or patches resulting from the warping and cropping of the original image according to the set of 2D contours </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">patches</td><td>the set of sub-images or patches resulting from the warping and cropping of the original image according to the set of 2D contours </td></tr>
   </table>
   </dd>
 </dl>
@@ -235,7 +233,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">inputImg</td><td>the original image on which we want to extract sub-image aligned on the 2D contour </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">contour</td><td>the contour defined with four 2D points </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">pacthe</td><td>the sub-image or patche resulting from the warping and cropping of the original image according to the 2D contour </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">patch</td><td>the sub-image or patche resulting from the warping and cropping of the original image according to the 2D contour </td></tr>
   </table>
   </dd>
 </dl>

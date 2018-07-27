@@ -38,6 +38,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
@@ -90,7 +91,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="class_sol_a_r_1_1api_1_1display_1_1_i_side_by_side_overlay-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">SolAR::api::display::ISideBySideOverlay Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
@@ -126,21 +126,15 @@ Public Member Functions</h2></td></tr>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1display_1_1_i_side_by_side_overlay.html#afcfbcea4ac5afdf403bcda4b5ab29d6a">~ISideBySideOverlay</a> ()=default</td></tr>
 <tr class="memdesc:afcfbcea4ac5afdf403bcda4b5ab29d6a"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sol_a_r_1_1api_1_1display_1_1_i_side_by_side_overlay.html" title="Drawing interface to overlay matches between two images. ">ISideBySideOverlay</a> default destructor. <br /></td></tr>
 <tr class="separator:afcfbcea4ac5afdf403bcda4b5ab29d6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6c98e50b42d2e3f053db09a84d7ad376"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1display_1_1_i_side_by_side_overlay.html#a6c98e50b42d2e3f053db09a84d7ad376">drawMatchesLines</a> (SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt; &amp;image1, SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt; &amp;image2, SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt; &amp;outImage, std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point2_df.html">Point2Df</a> &gt;&gt; &amp;points_image1, std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point2_df.html">Point2Df</a> &gt;&gt; &amp;points_image2)=0</td></tr>
-<tr class="memdesc:a6c98e50b42d2e3f053db09a84d7ad376"><td class="mdescLeft">&#160;</td><td class="mdescRight">dra Match Lines. Draw all the lines joining the keypoints that match between two images  <a href="#a6c98e50b42d2e3f053db09a84d7ad376">More...</a><br /></td></tr>
-<tr class="separator:a6c98e50b42d2e3f053db09a84d7ad376"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
-Static Public Attributes</h2></td></tr>
-<tr class="memitem:a447a0bcbe981e6f5ad814b394ba211d2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a447a0bcbe981e6f5ad814b394ba211d2"></a>
-static constexpr const char *&#160;</td><td class="memItemRight" valign="bottom"><b>UUID</b> = &quot;a801354a-3e00-467c-b390-48c76fa8c53a&quot;</td></tr>
-<tr class="separator:a447a0bcbe981e6f5ad814b394ba211d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41195bf80419e46933ae25f95005e1d8"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1display_1_1_i_side_by_side_overlay.html#a41195bf80419e46933ae25f95005e1d8">drawMatchesLines</a> (SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt; &amp;image1, SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt; &amp;image2, SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt; &amp;outImage, std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point2_df.html">Point2Df</a> &gt;&gt; &amp;points_image1, std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point2_df.html">Point2Df</a> &gt;&gt; &amp;points_image2, int matches_number=-1)=0</td></tr>
+<tr class="memdesc:a41195bf80419e46933ae25f95005e1d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">dra Match Lines. Draw all the lines joining the keypoints that match between two images  <a href="#a41195bf80419e46933ae25f95005e1d8">More...</a><br /></td></tr>
+<tr class="separator:a41195bf80419e46933ae25f95005e1d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Drawing interface to overlay matches between two images. </p>
 <p>This class provides drawing method to overlay matches between two images. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a6c98e50b42d2e3f053db09a84d7ad376"></a>
+<a class="anchor" id="a41195bf80419e46933ae25f95005e1d8"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -175,7 +169,13 @@ static constexpr const char *&#160;</td><td class="memItemRight" valign="bottom"
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point2_df.html">Point2Df</a> &gt;&gt; &amp;&#160;</td>
-          <td class="paramname"><em>points_image2</em>&#160;</td>
+          <td class="paramname"><em>points_image2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>matches_number</em> = <code>-1</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -198,6 +198,7 @@ static constexpr const char *&#160;</td><td class="memItemRight" valign="bottom"
     <tr><td class="paramdir">[out]</td><td class="paramname">outImage</td><td>The resulting image merging image1 and image2 in side-by-side. If outImage has not been initialized, it will be done by this method. If it size is not the good one, it will be resized by this method. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">points_image1</td><td>The keypoints of image1 that match with keypoints of image2. The Nth keypoint of this vector match with the Nth keypoint of the vector points_image2. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">points_image2</td><td>The keypoints of image2 that match with keypoints of image1. The Nth keypoint of this vector match with the Nth keypoint of the vector points_image1. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">matches_number</td><td>number of matches to display. if negative, all matches are displayed. </td></tr>
   </table>
   </dd>
 </dl>

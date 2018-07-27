@@ -38,6 +38,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
@@ -120,14 +121,54 @@ Public Member Functions</h2></td></tr>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1pose_1_1_i_homography_validation.html#a60150d97f9c6819ed57efd08913124ac">~IHomographyValidation</a> ()=default</td></tr>
 <tr class="memdesc:a60150d97f9c6819ed57efd08913124ac"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1pose_1_1_i_homography_validation.html">IHomographyValidation</a> default destructor. <br /></td></tr>
 <tr class="separator:a60150d97f9c6819ed57efd08913124ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9f498bdd5af663399a6b44544d372b2b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9f498bdd5af663399a6b44544d372b2b"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1pose_1_1_i_homography_validation.html#a9f498bdd5af663399a6b44544d372b2b">isValid</a> (const std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point2_df.html">Point2Df</a> &gt;&gt; &amp;ref2DSquaredMarkerCorners, const std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point2_df.html">Point2Df</a> &gt;&gt; &amp;projected2DSquaredMarkerCorners)=0</td></tr>
-<tr class="memdesc:a9f498bdd5af663399a6b44544d372b2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">evaluate the homography according to the projection of the 4 corners of a 2D squared Marker <br /></td></tr>
+<tr class="memitem:a9f498bdd5af663399a6b44544d372b2b"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1pose_1_1_i_homography_validation.html#a9f498bdd5af663399a6b44544d372b2b">isValid</a> (const std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point2_df.html">Point2Df</a> &gt;&gt; &amp;ref2DSquaredMarkerCorners, const std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point2_df.html">Point2Df</a> &gt;&gt; &amp;projected2DSquaredMarkerCorners)=0</td></tr>
+<tr class="memdesc:a9f498bdd5af663399a6b44544d372b2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">evaluate the homography according to the projection of the 4 corners of a 2D squared Marker  <a href="#a9f498bdd5af663399a6b44544d372b2b">More...</a><br /></td></tr>
 <tr class="separator:a9f498bdd5af663399a6b44544d372b2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8c17cfd6fe5188184b68d95dd854f885"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8c17cfd6fe5188184b68d95dd854f885"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>XPCF_DECLARE_UUID</b> (&quot;e95e8f70-dd32-11e7-9296-cec278b6b50a&quot;)</td></tr>
-<tr class="separator:a8c17cfd6fe5188184b68d95dd854f885"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a9f498bdd5af663399a6b44544d372b2b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool SolAR::api::solver::pose::IHomographyValidation::isValid </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point2_df.html">Point2Df</a> &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>ref2DSquaredMarkerCorners</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point2_df.html">Point2Df</a> &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>projected2DSquaredMarkerCorners</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>evaluate the homography according to the projection of the 4 corners of a 2D squared Marker </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">Set</td><td>of 2d_points of the corners in the template view. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">Set</td><td>of 2d_points of the corners projected in the current view. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>interfaces/api/solver/pose/<a class="el" href="_i_homography_validation_8h_source.html">IHomographyValidation.h</a></li>
 </ul>

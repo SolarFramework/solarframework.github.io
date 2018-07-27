@@ -38,6 +38,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
@@ -112,36 +113,9 @@ Collaboration diagram for SolAR::api::image::IImageFilter:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a51c8dcb0a37470fe63b85ea1863b83bd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a51c8dcb0a37470fe63b85ea1863b83bd"></a>
-virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><b>threshold</b> (SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt;input, SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt; &amp;output, int threshold)=0</td></tr>
-<tr class="separator:a51c8dcb0a37470fe63b85ea1863b83bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a274c09b1836b4e16d4b021544ca2d068"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a274c09b1836b4e16d4b021544ca2d068"></a>
-virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><b>binarize</b> (SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt;input, SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt; &amp;output, int min, int max)=0</td></tr>
-<tr class="separator:a274c09b1836b4e16d4b021544ca2d068"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab307541b80f2cb8ff9646988aebf1079"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab307541b80f2cb8ff9646988aebf1079"></a>
-virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><b>adaptiveBinarize</b> (SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt;input, SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt; &amp;output, int max, int blockSize, int C)=0</td></tr>
-<tr class="separator:ab307541b80f2cb8ff9646988aebf1079"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adec38c196874aab87b0e955f5337e29a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adec38c196874aab87b0e955f5337e29a"></a>
-virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><b>blur</b> (SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt;input, SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt; &amp;output, int kernerl_id, int kernel_width, int kernel_height, int direction)=0</td></tr>
-<tr class="separator:adec38c196874aab87b0e955f5337e29a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a495604de6fb2d6c2ff96484f84d8f6e2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a495604de6fb2d6c2ff96484f84d8f6e2"></a>
-virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><b>gradient</b> (SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt;input, SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt; &amp;output, int x_order, int y_order)=0</td></tr>
-<tr class="separator:a495604de6fb2d6c2ff96484f84d8f6e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af5d1074dd270ae9f840674d7e3644568"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af5d1074dd270ae9f840674d7e3644568"></a>
-virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><b>laplacian</b> (SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt;input, SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt; &amp;output, int method)=0</td></tr>
-<tr class="separator:af5d1074dd270ae9f840674d7e3644568"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a87b40893a7a1561d6de4a2e9c430c54c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a87b40893a7a1561d6de4a2e9c430c54c"></a>
-virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><b>erode</b> (SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt;input, SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt; &amp;output, int erode_type, int erode_size)=0</td></tr>
-<tr class="separator:a87b40893a7a1561d6de4a2e9c430c54c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a91dcc7bf5ffe5598d3b84b66d798facc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a91dcc7bf5ffe5598d3b84b66d798facc"></a>
-virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><b>dilate</b> (SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt;input, SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt; &amp;output, int dilate_type, int dilate_size)=0</td></tr>
-<tr class="separator:a91dcc7bf5ffe5598d3b84b66d798facc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7e328004e501c727a871c08a4759190b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7e328004e501c727a871c08a4759190b"></a>
-virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><b>equalize</b> (SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt;input, SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt; &amp;output, int method)=0</td></tr>
-<tr class="separator:a7e328004e501c727a871c08a4759190b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a05f091c413451bfb9a783d38b7c015c0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a05f091c413451bfb9a783d38b7c015c0"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>XPCF_DECLARE_UUID</b> (&quot;f7948ae2-e994-416f-be40-dd404ca03a83&quot;)</td></tr>
-<tr class="separator:a05f091c413451bfb9a783d38b7c015c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c1888afb9a5719b0d4fe126fb45caaf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4c1888afb9a5719b0d4fe126fb45caaf"></a>
+virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><b>filter</b> (const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt;input, SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt; &amp;output)=0</td></tr>
+<tr class="separator:a4c1888afb9a5719b0d4fe126fb45caaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>interfaces/api/image/<a class="el" href="_i_image_filter_8h_source.html">IImageFilter.h</a></li>

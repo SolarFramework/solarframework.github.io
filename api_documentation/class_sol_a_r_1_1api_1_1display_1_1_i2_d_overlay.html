@@ -38,6 +38,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
@@ -90,7 +91,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="class_sol_a_r_1_1api_1_1display_1_1_i2_d_overlay-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">SolAR::api::display::I2DOverlay Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
@@ -133,20 +133,14 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <tr class="memdesc:a17f4d58ea6cb034dd0c09b0b1b9b8629"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw Circles. Draw all the circles stored in the vector std::vector &lt;SRef&lt;Point2Df&gt;&gt; &amp; points on image displayImage with specified radius and thickness (colors of points are randomized).  <a href="#a17f4d58ea6cb034dd0c09b0b1b9b8629">More...</a><br /></td></tr>
 <tr class="separator:a17f4d58ea6cb034dd0c09b0b1b9b8629"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e56b9be8bf20112e09acdfa21545ca4"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1display_1_1_i2_d_overlay.html#a4e56b9be8bf20112e09acdfa21545ca4">drawCircles</a> (std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html">Keypoint</a> &gt;&gt; &amp;keypoints, unsigned int radius, int thickness, SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt; displayImage)=0</td></tr>
-<tr class="memdesc:a4e56b9be8bf20112e09acdfa21545ca4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw Circles. Draw all the circles stored in the vector std::vector &lt;SRef&lt;Keypoint&gt;&gt; &amp; keypoints on image displayImage with specified radius and thickness (colors of points are randomized).  <a href="#a4e56b9be8bf20112e09acdfa21545ca4">More...</a><br /></td></tr>
+<tr class="memdesc:a4e56b9be8bf20112e09acdfa21545ca4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw Circles. Draw all the circles stored in the vector std::vector &lt;SRef&lt;Point2Df&gt;&gt; &amp; points on image displayImage with specified radius and thickness (colors of points are randomized).  <a href="#a4e56b9be8bf20112e09acdfa21545ca4">More...</a><br /></td></tr>
 <tr class="separator:a4e56b9be8bf20112e09acdfa21545ca4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7cc4b29b0eb4060d6c528140f22e67f4"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1display_1_1_i2_d_overlay.html#a7cc4b29b0eb4060d6c528140f22e67f4">drawContours</a> (const std::vector&lt; SRef&lt; Contour2Df &gt;&gt; &amp;contours, int thickness, std::vector&lt; unsigned int &gt; &amp;bgrValues, SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt; displayImage)=0</td></tr>
-<tr class="memdesc:a7cc4b29b0eb4060d6c528140f22e67f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw Contours.  <a href="#a7cc4b29b0eb4060d6c528140f22e67f4">More...</a><br /></td></tr>
+<tr class="memdesc:a7cc4b29b0eb4060d6c528140f22e67f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw Circles. Draw all the circles stored in the vector std::vector &lt;SRef&lt;Keypoint&gt;&gt; &amp; keypoints on image displayImage with specified radius and thickness (colors of points are randomized).  <a href="#a7cc4b29b0eb4060d6c528140f22e67f4">More...</a><br /></td></tr>
 <tr class="separator:a7cc4b29b0eb4060d6c528140f22e67f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4522d89dc033bdad7a1673f0ac6714ef"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1display_1_1_i2_d_overlay.html#a4522d89dc033bdad7a1673f0ac6714ef">drawSBPattern</a> (SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_squared_binary_pattern.html">SquaredBinaryPattern</a> &gt; pattern, SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt; displayImage)=0</td></tr>
 <tr class="memdesc:a4522d89dc033bdad7a1673f0ac6714ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw a Squared Binary Pattern.  <a href="#a4522d89dc033bdad7a1673f0ac6714ef">More...</a><br /></td></tr>
 <tr class="separator:a4522d89dc033bdad7a1673f0ac6714ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
-Static Public Attributes</h2></td></tr>
-<tr class="memitem:a2e604611dbdf2b21f0b0c1d47506afe6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2e604611dbdf2b21f0b0c1d47506afe6"></a>
-static constexpr const char *&#160;</td><td class="memItemRight" valign="bottom"><b>UUID</b> = &quot;62b8b0b5-9344-40e6-a288-e609eb3ff0f1&quot;</td></tr>
-<tr class="separator:a2e604611dbdf2b21f0b0c1d47506afe6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Drawing interface to overlay 2D information on top of an image. </p>
@@ -317,9 +311,14 @@ static constexpr const char *&#160;</td><td class="memItemRight" valign="bottom"
 </table>
 </div><div class="memdoc">
 
-<p>Draw Circles. Draw all the circles stored in the vector std::vector &lt;SRef&lt;Keypoint&gt;&gt; &amp; keypoints on image displayImage with specified radius and thickness (colors of points are randomized). </p>
+<p>Draw Circles. Draw all the circles stored in the vector std::vector &lt;SRef&lt;Point2Df&gt;&gt; &amp; points on image displayImage with specified radius and thickness (colors of points are randomized). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">point</td><td>The positions of the circles to draw </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">radius</td><td>The radius in pixels of the circles to draw </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">thickness</td><td>The thickness in pixels of the circles to draw </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">bgrValues</td><td>The color of the circle to draw. This color is stored in a vector of 3 unsigned int for B, G and R color components. </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">displayImage</td><td>The image on which the circles will be drawn. Draw Circles. Draw all the circles stored in the vector std::vector &lt;SRef&lt;Keypoint&gt;&gt; &amp; keypoints on image displayImage with specified radius and thickness (colors of points are randomized). </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">point</td><td>The positions of the circles to draw </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">radius</td><td>The radius in pixels of the circles to draw </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">thickness</td><td>The thickness in pixels of the circles to draw </td></tr>
@@ -374,9 +373,14 @@ static constexpr const char *&#160;</td><td class="memItemRight" valign="bottom"
 </table>
 </div><div class="memdoc">
 
-<p>Draw Contours. </p>
-<p>Draw all the contours stored in the vector std::vector &lt;SRef&lt;Contour2Df&gt;&gt; &amp; contours on image displayImage </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Draw Circles. Draw all the circles stored in the vector std::vector &lt;SRef&lt;Keypoint&gt;&gt; &amp; keypoints on image displayImage with specified radius and thickness (colors of points are randomized). </p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">point</td><td>The positions of the circles to draw </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">radius</td><td>The radius in pixels of the circles to draw </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">thickness</td><td>The thickness in pixels of the circles to draw </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">bgrValues</td><td>The color of the circle to draw. This color is stored in a vector of 3 unsigned int for B, G and R color components. </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">displayImage</td><td>The image on which the circles will be drawn. Draw Contours. Draw all the contours stored in the vector std::vector &lt;SRef&lt;Contour2Df&gt;&gt; &amp; contours on image displayImage </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">contours</td><td>The vector of contours in 2D to draw. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">thickness</td><td>The thickness in pixels of the contours to draw </td></tr>
     <tr><td class="paramdir">[in,out]</td><td class="paramname">displayImage</td><td>The image on which the contours will be drawn. </td></tr>
