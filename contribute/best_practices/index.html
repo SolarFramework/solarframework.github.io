@@ -530,61 +530,16 @@ window.cookieconsent.initialise({
 
         <div class="container">
             <div class="well red">
-              <h1>Best practices</h1>
+              <h1>BEST practises</h1>
 <div id="toc" class="toc">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
 <li><a href="#best_practices">Best practices</a></li>
-<li><a href="#best_practices_guidelines">Best practices &amp; guidelines</a></li>
-<li><a href="#interfaces">Interfaces</a></li>
-<li><a href="#data_structures">Data Structures</a></li>
-<li><a href="#components">Components</a>
-<ul class="sectlevel2">
-<li><a href="#methods">Methods</a></li>
-<li><a href="#method_parameters">Method parameters</a></li>
-<li><a href="#attributes">Attributes</a></li>
-</ul>
-</li>
-<li><a href="#data_structure">Data Structure</a></li>
-<li><a href="#namespaces">Namespaces</a></li>
-<li><a href="#pipepline_management">Pipepline Management</a></li>
+<li><a href="#solar_guidelines">SolAR guidelines</a></li>
 <li><a href="#logs_to_help_debugging">Logs to help debugging</a></li>
 <li><a href="#coding_rules">coding rules</a></li>
-<li><a href="#project_organization">Project organization</a>
-<ul class="sectlevel2">
-<li><a href="#files">Files</a></li>
-</ul>
-</li>
-<li><a href="#c_c_coding_rules">C / C++ Coding Rules</a>
-<ul class="sectlevel2">
-<li><a href="#language_features">Language features</a></li>
-<li><a href="#libraries_and_headers">Libraries and headers</a></li>
-<li><a href="#naming_conventions">Naming conventions</a></li>
-<li><a href="#design_conventions">Design conventions</a></li>
-<li><a href="#layout_conventions">Layout conventions</a></li>
-<li><a href="#tracing_and_debugging">Tracing and debugging</a></li>
-<li><a href="#error_handling">Error handling</a></li>
-<li><a href="#miscellaneous_conventions">Miscellaneous conventions</a></li>
-<li><a href="#documentation">Documentation</a></li>
-<li><a href="#c_c_performance_rules">C/C++ Performance rules</a></li>
-<li><a href="#tools">Tools</a></li>
-</ul>
-</li>
-<li><a href="#appendix_a_code_sample">Appendix A.	Code sample</a>
-<ul class="sectlevel2">
-<li><a href="#i_prototype_c_header_file">I.	Prototype C++ header file</a></li>
-<li><a href="#ii_prototype_c_source_file">II.	 Prototype C++ source file</a></li>
-<li><a href="#iii_how_to_remove_goto">III.	How to remove ‘goto’</a></li>
-</ul>
-</li>
-<li><a href="#appendix_b_rules_management">Appendix B.	Rules management</a>
-<ul class="sectlevel2">
-<li><a href="#i_responsibility">I.	Responsibility</a></li>
-<li><a href="#ii_deviation">II.	Deviation</a></li>
-<li><a href="#iii_training">III.	Training</a></li>
-<li><a href="#iv_control">IV.	Control</a></li>
-</ul>
-</li>
+<li><a href="#appendix_a_code_sample">Appendix A.	Code sample</a></li>
+<li><a href="#appendix_b_rules_management">Appendix B.	Rules management</a></li>
 </ul>
 </div>
 <div class="sect1">
@@ -594,31 +549,29 @@ window.cookieconsent.initialise({
 </div>
 </div>
 <div class="sect1">
-<h2 id="best_practices_guidelines"><a class="anchor" href="#best_practices_guidelines"></a><a class="link" href="#best_practices_guidelines">Best practices &amp; guidelines</a></h2>
+<h2 id="solar_guidelines"><a class="anchor" href="#solar_guidelines"></a><a class="link" href="#solar_guidelines">SolAR guidelines</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>SolAR is a framework that defines interfaces (API) to computer vision components and a GUI that is used to graphically build Camera Pose Estimation schemes, based on the framework, for different applications/needs.
-The following rules shall be used for every addition/modification to the SolAR project.
+<p>The following rules shall be used for every addition/modification to the SolAR project.
 This encompasses the SolAR framework and the GUI interface and unless otherwise specified, these rules shall apply to both.</p>
 </div>
+<div class="sect2">
+<h3 id="component_interfaces"><a class="anchor" href="#component_interfaces"></a><a class="link" href="#component_interfaces">Component Interfaces</a></h3>
+<div class="paragraph">
+<p>1.1. Solar component interfaces are virtual base classes. They shall inherit from class <em>org::bcom::xpcf::IComponentIntrospect</em></p>
 </div>
+<div class="paragraph">
+<p>1.2. SolAR Interfaces are defined in a dedicated header file (.h) whose name shall begin with a capital I followed with the name of the abstract class it refers to, e.g. <em>ICamera.h</em>.</p>
 </div>
-<div class="sect1">
-<h2 id="interfaces"><a class="anchor" href="#interfaces"></a><a class="link" href="#interfaces">Interfaces</a></h2>
-<div class="sectionbody">
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Solar interfaces are virtual base classes. They shall inherit from class <em>org::bcom::xpcf::IComponentIntrospect</em></p>
-</li>
-<li>
-<p>SolAR Interfaces are defined in a dedicated header file (.h) whose name shall begin with a capital I followed with  the name of the abstract class it refers to, e.g. <em>ICamera.h</em>.</p>
-</li>
-<li>
-<p>SolAR Interfaces shall not contain member variables.</p>
-</li>
-<li>
-<p>Solar Framework is organized hierarchically via dedicated directories and namespaces. Currently, concerning the interfaces, this organization is as follows :</p>
+<div class="paragraph">
+<p>1.3. SolAR Interfaces shall not contain member variables, it is an abstract class without committing to a particular implementation of the class. If you need member variables, declare them in the implementation of the component</p>
+</div>
+<div class="paragraph">
+<p>1.4. A component interface must be a abstract class, meaning that all its methods must be virtual.</p>
+</div>
+<div class="paragraph">
+<p>1.5. Solar Framework is organized hierarchically via dedicated directories and namespaces. Currently, concerning the interfaces, this organization is as follows :</p>
+</div>
 <table class="tableblock frame-all grid-all spread">
 <colgroup>
 <col style="width: 50%;">
@@ -670,19 +623,40 @@ This encompasses the SolAR framework and the GUI interface and unless otherwise 
 </tbody>
 </table>
 <div class="paragraph">
-<p>Any new interface must fall into one of these categories. Yet, if needed, one may ask the Solar Team to add a new one to fulfill a particular need not covered by the current organization.</p>
+<p>1.6. Namespaces should use lower case.</p>
 </div>
-</li>
-<li>
-<p>A 128-bit UUID (Universal Unique IDentifier) shall be associated to any virtual interface and explicitly quoted in the interface header file, preferably after the class definition.</p>
+<div class="paragraph">
+<p>1.7. Any new interface must fall into one of these categories. Yet, if needed, one may ask the SolAR Team to add a new one to fulfill a particular need not covered by the current organization.</p>
+</div>
+<div class="paragraph">
+<p>1.8. If possible, an abstract interface of a component must define only one processing method. Exception may be allowed if your processing method need take as an input or output only one or a collection of several objects, as for instance:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="cpp"><span class="directive">virtual</span> <span class="directive">void</span> drawCircle(SRef&lt;Point2Df&gt; point, <span class="predefined-type">unsigned</span> <span class="predefined-type">int</span> radius, <span class="predefined-type">int</span> thickness, std::vector&lt;<span class="predefined-type">unsigned</span> <span class="predefined-type">int</span>&gt; &amp; bgrValues, SRef&lt;Image&gt; displayImage) = <span class="integer">0</span>;
+ <span class="directive">virtual</span> <span class="directive">void</span> drawCircles(std::vector&lt;SRef&lt;Point2Df&gt;&gt;&amp; points, <span class="predefined-type">unsigned</span> <span class="predefined-type">int</span> radius, <span class="predefined-type">int</span> thickness, SRef&lt;Image&gt; displayImage) = <span class="integer">0</span>;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>or if the processing method need to take as input our output parameter an object or an inherited object, as for instance:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="cpp"><span class="directive">virtual</span> <span class="directive">void</span> drawCircles(std::vector&lt;SRef&lt;Point2Df&gt;&gt;&amp; points, <span class="predefined-type">unsigned</span> <span class="predefined-type">int</span> radius, <span class="predefined-type">int</span> thickness, SRef&lt;Image&gt; displayImage) = <span class="integer">0</span>;
+<span class="directive">virtual</span> <span class="directive">void</span> drawCircles(std::vector&lt;SRef&lt;Keypoint&gt;&gt;&amp; keypoints, <span class="predefined-type">unsigned</span> <span class="predefined-type">int</span> radius, <span class="predefined-type">int</span> thickness, SRef&lt;Image&gt; displayImage) = <span class="integer">0</span>;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>1.9. A 128-bit UUID (Universal Unique IDentifier) shall be associated to any virtual interface and explicitly quoted in the interface header file, preferably after the class definition.</p>
+</div>
 <div class="paragraph">
 <p>The syntax is the following :<br></p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="cpp">_XPCF_DEFINE_INTERFACE_TRAITS(SolARnamespaces::IInterfaceClassName,
+<pre class="CodeRay highlight"><code data-lang="cpp">XPCF_DEFINE_INTERFACE_TRAITS(SolARnamespaces::IInterfaceClassName,
                              <span class="string"><span class="delimiter">&quot;</span><span class="content">aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee</span><span class="delimiter">&quot;</span></span>,
-                             <span class="string"><span class="delimiter">&quot;</span><span class="content">Interface description</span><span class="delimiter">&quot;</span></span>);_</code></pre>
+                             <span class="string"><span class="delimiter">&quot;</span><span class="content">Interface description</span><span class="delimiter">&quot;</span></span>);</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -690,16 +664,29 @@ This encompasses the SolAR framework and the GUI interface and unless otherwise 
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="cpp">_XPCF_DEFINE_INTERFACE_TRAITS(SolAR::api::display::I2DOverlay,
+<pre class="CodeRay highlight"><code data-lang="cpp">XPCF_DEFINE_INTERFACE_TRAITS(SolAR::api::display::I2DOverlay,
                              <span class="string"><span class="delimiter">&quot;</span><span class="content">62b8b0b5-9344-40e6-a288-e609eb3ff0f1</span><span class="delimiter">&quot;</span></span>,
-                             <span class="string"><span class="delimiter">&quot;</span><span class="content">SolAR::I2DOverlay interface</span><span class="delimiter">&quot;</span></span>);_</code></pre>
+                             <span class="string"><span class="delimiter">&quot;</span><span class="content">SolAR::I2DOverlay interface</span><span class="delimiter">&quot;</span></span>);</code></pre>
 </div>
 </div>
-</li>
-<li>
-<p>The header file shall contain Doxygen documentation code in order to automatically generate the interface description web page during the continuous integration process used by the Solar Integration Team.<br>
+<div class="paragraph">
+<p>1.10. The header file shall contain Doxygen documentation code in order to automatically generate the interface description web page during the continuous integration process used by the Solar Integration Team.<br>
 In particular the purpose of the interface shall be documented, as well as each virtual method with its input/ouput parameters.<br>
-For instance :<br></p>
+For instance for class documentation:<br></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="cpp"><span class="comment">/**
+ * @class I2DOverlay
+ * @brief Drawing interface to overlay 2D information on top of an image.
+ *
+ * This class provides drawing methods to overlay 2D debug informations on top of an image.
+ */</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>and for method documentation:</p>
+</div>
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="cpp"><span class="comment">/// @brief Draw a Squared Binary Pattern.</span>
@@ -708,52 +695,164 @@ For instance :<br></p>
 <span class="directive">virtual</span> <span class="directive">void</span> drawSBPattern (SRef&lt;SquaredBinaryPattern&gt; pattern, SRef&lt;Image&gt; displayImage) = <span class="integer">0</span>;</code></pre>
 </div>
 </div>
+</div>
+<div class="sect2">
+<h3 id="data_structures"><a class="anchor" href="#data_structures"></a><a class="link" href="#data_structures">Data Structures</a></h3>
+<div class="paragraph">
+<p>2.1. Data structures should be implemented for the data flow, meaning the data that will be exchanged between components at runtime thanks to the processing methods of the components. To optimize vision pipelines developped thanks to the SolAR Framework, it is of real need to take care to data structure optimization (reduce the memory copy, favour a quick access to data, etc.)</p>
+</div>
+<div class="paragraph">
+<p>2.2. A data structure must be defined in a namespace SolAR::datastructure</p>
+</div>
+<div class="paragraph">
+<p>2.3. The header and cpp files must be put under the datastructure directory.</p>
+</div>
+<div class="paragraph">
+<p>2.4. The header file shall contains Doxygen documentation code in order to automatically generate the data structure description web page during the continuous integration process used by the Solar Integration Team.
+For instance for class documentation:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="cpp"><span class="comment">/**
+  * @class Image
+  * @brief Specifies the Image base class.
+  *
+  * This class provides an image abstraction for SolAR
+  */</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>and for method documentation:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="cpp"><span class="comment">/** @brief  reserves new space depending on the image layers and bitspercomponent infos
+  *  @param width: width of the image
+  *  @param height: height of the image
+  */</span>
+  <span class="directive">void</span> setSize(uint32_t width, uint32_t height);</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Please refer to existing SolAR component interfaces and take them as examples.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="component_implementations"><a class="anchor" href="#component_implementations"></a><a class="link" href="#component_implementations">Component Implementations</a></h3>
+<div class="paragraph">
+<p>A component implements a low-level vision processing in order to offer much more flexibility. They can be be interconnected together to create  high-level and real-time vision pipeline (localization, 3D reconstruction, etc.).</p>
+</div>
+<div class="paragraph">
+<p>That is why a component should take in parameters and deliver out data structures to ease their connection (data flow).</p>
+</div>
+<div class="paragraph">
+<p>When you intent to  create a component, first verify that :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>a SolAR interface already exists for your kind of components</strong>. If so, please use the specified interface.
+if no, or if you think the existing interfaces do not totally fit your need, please contact the SolAR team.</p>
 </li>
-</ol>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="data_structures"><a class="anchor" href="#data_structures"></a><a class="link" href="#data_structures">Data Structures</a></h2>
-<div class="sectionbody">
-
-</div>
-</div>
-<div class="sect1">
-<h2 id="components"><a class="anchor" href="#components"></a><a class="link" href="#components">Components</a></h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Components should be implemented for processing.
-It should take in parameters and deliver out components and data.</p>
+</ul>
 </div>
 <div class="paragraph">
-<p>Components should be connectable .</p>
+<p>Please look at the organization of existing modules and components.</p>
 </div>
 <div class="paragraph">
-<p>When you intent to  create a component, first verify that :
-- a SolAR interface already exists for your kind of components. If so, please use the specified interface.
-	if no, or if you think the existing interfaces do not totally fit your need, please contact the SolAR team.
-	if so, please respect the SolAR interface
--a component already exists wit the same interface. If so, check what your new component will give for.</p>
+<p>3.1. Any component must be embedded in a module. Modules are used to easily publish one or a group of components to the solAR community. If you want to create a new module, please copy the existing structure of SolAR modules.</p>
 </div>
 <div class="paragraph">
-<p>Please look at the organization of existing modules and components.
-You will probably need to create a new module, in order to create your component. Please copy the existing structure of SolAR modules.</p>
+<p>3.2. Your components should have explicit names (that means, that ideally, we do not need to read documentation to understands what it is for and on which third party it is based). Please refer to existing components for naming examples.</p>
 </div>
 <div class="paragraph">
-<p>Please also keep in mind that you component my herit from other components.</p>
+<p>3.3. Your components must inherit from component interfaces defined by the SolARFramework. If no component interface fit your need or if you think an existing interface should be extended, please contact the SolAR team.</p>
 </div>
 <div class="paragraph">
-<p>Your components should have explicit names (that means, that ideally, we do not need to read documentation to understands what it is for).</p>
+<p>3.4. Your components can define their own attributes which should be defined as private. No attributes can be shared by other components. If you want to shared data between components, pass them as attribute of the processing method.</p>
 </div>
 <div class="paragraph">
-<p>Components should be as modular as possible.</p>
+<p>3.5. Your components can define their own methods which should be defined as private. The only public methods should be the ones defined by the abstract interfaces.</p>
 </div>
 <div class="paragraph">
-<p>Please refer to existinng components for naming examples, please use the same names if possible.</p>
+<p>3.6. Processing methods should not pass control or configuration parameters, but only the parameters representing the input and output dataflow of the component. If a parameter does not have vocation to change at each pass of the pipeline, this parameter must be moved as a private attribute of the component.</p>
 </div>
 <div class="paragraph">
-<p>Components can use parameters thanks to a XML configuration file.</p>
+<p>3.7. All methods defined by the abstract interface you are inheriting must be implemented in your component.</p>
+</div>
+<div class="paragraph">
+<p>3.8. Your component should inherit from ConfigurableBase if you want to configure it thanks to an external file (please refer to other components, for instance ImageFilter). So you won&#8217;t have to recompile your pipeline if you want to change the configuration of its components.</p>
+</div>
+<div class="paragraph">
+<p>example :<br></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="cpp">SolARImageFilterBinaryOpencv::SolARImageFilterBinaryOpencv():ConfigurableBase(xpcf::toUUID&lt;SolARImageFilterBinaryOpencv&gt;())
+{
+    addInterface&lt;api::image::IImageFilter&gt;(<span class="local-variable">this</span>);
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>3.9. If you want to initialize the value of component attributes at runtime thanks to an external file, you need to wrap it to a naming string. Thus, you will be able to configure your pipeline by editing an external file defining this attribute by its given name.
+example :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="cpp">    params-&gt;wrapInteger(<span class="string"><span class="delimiter">&quot;</span><span class="content">min</span><span class="delimiter">&quot;</span></span>, min);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>3.10. There is no need to implement a setParameter and a getParameter method in a SolAR component. To configure a parameter at runtime in your code, get the wanted property of your component through the IConfigurable interface and set it to the desired value.</p>
+</div>
+<div class="paragraph">
+<p>example :<br></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="cpp"><span class="directive">auto</span> rIConfigurable_imageFilterBinary = imageFilterBinary-&gt;bindTo&lt;xpcf::IConfigurable&gt;();
+<span class="directive">auto</span> imageFilterBinary_property=rIConfigurable_imageFilterBinary-&gt;getProperty(<span class="string"><span class="delimiter">&quot;</span><span class="content">min</span><span class="delimiter">&quot;</span></span>);
+imageFilterBinary_property-&gt;setIntegerValue(-<span class="integer">1</span>);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>3.11. All Dataflow parameters of a processing method that are not modified by the function must be <em>const</em>.</p>
+</div>
+<div class="paragraph">
+<p>3.12. All Dataflow parameters of a processing method that are SRef and that can be instantiated by the method must be a reference on a <em>SRef</em>, otherwise do not use a reference on a <em>SRef</em>. In the following example, the ouptut image of a ImageConvertor can be auotmatically instantiated according to the size of the input image:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="cpp"><span class="directive">virtual</span> FrameworkReturnCode convert(SRef&lt;Image&gt; imgSrc, SRef&lt;Image&gt;&amp; imgDst) = <span class="integer">0</span>;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>3.13. The namespace of your component must respect the following form: <em>modules::module_name</em>, where <em>module_name</em> refers to the name of your module.</p>
+</div>
+<div class="paragraph">
+<p>3.14. The namespaces of your component should use lower case.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Please refer to existing SolAR component implementations and take them as examples.
+</td>
+</tr>
+</table>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -767,33 +866,47 @@ Please refer to existing SolAR components and take them as examples.
 </tr>
 </table>
 </div>
-<div class="sect2">
-<h3 id="methods"><a class="anchor" href="#methods"></a><a class="link" href="#methods">Methods</a></h3>
 <div class="paragraph">
-<p>Processing methods shoud not take configuration parameters.
-The parameters should only be used at the component creation or init.</p>
+<p>3.15. Each parameter of each method of your component should be tested in your code, to detect bad parameter values. When an incorrect value is detected, the method should return an errorcode. This will help developers for implementing and debugging their pose estimation solution.</p>
 </div>
 <div class="paragraph">
-<p>Your methods should have explicit names (that means, that ideally, we do not need to read documentation to understands what it is for).</p>
+<p>3.16. Each component should have a corresponding "simple" unit test . The unit test should test component creation, configuration, and simple use of this component, with normal cases. The unit test should be commented, to help other contributors to understand your component.</p>
 </div>
 <div class="paragraph">
-<p>There is no need to implement a setParameter and a getParameter method in a SolAR component.</p>
+<p>3.17. Each component should have unit tests with limit cases, as bad instanciation (bad values of attributes), bad use of components (for example: try to load an image that does not exist), and test every error code of each method.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="method_parameters"><a class="anchor" href="#method_parameters"></a><a class="link" href="#method_parameters">Method parameters</a></h3>
+<h3 id="modules"><a class="anchor" href="#modules"></a><a class="link" href="#modules">Modules</a></h3>
 <div class="paragraph">
-<p>The parameters should be passed thanks to XML files (see XPCF documentation).</p>
+<p>4.1. A Module is a group of components with the same implementation basis :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>same third parties</p>
+</li>
+<li>
+<p>same authors</p>
+</li>
+<li>
+<p>same Intellectual Properties</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p>Please indicate when a parameter is not modified by the method, thanks to the "const" type.</p>
+<p>4.2. For each module, there should be a XML file describing the components with their UID. Please refer to SolarModuleTools example, and XPCF documentation to do it.</p>
 </div>
 <div class="paragraph">
-<p>Please don&#8217;t use &amp; in parameter when the element is not instantiated in the method.</p>
+<p>4.3. In each module, there should be a Module unit test project, gathering the unit tests of all components.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="attributes"><a class="anchor" href="#attributes"></a><a class="link" href="#attributes">Attributes</a></h3>
+<h3 id="pipepline_management"><a class="anchor" href="#pipepline_management"></a><a class="link" href="#pipepline_management">Pipepline Management</a></h3>
+<div class="paragraph">
+<p>SolAR architecture is based on a pipeline manager called XPCF and implemented by b&lt;&gt;com.
+Please refer to the XPCF github project link: <a href="https://github.com/b-com-software-basis/xpcf" class="bare">https://github.com/b-com-software-basis/xpcf</a> [XPCF GITHUB repository] to know more about XPCF.</p>
+</div>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -801,52 +914,11 @@ The parameters should only be used at the component creation or init.</p>
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Components should not store data. Please use datastructure for data.
+Please be aware that components must be interoperable thanks to XPCF, and that is why thoses guidelines should be used.
 </td>
 </tr>
 </table>
 </div>
-<div class="paragraph">
-<p>Attributes should be configured thanks to the XPCF philosophy.</p>
-</div>
-<div class="paragraph">
-<p>Components should be connectable .</p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="data_structure"><a class="anchor" href="#data_structure"></a><a class="link" href="#data_structure">Data Structure</a></h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Data structure should be implemented for data storage.
-As pose estimation computes a lot of data, please take care of optimizing data usage and make tehe data structure as modular as possible.</p>
-</div>
-<div class="paragraph">
-<p>Please keep in mind that datasrtucure should be interoperable</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="namespaces"><a class="anchor" href="#namespaces"></a><a class="link" href="#namespaces">Namespaces</a></h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Namespaces should use lower case.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="pipepline_management"><a class="anchor" href="#pipepline_management"></a><a class="link" href="#pipepline_management">Pipepline Management</a></h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>SolAR architecture is based on a pipeline manager called XPCF and implemented by b&lt;&gt;com.
-Please refer to the XPCF github project link: <a href="https://github.com/b-com-software-basis/xpcf" class="bare">https://github.com/b-com-software-basis/xpcf</a> [XPCF GITHUB repository] to know more about XPCF.</p>
-</div>
-<div class="paragraph">
-<p>Please be aware that components must be interoperable thanks to XPCF, and that is why thoses guidelines should be used.</p>
-</div>
-<div class="paragraph">
-<p>Thanks to XPCF, it is very easy to configure components, to interconnect them to create a pipeline, and to create a SolAR plugin for Unity.</p>
 </div>
 </div>
 </div>
@@ -914,14 +986,11 @@ Please refer to the XPCF github project link: <a href="https://github.com/b-com-
 <div class="sect1">
 <h2 id="coding_rules"><a class="anchor" href="#coding_rules"></a><a class="link" href="#coding_rules">coding rules</a></h2>
 <div class="sectionbody">
-
-</div>
-</div>
-<div class="sect1">
-<h2 id="project_organization"><a class="anchor" href="#project_organization"></a><a class="link" href="#project_organization">Project organization</a></h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="project_organization"><a class="anchor" href="#project_organization"></a><a class="link" href="#project_organization">Project organization</a></h3>
 <div class="paragraph">
 <p>In order to ease the source code management, we should follow the same hierarchy for each module. A module typically becomes one dynamic or static library (dll or lib). To make the code more accessible and friendly for everyone, developers should follow the rules below:</p>
+</div>
 </div>
 <div class="sect2">
 <h3 id="files"><a class="anchor" href="#files"></a><a class="link" href="#files">Files</a></h3>
@@ -954,11 +1023,8 @@ See <a href="#naming_conventions">Naming conventions</a> for naming conventions.
 </tbody>
 </table>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="c_c_coding_rules"><a class="anchor" href="#c_c_coding_rules"></a><a class="link" href="#c_c_coding_rules">C / C++ Coding Rules</a></h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="c_c_coding_rules"><a class="anchor" href="#c_c_coding_rules"></a><a class="link" href="#c_c_coding_rules">C / C++ Coding Rules</a></h3>
 <div class="admonitionblock tip">
 <table>
 <tr>
@@ -990,6 +1056,7 @@ TIP: Write here if you validate with your name and your comment
 </div>
 <div class="paragraph">
 <p>That’s why the following rules makes sense in our environment and, in order to facilitate porting and code review, developers must use the set of rules defined below. An example of code and header can be found in annexes A1 and A2.</p>
+</div>
 </div>
 <div class="sect2">
 <h3 id="language_features"><a class="anchor" href="#language_features"></a><a class="link" href="#language_features">Language features</a></h3>
