@@ -379,7 +379,7 @@ window.cookieconsent.initialise({
 
 		<li >
 			<a href="/use_it/api/">
-				API
+				API 0.5.0
 				
 			</a>
 		</li>
@@ -627,7 +627,7 @@ This encompasses the SolAR framework and the GUI interface and unless otherwise 
 </div>
 </div>
 <div class="paragraph">
-<p>or if the processing method need to take as input our output parameter an object or an inherited object, as for instance:</p>
+<p>or if the processing method can take as input our output parameter an object or an inherited object, as for instance:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -686,7 +686,137 @@ For instance for class documentation:<br></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="data_structures"><a class="anchor" href="#data_structures"></a><a class="link" href="#data_structures">Data Structures</a></h3>
+<h3 id="modules_and_components"><a class="anchor" href="#modules_and_components"></a><a class="link" href="#modules_and_components">Modules and Components</a></h3>
+<div class="paragraph">
+<p>Modules are the placeholders for the components. Basically, they are defined to reflect a particular type of implementation, based e.g. on a particular technology or a particular provider, etc &#8230;&#8203;</p>
+</div>
+<div class="paragraph">
+<p>A component cannot exist by itself. It must be included in a module but a module may contain only one component if needed.</p>
+</div>
+<div class="paragraph">
+<p>They are are few rules that modules and components must conform to in order to be usable by SolAR. This is explained in the following.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Modules are delivered as shared libraries (windows or linux)</p>
+</li>
+<li>
+<p>The recommended naming convention is  Module<em>Name</em>, where name should reflect a characteristic of the module, e.g. ModuleOpencvFree.</p>
+</li>
+<li>
+<p>Components are declared inside a namespace according to the following naming convention : SolAR::MODULES::NAMEOFMODULE</p>
+</li>
+<li>
+<p>A 128-bit UUID (Universal Unique IDentifier) shall be associated to every module</p>
+</li>
+<li>
+<p>A 128-bit UUID (Universal Unique IDentifier) shall be associated to every component included in a module</p>
+</li>
+<li>
+<p>A Module exports its components via a dedicated Export API defined in a header file named NameOfModuleAPI.h, such :</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>/**
+ * Copyright and license notice ......
+ */
+
+#ifndef NAME_API_H
+    #define NAMEOFMODULE_API_H
+    #if _WIN32
+        #ifdef NameOfModule_API_DLLEXPORT
+            #define NAMEOFMODULE_EXPORT_API __declspec(dllexport)
+        #else //NameOfModule_API_DLLEXPORT
+            #define NAMEOFMODULE_EXPORT_API __declspec(dllimport)
+        #endif //NameOfModule_API_DLLEXPORT
+    #else //_WIN32
+        #define NAMEOFMODULE_EXPORT_API
+    #endif //_WIN32
+    #include "NameOfModule_traits.h"
+#endif //NAMEOFMODULE_API_H</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>and where 'NameOfModule_traits.h'  exposes the list of components contained in the module. Follows a generic example of this file.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="c"><span class="preprocessor">#define</span> NAMEOFMODULE_TRAITS_H
+
+<span class="preprocessor">#include</span> <span class="include">&quot;xpcf/component/ComponentTraits.h&quot;</span>
+
+namespace SolAR {
+namespace MODULES {
+namespace NAME {
+class Component1;
+class Component2;
+}
+}
+}
+
+XPCF_DEFINE_COMPONENT_TRAITS(SolAR::MODULES::NAME::Component1,
+                             <span class="string"><span class="delimiter">&quot;</span><span class="content">aaaaaaaa-bbbb-cccc-dddd-eeeeeeee</span><span class="delimiter">&quot;</span></span>,
+                             <span class="string"><span class="delimiter">&quot;</span><span class="content">SolAR::MODULES::NAME::Component1 definition</span><span class="delimiter">&quot;</span></span>)
+
+
+XPCF_DEFINE_COMPONENT_TRAITS(SolAR::MODULES::NAME::Component1,
+                             <span class="string"><span class="delimiter">&quot;</span><span class="content">ffffffff-gggg-hhhh-iiii-jjjjjjjj</span><span class="delimiter">&quot;</span></span>,
+                              <span class="string"><span class="delimiter">&quot;</span><span class="content">SolAR::MODULES::NAME::Component2 definition</span><span class="delimiter">&quot;</span></span>)
+
+
+<span class="preprocessor">#endif</span> <span class="comment">// NAMEOFMODULE_TRAITS_H</span></code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>There will be a code file named NameOfModule.cpp that shall contain the Module UUID as well as which components are included and exposed in the module. The syntax is as follows.<br>
+NameOfModule.cpp:</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>#include "xpcf/module/ModuleFactory.h"
+
+#include "component1.h"
+#include "component2.h"
+
+namespace xpcf=org::bcom::xpcf;
+
+XPCF_DECLARE_MODULE("kkkkkkkk-llll-mmmm-nnnn-oooooooo", "ModuleName")
+
+
+extern "C" XPCF_MODULEHOOKS_API xpcf::XPCFErrorCode XPCF_getComponent(const boost::uuids::uuid&amp; componentUUID,SRef&lt;xpcf::IComponentIntrospect&gt;&amp; interfaceRef)
+{
+     xpcf::XPCFErrorCode errCode = xpcf::XPCFErrorCode::_FAIL;
+     errCode = xpcf::tryCreateComponent&lt;SolAR::MODULES::NAME::component1&gt;(componentUUID,interfaceRef);
+     if (errCode != xpcf::XPCFErrorCode::_SUCCESS)
+     {
+         errCode = xpcf::tryCreateComponent&lt;SolAR::MODULES::NAME::component2&gt;(componentUUID,interfaceRef);
+     }
+    return errCode;
+}
+
+XPCF_BEGIN_COMPONENTS_DECLARATION
+XPCF_ADD_COMPONENT(SolAR::MODULES::Name::component1)
+XPCF_ADD_COMPONENT(SolAR::MODULES::Name::component2)
+XPCF_END_COMPONENTS_DECLARATION</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In the above mentioned code, a two-component module is considered.</p>
+</div>
+<div class="paragraph">
+<p>Each component is implemented via a class (.cpp/.h).</p>
+</div>
+<div class="paragraph">
+<p>Components should be implemented for processing.
+It should take in parameters and deliver out components and data.</p>
+</div>
 <div class="paragraph">
 <p>2.1. Data structures should be implemented for the data flow, meaning the data that will be exchanged between components at runtime thanks to the processing methods of the components. To optimize vision pipelines developped thanks to the SolAR Framework, it is of real need to take care to data structure optimization (reduce the memory copy, favour a quick access to data, etc.)</p>
 </div>
