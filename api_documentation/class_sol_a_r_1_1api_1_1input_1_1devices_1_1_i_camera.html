@@ -129,12 +129,9 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <tr class="memitem:ab1b46c4dec4cd9ee198a6f977f7d7fbb"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera.html#ab1b46c4dec4cd9ee198a6f977f7d7fbb">getNextImage</a> (SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt; &amp;img)=0</td></tr>
 <tr class="memdesc:ab1b46c4dec4cd9ee198a6f977f7d7fbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fill the SRef img buffer with a new image captured by the camera device.  <a href="#ab1b46c4dec4cd9ee198a6f977f7d7fbb">More...</a><br /></td></tr>
 <tr class="separator:ab1b46c4dec4cd9ee198a6f977f7d7fbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a957c76b0b7c2b7f3d1da4a2340692d85"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera.html#a957c76b0b7c2b7f3d1da4a2340692d85">start</a> (uint32_t device_id)=0</td></tr>
-<tr class="memdesc:a957c76b0b7c2b7f3d1da4a2340692d85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start the acquisition device reference by its device_id.  <a href="#a957c76b0b7c2b7f3d1da4a2340692d85">More...</a><br /></td></tr>
-<tr class="separator:a957c76b0b7c2b7f3d1da4a2340692d85"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a274a13cf19dc3131432e6ea4f5ffbb1b"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera.html#a274a13cf19dc3131432e6ea4f5ffbb1b">start</a> (std::string inputFileName)=0</td></tr>
-<tr class="memdesc:a274a13cf19dc3131432e6ea4f5ffbb1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simulate the acquisition device by using a given video file.  <a href="#a274a13cf19dc3131432e6ea4f5ffbb1b">More...</a><br /></td></tr>
-<tr class="separator:a274a13cf19dc3131432e6ea4f5ffbb1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64862fc1b9c390d08bd28c56206b7961"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera.html#a64862fc1b9c390d08bd28c56206b7961">start</a> ()=0</td></tr>
+<tr class="memdesc:a64862fc1b9c390d08bd28c56206b7961"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start the acquisition device reference by its device_id.  <a href="#a64862fc1b9c390d08bd28c56206b7961">More...</a><br /></td></tr>
+<tr class="separator:a64862fc1b9c390d08bd28c56206b7961"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab46472c27381303122a4aae904a67b88"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab46472c27381303122a4aae904a67b88"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera.html#ab46472c27381303122a4aae904a67b88">setResolution</a> (<a class="el" href="struct_sol_a_r_1_1datastructure_1_1_sizei.html">Sizei</a> resolution)=0</td></tr>
 <tr class="memdesc:ab46472c27381303122a4aae904a67b88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the acquisition device image resolution. <br /></td></tr>
@@ -147,10 +144,6 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera.html#a447e3d03c2d6083e5083b83e5e1fe68f">setDistorsionParameters</a> (const CamDistortion &amp;distorsion_parameters)=0</td></tr>
 <tr class="memdesc:a447e3d03c2d6083e5083b83e5e1fe68f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the distorsion intrinsic camera parameters. <br /></td></tr>
 <tr class="separator:a447e3d03c2d6083e5083b83e5e1fe68f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3017638a0a172ddeec80e150e3c83b73"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3017638a0a172ddeec80e150e3c83b73"></a>
-virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera.html#a3017638a0a172ddeec80e150e3c83b73">loadCameraParameters</a> (const std::string &amp;filename)=0</td></tr>
-<tr class="memdesc:a3017638a0a172ddeec80e150e3c83b73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the intrinsic camera parameters from a given file. <br /></td></tr>
-<tr class="separator:a3017638a0a172ddeec80e150e3c83b73"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6e1a9ae23a133ab78d0dcdb8677ac5ab"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6e1a9ae23a133ab78d0dcdb8677ac5ab"></a>
 virtual <a class="el" href="struct_sol_a_r_1_1datastructure_1_1_sizei.html">Sizei</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera.html#a6e1a9ae23a133ab78d0dcdb8677ac5ab">getResolution</a> ()=0</td></tr>
 <tr class="memdesc:a6e1a9ae23a133ab78d0dcdb8677ac5ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the acquisition device image resolution. <br /></td></tr>
@@ -239,7 +232,7 @@ virtual <a class="el" href="struct_sol_a_r_1_1datastructure_1_1_sizei.html">Size
 
 </div>
 </div>
-<a class="anchor" id="a957c76b0b7c2b7f3d1da4a2340692d85"></a>
+<a class="anchor" id="a64862fc1b9c390d08bd28c56206b7961"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -249,8 +242,7 @@ virtual <a class="el" href="struct_sol_a_r_1_1datastructure_1_1_sizei.html">Size
         <tr>
           <td class="memname">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a> SolAR::api::input::devices::ICamera::start </td>
           <td>(</td>
-          <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>device_id</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -262,33 +254,6 @@ virtual <a class="el" href="struct_sol_a_r_1_1datastructure_1_1_sizei.html">Size
 </div><div class="memdoc">
 
 <p>Start the acquisition device reference by its device_id. </p>
-<dl class="section return"><dt>Returns</dt><dd>FrameworkReturnCode to track sucessful or failing event. </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="a274a13cf19dc3131432e6ea4f5ffbb1b"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a> SolAR::api::input::devices::ICamera::start </td>
-          <td>(</td>
-          <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>inputFileName</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Simulate the acquisition device by using a given video file. </p>
 <dl class="section return"><dt>Returns</dt><dd>FrameworkReturnCode to track sucessful or failing event. </dd></dl>
 
 </div>

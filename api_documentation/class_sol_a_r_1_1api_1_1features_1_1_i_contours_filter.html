@@ -126,9 +126,6 @@ Public Member Functions</h2></td></tr>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1features_1_1_i_contours_filter.html#a6662d40252af80f3a51f56442aef52be">~IContoursFilter</a> ()=default</td></tr>
 <tr class="memdesc:a6662d40252af80f3a51f56442aef52be"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sol_a_r_1_1api_1_1features_1_1_i_contours_filter.html" title="filters a set of contours ">IContoursFilter</a> default destructor. <br /></td></tr>
 <tr class="separator:a6662d40252af80f3a51f56442aef52be"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afce9a00edfff7d302312165ebc3037e9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1features_1_1_i_contours_filter.html#afce9a00edfff7d302312165ebc3037e9">setParameters</a> (float minContourLength)=0</td></tr>
-<tr class="memdesc:afce9a00edfff7d302312165ebc3037e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the minimum length of contours in pixels that will be filtered Any contours that will have a length in pixel less than this value will be removed from the input filters.  <a href="#afce9a00edfff7d302312165ebc3037e9">More...</a><br /></td></tr>
-<tr class="separator:afce9a00edfff7d302312165ebc3037e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acb3fcc0d14070b6ba89bac2d7089180f"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1features_1_1_i_contours_filter.html#acb3fcc0d14070b6ba89bac2d7089180f">filter</a> (const std::vector&lt; SRef&lt; Contour2Df &gt;&gt; &amp;inContours, std::vector&lt; SRef&lt; Contour2Df &gt;&gt; &amp;outContours)=0</td></tr>
 <tr class="memdesc:acb3fcc0d14070b6ba89bac2d7089180f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Filter a set of contours.  <a href="#acb3fcc0d14070b6ba89bac2d7089180f">More...</a><br /></td></tr>
 <tr class="separator:acb3fcc0d14070b6ba89bac2d7089180f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -174,38 +171,6 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">inContours</td><td>The contours to filter </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">outContours</td><td>The resulting vector of contours after filtering </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="afce9a00edfff7d302312165ebc3037e9"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void SolAR::api::features::IContoursFilter::setParameters </td>
-          <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>minContourLength</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Set the minimum length of contours in pixels that will be filtered Any contours that will have a length in pixel less than this value will be removed from the input filters. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">minContourLength</td><td>The minimum length in pixels of contours to remove </td></tr>
   </table>
   </dd>
 </dl>

@@ -1,3 +1,8 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$class_sol_a_r_1_1datastructure_1_1_keyframe.html" title="Specifies the Keyframe class. " alt="" coords="5,5,160,47"/>
+<area shape="rect" id="node2" href="$class_sol_a_r_1_1datastructure_1_1_point2_df.html" title="SolAR::datastructure\l::Point2Df" alt="" coords="116,5,271,47"/>
+<area shape="rect" id="node4" href="$class_sol_a_r_1_1datastructure_1_1_point2_di.html" title="SolAR::datastructure\l::Point2Di" alt="" coords="116,71,271,112"/>
+<area shape="rect" id="node5" href="$class_sol_a_r_1_1datastructure_1_1_point3_df.html" title="SolAR::datastructure\l::Point3Df" alt="" coords="116,136,271,177"/>
+<area shape="rect" id="node7" href="$class_sol_a_r_1_1datastructure_1_1_point3_di.html" title="SolAR::datastructure\l::Point3Di" alt="" coords="116,201,271,243"/>
+<area shape="rect" id="node3" href="$class_sol_a_r_1_1datastructure_1_1_keypoint.html" title="The Keypoint class. " alt="" coords="319,5,473,47"/>
+<area shape="rect" id="node6" href="$class_sol_a_r_1_1datastructure_1_1_cloud_point.html" title="The Cloudpoint class. " alt="" coords="319,136,473,177"/>
 </map>

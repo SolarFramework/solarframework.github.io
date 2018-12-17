@@ -122,24 +122,15 @@ Public Member Functions</h2></td></tr>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1map_1_1_i_mapper.html#acf0c6e21b8fb4d8f36adb7b8a99a36ca">~IMapper</a> ()</td></tr>
 <tr class="memdesc:acf0c6e21b8fb4d8f36adb7b8a99a36ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">~IMapper <br /></td></tr>
 <tr class="separator:acf0c6e21b8fb4d8f36adb7b8a99a36ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a14d20a24dc759b83d53d6869ce8d4c6f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a14d20a24dc759b83d53d6869ce8d4c6f"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>initMap</b> (SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keyframe.html">Keyframe</a> &gt; &amp;kframe_t0, SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keyframe.html">Keyframe</a> &gt; &amp;kframe_t1, std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">CloudPoint</a> &gt;&gt; &amp;new_cloud, std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_match.html">DescriptorMatch</a> &gt; &amp;matches)=0</td></tr>
-<tr class="separator:a14d20a24dc759b83d53d6869ce8d4c6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a32f2ad0445c4dc55e23b0f87b88b67c3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a32f2ad0445c4dc55e23b0f87b88b67c3"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>addNewKeyFrame</b> (const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keyframe.html">Keyframe</a> &gt; &amp;kFrame)=0</td></tr>
-<tr class="separator:a32f2ad0445c4dc55e23b0f87b88b67c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8b63de293cca13b6761c91a3027b1b4e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8b63de293cca13b6761c91a3027b1b4e"></a>
-virtual SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keyframe.html">Keyframe</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getCurrentKeyframe</b> (int idx)=0</td></tr>
-<tr class="separator:a8b63de293cca13b6761c91a3027b1b4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6cc4de7ee463c94c3232b684aeda5d33"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6cc4de7ee463c94c3232b684aeda5d33"></a>
+virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><b>update</b> (SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_map.html">Map</a> &gt; &amp;map, SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keyframe.html">Keyframe</a> &gt; newKeyframe, const std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">CloudPoint</a> &gt;&gt; &amp;newCloud={}, const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_match.html">DescriptorMatch</a> &gt; &amp;newPointsMatches={}, const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_match.html">DescriptorMatch</a> &gt; &amp;existingPointsMatches={})=0</td></tr>
+<tr class="separator:a6cc4de7ee463c94c3232b684aeda5d33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf3a21abd8edf311c844664a37089d5f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaf3a21abd8edf311c844664a37089d5f"></a>
+virtual std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keyframe.html">Keyframe</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getKeyframes</b> ()=0</td></tr>
+<tr class="separator:aaf3a21abd8edf311c844664a37089d5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9365a4bb27ca0c30e63e9f4e6b166275"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9365a4bb27ca0c30e63e9f4e6b166275"></a>
 virtual SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_map.html">Map</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getMap</b> ()=0</td></tr>
 <tr class="separator:a9365a4bb27ca0c30e63e9f4e6b166275"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a270bdf075c6b1c596d918f5e935b27a9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a270bdf075c6b1c596d918f5e935b27a9"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>associateReferenceKeyFrameToFrame</b> (SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_frame.html">Frame</a> &gt; frame)=0</td></tr>
-<tr class="separator:a270bdf075c6b1c596d918f5e935b27a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae35d7a89ea0ca6eea490bf6adba093ea"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae35d7a89ea0ca6eea490bf6adba093ea"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>isKeyFrameCandidate</b> (SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_frame.html">Frame</a> &gt; frame)=0</td></tr>
-<tr class="separator:ae35d7a89ea0ca6eea490bf6adba093ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The <a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1map_1_1_i_mapper.html" title="The IMapper class. ">IMapper</a> class. </p>

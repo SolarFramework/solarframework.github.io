@@ -130,15 +130,15 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1display_1_1_i3_d_overlay.html#a8f044c2cd80e3292fcf73b662183af43">setCameraParameters</a> (const CamCalibration &amp;intrinsic_parameters, const CamDistortion &amp;distorsion_parameters)=0</td></tr>
 <tr class="memdesc:a8f044c2cd80e3292fcf73b662183af43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the intrinsic parameters and distorsion of the camera. <br /></td></tr>
 <tr class="separator:a8f044c2cd80e3292fcf73b662183af43"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a446b37970ff3072433320ef07c85b5c1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1display_1_1_i3_d_overlay.html#a446b37970ff3072433320ef07c85b5c1">drawBox</a> (Transform3Df &amp;pose, const float sizeX, const float sizeY, const float sizeZ, const Transform3Df transform, SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt; displayImage)=0</td></tr>
-<tr class="memdesc:a446b37970ff3072433320ef07c85b5c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw a box on the given Image The box is displayed according to the pose given in parameter. The reference of the box is positionned on the center of its bottom face.  <a href="#a446b37970ff3072433320ef07c85b5c1">More...</a><br /></td></tr>
-<tr class="separator:a446b37970ff3072433320ef07c85b5c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a619ca966d10c425b43b0e835d0baa75b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1display_1_1_i3_d_overlay.html#a619ca966d10c425b43b0e835d0baa75b">draw</a> (const Transform3Df &amp;pose, SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt; displayImage)=0</td></tr>
+<tr class="memdesc:a619ca966d10c425b43b0e835d0baa75b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw a box on the given Image The box is displayed according to the pose given in parameter. The reference of the box is positionned on the center of its bottom face.  <a href="#a619ca966d10c425b43b0e835d0baa75b">More...</a><br /></td></tr>
+<tr class="separator:a619ca966d10c425b43b0e835d0baa75b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Drawing interface to overlay 3D information on top of an image. </p>
 <p>This class provides drawing method to overlay 3D debug informations on top of an image. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a446b37970ff3072433320ef07c85b5c1"></a>
+<a class="anchor" id="a619ca966d10c425b43b0e835d0baa75b"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -146,34 +146,10 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void SolAR::api::display::I3DOverlay::drawBox </td>
+          <td class="memname">virtual void SolAR::api::display::I3DOverlay::draw </td>
           <td>(</td>
-          <td class="paramtype">Transform3Df &amp;&#160;</td>
+          <td class="paramtype">const Transform3Df &amp;&#160;</td>
           <td class="paramname"><em>pose</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const float&#160;</td>
-          <td class="paramname"><em>sizeX</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const float&#160;</td>
-          <td class="paramname"><em>sizeY</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const float&#160;</td>
-          <td class="paramname"><em>sizeZ</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const Transform3Df&#160;</td>
-          <td class="paramname"><em>transform</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -198,10 +174,6 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">Transfomr3Df</td><td>The pose of the camera from which the box is viewed. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">sizeX</td><td>The size of the box along the X axis in world unit. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">sizeY</td><td>The size of the box along the Y axis in world unit. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">sizeZ</td><td>The size of the box along the Z axis in world unit. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">transform</td><td>The transform (position and ortation) of the box according to the world coordinate system </td></tr>
     <tr><td class="paramdir">[in,out]</td><td class="paramname">displayImage</td><td>The image on which the box will be drawn </td></tr>
   </table>
   </dd>

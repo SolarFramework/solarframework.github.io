@@ -91,7 +91,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="class_sol_a_r_1_1datastructure_1_1_frame-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">SolAR::datastructure::Frame Class Reference</div>  </div>
@@ -102,59 +102,82 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
  <a href="class_sol_a_r_1_1datastructure_1_1_frame.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_frame_8h_source.html">Frame.h</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for SolAR::datastructure::Frame:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_sol_a_r_1_1datastructure_1_1_frame__inherit__graph.png" border="0" usemap="#_sol_a_r_1_1datastructure_1_1_frame_inherit__map" alt="Inheritance graph"/></div>
+<map name="_sol_a_r_1_1datastructure_1_1_frame_inherit__map" id="_sol_a_r_1_1datastructure_1_1_frame_inherit__map">
+<area shape="rect" id="node2" href="class_sol_a_r_1_1datastructure_1_1_keyframe.html" title="Specifies the Keyframe class. " alt="" coords="5,95,160,136"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a3b68c2eb3814e5f6d727885b5ad4b667"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3b68c2eb3814e5f6d727885b5ad4b667"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1datastructure_1_1_frame.html#a3b68c2eb3814e5f6d727885b5ad4b667">Frame</a> ()</td></tr>
-<tr class="memdesc:a3b68c2eb3814e5f6d727885b5ad4b667"><td class="mdescLeft">&#160;</td><td class="mdescRight">~Frame <br /></td></tr>
-<tr class="separator:a3b68c2eb3814e5f6d727885b5ad4b667"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4f751a43251d8f45f386c29110c2d01f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4f751a43251d8f45f386c29110c2d01f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>InitKeyPointsAndDescriptors</b> (std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html">Keypoint</a> &gt;&gt; keypoints, SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_buffer.html">DescriptorBuffer</a> &gt; descriptors)</td></tr>
-<tr class="separator:a4f751a43251d8f45f386c29110c2d01f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a63609d5b197135a4bfbc92ff6b0d9a0e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a63609d5b197135a4bfbc92ff6b0d9a0e"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setReferenceKeyFrame</b> (SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keyframe.html">Keyframe</a> &gt; frame)</td></tr>
-<tr class="separator:a63609d5b197135a4bfbc92ff6b0d9a0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad6e94be90693a8852f2e90e589425212"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad6e94be90693a8852f2e90e589425212"></a>
-SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keyframe.html">Keyframe</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getReferenceKeyFrame</b> ()</td></tr>
-<tr class="separator:ad6e94be90693a8852f2e90e589425212"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab39cb26f98cbfabf7798cb2ae90c1ffe"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab39cb26f98cbfabf7798cb2ae90c1ffe"></a>
-SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_buffer.html">DescriptorBuffer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getDescriptors</b> ()</td></tr>
-<tr class="separator:ab39cb26f98cbfabf7798cb2ae90c1ffe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa8e2927f489ff0914db5d36736119d62"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa8e2927f489ff0914db5d36736119d62"></a>
-std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html">Keypoint</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getKeyPoints</b> ()</td></tr>
-<tr class="separator:aa8e2927f489ff0914db5d36736119d62"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abb08f3d6ca2873ebdba810b80f7fc5a6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abb08f3d6ca2873ebdba810b80f7fc5a6"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setNumberOfFramesSinceLastKeyFrame</b> (unsigned int nbFrames)</td></tr>
-<tr class="separator:abb08f3d6ca2873ebdba810b80f7fc5a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a54eb8c0b4b5c7ebb825c0dcc98f46a2b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a54eb8c0b4b5c7ebb825c0dcc98f46a2b"></a>
-unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>getNumberOfFramesSinceLastKeyFrame</b> () const </td></tr>
-<tr class="separator:a54eb8c0b4b5c7ebb825c0dcc98f46a2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a025f9e522ad94fc13c25dea745261815"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a025f9e522ad94fc13c25dea745261815"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setUnknownMatchesWithReferenceKeyFrame</b> (std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_match.html">DescriptorMatch</a> &gt; &amp;matches)</td></tr>
-<tr class="separator:a025f9e522ad94fc13c25dea745261815"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a89655f400f0e2cf1ee111482fe0ce4dd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a89655f400f0e2cf1ee111482fe0ce4dd"></a>
-std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_match.html">DescriptorMatch</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getUnknownMatchesWithReferenceKeyFrame</b> ()</td></tr>
-<tr class="separator:a89655f400f0e2cf1ee111482fe0ce4dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acaf4b853b787c90a6e34687be6fdf79c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acaf4b853b787c90a6e34687be6fdf79c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setKnownMatchesWithReferenceKeyFrame</b> (std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_match.html">DescriptorMatch</a> &gt; &amp;matches)</td></tr>
-<tr class="separator:acaf4b853b787c90a6e34687be6fdf79c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa460d1a998ad863b07c851a61672df77"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa460d1a998ad863b07c851a61672df77"></a>
-std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_match.html">DescriptorMatch</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getKnownMatchesWithReferenceKeyFrame</b> ()</td></tr>
-<tr class="separator:aa460d1a998ad863b07c851a61672df77"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8e8b6d33d74af7fd02f41b899561648e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8e8b6d33d74af7fd02f41b899561648e"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>addCommonMapPointsWithReferenceKeyFrame</b> (std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">CloudPoint</a> &gt;&gt; &amp;points)</td></tr>
-<tr class="separator:a8e8b6d33d74af7fd02f41b899561648e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5eefa7fc947e6a2c70e04d983b9498e3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5eefa7fc947e6a2c70e04d983b9498e3"></a>
-std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">CloudPoint</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getCommonMapPointsWithReferenceKeyFrame</b> ()</td></tr>
-<tr class="separator:a5eefa7fc947e6a2c70e04d983b9498e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a877fda875fdf6dc5037eda05312a5344"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a877fda875fdf6dc5037eda05312a5344"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Frame</b> (const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_frame.html">Frame</a> &gt; frame)</td></tr>
+<tr class="separator:a877fda875fdf6dc5037eda05312a5344"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c48c53e043ccf8b7bc1bac87f4177d8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6c48c53e043ccf8b7bc1bac87f4177d8"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Frame</b> (const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keyframe.html">Keyframe</a> &gt; keyframe)</td></tr>
+<tr class="separator:a6c48c53e043ccf8b7bc1bac87f4177d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5cae7a14eed325754aa6804b8fc7607"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae5cae7a14eed325754aa6804b8fc7607"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Frame</b> (const std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html">Keypoint</a> &gt;&gt; keypoints, const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_buffer.html">DescriptorBuffer</a> &gt; descriptors, const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt; view, const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keyframe.html">Keyframe</a> &gt; refKeyframe, const Transform3Df pose=Transform3Df::Identity())</td></tr>
+<tr class="separator:ae5cae7a14eed325754aa6804b8fc7607"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe035b60c54f5b784ffc43ad402c4296"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abe035b60c54f5b784ffc43ad402c4296"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Frame</b> (const std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html">Keypoint</a> &gt;&gt; keypoints, const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_buffer.html">DescriptorBuffer</a> &gt; descriptors, const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt; view, const Transform3Df pose=Transform3Df::Identity())</td></tr>
+<tr class="separator:abe035b60c54f5b784ffc43ad402c4296"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae86cee50c5f1957e8e96493a6cd28bdc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae86cee50c5f1957e8e96493a6cd28bdc"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1datastructure_1_1_frame.html#ae86cee50c5f1957e8e96493a6cd28bdc">~Frame</a> ()=default</td></tr>
+<tr class="memdesc:ae86cee50c5f1957e8e96493a6cd28bdc"><td class="mdescLeft">&#160;</td><td class="mdescRight">~Frame <br /></td></tr>
+<tr class="separator:ae86cee50c5f1957e8e96493a6cd28bdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00c1fe505d3181207f769d1fe370f88e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a00c1fe505d3181207f769d1fe370f88e"></a>
+SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getView</b> ()</td></tr>
+<tr class="separator:a00c1fe505d3181207f769d1fe370f88e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1afba126cb9a17652e9fff43153cac10"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1afba126cb9a17652e9fff43153cac10"></a>
+Transform3Df&#160;</td><td class="memItemRight" valign="bottom"><b>getPose</b> ()</td></tr>
+<tr class="separator:a1afba126cb9a17652e9fff43153cac10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaaf9bfeb5354ee0504b97350651707ad"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaaf9bfeb5354ee0504b97350651707ad"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setPose</b> (Transform3Df &amp;pose)</td></tr>
+<tr class="separator:aaaf9bfeb5354ee0504b97350651707ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a949ea18e22afa854b685d72132f5db52"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a949ea18e22afa854b685d72132f5db52"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setReferenceKeyframe</b> (SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keyframe.html">Keyframe</a> &gt; keyframe)</td></tr>
+<tr class="separator:a949ea18e22afa854b685d72132f5db52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afdd94459b9242fbe51f811263162eee2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afdd94459b9242fbe51f811263162eee2"></a>
+SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keyframe.html">Keyframe</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getReferenceKeyframe</b> ()</td></tr>
+<tr class="separator:afdd94459b9242fbe51f811263162eee2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3250ee9382063907a6de117f5c6e3e1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae3250ee9382063907a6de117f5c6e3e1"></a>
+SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_buffer.html">DescriptorBuffer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getDescriptors</b> () const </td></tr>
+<tr class="separator:ae3250ee9382063907a6de117f5c6e3e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1c13a9c3aba313d11cea895f0f717de"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab1c13a9c3aba313d11cea895f0f717de"></a>
+std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html">Keypoint</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getKeypoints</b> () const </td></tr>
+<tr class="separator:ab1c13a9c3aba313d11cea895f0f717de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fac4998dc35e1d353791bb1dd5bb809"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5fac4998dc35e1d353791bb1dd5bb809"></a>
+std::map&lt; unsigned int, unsigned int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getVisibleKeypoints</b> ()</td></tr>
+<tr class="separator:a5fac4998dc35e1d353791bb1dd5bb809"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d71ac39935094611994ae7634356347"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3d71ac39935094611994ae7634356347"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>addVisibleKeypoints</b> (const std::map&lt; unsigned int, unsigned int &gt; &amp;kpVisibility)</td></tr>
+<tr class="separator:a3d71ac39935094611994ae7634356347"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
 <tr class="memitem:a3fcc0e8a8cd147266ddb1b5da4a1be25"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3fcc0e8a8cd147266ddb1b5da4a1be25"></a>
 Transform3Df&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1datastructure_1_1_frame.html#a3fcc0e8a8cd147266ddb1b5da4a1be25">m_pose</a></td></tr>
 <tr class="memdesc:a3fcc0e8a8cd147266ddb1b5da4a1be25"><td class="mdescLeft">&#160;</td><td class="mdescRight">pose of current frame <br /></td></tr>
 <tr class="separator:a3fcc0e8a8cd147266ddb1b5da4a1be25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e2493e61b80d39f04dc59b30fcc6774"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4e2493e61b80d39f04dc59b30fcc6774"></a>
+SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_view</b></td></tr>
+<tr class="separator:a4e2493e61b80d39f04dc59b30fcc6774"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a492cd31c12df599e7a2a830ae8b246b5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a492cd31c12df599e7a2a830ae8b246b5"></a>
+SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keyframe.html">Keyframe</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_referenceKeyFrame</b></td></tr>
+<tr class="separator:a492cd31c12df599e7a2a830ae8b246b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af890bae30fe63433d0a04a79aea1d9d9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af890bae30fe63433d0a04a79aea1d9d9"></a>
+SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_buffer.html">DescriptorBuffer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_descriptors</b></td></tr>
+<tr class="separator:af890bae30fe63433d0a04a79aea1d9d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb407ff8f8571d5f3227feae414f03a5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acb407ff8f8571d5f3227feae414f03a5"></a>
+std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html">Keypoint</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_keypoints</b></td></tr>
+<tr class="separator:acb407ff8f8571d5f3227feae414f03a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad67a7b69d3984f58104d0c399dde6d00"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad67a7b69d3984f58104d0c399dde6d00"></a>
+std::map&lt; unsigned int, unsigned int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_kpVisibility</b></td></tr>
+<tr class="separator:ad67a7b69d3984f58104d0c399dde6d00"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Specifies the frame class. </p>

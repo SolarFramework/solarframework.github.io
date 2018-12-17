@@ -91,7 +91,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="class_sol_a_r_1_1api_1_1features_1_1_i_s_b_pattern_re_indexer-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">SolAR::api::features::ISBPatternReIndexer Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
@@ -127,18 +126,9 @@ Public Member Functions</h2></td></tr>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1features_1_1_i_s_b_pattern_re_indexer.html#a18e882b911df9168a84057fb60b1c972">~ISBPatternReIndexer</a> ()=default</td></tr>
 <tr class="memdesc:a18e882b911df9168a84057fb60b1c972"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sol_a_r_1_1api_1_1features_1_1_i_s_b_pattern_re_indexer.html" title="gives both the 4 corners of a pattern in its reference coordinate system (pixels, cells...">ISBPatternReIndexer</a> default destructor. <br /></td></tr>
 <tr class="separator:a18e882b911df9168a84057fb60b1c972"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a91a7e31563b42f049ed7e2f262f0246f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1features_1_1_i_s_b_pattern_re_indexer.html#a91a7e31563b42f049ed7e2f262f0246f">setParameters</a> (const int sbPatternSize)=0</td></tr>
-<tr class="memdesc:a91a7e31563b42f049ed7e2f262f0246f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the squared binary pattern size corresponding to horizontal or vertical cells As this pattern is squared, it has the same number of vertical and horizontal cells (without marker borders)  <a href="#a91a7e31563b42f049ed7e2f262f0246f">More...</a><br /></td></tr>
-<tr class="separator:a91a7e31563b42f049ed7e2f262f0246f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa3c399ab7e702ca43fe93baf46eb55e4"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1features_1_1_i_s_b_pattern_re_indexer.html#aa3c399ab7e702ca43fe93baf46eb55e4">reindex</a> (const std::vector&lt; SRef&lt; Contour2Df &gt;&gt; &amp;candidateContours, const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_match.html">DescriptorMatch</a> &gt; &amp;matches, std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point2_df.html">Point2Df</a> &gt;&gt; &amp;patternPoints, std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point2_df.html">Point2Df</a> &gt;&gt; &amp;imagePoints)=0</td></tr>
 <tr class="memdesc:aa3c399ab7e702ca43fe93baf46eb55e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">From a set of Squared Binary Pattern matches as well as the contours of the candidate patterns extracted from the current image, this method provides both the 4 corners of a pattern in its reference coordinate system (pixels, cells, etc.) and the 4 corners in pixels of this pattern in the current image.  <a href="#aa3c399ab7e702ca43fe93baf46eb55e4">More...</a><br /></td></tr>
 <tr class="separator:aa3c399ab7e702ca43fe93baf46eb55e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
-Protected Attributes</h2></td></tr>
-<tr class="memitem:acd19f917c8f4065fe3aba124db80885a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acd19f917c8f4065fe3aba124db80885a"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>m_sbPatternSize</b></td></tr>
-<tr class="separator:acd19f917c8f4065fe3aba124db80885a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>gives both the 4 corners of a pattern in its reference coordinate system (pixels, cells, etc.) and the 4 corners in pixels of this pattern in the current image. </p>
@@ -198,38 +188,6 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>m_sbPatternSize</b></t
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>FrameworkReturnCode::<em>SUCCESS</em> if reindexing succeed, else FrameworkReturnCode::_ERROR. </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="a91a7e31563b42f049ed7e2f262f0246f"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void SolAR::api::features::ISBPatternReIndexer::setParameters </td>
-          <td>(</td>
-          <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>sbPatternSize</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Set the squared binary pattern size corresponding to horizontal or vertical cells As this pattern is squared, it has the same number of vertical and horizontal cells (without marker borders) </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">patternSize</td><td>The number of horizontal or vertical cells of the squared binary pattern (without marker borders). </td></tr>
-  </table>
-  </dd>
-</dl>
 
 </div>
 </div>

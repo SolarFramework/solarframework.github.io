@@ -12,7 +12,7 @@ var searchData=
   ['getdistorsionparameters',['getDistorsionParameters',['../class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera.html#a144c0987c5316055135fe2640713052d',1,'SolAR::api::input::devices::ICamera']]],
   ['getgyroscopedata',['getGyroscopeData',['../class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_i_m_u.html#ae97caf1426fc7caf1d0b298a7cb325b4',1,'SolAR::api::input::devices::IIMU']]],
   ['getheight',['getHeight',['../class_sol_a_r_1_1datastructure_1_1_image.html#a352317f25ea4c2ed50eb9e8cb42b0452',1,'SolAR::datastructure::Image']]],
-  ['getimage',['getImage',['../class_sol_a_r_1_1api_1_1input_1_1files_1_1_i_marker2_d_natural_image.html#a786fd4099e01aeeb7cea48f9e5542281',1,'SolAR::api::input::files::IMarker2DNaturalImage']]],
+  ['getimage',['getImage',['../class_sol_a_r_1_1api_1_1image_1_1_i_image_loader.html#a1e0dd0d2174d6c7b037c7af7de74f92b',1,'SolAR::api::image::IImageLoader::getImage()'],['../class_sol_a_r_1_1api_1_1input_1_1files_1_1_i_marker2_d_natural_image.html#a786fd4099e01aeeb7cea48f9e5542281',1,'SolAR::api::input::files::IMarker2DNaturalImage::getImage()']]],
   ['getimagelayout',['getImageLayout',['../class_sol_a_r_1_1datastructure_1_1_image.html#a287900f59674e99d58462fce8681bb7f',1,'SolAR::datastructure::Image']]],
   ['getindexindescriptora',['getIndexInDescriptorA',['../class_sol_a_r_1_1datastructure_1_1_descriptor_match.html#a6d40275b3986140349b973bf2c5a9e4f',1,'SolAR::datastructure::DescriptorMatch']]],
   ['getindexindescriptorb',['getIndexInDescriptorB',['../class_sol_a_r_1_1datastructure_1_1_descriptor_match.html#a404a24462c86ceb7f4dd307d51251af2',1,'SolAR::datastructure::DescriptorMatch']]],
@@ -35,5 +35,6 @@ var searchData=
   ['getsolarframeworkversion',['getSolARFrameworkVersion',['../namespace_sol_a_r.html#a3e98adc368faae953d02467efb008ba6',1,'SolAR']]],
   ['gettype',['getType',['../class_sol_a_r_1_1api_1_1features_1_1_i_keypoint_detector.html#af73c58d92a1bdf2e1cd1abbecd187c12',1,'SolAR::api::features::IKeypointDetector']]],
   ['gettypestring',['getTypeString',['../class_sol_a_r_1_1api_1_1features_1_1_i_descriptors_extractor.html#a6d913ea7f87b3d83bd44a88a0aaa6ba1',1,'SolAR::api::features::IDescriptorsExtractor']]],
+  ['getvisibility',['getVisibility',['../class_sol_a_r_1_1datastructure_1_1_cloud_point.html#a1789f810e37b15576bdeb5228d401986',1,'SolAR::datastructure::CloudPoint']]],
   ['getwidth',['getWidth',['../class_sol_a_r_1_1datastructure_1_1_image.html#a5f22a750f32e0061d3a0220f3ee12215',1,'SolAR::datastructure::Image']]]
 ];

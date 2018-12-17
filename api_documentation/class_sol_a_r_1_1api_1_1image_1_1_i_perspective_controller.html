@@ -126,9 +126,6 @@ Public Member Functions</h2></td></tr>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1image_1_1_i_perspective_controller.html#aa439720017bd2ec6e5a9c69effc836bc">~IPerspectiveController</a> ()=default</td></tr>
 <tr class="memdesc:aa439720017bd2ec6e5a9c69effc836bc"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sol_a_r_1_1api_1_1image_1_1_i_perspective_controller.html" title="warps and crops an image given a contour defined with four 2D points. ">IPerspectiveController</a> default destructor. <br /></td></tr>
 <tr class="separator:aa439720017bd2ec6e5a9c69effc836bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afe04eac6711832a96078774fec8d51bd"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1image_1_1_i_perspective_controller.html#afe04eac6711832a96078774fec8d51bd">setParameters</a> (const <a class="el" href="struct_sol_a_r_1_1datastructure_1_1_sizei.html">Sizei</a> outputImageSize)=0</td></tr>
-<tr class="memdesc:afe04eac6711832a96078774fec8d51bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the size in pixels of the output image.  <a href="#afe04eac6711832a96078774fec8d51bd">More...</a><br /></td></tr>
-<tr class="separator:afe04eac6711832a96078774fec8d51bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9f68f173bba972734bda671de6d913bd"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1image_1_1_i_perspective_controller.html#a9f68f173bba972734bda671de6d913bd">correct</a> (const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt; inputImg, std::vector&lt; SRef&lt; Contour2Df &gt;&gt; &amp;contours, std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt;&gt; &amp;patches)=0</td></tr>
 <tr class="memdesc:a9f68f173bba972734bda671de6d913bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Warps and crops an image given a set of contour defined with four 2D points.  <a href="#a9f68f173bba972734bda671de6d913bd">More...</a><br /></td></tr>
 <tr class="separator:a9f68f173bba972734bda671de6d913bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -238,38 +235,6 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>FrameworkReturnCode::<em>SUCCESS</em> if succeed, else FrameworkReturnCode::_ERROR. </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="afe04eac6711832a96078774fec8d51bd"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void SolAR::api::image::IPerspectiveController::setParameters </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="struct_sol_a_r_1_1datastructure_1_1_sizei.html">Sizei</a>&#160;</td>
-          <td class="paramname"><em>outputImageSize</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Set the size in pixels of the output image. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">outputImageSize</td><td>the size in pixels of the output image </td></tr>
-  </table>
-  </dd>
-</dl>
 
 </div>
 </div>

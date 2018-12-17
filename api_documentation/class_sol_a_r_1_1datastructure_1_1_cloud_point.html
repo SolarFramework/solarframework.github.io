@@ -91,7 +91,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="class_sol_a_r_1_1datastructure_1_1_cloud_point-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">SolAR::datastructure::CloudPoint Class Reference</div>  </div>
@@ -121,15 +120,15 @@ Collaboration diagram for SolAR::datastructure::CloudPoint:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ad925e0af6c8b056a404e06213440183a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html#ad925e0af6c8b056a404e06213440183a">CloudPoint</a> (double x, double y, double z, float r, float g, float b, double reproj_error, std::vector&lt; int &gt; &amp;visibility)</td></tr>
-<tr class="memdesc:ad925e0af6c8b056a404e06213440183a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cloudpoint constructor.  <a href="#ad925e0af6c8b056a404e06213440183a">More...</a><br /></td></tr>
-<tr class="separator:ad925e0af6c8b056a404e06213440183a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19ded830e5fc9d5dd6c2ba6b30493e49"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html#a19ded830e5fc9d5dd6c2ba6b30493e49">CloudPoint</a> (float x, float y, float z, float r, float g, float b, double reproj_error, std::map&lt; unsigned int, unsigned int &gt; &amp;visibility)</td></tr>
+<tr class="memdesc:a19ded830e5fc9d5dd6c2ba6b30493e49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cloudpoint constructor.  <a href="#a19ded830e5fc9d5dd6c2ba6b30493e49">More...</a><br /></td></tr>
+<tr class="separator:a19ded830e5fc9d5dd6c2ba6b30493e49"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acafbd96c6716515a4634e4bf3cce3d0a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acafbd96c6716515a4634e4bf3cce3d0a"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html#acafbd96c6716515a4634e4bf3cce3d0a">~CloudPoint</a> ()</td></tr>
-<tr class="memdesc:acafbd96c6716515a4634e4bf3cce3d0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">~Keypoint <br /></td></tr>
+<tr class="memdesc:acafbd96c6716515a4634e4bf3cce3d0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">~CloudPoint <br /></td></tr>
 <tr class="separator:acafbd96c6716515a4634e4bf3cce3d0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a60121dc4fb051d994ba2f7352aa0d145"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html#a60121dc4fb051d994ba2f7352aa0d145">getR</a> () const </td></tr>
-<tr class="memdesc:a60121dc4fb051d994ba2f7352aa0d145"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method returns the angle of an <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html" title="The Keypoint class. ">Keypoint</a>.  <a href="#a60121dc4fb051d994ba2f7352aa0d145">More...</a><br /></td></tr>
+<tr class="memdesc:a60121dc4fb051d994ba2f7352aa0d145"><td class="mdescLeft">&#160;</td><td class="mdescRight">These methods returns the color components of the <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html" title="The Cloudpoint class. ">CloudPoint</a>.  <a href="#a60121dc4fb051d994ba2f7352aa0d145">More...</a><br /></td></tr>
 <tr class="separator:a60121dc4fb051d994ba2f7352aa0d145"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1d1fe5a7c808c2d0d5ea78b802a5ce45"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1d1fe5a7c808c2d0d5ea78b802a5ce45"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>getG</b> () const </td></tr>
@@ -137,18 +136,18 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>getG</b> () const </
 <tr class="memitem:a752b590c6bca6a68fd6360f4c86e9219"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a752b590c6bca6a68fd6360f4c86e9219"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>getB</b> () const </td></tr>
 <tr class="separator:a752b590c6bca6a68fd6360f4c86e9219"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9d844c992931e969e007c6d1c4d2d8c8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9d844c992931e969e007c6d1c4d2d8c8"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>getX</b> () const </td></tr>
-<tr class="separator:a9d844c992931e969e007c6d1c4d2d8c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a82103d7a93cc9611093da966d14d13e1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a82103d7a93cc9611093da966d14d13e1"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>getY</b> () const </td></tr>
-<tr class="separator:a82103d7a93cc9611093da966d14d13e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a623e58ede3f2a690320841409345f2a4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a623e58ede3f2a690320841409345f2a4"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>getZ</b> () const </td></tr>
-<tr class="separator:a623e58ede3f2a690320841409345f2a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acafce4b72287552c8693dede327b8e5c"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html#acafce4b72287552c8693dede327b8e5c">getReprojError</a> () const </td></tr>
-<tr class="memdesc:acafce4b72287552c8693dede327b8e5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method returns the size of an <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html" title="The Keypoint class. ">Keypoint</a>.  <a href="#acafce4b72287552c8693dede327b8e5c">More...</a><br /></td></tr>
+<tr class="memdesc:acafce4b72287552c8693dede327b8e5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method returns reprojection error of the PointCloud.  <a href="#acafce4b72287552c8693dede327b8e5c">More...</a><br /></td></tr>
 <tr class="separator:acafce4b72287552c8693dede327b8e5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6278b37668b6a43e35d2c5601475c502"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6278b37668b6a43e35d2c5601475c502"></a>
+std::map&lt; unsigned int, unsigned int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getVisibility</b> () const </td></tr>
+<tr class="separator:a6278b37668b6a43e35d2c5601475c502"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1789f810e37b15576bdeb5228d401986"><td class="memItemLeft" align="right" valign="top">std::map&lt; unsigned int, unsigned int &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html#a1789f810e37b15576bdeb5228d401986">getVisibility</a> ()</td></tr>
+<tr class="memdesc:a1789f810e37b15576bdeb5228d401986"><td class="mdescLeft">&#160;</td><td class="mdescRight">return the visibility map of the <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html" title="The Cloudpoint class. ">CloudPoint</a>  <a href="#a1789f810e37b15576bdeb5228d401986">More...</a><br /></td></tr>
+<tr class="separator:a1789f810e37b15576bdeb5228d401986"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00b25e40aca1134e240eacc76190ecf0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html#a00b25e40aca1134e240eacc76190ecf0">visibilityAddKeypoint</a> (unsigned int keyframe_id, unsigned int keypoint_id)</td></tr>
+<tr class="memdesc:a00b25e40aca1134e240eacc76190ecf0"><td class="mdescLeft">&#160;</td><td class="mdescRight">add a keypoint to the visibility map of the <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html" title="The Cloudpoint class. ">CloudPoint</a>  <a href="#a00b25e40aca1134e240eacc76190ecf0">More...</a><br /></td></tr>
+<tr class="separator:a00b25e40aca1134e240eacc76190ecf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_sol_a_r_1_1datastructure_1_1_point3_df"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_sol_a_r_1_1datastructure_1_1_point3_df')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point3_df.html">SolAR::datastructure::Point3Df</a></td></tr>
 <tr class="memitem:ab9ea42bfb7bc0eab0f1515e85a89f80b inherit pub_methods_class_sol_a_r_1_1datastructure_1_1_point3_df"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab9ea42bfb7bc0eab0f1515e85a89f80b"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>Point3Df</b> (float x=0, float y=0, float z=0)</td></tr>
@@ -183,36 +182,30 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setZ</b> (float z)</t
 <tr class="memitem:abfa8c75de3e9e449a67f145e1516f2fd inherit pub_methods_class_sol_a_r_1_1datastructure_1_1_point3_df"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abfa8c75de3e9e449a67f145e1516f2fd"></a>
 <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point3_df.html">Point3Df</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator*</b> (const float &amp;f) const </td></tr>
 <tr class="separator:abfa8c75de3e9e449a67f145e1516f2fd inherit pub_methods_class_sol_a_r_1_1datastructure_1_1_point3_df"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:ac1acf152e819441b7eff03d880b9a589"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html#ac1acf152e819441b7eff03d880b9a589">m_visibility</a></td></tr>
-<tr class="memdesc:ac1acf152e819441b7eff03d880b9a589"><td class="mdescLeft">&#160;</td><td class="mdescRight">GetResponse.  <a href="#ac1acf152e819441b7eff03d880b9a589">More...</a><br /></td></tr>
-<tr class="separator:ac1acf152e819441b7eff03d880b9a589"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The Cloudpoint class. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="ad925e0af6c8b056a404e06213440183a"></a>
+<a class="anchor" id="a19ded830e5fc9d5dd6c2ba6b30493e49"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">SolAR::datastructure::CloudPoint::CloudPoint </td>
           <td>(</td>
-          <td class="paramtype">double&#160;</td>
+          <td class="paramtype">float&#160;</td>
           <td class="paramname"><em>x</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
+          <td class="paramtype">float&#160;</td>
           <td class="paramname"><em>y</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
+          <td class="paramtype">float&#160;</td>
           <td class="paramname"><em>z</em>, </td>
         </tr>
         <tr>
@@ -242,7 +235,7 @@ Public Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; int &gt; &amp;&#160;</td>
+          <td class="paramtype">std::map&lt; unsigned int, unsigned int &gt; &amp;&#160;</td>
           <td class="paramname"><em>visibility</em>&#160;</td>
         </tr>
         <tr>
@@ -285,8 +278,8 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>This method returns the angle of an <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html" title="The Keypoint class. ">Keypoint</a>. </p>
-<dl class="section return"><dt>Returns</dt><dd>angle </dd></dl>
+<p>These methods returns the color components of the <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html" title="The Cloudpoint class. ">CloudPoint</a>. </p>
+<dl class="section return"><dt>Returns</dt><dd>the color component of the <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html" title="The Cloudpoint class. ">CloudPoint</a> (Red, Green or Blue) </dd></dl>
 
 </div>
 </div>
@@ -311,24 +304,77 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>This method returns the size of an <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html" title="The Keypoint class. ">Keypoint</a>. </p>
-<dl class="section return"><dt>Returns</dt><dd>size </dd></dl>
+<p>This method returns reprojection error of the PointCloud. </p>
+<dl class="section return"><dt>Returns</dt><dd>teh reprojection error </dd></dl>
 
 </div>
 </div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="ac1acf152e819441b7eff03d880b9a589"></a>
+<a class="anchor" id="a1789f810e37b15576bdeb5228d401986"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;int&gt; SolAR::datastructure::CloudPoint::m_visibility</td>
+          <td class="memname">std::map&lt;unsigned int, unsigned int&gt;&amp; SolAR::datastructure::CloudPoint::getVisibility </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>GetResponse. </p>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<p>return the visibility map of the <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html" title="The Cloudpoint class. ">CloudPoint</a> </p>
+<dl class="section return"><dt>Returns</dt><dd>The visibility, a map where the key corresponds to the id of the keyframe, and the value to the id of the keypoint in this keyframe. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a00b25e40aca1134e240eacc76190ecf0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SolAR::datastructure::CloudPoint::visibilityAddKeypoint </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>keyframe_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>keypoint_id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>add a keypoint to the visibility map of the <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html" title="The Cloudpoint class. ">CloudPoint</a> </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">keyframe_id</td><td>the id of the keyframe to which the keypoint belong </td></tr>
+    <tr><td class="paramname">keypoint_id</td><td>the id of the keypoint of the keyframe </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

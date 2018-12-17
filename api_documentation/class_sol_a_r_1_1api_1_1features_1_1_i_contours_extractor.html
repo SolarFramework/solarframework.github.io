@@ -126,9 +126,6 @@ Public Member Functions</h2></td></tr>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1features_1_1_i_contours_extractor.html#ab7ac8fe2573bc8d7a4bad604e919fb8d">~IContoursExtractor</a> ()=default</td></tr>
 <tr class="memdesc:ab7ac8fe2573bc8d7a4bad604e919fb8d"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sol_a_r_1_1api_1_1features_1_1_i_contours_extractor.html" title="Extracts contours from an image. ">IContoursExtractor</a> default destructor. <br /></td></tr>
 <tr class="separator:ab7ac8fe2573bc8d7a4bad604e919fb8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a550dd2c7fc05c06836c6f70a0d74fa33"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1features_1_1_i_contours_extractor.html#a550dd2c7fc05c06836c6f70a0d74fa33">setParameters</a> (float minContourSize)=0</td></tr>
-<tr class="memdesc:a550dd2c7fc05c06836c6f70a0d74fa33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the minimum contour size to detect.  <a href="#a550dd2c7fc05c06836c6f70a0d74fa33">More...</a><br /></td></tr>
-<tr class="separator:a550dd2c7fc05c06836c6f70a0d74fa33"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5004fbdc00f7ac92be75fd384c9a798f"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1features_1_1_i_contours_extractor.html#a5004fbdc00f7ac92be75fd384c9a798f">extract</a> (const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt; inputImg, std::vector&lt; SRef&lt; Contour2Df &gt;&gt; &amp;contours)=0</td></tr>
 <tr class="memdesc:a5004fbdc00f7ac92be75fd384c9a798f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extract the contours detected in a vector from a given input image.  <a href="#a5004fbdc00f7ac92be75fd384c9a798f">More...</a><br /></td></tr>
 <tr class="separator:a5004fbdc00f7ac92be75fd384c9a798f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -178,38 +175,6 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>FrameworkReturnCode::<em>SUCCESS</em> if contours ar well extracted, else FrameworkReturnCode::_ERROR </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="a550dd2c7fc05c06836c6f70a0d74fa33"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void SolAR::api::features::IContoursExtractor::setParameters </td>
-          <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>minContourSize</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Set the minimum contour size to detect. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">minContourSize</td><td>The minimum number of edges defining the contour </td></tr>
-  </table>
-  </dd>
-</dl>
 
 </div>
 </div>
