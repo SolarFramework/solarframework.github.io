@@ -177,7 +177,7 @@ index.add({
 
 index.add({
     title: null,
-    content: "\n\n  \n    SolAR\n    SolAR\n    https://solarframework.github.io//\n    \n    Mon, 17 Dec 2018 14:45:14 +0000\n    Mon, 17 Dec 2018 14:45:14 +0000\n    Jekyll v3.5.1\n    \n  \n\n",
+    content: "\n\n  \n    SolAR\n    SolAR\n    https://solarframework.github.io//\n    \n    Fri, 11 Jan 2019 13:54:13 +0000\n    Fri, 11 Jan 2019 13:54:13 +0000\n    Jekyll v3.5.1\n    \n  \n\n",
     id: 24
   });
   
@@ -233,7 +233,7 @@ index.add({
 
 index.add({
     title: "Applications",
-    content: "\nApplications\n\n\n\n\n\nFactory\n\n\nYou can find here a document describing use case identified for the industry.\n\n\nEnglish version\n\n\nFrench version\n\n\nYou can also read it in your web browser here factory.\n\n\n\n\nReal estate\n\n\nYou can find here a document describing use case identified for the real estate.\nenglish version\n\n\nYou can find here a document describing use case identified for the real estate.\nfrench version\n\n\nYou can also read it in your web browser here real estate.\n\n\n",
+    content: "\nApplications\n\n\n\n\n\nFactory\n\n\nYou can find here a document describing use case identified for the industry.\n\n\nEnglish version\n\n\nFrench version\n\n\nYou can also read it in your web browser here factory.\n\n\n\n\nReal estate\n\n\nYou can find here a document describing use case identified for the real estate.\nenglish version\n\n\nYou can find here a document describing use case identified for the real estate.\nfrench version\n\n\nYou can also read it in your web browser here real estate.\n\n\n\n\nHealth\n\n\nYou can find here a document describing use case identified for Healthcare\nfrench version\n\n\n",
     id: 32
   });
   
