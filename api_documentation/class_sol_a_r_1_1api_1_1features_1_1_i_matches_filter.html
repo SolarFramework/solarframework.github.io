@@ -14,6 +14,12 @@
 <script type="text/javascript">
   $(document).ready(function() { init_search(); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -96,6 +102,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">SolAR::api::features::IMatchesFilter Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><b>Filters a set of matches.</b> <code>UUID: e0d6cc82-6af2-493d-901a-2384fca0b16f</code>  
+ <a href="class_sol_a_r_1_1api_1_1features_1_1_i_matches_filter.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_i_matches_filter_8h_source.html">IMatchesFilter.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for SolAR::api::features::IMatchesFilter:</div>
 <div class="dyncontent">
@@ -115,17 +126,19 @@ Collaboration diagram for SolAR::api::features::IMatchesFilter:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a063ae9fc1f4bc75d8f3ce3ddfc961d7a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a063ae9fc1f4bc75d8f3ce3ddfc961d7a"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1features_1_1_i_matches_filter.html#a063ae9fc1f4bc75d8f3ce3ddfc961d7a">IMatchesFilter</a> ()=default</td></tr>
-<tr class="memdesc:a063ae9fc1f4bc75d8f3ce3ddfc961d7a"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sol_a_r_1_1api_1_1features_1_1_i_matches_filter.html">IMatchesFilter</a> default constructor. <br /></td></tr>
+<tr class="memdesc:a063ae9fc1f4bc75d8f3ce3ddfc961d7a"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sol_a_r_1_1api_1_1features_1_1_i_matches_filter.html" title="Filters a set of matches. UUID: e0d6cc82-6af2-493d-901a-2384fca0b16f ">IMatchesFilter</a> default constructor. <br /></td></tr>
 <tr class="separator:a063ae9fc1f4bc75d8f3ce3ddfc961d7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ada33634ed291f3f51ce731fbfff7a6be"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ada33634ed291f3f51ce731fbfff7a6be"></a>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1features_1_1_i_matches_filter.html#ada33634ed291f3f51ce731fbfff7a6be">~IMatchesFilter</a> ()=default</td></tr>
-<tr class="memdesc:ada33634ed291f3f51ce731fbfff7a6be"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sol_a_r_1_1api_1_1features_1_1_i_matches_filter.html">IMatchesFilter</a> default destructor. <br /></td></tr>
+<tr class="memdesc:ada33634ed291f3f51ce731fbfff7a6be"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sol_a_r_1_1api_1_1features_1_1_i_matches_filter.html" title="Filters a set of matches. UUID: e0d6cc82-6af2-493d-901a-2384fca0b16f ">IMatchesFilter</a> default destructor. <br /></td></tr>
 <tr class="separator:ada33634ed291f3f51ce731fbfff7a6be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3acecd53c29c8210df8a0c503966842a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1features_1_1_i_matches_filter.html#a3acecd53c29c8210df8a0c503966842a">filter</a> (const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_match.html">DescriptorMatch</a> &gt; &amp;inputMatches, std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_match.html">DescriptorMatch</a> &gt; &amp;outputMatches, const std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html">Keypoint</a> &gt;&gt; &amp;keyPoints_1, const std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html">Keypoint</a> &gt;&gt; &amp;keyPoints_2)=0</td></tr>
 <tr class="memdesc:a3acecd53c29c8210df8a0c503966842a"><td class="mdescLeft">&#160;</td><td class="mdescRight">filter matches. Draw all the lines joining the keypoints that match between two images  <a href="#a3acecd53c29c8210df8a0c503966842a">More...</a><br /></td></tr>
 <tr class="separator:a3acecd53c29c8210df8a0c503966842a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><b>Filters a set of matches.</b> <code>UUID: e0d6cc82-6af2-493d-901a-2384fca0b16f</code> </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a3acecd53c29c8210df8a0c503966842a"></a>
 <div class="memitem">
 <div class="memproto">

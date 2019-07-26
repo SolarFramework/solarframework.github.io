@@ -14,6 +14,12 @@
 <script type="text/javascript">
   $(document).ready(function() { init_search(); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -97,7 +103,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p>filters a set of contours  
+<p><b>Filters a set of contours.</b> <code>UUID: 6b3de3a0-cc72-11e7-abc4-cec278b6b50a</code>  
  <a href="class_sol_a_r_1_1api_1_1features_1_1_i_contours_filter.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_i_contours_filter_8h_source.html">IContoursFilter.h</a>&gt;</code></p>
@@ -120,18 +126,18 @@ Collaboration diagram for SolAR::api::features::IContoursFilter:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ab666bb0cd43aa57ead1bcc495068912f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab666bb0cd43aa57ead1bcc495068912f"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1features_1_1_i_contours_filter.html#ab666bb0cd43aa57ead1bcc495068912f">IContoursFilter</a> ()=default</td></tr>
-<tr class="memdesc:ab666bb0cd43aa57ead1bcc495068912f"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sol_a_r_1_1api_1_1features_1_1_i_contours_filter.html" title="filters a set of contours ">IContoursFilter</a> default constructor. <br /></td></tr>
+<tr class="memdesc:ab666bb0cd43aa57ead1bcc495068912f"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sol_a_r_1_1api_1_1features_1_1_i_contours_filter.html" title="Filters a set of contours. UUID: 6b3de3a0-cc72-11e7-abc4-cec278b6b50a ">IContoursFilter</a> default constructor. <br /></td></tr>
 <tr class="separator:ab666bb0cd43aa57ead1bcc495068912f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6662d40252af80f3a51f56442aef52be"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6662d40252af80f3a51f56442aef52be"></a>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1features_1_1_i_contours_filter.html#a6662d40252af80f3a51f56442aef52be">~IContoursFilter</a> ()=default</td></tr>
-<tr class="memdesc:a6662d40252af80f3a51f56442aef52be"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sol_a_r_1_1api_1_1features_1_1_i_contours_filter.html" title="filters a set of contours ">IContoursFilter</a> default destructor. <br /></td></tr>
+<tr class="memdesc:a6662d40252af80f3a51f56442aef52be"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sol_a_r_1_1api_1_1features_1_1_i_contours_filter.html" title="Filters a set of contours. UUID: 6b3de3a0-cc72-11e7-abc4-cec278b6b50a ">IContoursFilter</a> default destructor. <br /></td></tr>
 <tr class="separator:a6662d40252af80f3a51f56442aef52be"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acb3fcc0d14070b6ba89bac2d7089180f"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1features_1_1_i_contours_filter.html#acb3fcc0d14070b6ba89bac2d7089180f">filter</a> (const std::vector&lt; SRef&lt; Contour2Df &gt;&gt; &amp;inContours, std::vector&lt; SRef&lt; Contour2Df &gt;&gt; &amp;outContours)=0</td></tr>
+<tr class="memitem:acb3fcc0d14070b6ba89bac2d7089180f"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1features_1_1_i_contours_filter.html#acb3fcc0d14070b6ba89bac2d7089180f">filter</a> (const std::vector&lt; SRef&lt; <a class="el" href="_geometry_definitions_8h.html#a93a5599e3547377b68d4dc90e24a4ba1">Contour2Df</a> &gt;&gt; &amp;inContours, std::vector&lt; SRef&lt; <a class="el" href="_geometry_definitions_8h.html#a93a5599e3547377b68d4dc90e24a4ba1">Contour2Df</a> &gt;&gt; &amp;outContours)=0</td></tr>
 <tr class="memdesc:acb3fcc0d14070b6ba89bac2d7089180f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Filter a set of contours.  <a href="#acb3fcc0d14070b6ba89bac2d7089180f">More...</a><br /></td></tr>
 <tr class="separator:acb3fcc0d14070b6ba89bac2d7089180f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>filters a set of contours </p>
+<div class="textblock"><p><b>Filters a set of contours.</b> <code>UUID: 6b3de3a0-cc72-11e7-abc4-cec278b6b50a</code> </p>
 <p>This class provides a filtering method to prune a set of contours. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="acb3fcc0d14070b6ba89bac2d7089180f"></a>
@@ -144,13 +150,13 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
         <tr>
           <td class="memname">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a> SolAR::api::features::IContoursFilter::filter </td>
           <td>(</td>
-          <td class="paramtype">const std::vector&lt; SRef&lt; Contour2Df &gt;&gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; SRef&lt; <a class="el" href="_geometry_definitions_8h.html#a93a5599e3547377b68d4dc90e24a4ba1">Contour2Df</a> &gt;&gt; &amp;&#160;</td>
           <td class="paramname"><em>inContours</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; SRef&lt; Contour2Df &gt;&gt; &amp;&#160;</td>
+          <td class="paramtype">std::vector&lt; SRef&lt; <a class="el" href="_geometry_definitions_8h.html#a93a5599e3547377b68d4dc90e24a4ba1">Contour2Df</a> &gt;&gt; &amp;&#160;</td>
           <td class="paramname"><em>outContours</em>&#160;</td>
         </tr>
         <tr>

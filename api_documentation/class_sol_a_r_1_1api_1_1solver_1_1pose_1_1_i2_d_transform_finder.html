@@ -14,6 +14,12 @@
 <script type="text/javascript">
   $(document).ready(function() { init_search(); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -96,6 +102,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">SolAR::api::solver::pose::I2DTransformFinder Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><b>Finds the 2D transform from 2D-2D points correspondences.</b> <code>UUID: 45dd370a-0eab-4a7f-93d0-43453b4c7517</code>  
+ <a href="class_sol_a_r_1_1api_1_1solver_1_1pose_1_1_i2_d_transform_finder.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_i2_d_transform_finder_8h_source.html">I2DTransformFinder.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for SolAR::api::solver::pose::I2DTransformFinder:</div>
 <div class="dyncontent">
@@ -115,17 +126,19 @@ Collaboration diagram for SolAR::api::solver::pose::I2DTransformFinder:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aa8c740d55497ac4425dd9683453fb867"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa8c740d55497ac4425dd9683453fb867"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1pose_1_1_i2_d_transform_finder.html#aa8c740d55497ac4425dd9683453fb867">I2DTransformFinder</a> ()=default</td></tr>
-<tr class="memdesc:aa8c740d55497ac4425dd9683453fb867"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1pose_1_1_i2_d_transform_finder.html">I2DTransformFinder</a> default constructor. <br /></td></tr>
+<tr class="memdesc:aa8c740d55497ac4425dd9683453fb867"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1pose_1_1_i2_d_transform_finder.html" title="Finds the 2D transform from 2D-2D points correspondences. UUID: 45dd370a-0eab-4a7f-93d0-43453b4c7517 ...">I2DTransformFinder</a> default constructor. <br /></td></tr>
 <tr class="separator:aa8c740d55497ac4425dd9683453fb867"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4034e0ebe9c169f4d9008ee601b55e87"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4034e0ebe9c169f4d9008ee601b55e87"></a>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1pose_1_1_i2_d_transform_finder.html#a4034e0ebe9c169f4d9008ee601b55e87">~I2DTransformFinder</a> ()=default</td></tr>
-<tr class="memdesc:a4034e0ebe9c169f4d9008ee601b55e87"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1pose_1_1_i2_d_transform_finder.html">I2DTransformFinder</a> default deconstructor. <br /></td></tr>
+<tr class="memdesc:a4034e0ebe9c169f4d9008ee601b55e87"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1pose_1_1_i2_d_transform_finder.html" title="Finds the 2D transform from 2D-2D points correspondences. UUID: 45dd370a-0eab-4a7f-93d0-43453b4c7517 ...">I2DTransformFinder</a> default deconstructor. <br /></td></tr>
 <tr class="separator:a4034e0ebe9c169f4d9008ee601b55e87"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6056bfbfcf9c331bb00fd2ab90deff52"><td class="memItemLeft" align="right" valign="top">virtual Transform2DFinder::RetCode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1pose_1_1_i2_d_transform_finder.html#a6056bfbfcf9c331bb00fd2ab90deff52">find</a> (const std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point2_df.html">Point2Df</a> &gt; &gt; &amp;srcPoints, const std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point2_df.html">Point2Df</a> &gt; &gt; &amp;dstPoints, Transform2Df &amp;fundamental)=0</td></tr>
+<tr class="memitem:a6056bfbfcf9c331bb00fd2ab90deff52"><td class="memItemLeft" align="right" valign="top">virtual Transform2DFinder::RetCode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1pose_1_1_i2_d_transform_finder.html#a6056bfbfcf9c331bb00fd2ab90deff52">find</a> (const std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point2_df.html">Point2Df</a> &gt; &gt; &amp;srcPoints, const std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point2_df.html">Point2Df</a> &gt; &gt; &amp;dstPoints, <a class="el" href="_math_definitions_8h.html#af4828745e146c8d1fc42fbc85a374716">Transform2Df</a> &amp;fundamental)=0</td></tr>
 <tr class="memdesc:a6056bfbfcf9c331bb00fd2ab90deff52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find 2D transform matrix from 2 sets of 2d_points.  <a href="#a6056bfbfcf9c331bb00fd2ab90deff52">More...</a><br /></td></tr>
 <tr class="separator:a6056bfbfcf9c331bb00fd2ab90deff52"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><b>Finds the 2D transform from 2D-2D points correspondences.</b> <code>UUID: 45dd370a-0eab-4a7f-93d0-43453b4c7517</code> </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a6056bfbfcf9c331bb00fd2ab90deff52"></a>
 <div class="memitem">
 <div class="memproto">
@@ -148,7 +161,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Transform2Df &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="_math_definitions_8h.html#af4828745e146c8d1fc42fbc85a374716">Transform2Df</a> &amp;&#160;</td>
           <td class="paramname"><em>fundamental</em>&#160;</td>
         </tr>
         <tr>

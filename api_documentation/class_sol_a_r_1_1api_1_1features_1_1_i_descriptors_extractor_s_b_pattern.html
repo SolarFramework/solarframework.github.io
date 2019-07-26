@@ -14,6 +14,12 @@
 <script type="text/javascript">
   $(document).ready(function() { init_search(); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -97,7 +103,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p>extracts descriptors from a squared binary pattern or from an image of a squared binary pattern  
+<p><b>Extracts descriptors from a squared binary pattern or from an image of a squared binary pattern.</b> <code>UUID: 2e2bde18-ce39-11e7-abc4-cec278b6b50a</code>  
  <a href="class_sol_a_r_1_1api_1_1features_1_1_i_descriptors_extractor_s_b_pattern.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_i_descriptors_extractor_s_b_pattern_8h_source.html">IDescriptorsExtractorSBPattern.h</a>&gt;</code></p>
@@ -120,13 +126,13 @@ Collaboration diagram for SolAR::api::features::IDescriptorsExtractorSBPattern:<
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a68ec026a4634e0d3fc9884cf738d4b10"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a68ec026a4634e0d3fc9884cf738d4b10"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1features_1_1_i_descriptors_extractor_s_b_pattern.html#a68ec026a4634e0d3fc9884cf738d4b10">IDescriptorsExtractorSBPattern</a> ()=default</td></tr>
-<tr class="memdesc:a68ec026a4634e0d3fc9884cf738d4b10"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sol_a_r_1_1api_1_1features_1_1_i_descriptors_extractor_s_b_pattern.html" title="extracts descriptors from a squared binary pattern or from an image of a squared binary pattern ...">IDescriptorsExtractorSBPattern</a> default constructor. <br /></td></tr>
+<tr class="memdesc:a68ec026a4634e0d3fc9884cf738d4b10"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sol_a_r_1_1api_1_1features_1_1_i_descriptors_extractor_s_b_pattern.html" title="Extracts descriptors from a squared binary pattern or from an image of a squared binary pattern...">IDescriptorsExtractorSBPattern</a> default constructor. <br /></td></tr>
 <tr class="separator:a68ec026a4634e0d3fc9884cf738d4b10"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a82b5b64a7225463ab9ad54147d16bb48"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a82b5b64a7225463ab9ad54147d16bb48"></a>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1features_1_1_i_descriptors_extractor_s_b_pattern.html#a82b5b64a7225463ab9ad54147d16bb48">~IDescriptorsExtractorSBPattern</a> ()=default</td></tr>
-<tr class="memdesc:a82b5b64a7225463ab9ad54147d16bb48"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sol_a_r_1_1api_1_1features_1_1_i_descriptors_extractor_s_b_pattern.html" title="extracts descriptors from a squared binary pattern or from an image of a squared binary pattern ...">IDescriptorsExtractorSBPattern</a> default destructor. <br /></td></tr>
+<tr class="memdesc:a82b5b64a7225463ab9ad54147d16bb48"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sol_a_r_1_1api_1_1features_1_1_i_descriptors_extractor_s_b_pattern.html" title="Extracts descriptors from a squared binary pattern or from an image of a squared binary pattern...">IDescriptorsExtractorSBPattern</a> default destructor. <br /></td></tr>
 <tr class="separator:a82b5b64a7225463ab9ad54147d16bb48"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a69d28bf45e973e24e0001f55c6eb800d"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1features_1_1_i_descriptors_extractor_s_b_pattern.html#a69d28bf45e973e24e0001f55c6eb800d">extract</a> (const std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt;&gt; &amp;images, const std::vector&lt; SRef&lt; Contour2Df &gt;&gt; &amp;inContours, SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_buffer.html">DescriptorBuffer</a> &gt; &amp;descriptors, std::vector&lt; SRef&lt; Contour2Df &gt;&gt; &amp;outContours)=0</td></tr>
+<tr class="memitem:a69d28bf45e973e24e0001f55c6eb800d"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1features_1_1_i_descriptors_extractor_s_b_pattern.html#a69d28bf45e973e24e0001f55c6eb800d">extract</a> (const std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt;&gt; &amp;images, const std::vector&lt; SRef&lt; <a class="el" href="_geometry_definitions_8h.html#a93a5599e3547377b68d4dc90e24a4ba1">Contour2Df</a> &gt;&gt; &amp;inContours, SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_buffer.html">DescriptorBuffer</a> &gt; &amp;descriptors, std::vector&lt; SRef&lt; <a class="el" href="_geometry_definitions_8h.html#a93a5599e3547377b68d4dc90e24a4ba1">Contour2Df</a> &gt;&gt; &amp;outContours)=0</td></tr>
 <tr class="memdesc:a69d28bf45e973e24e0001f55c6eb800d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extracts the descriptors of a set of images of squared binary patterns.  <a href="#a69d28bf45e973e24e0001f55c6eb800d">More...</a><br /></td></tr>
 <tr class="separator:a69d28bf45e973e24e0001f55c6eb800d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad46df5865c212ee1e852aea633a19730"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1features_1_1_i_descriptors_extractor_s_b_pattern.html#ad46df5865c212ee1e852aea633a19730">extract</a> (const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_squared_binary_pattern.html">SquaredBinaryPattern</a> &gt; pattern, SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_buffer.html">DescriptorBuffer</a> &gt; &amp;descriptor)=0</td></tr>
@@ -134,7 +140,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <tr class="separator:ad46df5865c212ee1e852aea633a19730"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>extracts descriptors from a squared binary pattern or from an image of a squared binary pattern </p>
+<div class="textblock"><p><b>Extracts descriptors from a squared binary pattern or from an image of a squared binary pattern.</b> <code>UUID: 2e2bde18-ce39-11e7-abc4-cec278b6b50a</code> </p>
 <p>This class provides a method to extract descriptors of a squared binary pattern by simply concatenating pattern rows in a single vector. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a69d28bf45e973e24e0001f55c6eb800d"></a>
@@ -153,7 +159,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::vector&lt; SRef&lt; Contour2Df &gt;&gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; SRef&lt; <a class="el" href="_geometry_definitions_8h.html#a93a5599e3547377b68d4dc90e24a4ba1">Contour2Df</a> &gt;&gt; &amp;&#160;</td>
           <td class="paramname"><em>inContours</em>, </td>
         </tr>
         <tr>
@@ -165,7 +171,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; SRef&lt; Contour2Df &gt;&gt; &amp;&#160;</td>
+          <td class="paramtype">std::vector&lt; SRef&lt; <a class="el" href="_geometry_definitions_8h.html#a93a5599e3547377b68d4dc90e24a4ba1">Contour2Df</a> &gt;&gt; &amp;&#160;</td>
           <td class="paramname"><em>outContours</em>&#160;</td>
         </tr>
         <tr>

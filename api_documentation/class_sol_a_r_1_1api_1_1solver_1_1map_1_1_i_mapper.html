@@ -14,6 +14,12 @@
 <script type="text/javascript">
   $(document).ready(function() { init_search(); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -97,7 +103,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p>The <a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1map_1_1_i_mapper.html" title="The IMapper class. ">IMapper</a> class.  
+<p><b>Updates a point map with new triangulated 3D points.</b> <code>UUID: 90075c1b-915b-469d-b92d-41c5d575bf15</code>  
  <a href="class_sol_a_r_1_1api_1_1solver_1_1map_1_1_i_mapper.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_i_mapper_8h_source.html">IMapper.h</a>&gt;</code></p>
@@ -122,8 +128,8 @@ Public Member Functions</h2></td></tr>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1map_1_1_i_mapper.html#acf0c6e21b8fb4d8f36adb7b8a99a36ca">~IMapper</a> ()</td></tr>
 <tr class="memdesc:acf0c6e21b8fb4d8f36adb7b8a99a36ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">~IMapper <br /></td></tr>
 <tr class="separator:acf0c6e21b8fb4d8f36adb7b8a99a36ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6cc4de7ee463c94c3232b684aeda5d33"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6cc4de7ee463c94c3232b684aeda5d33"></a>
-virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><b>update</b> (SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_map.html">Map</a> &gt; &amp;map, SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keyframe.html">Keyframe</a> &gt; newKeyframe, const std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">CloudPoint</a> &gt;&gt; &amp;newCloud={}, const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_match.html">DescriptorMatch</a> &gt; &amp;newPointsMatches={}, const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_match.html">DescriptorMatch</a> &gt; &amp;existingPointsMatches={})=0</td></tr>
+<tr class="memitem:a6cc4de7ee463c94c3232b684aeda5d33"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1map_1_1_i_mapper.html#a6cc4de7ee463c94c3232b684aeda5d33">update</a> (SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_map.html">Map</a> &gt; &amp;map, SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keyframe.html">Keyframe</a> &gt; newKeyframe, const std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">CloudPoint</a> &gt;&gt; &amp;newCloud={}, const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_match.html">DescriptorMatch</a> &gt; &amp;newPointsMatches={}, const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_match.html">DescriptorMatch</a> &gt; &amp;existingPointsMatches={})=0</td></tr>
+<tr class="memdesc:a6cc4de7ee463c94c3232b684aeda5d33"><td class="mdescLeft">&#160;</td><td class="mdescRight">update the current map with the new triangulated map points at the insertion of a new keyframe. minArg(pts3ds,intrinsics,extrinsics) = MIN_cam_i(MIN_3d_j(pts2d_j - reproje(pt3ds_j,intrinsics_i,extrinsics_i)),  <a href="#a6cc4de7ee463c94c3232b684aeda5d33">More...</a><br /></td></tr>
 <tr class="separator:a6cc4de7ee463c94c3232b684aeda5d33"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaf3a21abd8edf311c844664a37089d5f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaf3a21abd8edf311c844664a37089d5f"></a>
 virtual std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keyframe.html">Keyframe</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getKeyframes</b> ()=0</td></tr>
@@ -133,8 +139,74 @@ virtual SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_map.html
 <tr class="separator:a9365a4bb27ca0c30e63e9f4e6b166275"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>The <a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1map_1_1_i_mapper.html" title="The IMapper class. ">IMapper</a> class. </p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+<div class="textblock"><p><b>Updates a point map with new triangulated 3D points.</b> <code>UUID: 90075c1b-915b-469d-b92d-41c5d575bf15</code> </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a6cc4de7ee463c94c3232b684aeda5d33"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a> SolAR::api::solver::map::IMapper::update </td>
+          <td>(</td>
+          <td class="paramtype">SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_map.html">Map</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>map</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keyframe.html">Keyframe</a> &gt;&#160;</td>
+          <td class="paramname"><em>newKeyframe</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">CloudPoint</a> &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>newCloud</em> = <code>{}</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_match.html">DescriptorMatch</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>newPointsMatches</em> = <code>{}</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_match.html">DescriptorMatch</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>existingPointsMatches</em> = <code>{}</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>update the current map with the new triangulated map points at the insertion of a new keyframe. minArg(pts3ds,intrinsics,extrinsics) = MIN_cam_i(MIN_3d_j(pts2d_j - reproje(pt3ds_j,intrinsics_i,extrinsics_i)), </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">map</td><td>current constructed map. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">neyKeyframe</td><td>current new keyframe to insert. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">newCloud</td><td>new triangulated 3D points </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">newPointMatches</td><td>new detected matches from the reference keyframe and current frame. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">existingPointMatches</td><td>new detected matches from the reference keyframe and current frame. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>FrameworkReturnCode::<em>SUCCESS if the map updating succeed, else FrameworkReturnCode::_ERROR</em> </dd></dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>interfaces/api/solver/map/<a class="el" href="_i_mapper_8h_source.html">IMapper.h</a></li>
 </ul>
 </div><!-- contents -->

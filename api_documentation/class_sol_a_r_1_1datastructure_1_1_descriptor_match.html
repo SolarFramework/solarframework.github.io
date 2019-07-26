@@ -14,6 +14,12 @@
 <script type="text/javascript">
   $(document).ready(function() { init_search(); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -97,7 +103,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p>Specifies the <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_match.html" title="Specifies the DescriptorMatch datastructure. ">DescriptorMatch</a> datastructure.  
+<p><b>A match between two descriptors.</b>  
  <a href="class_sol_a_r_1_1datastructure_1_1_descriptor_match.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_descriptor_match_8h_source.html">DescriptorMatch.h</a>&gt;</code></p>
@@ -105,15 +111,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a23676ab8089e312ad6289f0b1c0e55c0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_match.html#a23676ab8089e312ad6289f0b1c0e55c0">DescriptorMatch</a> (unsigned int descriptor_idA, unsigned int descriptor_idB, float matching_score)</td></tr>
-<tr class="memdesc:a23676ab8089e312ad6289f0b1c0e55c0"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_match.html" title="Specifies the DescriptorMatch datastructure. ">DescriptorMatch</a>.  <a href="#a23676ab8089e312ad6289f0b1c0e55c0">More...</a><br /></td></tr>
+<tr class="memdesc:a23676ab8089e312ad6289f0b1c0e55c0"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_match.html" title="A match between two descriptors. ">DescriptorMatch</a>.  <a href="#a23676ab8089e312ad6289f0b1c0e55c0">More...</a><br /></td></tr>
 <tr class="separator:a23676ab8089e312ad6289f0b1c0e55c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6d40275b3986140349b973bf2c5a9e4f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6d40275b3986140349b973bf2c5a9e4f"></a>
 unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_match.html#a6d40275b3986140349b973bf2c5a9e4f">getIndexInDescriptorA</a> (void) const </td></tr>
-<tr class="memdesc:a6d40275b3986140349b973bf2c5a9e4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the index of the matching descriptor from a <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_buffer.html" title="Specifies the DescriptorBuffer base class. ">DescriptorBuffer</a> A. <br /></td></tr>
+<tr class="memdesc:a6d40275b3986140349b973bf2c5a9e4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the index of the matching descriptor from a <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_buffer.html" title="A buffer to store a set of descriptors. ">DescriptorBuffer</a> A. <br /></td></tr>
 <tr class="separator:a6d40275b3986140349b973bf2c5a9e4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a404a24462c86ceb7f4dd307d51251af2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a404a24462c86ceb7f4dd307d51251af2"></a>
 unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_match.html#a404a24462c86ceb7f4dd307d51251af2">getIndexInDescriptorB</a> (void) const </td></tr>
-<tr class="memdesc:a404a24462c86ceb7f4dd307d51251af2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the index of the matching descriptor from a <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_buffer.html" title="Specifies the DescriptorBuffer base class. ">DescriptorBuffer</a> B. <br /></td></tr>
+<tr class="memdesc:a404a24462c86ceb7f4dd307d51251af2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the index of the matching descriptor from a <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_buffer.html" title="A buffer to store a set of descriptors. ">DescriptorBuffer</a> B. <br /></td></tr>
 <tr class="separator:a404a24462c86ceb7f4dd307d51251af2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afcd937b0fa7e03eb7eccff2037095683"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afcd937b0fa7e03eb7eccff2037095683"></a>
 unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_match.html#afcd937b0fa7e03eb7eccff2037095683">getMatchingScore</a> (void) const </td></tr>
@@ -121,7 +127,7 @@ unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="separator:afcd937b0fa7e03eb7eccff2037095683"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Specifies the <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_match.html" title="Specifies the DescriptorMatch datastructure. ">DescriptorMatch</a> datastructure. </p>
+<div class="textblock"><p><b>A match between two descriptors.</b> </p>
 <p>This class provides a data structure to store only the results from IDescriptorMatcher. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a23676ab8089e312ad6289f0b1c0e55c0"></a>
@@ -162,7 +168,7 @@ unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_match.html" title="Specifies the DescriptorMatch datastructure. ">DescriptorMatch</a>. </p>
+<p><a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_match.html" title="A match between two descriptors. ">DescriptorMatch</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">descriptor_idX</td><td></td></tr>

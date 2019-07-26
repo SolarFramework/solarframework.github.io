@@ -14,6 +14,12 @@
 <script type="text/javascript">
   $(document).ready(function() { init_search(); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -95,6 +101,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="functions_r.html#index_r"><span>r</span></a></li>
       <li><a href="functions_s.html#index_s"><span>s</span></a></li>
       <li><a href="functions_t.html#index_t"><span>t</span></a></li>
+      <li><a href="functions_u.html#index_u"><span>u</span></a></li>
       <li><a href="functions_v.html#index_v"><span>v</span></a></li>
       <li><a href="functions_0x7e.html#index_0x7e"><span>~</span></a></li>
     </ul>
@@ -118,6 +125,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="textblock">Here is a list of all documented class members with links to the class documentation for each member:</div>
 
 <h3><a class="anchor" id="index_g"></a>- g -</h3><ul>
+<li>get()
+: <a class="el" href="class_sol_a_r_1_1api_1_1sink_1_1_i_sink_pose_image.html#acd0d440803ededc9ee5230ac0bb8e13a">SolAR::api::sink::ISinkPoseImage</a>
+</li>
 <li>getAccelerometerData()
 : <a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_i_m_u.html#a343b78d6c1e84b5e293a1774fe480005">SolAR::api::input::devices::IIMU</a>
 </li>
@@ -129,6 +139,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </li>
 <li>getBufferSize()
 : <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html#a373803d8a656ab59525d667b88cc9f9b">SolAR::datastructure::Image</a>
+</li>
+<li>getCameraParameters()
+: <a class="el" href="class_sol_a_r_1_1api_1_1pipeline_1_1_i_pipeline.html#a50fa4f957324ee21bb2829268ecf5382">SolAR::api::pipeline::IPipeline</a>
 </li>
 <li>getClassId()
 : <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html#ad7bb1cea4e86b314ca83d75d7fc57e15">SolAR::datastructure::Keypoint</a>
@@ -157,6 +170,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>getImage()
 : <a class="el" href="class_sol_a_r_1_1api_1_1image_1_1_i_image_loader.html#a1e0dd0d2174d6c7b037c7af7de74f92b">SolAR::api::image::IImageLoader</a>
 , <a class="el" href="class_sol_a_r_1_1api_1_1input_1_1files_1_1_i_marker2_d_natural_image.html#a786fd4099e01aeeb7cea48f9e5542281">SolAR::api::input::files::IMarker2DNaturalImage</a>
+</li>
+<li>getImageCorners()
+: <a class="el" href="class_sol_a_r_1_1api_1_1input_1_1files_1_1_i_marker2_d_squared.html#ad5f8c75676023a44561bcc7f69214fd4">SolAR::api::input::files::IMarker2DSquared</a>
 </li>
 <li>getImageLayout()
 : <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html#a287900f59674e99d58462fce8681bb7f">SolAR::datastructure::Image</a>
@@ -190,9 +206,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </li>
 <li>getNextImage()
 : <a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera.html#ab1b46c4dec4cd9ee198a6f977f7d7fbb">SolAR::api::input::devices::ICamera</a>
+, <a class="el" href="class_sol_a_r_1_1api_1_1source_1_1_i_source_image.html#ab1c71ba15916116623303c57e6be4f41">SolAR::api::source::ISourceImage</a>
 </li>
 <li>getOctave()
 : <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html#a22bfb35d1486263f10d36e5c96882a5e">SolAR::datastructure::Keypoint</a>
+</li>
+<li>getParameters()
+: <a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera.html#a9ac4c0f2761a18b74edfb5d1b067dc36">SolAR::api::input::devices::ICamera</a>
 </li>
 <li>getPatternMatrix()
 : <a class="el" href="class_sol_a_r_1_1datastructure_1_1_squared_binary_pattern.html#a30fc803629a57619d23b83cdd205fc90">SolAR::datastructure::SquaredBinaryPattern</a>
@@ -215,10 +235,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>getSize()
 : <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html#a84fd410c12b231faf61f75167fae978f">SolAR::datastructure::Image</a>
 , <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html#a3cf7881394447c88570a12e4cb4fe276">SolAR::datastructure::Keypoint</a>
-, <a class="el" href="class_sol_a_r_1_1datastructure_1_1_squared_binary_pattern.html#afafb9316a4977f6f4ecc2428b9eea59d">SolAR::datastructure::SquaredBinaryPattern</a>
+, <a class="el" href="class_sol_a_r_1_1datastructure_1_1_squared_binary_pattern.html#a05a52725bfafc7be0eeaf459b294ef09">SolAR::datastructure::SquaredBinaryPattern</a>
 </li>
 <li>getType()
 : <a class="el" href="class_sol_a_r_1_1api_1_1features_1_1_i_keypoint_detector.html#af73c58d92a1bdf2e1cd1abbecd187c12">SolAR::api::features::IKeypointDetector</a>
+, <a class="el" href="class_sol_a_r_1_1api_1_1features_1_1_i_keypoint_detector_region.html#a176a5cac1aa109b9de4a318fd1891ecd">SolAR::api::features::IKeypointDetectorRegion</a>
 </li>
 <li>getTypeString()
 : <a class="el" href="class_sol_a_r_1_1api_1_1features_1_1_i_descriptors_extractor.html#a6d913ea7f87b3d83bd44a88a0aaa6ba1">SolAR::api::features::IDescriptorsExtractor</a>
@@ -228,6 +249,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </li>
 <li>getWidth()
 : <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html#a5f22a750f32e0061d3a0220f3ee12215">SolAR::datastructure::Image</a>
+</li>
+<li>getWorldCorners()
+: <a class="el" href="class_sol_a_r_1_1api_1_1input_1_1files_1_1_i_marker2_d_squared.html#a52087bc5e1b593099932009cea582872">SolAR::api::input::files::IMarker2DSquared</a>
 </li>
 </ul>
 </div><!-- contents -->

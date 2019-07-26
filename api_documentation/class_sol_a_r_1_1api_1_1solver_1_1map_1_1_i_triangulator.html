@@ -14,6 +14,12 @@
 <script type="text/javascript">
   $(document).ready(function() { init_search(); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -97,7 +103,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p>Triangulates a set of 2D-2d points correspondances with known respective camera poses.  
+<p><b>Triangulates a set of 2D-2D points correspondances with known respective camera poses.</b> <code>UUID: 3a01b0e9-9a76-43f5-97b3-85bb6979b953</code>  
  <a href="class_sol_a_r_1_1api_1_1solver_1_1map_1_1_i_triangulator.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_i_triangulator_8h_source.html">ITriangulator.h</a>&gt;</code></p>
@@ -120,19 +126,19 @@ Collaboration diagram for SolAR::api::solver::map::ITriangulator:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a9b445530c854a26b9b9d0220fd0ffab1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9b445530c854a26b9b9d0220fd0ffab1"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1map_1_1_i_triangulator.html#a9b445530c854a26b9b9d0220fd0ffab1">ITriangulator</a> ()=default</td></tr>
-<tr class="memdesc:a9b445530c854a26b9b9d0220fd0ffab1"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1map_1_1_i_triangulator.html" title="Triangulates a set of 2D-2d points correspondances with known respective camera poses. ">ITriangulator</a> default constructor. <br /></td></tr>
+<tr class="memdesc:a9b445530c854a26b9b9d0220fd0ffab1"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1map_1_1_i_triangulator.html" title="Triangulates a set of 2D-2D points correspondances with known respective camera poses. UUID: 3a01b0e9-9a76-43f5-97b3-85bb6979b953 ">ITriangulator</a> default constructor. <br /></td></tr>
 <tr class="separator:a9b445530c854a26b9b9d0220fd0ffab1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a00294d9a14a6b4cd871074daf8a7433e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a00294d9a14a6b4cd871074daf8a7433e"></a>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1map_1_1_i_triangulator.html#a00294d9a14a6b4cd871074daf8a7433e">~ITriangulator</a> ()=default</td></tr>
-<tr class="memdesc:a00294d9a14a6b4cd871074daf8a7433e"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1map_1_1_i_triangulator.html" title="Triangulates a set of 2D-2d points correspondances with known respective camera poses. ">ITriangulator</a> default destructor. <br /></td></tr>
+<tr class="memdesc:a00294d9a14a6b4cd871074daf8a7433e"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1map_1_1_i_triangulator.html" title="Triangulates a set of 2D-2D points correspondances with known respective camera poses. UUID: 3a01b0e9-9a76-43f5-97b3-85bb6979b953 ">ITriangulator</a> default destructor. <br /></td></tr>
 <tr class="separator:a00294d9a14a6b4cd871074daf8a7433e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeac6277cb3fae4422c4a2d7eeec11090"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1map_1_1_i_triangulator.html#aeac6277cb3fae4422c4a2d7eeec11090">setCameraParameters</a> (const CamCalibration &amp;intrinsicParams, const CamDistortion &amp;distorsionParams)=0</td></tr>
+<tr class="memitem:aeac6277cb3fae4422c4a2d7eeec11090"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1map_1_1_i_triangulator.html#aeac6277cb3fae4422c4a2d7eeec11090">setCameraParameters</a> (const <a class="el" href="_math_definitions_8h.html#a0ea650513b55059459f5d5771c5bf5cb">CamCalibration</a> &amp;intrinsicParams, const <a class="el" href="_math_definitions_8h.html#ad85d877532df3da45a970d47735e34bc">CamDistortion</a> &amp;distorsionParams)=0</td></tr>
 <tr class="memdesc:aeac6277cb3fae4422c4a2d7eeec11090"><td class="mdescLeft">&#160;</td><td class="mdescRight">this method is used to set intrinsic parameters and distorsion of the camera  <a href="#aeac6277cb3fae4422c4a2d7eeec11090">More...</a><br /></td></tr>
 <tr class="separator:aeac6277cb3fae4422c4a2d7eeec11090"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a605ebe38330aa4b00e92bcb60739709f"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1map_1_1_i_triangulator.html#a605ebe38330aa4b00e92bcb60739709f">triangulate</a> (const std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point2_df.html">Point2Df</a> &gt;&gt; &amp;pointsView1, const std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point2_df.html">Point2Df</a> &gt;&gt; &amp;pointView2, const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_match.html">DescriptorMatch</a> &gt; &amp;matches, const std::pair&lt; unsigned int, unsigned int &gt; &amp;working_views, const Transform3Df &amp;poseView1, const Transform3Df &amp;poseView2, std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">CloudPoint</a> &gt;&gt; &amp;pcloud)=0</td></tr>
+<tr class="memitem:a605ebe38330aa4b00e92bcb60739709f"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1map_1_1_i_triangulator.html#a605ebe38330aa4b00e92bcb60739709f">triangulate</a> (const std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point2_df.html">Point2Df</a> &gt;&gt; &amp;pointsView1, const std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point2_df.html">Point2Df</a> &gt;&gt; &amp;pointView2, const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_match.html">DescriptorMatch</a> &gt; &amp;matches, const std::pair&lt; unsigned int, unsigned int &gt; &amp;working_views, const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a> &amp;poseView1, const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a> &amp;poseView2, std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">CloudPoint</a> &gt;&gt; &amp;pcloud)=0</td></tr>
 <tr class="memdesc:a605ebe38330aa4b00e92bcb60739709f"><td class="mdescLeft">&#160;</td><td class="mdescRight">triangulate pairs of points 2d captured from two views with differents poses (with respect to the camera instrinsic parameters).  <a href="#a605ebe38330aa4b00e92bcb60739709f">More...</a><br /></td></tr>
 <tr class="separator:a605ebe38330aa4b00e92bcb60739709f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad86220625b298cde537fd3ebeba0e3ee"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1map_1_1_i_triangulator.html#ad86220625b298cde537fd3ebeba0e3ee">triangulate</a> (const std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html">Keypoint</a> &gt;&gt; &amp;keypointsView1, const std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html">Keypoint</a> &gt;&gt; &amp;keypointsView2, const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_match.html">DescriptorMatch</a> &gt; &amp;matches, const std::pair&lt; unsigned int, unsigned int &gt; &amp;working_views, const Transform3Df &amp;poseView1, const Transform3Df &amp;poseView2, std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">CloudPoint</a> &gt;&gt; &amp;pcloud)=0</td></tr>
+<tr class="memitem:ad86220625b298cde537fd3ebeba0e3ee"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1map_1_1_i_triangulator.html#ad86220625b298cde537fd3ebeba0e3ee">triangulate</a> (const std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html">Keypoint</a> &gt;&gt; &amp;keypointsView1, const std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html">Keypoint</a> &gt;&gt; &amp;keypointsView2, const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_match.html">DescriptorMatch</a> &gt; &amp;matches, const std::pair&lt; unsigned int, unsigned int &gt; &amp;working_views, const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a> &amp;poseView1, const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a> &amp;poseView2, std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">CloudPoint</a> &gt;&gt; &amp;pcloud)=0</td></tr>
 <tr class="memdesc:ad86220625b298cde537fd3ebeba0e3ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">triangulate pairs of points 2d captured from two views with differents poses (with respect to the camera instrinsic parameters).  <a href="#ad86220625b298cde537fd3ebeba0e3ee">More...</a><br /></td></tr>
 <tr class="separator:ad86220625b298cde537fd3ebeba0e3ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8cbab8bd3f2c7ca6618fcbba48772a6f"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1map_1_1_i_triangulator.html#a8cbab8bd3f2c7ca6618fcbba48772a6f">triangulate</a> (const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keyframe.html">Keyframe</a> &gt; &amp;curKeyframe, const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_match.html">DescriptorMatch</a> &gt; &amp;matches, std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">CloudPoint</a> &gt;&gt; &amp;pcloud)=0</td></tr>
@@ -140,7 +146,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <tr class="separator:a8cbab8bd3f2c7ca6618fcbba48772a6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Triangulates a set of 2D-2d points correspondances with known respective camera poses. </p>
+<div class="textblock"><p><b>Triangulates a set of 2D-2D points correspondances with known respective camera poses.</b> <code>UUID: 3a01b0e9-9a76-43f5-97b3-85bb6979b953</code> </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="aeac6277cb3fae4422c4a2d7eeec11090"></a>
 <div class="memitem">
@@ -152,13 +158,13 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
         <tr>
           <td class="memname">virtual void SolAR::api::solver::map::ITriangulator::setCameraParameters </td>
           <td>(</td>
-          <td class="paramtype">const CamCalibration &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="_math_definitions_8h.html#a0ea650513b55059459f5d5771c5bf5cb">CamCalibration</a> &amp;&#160;</td>
           <td class="paramname"><em>intrinsicParams</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const CamDistortion &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="_math_definitions_8h.html#ad85d877532df3da45a970d47735e34bc">CamDistortion</a> &amp;&#160;</td>
           <td class="paramname"><em>distorsionParams</em>&#160;</td>
         </tr>
         <tr>
@@ -219,13 +225,13 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const Transform3Df &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a> &amp;&#160;</td>
           <td class="paramname"><em>poseView1</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const Transform3Df &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a> &amp;&#160;</td>
           <td class="paramname"><em>poseView2</em>, </td>
         </tr>
         <tr>
@@ -298,13 +304,13 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const Transform3Df &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a> &amp;&#160;</td>
           <td class="paramname"><em>poseView1</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const Transform3Df &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a> &amp;&#160;</td>
           <td class="paramname"><em>poseView2</em>, </td>
         </tr>
         <tr>

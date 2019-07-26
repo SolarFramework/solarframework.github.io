@@ -14,6 +14,12 @@
 <script type="text/javascript">
   $(document).ready(function() { init_search(); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -97,7 +103,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p>provides a method to map 2D points to a 3D world coordinate system. For example, this method can map the 4 corners of a marker to the world coordinate system.  
+<p><b>Maps 2D points to a 3D world coordinate system. For example, this method can map the 4 corners of a marker to the world coordinate system.</b> <code>UUID: 67bcd080-258d-4b16-b693-cd30c013eb05</code>  
  <a href="class_sol_a_r_1_1api_1_1geom_1_1_i_image2_world_mapper.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_i_image2_world_mapper_8h_source.html">IImage2WorldMapper.h</a>&gt;</code></p>
@@ -120,18 +126,18 @@ Collaboration diagram for SolAR::api::geom::IImage2WorldMapper:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a6ade1a8014661a082f1ef5e717d59edb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6ade1a8014661a082f1ef5e717d59edb"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1geom_1_1_i_image2_world_mapper.html#a6ade1a8014661a082f1ef5e717d59edb">IImage2WorldMapper</a> ()=default</td></tr>
-<tr class="memdesc:a6ade1a8014661a082f1ef5e717d59edb"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sol_a_r_1_1api_1_1geom_1_1_i_image2_world_mapper.html" title="provides a method to map 2D points to a 3D world coordinate system. For example, this method can map ...">IImage2WorldMapper</a> default constructor. <br /></td></tr>
+<tr class="memdesc:a6ade1a8014661a082f1ef5e717d59edb"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sol_a_r_1_1api_1_1geom_1_1_i_image2_world_mapper.html" title="Maps 2D points to a 3D world coordinate system. For example, this method can map the 4 corners of a m...">IImage2WorldMapper</a> default constructor. <br /></td></tr>
 <tr class="separator:a6ade1a8014661a082f1ef5e717d59edb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aecf33be8e0eb5ea57408df060febe648"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aecf33be8e0eb5ea57408df060febe648"></a>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1geom_1_1_i_image2_world_mapper.html#aecf33be8e0eb5ea57408df060febe648">~IImage2WorldMapper</a> ()=default</td></tr>
-<tr class="memdesc:aecf33be8e0eb5ea57408df060febe648"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sol_a_r_1_1api_1_1geom_1_1_i_image2_world_mapper.html" title="provides a method to map 2D points to a 3D world coordinate system. For example, this method can map ...">IImage2WorldMapper</a> default destructor. <br /></td></tr>
+<tr class="memdesc:aecf33be8e0eb5ea57408df060febe648"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sol_a_r_1_1api_1_1geom_1_1_i_image2_world_mapper.html" title="Maps 2D points to a 3D world coordinate system. For example, this method can map the 4 corners of a m...">IImage2WorldMapper</a> default destructor. <br /></td></tr>
 <tr class="separator:aecf33be8e0eb5ea57408df060febe648"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae2ca3f85f3d429bccc1899d0d09e5dfd"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1geom_1_1_i_image2_world_mapper.html#ae2ca3f85f3d429bccc1899d0d09e5dfd">map</a> (const std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point2_df.html">Point2Df</a> &gt;&gt; &amp;digitalPoints, std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point3_df.html">Point3Df</a> &gt;&gt; &amp;worldPoints)=0</td></tr>
 <tr class="memdesc:ae2ca3f85f3d429bccc1899d0d09e5dfd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Map a set of 2D points to a 3D world coordinate system.  <a href="#ae2ca3f85f3d429bccc1899d0d09e5dfd">More...</a><br /></td></tr>
 <tr class="separator:ae2ca3f85f3d429bccc1899d0d09e5dfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>provides a method to map 2D points to a 3D world coordinate system. For example, this method can map the 4 corners of a marker to the world coordinate system. </p>
+<div class="textblock"><p><b>Maps 2D points to a 3D world coordinate system. For example, this method can map the 4 corners of a marker to the world coordinate system.</b> <code>UUID: 67bcd080-258d-4b16-b693-cd30c013eb05</code> </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="ae2ca3f85f3d429bccc1899d0d09e5dfd"></a>
 <div class="memitem">

@@ -14,6 +14,12 @@
 <script type="text/javascript">
   $(document).ready(function() { init_search(); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -96,14 +102,19 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">SolAR::api::input::files::IMarker Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><b>Loads a general Marker.</b> <code>UUID: b05f3dbb-f93d-465c-aee1-fb58e1480c42</code>  
+ <a href="class_sol_a_r_1_1api_1_1input_1_1files_1_1_i_marker.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_i_marker_8h_source.html">IMarker.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for SolAR::api::input::files::IMarker:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_sol_a_r_1_1api_1_1input_1_1files_1_1_i_marker__inherit__graph.png" border="0" usemap="#_sol_a_r_1_1api_1_1input_1_1files_1_1_i_marker_inherit__map" alt="Inheritance graph"/></div>
 <map name="_sol_a_r_1_1api_1_1input_1_1files_1_1_i_marker_inherit__map" id="_sol_a_r_1_1api_1_1input_1_1files_1_1_i_marker_inherit__map">
-<area shape="rect" id="node3" href="class_sol_a_r_1_1api_1_1input_1_1files_1_1_i_marker2_d_squared.html" title="The abstract class defining all 2D marker. " alt="" coords="400,39,575,80"/>
-<area shape="rect" id="node4" href="class_sol_a_r_1_1api_1_1input_1_1files_1_1_i_marker2_d_natural_image.html" title="The abstract class defining all 2D Natural Image markers representing any image. " alt="" coords="627,5,833,47"/>
-<area shape="rect" id="node5" href="class_sol_a_r_1_1api_1_1input_1_1files_1_1_i_marker2_d_squared_binary.html" title="SolAR::api::input::\lfiles::IMarker2DSquaredBinary" alt="" coords="623,71,837,112"/>
+<area shape="rect" id="node3" href="class_sol_a_r_1_1api_1_1input_1_1files_1_1_i_marker2_d_squared.html" title="Loads any 2D squared marker. UUID: e9cdcf6e&#45;c54c&#45;11e7&#45;abc4&#45;cec278b6b50a " alt="" coords="400,39,575,80"/>
+<area shape="rect" id="node4" href="class_sol_a_r_1_1api_1_1input_1_1files_1_1_i_marker2_d_natural_image.html" title="Loads a natural image marker. UUID: 8fed06f8&#45;c54d&#45;11e7&#45;abc4&#45;cec278b6b50a " alt="" coords="627,5,833,47"/>
+<area shape="rect" id="node5" href="class_sol_a_r_1_1api_1_1input_1_1files_1_1_i_marker2_d_squared_binary.html" title="Loads 2D squared marker based on a black and white grid. UUID: 12d592ff&#45;aa46&#45;40a6&#45;8d65&#45;7fbfb382d60b ..." alt="" coords="623,71,837,112"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
@@ -117,10 +128,13 @@ Collaboration diagram for SolAR::api::input::files::IMarker:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:af8103dcebefb9b38ff84118c261d1e74"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af8103dcebefb9b38ff84118c261d1e74"></a>
-virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><b>loadMarker</b> ()=0</td></tr>
+virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1files_1_1_i_marker.html#af8103dcebefb9b38ff84118c261d1e74">loadMarker</a> ()=0</td></tr>
+<tr class="memdesc:af8103dcebefb9b38ff84118c261d1e74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load a specific marker and its features (size, descriptors..). <br /></td></tr>
 <tr class="separator:af8103dcebefb9b38ff84118c261d1e74"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><b>Loads a general Marker.</b> <code>UUID: b05f3dbb-f93d-465c-aee1-fb58e1480c42</code> </p>
+</div><hr/>The documentation for this class was generated from the following file:<ul>
 <li>interfaces/api/input/files/<a class="el" href="_i_marker_8h_source.html">IMarker.h</a></li>
 </ul>
 </div><!-- contents -->

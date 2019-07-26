@@ -14,6 +14,12 @@
 <script type="text/javascript">
   $(document).ready(function() { init_search(); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -97,7 +103,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p>warps and crops an image given a contour defined with four 2D points.  
+<p><b>Warps and crops an image given a contour defined with four 2D points.</b> <code>UUID: 4a7d5c34-cd6e-11e7-abc4-cec278b6b50a</code>  
  <a href="class_sol_a_r_1_1api_1_1image_1_1_i_perspective_controller.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_i_perspective_controller_8h_source.html">IPerspectiveController.h</a>&gt;</code></p>
@@ -120,21 +126,21 @@ Collaboration diagram for SolAR::api::image::IPerspectiveController:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a46055be8c90389c7560bcc16dfedd759"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a46055be8c90389c7560bcc16dfedd759"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1image_1_1_i_perspective_controller.html#a46055be8c90389c7560bcc16dfedd759">IPerspectiveController</a> ()=default</td></tr>
-<tr class="memdesc:a46055be8c90389c7560bcc16dfedd759"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sol_a_r_1_1api_1_1image_1_1_i_perspective_controller.html" title="warps and crops an image given a contour defined with four 2D points. ">IPerspectiveController</a> default constructor. <br /></td></tr>
+<tr class="memdesc:a46055be8c90389c7560bcc16dfedd759"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sol_a_r_1_1api_1_1image_1_1_i_perspective_controller.html" title="Warps and crops an image given a contour defined with four 2D points. UUID: 4a7d5c34-cd6e-11e7-abc4-c...">IPerspectiveController</a> default constructor. <br /></td></tr>
 <tr class="separator:a46055be8c90389c7560bcc16dfedd759"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa439720017bd2ec6e5a9c69effc836bc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa439720017bd2ec6e5a9c69effc836bc"></a>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1image_1_1_i_perspective_controller.html#aa439720017bd2ec6e5a9c69effc836bc">~IPerspectiveController</a> ()=default</td></tr>
-<tr class="memdesc:aa439720017bd2ec6e5a9c69effc836bc"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sol_a_r_1_1api_1_1image_1_1_i_perspective_controller.html" title="warps and crops an image given a contour defined with four 2D points. ">IPerspectiveController</a> default destructor. <br /></td></tr>
+<tr class="memdesc:aa439720017bd2ec6e5a9c69effc836bc"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sol_a_r_1_1api_1_1image_1_1_i_perspective_controller.html" title="Warps and crops an image given a contour defined with four 2D points. UUID: 4a7d5c34-cd6e-11e7-abc4-c...">IPerspectiveController</a> default destructor. <br /></td></tr>
 <tr class="separator:aa439720017bd2ec6e5a9c69effc836bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9f68f173bba972734bda671de6d913bd"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1image_1_1_i_perspective_controller.html#a9f68f173bba972734bda671de6d913bd">correct</a> (const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt; inputImg, std::vector&lt; SRef&lt; Contour2Df &gt;&gt; &amp;contours, std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt;&gt; &amp;patches)=0</td></tr>
+<tr class="memitem:a9f68f173bba972734bda671de6d913bd"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1image_1_1_i_perspective_controller.html#a9f68f173bba972734bda671de6d913bd">correct</a> (const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt; inputImg, std::vector&lt; SRef&lt; <a class="el" href="_geometry_definitions_8h.html#a93a5599e3547377b68d4dc90e24a4ba1">Contour2Df</a> &gt;&gt; &amp;contours, std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt;&gt; &amp;patches)=0</td></tr>
 <tr class="memdesc:a9f68f173bba972734bda671de6d913bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Warps and crops an image given a set of contour defined with four 2D points.  <a href="#a9f68f173bba972734bda671de6d913bd">More...</a><br /></td></tr>
 <tr class="separator:a9f68f173bba972734bda671de6d913bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeb00bc75bc967f6353c9a40a7a978352"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1image_1_1_i_perspective_controller.html#aeb00bc75bc967f6353c9a40a7a978352">correct</a> (const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt; inputImg, SRef&lt; Contour2Df &gt; &amp;contour, SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt; &amp;patch)=0</td></tr>
+<tr class="memitem:aeb00bc75bc967f6353c9a40a7a978352"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1image_1_1_i_perspective_controller.html#aeb00bc75bc967f6353c9a40a7a978352">correct</a> (const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt; inputImg, SRef&lt; <a class="el" href="_geometry_definitions_8h.html#a93a5599e3547377b68d4dc90e24a4ba1">Contour2Df</a> &gt; &amp;contour, SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt; &amp;patch)=0</td></tr>
 <tr class="memdesc:aeb00bc75bc967f6353c9a40a7a978352"><td class="mdescLeft">&#160;</td><td class="mdescRight">Warps and crops an image given a contour defined with four 2D points.  <a href="#aeb00bc75bc967f6353c9a40a7a978352">More...</a><br /></td></tr>
 <tr class="separator:aeb00bc75bc967f6353c9a40a7a978352"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>warps and crops an image given a contour defined with four 2D points. </p>
+<div class="textblock"><p><b>Warps and crops an image given a contour defined with four 2D points.</b> <code>UUID: 4a7d5c34-cd6e-11e7-abc4-cec278b6b50a</code> </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a9f68f173bba972734bda671de6d913bd"></a>
 <div class="memitem">
@@ -152,7 +158,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; SRef&lt; Contour2Df &gt;&gt; &amp;&#160;</td>
+          <td class="paramtype">std::vector&lt; SRef&lt; <a class="el" href="_geometry_definitions_8h.html#a93a5599e3547377b68d4dc90e24a4ba1">Contour2Df</a> &gt;&gt; &amp;&#160;</td>
           <td class="paramname"><em>contours</em>, </td>
         </tr>
         <tr>
@@ -203,7 +209,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">SRef&lt; Contour2Df &gt; &amp;&#160;</td>
+          <td class="paramtype">SRef&lt; <a class="el" href="_geometry_definitions_8h.html#a93a5599e3547377b68d4dc90e24a4ba1">Contour2Df</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>contour</em>, </td>
         </tr>
         <tr>

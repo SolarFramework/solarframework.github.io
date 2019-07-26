@@ -14,6 +14,12 @@
 <script type="text/javascript">
   $(document).ready(function() { init_search(); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -97,7 +103,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p>Specify the <a class="el" href="class_sol_a_r_1_1api_1_1fusion_1_1_i_visual_inertial_fusion.html" title="Specify the IVisualInertialFusion interface class. ">IVisualInertialFusion</a> interface class.  
+<p><b>Fuses data captured by inertial sensors with the pose estimated from visual sensors.</b> <code>UUID: 3efaa1c6-85e4-11e8-adc0-fa7ae01bbebc</code>  
  <a href="class_sol_a_r_1_1api_1_1fusion_1_1_i_visual_inertial_fusion.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_i_visual_inertial_fusion_8h_source.html">IVisualInertialFusion.h</a>&gt;</code></p>
@@ -120,11 +126,11 @@ Collaboration diagram for SolAR::api::fusion::IVisualInertialFusion:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a875bb5f1316a5c07a1eb8a3eed771cf0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a875bb5f1316a5c07a1eb8a3eed771cf0"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1fusion_1_1_i_visual_inertial_fusion.html#a875bb5f1316a5c07a1eb8a3eed771cf0">IVisualInertialFusion</a> ()=default</td></tr>
-<tr class="memdesc:a875bb5f1316a5c07a1eb8a3eed771cf0"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sol_a_r_1_1api_1_1fusion_1_1_i_visual_inertial_fusion.html" title="Specify the IVisualInertialFusion interface class. ">IVisualInertialFusion</a> default constructor. <br /></td></tr>
+<tr class="memdesc:a875bb5f1316a5c07a1eb8a3eed771cf0"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sol_a_r_1_1api_1_1fusion_1_1_i_visual_inertial_fusion.html" title="Fuses data captured by inertial sensors with the pose estimated from visual sensors. UUID: 3efaa1c6-85e4-11e8-adc0-fa7ae01bbebc ">IVisualInertialFusion</a> default constructor. <br /></td></tr>
 <tr class="separator:a875bb5f1316a5c07a1eb8a3eed771cf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae4a3ebdcf4a2f36df717e8bc1712ce7b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae4a3ebdcf4a2f36df717e8bc1712ce7b"></a>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1fusion_1_1_i_visual_inertial_fusion.html#ae4a3ebdcf4a2f36df717e8bc1712ce7b">~IVisualInertialFusion</a> ()=default</td></tr>
-<tr class="memdesc:ae4a3ebdcf4a2f36df717e8bc1712ce7b"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sol_a_r_1_1api_1_1fusion_1_1_i_visual_inertial_fusion.html" title="Specify the IVisualInertialFusion interface class. ">IVisualInertialFusion</a> default destructor. <br /></td></tr>
+<tr class="memdesc:ae4a3ebdcf4a2f36df717e8bc1712ce7b"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sol_a_r_1_1api_1_1fusion_1_1_i_visual_inertial_fusion.html" title="Fuses data captured by inertial sensors with the pose estimated from visual sensors. UUID: 3efaa1c6-85e4-11e8-adc0-fa7ae01bbebc ">IVisualInertialFusion</a> default destructor. <br /></td></tr>
 <tr class="separator:ae4a3ebdcf4a2f36df717e8bc1712ce7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a23296d9832ef7a9b66d73282460f9330"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1fusion_1_1_i_visual_inertial_fusion.html#a23296d9832ef7a9b66d73282460f9330">init</a> (<a class="el" href="struct_sol_a_r_1_1api_1_1fusion_1_1_vision_data.html">VisionData</a> &amp;initialVisionData)=0</td></tr>
 <tr class="memdesc:a23296d9832ef7a9b66d73282460f9330"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the fusion process with an initial pose.  <a href="#a23296d9832ef7a9b66d73282460f9330">More...</a><br /></td></tr>
@@ -135,12 +141,12 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <tr class="memitem:a779e6cce532f1c7f31268180ba48e985"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1fusion_1_1_i_visual_inertial_fusion.html#a779e6cce532f1c7f31268180ba48e985">addVisionData</a> (<a class="el" href="struct_sol_a_r_1_1api_1_1fusion_1_1_vision_data.html">VisionData</a> &amp;visionData)=0</td></tr>
 <tr class="memdesc:a779e6cce532f1c7f31268180ba48e985"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add vision data to be processed.  <a href="#a779e6cce532f1c7f31268180ba48e985">More...</a><br /></td></tr>
 <tr class="separator:a779e6cce532f1c7f31268180ba48e985"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aba8deb61bd1a43516601ef0fb9985574"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1fusion_1_1_i_visual_inertial_fusion.html#aba8deb61bd1a43516601ef0fb9985574">process</a> (Transform3Df &amp;outputData)=0</td></tr>
+<tr class="memitem:aba8deb61bd1a43516601ef0fb9985574"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1fusion_1_1_i_visual_inertial_fusion.html#aba8deb61bd1a43516601ef0fb9985574">process</a> (<a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a> &amp;outputData)=0</td></tr>
 <tr class="memdesc:aba8deb61bd1a43516601ef0fb9985574"><td class="mdescLeft">&#160;</td><td class="mdescRight">Carry out one step of the fusion process to estimate a pose.  <a href="#aba8deb61bd1a43516601ef0fb9985574">More...</a><br /></td></tr>
 <tr class="separator:aba8deb61bd1a43516601ef0fb9985574"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Specify the <a class="el" href="class_sol_a_r_1_1api_1_1fusion_1_1_i_visual_inertial_fusion.html" title="Specify the IVisualInertialFusion interface class. ">IVisualInertialFusion</a> interface class. </p>
+<div class="textblock"><p><b>Fuses data captured by inertial sensors with the pose estimated from visual sensors.</b> <code>UUID: 3efaa1c6-85e4-11e8-adc0-fa7ae01bbebc</code> </p>
 <p>This class provides a fusion method to process inputs from both visual and inertial sensors. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="aae61f858537cd4e0ec49ff5fd69a05b3"></a>
@@ -249,7 +255,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
         <tr>
           <td class="memname">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a> SolAR::api::fusion::IVisualInertialFusion::process </td>
           <td>(</td>
-          <td class="paramtype">Transform3Df &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a> &amp;&#160;</td>
           <td class="paramname"><em>outputData</em></td><td>)</td>
           <td></td>
         </tr>

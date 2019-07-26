@@ -14,6 +14,12 @@
 <script type="text/javascript">
   $(document).ready(function() { init_search(); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -97,7 +103,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p>The <a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1map_1_1_i_map_filter.html" title="The IMapFilter class. ">IMapFilter</a> class.  
+<p><b>Filters a map of 3D points.</b> <code>UUID: e0d6cc82-6af2-493d-901a-2384fca0b16f</code>  
  <a href="class_sol_a_r_1_1api_1_1solver_1_1map_1_1_i_map_filter.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_i_map_filter_8h_source.html">IMapFilter.h</a>&gt;</code></p>
@@ -122,12 +128,12 @@ Public Member Functions</h2></td></tr>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1map_1_1_i_map_filter.html#acdafb0c323d25471d94e6233d63b3831">~IMapFilter</a> ()</td></tr>
 <tr class="memdesc:acdafb0c323d25471d94e6233d63b3831"><td class="mdescLeft">&#160;</td><td class="mdescRight">~IMapper <br /></td></tr>
 <tr class="separator:acdafb0c323d25471d94e6233d63b3831"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3cbf39262de1a6614a82fe29ced32fff"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1map_1_1_i_map_filter.html#a3cbf39262de1a6614a82fe29ced32fff">filter</a> (const Transform3Df pose1, const Transform3Df pose2, const std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">CloudPoint</a> &gt;&gt; &amp;input, std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">CloudPoint</a> &gt;&gt; &amp;output)=0</td></tr>
+<tr class="memitem:a3cbf39262de1a6614a82fe29ced32fff"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1map_1_1_i_map_filter.html#a3cbf39262de1a6614a82fe29ced32fff">filter</a> (const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a> pose1, const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a> pose2, const std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">CloudPoint</a> &gt;&gt; &amp;input, std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">CloudPoint</a> &gt;&gt; &amp;output)=0</td></tr>
 <tr class="memdesc:a3cbf39262de1a6614a82fe29ced32fff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Filter point cloud reconstructed from 2 viewpoints.  <a href="#a3cbf39262de1a6614a82fe29ced32fff">More...</a><br /></td></tr>
 <tr class="separator:a3cbf39262de1a6614a82fe29ced32fff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>The <a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1map_1_1_i_map_filter.html" title="The IMapFilter class. ">IMapFilter</a> class. </p>
+<div class="textblock"><p><b>Filters a map of 3D points.</b> <code>UUID: e0d6cc82-6af2-493d-901a-2384fca0b16f</code> </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a3cbf39262de1a6614a82fe29ced32fff"></a>
 <div class="memitem">
@@ -139,13 +145,13 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
         <tr>
           <td class="memname">virtual void SolAR::api::solver::map::IMapFilter::filter </td>
           <td>(</td>
-          <td class="paramtype">const Transform3Df&#160;</td>
+          <td class="paramtype">const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a>&#160;</td>
           <td class="paramname"><em>pose1</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const Transform3Df&#160;</td>
+          <td class="paramtype">const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a>&#160;</td>
           <td class="paramname"><em>pose2</em>, </td>
         </tr>
         <tr>

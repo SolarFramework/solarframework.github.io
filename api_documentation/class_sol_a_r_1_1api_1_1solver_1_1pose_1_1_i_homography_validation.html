@@ -14,6 +14,12 @@
 <script type="text/javascript">
   $(document).ready(function() { init_search(); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -96,6 +102,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">SolAR::api::solver::pose::IHomographyValidation Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><b>Tests if a homography is valid.</b> <code>UUID: e95e8f70-dd32-11e7-9296-cec278b6b50a</code>  
+ <a href="class_sol_a_r_1_1api_1_1solver_1_1pose_1_1_i_homography_validation.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_i_homography_validation_8h_source.html">IHomographyValidation.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for SolAR::api::solver::pose::IHomographyValidation:</div>
 <div class="dyncontent">
@@ -115,17 +126,19 @@ Collaboration diagram for SolAR::api::solver::pose::IHomographyValidation:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a343dea963bbf9db18d8dd68ebfb621d8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a343dea963bbf9db18d8dd68ebfb621d8"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1pose_1_1_i_homography_validation.html#a343dea963bbf9db18d8dd68ebfb621d8">IHomographyValidation</a> ()=default</td></tr>
-<tr class="memdesc:a343dea963bbf9db18d8dd68ebfb621d8"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1pose_1_1_i_homography_validation.html">IHomographyValidation</a> default constructor. <br /></td></tr>
+<tr class="memdesc:a343dea963bbf9db18d8dd68ebfb621d8"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1pose_1_1_i_homography_validation.html" title="Tests if a homography is valid. UUID: e95e8f70-dd32-11e7-9296-cec278b6b50a ">IHomographyValidation</a> default constructor. <br /></td></tr>
 <tr class="separator:a343dea963bbf9db18d8dd68ebfb621d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a60150d97f9c6819ed57efd08913124ac"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a60150d97f9c6819ed57efd08913124ac"></a>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1pose_1_1_i_homography_validation.html#a60150d97f9c6819ed57efd08913124ac">~IHomographyValidation</a> ()=default</td></tr>
-<tr class="memdesc:a60150d97f9c6819ed57efd08913124ac"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1pose_1_1_i_homography_validation.html">IHomographyValidation</a> default destructor. <br /></td></tr>
+<tr class="memdesc:a60150d97f9c6819ed57efd08913124ac"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1pose_1_1_i_homography_validation.html" title="Tests if a homography is valid. UUID: e95e8f70-dd32-11e7-9296-cec278b6b50a ">IHomographyValidation</a> default destructor. <br /></td></tr>
 <tr class="separator:a60150d97f9c6819ed57efd08913124ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9f498bdd5af663399a6b44544d372b2b"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1pose_1_1_i_homography_validation.html#a9f498bdd5af663399a6b44544d372b2b">isValid</a> (const std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point2_df.html">Point2Df</a> &gt;&gt; &amp;ref2DSquaredMarkerCorners, const std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point2_df.html">Point2Df</a> &gt;&gt; &amp;projected2DSquaredMarkerCorners)=0</td></tr>
 <tr class="memdesc:a9f498bdd5af663399a6b44544d372b2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">evaluate the homography according to the projection of the 4 corners of a 2D squared Marker  <a href="#a9f498bdd5af663399a6b44544d372b2b">More...</a><br /></td></tr>
 <tr class="separator:a9f498bdd5af663399a6b44544d372b2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><b>Tests if a homography is valid.</b> <code>UUID: e95e8f70-dd32-11e7-9296-cec278b6b50a</code> </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a9f498bdd5af663399a6b44544d372b2b"></a>
 <div class="memitem">
 <div class="memproto">

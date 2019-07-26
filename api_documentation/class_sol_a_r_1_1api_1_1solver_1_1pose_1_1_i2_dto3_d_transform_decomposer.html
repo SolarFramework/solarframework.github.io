@@ -14,6 +14,12 @@
 <script type="text/javascript">
   $(document).ready(function() { init_search(); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -97,7 +103,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p>Decomposes 2D transform (ex Fundamental matrix) to 3D transform (ex camera pose).  
+<p><b>Decomposes 2D transform (ex Fundamental matrix) to 3D transform (ex camera pose).</b> <code>UUID: 0404e8b9-b824-4852-a34d-6eafa7563918</code>  
  <a href="class_sol_a_r_1_1api_1_1solver_1_1pose_1_1_i2_dto3_d_transform_decomposer.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_i2_dto3_d_transform_decomposer_8h_source.html">I2Dto3DTransformDecomposer.h</a>&gt;</code></p>
@@ -120,21 +126,22 @@ Collaboration diagram for SolAR::api::solver::pose::I2Dto3DTransformDecomposer:<
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a36a90d287a94579d26b7d769ade53e41"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a36a90d287a94579d26b7d769ade53e41"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1pose_1_1_i2_dto3_d_transform_decomposer.html#a36a90d287a94579d26b7d769ade53e41">I2Dto3DTransformDecomposer</a> ()=default</td></tr>
-<tr class="memdesc:a36a90d287a94579d26b7d769ade53e41"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1pose_1_1_i2_dto3_d_transform_decomposer.html" title="Decomposes 2D transform (ex Fundamental matrix) to 3D transform (ex camera pose). ...">I2Dto3DTransformDecomposer</a> default constructor. <br /></td></tr>
+<tr class="memdesc:a36a90d287a94579d26b7d769ade53e41"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1pose_1_1_i2_dto3_d_transform_decomposer.html" title="Decomposes 2D transform (ex Fundamental matrix) to 3D transform (ex camera pose). UUID: 0404e8b9-b824...">I2Dto3DTransformDecomposer</a> default constructor. <br /></td></tr>
 <tr class="separator:a36a90d287a94579d26b7d769ade53e41"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae216347ce07ad9244825af8527bedbbd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae216347ce07ad9244825af8527bedbbd"></a>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1pose_1_1_i2_dto3_d_transform_decomposer.html#ae216347ce07ad9244825af8527bedbbd">~I2Dto3DTransformDecomposer</a> ()=default</td></tr>
 <tr class="memdesc:ae216347ce07ad9244825af8527bedbbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">IFundamentalMatrixDecomposer default destructor. <br /></td></tr>
 <tr class="separator:ae216347ce07ad9244825af8527bedbbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a509f8dbfb4f75cc5f9d880a806df3743"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1pose_1_1_i2_dto3_d_transform_decomposer.html#a509f8dbfb4f75cc5f9d880a806df3743">setCameraParameters</a> (const CamCalibration &amp;intrinsicParams, const CamDistortion &amp;distorsionParams)=0</td></tr>
+<tr class="memitem:a509f8dbfb4f75cc5f9d880a806df3743"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1pose_1_1_i2_dto3_d_transform_decomposer.html#a509f8dbfb4f75cc5f9d880a806df3743">setCameraParameters</a> (const <a class="el" href="_math_definitions_8h.html#a0ea650513b55059459f5d5771c5bf5cb">CamCalibration</a> &amp;intrinsicParams, const <a class="el" href="_math_definitions_8h.html#ad85d877532df3da45a970d47735e34bc">CamDistortion</a> &amp;distorsionParams)=0</td></tr>
 <tr class="memdesc:a509f8dbfb4f75cc5f9d880a806df3743"><td class="mdescLeft">&#160;</td><td class="mdescRight">this method is used to set intrinsic parameters and distorsion of the camera  <a href="#a509f8dbfb4f75cc5f9d880a806df3743">More...</a><br /></td></tr>
 <tr class="separator:a509f8dbfb4f75cc5f9d880a806df3743"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5eacb07cd77daec39961cba4ec2014c4"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1pose_1_1_i2_dto3_d_transform_decomposer.html#a5eacb07cd77daec39961cba4ec2014c4">decompose</a> (const Transform2Df &amp;F, std::vector&lt; Transform3Df &gt; &amp;decomposedPoses)=0</td></tr>
+<tr class="memitem:a5eacb07cd77daec39961cba4ec2014c4"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1pose_1_1_i2_dto3_d_transform_decomposer.html#a5eacb07cd77daec39961cba4ec2014c4">decompose</a> (const <a class="el" href="_math_definitions_8h.html#af4828745e146c8d1fc42fbc85a374716">Transform2Df</a> &amp;F, std::vector&lt; <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a> &gt; &amp;decomposedPoses)=0</td></tr>
 <tr class="memdesc:a5eacb07cd77daec39961cba4ec2014c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">decompose a transform 2d to a transform 3d (4 possible poses {R1,t1},{R1,t2}, {R2,t1}, {R2,t2}).  <a href="#a5eacb07cd77daec39961cba4ec2014c4">More...</a><br /></td></tr>
 <tr class="separator:a5eacb07cd77daec39961cba4ec2014c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Decomposes 2D transform (ex Fundamental matrix) to 3D transform (ex camera pose). </p>
+<div class="textblock"><p><b>Decomposes 2D transform (ex Fundamental matrix) to 3D transform (ex camera pose).</b> <code>UUID: 0404e8b9-b824-4852-a34d-6eafa7563918</code> </p>
+<p>Knowing a frame, its reference keyframe which already has 3D correpspondences, as well the 2D matches between them, the component find the 2d-3D correspondences between the current frame and the 3D Points visible from the reference keyframe. * </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a5eacb07cd77daec39961cba4ec2014c4"></a>
 <div class="memitem">
@@ -146,13 +153,13 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
         <tr>
           <td class="memname">virtual bool SolAR::api::solver::pose::I2Dto3DTransformDecomposer::decompose </td>
           <td>(</td>
-          <td class="paramtype">const Transform2Df &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="_math_definitions_8h.html#af4828745e146c8d1fc42fbc85a374716">Transform2Df</a> &amp;&#160;</td>
           <td class="paramname"><em>F</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; Transform3Df &gt; &amp;&#160;</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>decomposedPoses</em>&#160;</td>
         </tr>
         <tr>
@@ -189,13 +196,13 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
         <tr>
           <td class="memname">virtual void SolAR::api::solver::pose::I2Dto3DTransformDecomposer::setCameraParameters </td>
           <td>(</td>
-          <td class="paramtype">const CamCalibration &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="_math_definitions_8h.html#a0ea650513b55059459f5d5771c5bf5cb">CamCalibration</a> &amp;&#160;</td>
           <td class="paramname"><em>intrinsicParams</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const CamDistortion &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="_math_definitions_8h.html#ad85d877532df3da45a970d47735e34bc">CamDistortion</a> &amp;&#160;</td>
           <td class="paramname"><em>distorsionParams</em>&#160;</td>
         </tr>
         <tr>

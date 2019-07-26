@@ -1,5 +1,5 @@
 <map id="SolAR::api::input::files::IMarker2DSquared" name="SolAR::api::input::files::IMarker2DSquared">
-<area shape="rect" id="node4" href="$class_sol_a_r_1_1api_1_1input_1_1files_1_1_i_marker2_d_natural_image.html" title="The abstract class defining all 2D Natural Image markers representing any image. " alt="" coords="627,5,833,47"/>
-<area shape="rect" id="node5" href="$class_sol_a_r_1_1api_1_1input_1_1files_1_1_i_marker2_d_squared_binary.html" title="SolAR::api::input::\lfiles::IMarker2DSquaredBinary" alt="" coords="623,71,837,112"/>
-<area shape="rect" id="node2" href="$class_sol_a_r_1_1api_1_1input_1_1files_1_1_i_marker.html" title="SolAR::api::input::\lfiles::IMarker" alt="" coords="217,39,352,80"/>
+<area shape="rect" id="node4" href="$class_sol_a_r_1_1api_1_1input_1_1files_1_1_i_marker2_d_natural_image.html" title="Loads a natural image marker. UUID: 8fed06f8&#45;c54d&#45;11e7&#45;abc4&#45;cec278b6b50a " alt="" coords="627,5,833,47"/>
+<area shape="rect" id="node5" href="$class_sol_a_r_1_1api_1_1input_1_1files_1_1_i_marker2_d_squared_binary.html" title="Loads 2D squared marker based on a black and white grid. UUID: 12d592ff&#45;aa46&#45;40a6&#45;8d65&#45;7fbfb382d60b ..." alt="" coords="623,71,837,112"/>
+<area shape="rect" id="node2" href="$class_sol_a_r_1_1api_1_1input_1_1files_1_1_i_marker.html" title="Loads a general Marker. UUID: b05f3dbb&#45;f93d&#45;465c&#45;aee1&#45;fb58e1480c42 " alt="" coords="217,39,352,80"/>
 </map>

@@ -14,6 +14,12 @@
 <script type="text/javascript">
   $(document).ready(function() { init_search(); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -97,10 +103,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <p>This is the complete list of members for <a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1pose_1_1_i3_d_transform_finder_from2_d3_d.html">SolAR::api::solver::pose::I3DTransformFinderFrom2D3D</a>, including all inherited members.</p>
 <table class="directory">
   <tr class="even"><td class="entry"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1pose_1_1_i3_d_transform_finder_from2_d3_d.html#ac3cd0d86b88d75e7c77f779772c7edc7">estimate</a>(const std::vector&lt; SRef&lt; Point2Df &gt;&gt; &amp;imagePoints, const std::vector&lt; SRef&lt; Point3Df &gt;&gt; &amp;worldPoints, Transform3Df &amp;pose, const Transform3Df initialPose=Transform3Df::Identity())=0</td><td class="entry"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1pose_1_1_i3_d_transform_finder_from2_d3_d.html">SolAR::api::solver::pose::I3DTransformFinderFrom2D3D</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1pose_1_1_i3_d_transform_finder_from2_d3_d.html#a2a3bd79d5a1988859ab75c2837afb773">estimate</a>(const std::vector&lt; SRef&lt; Point2Df &gt;&gt; &amp;imagePoints, const std::vector&lt; SRef&lt; Point3Df &gt;&gt; &amp;worldPoints, std::vector&lt; SRef&lt; Point2Df &gt;&gt; &amp;imagePoints_inlier, std::vector&lt; SRef&lt; Point3Df &gt;&gt; &amp;worldPoints_inlier, Transform3Df &amp;pose, const Transform3Df initialPose=Transform3Df::Identity())=0</td><td class="entry"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1pose_1_1_i3_d_transform_finder_from2_d3_d.html">SolAR::api::solver::pose::I3DTransformFinderFrom2D3D</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1pose_1_1_i3_d_transform_finder_from2_d3_d.html#ad5094cf64311be2166c1da1fe06e0463">I3DTransformFinderFrom2D3D</a>()=default</td><td class="entry"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1pose_1_1_i3_d_transform_finder_from2_d3_d.html">SolAR::api::solver::pose::I3DTransformFinderFrom2D3D</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1pose_1_1_i3_d_transform_finder_from2_d3_d.html#a08ea0ce86c3383361bceb35d678d1982">setCameraParameters</a>(const CamCalibration &amp;intrinsicParams, const CamDistortion &amp;distorsionParams)=0</td><td class="entry"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1pose_1_1_i3_d_transform_finder_from2_d3_d.html">SolAR::api::solver::pose::I3DTransformFinderFrom2D3D</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1pose_1_1_i3_d_transform_finder_from2_d3_d.html#a1d79773dc8ce1966beade065c09e7eb4">~I3DTransformFinderFrom2D3D</a>()=default</td><td class="entry"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1pose_1_1_i3_d_transform_finder_from2_d3_d.html">SolAR::api::solver::pose::I3DTransformFinderFrom2D3D</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1pose_1_1_i3_d_transform_finder_from2_d3_d.html#ad5094cf64311be2166c1da1fe06e0463">I3DTransformFinderFrom2D3D</a>()=default</td><td class="entry"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1pose_1_1_i3_d_transform_finder_from2_d3_d.html">SolAR::api::solver::pose::I3DTransformFinderFrom2D3D</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1pose_1_1_i3_d_transform_finder_from2_d3_d.html#a08ea0ce86c3383361bceb35d678d1982">setCameraParameters</a>(const CamCalibration &amp;intrinsicParams, const CamDistortion &amp;distorsionParams)=0</td><td class="entry"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1pose_1_1_i3_d_transform_finder_from2_d3_d.html">SolAR::api::solver::pose::I3DTransformFinderFrom2D3D</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1pose_1_1_i3_d_transform_finder_from2_d3_d.html#a1d79773dc8ce1966beade065c09e7eb4">~I3DTransformFinderFrom2D3D</a>()=default</td><td class="entry"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1pose_1_1_i3_d_transform_finder_from2_d3_d.html">SolAR::api::solver::pose::I3DTransformFinderFrom2D3D</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
 </table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

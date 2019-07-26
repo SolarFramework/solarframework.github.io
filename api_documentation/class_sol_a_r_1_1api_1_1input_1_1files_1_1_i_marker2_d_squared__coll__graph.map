@@ -1,4 +1,4 @@
 <map id="SolAR::api::input::files::IMarker2DSquared" name="SolAR::api::input::files::IMarker2DSquared">
-<area shape="rect" id="node2" href="$class_sol_a_r_1_1api_1_1input_1_1files_1_1_i_marker.html" title="SolAR::api::input::\lfiles::IMarker" alt="" coords="20,81,155,123"/>
-<area shape="rect" id="node4" href="$struct_sol_a_r_1_1datastructure_1_1_sizef.html" title="SolAR::datastructure\l::Sizef" alt="" coords="179,81,334,123"/>
+<area shape="rect" id="node2" href="$class_sol_a_r_1_1api_1_1input_1_1files_1_1_i_marker.html" title="Loads a general Marker. UUID: b05f3dbb&#45;f93d&#45;465c&#45;aee1&#45;fb58e1480c42 " alt="" coords="20,81,155,123"/>
+<area shape="rect" id="node4" href="$struct_sol_a_r_1_1datastructure_1_1_sizef.html" title="A 2D size defined with floats. " alt="" coords="179,81,334,123"/>
 </map>

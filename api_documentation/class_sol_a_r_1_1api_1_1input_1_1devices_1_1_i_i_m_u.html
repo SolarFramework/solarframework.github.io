@@ -14,6 +14,12 @@
 <script type="text/javascript">
   $(document).ready(function() { init_search(); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -97,7 +103,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p>Specify the <a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_i_m_u.html" title="Specify the IIMU interface class. ">IIMU</a> interface class.  
+<p><b>Get access to the data of an IMU. </b> <code>UUID: 9940fa48-10cf-11e8-b642-0ed5f89f718b</code>  
  <a href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_i_m_u.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_i_i_m_u_8h_source.html">IIMU.h</a>&gt;</code></p>
@@ -120,25 +126,25 @@ Collaboration diagram for SolAR::api::input::devices::IIMU:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a7a12be738053da161dbf2413b09b4b59"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7a12be738053da161dbf2413b09b4b59"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_i_m_u.html#a7a12be738053da161dbf2413b09b4b59">IIMU</a> ()=default</td></tr>
-<tr class="memdesc:a7a12be738053da161dbf2413b09b4b59"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_i_m_u.html" title="Specify the IIMU interface class. ">IIMU</a> default constructor. <br /></td></tr>
+<tr class="memdesc:a7a12be738053da161dbf2413b09b4b59"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_i_m_u.html" title="Get access to the data of an IMU.  UUID: 9940fa48-10cf-11e8-b642-0ed5f89f718b ">IIMU</a> default constructor. <br /></td></tr>
 <tr class="separator:a7a12be738053da161dbf2413b09b4b59"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5555f0a2da6ac58bc48702f4fed16cf9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5555f0a2da6ac58bc48702f4fed16cf9"></a>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_i_m_u.html#a5555f0a2da6ac58bc48702f4fed16cf9">~IIMU</a> ()=default</td></tr>
-<tr class="memdesc:a5555f0a2da6ac58bc48702f4fed16cf9"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_i_m_u.html" title="Specify the IIMU interface class. ">IIMU</a> default destructor. <br /></td></tr>
+<tr class="memdesc:a5555f0a2da6ac58bc48702f4fed16cf9"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_i_m_u.html" title="Get access to the data of an IMU.  UUID: 9940fa48-10cf-11e8-b642-0ed5f89f718b ">IIMU</a> default destructor. <br /></td></tr>
 <tr class="separator:a5555f0a2da6ac58bc48702f4fed16cf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a420f20e7612432707b84eddd7ba0a75c"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_i_m_u.html#a420f20e7612432707b84eddd7ba0a75c">start</a> ()=0</td></tr>
 <tr class="memdesc:a420f20e7612432707b84eddd7ba0a75c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start the acquisition device.  <a href="#a420f20e7612432707b84eddd7ba0a75c">More...</a><br /></td></tr>
 <tr class="separator:a420f20e7612432707b84eddd7ba0a75c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae97caf1426fc7caf1d0b298a7cb325b4"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_i_m_u.html#ae97caf1426fc7caf1d0b298a7cb325b4">getGyroscopeData</a> (Vector3f &amp;gyroData)=0</td></tr>
+<tr class="memitem:ae97caf1426fc7caf1d0b298a7cb325b4"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_i_m_u.html#ae97caf1426fc7caf1d0b298a7cb325b4">getGyroscopeData</a> (<a class="el" href="_math_definitions_8h.html#aea8f6c5de471fec81ef9fadc51eed25a">Vector3f</a> &amp;gyroData)=0</td></tr>
 <tr class="memdesc:ae97caf1426fc7caf1d0b298a7cb325b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get gyroscope data.  <a href="#ae97caf1426fc7caf1d0b298a7cb325b4">More...</a><br /></td></tr>
 <tr class="separator:ae97caf1426fc7caf1d0b298a7cb325b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a343b78d6c1e84b5e293a1774fe480005"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_i_m_u.html#a343b78d6c1e84b5e293a1774fe480005">getAccelerometerData</a> (Vector3f &amp;accelData)=0</td></tr>
+<tr class="memitem:a343b78d6c1e84b5e293a1774fe480005"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_i_m_u.html#a343b78d6c1e84b5e293a1774fe480005">getAccelerometerData</a> (<a class="el" href="_math_definitions_8h.html#aea8f6c5de471fec81ef9fadc51eed25a">Vector3f</a> &amp;accelData)=0</td></tr>
 <tr class="memdesc:a343b78d6c1e84b5e293a1774fe480005"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get accelerometer data.  <a href="#a343b78d6c1e84b5e293a1774fe480005">More...</a><br /></td></tr>
 <tr class="separator:a343b78d6c1e84b5e293a1774fe480005"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ace4e55a5d4aa7b498160d98d34f4f19e"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_i_m_u.html#ace4e55a5d4aa7b498160d98d34f4f19e">getMagnetometerData</a> (Vector3f &amp;magData)=0</td></tr>
+<tr class="memitem:ace4e55a5d4aa7b498160d98d34f4f19e"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_i_m_u.html#ace4e55a5d4aa7b498160d98d34f4f19e">getMagnetometerData</a> (<a class="el" href="_math_definitions_8h.html#aea8f6c5de471fec81ef9fadc51eed25a">Vector3f</a> &amp;magData)=0</td></tr>
 <tr class="memdesc:ace4e55a5d4aa7b498160d98d34f4f19e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get magnetometer data.  <a href="#ace4e55a5d4aa7b498160d98d34f4f19e">More...</a><br /></td></tr>
 <tr class="separator:ace4e55a5d4aa7b498160d98d34f4f19e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4e0fbf0231f689815df89fe70ad0457d"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_i_m_u.html#a4e0fbf0231f689815df89fe70ad0457d">getAllSensorsData</a> (Vector3f &amp;gyroData, Vector3f &amp;accelData, Vector3f &amp;magData)=0</td></tr>
+<tr class="memitem:a4e0fbf0231f689815df89fe70ad0457d"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_i_m_u.html#a4e0fbf0231f689815df89fe70ad0457d">getAllSensorsData</a> (<a class="el" href="_math_definitions_8h.html#aea8f6c5de471fec81ef9fadc51eed25a">Vector3f</a> &amp;gyroData, <a class="el" href="_math_definitions_8h.html#aea8f6c5de471fec81ef9fadc51eed25a">Vector3f</a> &amp;accelData, <a class="el" href="_math_definitions_8h.html#aea8f6c5de471fec81ef9fadc51eed25a">Vector3f</a> &amp;magData)=0</td></tr>
 <tr class="memdesc:a4e0fbf0231f689815df89fe70ad0457d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get gyroscope, accelerometer and magnetometer data.  <a href="#a4e0fbf0231f689815df89fe70ad0457d">More...</a><br /></td></tr>
 <tr class="separator:a4e0fbf0231f689815df89fe70ad0457d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a96eb18939c02a645db5e16e85fe86366"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_i_m_u.html#a96eb18939c02a645db5e16e85fe86366">isGyroscopeAvailable</a> ()=0</td></tr>
@@ -152,7 +158,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <tr class="separator:ad7ae590a24da595956bc2a5dad182866"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Specify the <a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_i_m_u.html" title="Specify the IIMU interface class. ">IIMU</a> interface class. </p>
+<div class="textblock"><p><b>Get access to the data of an IMU. </b> <code>UUID: 9940fa48-10cf-11e8-b642-0ed5f89f718b</code> </p>
 <p>This class describes the interface of an Inertial Measurement Unit capture device. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a343b78d6c1e84b5e293a1774fe480005"></a>
@@ -165,7 +171,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
         <tr>
           <td class="memname">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a> SolAR::api::input::devices::IIMU::getAccelerometerData </td>
           <td>(</td>
-          <td class="paramtype">Vector3f &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="_math_definitions_8h.html#aea8f6c5de471fec81ef9fadc51eed25a">Vector3f</a> &amp;&#160;</td>
           <td class="paramname"><em>accelData</em></td><td>)</td>
           <td></td>
         </tr>
@@ -198,19 +204,19 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
         <tr>
           <td class="memname">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a> SolAR::api::input::devices::IIMU::getAllSensorsData </td>
           <td>(</td>
-          <td class="paramtype">Vector3f &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="_math_definitions_8h.html#aea8f6c5de471fec81ef9fadc51eed25a">Vector3f</a> &amp;&#160;</td>
           <td class="paramname"><em>gyroData</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Vector3f &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="_math_definitions_8h.html#aea8f6c5de471fec81ef9fadc51eed25a">Vector3f</a> &amp;&#160;</td>
           <td class="paramname"><em>accelData</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Vector3f &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="_math_definitions_8h.html#aea8f6c5de471fec81ef9fadc51eed25a">Vector3f</a> &amp;&#160;</td>
           <td class="paramname"><em>magData</em>&#160;</td>
         </tr>
         <tr>
@@ -249,7 +255,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
         <tr>
           <td class="memname">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a> SolAR::api::input::devices::IIMU::getGyroscopeData </td>
           <td>(</td>
-          <td class="paramtype">Vector3f &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="_math_definitions_8h.html#aea8f6c5de471fec81ef9fadc51eed25a">Vector3f</a> &amp;&#160;</td>
           <td class="paramname"><em>gyroData</em></td><td>)</td>
           <td></td>
         </tr>
@@ -282,7 +288,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
         <tr>
           <td class="memname">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a> SolAR::api::input::devices::IIMU::getMagnetometerData </td>
           <td>(</td>
-          <td class="paramtype">Vector3f &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="_math_definitions_8h.html#aea8f6c5de471fec81ef9fadc51eed25a">Vector3f</a> &amp;&#160;</td>
           <td class="paramname"><em>magData</em></td><td>)</td>
           <td></td>
         </tr>

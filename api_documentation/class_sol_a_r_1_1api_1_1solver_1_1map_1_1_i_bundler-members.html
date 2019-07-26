@@ -14,6 +14,12 @@
 <script type="text/javascript">
   $(document).ready(function() { init_search(); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -96,8 +102,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <p>This is the complete list of members for <a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1map_1_1_i_bundler.html">SolAR::api::solver::map::IBundler</a>, including all inherited members.</p>
 <table class="directory">
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>adjustBundle</b>(std::vector&lt; SRef&lt; Keyframe &gt;&gt; &amp;framesToAdjust, std::vector&lt; SRef&lt; CloudPoint &gt;&gt; &amp;mapToAdjust, const CamCalibration &amp;K, const CamDistortion &amp;D, const std::vector&lt; int &gt; &amp;selectKeyframes)=0 (defined in <a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1map_1_1_i_bundler.html">SolAR::api::solver::map::IBundler</a>)</td><td class="entry"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1map_1_1_i_bundler.html">SolAR::api::solver::map::IBundler</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>IBundler</b>()=default (defined in <a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1map_1_1_i_bundler.html">SolAR::api::solver::map::IBundler</a>)</td><td class="entry"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1map_1_1_i_bundler.html">SolAR::api::solver::map::IBundler</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>IBundler</b>()=default (defined in <a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1map_1_1_i_bundler.html">SolAR::api::solver::map::IBundler</a>)</td><td class="entry"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1map_1_1_i_bundler.html">SolAR::api::solver::map::IBundler</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1map_1_1_i_bundler.html#afffb140805297a2597e65d07e806fd25">solve</a>(std::vector&lt; SRef&lt; Keyframe &gt;&gt; &amp;framesToAdjust, std::vector&lt; SRef&lt; CloudPoint &gt;&gt; &amp;mapToAdjust, CamCalibration &amp;K, CamDistortion &amp;D, const std::vector&lt; int &gt; &amp;selectKeyframes)=0</td><td class="entry"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1map_1_1_i_bundler.html">SolAR::api::solver::map::IBundler</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1map_1_1_i_bundler.html#ac4eeb419de2227a95848e1fe9e22eb5f">~IBundler</a>()</td><td class="entry"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1map_1_1_i_bundler.html">SolAR::api::solver::map::IBundler</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
 </table></div><!-- contents -->
 <!-- start footer part -->

@@ -14,6 +14,12 @@
 <script type="text/javascript">
   $(document).ready(function() { init_search(); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -113,9 +119,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <tr class="even"><td class="entry"><a class="el" href="class_sol_a_r_1_1datastructure_1_1_frame.html#a3fcc0e8a8cd147266ddb1b5da4a1be25">m_pose</a></td><td class="entry"><a class="el" href="class_sol_a_r_1_1datastructure_1_1_frame.html">SolAR::datastructure::Frame</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
   <tr bgcolor="#f0f0f0"><td class="entry"><b>m_referenceKeyFrame</b> (defined in <a class="el" href="class_sol_a_r_1_1datastructure_1_1_frame.html">SolAR::datastructure::Frame</a>)</td><td class="entry"><a class="el" href="class_sol_a_r_1_1datastructure_1_1_frame.html">SolAR::datastructure::Frame</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
   <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>m_view</b> (defined in <a class="el" href="class_sol_a_r_1_1datastructure_1_1_frame.html">SolAR::datastructure::Frame</a>)</td><td class="entry"><a class="el" href="class_sol_a_r_1_1datastructure_1_1_frame.html">SolAR::datastructure::Frame</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>setPose</b>(Transform3Df &amp;pose) (defined in <a class="el" href="class_sol_a_r_1_1datastructure_1_1_frame.html">SolAR::datastructure::Frame</a>)</td><td class="entry"><a class="el" href="class_sol_a_r_1_1datastructure_1_1_frame.html">SolAR::datastructure::Frame</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>setReferenceKeyframe</b>(SRef&lt; Keyframe &gt; keyframe) (defined in <a class="el" href="class_sol_a_r_1_1datastructure_1_1_frame.html">SolAR::datastructure::Frame</a>)</td><td class="entry"><a class="el" href="class_sol_a_r_1_1datastructure_1_1_frame.html">SolAR::datastructure::Frame</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_sol_a_r_1_1datastructure_1_1_frame.html#ae86cee50c5f1957e8e96493a6cd28bdc">~Frame</a>()=default</td><td class="entry"><a class="el" href="class_sol_a_r_1_1datastructure_1_1_frame.html">SolAR::datastructure::Frame</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0"><td class="entry"><b>setKeypoints</b>(std::vector&lt; SRef&lt; Keypoint &gt;&gt; &amp;kpts) (defined in <a class="el" href="class_sol_a_r_1_1datastructure_1_1_frame.html">SolAR::datastructure::Frame</a>)</td><td class="entry"><a class="el" href="class_sol_a_r_1_1datastructure_1_1_frame.html">SolAR::datastructure::Frame</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>setPose</b>(Transform3Df &amp;pose) (defined in <a class="el" href="class_sol_a_r_1_1datastructure_1_1_frame.html">SolAR::datastructure::Frame</a>)</td><td class="entry"><a class="el" href="class_sol_a_r_1_1datastructure_1_1_frame.html">SolAR::datastructure::Frame</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0"><td class="entry"><b>setReferenceKeyframe</b>(SRef&lt; Keyframe &gt; keyframe) (defined in <a class="el" href="class_sol_a_r_1_1datastructure_1_1_frame.html">SolAR::datastructure::Frame</a>)</td><td class="entry"><a class="el" href="class_sol_a_r_1_1datastructure_1_1_frame.html">SolAR::datastructure::Frame</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_sol_a_r_1_1datastructure_1_1_frame.html#ae86cee50c5f1957e8e96493a6cd28bdc">~Frame</a>()=default</td><td class="entry"><a class="el" href="class_sol_a_r_1_1datastructure_1_1_frame.html">SolAR::datastructure::Frame</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

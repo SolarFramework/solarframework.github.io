@@ -14,6 +14,12 @@
 <script type="text/javascript">
   $(document).ready(function() { init_search(); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -97,7 +103,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p>provides a method to apply a 3D transformation (e.g. an affine transformation) to a set of 3D points  
+<p><b>Applies a 3D transformation (e.g. an affine transformation) to a set of 3D points.</b> <code>UUID: 9c1052b2-46c0-467b-8363-36f19b6b445f</code>  
  <a href="class_sol_a_r_1_1api_1_1geom_1_1_i3_d_transform.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_i3_d_transform_8h_source.html">I3DTransform.h</a>&gt;</code></p>
@@ -120,18 +126,18 @@ Collaboration diagram for SolAR::api::geom::I3DTransform:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a5814463364a20e953e5cd5f6926b1012"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5814463364a20e953e5cd5f6926b1012"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1geom_1_1_i3_d_transform.html#a5814463364a20e953e5cd5f6926b1012">I3DTransform</a> ()=default</td></tr>
-<tr class="memdesc:a5814463364a20e953e5cd5f6926b1012"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sol_a_r_1_1api_1_1geom_1_1_i3_d_transform.html" title="provides a method to apply a 3D transformation (e.g. an affine transformation) to a set of 3D points ...">I3DTransform</a> default constructor. <br /></td></tr>
+<tr class="memdesc:a5814463364a20e953e5cd5f6926b1012"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sol_a_r_1_1api_1_1geom_1_1_i3_d_transform.html" title="Applies a 3D transformation (e.g. an affine transformation) to a set of 3D points. UUID: 9c1052b2-46c0-467b-8363-36f19b6b445f ">I3DTransform</a> default constructor. <br /></td></tr>
 <tr class="separator:a5814463364a20e953e5cd5f6926b1012"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1f16841d43164a2d65f5291afa501c47"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1f16841d43164a2d65f5291afa501c47"></a>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1geom_1_1_i3_d_transform.html#a1f16841d43164a2d65f5291afa501c47">~I3DTransform</a> ()=default</td></tr>
-<tr class="memdesc:a1f16841d43164a2d65f5291afa501c47"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sol_a_r_1_1api_1_1geom_1_1_i3_d_transform.html" title="provides a method to apply a 3D transformation (e.g. an affine transformation) to a set of 3D points ...">I3DTransform</a> default destructor. <br /></td></tr>
+<tr class="memdesc:a1f16841d43164a2d65f5291afa501c47"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sol_a_r_1_1api_1_1geom_1_1_i3_d_transform.html" title="Applies a 3D transformation (e.g. an affine transformation) to a set of 3D points. UUID: 9c1052b2-46c0-467b-8363-36f19b6b445f ">I3DTransform</a> default destructor. <br /></td></tr>
 <tr class="separator:a1f16841d43164a2d65f5291afa501c47"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1d5c44c223af7cda3e0c1359da469e4e"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1geom_1_1_i3_d_transform.html#a1d5c44c223af7cda3e0c1359da469e4e">transform</a> (const std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point3_df.html">Point3Df</a> &gt;&gt; &amp;inputPoints, const Transform3Df transformation, std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point3_df.html">Point3Df</a> &gt;&gt; &amp;outputPoints)=0</td></tr>
+<tr class="memitem:a1d5c44c223af7cda3e0c1359da469e4e"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1geom_1_1_i3_d_transform.html#a1d5c44c223af7cda3e0c1359da469e4e">transform</a> (const std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point3_df.html">Point3Df</a> &gt;&gt; &amp;inputPoints, const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a> transformation, std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point3_df.html">Point3Df</a> &gt;&gt; &amp;outputPoints)=0</td></tr>
 <tr class="memdesc:a1d5c44c223af7cda3e0c1359da469e4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method applies a transformation (4x4 float matrix) to a set of 3D points.  <a href="#a1d5c44c223af7cda3e0c1359da469e4e">More...</a><br /></td></tr>
 <tr class="separator:a1d5c44c223af7cda3e0c1359da469e4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>provides a method to apply a 3D transformation (e.g. an affine transformation) to a set of 3D points </p>
+<div class="textblock"><p><b>Applies a 3D transformation (e.g. an affine transformation) to a set of 3D points.</b> <code>UUID: 9c1052b2-46c0-467b-8363-36f19b6b445f</code> </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a1d5c44c223af7cda3e0c1359da469e4e"></a>
 <div class="memitem">
@@ -149,7 +155,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const Transform3Df&#160;</td>
+          <td class="paramtype">const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a>&#160;</td>
           <td class="paramname"><em>transformation</em>, </td>
         </tr>
         <tr>

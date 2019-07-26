@@ -14,6 +14,12 @@
 <script type="text/javascript">
   $(document).ready(function() { init_search(); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -96,6 +102,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">SolAR::datastructure::Map Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><b>A map of 3D points.</b>.  
+ <a href="class_sol_a_r_1_1datastructure_1_1_map.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_map_8h_source.html">Map.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -114,7 +125,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>addCloudPoints</b> (c
 SRef&lt; std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">CloudPoint</a> &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getPointCloud</b> ()</td></tr>
 <tr class="separator:a5c5e1e907b2025032bfc2c96d5c84f7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this class was generated from the following files:<ul>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><b>A map of 3D points.</b>. </p>
+</div><hr/>The documentation for this class was generated from the following files:<ul>
 <li>interfaces/datastructure/<a class="el" href="_map_8h_source.html">Map.h</a></li>
 <li>src/datastructure/Map.cpp</li>
 </ul>

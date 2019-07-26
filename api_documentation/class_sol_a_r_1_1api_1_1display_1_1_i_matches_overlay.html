@@ -14,6 +14,12 @@
 <script type="text/javascript">
   $(document).ready(function() { init_search(); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -97,7 +103,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p>Drawing interface to overlay matches between two images.  
+<p><b>Draws matches between two images.</b> <code>UUID: a801354a-3e00-467c-b390-48c76fa8c53a</code>  
  <a href="class_sol_a_r_1_1api_1_1display_1_1_i_matches_overlay.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_i_matches_overlay_8h_source.html">IMatchesOverlay.h</a>&gt;</code></p>
@@ -120,11 +126,11 @@ Collaboration diagram for SolAR::api::display::IMatchesOverlay:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a7fa1b98d847ecd217a15317406ee514b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7fa1b98d847ecd217a15317406ee514b"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1display_1_1_i_matches_overlay.html#a7fa1b98d847ecd217a15317406ee514b">IMatchesOverlay</a> ()=default</td></tr>
-<tr class="memdesc:a7fa1b98d847ecd217a15317406ee514b"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sol_a_r_1_1api_1_1display_1_1_i_matches_overlay.html" title="Drawing interface to overlay matches between two images. ">IMatchesOverlay</a> default constructor. <br /></td></tr>
+<tr class="memdesc:a7fa1b98d847ecd217a15317406ee514b"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sol_a_r_1_1api_1_1display_1_1_i_matches_overlay.html" title="Draws matches between two images. UUID: a801354a-3e00-467c-b390-48c76fa8c53a ">IMatchesOverlay</a> default constructor. <br /></td></tr>
 <tr class="separator:a7fa1b98d847ecd217a15317406ee514b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab6a8dd5ddd596611edd58c489c039c5d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab6a8dd5ddd596611edd58c489c039c5d"></a>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1display_1_1_i_matches_overlay.html#ab6a8dd5ddd596611edd58c489c039c5d">~IMatchesOverlay</a> ()=default</td></tr>
-<tr class="memdesc:ab6a8dd5ddd596611edd58c489c039c5d"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sol_a_r_1_1api_1_1display_1_1_i_matches_overlay.html" title="Drawing interface to overlay matches between two images. ">IMatchesOverlay</a> default destructor. <br /></td></tr>
+<tr class="memdesc:ab6a8dd5ddd596611edd58c489c039c5d"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sol_a_r_1_1api_1_1display_1_1_i_matches_overlay.html" title="Draws matches between two images. UUID: a801354a-3e00-467c-b390-48c76fa8c53a ">IMatchesOverlay</a> default destructor. <br /></td></tr>
 <tr class="separator:ab6a8dd5ddd596611edd58c489c039c5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa75f757db257f8cdd7ccf63510fc34eb"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1display_1_1_i_matches_overlay.html#aa75f757db257f8cdd7ccf63510fc34eb">draw</a> (const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt; image1, const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt; image2, SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt; &amp;outImage, const std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point2_df.html">Point2Df</a> &gt;&gt; &amp;points_image1, const std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point2_df.html">Point2Df</a> &gt;&gt; &amp;points_image2, const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_match.html">DescriptorMatch</a> &gt; matches=std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_match.html">DescriptorMatch</a> &gt;())=0</td></tr>
 <tr class="memdesc:aa75f757db257f8cdd7ccf63510fc34eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">draw Match Lines. Draw all the lines joining the keypoints that match between two images  <a href="#aa75f757db257f8cdd7ccf63510fc34eb">More...</a><br /></td></tr>
@@ -140,7 +146,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <tr class="separator:a7cdbe9cfdb39f8b73df56bc2064fae92"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Drawing interface to overlay matches between two images. </p>
+<div class="textblock"><p><b>Draws matches between two images.</b> <code>UUID: a801354a-3e00-467c-b390-48c76fa8c53a</code> </p>
 <p>This class provides drawing method to overlay matches between two images. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="aa75f757db257f8cdd7ccf63510fc34eb"></a>

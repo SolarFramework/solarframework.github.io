@@ -14,6 +14,12 @@
 <script type="text/javascript">
   $(document).ready(function() { init_search(); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -98,7 +104,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p>Specifies the <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keyframe.html" title="Specifies the Keyframe class. ">Keyframe</a> class.  
+<p><b>A keyframe</b>.  
  <a href="class_sol_a_r_1_1datastructure_1_1_keyframe.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_keyframe_8h_source.html">Keyframe.h</a>&gt;</code></p>
@@ -107,7 +113,7 @@ Inheritance diagram for SolAR::datastructure::Keyframe:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_sol_a_r_1_1datastructure_1_1_keyframe__inherit__graph.png" border="0" usemap="#_sol_a_r_1_1datastructure_1_1_keyframe_inherit__map" alt="Inheritance graph"/></div>
 <map name="_sol_a_r_1_1datastructure_1_1_keyframe_inherit__map" id="_sol_a_r_1_1datastructure_1_1_keyframe_inherit__map">
-<area shape="rect" id="node2" href="class_sol_a_r_1_1datastructure_1_1_frame.html" title="Specifies the frame class. " alt="" coords="5,5,160,47"/>
+<area shape="rect" id="node2" href="class_sol_a_r_1_1datastructure_1_1_frame.html" title="A frame. " alt="" coords="5,5,160,47"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
@@ -115,7 +121,7 @@ Collaboration diagram for SolAR::datastructure::Keyframe:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_sol_a_r_1_1datastructure_1_1_keyframe__coll__graph.png" border="0" usemap="#_sol_a_r_1_1datastructure_1_1_keyframe_coll__map" alt="Collaboration graph"/></div>
 <map name="_sol_a_r_1_1datastructure_1_1_keyframe_coll__map" id="_sol_a_r_1_1datastructure_1_1_keyframe_coll__map">
-<area shape="rect" id="node2" href="class_sol_a_r_1_1datastructure_1_1_frame.html" title="Specifies the frame class. " alt="" coords="5,5,160,47"/>
+<area shape="rect" id="node2" href="class_sol_a_r_1_1datastructure_1_1_frame.html" title="A frame. " alt="" coords="5,5,160,47"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -126,10 +132,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:af97a2f37f6e13554cdd0b37cb52ebb8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">~Keyframe <br /></td></tr>
 <tr class="separator:af97a2f37f6e13554cdd0b37cb52ebb8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a83bb780512089861fa4fbddccd9a38d7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a83bb780512089861fa4fbddccd9a38d7"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Keyframe</b> (std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html">Keypoint</a> &gt;&gt; keypoints, SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_buffer.html">DescriptorBuffer</a> &gt; descriptors, SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt; view, SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keyframe.html">Keyframe</a> &gt; refKeyframe, Transform3Df pose=Transform3Df::Identity())</td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Keyframe</b> (std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html">Keypoint</a> &gt;&gt; keypoints, SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_buffer.html">DescriptorBuffer</a> &gt; descriptors, SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt; view, SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keyframe.html">Keyframe</a> &gt; refKeyframe, <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a> pose=Transform3Df::Identity())</td></tr>
 <tr class="separator:a83bb780512089861fa4fbddccd9a38d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0c7049707e96c636ada028890c4721a5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0c7049707e96c636ada028890c4721a5"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Keyframe</b> (std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html">Keypoint</a> &gt;&gt; keypoints, SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_buffer.html">DescriptorBuffer</a> &gt; descriptors, SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt; view, Transform3Df pose=Transform3Df::Identity())</td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Keyframe</b> (std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html">Keypoint</a> &gt;&gt; keypoints, SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_buffer.html">DescriptorBuffer</a> &gt; descriptors, SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt; view, <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a> pose=Transform3Df::Identity())</td></tr>
 <tr class="separator:a0c7049707e96c636ada028890c4721a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2da7f2855e36b5baebc1438750b89a1f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2da7f2855e36b5baebc1438750b89a1f"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>addVisibleMapPoints</b> (const std::map&lt; unsigned int, SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">CloudPoint</a> &gt;&gt; &amp;mapPoints)</td></tr>
@@ -145,10 +151,10 @@ std::map&lt; unsigned int, SRef&lt; <a class="el" href="class_sol_a_r_1_1datastr
 &#160;</td><td class="memItemRight" valign="bottom"><b>Frame</b> (const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keyframe.html">Keyframe</a> &gt; keyframe)</td></tr>
 <tr class="separator:a6c48c53e043ccf8b7bc1bac87f4177d8 inherit pub_methods_class_sol_a_r_1_1datastructure_1_1_frame"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae5cae7a14eed325754aa6804b8fc7607 inherit pub_methods_class_sol_a_r_1_1datastructure_1_1_frame"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae5cae7a14eed325754aa6804b8fc7607"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Frame</b> (const std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html">Keypoint</a> &gt;&gt; keypoints, const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_buffer.html">DescriptorBuffer</a> &gt; descriptors, const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt; view, const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keyframe.html">Keyframe</a> &gt; refKeyframe, const Transform3Df pose=Transform3Df::Identity())</td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Frame</b> (const std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html">Keypoint</a> &gt;&gt; keypoints, const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_buffer.html">DescriptorBuffer</a> &gt; descriptors, const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt; view, const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keyframe.html">Keyframe</a> &gt; refKeyframe, const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a> pose=Transform3Df::Identity())</td></tr>
 <tr class="separator:ae5cae7a14eed325754aa6804b8fc7607 inherit pub_methods_class_sol_a_r_1_1datastructure_1_1_frame"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abe035b60c54f5b784ffc43ad402c4296 inherit pub_methods_class_sol_a_r_1_1datastructure_1_1_frame"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abe035b60c54f5b784ffc43ad402c4296"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Frame</b> (const std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html">Keypoint</a> &gt;&gt; keypoints, const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_buffer.html">DescriptorBuffer</a> &gt; descriptors, const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt; view, const Transform3Df pose=Transform3Df::Identity())</td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Frame</b> (const std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html">Keypoint</a> &gt;&gt; keypoints, const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_buffer.html">DescriptorBuffer</a> &gt; descriptors, const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt; view, const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a> pose=Transform3Df::Identity())</td></tr>
 <tr class="separator:abe035b60c54f5b784ffc43ad402c4296 inherit pub_methods_class_sol_a_r_1_1datastructure_1_1_frame"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae86cee50c5f1957e8e96493a6cd28bdc inherit pub_methods_class_sol_a_r_1_1datastructure_1_1_frame"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae86cee50c5f1957e8e96493a6cd28bdc"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1datastructure_1_1_frame.html#ae86cee50c5f1957e8e96493a6cd28bdc">~Frame</a> ()=default</td></tr>
@@ -158,11 +164,14 @@ std::map&lt; unsigned int, SRef&lt; <a class="el" href="class_sol_a_r_1_1datastr
 SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getView</b> ()</td></tr>
 <tr class="separator:a00c1fe505d3181207f769d1fe370f88e inherit pub_methods_class_sol_a_r_1_1datastructure_1_1_frame"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1afba126cb9a17652e9fff43153cac10 inherit pub_methods_class_sol_a_r_1_1datastructure_1_1_frame"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1afba126cb9a17652e9fff43153cac10"></a>
-Transform3Df&#160;</td><td class="memItemRight" valign="bottom"><b>getPose</b> ()</td></tr>
+<a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getPose</b> ()</td></tr>
 <tr class="separator:a1afba126cb9a17652e9fff43153cac10 inherit pub_methods_class_sol_a_r_1_1datastructure_1_1_frame"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaaf9bfeb5354ee0504b97350651707ad inherit pub_methods_class_sol_a_r_1_1datastructure_1_1_frame"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaaf9bfeb5354ee0504b97350651707ad"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setPose</b> (Transform3Df &amp;pose)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setPose</b> (<a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a> &amp;pose)</td></tr>
 <tr class="separator:aaaf9bfeb5354ee0504b97350651707ad inherit pub_methods_class_sol_a_r_1_1datastructure_1_1_frame"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0a5bf6e7fa072d060cb8e924f8152ec inherit pub_methods_class_sol_a_r_1_1datastructure_1_1_frame"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac0a5bf6e7fa072d060cb8e924f8152ec"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setKeypoints</b> (std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html">Keypoint</a> &gt;&gt; &amp;kpts)</td></tr>
+<tr class="separator:ac0a5bf6e7fa072d060cb8e924f8152ec inherit pub_methods_class_sol_a_r_1_1datastructure_1_1_frame"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a949ea18e22afa854b685d72132f5db52 inherit pub_methods_class_sol_a_r_1_1datastructure_1_1_frame"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a949ea18e22afa854b685d72132f5db52"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setReferenceKeyframe</b> (SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keyframe.html">Keyframe</a> &gt; keyframe)</td></tr>
 <tr class="separator:a949ea18e22afa854b685d72132f5db52 inherit pub_methods_class_sol_a_r_1_1datastructure_1_1_frame"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -192,7 +201,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>m_idx</b></td></tr>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_attribs_class_sol_a_r_1_1datastructure_1_1_frame"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_sol_a_r_1_1datastructure_1_1_frame')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_sol_a_r_1_1datastructure_1_1_frame.html">SolAR::datastructure::Frame</a></td></tr>
 <tr class="memitem:a3fcc0e8a8cd147266ddb1b5da4a1be25 inherit pro_attribs_class_sol_a_r_1_1datastructure_1_1_frame"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3fcc0e8a8cd147266ddb1b5da4a1be25"></a>
-Transform3Df&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1datastructure_1_1_frame.html#a3fcc0e8a8cd147266ddb1b5da4a1be25">m_pose</a></td></tr>
+<a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1datastructure_1_1_frame.html#a3fcc0e8a8cd147266ddb1b5da4a1be25">m_pose</a></td></tr>
 <tr class="memdesc:a3fcc0e8a8cd147266ddb1b5da4a1be25 inherit pro_attribs_class_sol_a_r_1_1datastructure_1_1_frame"><td class="mdescLeft">&#160;</td><td class="mdescRight">pose of current frame <br /></td></tr>
 <tr class="separator:a3fcc0e8a8cd147266ddb1b5da4a1be25 inherit pro_attribs_class_sol_a_r_1_1datastructure_1_1_frame"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e2493e61b80d39f04dc59b30fcc6774 inherit pro_attribs_class_sol_a_r_1_1datastructure_1_1_frame"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4e2493e61b80d39f04dc59b30fcc6774"></a>
@@ -212,8 +221,8 @@ std::map&lt; unsigned int, unsigned int &gt;&#160;</td><td class="memItemRight" 
 <tr class="separator:ad67a7b69d3984f58104d0c399dde6d00 inherit pro_attribs_class_sol_a_r_1_1datastructure_1_1_frame"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Specifies the <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keyframe.html" title="Specifies the Keyframe class. ">Keyframe</a> class. </p>
-<p>This class provides <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keyframe.html" title="Specifies the Keyframe class. ">Keyframe</a> definition for slam utilities. </p>
+<div class="textblock"><p><b>A keyframe</b>. </p>
+<p>This class provides <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keyframe.html" title="A keyframe. ">Keyframe</a> definition. </p>
 </div><hr/>The documentation for this class was generated from the following files:<ul>
 <li>interfaces/datastructure/<a class="el" href="_keyframe_8h_source.html">Keyframe.h</a></li>
 <li>src/datastructure/Keyframe.cpp</li>

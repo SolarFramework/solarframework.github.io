@@ -14,6 +14,12 @@
 <script type="text/javascript">
   $(document).ready(function() { init_search(); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -97,7 +103,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p>The <a class="el" href="class_sol_a_r_1_1api_1_1image_1_1_i_image_convertor.html" title="The IImageConvertor class. ">IImageConvertor</a> class.  
+<p><b>Converts image with a specific layout.</b> <code>UUID: 9c982719-6cb4-4831-aa88-9e01afacbd16</code>  
  <a href="class_sol_a_r_1_1api_1_1image_1_1_i_image_convertor.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_i_image_convertor_8h_source.html">IImageConvertor.h</a>&gt;</code></p>
@@ -122,16 +128,111 @@ Public Member Functions</h2></td></tr>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1image_1_1_i_image_convertor.html#a884c19a89e469e3281ed1cee73296d96">~IImageConvertor</a> ()</td></tr>
 <tr class="memdesc:a884c19a89e469e3281ed1cee73296d96"><td class="mdescLeft">&#160;</td><td class="mdescRight">~IImageConvertor <br /></td></tr>
 <tr class="separator:a884c19a89e469e3281ed1cee73296d96"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1fdf4ffe9a798cf8755d00f49dc22b9a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1fdf4ffe9a798cf8755d00f49dc22b9a"></a>
-virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><b>convert</b> (SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt; imgSrc, SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt; &amp;imgDst)=0</td></tr>
+<tr class="memitem:a1fdf4ffe9a798cf8755d00f49dc22b9a"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1image_1_1_i_image_convertor.html#a1fdf4ffe9a798cf8755d00f49dc22b9a">convert</a> (SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt; imgSrc, SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt; &amp;imgDst)=0</td></tr>
+<tr class="memdesc:a1fdf4ffe9a798cf8755d00f49dc22b9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method converts an image source to image destination according to image destination channel, color and depth representation.  <a href="#a1fdf4ffe9a798cf8755d00f49dc22b9a">More...</a><br /></td></tr>
 <tr class="separator:a1fdf4ffe9a798cf8755d00f49dc22b9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adc4e11cc9b2cde725d04e6476e4edaed"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adc4e11cc9b2cde725d04e6476e4edaed"></a>
-virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><b>convert</b> (SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt; imgSrc, SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt; &amp;imgDst, <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html#a1203358adec459284a7eaecd4ec63041">Image::ImageLayout</a> destLayout)=0</td></tr>
+<tr class="memitem:adc4e11cc9b2cde725d04e6476e4edaed"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1image_1_1_i_image_convertor.html#adc4e11cc9b2cde725d04e6476e4edaed">convert</a> (SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt; imgSrc, SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt; &amp;imgDst, <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html#a1203358adec459284a7eaecd4ec63041">Image::ImageLayout</a> destLayout)=0</td></tr>
+<tr class="memdesc:adc4e11cc9b2cde725d04e6476e4edaed"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method converts an image source to image destination according to a given channel and color representation layout.  <a href="#adc4e11cc9b2cde725d04e6476e4edaed">More...</a><br /></td></tr>
 <tr class="separator:adc4e11cc9b2cde725d04e6476e4edaed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>The <a class="el" href="class_sol_a_r_1_1api_1_1image_1_1_i_image_convertor.html" title="The IImageConvertor class. ">IImageConvertor</a> class. </p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+<div class="textblock"><p><b>Converts image with a specific layout.</b> <code>UUID: 9c982719-6cb4-4831-aa88-9e01afacbd16</code> </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a1fdf4ffe9a798cf8755d00f49dc22b9a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a> SolAR::api::image::IImageConvertor::convert </td>
+          <td>(</td>
+          <td class="paramtype">SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt;&#160;</td>
+          <td class="paramname"><em>imgSrc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>imgDst</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>This method converts an image source to image destination according to image destination channel, color and depth representation. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">imgSrc</td><td>input image to convert </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">imgDst</td><td>output image converted </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>FrameworkReturnCode::<em>SUCCESS</em> id conversion succeed, else FrameworkReturnCode::_ERROR. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="adc4e11cc9b2cde725d04e6476e4edaed"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a> SolAR::api::image::IImageConvertor::convert </td>
+          <td>(</td>
+          <td class="paramtype">SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt;&#160;</td>
+          <td class="paramname"><em>imgSrc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>imgDst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html#a1203358adec459284a7eaecd4ec63041">Image::ImageLayout</a>&#160;</td>
+          <td class="paramname"><em>destLayout</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>This method converts an image source to image destination according to a given channel and color representation layout. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">imgSrc</td><td>input image to convert </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">imgDst</td><td>output image converted </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>FrameworkReturnCode::<em>SUCCESS</em> id conversion succeed, else FrameworkReturnCode::_ERROR. </dd></dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>interfaces/api/image/<a class="el" href="_i_image_convertor_8h_source.html">IImageConvertor.h</a></li>
 </ul>
 </div><!-- contents -->

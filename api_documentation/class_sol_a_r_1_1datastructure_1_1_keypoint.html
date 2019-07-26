@@ -14,6 +14,12 @@
 <script type="text/javascript">
   $(document).ready(function() { init_search(); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -97,7 +103,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p>The <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html" title="The Keypoint class. ">Keypoint</a> class.  
+<p><b>A 2D <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html" title="A 2D Keypoint.. ">Keypoint</a>.</b>.  
  <a href="class_sol_a_r_1_1datastructure_1_1_keypoint.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_keypoint_8h_source.html">Keypoint.h</a>&gt;</code></p>
@@ -106,7 +112,7 @@ Inheritance diagram for SolAR::datastructure::Keypoint:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_sol_a_r_1_1datastructure_1_1_keypoint__inherit__graph.png" border="0" usemap="#_sol_a_r_1_1datastructure_1_1_keypoint_inherit__map" alt="Inheritance graph"/></div>
 <map name="_sol_a_r_1_1datastructure_1_1_keypoint_inherit__map" id="_sol_a_r_1_1datastructure_1_1_keypoint_inherit__map">
-<area shape="rect" id="node2" href="class_sol_a_r_1_1datastructure_1_1_point2_df.html" title="SolAR::datastructure\l::Point2Df" alt="" coords="5,80,160,121"/>
+<area shape="rect" id="node2" href="class_sol_a_r_1_1datastructure_1_1_point2_df.html" title="A 2D point with coordinates defined with floats. " alt="" coords="5,80,160,121"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
@@ -114,7 +120,7 @@ Collaboration diagram for SolAR::datastructure::Keypoint:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_sol_a_r_1_1datastructure_1_1_keypoint__coll__graph.png" border="0" usemap="#_sol_a_r_1_1datastructure_1_1_keypoint_coll__map" alt="Collaboration graph"/></div>
 <map name="_sol_a_r_1_1datastructure_1_1_keypoint_coll__map" id="_sol_a_r_1_1datastructure_1_1_keypoint_coll__map">
-<area shape="rect" id="node2" href="class_sol_a_r_1_1datastructure_1_1_point2_df.html" title="SolAR::datastructure\l::Point2Df" alt="" coords="5,80,160,121"/>
+<area shape="rect" id="node2" href="class_sol_a_r_1_1datastructure_1_1_point2_df.html" title="A 2D point with coordinates defined with floats. " alt="" coords="5,80,160,121"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -128,22 +134,22 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a9646ffecf423200de2033cdc4ec212ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">~Keypoint <br /></td></tr>
 <tr class="separator:a9646ffecf423200de2033cdc4ec212ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a43e947f361c62e9e17b6d5538701283e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html#a43e947f361c62e9e17b6d5538701283e">init</a> (float x, float y, float size, float angle, float response, int octave, int class_id)</td></tr>
-<tr class="memdesc:a43e947f361c62e9e17b6d5538701283e"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method initializes an <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html" title="The Keypoint class. ">Keypoint</a> object.  <a href="#a43e947f361c62e9e17b6d5538701283e">More...</a><br /></td></tr>
+<tr class="memdesc:a43e947f361c62e9e17b6d5538701283e"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method initializes an <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html" title="A 2D Keypoint.. ">Keypoint</a> object.  <a href="#a43e947f361c62e9e17b6d5538701283e">More...</a><br /></td></tr>
 <tr class="separator:a43e947f361c62e9e17b6d5538701283e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a345a9701a34be191624241ffc4874b7f"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html#a345a9701a34be191624241ffc4874b7f">getAngle</a> () const </td></tr>
-<tr class="memdesc:a345a9701a34be191624241ffc4874b7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method returns the angle of an <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html" title="The Keypoint class. ">Keypoint</a>.  <a href="#a345a9701a34be191624241ffc4874b7f">More...</a><br /></td></tr>
+<tr class="memdesc:a345a9701a34be191624241ffc4874b7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method returns the angle of an <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html" title="A 2D Keypoint.. ">Keypoint</a>.  <a href="#a345a9701a34be191624241ffc4874b7f">More...</a><br /></td></tr>
 <tr class="separator:a345a9701a34be191624241ffc4874b7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3cf7881394447c88570a12e4cb4fe276"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html#a3cf7881394447c88570a12e4cb4fe276">getSize</a> () const </td></tr>
-<tr class="memdesc:a3cf7881394447c88570a12e4cb4fe276"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method returns the size of an <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html" title="The Keypoint class. ">Keypoint</a>.  <a href="#a3cf7881394447c88570a12e4cb4fe276">More...</a><br /></td></tr>
+<tr class="memdesc:a3cf7881394447c88570a12e4cb4fe276"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method returns the size of an <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html" title="A 2D Keypoint.. ">Keypoint</a>.  <a href="#a3cf7881394447c88570a12e4cb4fe276">More...</a><br /></td></tr>
 <tr class="separator:a3cf7881394447c88570a12e4cb4fe276"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1f480dad8041c0ed6de32fe7e25a9e64"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html#a1f480dad8041c0ed6de32fe7e25a9e64">getResponse</a> () const </td></tr>
 <tr class="memdesc:a1f480dad8041c0ed6de32fe7e25a9e64"><td class="mdescLeft">&#160;</td><td class="mdescRight">GetResponse.  <a href="#a1f480dad8041c0ed6de32fe7e25a9e64">More...</a><br /></td></tr>
 <tr class="separator:a1f480dad8041c0ed6de32fe7e25a9e64"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a22bfb35d1486263f10d36e5c96882a5e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html#a22bfb35d1486263f10d36e5c96882a5e">getOctave</a> () const </td></tr>
-<tr class="memdesc:a22bfb35d1486263f10d36e5c96882a5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method returns the octave of an <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html" title="The Keypoint class. ">Keypoint</a>.  <a href="#a22bfb35d1486263f10d36e5c96882a5e">More...</a><br /></td></tr>
+<tr class="memdesc:a22bfb35d1486263f10d36e5c96882a5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method returns the octave of an <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html" title="A 2D Keypoint.. ">Keypoint</a>.  <a href="#a22bfb35d1486263f10d36e5c96882a5e">More...</a><br /></td></tr>
 <tr class="separator:a22bfb35d1486263f10d36e5c96882a5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad7bb1cea4e86b314ca83d75d7fc57e15"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html#ad7bb1cea4e86b314ca83d75d7fc57e15">getClassId</a> () const </td></tr>
-<tr class="memdesc:ad7bb1cea4e86b314ca83d75d7fc57e15"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method returns the classid of an <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html" title="The Keypoint class. ">Keypoint</a>.  <a href="#ad7bb1cea4e86b314ca83d75d7fc57e15">More...</a><br /></td></tr>
+<tr class="memdesc:ad7bb1cea4e86b314ca83d75d7fc57e15"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method returns the classid of an <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html" title="A 2D Keypoint.. ">Keypoint</a>.  <a href="#ad7bb1cea4e86b314ca83d75d7fc57e15">More...</a><br /></td></tr>
 <tr class="separator:ad7bb1cea4e86b314ca83d75d7fc57e15"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_sol_a_r_1_1datastructure_1_1_point2_df"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_sol_a_r_1_1datastructure_1_1_point2_df')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point2_df.html">SolAR::datastructure::Point2Df</a></td></tr>
 <tr class="memitem:a68d32ed78352f0db4dd60c8e19ff2e2c inherit pub_methods_class_sol_a_r_1_1datastructure_1_1_point2_df"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a68d32ed78352f0db4dd60c8e19ff2e2c"></a>
@@ -169,7 +175,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setY</b> (float y)</t
 <tr class="separator:a7e96b6aecb3d38f29bfbcc755c94e08a inherit pub_methods_class_sol_a_r_1_1datastructure_1_1_point2_df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>The <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html" title="The Keypoint class. ">Keypoint</a> class. </p>
+<div class="textblock"><p><b>A 2D <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html" title="A 2D Keypoint.. ">Keypoint</a>.</b>. </p>
+<p>This class provides <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html" title="A 2D Keypoint.. ">Keypoint</a> definition. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a345a9701a34be191624241ffc4874b7f"></a>
 <div class="memitem">
@@ -192,7 +199,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setY</b> (float y)</t
 </table>
 </div><div class="memdoc">
 
-<p>This method returns the angle of an <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html" title="The Keypoint class. ">Keypoint</a>. </p>
+<p>This method returns the angle of an <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html" title="A 2D Keypoint.. ">Keypoint</a>. </p>
 <dl class="section return"><dt>Returns</dt><dd>angle </dd></dl>
 
 </div>
@@ -218,7 +225,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setY</b> (float y)</t
 </table>
 </div><div class="memdoc">
 
-<p>This method returns the classid of an <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html" title="The Keypoint class. ">Keypoint</a>. </p>
+<p>This method returns the classid of an <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html" title="A 2D Keypoint.. ">Keypoint</a>. </p>
 <dl class="section return"><dt>Returns</dt><dd>classid </dd></dl>
 
 </div>
@@ -244,7 +251,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setY</b> (float y)</t
 </table>
 </div><div class="memdoc">
 
-<p>This method returns the octave of an <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html" title="The Keypoint class. ">Keypoint</a>. </p>
+<p>This method returns the octave of an <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html" title="A 2D Keypoint.. ">Keypoint</a>. </p>
 <dl class="section return"><dt>Returns</dt><dd>octave </dd></dl>
 
 </div>
@@ -296,7 +303,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setY</b> (float y)</t
 </table>
 </div><div class="memdoc">
 
-<p>This method returns the size of an <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html" title="The Keypoint class. ">Keypoint</a>. </p>
+<p>This method returns the size of an <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html" title="A 2D Keypoint.. ">Keypoint</a>. </p>
 <dl class="section return"><dt>Returns</dt><dd>size </dd></dl>
 
 </div>
@@ -355,7 +362,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setY</b> (float y)</t
       </table>
 </div><div class="memdoc">
 
-<p>This method initializes an <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html" title="The Keypoint class. ">Keypoint</a> object. </p>
+<p>This method initializes an <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html" title="A 2D Keypoint.. ">Keypoint</a> object. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">x</td><td>x-coordinate of the keypoint </td></tr>

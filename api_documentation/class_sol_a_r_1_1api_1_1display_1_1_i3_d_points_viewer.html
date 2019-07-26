@@ -14,6 +14,12 @@
 <script type="text/javascript">
   $(document).ready(function() { init_search(); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -97,7 +103,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p>Viewer interface to display points cloud in a window.  
+<p><b>Displays point clouds in a window.</b> <code>UUID: 575d365a-9a27-11e8-9eb6-529269fb1459</code>  
  <a href="class_sol_a_r_1_1api_1_1display_1_1_i3_d_points_viewer.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_i3_d_points_viewer_8h_source.html">I3DPointsViewer.h</a>&gt;</code></p>
@@ -120,18 +126,18 @@ Collaboration diagram for SolAR::api::display::I3DPointsViewer:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a7a99baf4b1e6226010a490e366f0214f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7a99baf4b1e6226010a490e366f0214f"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1display_1_1_i3_d_points_viewer.html#a7a99baf4b1e6226010a490e366f0214f">I3DPointsViewer</a> ()=default</td></tr>
-<tr class="memdesc:a7a99baf4b1e6226010a490e366f0214f"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sol_a_r_1_1api_1_1display_1_1_i3_d_points_viewer.html" title="Viewer interface to display points cloud in a window. ">I3DPointsViewer</a> default constructor. <br /></td></tr>
+<tr class="memdesc:a7a99baf4b1e6226010a490e366f0214f"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sol_a_r_1_1api_1_1display_1_1_i3_d_points_viewer.html" title="Displays point clouds in a window. UUID: 575d365a-9a27-11e8-9eb6-529269fb1459 ">I3DPointsViewer</a> default constructor. <br /></td></tr>
 <tr class="separator:a7a99baf4b1e6226010a490e366f0214f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a89988ef4c1bebe6bc5409ee651552476"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a89988ef4c1bebe6bc5409ee651552476"></a>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1display_1_1_i3_d_points_viewer.html#a89988ef4c1bebe6bc5409ee651552476">~I3DPointsViewer</a> ()=default</td></tr>
-<tr class="memdesc:a89988ef4c1bebe6bc5409ee651552476"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sol_a_r_1_1api_1_1display_1_1_i3_d_points_viewer.html" title="Viewer interface to display points cloud in a window. ">I3DPointsViewer</a> default destructor. <br /></td></tr>
+<tr class="memdesc:a89988ef4c1bebe6bc5409ee651552476"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sol_a_r_1_1api_1_1display_1_1_i3_d_points_viewer.html" title="Displays point clouds in a window. UUID: 575d365a-9a27-11e8-9eb6-529269fb1459 ">I3DPointsViewer</a> default destructor. <br /></td></tr>
 <tr class="separator:a89988ef4c1bebe6bc5409ee651552476"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a02372ce4168d611dddfdf78a5a28999e"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1display_1_1_i3_d_points_viewer.html#a02372ce4168d611dddfdf78a5a28999e">display</a> (const std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">CloudPoint</a> &gt;&gt; &amp;points, const Transform3Df &amp;pose, const std::vector&lt; Transform3Df &gt; keyframePoses={}, const std::vector&lt; Transform3Df &gt; framePoses={}, const std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">CloudPoint</a> &gt;&gt; &amp;points2={}, const std::vector&lt; Transform3Df &gt; keyframePoses2={})=0</td></tr>
+<tr class="memitem:a02372ce4168d611dddfdf78a5a28999e"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1display_1_1_i3_d_points_viewer.html#a02372ce4168d611dddfdf78a5a28999e">display</a> (const std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">CloudPoint</a> &gt;&gt; &amp;points, const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a> &amp;pose, const std::vector&lt; <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a> &gt; keyframePoses={}, const std::vector&lt; <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a> &gt; framePoses={}, const std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">CloudPoint</a> &gt;&gt; &amp;points2={}, const std::vector&lt; <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a> &gt; keyframePoses2={})=0</td></tr>
 <tr class="memdesc:a02372ce4168d611dddfdf78a5a28999e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Display in a windows the 3D point cloud as well as the current camera, and optionnally, the previous frames and keyframes.  <a href="#a02372ce4168d611dddfdf78a5a28999e">More...</a><br /></td></tr>
 <tr class="separator:a02372ce4168d611dddfdf78a5a28999e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Viewer interface to display points cloud in a window. </p>
+<div class="textblock"><p><b>Displays point clouds in a window.</b> <code>UUID: 575d365a-9a27-11e8-9eb6-529269fb1459</code> </p>
 <p>This class provides a viewer to display points cloud in a window. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a02372ce4168d611dddfdf78a5a28999e"></a>
@@ -150,19 +156,19 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const Transform3Df &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a> &amp;&#160;</td>
           <td class="paramname"><em>pose</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::vector&lt; Transform3Df &gt;&#160;</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a> &gt;&#160;</td>
           <td class="paramname"><em>keyframePoses</em> = <code>{}</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::vector&lt; Transform3Df &gt;&#160;</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a> &gt;&#160;</td>
           <td class="paramname"><em>framePoses</em> = <code>{}</code>, </td>
         </tr>
         <tr>
@@ -174,7 +180,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::vector&lt; Transform3Df &gt;&#160;</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a> &gt;&#160;</td>
           <td class="paramname"><em>keyframePoses2</em> = <code>{}</code>&#160;</td>
         </tr>
         <tr>

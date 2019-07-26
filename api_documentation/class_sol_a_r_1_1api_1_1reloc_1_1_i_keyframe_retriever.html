@@ -14,6 +14,12 @@
 <script type="text/javascript">
   $(document).ready(function() { init_search(); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -97,7 +103,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p>return a set of keyframes corresponding to a given frame.  
+<p><b>Recovers a set of pre-recorded keyframes close to a given frame.</b> <code>UUID: f60980ce-bdbd-11e8-a355-529269fb1459</code>  
  <a href="class_sol_a_r_1_1api_1_1reloc_1_1_i_keyframe_retriever.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_i_keyframe_retriever_8h_source.html">IKeyframeRetriever.h</a>&gt;</code></p>
@@ -120,11 +126,11 @@ Collaboration diagram for SolAR::api::reloc::IKeyframeRetriever:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a757183a09ad532756a9c17a4e03eae93"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a757183a09ad532756a9c17a4e03eae93"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1reloc_1_1_i_keyframe_retriever.html#a757183a09ad532756a9c17a4e03eae93">IKeyframeRetriever</a> ()=default</td></tr>
-<tr class="memdesc:a757183a09ad532756a9c17a4e03eae93"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sol_a_r_1_1api_1_1reloc_1_1_i_keyframe_retriever.html" title="return a set of keyframes corresponding to a given frame. ">IKeyframeRetriever</a> default constructor. <br /></td></tr>
+<tr class="memdesc:a757183a09ad532756a9c17a4e03eae93"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sol_a_r_1_1api_1_1reloc_1_1_i_keyframe_retriever.html" title="Recovers a set of pre-recorded keyframes close to a given frame. UUID: f60980ce-bdbd-11e8-a355-529269...">IKeyframeRetriever</a> default constructor. <br /></td></tr>
 <tr class="separator:a757183a09ad532756a9c17a4e03eae93"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e41bc58776053d65ffaf8d41f394a00"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5e41bc58776053d65ffaf8d41f394a00"></a>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1reloc_1_1_i_keyframe_retriever.html#a5e41bc58776053d65ffaf8d41f394a00">~IKeyframeRetriever</a> ()=default</td></tr>
-<tr class="memdesc:a5e41bc58776053d65ffaf8d41f394a00"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sol_a_r_1_1api_1_1reloc_1_1_i_keyframe_retriever.html" title="return a set of keyframes corresponding to a given frame. ">IKeyframeRetriever</a> default destructor. <br /></td></tr>
+<tr class="memdesc:a5e41bc58776053d65ffaf8d41f394a00"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sol_a_r_1_1api_1_1reloc_1_1_i_keyframe_retriever.html" title="Recovers a set of pre-recorded keyframes close to a given frame. UUID: f60980ce-bdbd-11e8-a355-529269...">IKeyframeRetriever</a> default destructor. <br /></td></tr>
 <tr class="separator:a5e41bc58776053d65ffaf8d41f394a00"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afde2c62b52be94c4d232cebbca478e9f"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1reloc_1_1_i_keyframe_retriever.html#afde2c62b52be94c4d232cebbca478e9f">addKeyframe</a> (SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keyframe.html">Keyframe</a> &gt; keyframe)=0</td></tr>
 <tr class="memdesc:afde2c62b52be94c4d232cebbca478e9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a keyframe to the bag of words.  <a href="#afde2c62b52be94c4d232cebbca478e9f">More...</a><br /></td></tr>
@@ -134,7 +140,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <tr class="separator:a5224a29a8b66804c21723dc805ff9564"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>return a set of keyframes corresponding to a given frame. </p>
+<div class="textblock"><p><b>Recovers a set of pre-recorded keyframes close to a given frame.</b> <code>UUID: f60980ce-bdbd-11e8-a355-529269fb1459</code> </p>
 <p>This class provides a solution to retrieve a set of keyframes corresponding to a given frame. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="afde2c62b52be94c4d232cebbca478e9f"></a>

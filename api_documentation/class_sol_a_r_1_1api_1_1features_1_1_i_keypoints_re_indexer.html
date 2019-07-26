@@ -14,6 +14,12 @@
 <script type="text/javascript">
   $(document).ready(function() { init_search(); });
 </script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -97,7 +103,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p>Reorganizes the keypoints detected from two images that match together in two vector of points where the nth point of the first vector matches with the nth point of the second vector.  
+<p><b>Reorganizes the keypoints detected from two images that match together in two vector of points where the nth point of the first vector matches with the nth point of the second vector.</b> <code>UUID: 920e64a2-df17-11e7-80c1-9a214cf093ae</code>  
  <a href="class_sol_a_r_1_1api_1_1features_1_1_i_keypoints_re_indexer.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_i_keypoints_re_indexer_8h_source.html">IKeypointsReIndexer.h</a>&gt;</code></p>
@@ -124,14 +130,14 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a85b8aa010c72dfd489a39ea56e6e99a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa6398248db63b47c37cad0dc6db2d371"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa6398248db63b47c37cad0dc6db2d371"></a>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1features_1_1_i_keypoints_re_indexer.html#aa6398248db63b47c37cad0dc6db2d371">~IKeypointsReIndexer</a> ()=default</td></tr>
-<tr class="memdesc:aa6398248db63b47c37cad0dc6db2d371"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sol_a_r_1_1api_1_1features_1_1_i_contours_extractor.html" title="Extracts contours from an image. ">IContoursExtractor</a> default destructor. <br /></td></tr>
+<tr class="memdesc:aa6398248db63b47c37cad0dc6db2d371"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sol_a_r_1_1api_1_1features_1_1_i_contours_extractor.html" title="Extracts contours from an image. UUID: 42d82ab6-cc62-11e7-abc4-cec278b6b50a ">IContoursExtractor</a> default destructor. <br /></td></tr>
 <tr class="separator:aa6398248db63b47c37cad0dc6db2d371"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7df2334ad1ada0e47152265423658161"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1features_1_1_i_keypoints_re_indexer.html#a7df2334ad1ada0e47152265423658161">reindex</a> (const std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html">Keypoint</a> &gt;&gt; &amp;keypoints1, const std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html">Keypoint</a> &gt;&gt; &amp;keypoints2, std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_match.html">DescriptorMatch</a> &gt; &amp;matches, std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point2_df.html">Point2Df</a> &gt;&gt; &amp;matchedKeypoints1, std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point2_df.html">Point2Df</a> &gt;&gt; &amp;matchedKeypoints2)=0</td></tr>
 <tr class="memdesc:a7df2334ad1ada0e47152265423658161"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method reorganizes the keypoints detected from two images that match together in two vector of points where the nth point of the first vector matches with the nth point of the second vector.  <a href="#a7df2334ad1ada0e47152265423658161">More...</a><br /></td></tr>
 <tr class="separator:a7df2334ad1ada0e47152265423658161"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Reorganizes the keypoints detected from two images that match together in two vector of points where the nth point of the first vector matches with the nth point of the second vector. </p>
+<div class="textblock"><p><b>Reorganizes the keypoints detected from two images that match together in two vector of points where the nth point of the first vector matches with the nth point of the second vector.</b> <code>UUID: 920e64a2-df17-11e7-80c1-9a214cf093ae</code> </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a7df2334ad1ada0e47152265423658161"></a>
 <div class="memitem">
