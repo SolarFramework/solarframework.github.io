@@ -645,7 +645,7 @@ Please copy/paste the following, and replace by your project name</p>
 <div class="sectionbody">
 <div class="paragraph">
 <p>This tutorial will help you to write a simple program that will display an image in a window.
-It will take approximately 15mn to complete.</p>
+The tutorial will take approximately 15mn to complete.</p>
 </div>
 <div class="sect2">
 <h3 id="prerequisites_2"><a class="anchor" href="#prerequisites_2"></a><a class="link" href="#prerequisites_2">Prerequisites</a></h3>
@@ -696,20 +696,99 @@ It will take approximately 15mn to complete.</p>
 <div class="paragraph">
 <p>To start, please replace the code of your main.cpp by the following one:</p>
 </div>
+<div class="listingblock">
+<div class="title">main.cpp</div>
+<div class="content">
+<pre class="CodeRay highlight nowrap"><code data-lang="c"><span class="comment">// ADD HERE:: header files of the components you want to use</span>
+
+using namespace SolAR;
+using namespace SolAR::MODULES::OPENCV;
+namespace xpcf = org::bcom::xpcf;
+
+<span class="directive">void</span> main(<span class="predefined-type">int</span> argc,<span class="predefined-type">char</span>** argv){
+
+    <span class="comment">// To redirect log to the console</span>
+    LOG_ADD_LOG_TO_CONSOLE();
+
+    <span class="comment">// ADD HERE: declarations and instantiation of components</span>
+    <span class="comment">// see API ref on SolAR website</span>
+    <span class="comment">// Example to declare and create a camera:</span>
+     SRef&lt;SolARCameraOpencv&gt; camera = xpcf::utils::make_shared&lt;SolARCameraopencv&gt;());
+
+
+    <span class="comment">// ADD HERE: declarations of data structures used to connect components</span>
+    <span class="comment">// Example to declare a SolARImage:</span>
+     SRef&lt;SolAR::datastructure::SolARImage&gt; inputImage;
+
+
+    <span class="comment">// ADD HERE: Find a way to load an image</span>
+
+    <span class="comment">// ADD HERE: Find a way to display your image in a window</span>
+
+}</code></pre>
+</div>
+</div>
 <div class="paragraph">
 <p>The executable should take as the only parameter the url of the image you want to display.
 First, you will need to include the components header files, here the two header files for SolARImageLoaderOpencv and SolARImageViewerOpencv.</p>
 </div>
-<div class="paragraph">
+<div class="listingblock blockHide">
 <div class="title">header files declaration</div>
+<div class="content">
+<pre class="CodeRay highlight nowrap"><code data-lang="c"><span class="comment">// ADD HERE:: header files of the components you want to use</span>
+<span class="preprocessor">#include</span> <span class="include">&quot;SolARImageLoaderOpencv.h&quot;</span>
+<span class="preprocessor">#include</span> <span class="include">&quot;SolARImageViewerOpencv.h&quot;</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
 <p>Then, you need to declare and instantiate your components. To do it, you can use the xpcf framework provided with SolAR. It offers a tool to easily instantiate your components (xpcf::utils::createcomponent). Why using xpcf here ? Because it offers more safety in the handling of your components. Thanks to the provided  shared reference called SRef, do not worry about memory management anymore. You will see that you do not have to delete your components and data structures anymore.</p>
 </div>
-<div class="paragraph">
+<div class="listingblock blockHide">
 <div class="title">Components declaration and instantiation</div>
-<p>Great, your components are now instantiated. Now, you need to declare the data structure required for exchanging information between the components of your pipeline. This data structure corresponds to the arc of the pipeline schema presented above. Here, you need to declare an <em>Image</em> data structure to transmit the image from the <em>SolARImageLoader</em> component to the <em>SolARImageViewer</em>.</p>
+<div class="content">
+<pre class="CodeRay highlight nowrap"><code data-lang="c"><span class="comment">// ADD HERE: declarations and instantiation of components</span>
+<span class="comment">// see API ref on SolAR website</span>
+<span class="comment">// Example to declare and create a camera:</span>
+SRef&lt;SolARCameraOpencv&gt; camera = xpcf::utils::make_shared&lt;SolARCameraopencv&gt;());
+
+SRef&lt;SolARImageLoaderOpencv&gt; myImageLoader = xpcf::utils::make_shared&lt;SolARImageLoaderOpencv&gt;();
+SRef&lt;SolARImageViewerOpencv&gt; myImageViewer = xpcf::utils::make_shared&lt;SolARImageViewerOpencv&gt;();</code></pre>
+</div>
 </div>
 <div class="paragraph">
+<p>Great, your components are now instantiated. Now, you need to declare the data structure required for exchanging information between the components of your pipeline. This data structure corresponds to the arc of the pipeline schema presented above. Here, you need to declare an <em>Image</em> data structure to transmit the image from the <em>SolARImageLoader</em> component to the <em>SolARImageViewer</em>.</p>
+</div>
+<div class="listingblock blockHide">
 <div class="title">Data structures declaration</div>
+<div class="content">
+<pre class="CodeRay highlight nowrap"><code data-lang="c"><span class="comment">// ADD HERE: declarations of data structures used to connect components</span>
+<span class="comment">// Example to declare a Keypoint:</span>
+SRef&lt;SolAR::datastructure::Keypoint&gt; keypoint;
+SRef&lt;SolAR::datastructure::Image&gt; myImage;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You are now ready to start your pipeline. You can connect your components by loading an image, recovering it, and passing it to the Image viewer. Do not forget to test if your image has been well loaded. if not, send an info log message by calling the macro <em>LOG_INFO("info message")</em></p>
+</div>
+<div class="listingblock blockHide">
+<div class="title">Hello World pipeline</div>
+<div class="content">
+<pre class="CodeRay highlight nowrap"><code data-lang="c"><span class="comment">// ADD HERE: Find a way to load an image</span>
+<span class="keyword">if</span> (myImageLoader-&gt;loadImage(<span class="string"><span class="delimiter">&quot;</span><span class="content">HelloWorld.png</span><span class="delimiter">&quot;</span></span>, myImage) == SolAR::FrameworkReturnCode::_ERROR_LOAD_IMAGE)
+{
+  LOG_INFO(<span class="string"><span class="delimiter">&quot;</span><span class="content">load image KO</span><span class="delimiter">&quot;</span></span>);
+  <span class="keyword">return</span>;
+}
+<span class="keyword">else</span>
+{
+  LOG_INFO(<span class="string"><span class="delimiter">&quot;</span><span class="content">load image OK</span><span class="delimiter">&quot;</span></span>);
+}
+
+<span class="comment">// ADD HERE: Find a way to display your image in a window</span>
+myImageViewer-&gt;display(<span class="string"><span class="delimiter">&quot;</span><span class="content">image display</span><span class="delimiter">&quot;</span></span>, myImage);</code></pre>
+</div>
+</div>
+<div class="paragraph">
 <p>You can test your program with the following hello world image, just save it under HelloWorld.png.</p>
 </div>
 <div class="imageblock">
@@ -725,8 +804,63 @@ First, you will need to include the components header files, here the two header
 <p>You can click on run. If you have an eagle eye, perhaps you have seen the hello world image that has appeared in a window and has immediately disappeared. Why ? The <em>display</em> function of your <em>ImageViewer</em> component displays the image only once. If you want to let it displayed until you press a key, you need to create your first loop that will include your pipeline.
 To do it, you can use the <em>display</em> method but with a third parameter that corresponds to the key to press to close the viewer window. For example, you can use the escape key (code 27). If this key is pressed, the <em>display</em> function will return <em>FrameworkReturnCode::_STOP</em>.</p>
 </div>
+<div class="listingblock blockHide">
+<div class="title">main.cpp Hello World Solution</div>
+<div class="content">
+<pre class="CodeRay highlight nowrap"><code data-lang="c"><span class="comment">// ADD HERE:: header files of the components you want to use</span>
+<span class="preprocessor">#include</span> <span class="include">&quot;SolARImageLoaderOpencv.h&quot;</span>
+<span class="preprocessor">#include</span> <span class="include">&quot;SolARImageViewerOpencv.h&quot;</span>
+
+using namespace SolAR;
+using namespace SolAR::MODULES::OPENCV;
+namespace xpcf = org::bcom::xpcf;
+
+<span class="directive">void</span> main(<span class="predefined-type">int</span> argc,<span class="predefined-type">char</span>** argv){
+
+    <span class="comment">// To redirect log to the console</span>
+    LOG_ADD_LOG_TO_CONSOLE();
+
+    <span class="comment">// ADD HERE: declarations and instantiation of components</span>
+    <span class="comment">// see API ref on SolAR website</span>
+    <span class="comment">// Example to declare and create a camera:</span>
+    SRef&lt;SolARCameraOpencv&gt; camera = xpcf::utils::make_shared&lt;SolARCameraopencv&gt;());
+    SRef&lt;SolARImageLoaderOpencv&gt; myImageLoader = xpcf::utils::make_shared&lt;SolARImageLoaderOpencv&gt;();
+    SRef&lt;SolARImageViewerOpencv&gt; myImageViewer = xpcf::utils::make_shared&lt;SolARImageViewerOpencv&gt;();
+
+    <span class="comment">// ADD HERE: declarations of data structures used to connect components</span>
+    <span class="comment">// Example to declare a SolARImage:</span>
+    SRef&lt;SolAR::datastructure::SolARImage&gt; inputImage;
+    SRef&lt;SolAR::datastructure::Image&gt; myImage;
+
+    <span class="comment">// ADD HERE: Find a way to load an image</span>
+    <span class="keyword">if</span> (myImageLoader-&gt;loadImage(<span class="string"><span class="delimiter">&quot;</span><span class="content">HelloWorld.png</span><span class="delimiter">&quot;</span></span>, myImage) == SolAR::FrameworkReturnCode::_ERROR_LOAD_IMAGE)
+    {
+      LOG_INFO(<span class="string"><span class="delimiter">&quot;</span><span class="content">load image KO</span><span class="delimiter">&quot;</span></span>);
+      <span class="keyword">return</span>;
+    }
+    <span class="keyword">else</span>
+    {
+      LOG_INFO(<span class="string"><span class="delimiter">&quot;</span><span class="content">load image OK</span><span class="delimiter">&quot;</span></span>);
+    }
+
+    <span class="comment">// ADD HERE: Find a way to display your image in a window</span>
+
+    <span class="comment">// The escape key to exit the sample</span>
+   <span class="predefined-type">char</span> escape_key = <span class="integer">27</span>;
+   <span class="predefined-type">bool</span> process = <span class="predefined-constant">true</span>;
+
+    <span class="keyword">while</span> (process)
+    {
+        <span class="keyword">if</span> (myImageViewer-&gt;display(<span class="string"><span class="delimiter">&quot;</span><span class="content">image display</span><span class="delimiter">&quot;</span></span>, myImage, &amp;escape_key) == FrameworkReturnCode::_STOP)
+        {
+            process = <span class="predefined-constant">false</span>;
+        }
+    }
+}</code></pre>
+</div>
+</div>
 <div class="paragraph">
-<p>Congratulations, you have implemented your first SolAR pipeline. It is quite simple, but now, you know all you need to develop your own pipeline:  the components declaration and instantiation, the data structures declaration, and finally the pipeline implementation based on a loop.</p>
+<p>Congratulation, you have implement your first SolAR pipeline. It is quite simple, but now, you know all you need to develop your own pipeline:  the components declaration and instantiation, the data structures declaration, and finally the pipeline implementation based on a loop.</p>
 </div>
 </div>
 </div>
