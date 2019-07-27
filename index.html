@@ -23,7 +23,8 @@
     <link rel="stylesheet" href="/assets/styles/bootstrap.min.css" />
     <link rel="stylesheet" href="/assets/styles/coderay-asciidoctor.css">
     <link rel="stylesheet" href="/assets/styles/asciidoctor.css">
-    <link rel="stylesheet" href="/assets/styles/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/styles/fontawesome.min.css">
+    <link rel="stylesheet" href="/assets/styles/all.min.css">
     <link rel="stylesheet" href="/assets/styles/solar-asciidoctor-theme.css">
     <link rel="stylesheet" href="/assets/styles/solar-bootstrap-theme.css">
     <link rel="stylesheet" href="/assets/styles/main.css">
@@ -229,8 +230,8 @@ window.cookieconsent.initialise({
                         </div>
                     </form>
                     <div>
-                        <a href="/about_us">> About us</a>
-                        <a href="/contact_us">> Contact us</a>
+                        <a href="/about">> About</a>
+                        <a href="https://github.com/SolarFramework">> Git</a>
                     </div>
                 </li>
             </ul>
@@ -522,83 +523,136 @@ window.cookieconsent.initialise({
               <header>
   <div class="imageblock">
     <div class="content">
-      <img src="images/solar_baniere_just_released.png" alt="solar baniere just released" width="1400" />
+      <img src="images/solar_banner.png" alt="solar banner" width="1400" />
     </div>
   </div>
 </header>
-<article>
-  <section>
+<section class="row">
+  <article class="col-md-12">
     <h2>What is SolAR?</h2>
-    <p>SolAR is an open-source framework released under Apache license 2.0 making possible to easily create your own camera pose estimation solution to develop Augmented Reality applications.
+    <p>SolAR is an open-source software development kit dedicated to Augmented Reality. </p>
+    <br />
+    <p>SolAR is modular and evolutive. It allows, in various contexts of use, the construction of customized computer vision processing chains addressed to Augmented Reality applications.</p>
+    <br />
+    <p>SolAR contains:
+      <div class="container">
+        <ul>
+          <li> interfaces promoting interoperability</li>
+          <li> computer vision components constructed from third-party bricks</li>
+          <li> plugins for third-party applications</li>
+        </ul>
+      </div>
     </p>
-    <div class="more">
-      <p>To know more about the project and the framework</p>
-      <a href="/discover/">Discover</a>
-      <a href="/use_it/setup/">Download</a>
+  </article>
+  <article class="col-md-12">
+    <h2>Who need SolAR?</h2>  
+    <p>According to your needs, SolAR framework offers several user profiles:</p>
+  </article>
+</section>
+<section class="row">
+  <article class="col-md-4">
+    <a class="role" href="/use">
+      <div class="users-figure">
+        <section>
+          <span class="ar_user">  
+            <div><i class="fas fa-user purple fa-4x"></i></div>
+            <i class="fas fa-sliders-h fa-2x"></i>    
+          </span>
+        </section>
+      </div>
+      <div class="users-title">
+        <p>SolAR pipeline user</p>
+      </div>
+      <div class="users-body purple">
+          <p>As an AR service designer, I can use a prebuild standalone or Unity integrated AR pipeline...</p>
+      </div>
+    </a>
+  </article>
+  <article class="col-md-4">
+    <a class="role" href="/assemble">
+      <div class="users-figure">
+        <section>
+          <span class="ar_assembler">
+              <div><i class="fas fa-user fa-4x yellow"></i></div>
+              <i class="fas fa-project-diagram fa-2x"></i> 
+          </span>
+        </section>
+      </div>
+      <div class="users-title">
+        <p>SolAR pipeline assembler</p>
+      </div>
+      <div class="users-body yellow">
+          <p>As an AR pipeline developer, I can assemble components to build my own customized AR pipeline...</p>
+      </div>
+    </a>
+  </article>
+  <article class="col-md-4">
+  <a class="role" href="/create">
+    <div class="users-figure">
+      <section>
+        <span class="ar_creator">
+          <div><i class="fas fa-user fa-4x blue"></i></div>
+          <i class="fas fa-tools fa-2x"></i> 
+        </span>
+      </section>
     </div>
-  </section>
+    <div class="users-title">
+      <p>SolAR component developer</p>
+    </div>
+    <div class="users-body blue">
+        <p>As an SolAR component developer, I can create customized bricks responding to specific needs...</p>
+    </div>
+    </a>
+  </article>
+</section>
 <section>
-    <h2>SolAR needs you!</h2>
-    <p>SolAR is looking for contributors! Maybe you are:</p>
-    <span class="pose_estimation">
-      <a class="role" href="/use_it/setup/">
-        <div class="profile dark-blue"></div>
-        <div class="inliner">
-          <p>Pose estimation designer</p>
-        </div>
-      </a>
-    </span>
-    <!--span class="ar_designer">
-      <a class="role" href="">
-        <div class="profile blue"></div>
-        <div class="inliner">
-          <p>AR service designer</p>
-        </div>
-      </a>
-    </span>
-    <span class="component_dev">
-      <a class="role" href="/contribute/component/">
-        <div class="profile light-blue"></div>
-        <div class="inliner">
-          <p>Component developer</p>
-        </div>
-      </a>
-    </span-->
-    <span class="framework_dev">
-      <a class="role" href="/contribute/contribute_to_core/">
-        <div class="profile white"></div>
-        <div class="inliner">
-          <p>Framework developer</p>
-        </div>
-      </a>
-    </span>
-    <p>Join the community, find out how you can contribute to the framework according to your profile and skills and participate to the augmented reality adoption.</p>
-    <div class="more">
-      <a href="https://github.com/SolarFramework">Community</a>
+  <article>
+    <div class="videoblock col-md-8">
+      <p>SolAR framework Overview</p>
+      <div class="content">
+        <video src="homePage/videos/SolAROverview.webm" width="960px" controls="">
+          Your browser does not support the video tag.
+        </video>
+      </div>
     </div>
-  </section>
-</article>
-<aside>
-  <div class="paragraph">
-    <p>Watch a demo of SolAR now!</p>
-  </div>
-  <div class="videoblock">
-    <div class="content">
-      <video src="discover/videos/solArtutorial.mp4" width="500px" controls="">
-        Your browser does not support the video tag.
-      </video>
-    </div>
-  </div>
-</aside>
+  </article>
+</section>
+<section class="row"> 
+  <article class="col-md-12">
+    <h2>How to contribute to SolAR?</h2>
+    <p>Join the community, find out how you can contribute to the framework according to your profile and skills and participate to the augmented reality adoption. </p>
+    <div class="container">
+    <div class="row">
+      <article class="col-md-4">
+    <a class="role" href="/community">
+      <div class="users-figure">
+        <section>
+          <span class="ar_contributor">
+              <div><i class="fas fa-user fa-4x green"></i></div>
+              <i class="fas fa-users fa-2x"></i>      
+          </span>
+        </section>
+      </div>
+      <div class="users-title">
+        <p>SolAR framework contributor</p>
+      </div>
+      <div class="users-body green">
+          <p>As an SolAR framework developer, I can contribute to SolAR expansion...</p>
+      </div>
+    </a>
+  </article>
+</div>
+</div></article></section>
 
               
             </div>
         </div>
         <footer>
   <p>
-    Interested in leverage the SolAR framework within your research and industrial project? <a href="mailto:framework.solar@b-com.com">Contact us</a>
+    Interested in leveraging the SolAR framework as part of your research and industrial project? <a href="mailto:framework.solar@b-com.com">Contact us</a>
   </p>
 </footer>
+
         <!-- build:js scripts/vendor.js -->
         <!-- bower:js -->
 

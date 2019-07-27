@@ -1,0 +1,1098 @@
+<!doctype html>
+<html class="no-js">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>SolAR</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+    <meta http-equiv="pragma" content="no-cache" />
+
+    <!-- IE 10 Metro tile icon (Metro equivalent of apple-touch-icon) -->
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="msapplication-TileImage" content="/assets/static/favicon-144.png">
+
+    <!-- Touch icon for iOS 2.0+ and Android 2.1+ -->
+    <link rel="apple-touch-icon-precomposed" href="/assets/static/favicon-152.png">
+    <link rel="icon" type="image/x-icon" href="/assets/static/favicon.ico">
+
+    <link rel="stylesheet" href="/assets/styles/bootstrap.min.css" />
+    <link rel="stylesheet" href="/assets/styles/coderay-asciidoctor.css">
+    <link rel="stylesheet" href="/assets/styles/asciidoctor.css">
+    <link rel="stylesheet" href="/assets/styles/fontawesome.min.css">
+    <link rel="stylesheet" href="/assets/styles/all.min.css">
+    <link rel="stylesheet" href="/assets/styles/solar-asciidoctor-theme.css">
+    <link rel="stylesheet" href="/assets/styles/solar-bootstrap-theme.css">
+    <link rel="stylesheet" href="/assets/styles/main.css">
+    <link rel="stylesheet" href="/assets/styles/media.css">
+
+    <script src="/js/vendor/jquery.js"></script><!--needed with bootstrap-->
+    <script src="/js/lunr.min.js"></script>
+    <script src="/js/search.js"></script>
+    <script src="/js/toc.js"></script>
+    <script src="/js/block-folding.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() { 
+          /* Configure TOC to take into account all titles */
+          $("#toc").toc(  { headers: "h2, h3",
+                              listType: "ul",
+                              title: "<div id='toctitle'>Table of Contents</div>",
+                              noBackToTopLinks: true /*usefull to avoid tag <i class="icon-arrow-up back-to-top"> </i> to be placed between #submenuconfig and sectionbody and screw the submenu css style*/
+           });
+        });
+      </script>
+  <!-- Google Analytics -->
+  <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-107058603-1', 'auto');
+          ga('set', 'anonymizeIp', true);
+          ga('send', 'pageview');
+  </script>  <!-- End Google Analytics --> 
+<link rel="stylesheet" type="text/css" href="/js/cookieconsent/cookieconsent.min.css" />
+<script src="/js/cookieconsent/cookieconsent.min.js"></script>
+<script>
+var userLang = navigator.language || navigator.userLanguage; 
+if (userLang == "fr") {
+  message="En poursuivant votre navigation sur ce site, vous acceptez que des cookies soient utilisés afin d’améliorer votre expérience d’utilisateur.";
+  link="En savoir plus";
+  href="https://b-com.com/fr/mentions-l%C3%A9gales";
+}
+else {
+  message="By proceeding beyond this page, you consent to the cookies usage, in order to improve your experience on this website.";
+  link="More information";
+  href="https://b-com.com/en/legal-notice";
+}
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#000000"
+    },
+    "button": {
+      "background": "#00bee6"
+    }
+  },
+  "position": "bottom-left",
+  "theme": "edgeless",
+  "content": {
+    "message": message,
+    "dismiss": "OK",
+    "link": link,
+    "href": href
+  }
+})});
+</script>  
+</head>
+
+    <body>
+        <!--[if lt IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div><div class="navbar navbar-default">
+    <div>
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand link" href="/">
+                <img class="logo" alt="SolAR logo" src="/assets/images/navbar/logo_solAR.svg">
+            </a>
+        </div>
+
+        <div id="navbar" class="navbar-collapse" aria-expanded="false" style="height: 1px;">
+            <ul class="nav navbar-nav">
+
+                
+
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+    <li id="discover" class=" blue">
+      <a href="/discover/">
+        <img src="/assets/images/navbar/discover.svg" alt="discover" height="42" width="42">
+        Discover
+      </a>
+    </li>
+    
+    
+
+  
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+    <li id="use_it" class=" purple">
+      <a href="/use_it/">
+        <img src="/assets/images/navbar/use_it.svg" alt="use_it" height="42" width="42">
+        Use it
+      </a>
+    </li>
+    
+    
+
+  
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+    <li id="contribute" class=" red">
+      <a href="/contribute/">
+        <img src="/assets/images/navbar/contribute.svg" alt="contribute" height="42" width="42">
+        Contribute
+      </a>
+    </li>
+    
+    
+
+  
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+    <li id="applications" class=" yellow">
+      <a href="/applications/">
+        <img src="/assets/images/navbar/applications.svg" alt="applications" height="42" width="42">
+        Applications
+      </a>
+    </li>
+    
+    
+
+  
+
+
+
+
+
+                <li>
+                    <form action="/search/index.html" method="get" class="navbar-form" role="search">
+                        <div class="input-group">
+                            <input type="text" id="search" class="form-control" placeholder="Search"
+                                    name="q" class="span1" type="text" size="15">
+                            <div class="input-group-btn">
+                                <button class="btn btn-default" type="submit">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                    <div>
+                        <a href="/about">> About</a>
+                        <a href="https://github.com/SolarFramework">> Git</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        
+    <div class="submenu blue">
+      <div class="submenuHelper">&lt;</div>
+      <ul class="nav" aria-expanded="false">
+        
+        
+
+	
+	
+
+		<li >
+			<a href="/discover/what/">
+				what
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/discover/how/">
+				how
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/discover/who/">
+				who
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/discover/when/">
+				when
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/discover/for_whom/">
+				for whom
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/discover/legal_notice/">
+				legal notice
+				
+			</a>
+		</li>
+	
+
+
+      </ul>
+      <div class="submenuHelper">&gt;</div>
+    </div>
+    
+    <div class="submenu purple">
+      <div class="submenuHelper">&lt;</div>
+      <ul class="nav" aria-expanded="false">
+        
+        
+
+	
+	
+
+		<li >
+			<a href="/use_it/setup/">
+				setup
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/use_it/samples/">
+				samples
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/use_it/tutorials/">
+				tutorials
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/use_it/tools/">
+				tools
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/use_it/programmer_guide/">
+				programmer’s guide
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/use_it/api/">
+				API 0.5.0
+				
+			</a>
+		</li>
+	
+
+
+      </ul>
+      <div class="submenuHelper">&gt;</div>
+    </div>
+    
+    <div class="submenu red">
+      <div class="submenuHelper">&lt;</div>
+      <ul class="nav" aria-expanded="false">
+        
+        
+
+	
+	
+
+		<li >
+			<a href="/contribute/how_it_works/">
+				how it works
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/contribute/getting_started_linux/">
+				on linux
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/contribute/getting_started_windows/">
+				on windows
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/contribute/contribute_to_core/">
+				contribute to core
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/contribute/best_practices/">
+				best practices
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/contribute/contribution_workflow/">
+				contribution workflow
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/contribute/GIT/">
+				GIT
+				
+			</a>
+		</li>
+	
+
+
+      </ul>
+      <div class="submenuHelper">&gt;</div>
+    </div>
+    
+    <div class="submenu yellow">
+      <div class="submenuHelper">&lt;</div>
+      <ul class="nav" aria-expanded="false">
+        
+        
+
+	
+	
+
+		<li >
+			<a href="/applications/factory/">
+				industry
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/applications/realestate/">
+				real estate
+				
+			</a>
+		</li>
+	
+
+
+      </ul>
+      <div class="submenuHelper">&gt;</div>
+    </div>
+    
+        
+    </div>
+
+</div>
+</div>
+
+        <div class="container">
+            <div class="well ">
+              <div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#CreateModule">Create a module</a></li>
+<li><a href="#what_is_a_module">What is a module ?</a></li>
+<li><a href="#create_a_module_with_the_wizard">Create a module with the wizard</a></li>
+<li><a href="#create_a_module_step_by_step">Create a module step-by-step</a>
+<ul class="sectlevel2">
+<li><a href="#create_a_module_project">Create a module project</a></li>
+<li><a href="#Module_Dependencies">Configure your dependencies</a></li>
+<li><a href="#create_mandatory_header_and_source_files">Create mandatory header and source FILES</a></li>
+<li><a href="#RegistryFile">Create a registry file</a></li>
+<li><a href="#create_a_pkg_config_file">Create a pkg-config file</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="sect1">
+<h2 id="CreateModule"><a class="anchor" href="#CreateModule"></a><a class="link" href="#CreateModule">Create a module</a></h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="what_is_a_module"><a class="anchor" href="#what_is_a_module"></a><a class="link" href="#what_is_a_module">What is a module ?</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A module consists in a shared library embedded a set of SolAR components as well as the corresponding factories to instantiate them. The management of modules is based on the <a href="https://forge.b-com.com/plugins/git/sft-softwarefactory/frameworks/xpcf">XPCF</a> third party providing a lightweight cross platform component framework.
+XPCF provides the following features to manage SolAR modules:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>introspection to figure out which components are available in the module</p>
+</li>
+<li>
+<p>separate implementation from interface to create the concrete implementation of a SolAR component and to bind it to an abstract SolAR and XPCF component interfaces.</p>
+</li>
+<li>
+<p>component creation</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Each module implementation is identified with a Universally Unique IDentifier (UUID) to nearly ensure the uniqueness of a component implementation when the system instantiates it.</p>
+</div>
+<div class="paragraph">
+<p>As mentionned previoulsy, the third party XPCF can introspect the shared library of a module to obtain information about the embedded components and the interfaces they implement. Only, the introspection of a shared library requires to load it, what could become tricky when the shared library has been built on a different platform than yours (useful for authoring tools supporting cross-platform compilation such as Unity). For this reason, XPCF proposes to associate to each module a registry file in xml format that describes the module with:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>the module UUID,</p>
+</li>
+<li>
+<p>the components embedded in the module with their UUID,</p>
+</li>
+<li>
+<p>the abstract component interfaces implemented by the components.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Thus, any system will be able to intropsect a module without the need to load the corresponding shared library.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="create_a_module_with_the_wizard"><a class="anchor" href="#create_a_module_with_the_wizard"></a><a class="link" href="#create_a_module_with_the_wizard">Create a module with the wizard</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>We are aware that creating a module and adding components to it can be a little tedious. A QTCreator wizard should soon be available to automate file generation and make the module creation easier for you. But for now, follow the instructions below to create a module step-by-step.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="create_a_module_step_by_step"><a class="anchor" href="#create_a_module_step_by_step"></a><a class="link" href="#create_a_module_step_by_step">Create a module step-by-step</a></h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="create_a_module_project"><a class="anchor" href="#create_a_module_project"></a><a class="link" href="#create_a_module_project">Create a module project</a></h3>
+<div class="paragraph">
+<p>The SolAR framework provides build pipeline tools to ease the cross platform compilation and deployment. As Qmake and CMake have both advantages and limitations, we recommend to provide for any SolAR module both a .pro to work on QTCreator as well as a CMake file to work for example on Visual Studio or other IDE.</p>
+</div>
+<div class="sect3">
+<h4 id="qt_creator"><a class="anchor" href="#qt_creator"></a><a class="link" href="#qt_creator">QT Creator</a></h4>
+<div class="paragraph">
+<p>Open QTCreator and create a new project (in File menu).</p>
+</div>
+<div class="paragraph">
+<p>Choose <code><em>Library</em></code> and <code><em>C++ Library</em></code>.</p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="data:image/png;base64,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" alt="create a shared C++ library in QT" width="600" height="600">
+</div>
+<div class="title">Figure 1. Project creation</div>
+</div>
+<div class="paragraph">
+<p>Then, set the name of your project with the name of your module, set the location (a dedicated folder with all module projects is recommended) and select "Shared Library" for the type of the library.</p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="data:image/png;base64,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USADgFu3/Ej6M3c9dPXajXQDh4HPCAFgb5YfSb/v/Xf+4L//xF98u/sWLUxa/O52/mcSAIDdWnIkfe+99/7Rz37yyy+d/Qc//RtPPPVKqoVpav6ca/6nKgGA3dtTJP07P/TfQwAdXLd/7Pf+6yMXfuPJb3/gww/cce+T7773Xuo915nNo2sbe/uO59bG2tHN+sdksiIAAGOxp0gaAuhv/OGV2x++MLj++SfO/uOPvfFLj333F37z//7wz33q3KW304BZy42kAACM0F4jaQigIX2G64d+9Y0f/vjZf/HJsz/2W29+8FNvHvvUm+H2pz999hNbL67fds/zr34rjRmYE0ljVaWtD6GzVkXP9q667d116bSpTrfVMht1XaoCAGBFLCGS/pNffeP9Hz97271vbvz2uX93//n/9OCF//bohV/eunj3E5d+4Xcu/tR95z79B3/xvtv+x6d+76tpWG4mksYsWVXElio9tjUDTX2XQ5tiO7TtU8XcapJFswEAUMoSIuk//fWz//KT8ZPRf/3pcz/7wPmfe+hCSKIfffxSiKThuufJy/d/+Vt/7yd//d7f/UoalhtG0uw+FbPEmcRUmcSuWYdUnK3pph0uCABAaXuNpP/l4Qs//PGzH/itN4//z3M/9b/O/YfPng81H/6diyf/d8yjn/jDyw9++c/Xf3zzyT8+9fbb8/5E6a4jaayt75uuIikAwLjtNZJ+8stXPvy7Fz/yePw2/T1PXv61L13+xJev3PXEpbv+z6XPfOXixx569gd/5te+8syp119//fz582lYbiYhhgxZVzTZM75mXdoBbf38AFpXNbO1o7ISAACrYU+RdNFfAvXbT731O8+++W/ufOw/3n3/iy++9Nprr73xxhtXr15Nw3JVsGxVObKtapNjDJaVqj3dHd3YSOGyqbjZjzeJpAAAK2lPkfTKlSshbr7YF1Lps392/h/+20/85me/8Morr7z++uvnzp27du3ae9v/BaUAABxWe4qkb7/99l/+5V/+WeZP//RPv+/9d/79n/zYF7/81VdffTW0Xrx48fr16/IoAACL7CmSvvPOO1euXLmUOX/+/LEP//YLX38pZNNvf/vbb731VugjjwIAsI09RdLg3b5r16698cYb3/jGN+o/PBpqUj8AAFhgr5EUAAD2SCQFAKAwkRQAgMJEUgAAChNJAQAoTCQdhZX5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" alt="select library type" width="600" height="600">
+</div>
+<div class="title">Figure 2. Project name, location and library type</div>
+</div>
+<div class="paragraph">
+<p>Next, select your development kits. We recommend to use <em>MSVC 2017 64bit</em> or <em>Clang</em>. Then, unselect all required modules. On the next window, keep the name of the class to create with the name of your module. Unfortunately, with the QT project creation wizard, you cannot set dedicated folders for headers and sources. As we recommend to put the header files in a "interfaces" folder and the source files in a "src" folder, you will have to create these two folders manually and move the two files (MyModule.h and MyModule.cpp) in their respective folder (interfaces and src). Finally go to the summary and click on "Finish".</p>
+</div>
+<div class="paragraph">
+<p>SolAR provide a smart and easy to use build and deployment system.</p>
+</div>
+<div class="paragraph">
+<p>Now, you need to select the file called "MyModule.pro" in your project tree, and replace the text by the following one:</p>
+</div>
+<div class="listingblock">
+<div class="title">MyModule.pro</div>
+<div class="content">
+<pre>## remove Qt dependencies
+QT       -= core gui
+CONFIG -= qt
+
+## global defintions : target lib name, version
+TARGET = MyModule <i class="conum" data-value="1"></i><b>(1)</b>
+FRAMEWORK = $$TARGET
+VERSION=x.x.x <i class="conum" data-value="2"></i><b>(2)</b>
+
+DEFINES += MYVERSION=$${VERSION}
+DEFINES += TEMPLATE_LIBRARY
+CONFIG += c++1z
+
+
+CONFIG(debug,debug|release) {
+    DEFINES += _DEBUG=1
+    DEFINES += DEBUG=1
+}
+
+CONFIG(release,debug|release) {
+    DEFINES += _NDEBUG=1
+    DEFINES += NDEBUG=1
+}
+
+DEPENDENCIESCONFIG = shared recurse
+
+include (../../builddefs/qmake/templatelibconfig.pri) <i class="conum" data-value="5"></i><b>(5)</b>
+
+## DEFINES FOR MSVC/INTEL C++ compilers
+msvc {
+DEFINES += "_BCOM_SHARED=__declspec(dllexport)"
+}
+
+INCLUDEPATH += interfaces/
+
+HEADERS += interfaces/MyModule.h <i class="conum" data-value="3"></i><b>(3)</b>
+
+SOURCES += src/MyModule.cpp <i class="conum" data-value="4"></i><b>(4)</b>
+
+unix {
+    QMAKE_CXXFLAGS += -Wignored-qualifiers
+    QMAKE_LINK=clang++
+    QMAKE_CXX = clang++
+}
+
+macx {
+    DEFINES += _MACOS_TARGET_
+    QMAKE_MAC_SDK= macosx
+    QMAKE_CFLAGS += -mmacosx-version-min=10.7 -std=c11 #-x objective-c++
+    QMAKE_CXXFLAGS += -mmacosx-version-min=10.7 -std=c11 -std=c++11 -O3 -fPIC#-x objective-c++
+    QMAKE_LFLAGS += -mmacosx-version-min=10.7 -v -lstdc++
+    LIBS += -lstdc++ -lc -lpthread
+}
+
+win32 {
+
+    DEFINES += WIN64 UNICODE _UNICODE
+    QMAKE_COMPILER_DEFINES += _WIN64
+    QMAKE_CXXFLAGS += -wd4250 -wd4251 -wd4244 -wd4275
+}
+
+header_files.path = $${PROJECTDEPLOYDIR}/interfaces
+header_files.files = $$files($${PWD}/interfaces/*.h*)
+
+# HOME variable corresponds to C:\user\&lt;yourUsername&gt;
+xpcf_xml_files.path = $$(HOME)/.xpcf/SolAR
+xpcf_xml_files.files=$$files($${PWD}/xpcf*.xml)
+
+INSTALLS += header_files
+INSTALLS += xpcf_xml_files</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Now, just update the <em>.pro</em> file:</p>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td><span class="white">replace the TARGET by the name of your module,</span></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td><span class="white">set the version number of your module,</span></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td><span class="white">change the name of your header file when it is added to the <em>HEADERS</em> variable,</span></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td><span class="white">change the name of your source file when it is added to the SOURCES_ variable.</span></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="5"></i><b>5</b></td>
+<td><span class="white">check if the builddefs folder used to define the compilation pipeline is well referenced</span></td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+In order to deploy your module in the binary folder <em>${REMAKENROOT}/MyModule/MyModuleVersion</em> after building, in QT creator click in the left menu on <em>Projects</em>, then on <em>Build</em>, on <em>add a build step</em> and select <em>Make</em>. Set the <em>Make Argument</em> to the value <em>install</em>. Do it for both release and debug mode.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="using_cmake_instead_of_pro_qt_file"><a class="anchor" href="#using_cmake_instead_of_pro_qt_file"></a><a class="link" href="#using_cmake_instead_of_pro_qt_file">&#8201;&#8212;&#8201;Using Cmake instead of .pro QT file&#8201;&#8212;&#8201;</a></h4>
+<div class="paragraph">
+<p>Create a CMakeLists.txt file and copy the following code to it.
+This file use a temporarily <strong>BCOMDEVROOT</strong> environment variable link to your SoLAR sources.</p>
+</div>
+<div class="listingblock">
+<div class="title">CMakeLists.txt</div>
+<div class="content">
+<pre>cmake_minimum_required(VERSION 3.7.2)
+
+##################################################
+set (VERSION_NUMBER "x.x.x") <i class="conum" data-value="2"></i><b>(2)</b>
+project("MyModule") <i class="conum" data-value="1"></i><b>(1)</b>
+
+set (HEADERS
+    interfaces/MyModule.h
+) <i class="conum" data-value="3"></i><b>(3)</b>
+
+set (SOURCES
+    src/MyModule.cpp
+) <i class="conum" data-value="4"></i><b>(4)</b>
+
+install (FILES "${CMAKE_CURRENT_SOURCE_DIR}/xpcf_MyModule_registry.xml" DESTINATION $ENV{BCOMDEVROOT}/.xpcf/SolAR/	) <i class="conum" data-value="5"></i><b>(5)</b>
+
+##################################################
+
+# various macros
+include("$ENV{BCOMDEVROOT}/bcomBuild/SolARFramework/solarmacros.cmake") <i class="conum" data-value="6"></i><b>(6)</b>
+# config setup
+setup()
+# process packagedependencies.txt
+processPackagedependencies()
+# define targets (type library)
+defineTargets("library" "")</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>now, just update the <em>CMakeLists.txt</em> file:</p>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td><span class="white">set the name of the project with the name of your module,</span></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td><span class="white">set the version number of your module,</span></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td><span class="white">change the name of your header file when it is added to the <em>HEADERS</em> variable,</span></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td><span class="white">change the name of your source file when it is added to the SOURCES_ variable.</span></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="5"></i><b>5</b></td>
+<td><span class="white">indicate the name of your <a href="#RegistryFile">registry file</a> in your porject folder to copy it to the binary folder <em>${BCOMDEVROOT}/MyModule/MyModuleVersion</em>.</span></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="6"></i><b>6</b></td>
+<td><span class="white">check that the <em>solarmacros.cmake</em> file exists. This file must be install when you have launched the installer. If you decide to build the framework by yourself, this file will be copied in your <em>${BCOMDEVROOT}</em> folder when you will build and install the <em>SolARFramework</em> project.</span></td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="Module_Dependencies"><a class="anchor" href="#Module_Dependencies"></a><a class="link" href="#Module_Dependencies">Configure your dependencies</a></h3>
+<div class="paragraph">
+<p>As mentionned previously, SolAR framework provides developers with a compilation pipeline allowing among other things to easily manage dependencies (download, version management, packaging during deployment step, etc.).</p>
+</div>
+<div class="paragraph">
+<p>To define the dependencies used by your module, create a file called packagedependencies.txt at the root of your project.</p>
+</div>
+<div class="paragraph">
+<p>Following, an example of packagedependencies.txt file for the OpenCV module:</p>
+</div>
+<div class="paragraph">
+<p>/.packagedependencies.txt</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>xpcf|2.2.0|xpcf|artifactory|https://repository.b-com.com/amc-generic
+spdlog|0.14.0|spdlog|thirdParties|https://github.com/SolarFramework/binaries/releases/download
+eigen|3.3.5|eigen|thirdParties|https://github.com/SolarFramework/binaries/releases/download
+SolARFramework|0.6.0|SolARFramework|github|https://github.com/SolarFramework/SolarFramework/releases/download
+SolARModuleTools|0.6.0|SolARModuleTools|github|https://github.com/SolarFramework/SolARModuleTools/releases/download
+SolARModuleOpenCV|0.6.0|SolARModuleOpenCV|github|https://github.com/SolarFramework/SolARModuleOpenCV/releases/download
+opencv|3.4.3|opencv|thirdParties|https://github.com/SolarFramework/binaries/releases/download</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Here is the syntax for each dependency:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>dependency_name|dependency_version|dependency_folder_name|dependency_path|dependency_download_url</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>artifactory refers to .remaken/packages/&lt;yourCompiler&gt;/   folder. You can create a REMAKENROOT variable. All process are made in this folder.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+xpcf, boost, spdlog, eigen and SolARFramework are mandatory third parties for creating a module.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="create_mandatory_header_and_source_files"><a class="anchor" href="#create_mandatory_header_and_source_files"></a><a class="link" href="#create_mandatory_header_and_source_files">Create mandatory header and source FILES</a></h3>
+<div class="paragraph">
+<p>2 header files and 1 source file are mandatory to create a module.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+Do not forget to add a reference to the three next files required to create a module in the <em>.pro</em> and in the <em>CMakeLists.txt</em>.
+</td>
+</tr>
+</table>
+</div>
+<div class="sect3">
+<h4 id="mymoduleapi_h"><a class="anchor" href="#mymoduleapi_h"></a><a class="link" href="#mymoduleapi_h">MyModuleAPI.h</a></h4>
+<div class="paragraph">
+<p>Create a new header file in the <em>interfaces</em> folder of your project named <em>MyModuleAPI.h</em>, where of course <em>MyModule</em> will be replaced by the name of your module. This file will define the macro <em>MYMODULE_EXPORT_API</em> you will have to place  in front of each component interface to export with your shared library. So copy the following code in your new <em>MyModuleAPI.h</em> file:</p>
+</div>
+<div class="listingblock">
+<div class="title">MyModuleAPI.h</div>
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="cpp"><span class="comment">/**
+ * Your header defining your copyright and your license
+ */</span>
+
+<span class="preprocessor">#ifndef</span> MYMODULE_API_H
+<span class="preprocessor">#define</span> MYMODULE_API_H
+
+<span class="preprocessor">#if</span> _WIN32
+<span class="preprocessor">#ifdef</span> MyModule_API_DLLEXPORT
+<span class="preprocessor">#define</span> MYMODULE_EXPORT_API __declspec(dllexport)
+<span class="preprocessor">#else</span> <span class="comment">//MYMODULE_API_DLLEXPORT</span>
+<span class="preprocessor">#define</span> MYMODULE_EXPORT_API __declspec(dllimport)
+<span class="preprocessor">#endif</span> <span class="comment">//MYMODULE_API_DLLEXPORT</span>
+<span class="preprocessor">#else</span> <span class="comment">//_WIN32</span>
+<span class="preprocessor">#define</span> MYMODULE_EXPORT_API
+<span class="preprocessor">#endif</span> <span class="comment">//_WIN32</span>
+<span class="preprocessor">#include</span> <span class="include">&quot;MyModule_traits.h&quot;</span>
+<span class="preprocessor">#endif</span> <span class="comment">//MYMODULE_API</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Of course, replace "MyModule" by your module name in respecting the case used in this file.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="mymodule_traits_h"><a class="anchor" href="#mymodule_traits_h"></a><a class="link" href="#mymodule_traits_h">MyModule_traits.h</a></h4>
+<div class="paragraph">
+<p>Now, you will have to create a second header file named <em>MyModule_traits.h</em> in your <em>interfaces</em> folder (again, replace <em>MyModule</em> with the name of your module). This header will be the unique one to reference in order to use one or more components embedded in your module.</p>
+</div>
+<div class="listingblock">
+<div class="title">MyModule_traits.h</div>
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="cpp"><span class="comment">/**
+ * Your header defining your copyright and your license
+ */</span>
+
+<span class="preprocessor">#ifndef</span> MYMODULE_TRAITS_H
+<span class="preprocessor">#define</span> MYMODULE_TRAITS_H
+
+<span class="preprocessor">#include</span> <span class="include">&quot;xpcf/core/traits.h&quot;</span>
+
+<span class="keyword">namespace</span> SolAR {
+<span class="keyword">namespace</span> MODULES {
+<span class="keyword">namespace</span> MYMODULE {
+
+}
+}
+}
+
+<span class="preprocessor">#endif</span> <span class="comment">// MYMODULE_TRAITS_H</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>For now, this file is quite empty, but you will see in a next step that we will define in it a trait for each component you will create and add to your module (<a href="../component/index.html#create_component">Create a component</a>).</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="mymodule_cpp"><a class="anchor" href="#mymodule_cpp"></a><a class="link" href="#mymodule_cpp">MyModule.cpp</a></h4>
+<div class="paragraph">
+<p>Finally, create in the <em>src</em> folder of your project a source file named <em>MyModule.cpp</em>. This file has three functions:
+* it declares the module with a UUID, a name and a description,
+* it is used by the XPCF component factory to create the components of the module,
+* it declares the components embedded in the module.</p>
+</div>
+<div class="paragraph">
+<p>Copy and paste the following code in it (again replace MyModule by the name of your module):</p>
+</div>
+<div class="listingblock">
+<div class="title">MyModule.cpp</div>
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="cpp"><span class="comment">/**
+ * Your header defining your copyright and your license
+ */</span>
+
+<span class="preprocessor">#include</span> <span class="include">&quot;xpcf/module/ModuleFactory.h&quot;</span>
+<span class="preprocessor">#include</span> <span class="include">&quot;MyModule_traits.h&quot;</span>
+
+<span class="keyword">namespace</span> xpcf=org::bcom::xpcf;
+
+XPCF_DECLARE_MODULE(<span class="string"><span class="delimiter">&quot;</span><span class="content">MyModule UUID</span><span class="delimiter">&quot;</span></span>, <span class="string"><span class="delimiter">&quot;</span><span class="content">MyModule</span><span class="delimiter">&quot;</span></span>, <span class="string"><span class="delimiter">&quot;</span><span class="content">MyModule description</span><span class="delimiter">&quot;</span></span>); <i class="conum" data-value="1"></i><b>(1)</b>
+
+<span class="directive">extern</span> <span class="string"><span class="delimiter">&quot;</span><span class="content">C</span><span class="delimiter">&quot;</span></span> XPCF_MODULEHOOKS_API xpcf::XPCFErrorCode XPCF_getComponent(<span class="directive">const</span> boost::uuids::uuid&amp; componentUUID,SRef&lt;xpcf::IComponentIntrospect&gt;&amp; interfaceRef)
+{
+    xpcf::XPCFErrorCode errCode = xpcf::XPCFErrorCode::_FAIL;
+
+    <span class="keyword">return</span> errCode;
+}
+
+XPCF_BEGIN_COMPONENTS_DECLARATION
+
+XPCF_END_COMPONENTS_DECLARATION</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td><span class="white">Replace MyModule UUID by a Universally Unique IDentifier. To get one, you can use an <a href="https://www.uuidgenerator.net/">online UUID generator</a>. Please, provide a detailed description of your module that could be introspected by authoring tools.</span></td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="RegistryFile"><a class="anchor" href="#RegistryFile"></a><a class="link" href="#RegistryFile">Create a registry file</a></h3>
+<div class="paragraph">
+<p>As mentionned previoulsy, a shared library has to be loaded for introspection, what is quite tricky when it has been built on a platform different from yours. For this reason, we always associate to a module a registry file describing information about the module itself and its components.</p>
+</div>
+<div class="paragraph">
+<p>Create an xml file, name it <em>xpcf_MyModule_registry.xml</em>, and copy the following code in it (again replace <em>MyModule</em> with the name of your module):</p>
+</div>
+<div class="listingblock">
+<div class="title">xpcf_MyModule_registry.xml</div>
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;xpcf-registry&gt;</span>
+<span class="tag">&lt;module</span> <span class="attribute-name">uuid</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">MyModule_UUID</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">MyModule_Name</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">description</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">MyModule_Description</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">path</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">$REMAKENROOT/MyModule/MyModule_version/lib/x86_64/shared</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span> <i class="conum" data-value="1"></i><b>(1)</b>
+
+<span class="tag">&lt;/module&gt;</span>
+<span class="tag">&lt;/xpcf-registry&gt;</span></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td><span class="white">Copy and paste the module UUID, name and description defined in the file <em>MyModule.cpp</em>. Update the path by replacing <em>MyModule</em> by the name of your module and <em>MyModule_version</em> by the version number of your module defined in your <em>.pro</em> and in your <em>CMakeLists.txt</em> files.</span></td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>This file is somewhat empty, but will be completed when adding components.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="create_a_pkg_config_file"><a class="anchor" href="#create_a_pkg_config_file"></a><a class="link" href="#create_a_pkg_config_file">Create a pkg-config file</a></h3>
+<div class="paragraph">
+<p>The SolAR compilation pipeline use <a href="https://www.freedesktop.org/wiki/Software/pkg-config/">pkg-config</a> that helps to insert the correct compiler options on the command line so an application can use <em>gcc -o test test.c pkg-config --libs --cflags glib-2.0</em> for instance, rather than hard-coding values on where to find glib (or other libraries).</p>
+</div>
+<div class="paragraph">
+<p>Create a file in your project root folder named <em>bcom-MyModule.pc.in</em> and copy the following code in it:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>libname=MyModule <i class="conum" data-value="1"></i><b>(1)</b>
+prefix=/usr/local
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/interfaces
+Name: MyModule <i class="conum" data-value="2"></i><b>(2)</b>
+Description: MyModule description <i class="conum" data-value="3"></i><b>(3)</b>
+Version: MyModuleVersion <i class="conum" data-value="4"></i><b>(4)</b>
+Requires:
+Libs: -L${libdir} -l${libname}
+Libs.private: ${libdir}/${pfx}${libname}.${lext}
+Cflags: -I${includedir}</pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td><span class="white">The shared library name of your module defined in your <em>.pro</em> and <em>CMakeLists.txt</em> files.</span></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td><span class="white">The description of the module such as the one defined in <em>MyModule.cpp</em>.</span></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td><span class="white">The name of your module.</span></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td><span class="white">the version number of your module defined in your <em>.pro</em> and <em>CMakeLists.txt</em> files.</span></td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>When you will install your module, this file will be directly copied to your binary folder <em>${REMAKENROOT}/MyModule/MyModule_Version</em>.</p>
+</div>
+</div>
+</div>
+</div>
+              
+            </div>
+        </div>
+
+        <!-- build:js scripts/vendor.js -->
+        <!-- bower:js -->
+
+        <!-- endbower -->
+        <!-- endbuild -->
+
+    <!-- build:js({.tmp,src/main/webapp}) scripts/app.js -->
+    <script src="/js/vendor/modernizr.js"></script>
+    <!-- endbuild -->
+    <script type="text/javascript">
+      /* Fix padding-top on anchor with TOC */
+      window.addEventListener("hashchange", function() { scrollBy(0, -115) })
+    </script>
+    </body>
+</html>

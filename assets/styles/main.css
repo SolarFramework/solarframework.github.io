@@ -203,7 +203,7 @@ h1 {
   border: none;
   border-radius: 0px; }
   .well .sect1 + .sect1 {
-    margin-top: 20px; }
+    margin-top: 50px; }
   .well h1 {
     display: none; }
   .well h2 {
@@ -370,13 +370,25 @@ h1 {
   border-left: none; }
 
 /* homepage CSS overload */
+.fa-user.purple {
+  color: #be64ff; }
+
+.fa-user.yellow {
+  color: #ffb400; }
+
+.fa-user.blue {
+  color: #00bee6; }
+
+.fa-user.green {
+  color: #00cd78; }
+
 .well header {
   /* trick to stick header image to navbar in home */
   margin-top: 75px; }
 
 .well article {
   float: left;
-  margin: 50px 0px; }
+  margin: 25px 0px; }
   .well article h2 {
     position: relative;
     text-transform: none;
@@ -410,22 +422,6 @@ h1 {
   .well article section .more {
     text-align: center;
     margin: 10px auto 0px auto; }
-  .well article section .profile {
-    width: 50px;
-    height: 50px;
-    margin: 5px 25px; }
-  .well article section .profile.dark-blue {
-    background: url("../images/profile_1.gif") CENTER CENTER NO-REPEAT;
-    background-size: 50px 50px; }
-  .well article section .profile.blue {
-    background: url("../images/profile_2.gif") CENTER CENTER NO-REPEAT;
-    background-size: 50px 50px; }
-  .well article section .profile.light-blue {
-    background: url("../images/profile_3.gif") CENTER CENTER NO-REPEAT;
-    background-size: 50px 50px; }
-  .well article section .profile.white {
-    background: url("../images/profile_4.gif") CENTER CENTER NO-REPEAT;
-    background-size: 50px 50px; }
   .well article section .inliner {
     width: 100px;
     height: 65px;
@@ -442,6 +438,9 @@ h1 {
     text-align: center;
     margin-bottom: 15px; }
 
+.well a {
+  text-decoration: none; }
+
 footer {
   position: absolute;
   bottom: 0;
@@ -452,6 +451,44 @@ footer {
     margin: auto; }
     footer p a {
       color: #436b6e; }
+
+.users-figure {
+  text-align: center;
+  width: 100%;
+  margin-left: calc(50% - 21px);
+  margin-right: calc(50% - 21px);
+  vertical-align: top;
+  display: inline-block;
+  color: white; }
+
+.users-title {
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 12px;
+  color: white; }
+
+.users-body {
+  border: 2px solid #436b6e;
+  margin: 2px;
+  display: inline-block;
+  padding: 0.5em;
+  text-align: center;
+  vertical-align: top;
+  color: white; }
+
+.users-body.purple {
+  border-color: #be64ff; }
+
+.users-body.yellow {
+  border-color: #ffb400; }
+
+.users-body.blue {
+  border-color: #00bee6; }
+
+.users-body.green {
+  border-color: #00cd78; }
 
 /* computer resolution */
 @media screen and (min-width: 1024px) {

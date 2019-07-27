@@ -1,0 +1,693 @@
+<!doctype html>
+<html class="no-js">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>SolAR</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+    <meta http-equiv="pragma" content="no-cache" />
+
+    <!-- IE 10 Metro tile icon (Metro equivalent of apple-touch-icon) -->
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="msapplication-TileImage" content="/assets/static/favicon-144.png">
+
+    <!-- Touch icon for iOS 2.0+ and Android 2.1+ -->
+    <link rel="apple-touch-icon-precomposed" href="/assets/static/favicon-152.png">
+    <link rel="icon" type="image/x-icon" href="/assets/static/favicon.ico">
+
+    <link rel="stylesheet" href="/assets/styles/bootstrap.min.css" />
+    <link rel="stylesheet" href="/assets/styles/coderay-asciidoctor.css">
+    <link rel="stylesheet" href="/assets/styles/asciidoctor.css">
+    <link rel="stylesheet" href="/assets/styles/fontawesome.min.css">
+    <link rel="stylesheet" href="/assets/styles/all.min.css">
+    <link rel="stylesheet" href="/assets/styles/solar-asciidoctor-theme.css">
+    <link rel="stylesheet" href="/assets/styles/solar-bootstrap-theme.css">
+    <link rel="stylesheet" href="/assets/styles/main.css">
+    <link rel="stylesheet" href="/assets/styles/media.css">
+
+    <script src="/js/vendor/jquery.js"></script><!--needed with bootstrap-->
+    <script src="/js/lunr.min.js"></script>
+    <script src="/js/search.js"></script>
+    <script src="/js/toc.js"></script>
+    <script src="/js/block-folding.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() { 
+          /* Configure TOC to take into account all titles */
+          $("#toc").toc(  { headers: "h2, h3",
+                              listType: "ul",
+                              title: "<div id='toctitle'>Table of Contents</div>",
+                              noBackToTopLinks: true /*usefull to avoid tag <i class="icon-arrow-up back-to-top"> </i> to be placed between #submenuconfig and sectionbody and screw the submenu css style*/
+           });
+        });
+      </script>
+  <!-- Google Analytics -->
+  <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-107058603-1', 'auto');
+          ga('set', 'anonymizeIp', true);
+          ga('send', 'pageview');
+  </script>  <!-- End Google Analytics --> 
+<link rel="stylesheet" type="text/css" href="/js/cookieconsent/cookieconsent.min.css" />
+<script src="/js/cookieconsent/cookieconsent.min.js"></script>
+<script>
+var userLang = navigator.language || navigator.userLanguage; 
+if (userLang == "fr") {
+  message="En poursuivant votre navigation sur ce site, vous acceptez que des cookies soient utilisés afin d’améliorer votre expérience d’utilisateur.";
+  link="En savoir plus";
+  href="https://b-com.com/fr/mentions-l%C3%A9gales";
+}
+else {
+  message="By proceeding beyond this page, you consent to the cookies usage, in order to improve your experience on this website.";
+  link="More information";
+  href="https://b-com.com/en/legal-notice";
+}
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#000000"
+    },
+    "button": {
+      "background": "#00bee6"
+    }
+  },
+  "position": "bottom-left",
+  "theme": "edgeless",
+  "content": {
+    "message": message,
+    "dismiss": "OK",
+    "link": link,
+    "href": href
+  }
+})});
+</script>  
+</head>
+
+    <body>
+        <!--[if lt IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div><div class="navbar navbar-default">
+    <div>
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand link" href="/">
+                <img class="logo" alt="SolAR logo" src="/assets/images/navbar/logo_solAR.svg">
+            </a>
+        </div>
+
+        <div id="navbar" class="navbar-collapse" aria-expanded="false" style="height: 1px;">
+            <ul class="nav navbar-nav">
+
+                
+
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+    <li id="discover" class=" blue">
+      <a href="/discover/">
+        <img src="/assets/images/navbar/discover.svg" alt="discover" height="42" width="42">
+        Discover
+      </a>
+    </li>
+    
+    
+
+  
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+    <li id="use_it" class=" purple">
+      <a href="/use_it/">
+        <img src="/assets/images/navbar/use_it.svg" alt="use_it" height="42" width="42">
+        Use it
+      </a>
+    </li>
+    
+    
+
+  
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+    <li id="contribute" class=" red">
+      <a href="/contribute/">
+        <img src="/assets/images/navbar/contribute.svg" alt="contribute" height="42" width="42">
+        Contribute
+      </a>
+    </li>
+    
+    
+
+  
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+    <li id="applications" class=" yellow">
+      <a href="/applications/">
+        <img src="/assets/images/navbar/applications.svg" alt="applications" height="42" width="42">
+        Applications
+      </a>
+    </li>
+    
+    
+
+  
+
+
+
+
+
+                <li>
+                    <form action="/search/index.html" method="get" class="navbar-form" role="search">
+                        <div class="input-group">
+                            <input type="text" id="search" class="form-control" placeholder="Search"
+                                    name="q" class="span1" type="text" size="15">
+                            <div class="input-group-btn">
+                                <button class="btn btn-default" type="submit">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                    <div>
+                        <a href="/about">> About</a>
+                        <a href="https://github.com/SolarFramework">> Git</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        
+    <div class="submenu blue">
+      <div class="submenuHelper">&lt;</div>
+      <ul class="nav" aria-expanded="false">
+        
+        
+
+	
+	
+
+		<li >
+			<a href="/discover/what/">
+				what
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/discover/how/">
+				how
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/discover/who/">
+				who
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/discover/when/">
+				when
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/discover/for_whom/">
+				for whom
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/discover/legal_notice/">
+				legal notice
+				
+			</a>
+		</li>
+	
+
+
+      </ul>
+      <div class="submenuHelper">&gt;</div>
+    </div>
+    
+    <div class="submenu purple">
+      <div class="submenuHelper">&lt;</div>
+      <ul class="nav" aria-expanded="false">
+        
+        
+
+	
+	
+
+		<li >
+			<a href="/use_it/setup/">
+				setup
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/use_it/samples/">
+				samples
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/use_it/tutorials/">
+				tutorials
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/use_it/tools/">
+				tools
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/use_it/programmer_guide/">
+				programmer’s guide
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/use_it/api/">
+				API 0.5.0
+				
+			</a>
+		</li>
+	
+
+
+      </ul>
+      <div class="submenuHelper">&gt;</div>
+    </div>
+    
+    <div class="submenu red">
+      <div class="submenuHelper">&lt;</div>
+      <ul class="nav" aria-expanded="false">
+        
+        
+
+	
+	
+
+		<li >
+			<a href="/contribute/how_it_works/">
+				how it works
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/contribute/getting_started_linux/">
+				on linux
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/contribute/getting_started_windows/">
+				on windows
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/contribute/contribute_to_core/">
+				contribute to core
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/contribute/best_practices/">
+				best practices
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/contribute/contribution_workflow/">
+				contribution workflow
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/contribute/GIT/">
+				GIT
+				
+			</a>
+		</li>
+	
+
+
+      </ul>
+      <div class="submenuHelper">&gt;</div>
+    </div>
+    
+    <div class="submenu yellow">
+      <div class="submenuHelper">&lt;</div>
+      <ul class="nav" aria-expanded="false">
+        
+        
+
+	
+	
+
+		<li >
+			<a href="/applications/factory/">
+				industry
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/applications/realestate/">
+				real estate
+				
+			</a>
+		</li>
+	
+
+
+      </ul>
+      <div class="submenuHelper">&gt;</div>
+    </div>
+    
+        
+    </div>
+
+</div>
+</div>
+
+        <div class="container">
+            <div class="well ">
+              <div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#tests">Tests</a></li>
+<li><a href="#tests_2">Tests</a></li>
+</ul>
+</div>
+<div class="sect1">
+<h2 id="tests"><a class="anchor" href="#tests"></a><a class="link" href="#tests">Tests</a></h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="tests_2"><a class="anchor" href="#tests_2"></a><a class="link" href="#tests_2">Tests</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Define unit tests, based on boost framework .
+You can know more about boost with this link : <a href="http://www.boost.org/" class="external" target="_blank" rel="noopener">http://www.boost.org</a></p>
+</div>
+<div class="paragraph">
+<p>Your Unit tests for a specific component, should be placed in the component directory/unittest.
+If you have used the SolARComponent template, this directory should be already there.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="data:image/png;base64," alt="Unit test directory">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Open {yourcomponent}/unittest/{yourcomponent}unittest.pro</p>
+</li>
+<li>
+<p>You have to describe your unit tests in the file  {yourcomponent}unittest.cpp</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>For example</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="cpp"><span class="preprocessor">#define</span>
+BOOST_TEST_MODULE <span class="error">\</span>{Yourcomponent}UnitTest
+
+<span class="preprocessor">#include</span> <span class="include">&lt;boost/test/unit_test.hpp&gt;</span> <i class="conum" data-value="1"></i><b>(1)</b>
+<span class="preprocessor">#BOOST_AUTO_TEST_CASE</span>(TestLoadImage) <i class="conum" data-value="2"></i><b>(2)</b>
+{ <span class="comment">// test execution instructions</span>
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td><span class="white">Please note your code contains include of boost</span></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td><span class="white">You have to define the <strong>name</strong> of your test thanks to the boost macro "BOOST_AUTO_TEST_CASE"</span>.</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>In this example , the definition of the test case "TestLoadImage" for your component.</p>
+</div>
+<div class="paragraph">
+<p>It means, that when you will execute the unit test, it will executes this test "TestLoadImage" following the instructions in this declaration.
+You can define several test cases.</p>
+</div>
+<div class="paragraph">
+<p>Inside your test, please write a kind of demo main function, but where you check results of your component function thanks to macro BOOST CHECK and/or BOOST_TEST.</p>
+</div>
+<div class="paragraph">
+<p>You will find easily information about BOOST macro on Internet <a href="http://www.boost.org/doc/libs/1_64_0/libs/test/doc/html/index.html" class="bare">http://www.boost.org/doc/libs/1_64_0/libs/test/doc/html/index.html</a> [boost.org information,role="external", window="_blank"] .</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+There is no "main" function, as it is automatically generated by boost (used in unit tests).
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Please ensure that it contains sufficient tests cases to verify your code is OK (normal case, error cases).</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Example here : // Case normal, with an existing image file.</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+remplacer ici par le nouveau code source SolAR
+</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="cpp">BOOST_AUTO_TEST_CASE(TestLoadImage)
+{ <span class="comment">// To simplify this example test, let's suppose we'll test 'float'.</span>
+ <span class="comment">// Some test are stupid, but all should pass.</span>
+ <span class="predefined-type">int</span> result= <span class="integer">0</span>;
+ std::shared_ptr&lt;IArgoImage&gt; myArgoImage0 = getArgoImageInstance();
+
+....
+BOOST_CHECK( myArgoImage0 !=  <span class="predefined-constant">NULL</span>);
+....
+
+<span class="comment">// getArgoImageInstance should not return a null pointer result</span>
+
+myArgoImage0-&gt;LoadImage(<span class="string"><span class="delimiter">&quot;</span><span class="content">../test.jpg</span><span class="delimiter">&quot;</span></span>);
+BOOST_TEST( result= = <span class="integer">0</span>,<span class="string"><span class="delimiter">&quot;</span><span class="content">ARGO ERROR: Load Image should return 0</span><span class="delimiter">&quot;</span></span>);
+<span class="comment">// As the image indicated exists, loadImage should return 0, as a normal case</span>
+
+}
+
+BOOST_AUTO_TEST_CASE(TestLoadImageInexistante)
+{
+<span class="comment">// Some test are stupid, but all should pass.</span>
+<span class="predefined-type">int</span> result= <span class="integer">0</span>; std::shared_ptr&lt;IArgoImage&gt;
+myArgoImage0 =  getArgoImageInstance();
+
+....
+BOOST_TEST(( myArgoImage0 !=  <span class="predefined-constant">NULL</span>),&amp;quot;ARGO ERROR: ArgoImage should <span class="keyword">not</span> <span class="keyword">return</span> null pointer&amp;quot;);
+
+result=  myArgoImage0-&amp;gt;LoadImage(&amp;quot;../test2.jpg&amp;quot;);
+BOOST_TEST( result= = -<span class="integer">1</span>,&amp;quot;ARGO ERROR: Load Image should <span class="keyword">return</span> -<span class="integer">1</span>&amp;quot;);
+....
+
+<span class="comment">// As the image indicated does not exist, loadImage should return -1, an error</span>
+
+ }</code></pre>
+</div>
+</div>
+</div>
+</div>
+              
+            </div>
+        </div>
+
+        <!-- build:js scripts/vendor.js -->
+        <!-- bower:js -->
+
+        <!-- endbower -->
+        <!-- endbuild -->
+
+    <!-- build:js({.tmp,src/main/webapp}) scripts/app.js -->
+    <script src="/js/vendor/modernizr.js"></script>
+    <!-- endbuild -->
+    <script type="text/javascript">
+      /* Fix padding-top on anchor with TOC */
+      window.addEventListener("hashchange", function() { scrollBy(0, -115) })
+    </script>
+    </body>
+</html>

@@ -1,0 +1,970 @@
+<!doctype html>
+<html class="no-js">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>SolAR</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+    <meta http-equiv="pragma" content="no-cache" />
+
+    <!-- IE 10 Metro tile icon (Metro equivalent of apple-touch-icon) -->
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="msapplication-TileImage" content="/assets/static/favicon-144.png">
+
+    <!-- Touch icon for iOS 2.0+ and Android 2.1+ -->
+    <link rel="apple-touch-icon-precomposed" href="/assets/static/favicon-152.png">
+    <link rel="icon" type="image/x-icon" href="/assets/static/favicon.ico">
+
+    <link rel="stylesheet" href="/assets/styles/bootstrap.min.css" />
+    <link rel="stylesheet" href="/assets/styles/coderay-asciidoctor.css">
+    <link rel="stylesheet" href="/assets/styles/asciidoctor.css">
+    <link rel="stylesheet" href="/assets/styles/fontawesome.min.css">
+    <link rel="stylesheet" href="/assets/styles/all.min.css">
+    <link rel="stylesheet" href="/assets/styles/solar-asciidoctor-theme.css">
+    <link rel="stylesheet" href="/assets/styles/solar-bootstrap-theme.css">
+    <link rel="stylesheet" href="/assets/styles/main.css">
+    <link rel="stylesheet" href="/assets/styles/media.css">
+
+    <script src="/js/vendor/jquery.js"></script><!--needed with bootstrap-->
+    <script src="/js/lunr.min.js"></script>
+    <script src="/js/search.js"></script>
+    <script src="/js/toc.js"></script>
+    <script src="/js/block-folding.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() { 
+          /* Configure TOC to take into account all titles */
+          $("#toc").toc(  { headers: "h2, h3",
+                              listType: "ul",
+                              title: "<div id='toctitle'>Table of Contents</div>",
+                              noBackToTopLinks: true /*usefull to avoid tag <i class="icon-arrow-up back-to-top"> </i> to be placed between #submenuconfig and sectionbody and screw the submenu css style*/
+           });
+        });
+      </script>
+  <!-- Google Analytics -->
+  <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-107058603-1', 'auto');
+          ga('set', 'anonymizeIp', true);
+          ga('send', 'pageview');
+  </script>  <!-- End Google Analytics --> 
+<link rel="stylesheet" type="text/css" href="/js/cookieconsent/cookieconsent.min.css" />
+<script src="/js/cookieconsent/cookieconsent.min.js"></script>
+<script>
+var userLang = navigator.language || navigator.userLanguage; 
+if (userLang == "fr") {
+  message="En poursuivant votre navigation sur ce site, vous acceptez que des cookies soient utilisés afin d’améliorer votre expérience d’utilisateur.";
+  link="En savoir plus";
+  href="https://b-com.com/fr/mentions-l%C3%A9gales";
+}
+else {
+  message="By proceeding beyond this page, you consent to the cookies usage, in order to improve your experience on this website.";
+  link="More information";
+  href="https://b-com.com/en/legal-notice";
+}
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#000000"
+    },
+    "button": {
+      "background": "#00bee6"
+    }
+  },
+  "position": "bottom-left",
+  "theme": "edgeless",
+  "content": {
+    "message": message,
+    "dismiss": "OK",
+    "link": link,
+    "href": href
+  }
+})});
+</script>  
+</head>
+
+    <body>
+        <!--[if lt IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div><div class="navbar navbar-default">
+    <div>
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand link" href="/">
+                <img class="logo" alt="SolAR logo" src="/assets/images/navbar/logo_solAR.svg">
+            </a>
+        </div>
+
+        <div id="navbar" class="navbar-collapse" aria-expanded="false" style="height: 1px;">
+            <ul class="nav navbar-nav">
+
+                
+
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+    <li id="discover" class=" blue">
+      <a href="/discover/">
+        <img src="/assets/images/navbar/discover.svg" alt="discover" height="42" width="42">
+        Discover
+      </a>
+    </li>
+    
+    
+
+  
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+    <li id="use_it" class=" purple">
+      <a href="/use_it/">
+        <img src="/assets/images/navbar/use_it.svg" alt="use_it" height="42" width="42">
+        Use it
+      </a>
+    </li>
+    
+    
+
+  
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+    <li id="contribute" class=" red">
+      <a href="/contribute/">
+        <img src="/assets/images/navbar/contribute.svg" alt="contribute" height="42" width="42">
+        Contribute
+      </a>
+    </li>
+    
+    
+
+  
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+    <li id="applications" class=" yellow">
+      <a href="/applications/">
+        <img src="/assets/images/navbar/applications.svg" alt="applications" height="42" width="42">
+        Applications
+      </a>
+    </li>
+    
+    
+
+  
+
+
+
+
+
+                <li>
+                    <form action="/search/index.html" method="get" class="navbar-form" role="search">
+                        <div class="input-group">
+                            <input type="text" id="search" class="form-control" placeholder="Search"
+                                    name="q" class="span1" type="text" size="15">
+                            <div class="input-group-btn">
+                                <button class="btn btn-default" type="submit">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                    <div>
+                        <a href="/about">> About</a>
+                        <a href="https://github.com/SolarFramework">> Git</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        
+    <div class="submenu blue">
+      <div class="submenuHelper">&lt;</div>
+      <ul class="nav" aria-expanded="false">
+        
+        
+
+	
+	
+
+		<li >
+			<a href="/discover/what/">
+				what
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/discover/how/">
+				how
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/discover/who/">
+				who
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/discover/when/">
+				when
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/discover/for_whom/">
+				for whom
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/discover/legal_notice/">
+				legal notice
+				
+			</a>
+		</li>
+	
+
+
+      </ul>
+      <div class="submenuHelper">&gt;</div>
+    </div>
+    
+    <div class="submenu purple">
+      <div class="submenuHelper">&lt;</div>
+      <ul class="nav" aria-expanded="false">
+        
+        
+
+	
+	
+
+		<li >
+			<a href="/use_it/setup/">
+				setup
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/use_it/samples/">
+				samples
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/use_it/tutorials/">
+				tutorials
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/use_it/tools/">
+				tools
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/use_it/programmer_guide/">
+				programmer’s guide
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/use_it/api/">
+				API 0.5.0
+				
+			</a>
+		</li>
+	
+
+
+      </ul>
+      <div class="submenuHelper">&gt;</div>
+    </div>
+    
+    <div class="submenu red">
+      <div class="submenuHelper">&lt;</div>
+      <ul class="nav" aria-expanded="false">
+        
+        
+
+	
+	
+
+		<li >
+			<a href="/contribute/how_it_works/">
+				how it works
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/contribute/getting_started_linux/">
+				on linux
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/contribute/getting_started_windows/">
+				on windows
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/contribute/contribute_to_core/">
+				contribute to core
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/contribute/best_practices/">
+				best practices
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/contribute/contribution_workflow/">
+				contribution workflow
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/contribute/GIT/">
+				GIT
+				
+			</a>
+		</li>
+	
+
+
+      </ul>
+      <div class="submenuHelper">&gt;</div>
+    </div>
+    
+    <div class="submenu yellow">
+      <div class="submenuHelper">&lt;</div>
+      <ul class="nav" aria-expanded="false">
+        
+        
+
+	
+	
+
+		<li >
+			<a href="/applications/factory/">
+				industry
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/applications/realestate/">
+				real estate
+				
+			</a>
+		</li>
+	
+
+
+      </ul>
+      <div class="submenuHelper">&gt;</div>
+    </div>
+    
+        
+    </div>
+
+</div>
+</div>
+
+        <div class="container">
+            <div class="well ">
+              <h1>Create a component</h1>
+<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#create_component">Create a component</a></li>
+<li><a href="#what_is_a_component">What is a component ?</a></li>
+<li><a href="#create_a_component_with_the_wizard">Create a component with the wizard</a></li>
+<li><a href="#create_a_component_step_by_step">Create a component step-by-step</a>
+<ul class="sectlevel2">
+<li><a href="#create_a_component_header">Create a component header</a></li>
+<li><a href="#create_your_component_sources">Create your component sources</a></li>
+<li><a href="#embed_your_component_in_its_module">Embed your component in its module</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="sect1">
+<h2 id="create_component"><a class="anchor" href="#create_component"></a><a class="link" href="#create_component">Create a component</a></h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="what_is_a_component"><a class="anchor" href="#what_is_a_component"></a><a class="link" href="#what_is_a_component">What is a component ?</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A SolAR component is element embedding processing (and soon storage) capabilities. Components are designed to be connected together in order to create a full pipeline. For this reason, a component defines ideally one (potentially several) processing function defining input (the data to process) and ouptut (the processed data). For interoperability issues, the component has to implement a SolAR component interface defined by the SolAR Framework API available  <a href="../api/index.html#SolAR_API">here</a>.</p>
+</div>
+<div class="paragraph">
+<p>As each component implementation can require dedicated configuration parameters, the SolAR framework provides an easy-to-use mechanism to initialize them at load-time with a external xml configuration file.</p>
+</div>
+<div class="paragraph">
+<p>Finally, when a SolAR component is implemented, it has to be embedded in a SolAR module for its publication to the SolAR pipeline assemblers.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="create_a_component_with_the_wizard"><a class="anchor" href="#create_a_component_with_the_wizard"></a><a class="link" href="#create_a_component_with_the_wizard">Create a component with the wizard</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>We are aware that creating a component and embedding it into a module can be a little tedious. A QTCreator wizard should be soon available to automate file generation and make the component creation easier for you. But for now, follow the instructions below to create a component and add it to a module step-by-step.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="create_a_component_step_by_step"><a class="anchor" href="#create_a_component_step_by_step"></a><a class="link" href="#create_a_component_step_by_step">Create a component step-by-step</a></h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="create_a_component_header"><a class="anchor" href="#create_a_component_header"></a><a class="link" href="#create_a_component_header">Create a component header</a></h3>
+<div class="paragraph">
+<p>Create with your IDE a header file and put it in the <em>interfaces</em> folder of your module project. Then copy the following code in it:</p>
+</div>
+<div class="listingblock">
+<div class="title">MyComponent.h</div>
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="cpp"><span class="comment">/**
+ * Your header defining your copyright and your license
+ */</span>
+
+<span class="preprocessor">#ifndef</span> MYCOMPONENT_H
+<span class="preprocessor">#define</span> MYCOMPONENT_H
+
+<span class="comment">// mandatory include files</span>
+<span class="preprocessor">#include</span> <span class="include">&quot;api/componentType/ISolARComponentInterface.h&quot;</span> <i class="conum" data-value="1"></i><b>(1)</b>
+<span class="preprocessor">#include</span> <span class="include">&quot;MyModuleAPI.h&quot;</span> <i class="conum" data-value="2"></i><b>(2)</b>
+<span class="comment">//#include &quot;xpcf/component/ComponentBase.h&quot; </span><i class="conum" data-value="3"></i><b>(3)</b>
+<span class="preprocessor">#include</span> <span class="include">&quot;xpcf/component/ConfigurableBase.h&quot;</span>
+
+<span class="comment">// Optional include files</span>
+<span class="preprocessor">#include</span> <span class="include">&quot;ThirdPartyLibrary/ClassA.h&quot;</span> <i class="conum" data-value="4"></i><b>(4)</b>
+
+<span class="keyword">namespace</span> SolAR {
+<span class="directive">using</span> <span class="keyword">namespace</span> datastructure;
+<span class="keyword">namespace</span> MODULES {
+<span class="keyword">namespace</span> MYMODULE { <i class="conum" data-value="5"></i><b>(5)</b>
+  <span class="comment">/**
+   * @class MyComponent
+   * @brief A short description of MyComponent with its UUID to publish it in the API documentation
+   */</span>
+  <span class="keyword">class</span> <span class="class">MYMODULE_EXPORT_API</span> MyComponent : <span class="directive">public</span> org::bcom::xpcf::ConfigurableBase, <i class="conum" data-value="6"></i><b>(6)</b>
+                                          <span class="directive">public</span> api::componentCategory::ISolARComponentInterface <i class="conum" data-value="7"></i><b>(7)</b>
+  {
+  <span class="directive">public</span>:
+      <span class="comment">///@brief MyComponent constructor;</span>
+      SolARProjectOpencv();
+      <span class="comment">///@brief MyComponent destructor;</span>
+      ~SolARProjectOpencv() = <span class="keyword">default</span>;
+
+      <span class="comment">/// @brief Processing method</span>
+      <span class="comment">/// @param[in] input1 the first input parameter.</span>
+      <span class="comment">/// @param[in] input2 the second input parameter.</span>
+      <span class="comment">/// @param[out] output1 the first output parameter.</span>
+      <span class="comment">/// @param[out] output2 the second output parameter.</span>
+      <span class="comment">/// @return A framework return code</span>
+      FrameworkReturnCode myComponentProcesingFunction(<span class="directive">const</span> <span class="predefined-type">int</span> input1, <i class="conum" data-value="8"></i><b>(8)</b>
+                                                       <span class="directive">const</span> SRef&lt;SolARDataStructure&gt; input2,
+                                                       <span class="predefined-type">int</span> output1,
+                                                       SRef&lt;SolARDatastructure&gt; output2) override;
+
+      org::bcom::xpcf::XPCFErrorCode onConfigured() override final; <i class="conum" data-value="9"></i><b>(9)</b>
+
+      <span class="directive">void</span> unloadComponent () override final; <i class="conum" data-value="10"></i><b>(10)</b>
+
+  <span class="directive">private</span>: <i class="conum" data-value="11"></i><b>(11)</b>
+      <span class="predefined-type">int</span>                       m_configurableAttribute;
+      ThirdPartyLibrary::ClassA m_nonConfigurableAttribute;
+  };
+}
+}
+}
+
+<span class="preprocessor">#endif</span> <span class="comment">// MYCOMPONENT_H</span></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td><span class="white">The SolAR component interface header implemented by your component among the ones defined by the SolAR Framework API available <a href="../api/index.html#SolAR_API">here</a>.</span></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td><span class="white">The API definition header file of your module to export the interfaces of your component.</span></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td><span class="white">If you want to implement a configurable component, include the XPCF header file <em>ConfigurableBase</em> (Otherwise, <em>ComponentBase</em>).</span></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td><span class="white">Include any dependencies to third parties here (std, boost, openCV, etc.). Do not use types or class from these third parties in public functions or attributes. Be sure that these dependencies have been included in the <em>packagedependencies.txt</em> file of your module (for more information, see the section on <a href="../module/index.html#Module_Dependencies">module dependencies configuration</a>).</span></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="5"></i><b>5</b></td>
+<td><span class="white">Embed your component in the namespace of your module that must comply with the following convention: <em>SOLAR/MODULES/MYMODULE</em>.</span></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="6"></i><b>6</b></td>
+<td><span class="white">Declare your component class. Your component class must inherit from <em>org::bcom::xpcf::ConfigurableBase</em> if you want to configure parameters from an xml file, or from <em>org::bcom::xpcf::ComponentBase</em> otherwise.</span></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="7"></i><b>7</b></td>
+<td><span class="white">Inherit your component class from the SolAR interface it implements. The namespace of SolAR API are hierarchically organized complying the following convention: <em>api/ComponentCategoryLevel_1/ComponentCategoryLevel_1/..ComponentCategoryLevel_n</em>.</span></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="8"></i><b>8</b></td>
+<td><span class="white">Declare your processing function(s) by complying with the function prototype(s) of the abstract component interface your component implements (defined in the <a href="../api/index.html#SolAR_API">SolAR framework API</a>).</span></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="9"></i><b>9</b></td>
+<td><span class="white">Optional, callback if you need to apply some processing during initialization step when the configuration parameters of your component have just been loaded from the xml file.</span></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="10"></i><b>10</b></td>
+<td><span class="white">Mandatory function used by XPCF to unload your component.</span></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="11"></i><b>11</b></td>
+<td><span class="white">Declare the private attributes of your component. Normally, no public attributes should be declared since the component is only accessible by the public functions declared above.</span></td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="create_your_component_sources"><a class="anchor" href="#create_your_component_sources"></a><a class="link" href="#create_your_component_sources">Create your component sources</a></h3>
+<div class="paragraph">
+<p>Create with your IDE a source file <em>MyComponent.cpp</em>, and put it in the <em>src</em> folder of your module project. Then copy the following code in it:</p>
+</div>
+<div class="listingblock">
+<div class="title">MyComponent.cpp</div>
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="cpp"><span class="comment">/**
+ * Your header defining your copyright and your license
+ */</span>
+
+<span class="preprocessor">#include</span> <span class="include">&quot;MyComponent.h&quot;</span> <i class="conum" data-value="1"></i><b>(1)</b>
+<span class="preprocessor">#include</span> <span class="include">&quot;core/Log.h&quot;</span> <i class="conum" data-value="2"></i><b>(2)</b>
+
+<span class="comment">// Optional include files</span>
+<span class="preprocessor">#include</span> <span class="include">&quot;ThirdPartyLibrary/ClassB.h&quot;</span> <i class="conum" data-value="3"></i><b>(3)</b>
+
+XPCF_DEFINE_FACTORY_CREATE_INSTANCE(SolAR::MODULES::MYMODULE::MyComponent); <i class="conum" data-value="4"></i><b>(4)</b>
+
+<span class="keyword">namespace</span> xpcf  = org::bcom::xpcf;
+<span class="keyword">namespace</span> SolAR {
+<span class="directive">using</span> <span class="keyword">namespace</span> datastructure;
+<span class="keyword">namespace</span> MODULES {
+<span class="keyword">namespace</span> MYMODULE { <i class="conum" data-value="5"></i><b>(5)</b>
+
+MyComponent::MyComponent():ConfigurableBase(xpcf::toUUID&lt;MyComponent&gt;()) <i class="conum" data-value="6"></i><b>(6)</b>
+{
+    addInterface&lt;api::componentCategory::ISolARComponentInterface&gt;(<span class="local-variable">this</span>); <i class="conum" data-value="7"></i><b>(7)</b>
+
+    SRef&lt;xpcf::IPropertyMap&gt; params = getPropertyRootNode(); <i class="conum" data-value="8"></i><b>(8)</b>
+    params-&gt;wrapInteger(<span class="string"><span class="delimiter">&quot;</span><span class="content">configurableAttribute</span><span class="delimiter">&quot;</span></span>, m_configurableAttribute);
+}
+
+xpcf::XPCFErrorCode MyComponent::onConfigured() <i class="conum" data-value="9"></i><b>(9)</b>
+{
+  <span class="comment">// Do initialization here when your configurable parameters have been updated with the xml configuration file.</span>
+
+  <span class="keyword">return</span> xpcf::_SUCCESS;
+}
+
+FrameworkReturnCode MyComponent::myComponentProcesingFunction(
+          <span class="directive">const</span> <span class="predefined-type">int</span> input1,
+          <span class="directive">const</span> SRef&lt;SolARDataStructure&gt; input2,
+          <span class="predefined-type">int</span> output1,
+          SRef&lt;SolARDatastructure&gt; output2) <i class="conum" data-value="10"></i><b>(10)</b>
+{
+    <span class="comment">// Processing code here</span>
+
+    <span class="keyword">return</span> FrameworkReturnCode::_SUCCESS;
+}
+}}}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td><span class="white">Include the header file of your component.</span></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td><span class="white">The SolAR framework provides a dedicated solution for logging. Inlcude <em>core/Log.h</em> if you want to use it.</span></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td><span class="white">Include any third partiy header files required for your processing. Be sure that these dependencies have been included in the <em>packagedependencies.txt</em> file of your module (for more information, see the section on <a href="../module/index.html#Module_Dependencies">module dependencies configuration</a>).</span></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td><span class="white">Add the component to the XPCF factory to be able to create an instance of it at run-time.</span></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="5"></i><b>5</b></td>
+<td><span class="white">Embed your component implementation in the namespace of your module that must comply with the following convention: <em>SOLAR/MODULES/MYMODULE</em>.</span></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="6"></i><b>6</b></td>
+<td><span class="white">Implement your default component constructor. Inherit your component from ConfigurableBase, or ComponentBase if the component is not configurable, and in both case, pass as the argument of the parent constructor the UUID of your component.</span></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="7"></i><b>7</b></td>
+<td><span class="white">During component construction, add its interface to XPCF.</span></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="8"></i><b>8</b></td>
+<td><span class="white">To add a configurable parameter and map it to the xml configuration file, retrieve a reference to the properties of the component, and add a wrapper for each configuration parameter you want to map. Here, when an xml element with the name <em>configurableAttribute</em> of type <em>integer</em> will be specified in the configuration file, when exiting the constructor, its value will be set to the attribute <em>m_configurableAttribute</em>.</span></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="9"></i><b>9</b></td>
+<td><span class="white">If you want to initialize internal structures requiring that the value of the configurable parameters was set, you can do it in the <em>onConfigured</em> callback.</span></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="10"></i><b>10</b></td>
+<td><span class="white">Implement the processing function(s) of your component.</span></td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="embed_your_component_in_its_module"><a class="anchor" href="#embed_your_component_in_its_module"></a><a class="link" href="#embed_your_component_in_its_module">Embed your component in its module</a></h3>
+<div class="sect3">
+<h4 id="module_traits_update"><a class="anchor" href="#module_traits_update"></a><a class="link" href="#module_traits_update">Module traits update</a></h4>
+<div class="paragraph">
+<p>To add a component to your module, you need to define its traits in the file <em>MyModule_traits.h</em>:</p>
+</div>
+<div class="listingblock">
+<div class="title">MyModule_traits.h</div>
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="cpp"><span class="comment">/**
+ * Your header defining your copyright and your license
+ */</span>
+
+<span class="preprocessor">#ifndef</span> MYMODULE_TRAITS_H
+<span class="preprocessor">#define</span> MYMODULE_TRAITS_H
+
+<span class="preprocessor">#include</span> <span class="include">&quot;xpcf/core/traits.h&quot;</span>
+
+<span class="keyword">namespace</span> SolAR {
+<span class="keyword">namespace</span> MODULES {
+<span class="keyword">namespace</span> MYMODULE {
+
+<span class="keyword">class</span> <span class="class">MyComponent</span>; <i class="conum" data-value="1"></i><b>(1)</b>
+
+XPCF_DEFINE_COMPONENT_TRAITS(MyComponent, <i class="conum" data-value="2"></i><b>(2)</b>
+                             <span class="string"><span class="delimiter">&quot;</span><span class="content">MyComponent UUID</span><span class="delimiter">&quot;</span></span>, <i class="conum" data-value="3"></i><b>(3)</b>
+                             <span class="string"><span class="delimiter">&quot;</span><span class="content">MyComponent name</span><span class="delimiter">&quot;</span></span>, <i class="conum" data-value="4"></i><b>(4)</b>
+                             <span class="string"><span class="delimiter">&quot;</span><span class="content">MyComponent description</span><span class="delimiter">&quot;</span></span>); <i class="conum" data-value="5"></i><b>(5)</b>
+
+}
+}
+}
+<span class="preprocessor">#endif</span> <span class="comment">// MYMODULE_TRAITS_H</span></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td><span class="white">Declare the class of your component.</span></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td><span class="white">Provide the class corresponding to your component.</span></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td><span class="white">Replace <em>MyComponent UUID</em> by a Universally Unique IDentifier. To get one, you can use an <a href="https://www.uuidgenerator.net/">online UUID generator</a>.</span></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td><span class="white">Replace <em>MyModule name</em> by the name of your module.</span></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="5"></i><b>5</b></td>
+<td><span class="white">Please, provide a detailed description of your component that could be introspected by authoring tools.</span></td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>You have to add to this file as many component class declarations and traits as you have components in your module. Thanks to this trait file relative to a module, any user will just have to include it to instantiate any of its components.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="module_source_update"><a class="anchor" href="#module_source_update"></a><a class="link" href="#module_source_update">Module source update</a></h4>
+<div class="paragraph">
+<p>Then, you have to add you component to the module factory and declare it to XPCF in the <em>MyModule.cpp</em>:</p>
+</div>
+<div class="listingblock">
+<div class="title">MyModule.cpp</div>
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="cpp"><span class="comment">/**
+ * Your header defining your copyright and your license
+ */</span>
+
+<span class="preprocessor">#include</span> <span class="include">&quot;xpcf/module/ModuleFactory.h&quot;</span>
+<span class="preprocessor">#include</span> <span class="include">&quot;MyModule_traits.h&quot;</span>
+
+<span class="preprocessor">#include</span> <span class="include">&quot;MyComponent.h&quot;</span> <i class="conum" data-value="1"></i><b>(1)</b>
+<span class="preprocessor">#include</span> <span class="include">&quot;MyComponent1.h&quot;</span>
+<span class="preprocessor">#include</span> <span class="include">&quot;MyComponent2.h&quot;</span>
+
+<span class="keyword">namespace</span> xpcf=org::bcom::xpcf;
+
+XPCF_DECLARE_MODULE(<span class="string"><span class="delimiter">&quot;</span><span class="content">MyModule UUID</span><span class="delimiter">&quot;</span></span>, <span class="string"><span class="delimiter">&quot;</span><span class="content">MyModule</span><span class="delimiter">&quot;</span></span>, <span class="string"><span class="delimiter">&quot;</span><span class="content">MyModule description</span><span class="delimiter">&quot;</span></span>);
+
+<span class="directive">extern</span> <span class="string"><span class="delimiter">&quot;</span><span class="content">C</span><span class="delimiter">&quot;</span></span> XPCF_MODULEHOOKS_API xpcf::XPCFErrorCode XPCF_getComponent(<span class="directive">const</span> boost::uuids::uuid&amp; componentUUID,SRef&lt;xpcf::IComponentIntrospect&gt;&amp; interfaceRef)
+{
+    xpcf::XPCFErrorCode errCode = xpcf::XPCFErrorCode::_FAIL;
+
+    errCode = xpcf::tryCreateComponent&lt;SolAR::MODULES::MYMODULE::MyComponent&gt;(componentUUID,interfaceRef); <i class="conum" data-value="2"></i><b>(2)</b>
+    <span class="keyword">if</span> (errCode != xpcf::XPCFErrorCode::_SUCCESS)
+    {
+        errCode = xpcf::tryCreateComponent&lt;SolAR::MODULES::MYMODULE::MyComponent1&gt;(componentUUID,interfaceRef);
+    }
+    <span class="keyword">if</span> (errCode != xpcf::XPCFErrorCode::_SUCCESS)
+    {
+        errCode = xpcf::tryCreateComponent&lt;SolAR::MODULES::MYMODULE::MyComponent2&gt;(componentUUID,interfaceRef);
+    }
+    <span class="keyword">return</span> errCode;
+}<span class="directive">using</span>
+
+XPCF_BEGIN_COMPONENTS_DECLARATION
+XPCF_ADD_COMPONENT(SolAR::MODULES::MYMODULE::MyComponent) <i class="conum" data-value="3"></i><b>(3)</b>
+XPCF_ADD_COMPONENT(SolAR::MODULES::MYMODULE::MyComponent1)
+XPCF_ADD_COMPONENT(SolAR::MODULES::MYMODULE::MyComponent2)
+XPCF_END_COMPONENTS_DECLARATION</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td><span class="white">Include your component header.</span></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td><span class="white">Add a call to <em>xpcf_tryCreateComponent</em> to create your component when the module factory tries to instantiate it.</span></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td><span class="white">Add your component to XPCF.</span></td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="update_the_module_registry"><a class="anchor" href="#update_the_module_registry"></a><a class="link" href="#update_the_module_registry">Update the module registry</a></h4>
+<div class="paragraph">
+<p>Finally, edit the <em>xpcf_MyModule_registry.xml</em> that should be at the root folder of your module project. Add a decsription for each component you want to embed in your module as follows:</p>
+</div>
+<div class="listingblock">
+<div class="title">xpcf_MyModule_registry.xml</div>
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;xpcf-registry&gt;</span>
+<span class="tag">&lt;module</span> <span class="attribute-name">uuid</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">MyModule_UUID</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">MyModule_Name</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">description</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">MyModule_Description</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">path</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">$REMAKENROOT/MyModule/MyModule_version/lib/x86_64/shared</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+
+<span class="tag">&lt;component</span> <span class="attribute-name">uuid</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">MyComponent UUID</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">MyComponent name</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">description</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">MyComponent Description</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span> <i class="conum" data-value="1"></i><b>(1)</b>
+        <span class="tag">&lt;interface</span> <span class="attribute-name">uuid</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">125f2007-1bf9-421d-9367-fbdc1210d006</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">IComponentIntrospect</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">description</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">IComponentIntrospect</span><span class="delimiter">&quot;</span></span><span class="tag">/&gt;</span> <i class="conum" data-value="2"></i><b>(2)</b>
+        <span class="tag">&lt;interface</span> <span class="attribute-name">uuid</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">UUID of the Inherited SolAR Interface</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">name of the Inherited SolAR Interface</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">description</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">description of the Inherited SolAR Interface</span><span class="delimiter">&quot;</span></span><span class="tag">/&gt;</span> <i class="conum" data-value="3"></i><b>(3)</b>
+<span class="tag">&lt;/component&gt;</span>
+
+<span class="tag">&lt;/module&gt;</span>
+<span class="tag">&lt;/xpcf-registry&gt;</span></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td><span class="white">Copy and paste the component UUID, name and description defined in the file <em>MyModule_traits.h</em>.</span></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td><span class="white">Keep always this description to the inheritance to _IComponentIntrospect.</span></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td><span class="white">Add a description to all SolAR interfaces inherited by <em>MyComponent</em>. To get access to UUID of SolAR interfaces, please refer at the end of the header file of each interface, into the parameters of the MACRO <em>XPCF_DEFINE_INTERFACE_TRAITS</em>.</span></td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+              
+            </div>
+        </div>
+
+        <!-- build:js scripts/vendor.js -->
+        <!-- bower:js -->
+
+        <!-- endbower -->
+        <!-- endbuild -->
+
+    <!-- build:js({.tmp,src/main/webapp}) scripts/app.js -->
+    <script src="/js/vendor/modernizr.js"></script>
+    <!-- endbuild -->
+    <script type="text/javascript">
+      /* Fix padding-top on anchor with TOC */
+      window.addEventListener("hashchange", function() { scrollBy(0, -115) })
+    </script>
+    </body>
+</html>
