@@ -1,0 +1,6 @@
+var searchData=
+[
+  ['reindex',['reindex',['../class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_t_o_o_l_s_1_1_sol_a_r_keypoints_re_indexer.html#aec8749fef30101378ab761bd0783b072',1,'SolAR::MODULES::TOOLS::SolARKeypointsReIndexer::reindex()'],['../class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_t_o_o_l_s_1_1_sol_a_r_s_b_pattern_re_indexer.html#a1bebe36664c5f06bf698c2d24a9ca2df',1,'SolAR::MODULES::TOOLS::SolARSBPatternReIndexer::reindex()']]],
+  ['reloadimage',['reloadImage',['../class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_o_p_e_n_c_v_1_1_sol_a_r_image_loader_opencv.html#a7ddd2379d8b7008e0941a253bde89311',1,'SolAR::MODULES::OPENCV::SolARImageLoaderOpencv']]],
+  ['retrieve',['retrieve',['../class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_f_b_o_w_1_1_sol_a_r_keyframe_retriever_f_b_o_w.html#a7f3660b363de98d30ec1d11a1f6b44ba',1,'SolAR::MODULES::FBOW::SolARKeyframeRetrieverFBOW::retrieve(const SRef&lt; Frame &gt; frame, std::vector&lt; SRef&lt; Keyframe &gt;&gt; &amp;keyframes) override'],['../class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_f_b_o_w_1_1_sol_a_r_keyframe_retriever_f_b_o_w.html#ae5610d572983d4fd222bfccf63ca71a8',1,'SolAR::MODULES::FBOW::SolARKeyframeRetrieverFBOW::retrieve(const SRef&lt; Frame &gt; frame, std::set&lt; unsigned int &gt; &amp;idxKfCandidates, std::vector&lt; SRef&lt; Keyframe &gt;&gt; &amp;keyframes) override']]]
+];

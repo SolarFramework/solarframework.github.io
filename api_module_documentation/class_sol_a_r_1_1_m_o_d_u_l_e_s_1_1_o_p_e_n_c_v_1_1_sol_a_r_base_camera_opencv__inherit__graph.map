@@ -1,0 +1,5 @@
+<map id="SolAR::MODULES::OPENCV::SolARBaseCameraOpencv" name="SolAR::MODULES::OPENCV::SolARBaseCameraOpencv">
+<area shape="rect" id="node4" href="$class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_o_p_e_n_c_v_1_1_sol_a_r_camera_opencv.html" title="Grabs current image captured by a RGB camera. UUID: 5b7396f4&#45;a804&#45;4f3c&#45;a0eb&#45;fb1d56042bb4 ..." alt="" coords="455,5,649,47"/>
+<area shape="rect" id="node5" href="$class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_o_p_e_n_c_v_1_1_sol_a_r_images_as_camera_opencv.html" title="Loads an image sequence stored in a dedicated folder. UUID: b8a8b963&#45;ba55&#45;4ea4&#45;b045&#45;d9e7e8f6db02 ..." alt="" coords="437,71,667,112"/>
+<area shape="rect" id="node6" href="$class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_o_p_e_n_c_v_1_1_sol_a_r_video_as_camera_opencv.html" title="Grabs the images from a video file. UUID: fa4a780a&#45;9720&#45;11e8&#45;9eb6&#45;529269fb1459 " alt="" coords="443,136,661,177"/>
+</map>
