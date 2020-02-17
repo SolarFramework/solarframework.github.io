@@ -1,12 +1,10 @@
 var indexSectionsWithContent =
 {
   0: "acdefgilmprstu~",
-  1: "acfpst",
+  1: "fpst",
   2: "s",
   3: "acdefgilmprstu~",
-  4: "m",
-  5: "d",
-  6: "f"
+  4: "m"
 };
 
 var indexSectionNames =
@@ -15,9 +13,7 @@ var indexSectionNames =
   1: "classes",
   2: "namespaces",
   3: "functions",
-  4: "variables",
-  5: "enumvalues",
-  6: "groups"
+  4: "variables"
 };
 
 var indexSectionLabels =
@@ -26,8 +22,6 @@ var indexSectionLabels =
   1: "Classes",
   2: "Namespaces",
   3: "Functions",
-  4: "Variables",
-  5: "Enumerator",
-  6: "Modules"
+  4: "Variables"
 };
 
