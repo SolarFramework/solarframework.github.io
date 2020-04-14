@@ -128,16 +128,16 @@ Public Member Functions</h2></td></tr>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1source_1_1_i_source_image.html#ae3e51ecd069cf47b98fd6e517a669980">~ISourceImage</a> ()=default</td></tr>
 <tr class="memdesc:ae3e51ecd069cf47b98fd6e517a669980"><td class="mdescLeft">&#160;</td><td class="mdescRight">~ISourceImage <br /></td></tr>
 <tr class="separator:ae3e51ecd069cf47b98fd6e517a669980"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab56f9554a3c8ec5e0afa4b0a34925af2"><td class="memItemLeft" align="right" valign="top">virtual SourceReturnCode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1source_1_1_i_source_image.html#ab56f9554a3c8ec5e0afa4b0a34925af2">setInputTexture</a> (void *sourceTextureHandle, int with, int height)=0</td></tr>
-<tr class="memdesc:ab56f9554a3c8ec5e0afa4b0a34925af2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a new image without pose.  <a href="#ab56f9554a3c8ec5e0afa4b0a34925af2">More...</a><br /></td></tr>
-<tr class="separator:ab56f9554a3c8ec5e0afa4b0a34925af2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab718a5aaa4e0813ad0b6cc4756fa7afb"><td class="memItemLeft" align="right" valign="top">virtual SourceReturnCode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1source_1_1_i_source_image.html#ab718a5aaa4e0813ad0b6cc4756fa7afb">setInputTexture</a> (const void *sourceTexturehandle, const int width, const int height)=0</td></tr>
+<tr class="memdesc:ab718a5aaa4e0813ad0b6cc4756fa7afb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a new image coming from a third party.  <a href="#ab718a5aaa4e0813ad0b6cc4756fa7afb">More...</a><br /></td></tr>
+<tr class="separator:ab718a5aaa4e0813ad0b6cc4756fa7afb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab1c71ba15916116623303c57e6be4f41"><td class="memItemLeft" align="right" valign="top">virtual SourceReturnCode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1source_1_1_i_source_image.html#ab1c71ba15916116623303c57e6be4f41">getNextImage</a> (SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt; &amp;image)=0</td></tr>
-<tr class="memdesc:ab1c71ba15916116623303c57e6be4f41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provide an access to the new image and pose made available by t the pipeline. The implementation of this interface must be thread safe.  <a href="#ab1c71ba15916116623303c57e6be4f41">More...</a><br /></td></tr>
+<tr class="memdesc:ab1c71ba15916116623303c57e6be4f41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a pointer to the texture buffer to update it with the new image when required.  <a href="#ab1c71ba15916116623303c57e6be4f41">More...</a><br /></td></tr>
 <tr class="separator:ab1c71ba15916116623303c57e6be4f41"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><b>A Source for an image, useful for AR video see-through pipelines.</b> <code>UUID: 06e2fc5d-39da-4486-b2a6-1d8bd788fa13</code> </p>
-<p>This interface allows to store a synchronized pose and image from the pipeline to make it available to a third party application. </p>
+<p>This interface allows to link a texture buffer from a third party to our pipeline </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="ab1c71ba15916116623303c57e6be4f41"></a>
 <div class="memitem">
@@ -161,19 +161,18 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 </table>
 </div><div class="memdoc">
 
-<p>Provide an access to the new image and pose made available by t the pipeline. The implementation of this interface must be thread safe. </p>
+<p>Get a pointer to the texture buffer to update it with the new image when required. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">pose</td><td>the new pose made available by the pipeline. </td></tr>
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">image</td><td>The new image made available by the pipeline. </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">image</td><td></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>return FrameworkReturnCode::<em>SUCCESS if a new pose and image have been updated, otherwise frameworkReturnCode::_ERROR</em>. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>SourceReturnCode::<em>SUCCESS if a new pose and image have been updated, otherwise frameworkReturnCode::_ERROR</em> </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="ab56f9554a3c8ec5e0afa4b0a34925af2"></a>
+<a class="anchor" id="ab718a5aaa4e0813ad0b6cc4756fa7afb"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -183,19 +182,19 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
         <tr>
           <td class="memname">virtual SourceReturnCode SolAR::api::source::ISourceImage::setInputTexture </td>
           <td>(</td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>sourceTextureHandle</em>, </td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>sourceTexturehandle</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>with</em>, </td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype">const int&#160;</td>
           <td class="paramname"><em>height</em>&#160;</td>
         </tr>
         <tr>
@@ -211,13 +210,16 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 </table>
 </div><div class="memdoc">
 
-<p>Set a new image without pose. </p>
+<p>Set a new image coming from a third party. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">image</td><td>The new image , source of the pipeline. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">sourceTexturehandle.</td><td>Texture buffer from third party like Unity </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">width</td><td>of the image coming from the third party like Unity </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">height</td><td>of the image coming from the third party like Unity </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>SourceReturnCode::<em>SUCCESS if a new pose and image have been updated, otherwise frameworkReturnCode::_ERROR</em> </dd></dl>
 
 </div>
 </div>

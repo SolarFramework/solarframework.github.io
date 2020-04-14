@@ -134,9 +134,9 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <tr class="memitem:a4997e2bcc639e715d65996f613f52cdc"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1sink_1_1_i_sink_pose_texture_buffer.html#a4997e2bcc639e715d65996f613f52cdc">set</a> (const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt; &amp;image)=0</td></tr>
 <tr class="memdesc:a4997e2bcc639e715d65996f613f52cdc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a new image without pose.  <a href="#a4997e2bcc639e715d65996f613f52cdc">More...</a><br /></td></tr>
 <tr class="separator:a4997e2bcc639e715d65996f613f52cdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ada25c96b7f016d612ac7bf8c72586981"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1sink_1_1_i_sink_pose_texture_buffer.html#ada25c96b7f016d612ac7bf8c72586981">setTextureBuffer</a> (const void *textureBufferPointer)=0</td></tr>
-<tr class="memdesc:ada25c96b7f016d612ac7bf8c72586981"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a pointer to the texture buffer to update it with the new image when required.  <a href="#ada25c96b7f016d612ac7bf8c72586981">More...</a><br /></td></tr>
-<tr class="separator:ada25c96b7f016d612ac7bf8c72586981"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a575b36ba36388591b5d93d4418868762"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1sink_1_1_i_sink_pose_texture_buffer.html#a575b36ba36388591b5d93d4418868762">setTextureBuffer</a> (void *textureBufferPointer)=0</td></tr>
+<tr class="memdesc:a575b36ba36388591b5d93d4418868762"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a pointer to the texture buffer to update it with the new image when required.  <a href="#a575b36ba36388591b5d93d4418868762">More...</a><br /></td></tr>
+<tr class="separator:a575b36ba36388591b5d93d4418868762"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a41a3f216b4f346a3f70008f07403ae93"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a41a3f216b4f346a3f70008f07403ae93"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>updateFrameDataOGL</b> (int enventID)=0</td></tr>
 <tr class="separator:a41a3f216b4f346a3f70008f07403ae93"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -187,7 +187,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>updateFrameDa
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">pose</td><td>The new pose to be made available to a third party application. </td></tr>
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">image</td><td>The new image to update a buffer texture when required. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">image</td><td>The new image to update a buffer texture when required. </td></tr>
   </table>
   </dd>
 </dl>
@@ -219,14 +219,14 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>updateFrameDa
 <p>Set a new image without pose. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">image</td><td>The new image to update a buffer texture when required. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">image</td><td>The new image to update a buffer texture when required. </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a class="anchor" id="ada25c96b7f016d612ac7bf8c72586981"></a>
+<a class="anchor" id="a575b36ba36388591b5d93d4418868762"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -236,7 +236,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>updateFrameDa
         <tr>
           <td class="memname">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a> SolAR::api::sink::ISinkPoseTextureBuffer::setTextureBuffer </td>
           <td>(</td>
-          <td class="paramtype">const void *&#160;</td>
+          <td class="paramtype">void *&#160;</td>
           <td class="paramname"><em>textureBufferPointer</em></td><td>)</td>
           <td></td>
         </tr>
@@ -249,6 +249,12 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>updateFrameDa
 </div><div class="memdoc">
 
 <p>Set a pointer to the texture buffer to update it with the new image when required. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">textureBufferPointer</td><td>the pointer on texture buffer </td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section return"><dt>Returns</dt><dd>FrameworkReturnCode::<em>SUCCESS</em> if the texture buffer pointer is well set. </dd></dl>
 
 </div>
@@ -278,7 +284,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>updateFrameDa
 <p>Provide an access to the new pose and update the texture buffer with the new image only if the image and the pose have been updated by the pipeline. The implementation of this interface must be thread safe. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">pose</td><td>the new pose made available by the pipeline. </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">pose</td><td>the new pose made available by the pipeline. </td></tr>
   </table>
   </dd>
 </dl>

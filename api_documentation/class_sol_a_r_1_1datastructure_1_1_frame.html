@@ -125,12 +125,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a6c48c53e043ccf8b7bc1bac87f4177d8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6c48c53e043ccf8b7bc1bac87f4177d8"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>Frame</b> (const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keyframe.html">Keyframe</a> &gt; keyframe)</td></tr>
 <tr class="separator:a6c48c53e043ccf8b7bc1bac87f4177d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae5cae7a14eed325754aa6804b8fc7607"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae5cae7a14eed325754aa6804b8fc7607"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Frame</b> (const std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html">Keypoint</a> &gt;&gt; keypoints, const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_buffer.html">DescriptorBuffer</a> &gt; descriptors, const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt; view, const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keyframe.html">Keyframe</a> &gt; refKeyframe, const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a> pose=Transform3Df::Identity())</td></tr>
-<tr class="separator:ae5cae7a14eed325754aa6804b8fc7607"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe035b60c54f5b784ffc43ad402c4296"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abe035b60c54f5b784ffc43ad402c4296"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Frame</b> (const std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html">Keypoint</a> &gt;&gt; keypoints, const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_buffer.html">DescriptorBuffer</a> &gt; descriptors, const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt; view, const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a> pose=Transform3Df::Identity())</td></tr>
-<tr class="separator:abe035b60c54f5b784ffc43ad402c4296"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a093cbf0e5b4c65763d7ae42583297a27"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a093cbf0e5b4c65763d7ae42583297a27"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Frame</b> (const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html">Keypoint</a> &gt; &amp;keypoints, const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_buffer.html">DescriptorBuffer</a> &gt; descriptors, const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt; view, const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keyframe.html">Keyframe</a> &gt; refKeyframe, const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a> pose=Transform3Df::Identity())</td></tr>
+<tr class="separator:a093cbf0e5b4c65763d7ae42583297a27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8083a21fc0db738dd8e9e3f01c89a69"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad8083a21fc0db738dd8e9e3f01c89a69"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Frame</b> (const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html">Keypoint</a> &gt; &amp;keypoints, const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_buffer.html">DescriptorBuffer</a> &gt; descriptors, const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt; view, const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a> pose=Transform3Df::Identity())</td></tr>
+<tr class="separator:ad8083a21fc0db738dd8e9e3f01c89a69"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae86cee50c5f1957e8e96493a6cd28bdc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae86cee50c5f1957e8e96493a6cd28bdc"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1datastructure_1_1_frame.html#ae86cee50c5f1957e8e96493a6cd28bdc">~Frame</a> ()=default</td></tr>
 <tr class="memdesc:ae86cee50c5f1957e8e96493a6cd28bdc"><td class="mdescLeft">&#160;</td><td class="mdescRight">~Frame <br /></td></tr>
@@ -141,30 +141,39 @@ SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Imag
 <tr class="memitem:a1afba126cb9a17652e9fff43153cac10"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1afba126cb9a17652e9fff43153cac10"></a>
 <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getPose</b> ()</td></tr>
 <tr class="separator:a1afba126cb9a17652e9fff43153cac10"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaaf9bfeb5354ee0504b97350651707ad"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaaf9bfeb5354ee0504b97350651707ad"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setPose</b> (<a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a> &amp;pose)</td></tr>
-<tr class="separator:aaaf9bfeb5354ee0504b97350651707ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac0a5bf6e7fa072d060cb8e924f8152ec"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac0a5bf6e7fa072d060cb8e924f8152ec"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setKeypoints</b> (std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html">Keypoint</a> &gt;&gt; &amp;kpts)</td></tr>
-<tr class="separator:ac0a5bf6e7fa072d060cb8e924f8152ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0fd969a00c78be3e1c61d2512b115d0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad0fd969a00c78be3e1c61d2512b115d0"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setPose</b> (const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a> &amp;pose)</td></tr>
+<tr class="separator:ad0fd969a00c78be3e1c61d2512b115d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ccf4c84c2f7f3bab7f3d94e53cc0597"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1ccf4c84c2f7f3bab7f3d94e53cc0597"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setKeypoints</b> (const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html">Keypoint</a> &gt; &amp;kpts)</td></tr>
+<tr class="separator:a1ccf4c84c2f7f3bab7f3d94e53cc0597"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a949ea18e22afa854b685d72132f5db52"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a949ea18e22afa854b685d72132f5db52"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setReferenceKeyframe</b> (SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keyframe.html">Keyframe</a> &gt; keyframe)</td></tr>
 <tr class="separator:a949ea18e22afa854b685d72132f5db52"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afdd94459b9242fbe51f811263162eee2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afdd94459b9242fbe51f811263162eee2"></a>
 SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keyframe.html">Keyframe</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getReferenceKeyframe</b> ()</td></tr>
 <tr class="separator:afdd94459b9242fbe51f811263162eee2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae3250ee9382063907a6de117f5c6e3e1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae3250ee9382063907a6de117f5c6e3e1"></a>
-SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_buffer.html">DescriptorBuffer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getDescriptors</b> () const </td></tr>
-<tr class="separator:ae3250ee9382063907a6de117f5c6e3e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab1c13a9c3aba313d11cea895f0f717de"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab1c13a9c3aba313d11cea895f0f717de"></a>
-std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html">Keypoint</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getKeypoints</b> () const </td></tr>
-<tr class="separator:ab1c13a9c3aba313d11cea895f0f717de"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5fac4998dc35e1d353791bb1dd5bb809"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5fac4998dc35e1d353791bb1dd5bb809"></a>
-std::map&lt; unsigned int, unsigned int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getVisibleKeypoints</b> ()</td></tr>
-<tr class="separator:a5fac4998dc35e1d353791bb1dd5bb809"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab39cb26f98cbfabf7798cb2ae90c1ffe"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab39cb26f98cbfabf7798cb2ae90c1ffe"></a>
+SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_buffer.html">DescriptorBuffer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getDescriptors</b> ()</td></tr>
+<tr class="separator:ab39cb26f98cbfabf7798cb2ae90c1ffe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4534cef95a3e093177d6d06669c1e3d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae4534cef95a3e093177d6d06669c1e3d"></a>
+const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html">Keypoint</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getKeypoints</b> ()</td></tr>
+<tr class="separator:ae4534cef95a3e093177d6d06669c1e3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a239afa53ef28e33a2cf084ca3665d50a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a239afa53ef28e33a2cf084ca3665d50a"></a>
+const std::map&lt; unsigned int, unsigned int &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getVisibleKeypoints</b> ()</td></tr>
+<tr class="separator:a239afa53ef28e33a2cf084ca3665d50a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d71ac39935094611994ae7634356347"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3d71ac39935094611994ae7634356347"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>addVisibleKeypoints</b> (const std::map&lt; unsigned int, unsigned int &gt; &amp;kpVisibility)</td></tr>
 <tr class="separator:a3d71ac39935094611994ae7634356347"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0c70cfe64b2a73de415dd6181df782e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad0c70cfe64b2a73de415dd6181df782e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>addVisibleMapPoints</b> (const std::map&lt; unsigned int, unsigned int &gt; &amp;mapPoints)</td></tr>
+<tr class="separator:ad0c70cfe64b2a73de415dd6181df782e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a403295859bc22121c545e6dc99bf4c53"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a403295859bc22121c545e6dc99bf4c53"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>addVisibleMapPoint</b> (unsigned int id_keypoint, unsigned int id_cloudPoint)</td></tr>
+<tr class="separator:a403295859bc22121c545e6dc99bf4c53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a096fcbdbc684b92a1829945dd3ad1fa9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a096fcbdbc684b92a1829945dd3ad1fa9"></a>
+const std::map&lt; unsigned int, unsigned int &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getVisibleMapPoints</b> ()</td></tr>
+<tr class="separator:a096fcbdbc684b92a1829945dd3ad1fa9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -181,12 +190,32 @@ SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keyframe.html">K
 <tr class="memitem:af890bae30fe63433d0a04a79aea1d9d9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af890bae30fe63433d0a04a79aea1d9d9"></a>
 SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_buffer.html">DescriptorBuffer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_descriptors</b></td></tr>
 <tr class="separator:af890bae30fe63433d0a04a79aea1d9d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acb407ff8f8571d5f3227feae414f03a5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acb407ff8f8571d5f3227feae414f03a5"></a>
-std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html">Keypoint</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_keypoints</b></td></tr>
-<tr class="separator:acb407ff8f8571d5f3227feae414f03a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad098a6d84d207215f26883534875e5c9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad098a6d84d207215f26883534875e5c9"></a>
+std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html">Keypoint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_keypoints</b></td></tr>
+<tr class="separator:ad098a6d84d207215f26883534875e5c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0580345694d75404777a679cba2edd2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa0580345694d75404777a679cba2edd2"></a>
+std::map&lt; unsigned int, unsigned int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1datastructure_1_1_frame.html#aa0580345694d75404777a679cba2edd2">m_mapVisibility</a></td></tr>
+<tr class="memdesc:aa0580345694d75404777a679cba2edd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">: A map storing the 3D points visibility, where the first element corresponds to the index of the keypoint of the frame, and the second element to the index of the corresponding cloudPoint. <br /></td></tr>
+<tr class="separator:aa0580345694d75404777a679cba2edd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad67a7b69d3984f58104d0c399dde6d00"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad67a7b69d3984f58104d0c399dde6d00"></a>
-std::map&lt; unsigned int, unsigned int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_kpVisibility</b></td></tr>
+std::map&lt; unsigned int, unsigned int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1datastructure_1_1_frame.html#ad67a7b69d3984f58104d0c399dde6d00">m_kpVisibility</a></td></tr>
+<tr class="memdesc:ad67a7b69d3984f58104d0c399dde6d00"><td class="mdescLeft">&#160;</td><td class="mdescRight">: A map storing the 3D points visibility, where the first element corresponds to the index of the keypoint of the frame, and the second element to the index of the keypoint of the reference keyframe. <br /></td></tr>
 <tr class="separator:ad67a7b69d3984f58104d0c399dde6d00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0c64e1d3a238d56dbf81e41668653b2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab0c64e1d3a238d56dbf81e41668653b2"></a>
+std::mutex&#160;</td><td class="memItemRight" valign="bottom"><b>m_mutexPose</b></td></tr>
+<tr class="separator:ab0c64e1d3a238d56dbf81e41668653b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5617fb1a7465b48a4fb9a34a675ab604"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5617fb1a7465b48a4fb9a34a675ab604"></a>
+std::mutex&#160;</td><td class="memItemRight" valign="bottom"><b>m_mutexKeypoint</b></td></tr>
+<tr class="separator:a5617fb1a7465b48a4fb9a34a675ab604"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cfcceb748168e48cd6d0a75e3926453"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5cfcceb748168e48cd6d0a75e3926453"></a>
+std::mutex&#160;</td><td class="memItemRight" valign="bottom"><b>m_mutexReferenceKeyframe</b></td></tr>
+<tr class="separator:a5cfcceb748168e48cd6d0a75e3926453"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b34a68d3d321e2c616f778440d45e8b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2b34a68d3d321e2c616f778440d45e8b"></a>
+std::mutex&#160;</td><td class="memItemRight" valign="bottom"><b>m_mutexVisibleKeypoint</b></td></tr>
+<tr class="separator:a2b34a68d3d321e2c616f778440d45e8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3af8409b9b5e3be81b0c0d553959d8d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa3af8409b9b5e3be81b0c0d553959d8d"></a>
+std::mutex&#160;</td><td class="memItemRight" valign="bottom"><b>m_mutexVisibleMapPoint</b></td></tr>
+<tr class="separator:aa3af8409b9b5e3be81b0c0d553959d8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><b>A frame.</b> </p>

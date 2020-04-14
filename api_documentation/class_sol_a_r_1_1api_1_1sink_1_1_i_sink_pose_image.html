@@ -173,8 +173,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <p>Provide an access to the new image and pose made available by t the pipeline. The implementation of this interface must be thread safe. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">pose</td><td>the new pose made available by the pipeline. </td></tr>
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">image</td><td>The new image made available by the pipeline. </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">pose</td><td>the new pose made available by the pipeline. </td></tr>
   </table>
   </dd>
 </dl>
@@ -218,7 +217,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">pose</td><td>The new pose to be made available to a third party application. </td></tr>
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">image</td><td>The new image to be made available to a third party application. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">image</td><td>The new image to be made available to a third party application. </td></tr>
   </table>
   </dd>
 </dl>
@@ -250,7 +249,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <p>Set a new image without pose. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">image</td><td>The new image to update a buffer texture when required. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">image</td><td>The new image to update a buffer texture when required. </td></tr>
   </table>
   </dd>
 </dl>
@@ -280,6 +279,12 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 </div><div class="memdoc">
 
 <p>Set a pointer to the texture buffer to update it with the new image when required. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">imageBuffer</td><td>the texture buffer uses to contain the new image </td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section return"><dt>Returns</dt><dd>FrameworkReturnCode::<em>SUCCESS</em> if the texture buffer pointer is well set. </dd></dl>
 
 </div>
@@ -309,8 +314,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <p>Provide an access to the new image and pose made available by the pipeline only if they have been updated by the pipeline. The implementation of this interface must be thread safe. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">pose</td><td>the new pose made available by the pipeline. </td></tr>
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">image</td><td>The new image made available by the pipeline. </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">pose</td><td>the new pose made available by the pipeline. </td></tr>
   </table>
   </dd>
 </dl>

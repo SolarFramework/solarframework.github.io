@@ -96,6 +96,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="class_sol_a_r_1_1api_1_1features_1_1_i_descriptors_extractor-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -122,6 +123,26 @@ Collaboration diagram for SolAR::api::features::IDescriptorsExtractor:</div>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a4d291c1e27fe4b70f7cb05a0ce33f7c1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4d291c1e27fe4b70f7cb05a0ce33f7c1"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1features_1_1_i_descriptors_extractor.html#a4d291c1e27fe4b70f7cb05a0ce33f7c1">DescriptorsExtractorType</a> { <br />
+&#160;&#160;<b>UNKNOWN_TYPE</b> =-1, 
+<b>SURF</b>, 
+<b>ORB</b>, 
+<b>SIFT</b>, 
+<br />
+&#160;&#160;<b>DAISY</b>, 
+<b>LATCH</b>, 
+<b>AKAZE</b>, 
+<b>AKAZEUP</b>, 
+<br />
+&#160;&#160;<b>BRISK</b>, 
+<b>BRIEF</b>
+<br />
+ }<tr class="memdesc:a4d291c1e27fe4b70f7cb05a0ce33f7c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">The DescriptorsExtractorType enum. <br /></td></tr>
+</td></tr>
+<tr class="separator:a4d291c1e27fe4b70f7cb05a0ce33f7c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a88c85ad27b8a8395c6895c7106d3bf43"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a88c85ad27b8a8395c6895c7106d3bf43"></a>
@@ -135,15 +156,15 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <tr class="memitem:a6d913ea7f87b3d83bd44a88a0aaa6ba1"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1features_1_1_i_descriptors_extractor.html#a6d913ea7f87b3d83bd44a88a0aaa6ba1">getTypeString</a> ()=0</td></tr>
 <tr class="memdesc:a6d913ea7f87b3d83bd44a88a0aaa6ba1"><td class="mdescLeft">&#160;</td><td class="mdescRight">getType  <a href="#a6d913ea7f87b3d83bd44a88a0aaa6ba1">More...</a><br /></td></tr>
 <tr class="separator:a6d913ea7f87b3d83bd44a88a0aaa6ba1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a41687099807ba099e773c9da144110e5"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1features_1_1_i_descriptors_extractor.html#a41687099807ba099e773c9da144110e5">extract</a> (const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt; image, const std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html">Keypoint</a> &gt; &gt; &amp;keypoints, SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_buffer.html">DescriptorBuffer</a> &gt; &amp;descriptors)=0</td></tr>
-<tr class="memdesc:a41687099807ba099e773c9da144110e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">extract the descriptors for a set of keypoints  <a href="#a41687099807ba099e773c9da144110e5">More...</a><br /></td></tr>
-<tr class="separator:a41687099807ba099e773c9da144110e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af69486cca67fe28926d74e0acb90499e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1features_1_1_i_descriptors_extractor.html#af69486cca67fe28926d74e0acb90499e">extract</a> (const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt; image, const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html">Keypoint</a> &gt; &amp;keypoints, SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_buffer.html">DescriptorBuffer</a> &gt; &amp;descriptors)=0</td></tr>
+<tr class="memdesc:af69486cca67fe28926d74e0acb90499e"><td class="mdescLeft">&#160;</td><td class="mdescRight">extract the descriptors for a set of keypoints  <a href="#af69486cca67fe28926d74e0acb90499e">More...</a><br /></td></tr>
+<tr class="separator:af69486cca67fe28926d74e0acb90499e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><b>Extracts descriptors from a set of keypoints.</b> <code>UUID: c0e49ff1-0696-4fe6-85a8-9b2c1e155d2e</code> </p>
 <p>This class provides a method to extract descriptors from a set of keypoints </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a41687099807ba099e773c9da144110e5"></a>
+<a class="anchor" id="af69486cca67fe28926d74e0acb90499e"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -159,7 +180,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html">Keypoint</a> &gt; &gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html">Keypoint</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>keypoints</em>, </td>
         </tr>
         <tr>

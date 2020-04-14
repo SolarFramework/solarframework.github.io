@@ -103,7 +103,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p><b>Filters a map of 3D points.</b> <code>UUID: e0d6cc82-6af2-493d-901a-2384fca0b16f</code>  
+<p><b>Filters a map of 3D points.</b> <code>UUID: 68dc9152-5199-11ea-8d77-2e728ce88125</code>  
  <a href="class_sol_a_r_1_1api_1_1solver_1_1map_1_1_i_map_filter.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_i_map_filter_8h_source.html">IMapFilter.h</a>&gt;</code></p>
@@ -126,16 +126,19 @@ Collaboration diagram for SolAR::api::solver::map::IMapFilter:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:acdafb0c323d25471d94e6233d63b3831"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acdafb0c323d25471d94e6233d63b3831"></a>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1map_1_1_i_map_filter.html#acdafb0c323d25471d94e6233d63b3831">~IMapFilter</a> ()</td></tr>
-<tr class="memdesc:acdafb0c323d25471d94e6233d63b3831"><td class="mdescLeft">&#160;</td><td class="mdescRight">~IMapper <br /></td></tr>
+<tr class="memdesc:acdafb0c323d25471d94e6233d63b3831"><td class="mdescLeft">&#160;</td><td class="mdescRight">~IMapFilter <br /></td></tr>
 <tr class="separator:acdafb0c323d25471d94e6233d63b3831"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3cbf39262de1a6614a82fe29ced32fff"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1map_1_1_i_map_filter.html#a3cbf39262de1a6614a82fe29ced32fff">filter</a> (const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a> pose1, const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a> pose2, const std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">CloudPoint</a> &gt;&gt; &amp;input, std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">CloudPoint</a> &gt;&gt; &amp;output)=0</td></tr>
-<tr class="memdesc:a3cbf39262de1a6614a82fe29ced32fff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Filter point cloud reconstructed from 2 viewpoints.  <a href="#a3cbf39262de1a6614a82fe29ced32fff">More...</a><br /></td></tr>
-<tr class="separator:a3cbf39262de1a6614a82fe29ced32fff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1571d2f7b7cc8b5207aebd63fc0bf531"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1map_1_1_i_map_filter.html#a1571d2f7b7cc8b5207aebd63fc0bf531">filter</a> (const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a> &amp;pose1, const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a> &amp;pose2, const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">CloudPoint</a> &gt; &amp;input, std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">CloudPoint</a> &gt; &amp;output)=0</td></tr>
+<tr class="memdesc:a1571d2f7b7cc8b5207aebd63fc0bf531"><td class="mdescLeft">&#160;</td><td class="mdescRight">Filter point cloud reconstructed from 2 viewpoints.  <a href="#a1571d2f7b7cc8b5207aebd63fc0bf531">More...</a><br /></td></tr>
+<tr class="separator:a1571d2f7b7cc8b5207aebd63fc0bf531"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15421cccca5134ecd99d9da9e2ce9a88"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1map_1_1_i_map_filter.html#a15421cccca5134ecd99d9da9e2ce9a88">filter</a> (const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a> &amp;pose1, const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a> &amp;pose2, const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">CloudPoint</a> &gt; &amp;input, std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">CloudPoint</a> &gt; &amp;output, std::vector&lt; int &gt; &amp;index)=0</td></tr>
+<tr class="memdesc:a15421cccca5134ecd99d9da9e2ce9a88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Filter point cloud reconstructed from 2 viewpoints.  <a href="#a15421cccca5134ecd99d9da9e2ce9a88">More...</a><br /></td></tr>
+<tr class="separator:a15421cccca5134ecd99d9da9e2ce9a88"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><b>Filters a map of 3D points.</b> <code>UUID: e0d6cc82-6af2-493d-901a-2384fca0b16f</code> </p>
+<div class="textblock"><p><b>Filters a map of 3D points.</b> <code>UUID: 68dc9152-5199-11ea-8d77-2e728ce88125</code> </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a3cbf39262de1a6614a82fe29ced32fff"></a>
+<a class="anchor" id="a1571d2f7b7cc8b5207aebd63fc0bf531"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -145,25 +148,25 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
         <tr>
           <td class="memname">virtual void SolAR::api::solver::map::IMapFilter::filter </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a> &amp;&#160;</td>
           <td class="paramname"><em>pose1</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a> &amp;&#160;</td>
           <td class="paramname"><em>pose2</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">CloudPoint</a> &gt;&gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">CloudPoint</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>input</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">CloudPoint</a> &gt;&gt; &amp;&#160;</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">CloudPoint</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>output</em>&#160;</td>
         </tr>
         <tr>
@@ -186,6 +189,70 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
     <tr><td class="paramdir">[in]</td><td class="paramname">pose2</td><td>the second pose used for building the point cloud. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">input</td><td>The set of points to filter </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">output</td><td>the filtered point cloud </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a15421cccca5134ecd99d9da9e2ce9a88"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void SolAR::api::solver::map::IMapFilter::filter </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a> &amp;&#160;</td>
+          <td class="paramname"><em>pose1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a> &amp;&#160;</td>
+          <td class="paramname"><em>pose2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">CloudPoint</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>input</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">CloudPoint</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>output</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Filter point cloud reconstructed from 2 viewpoints. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pose1</td><td>the first pose used for building the point cloud. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pose2</td><td>the second pose used for building the point cloud. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">input</td><td>The set of points to filter </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">output</td><td>the filtered point cloud </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">index</td><td>the index of filtered point cloud </td></tr>
   </table>
   </dd>
 </dl>

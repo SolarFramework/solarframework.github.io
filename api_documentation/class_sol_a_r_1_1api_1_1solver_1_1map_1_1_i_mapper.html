@@ -128,20 +128,98 @@ Public Member Functions</h2></td></tr>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1map_1_1_i_mapper.html#acf0c6e21b8fb4d8f36adb7b8a99a36ca">~IMapper</a> ()</td></tr>
 <tr class="memdesc:acf0c6e21b8fb4d8f36adb7b8a99a36ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">~IMapper <br /></td></tr>
 <tr class="separator:acf0c6e21b8fb4d8f36adb7b8a99a36ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6cc4de7ee463c94c3232b684aeda5d33"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1map_1_1_i_mapper.html#a6cc4de7ee463c94c3232b684aeda5d33">update</a> (SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_map.html">Map</a> &gt; &amp;map, SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keyframe.html">Keyframe</a> &gt; newKeyframe, const std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">CloudPoint</a> &gt;&gt; &amp;newCloud={}, const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_match.html">DescriptorMatch</a> &gt; &amp;newPointsMatches={}, const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_match.html">DescriptorMatch</a> &gt; &amp;existingPointsMatches={})=0</td></tr>
-<tr class="memdesc:a6cc4de7ee463c94c3232b684aeda5d33"><td class="mdescLeft">&#160;</td><td class="mdescRight">update the current map with the new triangulated map points at the insertion of a new keyframe. minArg(pts3ds,intrinsics,extrinsics) = MIN_cam_i(MIN_3d_j(pts2d_j - reproje(pt3ds_j,intrinsics_i,extrinsics_i)),  <a href="#a6cc4de7ee463c94c3232b684aeda5d33">More...</a><br /></td></tr>
-<tr class="separator:a6cc4de7ee463c94c3232b684aeda5d33"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaf3a21abd8edf311c844664a37089d5f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaf3a21abd8edf311c844664a37089d5f"></a>
-virtual std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keyframe.html">Keyframe</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getKeyframes</b> ()=0</td></tr>
-<tr class="separator:aaf3a21abd8edf311c844664a37089d5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9365a4bb27ca0c30e63e9f4e6b166275"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9365a4bb27ca0c30e63e9f4e6b166275"></a>
-virtual SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_map.html">Map</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getMap</b> ()=0</td></tr>
-<tr class="separator:a9365a4bb27ca0c30e63e9f4e6b166275"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17ec7546afe0e6bfa61fe0f4f3b66da2"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1map_1_1_i_mapper.html#a17ec7546afe0e6bfa61fe0f4f3b66da2">update</a> (SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_map.html">Map</a> &gt; &amp;map, SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keyframe.html">Keyframe</a> &gt; &amp;newKeyframe, const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">CloudPoint</a> &gt; &amp;newCloud, const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_match.html">DescriptorMatch</a> &gt; &amp;newPointsMatches, const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_match.html">DescriptorMatch</a> &gt; &amp;existingPointsMatches)=0</td></tr>
+<tr class="memdesc:a17ec7546afe0e6bfa61fe0f4f3b66da2"><td class="mdescLeft">&#160;</td><td class="mdescRight">update the current map with the new triangulated map points at the insertion of a new keyframe. minArg(pts3ds,intrinsics,extrinsics) = MIN_cam_i(MIN_3d_j(pts2d_j - reproje(pt3ds_j,intrinsics_i,extrinsics_i)),  <a href="#a17ec7546afe0e6bfa61fe0f4f3b66da2">More...</a><br /></td></tr>
+<tr class="separator:a17ec7546afe0e6bfa61fe0f4f3b66da2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adae8309e8f125b3eaab494d1733c087d"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1map_1_1_i_mapper.html#adae8309e8f125b3eaab494d1733c087d">update</a> (SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_map.html">Map</a> &gt; &amp;map, SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keyframe.html">Keyframe</a> &gt; &amp;newKeyframe, const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">CloudPoint</a> &gt; &amp;newCloud, const std::vector&lt; std::tuple&lt; unsigned int, int, unsigned int &gt;&gt; &amp;newPointMatches)=0</td></tr>
+<tr class="memdesc:adae8309e8f125b3eaab494d1733c087d"><td class="mdescLeft">&#160;</td><td class="mdescRight">update the current map with the new triangulated map points at the insertion of a new keyframe. minArg(pts3ds,intrinsics,extrinsics) = MIN_cam_i(MIN_3d_j(pts2d_j - reproje(pt3ds_j,intrinsics_i,extrinsics_i)),  <a href="#adae8309e8f125b3eaab494d1733c087d">More...</a><br /></td></tr>
+<tr class="separator:adae8309e8f125b3eaab494d1733c087d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e786140ed1093586b13f38a1d2eb3e7"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1map_1_1_i_mapper.html#a3e786140ed1093586b13f38a1d2eb3e7">update</a> (const std::vector&lt; <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a> &gt; &amp;correctedPoses, const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">CloudPoint</a> &gt; &amp;correctedMap)=0</td></tr>
+<tr class="memdesc:a3e786140ed1093586b13f38a1d2eb3e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">update the current map/keyframes(poses)with corrected map/keyframes(poses).  <a href="#a3e786140ed1093586b13f38a1d2eb3e7">More...</a><br /></td></tr>
+<tr class="separator:a3e786140ed1093586b13f38a1d2eb3e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac99cb8635aa4b6b5805b6511769cf367"><td class="memItemLeft" align="right" valign="top">virtual const std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keyframe.html">Keyframe</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1map_1_1_i_mapper.html#ac99cb8635aa4b6b5805b6511769cf367">getKeyframes</a> ()=0</td></tr>
+<tr class="memdesc:ac99cb8635aa4b6b5805b6511769cf367"><td class="mdescLeft">&#160;</td><td class="mdescRight">return all the keyframes of the map.  <a href="#ac99cb8635aa4b6b5805b6511769cf367">More...</a><br /></td></tr>
+<tr class="separator:ac99cb8635aa4b6b5805b6511769cf367"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa25c13ce3267b878656837c9360238b3"><td class="memItemLeft" align="right" valign="top">virtual SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keyframe.html">Keyframe</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1map_1_1_i_mapper.html#aa25c13ce3267b878656837c9360238b3">getKeyframe</a> (int index)=0</td></tr>
+<tr class="memdesc:aa25c13ce3267b878656837c9360238b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">return a keyframe  <a href="#aa25c13ce3267b878656837c9360238b3">More...</a><br /></td></tr>
+<tr class="separator:aa25c13ce3267b878656837c9360238b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf5ad6a0ee5a68d73e25df4e6d4c371a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abf5ad6a0ee5a68d73e25df4e6d4c371a"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1map_1_1_i_mapper.html#abf5ad6a0ee5a68d73e25df4e6d4c371a">getLocalMap</a> (SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keyframe.html">Keyframe</a> &gt; refKF, std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">CloudPoint</a> &gt; &amp;localCloudPoints)=0</td></tr>
+<tr class="memdesc:abf5ad6a0ee5a68d73e25df4e6d4c371a"><td class="mdescLeft">&#160;</td><td class="mdescRight">get local map from reference keyframe and its neighbors <br /></td></tr>
+<tr class="separator:abf5ad6a0ee5a68d73e25df4e6d4c371a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25e85249332267b9c13f8d0e1fd1695f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a25e85249332267b9c13f8d0e1fd1695f"></a>
+virtual SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_map.html">Map</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getGlobalMap</b> ()=0</td></tr>
+<tr class="separator:a25e85249332267b9c13f8d0e1fd1695f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a704c100c2046fd2d7ae45bf0ea0412"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6a704c100c2046fd2d7ae45bf0ea0412"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1map_1_1_i_mapper.html#a6a704c100c2046fd2d7ae45bf0ea0412">getLocalMapIndex</a> (SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keyframe.html">Keyframe</a> &gt; refKF, std::vector&lt; unsigned int &gt; &amp;idxLocalCloudPoints)=0</td></tr>
+<tr class="memdesc:a6a704c100c2046fd2d7ae45bf0ea0412"><td class="mdescLeft">&#160;</td><td class="mdescRight">get index of cloud point in local map from reference keyframe and its neighbors <br /></td></tr>
+<tr class="separator:a6a704c100c2046fd2d7ae45bf0ea0412"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c433ef82495a5fcee61d116459c491b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1map_1_1_i_mapper.html#a2c433ef82495a5fcee61d116459c491b">updateNeighborConnections</a> (SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keyframe.html">Keyframe</a> &gt; &amp;newKeyframe, int minDis)=0</td></tr>
+<tr class="memdesc:a2c433ef82495a5fcee61d116459c491b"><td class="mdescLeft">&#160;</td><td class="mdescRight">update connections between new keyframe and neighboring keyframes.  <a href="#a2c433ef82495a5fcee61d116459c491b">More...</a><br /></td></tr>
+<tr class="separator:a2c433ef82495a5fcee61d116459c491b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><b>Updates a point map with new triangulated 3D points.</b> <code>UUID: 90075c1b-915b-469d-b92d-41c5d575bf15</code> </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a6cc4de7ee463c94c3232b684aeda5d33"></a>
+<a class="anchor" id="aa25c13ce3267b878656837c9360238b3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual SRef&lt;<a class="el" href="class_sol_a_r_1_1datastructure_1_1_keyframe.html">Keyframe</a>&gt;&amp; SolAR::api::solver::map::IMapper::getKeyframe </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>return a keyframe </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">Index</td><td>of the keyframe </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ac99cb8635aa4b6b5805b6511769cf367"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual const std::vector&lt;SRef&lt;<a class="el" href="class_sol_a_r_1_1datastructure_1_1_keyframe.html">Keyframe</a>&gt; &gt;&amp; SolAR::api::solver::map::IMapper::getKeyframes </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>return all the keyframes of the map. </p>
+<dl class="section return"><dt>Returns</dt><dd>the keyframes of the map. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a17ec7546afe0e6bfa61fe0f4f3b66da2"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -157,26 +235,26 @@ virtual SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_map.html
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keyframe.html">Keyframe</a> &gt;&#160;</td>
+          <td class="paramtype">SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keyframe.html">Keyframe</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>newKeyframe</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">CloudPoint</a> &gt;&gt; &amp;&#160;</td>
-          <td class="paramname"><em>newCloud</em> = <code>{}</code>, </td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">CloudPoint</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>newCloud</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_match.html">DescriptorMatch</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>newPointsMatches</em> = <code>{}</code>, </td>
+          <td class="paramname"><em>newPointsMatches</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_match.html">DescriptorMatch</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>existingPointsMatches</em> = <code>{}</code>&#160;</td>
+          <td class="paramname"><em>existingPointsMatches</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -194,8 +272,8 @@ virtual SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_map.html
 <p>update the current map with the new triangulated map points at the insertion of a new keyframe. minArg(pts3ds,intrinsics,extrinsics) = MIN_cam_i(MIN_3d_j(pts2d_j - reproje(pt3ds_j,intrinsics_i,extrinsics_i)), </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">map</td><td>current constructed map. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">neyKeyframe</td><td>current new keyframe to insert. </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">map</td><td>current constructed map. </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">neyKeyframe</td><td>current new keyframe to insert. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">newCloud</td><td>new triangulated 3D points </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">newPointMatches</td><td>new detected matches from the reference keyframe and current frame. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">existingPointMatches</td><td>new detected matches from the reference keyframe and current frame. </td></tr>
@@ -203,6 +281,155 @@ virtual SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_map.html
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>FrameworkReturnCode::<em>SUCCESS if the map updating succeed, else FrameworkReturnCode::_ERROR</em> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="adae8309e8f125b3eaab494d1733c087d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a> SolAR::api::solver::map::IMapper::update </td>
+          <td>(</td>
+          <td class="paramtype">SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_map.html">Map</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>map</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keyframe.html">Keyframe</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>newKeyframe</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">CloudPoint</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>newCloud</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; std::tuple&lt; unsigned int, int, unsigned int &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>newPointMatches</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>update the current map with the new triangulated map points at the insertion of a new keyframe. minArg(pts3ds,intrinsics,extrinsics) = MIN_cam_i(MIN_3d_j(pts2d_j - reproje(pt3ds_j,intrinsics_i,extrinsics_i)), </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">map</td><td>current constructed map. </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">neyKeyframe</td><td>current new keyframe to insert. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">newCloud</td><td>new triangulated 3D points </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">newPointMatches</td><td>a set of tuple contains information of matches corresponding newCloudPoint. The first value is the idx of keypoint in the new keyframe. The remaining values are idx of keyframe and its keypoint. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">existingPointMatches</td><td>new detected matches from the reference keyframe and current frame. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>FrameworkReturnCode::<em>SUCCESS if the map updating succeed, else FrameworkReturnCode::_ERROR</em> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a3e786140ed1093586b13f38a1d2eb3e7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a> SolAR::api::solver::map::IMapper::update </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>correctedPoses</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">CloudPoint</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>correctedMap</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>update the current map/keyframes(poses)with corrected map/keyframes(poses). </p>
+<p>minArg(pts3ds,intrinsics,extrinsics) = MIN_cam_i(MIN_3d_j(pts2d_j - reproje(pt3ds_j,intrinsics_i,extrinsics_i)), </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">map</td><td>current constructed map. </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">neyKeyframe</td><td>current new keyframe to insert. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">newCloud</td><td>new triangulated 3D points </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">newPointMatches</td><td>new detected matches from the reference keyframe and current frame. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">existingPointMatches</td><td>new detected matches from the reference keyframe and current frame. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>FrameworkReturnCode::<em>SUCCESS if the map updating succeed, else FrameworkReturnCode::_ERROR</em> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a2c433ef82495a5fcee61d116459c491b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void SolAR::api::solver::map::IMapper::updateNeighborConnections </td>
+          <td>(</td>
+          <td class="paramtype">SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keyframe.html">Keyframe</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>newKeyframe</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>minDis</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>update connections between new keyframe and neighboring keyframes. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">a</td><td>new keyframe. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">the</td><td>minimum number of common point to accept a connection. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

@@ -128,14 +128,14 @@ Public Member Functions</h2></td></tr>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1map_1_1_i_bundler.html#ac4eeb419de2227a95848e1fe9e22eb5f">~IBundler</a> ()</td></tr>
 <tr class="memdesc:ac4eeb419de2227a95848e1fe9e22eb5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">~IBundler <br /></td></tr>
 <tr class="separator:ac4eeb419de2227a95848e1fe9e22eb5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afffb140805297a2597e65d07e806fd25"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1map_1_1_i_bundler.html#afffb140805297a2597e65d07e806fd25">solve</a> (std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keyframe.html">Keyframe</a> &gt;&gt; &amp;framesToAdjust, std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">CloudPoint</a> &gt;&gt; &amp;mapToAdjust, <a class="el" href="_math_definitions_8h.html#a0ea650513b55059459f5d5771c5bf5cb">CamCalibration</a> &amp;K, <a class="el" href="_math_definitions_8h.html#ad85d877532df3da45a970d47735e34bc">CamDistortion</a> &amp;D, const std::vector&lt; int &gt; &amp;selectKeyframes)=0</td></tr>
-<tr class="memdesc:afffb140805297a2597e65d07e806fd25"><td class="mdescLeft">&#160;</td><td class="mdescRight">solve a non-linear problem related to bundle adjustement statement expressed as: minArg(pts3ds,intrinsics,extrinsics) = MIN_cam_i(MIN_3d_j(pts2d_j - reproje(pt3ds_j,intrinsics_i,extrinsics_i)),  <a href="#afffb140805297a2597e65d07e806fd25">More...</a><br /></td></tr>
-<tr class="separator:afffb140805297a2597e65d07e806fd25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5dbce9b3dc98510274179eb2429a55d7"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1map_1_1_i_bundler.html#a5dbce9b3dc98510274179eb2429a55d7">solve</a> (const std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keyframe.html">Keyframe</a> &gt;&gt; &amp;framesToAdjust, const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">CloudPoint</a> &gt; &amp;mapToAdjust, const <a class="el" href="_camera_definitions_8h.html#a0ea650513b55059459f5d5771c5bf5cb">CamCalibration</a> &amp;K, const <a class="el" href="_camera_definitions_8h.html#ad85d877532df3da45a970d47735e34bc">CamDistortion</a> &amp;D, const std::vector&lt; int &gt; &amp;selectKeyframes, std::vector&lt; <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a> &gt; &amp;poseAdjusted, std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">CloudPoint</a> &gt; &amp;mapAdjusted, <a class="el" href="_camera_definitions_8h.html#a0ea650513b55059459f5d5771c5bf5cb">CamCalibration</a> &amp;KAdjusted, <a class="el" href="_camera_definitions_8h.html#ad85d877532df3da45a970d47735e34bc">CamDistortion</a> &amp;DAdjusted)=0</td></tr>
+<tr class="memdesc:a5dbce9b3dc98510274179eb2429a55d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">solve a non-linear problem related to bundle adjustement statement expressed as: minArg(pts3ds,intrinsics,extrinsics) = MIN_cam_i(MIN_3d_j(pts2d_j - reproje(pt3ds_j,intrinsics_i,extrinsics_i)),  <a href="#a5dbce9b3dc98510274179eb2429a55d7">More...</a><br /></td></tr>
+<tr class="separator:a5dbce9b3dc98510274179eb2429a55d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><b>Optimizes a system of 3D points and keyframes.</b> <code>UUID: 35b9bdb7-d23c-4909-984f-ae7f9a292e6c</code> </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="afffb140805297a2597e65d07e806fd25"></a>
+<a class="anchor" id="a5dbce9b3dc98510274179eb2429a55d7"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -145,32 +145,56 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
         <tr>
           <td class="memname">virtual double SolAR::api::solver::map::IBundler::solve </td>
           <td>(</td>
-          <td class="paramtype">std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keyframe.html">Keyframe</a> &gt;&gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keyframe.html">Keyframe</a> &gt;&gt; &amp;&#160;</td>
           <td class="paramname"><em>framesToAdjust</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">CloudPoint</a> &gt;&gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">CloudPoint</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>mapToAdjust</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="_math_definitions_8h.html#a0ea650513b55059459f5d5771c5bf5cb">CamCalibration</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="_camera_definitions_8h.html#a0ea650513b55059459f5d5771c5bf5cb">CamCalibration</a> &amp;&#160;</td>
           <td class="paramname"><em>K</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="_math_definitions_8h.html#ad85d877532df3da45a970d47735e34bc">CamDistortion</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="_camera_definitions_8h.html#ad85d877532df3da45a970d47735e34bc">CamDistortion</a> &amp;&#160;</td>
           <td class="paramname"><em>D</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const std::vector&lt; int &gt; &amp;&#160;</td>
-          <td class="paramname"><em>selectKeyframes</em>&#160;</td>
+          <td class="paramname"><em>selectKeyframes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>poseAdjusted</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">CloudPoint</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>mapAdjusted</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_camera_definitions_8h.html#a0ea650513b55059459f5d5771c5bf5cb">CamCalibration</a> &amp;&#160;</td>
+          <td class="paramname"><em>KAdjusted</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_camera_definitions_8h.html#ad85d877532df3da45a970d47735e34bc">CamDistortion</a> &amp;&#160;</td>
+          <td class="paramname"><em>DAdjusted</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -188,10 +212,10 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <p>solve a non-linear problem related to bundle adjustement statement expressed as: minArg(pts3ds,intrinsics,extrinsics) = MIN_cam_i(MIN_3d_j(pts2d_j - reproje(pt3ds_j,intrinsics_i,extrinsics_i)), </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">framesToAdjust</td><td>contains a set of {2D points, camera extrinsics}. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">mapToAjust</td><td>contains a set of of 3D points . </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">K</td><td>camera calibration parameters responsible of 3D points generation. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">D</td><td>camera distorsion parameters responsible of 3D points generation K, D represent the camera intrinsic parameters </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">framesToAdjust</td><td>contains a set of {2D points, camera extrinsics}. </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">mapToAjust</td><td>contains a set of of 3D points . </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">K</td><td>camera calibration parameters responsible of 3D points generation. </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">D</td><td>camera distorsion parameters responsible of 3D points generation K, D represent the camera intrinsic parameters </td></tr>
   </table>
   </dd>
 </dl>

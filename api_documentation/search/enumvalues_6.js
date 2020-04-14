@@ -1,9 +1,7 @@
 var searchData=
 [
-  ['sbpattern',['SBPATTERN',['../class_sol_a_r_1_1datastructure_1_1_descriptor_buffer.html#a7eb2a68cab40c18a962db6b27a88cbc0a84a32e7cb7f3a7ad562820efdca08ac2',1,'SolAR::datastructure::DescriptorBuffer']]],
-  ['sift',['SIFT',['../class_sol_a_r_1_1datastructure_1_1_descriptor_buffer.html#a7eb2a68cab40c18a962db6b27a88cbc0a184dd9c8f98f015252e6ad1f45975a1e',1,'SolAR::datastructure::DescriptorBuffer']]],
-  ['space_5fgrey',['SPACE_GREY',['../class_sol_a_r_1_1datastructure_1_1_image.html#a6c2760d6222c9834fe2a438024425ec1ab5d7186de8c72dd8d815674f16cbe8e9',1,'SolAR::datastructure::Image']]],
-  ['space_5frgb_5f709',['SPACE_RGB_709',['../class_sol_a_r_1_1datastructure_1_1_image.html#a6c2760d6222c9834fe2a438024425ec1ad548244a4ba1c151f9358d3cf951a072',1,'SolAR::datastructure::Image']]],
-  ['surf_5f128',['SURF_128',['../class_sol_a_r_1_1datastructure_1_1_descriptor_buffer.html#a7eb2a68cab40c18a962db6b27a88cbc0a03de6cc4ec5b6ec07a790bcaee015684',1,'SolAR::datastructure::DescriptorBuffer']]],
-  ['surf_5f64',['SURF_64',['../class_sol_a_r_1_1datastructure_1_1_descriptor_buffer.html#a7eb2a68cab40c18a962db6b27a88cbc0abde955761e4e01e05182a07ee0834c74',1,'SolAR::datastructure::DescriptorBuffer']]]
+  ['type_5f16u',['TYPE_16U',['../class_sol_a_r_1_1datastructure_1_1_image.html#a863dd3e35b420333f053825a2d3b2263aa1395d0243493a07e400c11335e3ad8a',1,'SolAR::datastructure::Image']]],
+  ['type_5f32u',['TYPE_32U',['../class_sol_a_r_1_1datastructure_1_1_image.html#a863dd3e35b420333f053825a2d3b2263a6828231486acf53f4713c5646a0ab07b',1,'SolAR::datastructure::Image']]],
+  ['type_5f64u',['TYPE_64U',['../class_sol_a_r_1_1datastructure_1_1_image.html#a863dd3e35b420333f053825a2d3b2263a8f5770f0a1cf60aacd9a8c77df23e875',1,'SolAR::datastructure::Image']]],
+  ['type_5f8u',['TYPE_8U',['../class_sol_a_r_1_1datastructure_1_1_image.html#a863dd3e35b420333f053825a2d3b2263a8f02ed60b874228af68eef07f6ef1d99',1,'SolAR::datastructure::Image']]]
 ];

@@ -1,6 +1,4 @@
 <map id="SolAR::api::input::files::IMarker2DSquaredBinary" name="SolAR::api::input::files::IMarker2DSquaredBinary">
-<area shape="rect" id="node2" href="$class_sol_a_r_1_1api_1_1input_1_1files_1_1_i_marker2_d_squared.html" title="Loads any 2D squared marker. UUID: e9cdcf6e&#45;c54c&#45;11e7&#45;abc4&#45;cec278b6b50a " alt="" coords="471,39,645,80"/>
-<area shape="rect" id="node3" href="$class_sol_a_r_1_1api_1_1input_1_1files_1_1_i_marker.html" title="Loads a general Marker. UUID: b05f3dbb&#45;f93d&#45;465c&#45;aee1&#45;fb58e1480c42 " alt="" coords="229,5,363,47"/>
-<area shape="rect" id="node5" href="$struct_sol_a_r_1_1datastructure_1_1_sizef.html" title="A 2D size defined with floats. " alt="" coords="219,71,373,112"/>
-<area shape="rect" id="node6" href="$class_sol_a_r_1_1datastructure_1_1_squared_binary_pattern.html" title="A SquaredBinaryPattern defined with a binary regular grid. " alt="" coords="473,104,643,145"/>
+<area shape="rect" id="node2" href="$class_sol_a_r_1_1api_1_1input_1_1files_1_1_i_marker2_d_squared.html" title="Loads any 2D squared marker. UUID: e9cdcf6e&#45;c54c&#45;11e7&#45;abc4&#45;cec278b6b50a " alt="" coords="25,169,200,211"/>
+<area shape="rect" id="node3" href="$class_sol_a_r_1_1api_1_1input_1_1files_1_1_i_marker.html" title="Loads a general Marker. UUID: b05f3dbb&#45;f93d&#45;465c&#45;aee1&#45;fb58e1480c42 " alt="" coords="45,80,180,121"/>
 </map>
