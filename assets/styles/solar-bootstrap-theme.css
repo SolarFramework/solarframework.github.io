@@ -586,6 +586,7 @@ hr {
 
 .navbar-form {
   padding: 0;
+  margin-bottom:0px;
 }
 .navbar-form input {
   border-radius: 0;

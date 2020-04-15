@@ -130,6 +130,30 @@ window.cookieconsent.initialise({
 
   
 
+    <li id="install" class=" red">
+      <a href="/install/">
+        <img src="/assets/images/navbar/install.svg" alt="install" height="42" width="42">
+        Install
+      </a>
+    </li>
+    
+    
+
+  
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
     <li id="use" class=" purple">
       <a href="/use/">
         <img src="/assets/images/navbar/use.svg" alt="use" height="42" width="42">
@@ -237,6 +261,39 @@ window.cookieconsent.initialise({
             </ul>
         </div>
         
+    <div class="submenu red">
+      <div class="submenuHelper">&lt;</div>
+      <ul class="nav" aria-expanded="false">
+        
+        
+
+	
+	
+
+		<li >
+			<a href="/install/windows/">
+				On Windows
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/install/linux/">
+				On Linux
+				
+			</a>
+		</li>
+	
+
+
+      </ul>
+      <div class="submenuHelper">&gt;</div>
+    </div>
+    
     <div class="submenu purple">
       <div class="submenuHelper">&lt;</div>
       <ul class="nav" aria-expanded="false">
@@ -269,17 +326,6 @@ window.cookieconsent.initialise({
 	
 
 		<li >
-			<a href="/use/csharp/">
-				C#
-				
-			</a>
-		</li>
-	
-
-	
-	
-
-		<li >
 			<a href="/use/tools/">
 				Tools
 				
@@ -297,17 +343,6 @@ window.cookieconsent.initialise({
       <ul class="nav" aria-expanded="false">
         
         
-
-	
-	
-
-		<li >
-			<a href="/assemble/install/">
-				Install
-				
-			</a>
-		</li>
-	
 
 	
 	
@@ -346,8 +381,8 @@ window.cookieconsent.initialise({
 	
 
 		<li >
-			<a href="/assemble/api/">
-				API
+			<a href="/assemble/moduleapi/">
+				Module API
 				
 			</a>
 		</li>
@@ -363,17 +398,6 @@ window.cookieconsent.initialise({
       <ul class="nav" aria-expanded="false">
         
         
-
-	
-	
-
-		<li >
-			<a href="/create/install/">
-				Install
-				
-			</a>
-		</li>
-	
 
 	
 	
@@ -467,17 +491,6 @@ window.cookieconsent.initialise({
 	
 
 		<li >
-			<a href="/community/getting_started/">
-				Getting started
-				
-			</a>
-		</li>
-	
-
-	
-	
-
-		<li >
 			<a href="/community/contribution_workflow/">
 				Contribution workflow
 				
@@ -513,7 +526,12 @@ window.cookieconsent.initialise({
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
 <li><a href="#third_party_packaging">Third party packaging</a></li>
-<li><a href="#package_your_third_parties">Package your third parties</a></li>
+<li><a href="#package_your_third_parties">Package your third parties</a>
+<ul class="sectlevel2">
+<li><a href="#remaken_native_solution">Remaken native solution</a></li>
+<li><a href="#conan">Conan</a></li>
+</ul>
+</li>
 </ul>
 </div>
 <div class="sect1">
@@ -526,7 +544,144 @@ window.cookieconsent.initialise({
 <h2 id="package_your_third_parties"><a class="anchor" href="#package_your_third_parties"></a><a class="link" href="#package_your_third_parties">Package your third parties</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Todo</p>
+<p>The SolAR framework is using the meta dependencies management tool <a href="https://github.com/b-com-software-basis/remaken">Remaken</a> supporting <a href="https://conan.io/">Conan</a>, <a href="https://github.com/microsoft/vcpkg">VCPKG</a> and its native C++ packaging structure based on <a href="https://www.freedesktop.org/wiki/Software/pkg-config/">pkg-config</a> description files.<br></p>
+</div>
+<div class="paragraph">
+<p>Remaken uses a <em>packagedependencies.txt</em> file defining all dependencies of your project (more information in the <a href="https://github.com/b-com-software-basis/remaken">documentation of remaken</a>). This file will be interpreted by the QMake build script tools used by the SolAR framework. Thus,  by maintaining a simple dependency file describing the third parties used by your project, you will be able to download the dependencies, link and build you project, and install and deploy your solution with all its dependencies in a very simple way.</p>
+</div>
+<div class="paragraph">
+<p>Let&#8217;s describe now how to package the third parties required by your module in order to be compliant with the dependency manager and the build and install pipeline used by SolAR. Two solutions are presented next: The Remaken native solution and Conan.</p>
+</div>
+<div class="sect2">
+<h3 id="remaken_native_solution"><a class="anchor" href="#remaken_native_solution"></a><a class="link" href="#remaken_native_solution">Remaken native solution</a></h3>
+<div class="paragraph">
+<p>To create your package, you have to create the following folder structure:</p>
+</div>
+<div class="paragraph">
+<p>-DependencyName<br>
+--DependencyVersion (X.X.X)<br>
+---interfaces<br>
+----<em>here your header files</em><br>
+---lib<br>
+----architecture (x86_64, arm64, &#8230;&#8203;)<br>
+-----mode (shared or static)<br>
+------release<br>
+-------<em>your libraries here in release mode</em><br>
+------debug<br>
+-------<em>your libraries here in debug mode</em><br>
+---bcom-DependencyName.pc<br>
+---packageDependencies.txt (if your Dependency requires third-parties)<br>
+---DependencyName_remakeninfo.txt<br></p>
+</div>
+<div class="sect3">
+<h4 id="bcom_dependencyname_pc"><a class="anchor" href="#bcom_dependencyname_pc"></a><a class="link" href="#bcom_dependencyname_pc">bcom-DependencyName.pc</a></h4>
+<div class="paragraph">
+<p>This file is used by pkg-config to provide the necessary details for compilng and linking a program to a library.</p>
+</div>
+<div class="paragraph">
+<p>If this file is not already provided with your third party, you will have to create it:</p>
+</div>
+<div class="listingblock">
+<div class="title">bcom-DependencyName.pc</div>
+<div class="content">
+<pre class="CodeRay highlight"><code>libname=DependencyName
+prefix=/usr/local
+exec_prefix=${prefix}
+includedir=${prefix}/include
+libdir=${exec_prefix}/lib
+
+Name: DependencyName
+Description: The DependencyName library
+Version: 1.0.0
+Requires:
+Libs: -L${libdir} -l${libname}
+Libs.private: ${libdir}/${pfx}${libname}.${lext}
+Cflags: -I${includedir}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>For more information concerning the syntax of this pkg-config file, you can take a look to the <a href="https://people.freedesktop.org/~dbn/pkg-config-guide.html">pkg-config guide</a>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="packagedependencies_txt"><a class="anchor" href="#packagedependencies_txt"></a><a class="link" href="#packagedependencies_txt">packageDependencies.txt</a></h4>
+<div class="paragraph">
+<p>Remaken and the SolAR build pipeline support the recursive dependency download, link, and installation. But in order to do so, your package must inform its own dependencies in the <em>packageDependencies.txt</em>.
+To know how to add a sub-dependency to your dependency, take a look to the <a href="https://github.com/b-com-software-basis/remaken">Remaken documentation</a> on github, or check the numerous samples of <em>packagedependencies.txt</em> available in the SolAR framework.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="dependencyname_remakeninfo_txt"><a class="anchor" href="#dependencyname_remakeninfo_txt"></a><a class="link" href="#dependencyname_remakeninfo_txt">DependencyName_remakeninfo.txt</a></h4>
+<div class="paragraph">
+<p>This file is specific to remaken, and define the platform, the C++ version and the runtime version used to build your dependency. This file is similar to the <em>conaninfo.txt</em> used by conan.</p>
+</div>
+<div class="listingblock">
+<div class="title">DependencyName_remakeninfo.txt</div>
+<div class="content">
+<pre>platform=win-cl-14.1
+cppstd=17
+runtime=dynamicCRT</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="artifact_packager"><a class="anchor" href="#artifact_packager"></a><a class="link" href="#artifact_packager">Artifact Packager</a></h4>
+<div class="paragraph">
+<p>When the previous files, your interfaces and you binaries are ready and well-placed in the folder structure detailed above, you can package the dependency by using the tool <a href="https://github.com/SolarFramework/Tools/releases/tag/ArtifactPackager">ArtifactPackager</a>.</p>
+</div>
+<div class="paragraph">
+<p>Just run the artifact packager at the root folder of your package, and it will automatically create two folders, one for the debug version and the other one for the release version, each of them containing a zip file. The name format of the created files includes the name of your dependency, its version, the supported architecture, its build mode (shared or static) as well as its configuration (debug or release). This format of package name must be respected and will be used by remaken to find the dependency required for a requested development environment.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="share_your_package_online"><a class="anchor" href="#share_your_package_online"></a><a class="link" href="#share_your_package_online">Share your package online</a></h4>
+<div class="paragraph">
+<p>In order for Remaken to find the package corresponding to the requested dependency, with the good version, for the good architecture (x86_64 or arm64), mode (share or static) and configuration (debug or release), you have to respect the following  formatting rules concerning the URL to download your package: <em>URL_root/DependencyName/version/platform/package_name.zip</em></p>
+</div>
+<div class="paragraph">
+<p>Where:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>URL_root</strong> is the URL where you host your packages. For example, for the SolAR project, most of the dependencies are stored in the releases space of the <em>binaries</em> repository with the following URL: <a href="https://github/SolarFramework/binaries/releases/download" class="bare">https://github/SolarFramework/binaries/releases/download</a>. This is the URL that is entered in the <em>packagedependencies.txt</em> file.</p>
+</li>
+<li>
+<p><strong>DependencyName</strong> is the name of your dependency (tinyXML, OpenCV, Ceres, G2O, etc.).</p>
+</li>
+<li>
+<p><strong>version</strong> with the X.X.X format.</p>
+</li>
+<li>
+<p><strong>platform</strong> win, linux, android, etc.</p>
+</li>
+<li>
+<p><strong>package_name</strong> the file name of the package created by the Artifact Packager.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+On GitHub, when a new release or a new dependency is published, we respect for each release the following tag in order to respect this previous URL format: <em>DependencyName/version/platform</em>.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="conan"><a class="anchor" href="#conan"></a><a class="link" href="#conan">Conan</a></h3>
+<div class="paragraph">
+<p>Third party packaging can quickly become tedious, especially when source package manager such as Conan already provide you a solution to download ready-to-use packages for a large range of popular third parties hosted on public repositories (<a href="https://bintray.com/conan/conan-center">Conan center</a>, <a href="https://bintray.com/bincrafters/public-conan">Bincrafters</a>).</p>
+</div>
+<div class="paragraph">
+<p>To add your Conan package to your solution using Remaken, you can take a look at the <a href="https://github.com/b-com-software-basis/remaken">Remaken documentation</a>.</p>
+</div>
 </div>
 </div>
 </div>

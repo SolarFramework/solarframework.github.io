@@ -1,0 +1,786 @@
+<!doctype html>
+<html class="no-js">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>SolAR</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+    <meta http-equiv="pragma" content="no-cache" />
+
+    <!-- IE 10 Metro tile icon (Metro equivalent of apple-touch-icon) -->
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="msapplication-TileImage" content="/assets/static/favicon-144.png">
+
+    <!-- Touch icon for iOS 2.0+ and Android 2.1+ -->
+    <link rel="apple-touch-icon-precomposed" href="/assets/static/favicon-152.png">
+    <link rel="icon" type="image/x-icon" href="/assets/static/favicon.ico">
+
+    <link rel="stylesheet" href="/assets/styles/bootstrap.min.css" />
+    <link rel="stylesheet" href="/assets/styles/coderay-asciidoctor.css">
+    <link rel="stylesheet" href="/assets/styles/asciidoctor.css">
+    <link rel="stylesheet" href="/assets/styles/fontawesome.min.css">
+    <link rel="stylesheet" href="/assets/styles/all.min.css">
+    <link rel="stylesheet" href="/assets/styles/solar-asciidoctor-theme.css">
+    <link rel="stylesheet" href="/assets/styles/solar-bootstrap-theme.css">
+    <link rel="stylesheet" href="/assets/styles/main.css">
+    <link rel="stylesheet" href="/assets/styles/media.css">
+
+    <script src="/js/vendor/jquery.js"></script><!--needed with bootstrap-->
+    <script src="/js/lunr.min.js"></script>
+    <script src="/js/search.js"></script>
+    <script src="/js/toc.js"></script>
+    <script src="/js/block-folding.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() { 
+          /* Configure TOC to take into account all titles */
+          $("#toc").toc(  { headers: "h2, h3",
+                              listType: "ul",
+                              title: "<div id='toctitle'>Table of Contents</div>",
+                              noBackToTopLinks: true /*usefull to avoid tag <i class="icon-arrow-up back-to-top"> </i> to be placed between #submenuconfig and sectionbody and screw the submenu css style*/
+           });
+        });
+      </script>
+  <!-- Google Analytics -->
+  <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-107058603-1', 'auto');
+          ga('set', 'anonymizeIp', true);
+          ga('send', 'pageview');
+  </script>  <!-- End Google Analytics --> 
+<link rel="stylesheet" type="text/css" href="/js/cookieconsent/cookieconsent.min.css" />
+<script src="/js/cookieconsent/cookieconsent.min.js"></script>
+<script>
+var userLang = navigator.language || navigator.userLanguage; 
+if (userLang == "fr") {
+  message="En poursuivant votre navigation sur ce site, vous acceptez que des cookies soient utilisés afin d’améliorer votre expérience d’utilisateur.";
+  link="En savoir plus";
+  href="https://b-com.com/fr/mentions-l%C3%A9gales";
+}
+else {
+  message="By proceeding beyond this page, you consent to the cookies usage, in order to improve your experience on this website.";
+  link="More information";
+  href="https://b-com.com/en/legal-notice";
+}
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#000000"
+    },
+    "button": {
+      "background": "#00bee6"
+    }
+  },
+  "position": "bottom-left",
+  "theme": "edgeless",
+  "content": {
+    "message": message,
+    "dismiss": "OK",
+    "link": link,
+    "href": href
+  }
+})});
+</script>  
+</head>
+
+    <body>
+        <!--[if lt IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div><div class="navbar navbar-default">
+    <div>
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand link" href="/">
+                <img class="logo" alt="SolAR logo" src="/assets/images/navbar/logo_solAR.svg">
+            </a>
+        </div>
+
+        <div id="navbar" class="navbar-collapse" aria-expanded="false" style="height: 1px;">
+            <ul class="nav navbar-nav">
+
+                
+
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+    <li id="install" class=" active red">
+      <a href="/install/">
+        <img src="/assets/images/navbar/install.svg" alt="install" height="42" width="42">
+        Install
+      </a>
+    </li>
+    
+    
+
+  
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+    <li id="use" class=" purple">
+      <a href="/use/">
+        <img src="/assets/images/navbar/use.svg" alt="use" height="42" width="42">
+        Use
+      </a>
+    </li>
+    
+    
+
+  
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+    <li id="assemble" class=" yellow">
+      <a href="/assemble/">
+        <img src="/assets/images/navbar/assemble.svg" alt="assemble" height="42" width="42">
+        Assemble
+      </a>
+    </li>
+    
+    
+
+  
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+    <li id="create" class=" blue">
+      <a href="/create/">
+        <img src="/assets/images/navbar/create.svg" alt="create" height="42" width="42">
+        Create
+      </a>
+    </li>
+    
+    
+
+  
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+    <li id="community" class=" green">
+      <a href="/community/">
+        <img src="/assets/images/navbar/community.svg" alt="community" height="42" width="42">
+        Community
+      </a>
+    </li>
+    
+    
+
+  
+
+
+
+
+
+                <li>
+                    <form action="/search/index.html" method="get" class="navbar-form" role="search">
+                        <div class="input-group">
+                            <input type="text" id="search" class="form-control" placeholder="Search"
+                                    name="q" class="span1" type="text" size="15">
+                            <div class="input-group-btn">
+                                <button class="btn btn-default" type="submit">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                    <div>
+                        <a href="/about/index.html">> About</a>
+                        <a href="https://github.com/SolarFramework">> Git</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        
+    <div class="submenu active red">
+      <div class="submenuHelper">&lt;</div>
+      <ul class="nav" aria-expanded="false">
+        
+        
+
+	
+	
+
+		<li  class="active currentPage">
+			<a href="/install/windows/">
+				On Windows
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/install/linux/">
+				On Linux
+				
+			</a>
+		</li>
+	
+
+
+      </ul>
+      <div class="submenuHelper">&gt;</div>
+    </div>
+    
+    <div class="submenu purple">
+      <div class="submenuHelper">&lt;</div>
+      <ul class="nav" aria-expanded="false">
+        
+        
+
+	
+	
+
+		<li >
+			<a href="/use/unity/">
+				Unity
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/use/cplusplus/">
+				C++
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/use/tools/">
+				Tools
+				
+			</a>
+		</li>
+	
+
+
+      </ul>
+      <div class="submenuHelper">&gt;</div>
+    </div>
+    
+    <div class="submenu yellow">
+      <div class="submenuHelper">&lt;</div>
+      <ul class="nav" aria-expanded="false">
+        
+        
+
+	
+	
+
+		<li >
+			<a href="/assemble/get_modules/">
+				Get modules
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/assemble/standalone_c_plus_plus/">
+				Standalone C++
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/assemble/unity_pipeline/">
+				Unity pipeline
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/assemble/moduleapi/">
+				Module API
+				
+			</a>
+		</li>
+	
+
+
+      </ul>
+      <div class="submenuHelper">&gt;</div>
+    </div>
+    
+    <div class="submenu blue">
+      <div class="submenuHelper">&lt;</div>
+      <ul class="nav" aria-expanded="false">
+        
+        
+
+	
+	
+
+		<li >
+			<a href="/create/build/">
+				Build
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/create/third_parties_packaging/">
+				Third parties packaging
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/create/module/">
+				Create module
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/create/component/">
+				Create component
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/create/tests/">
+				Tests
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/create/api/">
+				API
+				
+			</a>
+		</li>
+	
+
+
+      </ul>
+      <div class="submenuHelper">&gt;</div>
+    </div>
+    
+    <div class="submenu green">
+      <div class="submenuHelper">&lt;</div>
+      <ul class="nav" aria-expanded="false">
+        
+        
+
+	
+	
+
+		<li >
+			<a href="/community/GIT/">
+				GIT
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/community/contribution_workflow/">
+				Contribution workflow
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/community/best_practices/">
+				Best practices
+				
+			</a>
+		</li>
+	
+
+
+      </ul>
+      <div class="submenuHelper">&gt;</div>
+    </div>
+    
+        
+    </div>
+
+</div>
+</div>
+
+        <div class="container">
+            <div class="well red">
+              <div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#install_on_windows">Install On Windows</a></li>
+<li><a href="#test_solar">Test SolAR</a></li>
+<li><a href="#install_development_environment">Install development environment</a>
+<ul class="sectlevel2">
+<li><a href="#install_dependencies">Install dependencies</a></li>
+<li><a href="#install_your_ides">Install your IDEs</a></li>
+</ul>
+</li>
+<li><a href="#build_solar">Build SolAR</a>
+<ul class="sectlevel2">
+<li><a href="#clone_solar">Clone SolAR</a></li>
+<li><a href="#build_on_qt_creator">Build on Qt Creator</a></li>
+<li><a href="#build_on_visual_studio">Build on Visual Studio</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="sect1">
+<h2 id="install_on_windows"><a class="anchor" href="#install_on_windows"></a><a class="link" href="#install_on_windows">Install On Windows</a></h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="test_solar"><a class="anchor" href="#test_solar"></a><a class="link" href="#test_solar">Test SolAR</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>We provide you a bundle to test our samples code. It&#8217;s just a .zip file including SolAR&#8217;s .dlls and an .exe file.</p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<caption class="title">Table 1. Available Samples</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Natural Image Marker</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/SolarFramework/NaturalImageMarker/releases/tag/PipelineNaturalImageMarker%2F0.7.0%2Fwin">download link</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fiducial Marker</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/SolarFramework/FiducialMarker/releases/tag/PipelineFiducialMarker%2F0.7.0%2Fwin">download link</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"> SLAM</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/SolarFramework/Sample-Slam/releases/tag/SLAM%2F0.7.0%2Fwin">download link</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Triangulation</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/SolarFramework/Sample-Triangulation/releases/tag/Triangulation%2F0.7.0%2Fwin">download link</a></p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+Print the marker included in .zip file to use it during the test.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="install_development_environment"><a class="anchor" href="#install_development_environment"></a><a class="link" href="#install_development_environment">Install development environment</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The SolAR framework uses a dedicated pipeline for linking and compiling code as well as internal tools for third party downloads that should make your job a lot easier.
+As you will see later, the SolAR framework is based on <em>QMake</em> originally created by the Qt Company, but compliant with most IDE including Visual Studio.</p>
+</div>
+<div class="sect2">
+<h3 id="install_dependencies"><a class="anchor" href="#install_dependencies"></a><a class="link" href="#install_dependencies">Install dependencies</a></h3>
+<div class="paragraph">
+<p>For downloading dependencies, the SolAR framework uses the meta dependencies management tool <a href="https://github.com/b-com-software-basis/remaken">Remaken</a> supporting <a href="https://conan.io/">Conan</a>, <a href="https://github.com/microsoft/vcpkg">VCPKG</a> and its native C++ packaging structure based on <a href="https://www.freedesktop.org/wiki/Software/pkg-config/">pkg-config</a> description files.</p>
+</div>
+<div class="paragraph">
+<p>So start by downloading and installing <em>Remaken</em> available on the following link: <a href="https://github.com/b-com-software-basis/remaken/releases/download/win%2Fremaken-1.6.0/Setup_Remaken.exe">Remaken installer</a></p>
+</div>
+<div class="paragraph">
+<p>Start the remaken installer. By default, the dependencies will be installed in your ${USER_HOME} directory, but you can change it by setting another location for your <em>REMAKEN_PKG_ROOT</em> environement variable. By default, Remaken will install Conan and pkg_config which will be used afterwards.<br></p>
+</div>
+<div class="paragraph">
+<p>Then, open a command prompt <strong>with administrator rights</strong> and run:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>remaken init</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This command will install the qmake building rules in your ${USER_HOME}/.remaken/rules folder.<br></p>
+</div>
+<div class="paragraph">
+<p>Remaken uses a file called <em>packagedependencies.txt</em> to describe which depedencies to install, in which version, where to install them, and where to download them.<br></p>
+</div>
+<div class="paragraph">
+<p>A global <em>packagedepedencies.txt</em> is available in the  parent GIT repository <em>SolAR</em>, and can be downloaded on the following link:
+<a href="https://raw.githubusercontent.com/SolarFramework/SolAR/master/packagedependencies.txt">packagedependencies.txt</a></p>
+</div>
+<div class="paragraph">
+<p>Copy this file where you want on your computer, open a command prompt in the folder where you have copied the <em>packagedependencies.txt</em> file, and run remaken with the following command:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>remaken install --cpp-std 17 -b cl-14.1 packagedependencies.txt</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This command will install all SolAR dependencies in release mode in your <em>${REMAKEN_PKG_ROOT}</em> folder.
+To download the dependencies in debug mode, run the following command:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>remaken install --cpp-std 17 -b cl-14.1 -c debug packagedependencies.txt</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This is done, all your dependencies are downloaded and ready to use !</p>
+</div>
+<div class="paragraph">
+<p>Some of the module will download and build third parties using Conan which requires CMake. Install the last version of CMake (minimum version 3.11) on the following <a href="https://cmake.org/download/">link</a>. Do not forget to check "Add CMake to PATH environment variable" during its installation.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="install_your_ides"><a class="anchor" href="#install_your_ides"></a><a class="link" href="#install_your_ides">Install your IDEs</a></h3>
+<div class="sect3">
+<h4 id="visual_studio"><a class="anchor" href="#visual_studio"></a><a class="link" href="#visual_studio">Visual Studio</a></h4>
+<div class="paragraph">
+<p>You will have to install Visual Studio to install the corresponding compiler and debugger on your machine. The community version 2017 has been tested and is available on the following link: <a href="https://my.visualstudio.com/Downloads?q=visual%20studio%202017&amp;wt.mc_id=o~msft~vscom~older-downloads">Visual Studio installer</a></p>
+</div>
+<div class="paragraph">
+<p>We recommand to install at least the following features:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Desktop Development C++</p>
+</li>
+<li>
+<p>Game development with Unity (useful to develop and debug Unity applications)</p>
+</li>
+<li>
+<p>Mobile development in C++ (to build for Android)</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="qt_creator"><a class="anchor" href="#qt_creator"></a><a class="link" href="#qt_creator">QT Creator</a></h4>
+<div class="paragraph">
+<p>As SolAR is using QMake file to setup the projects, we highly recomment to install <em>Qt Creator</em>. Moreover, you will have access to wizards which will help you create new SolAR modules, components and pipelines.</p>
+</div>
+<div class="paragraph">
+<p>Download the last version of QTCreator on the following link:
+<a href="https://www.qt.io/download">QT installer download</a></p>
+</div>
+<div class="paragraph">
+<p>When downloaded, run the <em>Qt Installer</em><br></p>
+</div>
+<div class="paragraph">
+<p>Create a <em>Qt</em> account if not already done, select where you want to install <em>Qt</em>. You don&#8217;t need to install <em>Qt</em> SDK, just the <em>Qt Creator</em>. So just check the following components:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Qt x.x.x (last version proposed)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>with MSVC 2017 64-bit</p>
+</li>
+<li>
+<p>Android (if you want to build SolAR for Android)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Developer and Designer Tools</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Qt Creator x.x.x CDB Debugger Support</p>
+</li>
+<li>
+<p>Debugging Tools for Windows</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>and start the installation.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="qt_visual_studio_tool"><a class="anchor" href="#qt_visual_studio_tool"></a><a class="link" href="#qt_visual_studio_tool">QT Visual Studio Tool</a></h4>
+<div class="paragraph">
+<p>If you are more comfortable with Visual Studio, you will have to install the Visual Studio plugin called <em>QT Visual Studio Tool</em> which will allow you to open Qt projects. To do so, Open Visual Studio, click on <code><em>Tools</em></code> menu, then on <code><em>Extensions and Updates</em></code>. Search for <em>Qt Visual Studio Tools</em>, and install it. To complete this installation, you have to restart Visual Studio.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="build_solar"><a class="anchor" href="#build_solar"></a><a class="link" href="#build_solar">Build SolAR</a></h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="clone_solar"><a class="anchor" href="#clone_solar"></a><a class="link" href="#clone_solar">Clone SolAR</a></h3>
+<div class="paragraph">
+<p>SolAR is made up of a multitude of projects (SolAR Framework, SolAR pipeline manager, modules, samples, etc.). To help you, we have created a parent repository with sub-modules regrouping all source codes of SolAR. You can clone it from the following url:
+<a href="https://github.com/SolarFramework/SolAR.git" class="bare">https://github.com/SolarFramework/SolAR.git</a></p>
+</div>
+<div class="paragraph">
+<p>If you do not want to download all the source codes of SolAR, you can have a look to the different repositories available on Github on the <a href="../../community/GIT/index.html#GIT repositories">Community/Git page</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="build_on_qt_creator"><a class="anchor" href="#build_on_qt_creator"></a><a class="link" href="#build_on_qt_creator">Build on Qt Creator</a></h3>
+<div class="paragraph">
+<p>Open the Qt project of your choice, for instance a sample.
+Check by clicking on the <code><em>Projects</em></code> tab, and then on the <code><em>Manage Kits&#8230;&#8203;</em></code> button that your <em>QT MSVC2017 64bit</em> kit is well configured (Microsoft Visual C++ Compiler should be in version <em>15.x.x.x (x86_amd64)</em> if your are using Visual Studio 2017).<br>
+Just run qmake, and build your project (no need to add an qmake install step).</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="build_on_visual_studio"><a class="anchor" href="#build_on_visual_studio"></a><a class="link" href="#build_on_visual_studio">Build on Visual Studio</a></h3>
+<div class="paragraph">
+<p>You have first to set the path of Qt for <em>Qt Visual Studio Tool</em>. Click on the <code><em>Qt Vs Tools</em></code> tab, and then on <code><em>Qt Options</em></code>. Add a new Qt Version (for instance name: <em>5.14.1 MSVC207_64</em>, path: <em>C:\Qt\5.14.1\msvc2017_64</em>).<br>
+When this is done, simply open a Qt project by cliking on the <code><em>Qt VS Tools</em></code> tab, and on <code><em>Open Qt Project File (.pro)</em></code>. Select the Qt project of your choice, then build your project. It&#8217;s done!</p>
+</div>
+</div>
+</div>
+</div>
+              
+            </div>
+        </div>
+
+        <!-- build:js scripts/vendor.js -->
+        <!-- bower:js -->
+
+        <!-- endbower -->
+        <!-- endbuild -->
+
+    <!-- build:js({.tmp,src/main/webapp}) scripts/app.js -->
+    <script src="/js/vendor/modernizr.js"></script>
+    <!-- endbuild -->
+    <script type="text/javascript">
+      /* Fix padding-top on anchor with TOC */
+      window.addEventListener("hashchange", function() { scrollBy(0, -115) })
+    </script>
+    </body>
+</html>

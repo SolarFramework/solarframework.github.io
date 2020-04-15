@@ -1,0 +1,668 @@
+<!doctype html>
+<html class="no-js">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>SolAR</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+    <meta http-equiv="pragma" content="no-cache" />
+
+    <!-- IE 10 Metro tile icon (Metro equivalent of apple-touch-icon) -->
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="msapplication-TileImage" content="/assets/static/favicon-144.png">
+
+    <!-- Touch icon for iOS 2.0+ and Android 2.1+ -->
+    <link rel="apple-touch-icon-precomposed" href="/assets/static/favicon-152.png">
+    <link rel="icon" type="image/x-icon" href="/assets/static/favicon.ico">
+
+    <link rel="stylesheet" href="/assets/styles/bootstrap.min.css" />
+    <link rel="stylesheet" href="/assets/styles/coderay-asciidoctor.css">
+    <link rel="stylesheet" href="/assets/styles/asciidoctor.css">
+    <link rel="stylesheet" href="/assets/styles/fontawesome.min.css">
+    <link rel="stylesheet" href="/assets/styles/all.min.css">
+    <link rel="stylesheet" href="/assets/styles/solar-asciidoctor-theme.css">
+    <link rel="stylesheet" href="/assets/styles/solar-bootstrap-theme.css">
+    <link rel="stylesheet" href="/assets/styles/main.css">
+    <link rel="stylesheet" href="/assets/styles/media.css">
+
+    <script src="/js/vendor/jquery.js"></script><!--needed with bootstrap-->
+    <script src="/js/lunr.min.js"></script>
+    <script src="/js/search.js"></script>
+    <script src="/js/toc.js"></script>
+    <script src="/js/block-folding.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() { 
+          /* Configure TOC to take into account all titles */
+          $("#toc").toc(  { headers: "h2, h3",
+                              listType: "ul",
+                              title: "<div id='toctitle'>Table of Contents</div>",
+                              noBackToTopLinks: true /*usefull to avoid tag <i class="icon-arrow-up back-to-top"> </i> to be placed between #submenuconfig and sectionbody and screw the submenu css style*/
+           });
+        });
+      </script>
+  <!-- Google Analytics -->
+  <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-107058603-1', 'auto');
+          ga('set', 'anonymizeIp', true);
+          ga('send', 'pageview');
+  </script>  <!-- End Google Analytics --> 
+<link rel="stylesheet" type="text/css" href="/js/cookieconsent/cookieconsent.min.css" />
+<script src="/js/cookieconsent/cookieconsent.min.js"></script>
+<script>
+var userLang = navigator.language || navigator.userLanguage; 
+if (userLang == "fr") {
+  message="En poursuivant votre navigation sur ce site, vous acceptez que des cookies soient utilisés afin d’améliorer votre expérience d’utilisateur.";
+  link="En savoir plus";
+  href="https://b-com.com/fr/mentions-l%C3%A9gales";
+}
+else {
+  message="By proceeding beyond this page, you consent to the cookies usage, in order to improve your experience on this website.";
+  link="More information";
+  href="https://b-com.com/en/legal-notice";
+}
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#000000"
+    },
+    "button": {
+      "background": "#00bee6"
+    }
+  },
+  "position": "bottom-left",
+  "theme": "edgeless",
+  "content": {
+    "message": message,
+    "dismiss": "OK",
+    "link": link,
+    "href": href
+  }
+})});
+</script>  
+</head>
+
+    <body>
+        <!--[if lt IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div><div class="navbar navbar-default">
+    <div>
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand link" href="/">
+                <img class="logo" alt="SolAR logo" src="/assets/images/navbar/logo_solAR.svg">
+            </a>
+        </div>
+
+        <div id="navbar" class="navbar-collapse" aria-expanded="false" style="height: 1px;">
+            <ul class="nav navbar-nav">
+
+                
+
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+    <li id="install" class=" red">
+      <a href="/install/">
+        <img src="/assets/images/navbar/install.svg" alt="install" height="42" width="42">
+        Install
+      </a>
+    </li>
+    
+    
+
+  
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+    <li id="use" class=" purple">
+      <a href="/use/">
+        <img src="/assets/images/navbar/use.svg" alt="use" height="42" width="42">
+        Use
+      </a>
+    </li>
+    
+    
+
+  
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+    <li id="assemble" class=" yellow">
+      <a href="/assemble/">
+        <img src="/assets/images/navbar/assemble.svg" alt="assemble" height="42" width="42">
+        Assemble
+      </a>
+    </li>
+    
+    
+
+  
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+    <li id="create" class=" blue">
+      <a href="/create/">
+        <img src="/assets/images/navbar/create.svg" alt="create" height="42" width="42">
+        Create
+      </a>
+    </li>
+    
+    
+
+  
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+    <li id="community" class=" active green">
+      <a href="/community/">
+        <img src="/assets/images/navbar/community.svg" alt="community" height="42" width="42">
+        Community
+      </a>
+    </li>
+    
+    
+
+  
+
+
+
+
+
+                <li>
+                    <form action="/search/index.html" method="get" class="navbar-form" role="search">
+                        <div class="input-group">
+                            <input type="text" id="search" class="form-control" placeholder="Search"
+                                    name="q" class="span1" type="text" size="15">
+                            <div class="input-group-btn">
+                                <button class="btn btn-default" type="submit">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                    <div>
+                        <a href="/about/index.html">> About</a>
+                        <a href="https://github.com/SolarFramework">> Git</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        
+    <div class="submenu red">
+      <div class="submenuHelper">&lt;</div>
+      <ul class="nav" aria-expanded="false">
+        
+        
+
+	
+	
+
+		<li >
+			<a href="/install/windows/">
+				On Windows
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/install/linux/">
+				On Linux
+				
+			</a>
+		</li>
+	
+
+
+      </ul>
+      <div class="submenuHelper">&gt;</div>
+    </div>
+    
+    <div class="submenu purple">
+      <div class="submenuHelper">&lt;</div>
+      <ul class="nav" aria-expanded="false">
+        
+        
+
+	
+	
+
+		<li >
+			<a href="/use/unity/">
+				Unity
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/use/cplusplus/">
+				C++
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/use/tools/">
+				Tools
+				
+			</a>
+		</li>
+	
+
+
+      </ul>
+      <div class="submenuHelper">&gt;</div>
+    </div>
+    
+    <div class="submenu yellow">
+      <div class="submenuHelper">&lt;</div>
+      <ul class="nav" aria-expanded="false">
+        
+        
+
+	
+	
+
+		<li >
+			<a href="/assemble/get_modules/">
+				Get modules
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/assemble/standalone_c_plus_plus/">
+				Standalone C++
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/assemble/unity_pipeline/">
+				Unity pipeline
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/assemble/moduleapi/">
+				Module API
+				
+			</a>
+		</li>
+	
+
+
+      </ul>
+      <div class="submenuHelper">&gt;</div>
+    </div>
+    
+    <div class="submenu blue">
+      <div class="submenuHelper">&lt;</div>
+      <ul class="nav" aria-expanded="false">
+        
+        
+
+	
+	
+
+		<li >
+			<a href="/create/build/">
+				Build
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/create/third_parties_packaging/">
+				Third parties packaging
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/create/module/">
+				Create module
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/create/component/">
+				Create component
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/create/tests/">
+				Tests
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/create/api/">
+				API
+				
+			</a>
+		</li>
+	
+
+
+      </ul>
+      <div class="submenuHelper">&gt;</div>
+    </div>
+    
+    <div class="submenu active green">
+      <div class="submenuHelper">&lt;</div>
+      <ul class="nav" aria-expanded="false">
+        
+        
+
+	
+	
+
+		<li >
+			<a href="/community/GIT/">
+				GIT
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/community/contribution_workflow/">
+				Contribution workflow
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/community/best_practices/">
+				Best practices
+				
+			</a>
+		</li>
+	
+
+
+      </ul>
+      <div class="submenuHelper">&gt;</div>
+    </div>
+    
+        
+    </div>
+
+</div>
+</div>
+
+        <div class="container">
+            <div class="well green">
+              <div class="listingblock">
+<div class="title">Example.xml</div>
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="xml"><span class="preprocessor">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot; ?&gt;</span>
+<span class="tag">&lt;xpcf-registry</span> <span class="attribute-name">autoAlias</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">true</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+
+<span class="tag">&lt;module</span> <span class="attribute-name">uuid</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">xxxx</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">xxxx</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">path</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">xxxx</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">description</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">xxxx</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+  <span class="tag">&lt;component</span> <span class="attribute-name">uuid</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">xxxx</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">xxxx</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">description</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">xxxx</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+    <span class="tag">&lt;interface</span> <span class="attribute-name">uuid</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">xxxx</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">xxxx</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">description</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">xxxx</span><span class="delimiter">&quot;</span></span><span class="tag">/&gt;</span>
+    <span class="tag">&lt;interface</span> <span class="attribute-name">uuid</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">xxxx</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">xxxx</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">description</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">xxxx</span><span class="delimiter">&quot;</span></span><span class="tag">/&gt;</span>
+  <span class="tag">&lt;/component&gt;</span>
+<span class="tag">&lt;/module&gt;</span>
+
+<span class="tag">&lt;factory&gt;</span>
+    <span class="tag">&lt;bindings&gt;</span>
+      <span class="tag">&lt;bind</span> <span class="attribute-name">interface</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">xxxx</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">to</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">xxxx</span><span class="delimiter">&quot;</span></span> <span class="tag">/&gt;</span>
+    <span class="tag">&lt;/bindings&gt;</span>
+ <span class="tag">&lt;/factory&gt;</span>
+
+<span class="tag">&lt;properties&gt;</span>
+  <span class="tag">&lt;configuration</span> <span class="attribute-name">component</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">xxxx</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+    <span class="tag">&lt;property</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">xxxx</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">xxxx</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">value</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">xxxx</span><span class="delimiter">&quot;</span></span><span class="tag">/&gt;</span>
+    <span class="tag">&lt;property</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">xxxx</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">xxxx</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">value</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">xxxx</span><span class="delimiter">&quot;</span></span><span class="tag">/&gt;</span>
+  <span class="tag">&lt;/configuration&gt;</span>
+  <span class="tag">&lt;configure</span> <span class="attribute-name">component</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">xxxx</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+    <span class="tag">&lt;property</span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">xxxx</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">xxxx</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+        <span class="tag">&lt;value&gt;</span>y<span class="tag">&lt;/value&gt;</span>
+        <span class="tag">&lt;value&gt;</span>y<span class="tag">&lt;/value&gt;</span>
+        <span class="tag">&lt;value&gt;</span>y<span class="tag">&lt;/value&gt;</span>
+    <span class="tag">&lt;/property&gt;</span>
+  <span class="tag">&lt;/configure&gt;</span>
+<span class="tag">&lt;/properties&gt;</span>
+
+<span class="tag">&lt;/xpcf-registry&gt;</span></code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Node</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Function</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Attributes<br>
+[<em>Required</em> by default]</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">module</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Use that node to add a module to your pipeline.</strong><br>
+Each module is composed of components that you can use in your pipeline.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>uuid</strong> = Each module has an uuid that has to be give here.<br>
+		   <strong>name</strong> = The name of the module used<br>
+		   <strong>path</strong> = The path to the module used<br>
+		   <strong>description</strong> = You can describe a little bit the module function.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">component</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Use that node to use the component in your pipeline.</strong><br>
+Each component inherits from interface.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>uuid</strong> = Each component has an uuid that has to be give here.<br>
+		   <strong>name</strong> = The name of the component used<br>
+		   <strong>description</strong> = You can describe the component function.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">interface</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>This node is linked to component node.</strong><br></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>uuid</strong> = Each interface has an uuid that has to be give here.<br>
+		   <strong>name</strong> = The name of the interface used<br>
+		   <strong>description</strong> = You can describe the interface function.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">factory</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[<em>Optional</em>]<br>
+ <strong>Declare a factory to manage components.</strong> Composed of bindings<br></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">bindings</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Gives opportunity to put priority on components using the same interface.</strong> Composed of bind node<br></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">bind</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>bind a component on an interface to make priority or name on it.</strong><br></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>interface</strong> = Interface to bind<br>
+		<strong>to</strong> = target component of the bind (component of a module added)<br>
+		<strong>name</strong> = [<em>Optional</em>] Name of the bind (link interface&#8594;component)<br></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">properties</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Root Node for parameters declaration of each component</strong><br></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">configuration</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Configure component&#8217;s parameters</strong><br></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>component</strong> = name of the component to configure</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">property</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Change a parameter</strong><br></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>name</strong> = name of the parameter to configure<br>
+		<strong>type</strong> = string / bool / Float / Integer / UnsignedInteger &#8230;&#8203;<br>
+		<strong>value</strong> = parameter value with type respect.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">value</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Use to define a vector. Refer to the example above.</strong><br></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+              
+            </div>
+        </div>
+
+        <!-- build:js scripts/vendor.js -->
+        <!-- bower:js -->
+
+        <!-- endbower -->
+        <!-- endbuild -->
+
+    <!-- build:js({.tmp,src/main/webapp}) scripts/app.js -->
+    <script src="/js/vendor/modernizr.js"></script>
+    <!-- endbuild -->
+    <script type="text/javascript">
+      /* Fix padding-top on anchor with TOC */
+      window.addEventListener("hashchange", function() { scrollBy(0, -115) })
+    </script>
+    </body>
+</html>

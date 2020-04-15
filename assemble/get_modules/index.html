@@ -130,6 +130,30 @@ window.cookieconsent.initialise({
 
   
 
+    <li id="install" class=" red">
+      <a href="/install/">
+        <img src="/assets/images/navbar/install.svg" alt="install" height="42" width="42">
+        Install
+      </a>
+    </li>
+    
+    
+
+  
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
     <li id="use" class=" purple">
       <a href="/use/">
         <img src="/assets/images/navbar/use.svg" alt="use" height="42" width="42">
@@ -237,6 +261,39 @@ window.cookieconsent.initialise({
             </ul>
         </div>
         
+    <div class="submenu red">
+      <div class="submenuHelper">&lt;</div>
+      <ul class="nav" aria-expanded="false">
+        
+        
+
+	
+	
+
+		<li >
+			<a href="/install/windows/">
+				On Windows
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/install/linux/">
+				On Linux
+				
+			</a>
+		</li>
+	
+
+
+      </ul>
+      <div class="submenuHelper">&gt;</div>
+    </div>
+    
     <div class="submenu purple">
       <div class="submenuHelper">&lt;</div>
       <ul class="nav" aria-expanded="false">
@@ -269,17 +326,6 @@ window.cookieconsent.initialise({
 	
 
 		<li >
-			<a href="/use/csharp/">
-				C#
-				
-			</a>
-		</li>
-	
-
-	
-	
-
-		<li >
 			<a href="/use/tools/">
 				Tools
 				
@@ -297,17 +343,6 @@ window.cookieconsent.initialise({
       <ul class="nav" aria-expanded="false">
         
         
-
-	
-	
-
-		<li >
-			<a href="/assemble/install/">
-				Install
-				
-			</a>
-		</li>
-	
 
 	
 	
@@ -346,8 +381,8 @@ window.cookieconsent.initialise({
 	
 
 		<li >
-			<a href="/assemble/api/">
-				API
+			<a href="/assemble/moduleapi/">
+				Module API
 				
 			</a>
 		</li>
@@ -363,17 +398,6 @@ window.cookieconsent.initialise({
       <ul class="nav" aria-expanded="false">
         
         
-
-	
-	
-
-		<li >
-			<a href="/create/install/">
-				Install
-				
-			</a>
-		</li>
-	
 
 	
 	
@@ -467,17 +491,6 @@ window.cookieconsent.initialise({
 	
 
 		<li >
-			<a href="/community/getting_started/">
-				Getting started
-				
-			</a>
-		</li>
-	
-
-	
-	
-
-		<li >
 			<a href="/community/contribution_workflow/">
 				Contribution workflow
 				
@@ -515,8 +528,8 @@ window.cookieconsent.initialise({
 <li><a href="#get_modules">Get Modules</a></li>
 <li><a href="#get_modules_2">Get Modules</a>
 <ul class="sectlevel2">
-<li><a href="#get_modules_for_windows_7_10">Get Modules for Windows 7/10</a></li>
-<li><a href="#get_modules_for_ubuntu_18_04">Get Modules for Ubuntu 18.04</a></li>
+<li><a href="#install">Install</a></li>
+<li><a href="#links">Links</a></li>
 </ul>
 </li>
 </ul>
@@ -531,32 +544,84 @@ window.cookieconsent.initialise({
 <h2 id="get_modules_2"><a class="anchor" href="#get_modules_2"></a><a class="link" href="#get_modules_2">Get Modules</a></h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="get_modules_for_windows_7_10"><a class="anchor" href="#get_modules_for_windows_7_10"></a><a class="link" href="#get_modules_for_windows_7_10">Get Modules for Windows 7/10</a></h3>
+<h3 id="install"><a class="anchor" href="#install"></a><a class="link" href="#install">Install</a></h3>
 <div class="paragraph">
-<p>All you need to do is run (or re-run) SolARFramework Installer.</p>
+<p>All modules binaries can be downloaded by installing dependencies (take a look to the <a href="../../install/index">install page</a>).</p>
 </div>
 <div class="paragraph">
-<p>Please check the <a href="/assemble/install/#install_solar_version_0_5_2_windows_7_10">installation page</a>
-to get instructions on how to download and run the installer.</p>
-</div>
-<div class="paragraph">
-<p>During the installation process, there is the possibility (checkbox) to download the available modules that will be installed in the correct directories for later use.</p>
+<p>All modules sources can be cloned from GitHub using the following links.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="get_modules_for_ubuntu_18_04"><a class="anchor" href="#get_modules_for_ubuntu_18_04"></a><a class="link" href="#get_modules_for_ubuntu_18_04">Get Modules for Ubuntu 18.04</a></h3>
+<h3 id="links"><a class="anchor" href="#links"></a><a class="link" href="#links">Links</a></h3>
 <div class="paragraph">
-<p>The Ubuntu 18.04 installer, described <a href="/assemble/install/#install_solar_version_0_5_2_ubuntu_18_04">here</a> is an executable script that you can run
-with the following option:</p>
+<p>The direct links to modules and samples binaries</p>
 </div>
-<div class="literalblock">
-<div class="content">
-<pre>foo@bar:~$ ./SolARFrameworkInstall-0.5.2.sh binaries</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>This command will install all the available SolAR modules into your BCOMDEVROOT folder. Again, refer to <a href="/assemble/install/#install_solar_version_0_5_2_ubuntu_18_04">Ubuntu 18.04 installation instructions</a> to process.</p>
-</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GitHub url</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Framework</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SolARframework</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/SolarFramework/SolARFramework/releases" class="bare">https://github.com/SolarFramework/SolARFramework/releases</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="7"><p class="tableblock">Modules</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SolARModuleOpenCV</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/SolarFramework/SolARModuleOpenCV/releases" class="bare">https://github.com/SolarFramework/SolARModuleOpenCV/releases</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SolARModuleNonFreeOpenCV</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/SolarFramework/SolARModuleNonFreeOpenCV/releases" class="bare">https://github.com/SolarFramework/SolARModuleNonFreeOpenCV/releases</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SolARModuleTools</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/SolarFramework/SolARModuleTools/releases" class="bare">https://github.com/SolarFramework/SolARModuleTools/releases</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SolARModuleFBOW</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/SolarFramework/SolARModuleFBOW/releases" class="bare">https://github.com/SolarFramework/SolARModuleFBOW/releases</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SolARModuleOpenGV</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/SolarFramework/SolARModuleOpenGV/releases" class="bare">https://github.com/SolarFramework/SolARModuleOpenGV/releases</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SolARModuleCeres</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/SolarFramework/SolARModuleCeres/releases" class="bare">https://github.com/SolarFramework/SolARModuleCeres/releases</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SolARModuleOpenGL</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/SolarFramework/SolARModuleOpenGL/releases" class="bare">https://github.com/SolarFramework/SolARModuleOpenGL/releases</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="4"><p class="tableblock">Samples</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Natural Image Marker</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/SolarFramework/NaturalImageMarker/releases" class="bare">https://github.com/SolarFramework/NaturalImageMarker/releases</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fiducial Marker</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/SolarFramework/FiducialMarker/releases" class="bare">https://github.com/SolarFramework/FiducialMarker/releases</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"> Sample-Slam</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/SolarFramework/Sample-Slam/releases" class="bare">https://github.com/SolarFramework/Sample-Slam/releases</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sample-Triangulation</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/SolarFramework/Sample-Triangulation/releases" class="bare">https://github.com/SolarFramework/Sample-Triangulation/releases</a></p></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>

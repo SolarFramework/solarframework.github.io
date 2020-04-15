@@ -59,6 +59,9 @@ h1 {
     text-decoration: none; }
   .navbar #navbar .nav li a {
     text-transform: uppercase; }
+    .navbar #navbar .nav li a img {
+      max-width: none;
+      width: 24px; }
   .navbar #navbar .nav li:last-of-type {
     margin-left: 30px; }
     .navbar #navbar .nav li:last-of-type a {
@@ -66,6 +69,8 @@ h1 {
       color: #cccccc; }
       .navbar #navbar .nav li:last-of-type a:last-of-type {
         margin-left: 20px; }
+        .navbar #navbar .nav li:last-of-type a:last-of-type div {
+          margin-bottom: 5px; }
     .navbar #navbar .nav li:last-of-type a:focus, .navbar #navbar .nav li:last-of-type a:active, .navbar #navbar .nav li:last-of-type a:hover {
       color: white; }
   .navbar #navbar li.blue a:hover, .navbar #navbar li.blue a:focus {
@@ -224,7 +229,7 @@ h1 {
   z-index: 998;
   position: fixed;
   width: 100%;
-  top: 76px;
+  top: 63px;
   left: 0px;
   margin-left: 0px;
   padding-left: 57px;
@@ -384,7 +389,7 @@ h1 {
 
 .well header {
   /* trick to stick header image to navbar in home */
-  margin-top: 75px; }
+  margin-top: 70px; }
 
 .well article {
   float: left;
@@ -491,7 +496,7 @@ footer {
   border-color: #00cd78; }
 
 /* computer resolution */
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 968px) {
   #toc.toc {
     margin-top: 18px;
     background-color: black;
@@ -506,15 +511,20 @@ footer {
     overflow: auto; }
 
   .container, .navbar .submenu ul {
-    width: 1024px; }
+    width: 100%; }
 
   #toc:not(.hidden) ~ .sect1 {
     margin-left: 19em; }
 
   .navbar.navbar-default > div {
-    width: 1024px;
+    width: 100%;
     margin-right: auto;
     margin-left: auto; }
+
+  .navbar #navbar .nav li a {
+    text-transform: uppercase;
+    padding-top: 24px;
+    padding-bottom: 12px; }
 
   .well h2 {
     min-width: 350px; }
@@ -537,8 +547,8 @@ footer {
 
   .sect1 {
     padding-top: 90px; } }
-/* computer resolution under 1024px */
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+/* computer resolution under 968px */
+@media screen and (min-width: 768px) and (max-width: 967px) {
   .container, .navbar .submenu ul {
     width: 100%; }
 
@@ -547,8 +557,17 @@ footer {
     margin-right: 0px;
     margin-left: 0px; }
 
+  .navbar #navbar .nav li a {
+    text-transform: uppercase;
+    padding-top: 14px;
+    padding-bottom: 12px; }
+
+  .navbar #navbar .nav li:last-of-type {
+    margin-left: 30px;
+    margin-top: -25px; }
+
   .submenu.active {
-    top: 126px;
+    top: 103px;
     /* to be placed under the "two line height" navbar (because logo and nav ul doesn't fit under 1024px so it's a two line navbar */
     height: 35px;
     padding-left: 0px; }
@@ -574,18 +593,12 @@ footer {
     margin-left: auto;
     display: block;
     width: 90%; } }
-@media screen and (min-width: 791px) and (max-width: 859px) {
-  ul.nav > li:last-child {
+@media screen and (min-width: 768px) and (max-width: 859px) {
+  ul.nav.navbar-nav > li:last-child {
     display: none; }
 
   .submenu.active {
-    top: 76px; } }
-@media screen and (min-width: 768px) and (max-width: 790px) {
-  ul.nav > li:last-child {
-    display: none; }
-
-  .submenu.active {
-    top: 126px; } }
+    top: 53px; } }
 /* smartphone resolution */
 @media (max-width: 767px) {
   /*.collapse[aria-expanded='false'] > ul > li.active {
@@ -598,20 +611,26 @@ footer {
     height: 45px;
     min-height: 45px; }
     .navbar ul {
-      background-color: black;
-      margin: 0px -15px; }
+      font-size: 0.8em;
+      font-style: italic; }
       .navbar ul li {
         display: inline-block; }
-    .navbar ul.nav > li:last-child {
+    .navbar ul.nav.navbar-nav > li:last-child {
       display: none; }
     .navbar .nav > li > a {
       padding: 5px 10px; }
     .navbar .nav > li > a, .navbar .nav > li.current-menu-item > a, .navbar .nav > li.current-menu-ancestor > a {
       font-size: 10px;
       color: white;
-      font-style: normal; }
-    .navbar .navbar .submenu > .nav > li > a {
-      font-size: 10px; }
+      font-style: italic; }
+    .navbar .submenu > .nav > li > a {
+      font-size: 1em; }
+    .navbar .navbar #navbar .nav li a {
+      text-transform: uppercase;
+      padding-top: 14px;
+      padding-bottom: 12px; }
+    .navbar .navbar-header {
+      float: left; }
     .navbar .logo {
       width: 120px;
       height: 40px; }
@@ -620,18 +639,19 @@ footer {
     .navbar .navbar-toggle {
       display: none; }
     .navbar .submenu.active {
-      top: 77px;
-      height: 35px;
+      top: 42px;
+      height: 25px;
       padding-left: 0px;
-      display: flex;
+      display: block;
       overflow: auto;
       white-space: nowrap;
-      background: black; }
+      /*background: black;*/ }
       .navbar .submenu.active::-webkit-scrollbar {
         display: none; }
       .navbar .submenu.active li {
         display: inline-block; }
       .navbar .submenu.active .submenuHelper {
+        display: none;
         color: white;
         position: fixed;
         margin-top: 7px; }
@@ -639,7 +659,7 @@ footer {
         right: 0px; }
 
   .sect1 {
-    padding-top: 110px; }
+    padding-top: 50px; }
 
   .sect1 + .sect1 {
     padding: 20px 5px 5px 5px;
@@ -654,7 +674,7 @@ footer {
     list-style-position: inside; /* generates a bug of list bullet on a whole line *
   }*/
   .well {
-    margin-top: 0px; }
+    margin-top: 120px; }
     .well header {
       margin-top: 0px;
       display: none; }
