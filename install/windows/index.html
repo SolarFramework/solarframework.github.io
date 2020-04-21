@@ -529,13 +529,13 @@ window.cookieconsent.initialise({
 <li><a href="#test_solar">Test SolAR</a></li>
 <li><a href="#install_development_environment">Install development environment</a>
 <ul class="sectlevel2">
-<li><a href="#install_dependencies">Install dependencies</a></li>
 <li><a href="#install_your_ides">Install your IDEs</a></li>
 </ul>
 </li>
 <li><a href="#build_solar">Build SolAR</a>
 <ul class="sectlevel2">
 <li><a href="#clone_solar">Clone SolAR</a></li>
+<li><a href="#install_dependencies">Install dependencies</a></li>
 <li><a href="#build_on_qt_creator">Build on Qt Creator</a></li>
 <li><a href="#build_on_visual_studio">Build on Visual Studio</a></li>
 </ul>
@@ -599,59 +599,6 @@ Print the marker included in .zip file to use it during the test.
 <div class="paragraph">
 <p>The SolAR framework uses a dedicated pipeline for linking and compiling code as well as internal tools for third party downloads that should make your job a lot easier.
 As you will see later, the SolAR framework is based on <em>QMake</em> originally created by the Qt Company, but compliant with most IDE including Visual Studio.</p>
-</div>
-<div class="sect2">
-<h3 id="install_dependencies"><a class="anchor" href="#install_dependencies"></a><a class="link" href="#install_dependencies">Install dependencies</a></h3>
-<div class="paragraph">
-<p>For downloading dependencies, the SolAR framework uses the meta dependencies management tool <a href="https://github.com/b-com-software-basis/remaken">Remaken</a> supporting <a href="https://conan.io/">Conan</a>, <a href="https://github.com/microsoft/vcpkg">VCPKG</a> and its native C++ packaging structure based on <a href="https://www.freedesktop.org/wiki/Software/pkg-config/">pkg-config</a> description files.</p>
-</div>
-<div class="paragraph">
-<p>So start by downloading and installing <em>Remaken</em> available on the following link: <a href="https://github.com/b-com-software-basis/remaken/releases/download/win%2Fremaken-1.6.0/Setup_Remaken.exe">Remaken installer</a></p>
-</div>
-<div class="paragraph">
-<p>Start the remaken installer. By default, the dependencies will be installed in your ${USER_HOME} directory, but you can change it by setting another location for your <em>REMAKEN_PKG_ROOT</em> environement variable. By default, Remaken will install Conan and pkg_config which will be used afterwards.<br></p>
-</div>
-<div class="paragraph">
-<p>Then, open a command prompt <strong>with administrator rights</strong> and run:</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>remaken init</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>This command will install the qmake building rules in your ${USER_HOME}/.remaken/rules folder.<br></p>
-</div>
-<div class="paragraph">
-<p>Remaken uses a file called <em>packagedependencies.txt</em> to describe which depedencies to install, in which version, where to install them, and where to download them.<br></p>
-</div>
-<div class="paragraph">
-<p>A global <em>packagedepedencies.txt</em> is available in the  parent GIT repository <em>SolAR</em>, and can be downloaded on the following link:
-<a href="https://raw.githubusercontent.com/SolarFramework/SolAR/master/packagedependencies.txt">packagedependencies.txt</a></p>
-</div>
-<div class="paragraph">
-<p>Copy this file where you want on your computer, open a command prompt in the folder where you have copied the <em>packagedependencies.txt</em> file, and run remaken with the following command:</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>remaken install --cpp-std 17 -b cl-14.1 packagedependencies.txt</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>This command will install all SolAR dependencies in release mode in your <em>${REMAKEN_PKG_ROOT}</em> folder.
-To download the dependencies in debug mode, run the following command:</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>remaken install --cpp-std 17 -b cl-14.1 -c debug packagedependencies.txt</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>This is done, all your dependencies are downloaded and ready to use !</p>
-</div>
-<div class="paragraph">
-<p>Some of the module will download and build third parties using Conan which requires CMake. Install the last version of CMake (minimum version 3.11) on the following <a href="https://cmake.org/download/">link</a>. Do not forget to check "Add CMake to PATH environment variable" during its installation.</p>
-</div>
 </div>
 <div class="sect2">
 <h3 id="install_your_ides"><a class="anchor" href="#install_your_ides"></a><a class="link" href="#install_your_ides">Install your IDEs</a></h3>
@@ -746,6 +693,59 @@ To download the dependencies in debug mode, run the following command:</p>
 </div>
 <div class="paragraph">
 <p>If you do not want to download all the source codes of SolAR, you can have a look to the different repositories available on Github on the <a href="../../community/GIT/index.html#GIT repositories">Community/Git page</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="install_dependencies"><a class="anchor" href="#install_dependencies"></a><a class="link" href="#install_dependencies">Install dependencies</a></h3>
+<div class="paragraph">
+<p>For downloading dependencies, the SolAR framework uses the meta dependencies management tool <a href="https://github.com/b-com-software-basis/remaken">Remaken</a> supporting <a href="https://conan.io/">Conan</a>, <a href="https://github.com/microsoft/vcpkg">VCPKG</a> and its native C++ packaging structure based on <a href="https://www.freedesktop.org/wiki/Software/pkg-config/">pkg-config</a> description files.</p>
+</div>
+<div class="paragraph">
+<p>So start by downloading and installing <em>Remaken</em> available on the following link: <a href="https://github.com/b-com-software-basis/remaken/releases/download/win%2Fremaken-1.6.0/Setup_Remaken.exe">Remaken installer</a></p>
+</div>
+<div class="paragraph">
+<p>Start the remaken installer. By default, the dependencies will be installed in your ${USER_HOME} directory, but you can change it by setting another location for your <em>REMAKEN_PKG_ROOT</em> environement variable. By default, Remaken will install Conan and pkg_config which will be used afterwards.<br></p>
+</div>
+<div class="paragraph">
+<p>Then, open a command prompt <strong>with administrator rights</strong> and run:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>remaken init</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This command will install the qmake building rules in your ${USER_HOME}/.remaken/rules folder.<br></p>
+</div>
+<div class="paragraph">
+<p>Remaken uses a file called <em>packagedependencies.txt</em> to describe which depedencies to install, in which version, where to install them, and where to download them.<br></p>
+</div>
+<div class="paragraph">
+<p>A global <em>packagedepedencies.txt</em> is available in the  parent GIT repository <em>SolAR</em>, and can be downloaded on the following link:
+<a href="https://raw.githubusercontent.com/SolarFramework/SolAR/master/packagedependencies.txt">packagedependencies.txt</a></p>
+</div>
+<div class="paragraph">
+<p>Copy this file where you want on your computer, open a command prompt in the folder where you have copied the <em>packagedependencies.txt</em> file, and run remaken with the following command:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>remaken install --cpp-std 17 -b cl-14.1 packagedependencies.txt</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This command will install all SolAR dependencies in release mode in your <em>${REMAKEN_PKG_ROOT}</em> folder.
+To download the dependencies in debug mode, run the following command:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>remaken install --cpp-std 17 -b cl-14.1 -c debug packagedependencies.txt</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This is done, all your dependencies are downloaded and ready to use !</p>
+</div>
+<div class="paragraph">
+<p>Some of the module will download and build third parties using Conan which requires CMake. Install the last version of CMake (minimum version 3.11) on the following <a href="https://cmake.org/download/">link</a>. Do not forget to check "Add CMake to PATH environment variable" during its installation.</p>
 </div>
 </div>
 <div class="sect2">
