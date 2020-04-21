@@ -529,8 +529,8 @@ window.cookieconsent.initialise({
 <li><a href="#test_solar">Test SolAR</a></li>
 <li><a href="#install_development_environment">Install development environment</a>
 <ul class="sectlevel2">
-<li><a href="#install_dependencies">Install dependencies</a></li>
 <li><a href="#install_your_ide">Install your IDE</a></li>
+<li><a href="#install_dependencies">Install dependencies</a></li>
 </ul>
 </li>
 <li><a href="#build_solar">Build SolAR</a>
@@ -600,6 +600,49 @@ Print the marker included in .zip file to use it during the test.
 As you will see later, the SolAR framework is based on <em>QMake</em> originally created by the Qt Company, but compliant with most IDE.</p>
 </div>
 <div class="sect2">
+<h3 id="install_your_ide"><a class="anchor" href="#install_your_ide"></a><a class="link" href="#install_your_ide">Install your IDE</a></h3>
+<div class="sect3">
+<h4 id="qt_creator"><a class="anchor" href="#qt_creator"></a><a class="link" href="#qt_creator">QT Creator</a></h4>
+<div class="paragraph">
+<p>As SolAR is using QMake file to setup the projects, we highly recomment to install <em>Qt Creator</em>. Moreover, you will have access to wizards which will help you create new SolAR modules, components and pipelines.</p>
+</div>
+<div class="paragraph">
+<p>Download the latest version of QTCreator on the following link:
+<a href="https://www.qt.io/download">QT installer download</a></p>
+</div>
+<div class="paragraph">
+<p>When downloaded, right clik on the <em>Qt installer.run</em> file, select <code><em>properties</em></code>, <code><em>Permissions</em></code>, and check <em>Authorize execution of the file</em>. Then, run your installer.<br></p>
+</div>
+<div class="paragraph">
+<p>Create a <em>Qt</em> account if not already done, select where you want to install <em>Qt</em>.<br>
+You don&#8217;t need to install <em>Qt</em> SDK, just the <em>Qt Creator</em>. So just check the following components:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Qt x.x.x (last version proposed)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>With Desktop gcc 64-bit</p>
+</li>
+<li>
+<p>Android (if you want to build SolAR for Android)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Developer and Designer Tools</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>and start the installation.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
 <h3 id="install_dependencies"><a class="anchor" href="#install_dependencies"></a><a class="link" href="#install_dependencies">Install dependencies</a></h3>
 <div class="paragraph">
 <p>For downloading dependencies, the SolAR framework uses the meta dependencies management tool <a href="https://github.com/b-com-software-basis/remaken">Remaken</a> supporting <a href="https://conan.io/">Conan</a>, <a href="https://github.com/microsoft/vcpkg">VCPKG</a> and its native C++ packaging structure based on <a href="https://www.freedesktop.org/wiki/Software/pkg-config/">pkg-config</a> description files.</p>
@@ -661,49 +704,6 @@ To download the dependencies in debug mode, run the following command:</p>
 </div>
 <div class="paragraph">
 <p>Some of the module will download and build third parties using Conan which requires CMake (minimum version 3.10)</p>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="install_your_ide"><a class="anchor" href="#install_your_ide"></a><a class="link" href="#install_your_ide">Install your IDE</a></h3>
-<div class="sect3">
-<h4 id="qt_creator"><a class="anchor" href="#qt_creator"></a><a class="link" href="#qt_creator">QT Creator</a></h4>
-<div class="paragraph">
-<p>As SolAR is using QMake file to setup the projects, we highly recomment to install <em>Qt Creator</em>. Moreover, you will have access to wizards which will help you create new SolAR modules, components and pipelines.</p>
-</div>
-<div class="paragraph">
-<p>Download the latest version of QTCreator on the following link:
-<a href="https://www.qt.io/download">QT installer download</a></p>
-</div>
-<div class="paragraph">
-<p>When downloaded, right clik on the <em>Qt installer.run</em> file, select <code><em>properties</em></code>, <code><em>Permissions</em></code>, and check <em>Authorize execution of the file</em>. Then, run your installer.<br></p>
-</div>
-<div class="paragraph">
-<p>Create a <em>Qt</em> account if not already done, select where you want to install <em>Qt</em>.<br>
-You don&#8217;t need to install <em>Qt</em> SDK, just the <em>Qt Creator</em>. So just check the following components:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Qt x.x.x (last version proposed)</p>
-<div class="ulist">
-<ul>
-<li>
-<p>With Desktop gcc 64-bit</p>
-</li>
-<li>
-<p>Android (if you want to build SolAR for Android)</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Developer and Designer Tools</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>and start the installation.</p>
 </div>
 </div>
 </div>
