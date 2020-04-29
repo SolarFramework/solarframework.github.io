@@ -567,11 +567,12 @@ window.cookieconsent.initialise({
 <h3 id="download_qtcreator_wizards_for_xpcf"><a class="anchor" href="#download_qtcreator_wizards_for_xpcf"></a><a class="link" href="#download_qtcreator_wizards_for_xpcf">Download QTCreator wizards for XPCF</a></h3>
 <div class="paragraph">
 <p>Creating a new component from scratch can be a little bit tricky. To help you, a QTCreator wizard is available and will make the task much easier.
-Start by uploading the QTCreator wizards for XPCF available on the following link:
-<a href="https://github.com/SolarFramework/Tools/releases/download/XPCFWizard_2_3_0/XPCF_qtcreator_wizards.zip" class="bare">https://github.com/SolarFramework/Tools/releases/download/XPCFWizard_2_3_0/XPCF_qtcreator_wizards.zip</a></p>
+Start by installing this wizard by launching the <em>install.bat</em> on Windows (in your ${REMAKEN_PKG_ROOT}/packages/win-cl-14.1/xpcf/[version]/wizards) or <em>install.sh</em> on Linux (in your ${REMAKEN_PKG_ROOT}/packages/linux-gcc/xpcf/[version]/wizards).</p>
 </div>
 <div class="paragraph">
-<p>Then unzip the downloaded file, and run the <em>install.bat</em> for Windows or the <em>install.sh</em> for Linux.</p>
+<p>You can also download the wizard on the following link:
+<a href="https://github.com/SolarFramework/Tools/releases/download/XPCFWizard_2_3_4/XPCF_qtcreator_wizards.zip" class="bare">https://github.com/SolarFramework/Tools/releases/download/XPCFWizard_2_3_4/XPCF_qtcreator_wizards.zip</a>
+Then unzip the downloaded file, and run the <em>install.bat</em> on Windows or the <em>install.sh</em> on Linux.</p>
 </div>
 </div>
 <div class="sect2">
@@ -632,14 +633,26 @@ button.<br></p>
 <span class="keyword">namespace</span> MODULES {
 <span class="keyword">namespace</span> MyModule {
 
-
-<span class="keyword">class</span> <span class="class">MyDescriptorsExtractor</span> : <span class="directive">public</span> org::bcom::xpcf::ConfigurableBase, <span class="directive">public</span> <span class="directive">virtual</span> SolAR::api::features::IDescriptorsExtractor
+<i class="conum" data-value="1"></i><b>(1)</b>
+<span class="keyword">class</span> <span class="class">MyModule_API_DLLEXPORT</span> MyDescriptorsExtractor : <span class="directive">public</span> org::bcom::xpcf::ConfigurableBase, <span class="directive">public</span> <span class="directive">virtual</span> SolAR::api::features::IDescriptorsExtractor
 {
 <span class="directive">public</span>:
     MyDescriptorsExtractor();
     ~MyDescriptorsExtractor() override;
     <span class="directive">void</span> unloadComponent () override;
-<i class="conum" data-value="1"></i><b>(1)</b>
+
+<i class="conum" data-value="2"></i><b>(2)</b>
+    <span class="directive">inline</span> std::<span class="predefined-type">string</span> getTypeString() override { <span class="keyword">return</span> std::<span class="predefined-type">string</span>(<span class="string"><span class="delimiter">&quot;</span><span class="content">DescriptorsExtractorType::MYCOMPONENT</span><span class="delimiter">&quot;</span></span>) ;};
+
+    <span class="comment">/// @brief Extracts a set of descriptors from a given image around a set of keypoints based on AKAZE algorithm</span>
+    <span class="comment">/// &quot;Fast explicit diffusion for acceleratedfeatures in nonlinear scale space&quot;</span>
+    <span class="comment">/// [in] image: source image.</span>
+    <span class="comment">/// [in] keypoints: set of keypoints.</span>
+    <span class="comment">/// [out] decsriptors: se of computed descriptors.</span>
+    <span class="directive">void</span> extract (<span class="directive">const</span> SRef&lt;Image&gt; image,
+                  <span class="directive">const</span> std::vector&lt; Keypoint &gt; &amp;keypoints,
+                  SRef&lt;DescriptorBuffer&gt; &amp; descriptors) override;
+
 };
 
 
@@ -647,7 +660,7 @@ button.<br></p>
 } <span class="comment">// namespace MODULES</span>
 } <span class="comment">// namespace SolAR</span>
 
-<i class="conum" data-value="2"></i><b>(2)</b>
+<i class="conum" data-value="3"></i><b>(3)</b>
 <span class="keyword">template</span> &lt;&gt; <span class="keyword">struct</span> org::bcom::xpcf::ComponentTraits&lt;SolAR::MODULES::MyModule::MyDescriptorsExtractor&gt;
 {
 
@@ -663,10 +676,14 @@ button.<br></p>
 <table>
 <tr>
 <td><i class="conum" data-value="1"></i><b>1</b></td>
-<td><span class="white">Here, you will have to define the interface of your component inherited from your SolAR interface.</span></td>
+<td><span class="white">Add your export declaration MACRO defined in <em>MyModuleAPI.h</em> file to export your component in the dynamic library of your module (Here <em>MyModule_API_DLLEXPORT</em>).</span></td>
 </tr>
 <tr>
 <td><i class="conum" data-value="2"></i><b>2</b></td>
+<td><span class="white">Here, you will have to define the interface of your component inherited from your SolAR interface. For instance, the <em>getStringType</em> and the <em>extract</em> methods declared in the IDescriptorExtractor abstract interface.</span></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
 <td><span class="white">The traits are automatically defined with a automatically generated UUID, the nam of the component and a description that you are free to change.</span></td>
 </tr>
 </table>
@@ -769,6 +786,12 @@ xpcf::XPCFErrorCode MyDescriptorsExtractor::onConfigured()
     <span class="keyword">return</span> xpcf::XPCFErrorCode::_SUCCESS;
 }
 
+<i class="conum" data-value="4"></i><b>(4)</b>
+<span class="directive">void</span> MyDescriptorsExtractor::extract(<span class="directive">const</span> SRef&lt;Image&gt; image, <span class="directive">const</span> std::vector&lt;Keypoint&gt; &amp; keypoints, SRef&lt;DescriptorBuffer&gt; &amp; descriptors)
+{
+    <span class="comment">// Add the code to extract your descriptor</span>
+
+}
 
 } <span class="comment">// namespace MyModule</span>
 } <span class="comment">// namespace MODULES</span>
@@ -788,6 +811,10 @@ xpcf::XPCFErrorCode MyDescriptorsExtractor::onConfigured()
 <tr>
 <td><i class="conum" data-value="3"></i><b>3</b></td>
 <td><span class="white">Specify here some processing to do when the class member variable values have been set according to the configuration file.</span></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td><span class="white">Add the implementation of the method abstract declared by the inherited SolAR interface. Here, the extract method of the IDescriptorExtractor interface.</span></td>
 </tr>
 </table>
 </div>
@@ -809,6 +836,8 @@ xpcf::XPCFErrorCode MyDescriptorsExtractor::onConfigured()
 <pre class="CodeRay highlight"><code data-lang="cpp"><span class="preprocessor">#include</span> <span class="include">&lt;xpcf/module/ModuleFactory.h&gt;</span>
 <span class="preprocessor">#include</span> <span class="include">&lt;iostream&gt;</span>
 
+<span class="preprocessor">#include</span> <span class="include">&quot;MyDescriptorExtractor.h&quot;</span> <i class="conum" data-value="1"></i><b>(1)</b>
+
 <span class="keyword">namespace</span> xpcf=org::bcom::xpcf;
 
 <span class="comment">/**
@@ -828,11 +857,10 @@ XPCF_DECLARE_MODULE(<span class="string"><span class="delimiter">&quot;</span><s
 <span class="directive">extern</span> <span class="string"><span class="delimiter">&quot;</span><span class="content">C</span><span class="delimiter">&quot;</span></span> XPCF_MODULEHOOKS_API xpcf::XPCFErrorCode XPCF_getComponent(<span class="directive">const</span> xpcf::uuids::uuid&amp; componentUUID,SRef&lt;xpcf::IComponentIntrospect&gt;&amp; interfaceRef)
 {
     xpcf::XPCFErrorCode errCode = xpcf::XPCFErrorCode::_FAIL;
-    errCode = xpcf::tryCreateComponent&lt;SolAR::MODULES::MyModule::componentType&gt;(componentUUID,interfaceRef);
-    <i class="conum" data-value="1"></i><b>(1)</b>
-    <span class="keyword">if</span> (errCode != xpcf::XPCFErrorCode::_SUCCESS) {
-        errCode = xpcf::tryCreateComponent&lt;SolAR::MODULES::MyModule::MyDescriptorsExtractor&gt;(componentUUID,interfaceRef);
-    }
+    errCode = xpcf::tryCreateComponent&lt;SolAR::MODULES::MyModule::MyDescriptorExtractor&gt;(componentUUID,interfaceRef); <i class="conum" data-value="2"></i><b>(2)</b>
+ <span class="comment">//   if (errCode != xpcf::XPCFErrorCode::_SUCCESS) {</span>
+ <span class="comment">//       errCode = xpcf::tryCreateComponent&lt;SolAR::MODULES::MyModule::OtherComponents&gt;(componentUUID,interfaceRef);</span>
+ <span class="comment">//   }</span>
     <span class="keyword">return</span> errCode;
 }
 
@@ -841,7 +869,7 @@ XPCF_DECLARE_MODULE(<span class="string"><span class="delimiter">&quot;</span><s
   * XPCF uses this index to introspect the components available in a module, providing the ability to generate the configuration file skeleton from the code.
   */</span>
 XPCF_BEGIN_COMPONENTS_DECLARATION
-<i class="conum" data-value="2"></i><b>(2)</b>
+<i class="conum" data-value="3"></i><b>(3)</b>
 XPCF_ADD_COMPONENT(SolAR::MODULES::MyModule::MyDEscriptorsExtractor)
 XPCF_END_COMPONENTS_DECLARATION</code></pre>
 </div>
@@ -850,10 +878,14 @@ XPCF_END_COMPONENTS_DECLARATION</code></pre>
 <table>
 <tr>
 <td><i class="conum" data-value="1"></i><b>1</b></td>
-<td><span class="white">Add the next 3 following lines of code to your module main file for each component you want to add to your module (update the second line with the name of your component).</span></td>
+<td><span class="white">Add the header file of the component you want to add to your module</span></td>
 </tr>
 <tr>
 <td><i class="conum" data-value="2"></i><b>2</b></td>
+<td><span class="white">Add the next 3 following lines of code to your module main file for each component you want to add to your module (update the second line with the name of your component).</span></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
 <td><span class="white">Add your component in the component declaration of your module.</span></td>
 </tr>
 </table>

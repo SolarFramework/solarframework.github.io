@@ -597,11 +597,12 @@ XPCF provides the following features to manage SolAR modules:</p>
 <h3 id="download_qtcreator_wizards_for_xpcf"><a class="anchor" href="#download_qtcreator_wizards_for_xpcf"></a><a class="link" href="#download_qtcreator_wizards_for_xpcf">Download QTCreator wizards for XPCF</a></h3>
 <div class="paragraph">
 <p>Creating a new module from scratch can be a little bit tricky. To help you, a QTCreator wizard is available and will make the task much easier.
-Start by uploading the QTCreator wizards for XPCF available on the following link:
-<a href="https://github.com/SolarFramework/Tools/releases/download/XPCFWizard_2_3_0/XPCF_qtcreator_wizards.zip" class="bare">https://github.com/SolarFramework/Tools/releases/download/XPCFWizard_2_3_0/XPCF_qtcreator_wizards.zip</a></p>
+Start by installing this wizard by launching the <em>install.bat</em> on Windows (in your ${REMAKEN_PKG_ROOT}/packages/win-cl-14.1/xpcf/[version]/wizards) or <em>install.sh</em> on Linux (in your ${REMAKEN_PKG_ROOT}/packages/linux-gcc/xpcf/[version]/wizards).</p>
 </div>
 <div class="paragraph">
-<p>Then unzip the downloaded file, and run the <em>install.bat</em> for Windows or the <em>install.sh</em> for Linux.</p>
+<p>You can also download the wizard on the following link:
+<a href="https://github.com/SolarFramework/Tools/releases/download/XPCFWizard_2_3_4/XPCF_qtcreator_wizards.zip" class="bare">https://github.com/SolarFramework/Tools/releases/download/XPCFWizard_2_3_4/XPCF_qtcreator_wizards.zip</a>
+Then unzip the downloaded file, and run the <em>install.bat</em> on Windows or the <em>install.sh</em> on Linux.</p>
 </div>
 </div>
 <div class="sect2">
@@ -780,8 +781,8 @@ include ($${REMAKEN_RULES_ROOT}/remaken_install_target.pri) <i class="conum" dat
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>SolARFramework|0.7.0|SolARFramework|github|https://github.com/SolarFramework/SolarFramework/releases/download
-MyThirdParty1|x.x.x|MyThirdPaty1Folder|github|https://github.com/MyGitHubProject/MyModule/releases/ <i class="conum" data-value="1"></i><b>(1)</b>
+<pre>SolARFramework|0.7.0|SolARFramework|SolARBuild@github|https://github.com/SolarFramework/SolarFramework/releases/download
+MyThirdParty1|x.x.x|MyThirdPaty1Folder|ThirdParty@github|https://github.com/MyGitHubProject/MyModule/releases/ <i class="conum" data-value="1"></i><b>(1)</b>
 MyThirdParty2#stable|x.x.x|MyThirdParty2Folder|conan|conan-center|shared|MyThirdParty2BuildOption <i class="conum" data-value="2"></i><b>(2)</b></pre>
 </div>
 </div>
