@@ -446,6 +446,10 @@ h1 {
 .well a {
   text-decoration: none; }
 
+.whatsnew {
+  float: right;
+  border: 2px solid #ff5050; }
+
 footer {
   position: absolute;
   bottom: 0;
