@@ -403,17 +403,6 @@ window.cookieconsent.initialise({
 	
 
 		<li >
-			<a href="/create/build/">
-				Build
-				
-			</a>
-		</li>
-	
-
-	
-	
-
-		<li >
 			<a href="/create/third_parties_packaging/">
 				Third parties packaging
 				
@@ -734,7 +723,7 @@ win32 {
 INCLUDEPATH += $${PWD}
 
 header_files.path = $${PROJECTDEPLOYDIR}/interfaces/
-header_files.files = $$files($${PWD}/I*.h)
+header_files.files = $$files($${PWD}/*.h)
 
 INSTALLS += header_files
 DISTFILES +=     Makefile
@@ -782,7 +771,7 @@ include ($${REMAKEN_RULES_ROOT}/remaken_install_target.pri) <i class="conum" dat
 <div class="listingblock">
 <div class="content">
 <pre>SolARFramework|0.7.0|SolARFramework|SolARBuild@github|https://github.com/SolarFramework/SolarFramework/releases/download
-MyThirdParty1|x.x.x|MyThirdPaty1Folder|ThirdParty@github|https://github.com/MyGitHubProject/MyModule/releases/ <i class="conum" data-value="1"></i><b>(1)</b>
+MyThirdParty1|x.x.x|MyThirdPaty1Folder|ThirdParty@github|https://github.com/MyGitHubProject/MyModule/releases/download <i class="conum" data-value="1"></i><b>(1)</b>
 MyThirdParty2#stable|x.x.x|MyThirdParty2Folder|conan|conan-center|shared|MyThirdParty2BuildOption <i class="conum" data-value="2"></i><b>(2)</b></pre>
 </div>
 </div>

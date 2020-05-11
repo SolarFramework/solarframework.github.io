@@ -403,17 +403,6 @@ window.cookieconsent.initialise({
 	
 
 		<li >
-			<a href="/create/build/">
-				Build
-				
-			</a>
-		</li>
-	
-
-	
-	
-
-		<li >
 			<a href="/create/third_parties_packaging/">
 				Third parties packaging
 				
@@ -771,6 +760,14 @@ No space in the path of the folder where you are cloning SolAR !
 <div class="content">
 <pre>cd SolAR
 git submodule update --init --recursive</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If you want to move all submodules on Master, laucnh the folloing command</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>git submodule foreach git pull origin master</pre>
 </div>
 </div>
 <div class="paragraph">
