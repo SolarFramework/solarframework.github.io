@@ -529,6 +529,12 @@ window.cookieconsent.initialise({
 <li><a href="#build_on_visual_studio">Build on Visual Studio</a></li>
 </ul>
 </li>
+<li><a href="#q_a">Q&amp;A</a>
+<ul class="sectlevel2">
+<li><a href="#conan_error_when_installing_dependencies_permissionerror_winerror_5">Conan Error when installing dependencies: PermissionError: [WinError 5]</a></li>
+<li><a href="#remaken_does_not_work">Remaken does not work</a></li>
+</ul>
+</li>
 </ul>
 </div>
 <div class="sect1">
@@ -675,7 +681,7 @@ As you will see later, the SolAR framework is based on <em>QMake</em> originally
 <p>For downloading dependencies, the SolAR framework uses the meta dependencies management tool <a href="https://github.com/b-com-software-basis/remaken">Remaken</a> supporting <a href="https://conan.io/">Conan</a>, <a href="https://github.com/microsoft/vcpkg">VCPKG</a> and its native C++ packaging structure based on <a href="https://www.freedesktop.org/wiki/Software/pkg-config/">pkg-config</a> description files.</p>
 </div>
 <div class="paragraph">
-<p>So start by downloading and installing <em>Remaken</em> available on the following link: <a href="https://github.com/b-com-software-basis/remaken/releases/download/win%2Fremaken-1.6.0/Setup_Remaken.exe">Remaken installer</a></p>
+<p>So start by downloading and installing <em>Remaken</em> available on the following link: <a href="https://github.com/b-com-software-basis/remaken/releases/download/win%2Fremaken-1.6.3/Setup_Remaken_1.6.3.exe">Remaken installer</a></p>
 </div>
 <div class="paragraph">
 <p>Start the remaken installer. By default, the dependencies will be installed in your ${USER_HOME} directory, but you can change it by setting another location for your <em>REMAKEN_PKG_ROOT</em> environement variable. By default, Remaken will install Conan and pkg_config which will be used afterwards.<br></p>
@@ -763,7 +769,7 @@ git submodule update --init --recursive</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>If you want to move all submodules on Master, laucnh the folloing command</p>
+<p>If you want to move all submodules on Master, launch the following command</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -779,6 +785,7 @@ git submodule update --init --recursive</pre>
 <div class="paragraph">
 <p>Open the Qt project of your choice, for instance a sample.
 Check by clicking on the <code><em>Projects</em></code> tab, and then on the <code><em>Manage Kits&#8230;&#8203;</em></code> button that your <em>QT MSVC2017 64bit</em> kit is well configured (Microsoft Visual C++ Compiler should be in version <em>15.x.x.x (x86_amd64)</em> if your are using Visual Studio 2017).<br>
+Select <code>Release</code> or <code>Debug</code> compiler depending on the previous dependencies downloaded.
 Just run qmake, and build your project (no need to add an qmake install step).</p>
 </div>
 </div>
@@ -787,6 +794,50 @@ Just run qmake, and build your project (no need to add an qmake install step).</
 <div class="paragraph">
 <p>You have first to set the path of Qt for <em>Qt Visual Studio Tool</em>. Click on the <code><em>Qt Vs Tools</em></code> tab, and then on <code><em>Qt Options</em></code>. Add a new Qt Version (for instance name: <em>5.14.1 MSVC207_64</em>, path: <em>C:\Qt\5.14.1\msvc2017_64</em>).<br>
 When this is done, simply open a Qt project by cliking on the <code><em>Qt VS Tools</em></code> tab, and on <code><em>Open Qt Project File (.pro)</em></code>. Select the Qt project of your choice, then build your project. It&#8217;s done!</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="q_a"><a class="anchor" href="#q_a"></a><a class="link" href="#q_a">Q&amp;A</a></h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="conan_error_when_installing_dependencies_permissionerror_winerror_5"><a class="anchor" href="#conan_error_when_installing_dependencies_permissionerror_winerror_5"></a><a class="link" href="#conan_error_when_installing_dependencies_permissionerror_winerror_5">Conan Error when installing dependencies: PermissionError: [WinError 5]</a></h3>
+<div class="paragraph">
+<p>Some Conan recipes are renaming the unzipped folders embedding the source code of the dependence as soon as they are downloaded locally. Unfortunately, your antivirus or the Windows Search Indexing can lock it. We recommend to deactivate Windows Search Indexing on Conan folders, and check your antivirus to avoid any control after unzipping the conan package. If you have still a problem, you will have to add <em>time.sleep()</em> before renaming your unzipped folder in your problematic conan recipes (see the following thread for more details: <a href="https://github.com/conan-io/conan/issues/5205" class="bare">https://github.com/conan-io/conan/issues/5205</a>).</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="remaken_does_not_work"><a class="anchor" href="#remaken_does_not_work"></a><a class="link" href="#remaken_does_not_work">Remaken does not work</a></h3>
+<div class="paragraph">
+<p>Be sure to install, init and use Remaken from a command prompt with admin rights.
+You can check that <em>cmake</em> and <em>pkg-config</em> are well installed with the following command</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>choco list -l</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>you can also test if you can access remaken thrid parties by running the three following commands:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>cmake -version</pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>pkg-config --version</pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>conan -v</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If not, check that the path of their executables has to be added to the <em>PATH</em> environment variable.</p>
 </div>
 </div>
 </div>
