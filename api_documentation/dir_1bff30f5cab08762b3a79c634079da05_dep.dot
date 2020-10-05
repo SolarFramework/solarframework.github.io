@@ -1,0 +1,11 @@
+digraph "interfaces/api/input/devices" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_ce220005e573b530971a540db913291c {
+    graph [ bgcolor="#ddddee", pencolor="black", label="input" fontname="Helvetica", fontsize="10", URL="dir_ce220005e573b530971a540db913291c.html"]
+  dir_1bff30f5cab08762b3a79c634079da05 [shape=box, label="devices", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_1bff30f5cab08762b3a79c634079da05.html"];
+  }
+  dir_3163639002ef67c6c12f1b2ccf7afca4 [shape=box label="datastructure" URL="dir_3163639002ef67c6c12f1b2ccf7afca4.html"];
+  dir_1bff30f5cab08762b3a79c634079da05->dir_3163639002ef67c6c12f1b2ccf7afca4 [headlabel="4", labeldistance=1.5 headhref="dir_000008_000023.html"];
+}

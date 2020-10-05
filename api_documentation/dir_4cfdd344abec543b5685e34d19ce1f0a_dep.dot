@@ -1,0 +1,11 @@
+digraph "interfaces/api/input/files" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_ce220005e573b530971a540db913291c {
+    graph [ bgcolor="#ddddee", pencolor="black", label="input" fontname="Helvetica", fontsize="10", URL="dir_ce220005e573b530971a540db913291c.html"]
+  dir_4cfdd344abec543b5685e34d19ce1f0a [shape=box, label="files", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_4cfdd344abec543b5685e34d19ce1f0a.html"];
+  }
+  dir_3163639002ef67c6c12f1b2ccf7afca4 [shape=box label="datastructure" URL="dir_3163639002ef67c6c12f1b2ccf7afca4.html"];
+  dir_4cfdd344abec543b5685e34d19ce1f0a->dir_3163639002ef67c6c12f1b2ccf7afca4 [headlabel="1", labeldistance=1.5 headhref="dir_000009_000023.html"];
+}

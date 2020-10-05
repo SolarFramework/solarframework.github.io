@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['solar_20framework',['SolAR Framework',['../md_README.html',1,'']]]
+  ['solarframework',['SolARFramework',['../md__r_e_a_d_m_e.html',1,'']]]
 ];

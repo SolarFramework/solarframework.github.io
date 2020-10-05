@@ -1,0 +1,15 @@
+digraph "SolAR::api::input::files::IMarker2DSquared"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="SolAR::api::input::\lfiles::IMarker2DSquared",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 [label="SolAR::api::input::\lfiles::IMarker",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_sol_a_r_1_1api_1_1input_1_1files_1_1_i_marker.html",tooltip="Loads a general Marker. UUID: b05f3dbb-f93d-465c-aee1-fb58e1480c42 "];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="IComponentIntrospect",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node0 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="SolAR::api::input::\lfiles::IMarker2DNaturalImage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_sol_a_r_1_1api_1_1input_1_1files_1_1_i_marker2_d_natural_image.html",tooltip="Loads a natural image marker. UUID: 8fed06f8-c54d-11e7-abc4-cec278b6b50a "];
+  Node0 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="SolAR::api::input::\lfiles::IMarker2DSquaredBinary",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_sol_a_r_1_1api_1_1input_1_1files_1_1_i_marker2_d_squared_binary.html",tooltip="Loads 2D squared marker based on a black and white grid. UUID: 12d592ff-aa46-40a6-8d65-7fbfb382d60b ..."];
+}

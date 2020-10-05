@@ -1,0 +1,11 @@
+digraph "interfaces/api/solver/pose" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_dfc12365c7a5c1a5338f50289a7b0393 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="solver" fontname="Helvetica", fontsize="10", URL="dir_dfc12365c7a5c1a5338f50289a7b0393.html"]
+  dir_428e3b7f3d393fda54277b7298426dbe [shape=box, label="pose", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_428e3b7f3d393fda54277b7298426dbe.html"];
+  }
+  dir_3163639002ef67c6c12f1b2ccf7afca4 [shape=box label="datastructure" URL="dir_3163639002ef67c6c12f1b2ccf7afca4.html"];
+  dir_428e3b7f3d393fda54277b7298426dbe->dir_3163639002ef67c6c12f1b2ccf7afca4 [headlabel="20", labeldistance=1.5 headhref="dir_000018_000023.html"];
+}
