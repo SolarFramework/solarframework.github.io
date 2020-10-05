@@ -8,5 +8,5 @@ digraph "SolAR::datastructure::CloudPoint"
   Node6 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node6 [label="Vector\< float, 3 \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
   Node7 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node7 [label="SolAR::datastructure\l::PrimitiveInformation",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_sol_a_r_1_1datastructure_1_1_primitive_information.html"];
+  Node7 [label="SolAR::datastructure\l::PrimitiveInformation",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_sol_a_r_1_1datastructure_1_1_primitive_information.html",tooltip="This component includes primitive informations such as confident score, semantic. ..."];
 }

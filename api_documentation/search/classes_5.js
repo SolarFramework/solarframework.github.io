@@ -44,7 +44,7 @@ var searchData=
   ['iloopclosuredetector',['ILoopClosureDetector',['../class_sol_a_r_1_1api_1_1loop_1_1_i_loop_closure_detector.html',1,'SolAR::api::loop']]],
   ['iloopcorrector',['ILoopCorrector',['../class_sol_a_r_1_1api_1_1loop_1_1_i_loop_corrector.html',1,'SolAR::api::loop']]],
   ['image',['Image',['../class_sol_a_r_1_1datastructure_1_1_image.html',1,'SolAR::datastructure']]],
-  ['imageinternal',['ImageInternal',['../class_image_internal.html',1,'ImageInternal'],['../class_sol_a_r_1_1datastructure_1_1_image_1_1_image_internal.html',1,'SolAR::datastructure::Image::ImageInternal']]],
+  ['imageinternal',['ImageInternal',['../class_sol_a_r_1_1datastructure_1_1_image_1_1_image_internal.html',1,'SolAR::datastructure::Image']]],
   ['imapfilter',['IMapFilter',['../class_sol_a_r_1_1api_1_1solver_1_1map_1_1_i_map_filter.html',1,'SolAR::api::solver::map']]],
   ['imapper',['IMapper',['../class_sol_a_r_1_1api_1_1solver_1_1map_1_1_i_mapper.html',1,'SolAR::api::solver::map']]],
   ['imapping',['IMapping',['../class_sol_a_r_1_1api_1_1slam_1_1_i_mapping.html',1,'SolAR::api::slam']]],

@@ -3,5 +3,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node0 [label="Primitive",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_primitive.html",tooltip="This component includes primitive informations such as confident score, semantic. ..."];
+  Node0 [label="SolAR::api::fusion\l::InertialData",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_sol_a_r_1_1api_1_1fusion_1_1_inertial_data.html"];
 }
