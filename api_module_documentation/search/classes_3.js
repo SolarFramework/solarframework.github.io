@@ -52,7 +52,6 @@ var searchData=
   ['solarkeyframeretrieverfbow',['SolARKeyframeRetrieverFBOW',['../class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_f_b_o_w_1_1_sol_a_r_keyframe_retriever_f_b_o_w.html',1,'SolAR::MODULES::FBOW']]],
   ['solarkeyframeselector',['SolARKeyframeSelector',['../class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_t_o_o_l_s_1_1_sol_a_r_keyframe_selector.html',1,'SolAR::MODULES::TOOLS']]],
   ['solarkeyframesmanager',['SolARKeyframesManager',['../class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_t_o_o_l_s_1_1_sol_a_r_keyframes_manager.html',1,'SolAR::MODULES::TOOLS']]],
-  ['solarkeyframesstorageset',['SolARKeyframesStorageSet',['../class_sol_a_r_keyframes_storage_set.html',1,'']]],
   ['solarkeypointdetectornonfreeopencv',['SolARKeypointDetectorNonFreeOpencv',['../class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_n_o_n_f_r_e_e_o_p_e_n_c_v_1_1_sol_a_r_keypoint_detector_non_free_opencv.html',1,'SolAR::MODULES::NONFREEOPENCV']]],
   ['solarkeypointdetectoropencv',['SolARKeypointDetectorOpencv',['../class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_o_p_e_n_c_v_1_1_sol_a_r_keypoint_detector_opencv.html',1,'SolAR::MODULES::OPENCV']]],
   ['solarkeypointdetectorregionopencv',['SolARKeypointDetectorRegionOpencv',['../class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_o_p_e_n_c_v_1_1_sol_a_r_keypoint_detector_region_opencv.html',1,'SolAR::MODULES::OPENCV']]],
@@ -74,7 +73,6 @@ var searchData=
   ['solarperspectivecontrolleropencv',['SolARPerspectiveControllerOpencv',['../class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_o_p_e_n_c_v_1_1_sol_a_r_perspective_controller_opencv.html',1,'SolAR::MODULES::OPENCV']]],
   ['solarpointcloudloader',['SolARPointCloudLoader',['../class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_p_c_l_1_1_sol_a_r_point_cloud_loader.html',1,'SolAR::MODULES::PCL']]],
   ['solarpointcloudmanager',['SolARPointCloudManager',['../class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_t_o_o_l_s_1_1_sol_a_r_point_cloud_manager.html',1,'SolAR::MODULES::TOOLS']]],
-  ['solarpointcloudstorageset',['SolARPointCloudStorageSet',['../class_sol_a_r_point_cloud_storage_set.html',1,'']]],
   ['solarposeestimationplanarpointsopencv',['SolARPoseEstimationPlanarPointsOpencv',['../class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_o_p_e_n_c_v_1_1_sol_a_r_pose_estimation_planar_points_opencv.html',1,'SolAR::MODULES::OPENCV']]],
   ['solarposeestimationpnpopencv',['SolARPoseEstimationPnpOpencv',['../class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_o_p_e_n_c_v_1_1_sol_a_r_pose_estimation_pnp_opencv.html',1,'SolAR::MODULES::OPENCV']]],
   ['solarposeestimationsacpnpopencv',['SolARPoseEstimationSACPnpOpencv',['../class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_o_p_e_n_c_v_1_1_sol_a_r_pose_estimation_s_a_c_pnp_opencv.html',1,'SolAR::MODULES::OPENCV']]],
@@ -89,6 +87,5 @@ var searchData=
   ['solarsvdtriangulationopencv',['SolARSVDTriangulationOpencv',['../class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_o_p_e_n_c_v_1_1_sol_a_r_s_v_d_triangulation_opencv.html',1,'SolAR::MODULES::OPENCV']]],
   ['solarundistortpointsopencv',['SolARUndistortPointsOpencv',['../class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_o_p_e_n_c_v_1_1_sol_a_r_undistort_points_opencv.html',1,'SolAR::MODULES::OPENCV']]],
   ['solarunprojectplanarpointsopencv',['SolARUnprojectPlanarPointsOpencv',['../class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_o_p_e_n_c_v_1_1_sol_a_r_unproject_planar_points_opencv.html',1,'SolAR::MODULES::OPENCV']]],
-  ['solarvideoascameraopencv',['SolARVideoAsCameraOpencv',['../class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_o_p_e_n_c_v_1_1_sol_a_r_video_as_camera_opencv.html',1,'SolAR::MODULES::OPENCV']]],
-  ['solarvisibilitystoragebimap',['SolARVisibilityStorageBiMap',['../class_sol_a_r_visibility_storage_bi_map.html',1,'']]]
+  ['solarvideoascameraopencv',['SolARVideoAsCameraOpencv',['../class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_o_p_e_n_c_v_1_1_sol_a_r_video_as_camera_opencv.html',1,'SolAR::MODULES::OPENCV']]]
 ];
