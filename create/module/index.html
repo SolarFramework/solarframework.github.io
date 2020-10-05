@@ -289,6 +289,17 @@ window.cookieconsent.initialise({
 		</li>
 	
 
+	
+	
+
+		<li >
+			<a href="/install/android/">
+				For Android
+				
+			</a>
+		</li>
+	
+
 
       </ul>
       <div class="submenuHelper">&gt;</div>
@@ -524,6 +535,7 @@ window.cookieconsent.initialise({
 <li><a href="#Module_Dependencies">Package Dependencies file</a></li>
 <li><a href="#mymoduleapi_h">MyModuleAPI.h</a></li>
 <li><a href="#mymodule_main_cpp">MyModule_main.cpp</a></li>
+<li><a href="#mymodule_pc_in_file">MyModule.pc.in file</a></li>
 <li><a href="#RegistryFile">The registry file</a></li>
 </ul>
 </li>
@@ -674,62 +686,94 @@ Then unzip the downloaded file, and run the <em>install.bat</em> on Windows or t
 <div class="listingblock">
 <div class="title">MyModule.pro</div>
 <div class="content">
-<pre>QT       -= core gui
-CONFIG -= app_bundle qt
+<pre>## remove Qt dependencies
+QT       -= core gui
+CONFIG -= qt
 
+## global defintions : target lib name, version
+INSTALLSUBDIR = SolARBuild
 TARGET = MyModule
-FRAMEWORK = $${TARGET}
-VERSION=1.0.0 <i class="conum" data-value="1"></i><b>(1)</b>
-DEFINES +=  $${TARGET}VERSION=\"$${VERSION}\"
+FRAMEWORK = $$TARGET
+VERSION=X.X.X <i class="conum" data-value="1"></i><b>(1)</b>
 
+DEFINES += MYVERSION=$${VERSION}
+DEFINES += TEMPLATE_LIBRARY
 CONFIG += c++1z
 
 include(findremakenrules.pri) <i class="conum" data-value="2"></i><b>(2)</b>
 
-CONFIG += shared
+CONFIG(debug,debug|release) {
+    DEFINES += _DEBUG=1
+    DEFINES += DEBUG=1
+}
 
-DEPENDENCIESCONFIG = sharedlib
-DEPENDENCIESCONFIG += install_recurse <i class="conum" data-value="3"></i><b>(3)</b>
+CONFIG(release,debug|release) {
+    DEFINES += _NDEBUG=1
+    DEFINES += NDEBUG=1
+}
+
+DEPENDENCIESCONFIG = shared install_recurse <i class="conum" data-value="3"></i><b>(3)</b>
 
 ## Configuration for Visual Studio to install binaries and dependencies. Work also for QT Creator bby replacing QMAKE_INSTALL
 PROJECTCONFIG = QTVS <i class="conum" data-value="4"></i><b>(4)</b>
 
-#NOTE : CONFIG as staticlib or sharedlib, DEPENDENCIESCONFIG as staticlib or sharedlib and PROJECTDEPLOYDIR MUST BE DEFINED BEFORE templatelibbundle.pri inclusion
-include ($${REMAKEN_RULES_ROOT}/templatelibconfig.pri)
+#NOTE : CONFIG as staticlib or sharedlib, DEPENDENCIESCONFIG as staticlib or sharedlib, QMAKE_TARGET.arch and PROJECTDEPLOYDIR MUST BE DEFINED BEFORE templatelibconfig.pri inclusion
+include ($$shell_quote($$shell_path($${QMAKE_REMAKEN_RULES_ROOT}/templatelibconfig.pri)))  # Shell_quote &amp; shell_path required for visual on windows
 
-DEFINES += BOOST_ALL_NO_LIB
-DEFINES += BOOST_ALL_DYN_LINK
+## DEFINES FOR MSVC/INTEL C++ compilers
+msvc {
+DEFINES += "_BCOM_SHARED=__declspec(dllexport)"
+}
 
-SOURCES +=     MyModule_main.cpp
+INCLUDEPATH += interfaces/
 
-HEADERS +=     MyModuleAPI.h
-unix {
+include (MyModule.pri)
+#SOURCES +=     MyModule_main.cpp
+#HEADERS +=     MyModuleAPI.h
+
+unix:!android {
+    QMAKE_CXXFLAGS += -Wignored-qualifiers
+#    QMAKE_LINK=clang++
+#    QMAKE_CXX = clang++
 }
 
 macx {
     DEFINES += _MACOS_TARGET_
     QMAKE_MAC_SDK= macosx
-    QMAKE_CFLAGS += -mmacosx-version-min=10.7 #-x objective-c++
-    QMAKE_CXXFLAGS += -mmacosx-version-min=10.7 -std=c++17 -fPIC#-x objective-c++
+    QMAKE_CFLAGS += -mmacosx-version-min=10.7 -std=c11 #-x objective-c++
+    QMAKE_CXXFLAGS += -mmacosx-version-min=10.7 -std=c11 -std=c++11 -O3 -fPIC#-x objective-c++
     QMAKE_LFLAGS += -mmacosx-version-min=10.7 -v -lstdc++
     LIBS += -lstdc++ -lc -lpthread
 }
 
 win32 {
-    DEFINES += _X86_VC12_TARGET_
-    DEFINES += MBCS _MBCS
- }
 
-INCLUDEPATH += $${PWD}
+    DEFINES += WIN64 UNICODE _UNICODE
+    QMAKE_COMPILER_DEFINES += _WIN64
+    QMAKE_CXXFLAGS += -wd4250 -wd4251 -wd4244 -wd4275 /Od
+}
 
-header_files.path = $${PROJECTDEPLOYDIR}/interfaces/
-header_files.files = $$files($${PWD}/*.h)
+android {
+    ANDROID_ABIS="arm64-v8a"
+}
+header_files.path = $${PROJECTDEPLOYDIR}/interfaces
+header_files.files = $$files($${PWD}/interfaces/*.h*)
+
+xpcf_xml_files.path = $${USERHOMEFOLDER}/.xpcf/SolAR
+xpcf_xml_files.files=$$files($${PWD}/xpcf*.xml)
 
 INSTALLS += header_files
-DISTFILES +=     Makefile
+INSTALLS += xpcf_xml_files
+
+OTHER_FILES += \
+    packagedependencies.txt \
+    packagedependencies-linux.txt \
+    packagedependencies-mac.txt \
+    packagedependencies-win.txt \
+    packagedependencies-android.txt
 
 #NOTE : Must be placed at the end of the .pro
-include ($${REMAKEN_RULES_ROOT}/remaken_install_target.pri) <i class="conum" data-value="5"></i><b>(5)</b></pre>
+include ($$shell_quote($$shell_path($${QMAKE_REMAKEN_RULES_ROOT}/remaken_install_target.pri))))  #&lt;5&gt; # Shell_quote &amp; shell_path required for visual on windows</pre>
 </div>
 </div>
 <div class="colist arabic">
@@ -770,7 +814,7 @@ include ($${REMAKEN_RULES_ROOT}/remaken_install_target.pri) <i class="conum" dat
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>SolARFramework|0.7.0|SolARFramework|SolARBuild@github|https://github.com/SolarFramework/SolarFramework/releases/download
+<pre>SolARFramework|0.8.0|SolARFramework|SolARBuild@github|https://github.com/SolarFramework/SolarFramework/releases/download
 MyThirdParty1|x.x.x|MyThirdPaty1Folder|ThirdParty@github|https://github.com/MyGitHubProject/MyModule/releases/download <i class="conum" data-value="1"></i><b>(1)</b>
 MyThirdParty2#stable|x.x.x|MyThirdParty2Folder|conan|conan-center|shared|MyThirdParty2BuildOption <i class="conum" data-value="2"></i><b>(2)</b></pre>
 </div>
@@ -882,11 +926,11 @@ XPCF_END_COMPONENTS_DECLARATION</code></pre>
 <div class="paragraph">
 <p>Each time you will want to embed a new component into the module, you will have to add its creation in the <em>XPCF_getComponent</em> method and to add it in the component declaration.</p>
 </div>
-<div class="sect3">
-<h4 id="mymodule_pc_in_file"><a class="anchor" href="#mymodule_pc_in_file"></a><a class="link" href="#mymodule_pc_in_file">MyModule.pc.in file</a></h4>
+</div>
+<div class="sect2">
+<h3 id="mymodule_pc_in_file"><a class="anchor" href="#mymodule_pc_in_file"></a><a class="link" href="#mymodule_pc_in_file">MyModule.pc.in file</a></h3>
 <div class="paragraph">
 <p>The SolAR build pipeline can use <a href="https://www.freedesktop.org/wiki/Software/pkg-config/">pkg-config</a> that helps to insert the correct compiler options on the command line so an application can use <em>gcc -o test test.c pkg-config --libs --cflags glib-2.0</em> for instance, rather than hard-coding values on where to find glib (or other libraries). When you will install your module, this file will be directly copied to your binary folder <em>&lt;USER_HOME&gt;/.remaken/packages/&lt;yourInstallSubDir&gt;/&lt;yourCompiler&gt;/&lt;MyModule&gt;/&lt;MyModule_Version&gt;</em>.</p>
-</div>
 </div>
 </div>
 <div class="sect2">

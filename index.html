@@ -289,6 +289,17 @@ window.cookieconsent.initialise({
 		</li>
 	
 
+	
+	
+
+		<li >
+			<a href="/install/android/">
+				For Android
+				
+			</a>
+		</li>
+	
+
 
       </ul>
       <div class="submenuHelper">&gt;</div>
@@ -537,16 +548,25 @@ window.cookieconsent.initialise({
   </article>
   <article class="col-md-5 whatsnew">
     <h2>What's new in SolAR framework?</h2>
-    <p>v0.7.0 just released! </p>
-    <br />
-    <p>New features:
+    <p>v0.8.0 just released! (2020/09/26) </p>
+      <div class="container">
+        <ul>
+          <li> Android is now supported </li>
+          <li> The SLAM pipeline integrates a global bundle adjustment and a loop closure </li>
+          <li> The map can be saved and reloaded for persistent AR experiences </li>
+          <li> Storage components are now available to share data between processing components (point clouds, keyframes, covisibility, etc.) </li>
+          <li> Component injection to create high-level component implementations (e.g. SLAM bootstraper, tracking, and mapping)  with the low-level components of your choice (e.g. keypoint detector, descriptor, matcher, or PnP)</li>
+          <li> Binded or injected components are now configurable with specific properties (XPCF 2.4.0) </li>
+          <li> Use of conan-center-index remote and of a new solar conan remote for installing third parties </li>
+        </ul>
+      </div>
+    <p>v0.7.0 (2020/02/07)</p>
       <div class="container">
         <ul>
           <li> A SLAM pipeline is now available on SolAR Framework</li>
           <li> New build pipeline, based on qmake</li>
         </ul>
       </div>
-    </p>
   </article>
 </section>
 <section>

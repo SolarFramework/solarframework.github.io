@@ -289,6 +289,17 @@ window.cookieconsent.initialise({
 		</li>
 	
 
+	
+	
+
+		<li >
+			<a href="/install/android/">
+				For Android
+				
+			</a>
+		</li>
+	
+
 
       </ul>
       <div class="submenuHelper">&gt;</div>
@@ -516,7 +527,7 @@ window.cookieconsent.initialise({
 <ul class="sectlevel1">
 <li><a href="#install_on_windows">Install On Windows</a></li>
 <li><a href="#test_solar">Test SolAR</a></li>
-<li><a href="#install_development_environment">Install development environment</a>
+<li><a href="#InstalDevEnv">Install development environment</a>
 <ul class="sectlevel2">
 <li><a href="#install_your_ides">Install your IDEs</a></li>
 <li><a href="#install_dependencies">Install dependencies</a></li>
@@ -547,7 +558,7 @@ window.cookieconsent.initialise({
 <h2 id="test_solar"><a class="anchor" href="#test_solar"></a><a class="link" href="#test_solar">Test SolAR</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>We provide you a bundle to test our samples code. It&#8217;s just a .zip file including SolAR&#8217;s .dlls and an .exe file.</p>
+<p>We provide you with a set of samples to test the possibilities of the SolAR framework. Each .zip file corresponds to stand-alone applications, including all necessary SolAR .dll and .exe files.</p>
 </div>
 <table class="tableblock frame-all grid-all spread">
 <caption class="title">Table 1. Available Samples</caption>
@@ -558,19 +569,19 @@ window.cookieconsent.initialise({
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Natural Image Marker</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/SolarFramework/NaturalImageMarker/releases/download/NaturalImageMarker%2F0.7.0%2Fwin/SolAR_Natural_0_7_0.zip">download link</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/SolarFramework/NaturalImageMarker/releases/download/NaturalImageMarker%2F0.8.0%2Fwin/SolAR_Natural_0_8_0.zip">download link</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Fiducial Marker</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/SolarFramework/FiducialMarker/releases/download/FiducialMarker%2F0.7.0%2Fwin/SolAR_Fiducial_0_7_0.zip">download link</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/SolarFramework/FiducialMarker/releases/download/FiducialMarker%2F0.8.0%2Fwin/SolAR_Fiducial_0_8_0.zip">download link</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"> SLAM</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/SolarFramework/Sample-Slam/releases/download/SLAM%2F0.7.0%2Fwin/SolAR_SLAM_0_7_0.zip">download link</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/SolarFramework/Sample-Slam/releases/download/SLAM%2F0.8.0%2Fwin/SolAR_SLAM_0_8_0.zip">download link</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Triangulation</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/SolarFramework/Sample-Triangulation/releases/download/Triangulation%2F0.7.0%2Fwin/SolAR_Triangulation_0_7_0.zip">download link</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/SolarFramework/Sample-Triangulation/releases/download/Triangulation%2F0.8.0%2Fwin/SolAR_Triangulation_0_8_0.zip">download link</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -581,7 +592,7 @@ window.cookieconsent.initialise({
 <i class="fa icon-important" title="Important"></i>
 </td>
 <td class="content">
-Print the marker included in .zip file to use it during the test.
+Print the marker image included in .zip file to perform the test.
 </td>
 </tr>
 </table>
@@ -589,21 +600,21 @@ Print the marker included in .zip file to use it during the test.
 </div>
 </div>
 <div class="sect1">
-<h2 id="install_development_environment"><a class="anchor" href="#install_development_environment"></a><a class="link" href="#install_development_environment">Install development environment</a></h2>
+<h2 id="InstalDevEnv"><a class="anchor" href="#InstalDevEnv"></a><a class="link" href="#InstalDevEnv">Install development environment</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The SolAR framework uses a dedicated pipeline for linking and compiling code as well as internal tools for third party downloads that should make your job a lot easier.
-As you will see later, the SolAR framework is based on <em>QMake</em> originally created by the Qt Company, but compliant with most IDE including Visual Studio.</p>
+<p>The SolAR framework uses a dedicated pipeline to link and compile code as well as internal tools for third party downloads which should make your job much easier.
+As you will see later, the SolAR framework is based on <em>QMake</em> originally created by the Qt Company, but is compliant with most IDE including Visual Studio.</p>
 </div>
 <div class="sect2">
 <h3 id="install_your_ides"><a class="anchor" href="#install_your_ides"></a><a class="link" href="#install_your_ides">Install your IDEs</a></h3>
 <div class="sect3">
 <h4 id="visual_studio"><a class="anchor" href="#visual_studio"></a><a class="link" href="#visual_studio">Visual Studio</a></h4>
 <div class="paragraph">
-<p>You will have to install Visual Studio to install the corresponding compiler and debugger on your machine. The community version 2017 has been tested and is available on the following link: <a href="https://my.visualstudio.com/Downloads?q=visual%20studio%202017&amp;wt.mc_id=o~msft~vscom~older-downloads">Visual Studio installer</a></p>
+<p>You will have to install Visual Studio to get the corresponding compiler and debugger on your machine. The community version 2017 has been tested and is available on the following link: <a href="https://my.visualstudio.com/Downloads?q=visual%20studio%202017&amp;wt.mc_id=o~msft~vscom~older-downloads">Visual Studio installer</a></p>
 </div>
 <div class="paragraph">
-<p>We recommand to install at least the following features:</p>
+<p>We recommend to install at least the following features:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -622,10 +633,10 @@ As you will see later, the SolAR framework is based on <em>QMake</em> originally
 <div class="sect3">
 <h4 id="qt_creator"><a class="anchor" href="#qt_creator"></a><a class="link" href="#qt_creator">QT Creator</a></h4>
 <div class="paragraph">
-<p>As SolAR is using QMake file to setup the projects, we highly recomment to install <em>Qt Creator</em>. Moreover, you will have access to wizards which will help you create new SolAR modules, components and pipelines.</p>
+<p>As SolAR is using QMake file to setup the projects, we highly recommend to install <em>Qt Creator</em>. Moreover, you will have access to wizards which will help you create new SolAR modules, components and pipelines.</p>
 </div>
 <div class="paragraph">
-<p>Download the last version of QTCreator on the following link:
+<p>Download the last version of QTCreator on the following link (scroll down to choose "Downloads for open-source users" for open-source development):
 <a href="https://www.qt.io/download">QT installer download</a></p>
 </div>
 <div class="paragraph">
@@ -671,64 +682,127 @@ As you will see later, the SolAR framework is based on <em>QMake</em> originally
 <div class="sect3">
 <h4 id="qt_visual_studio_tool"><a class="anchor" href="#qt_visual_studio_tool"></a><a class="link" href="#qt_visual_studio_tool">QT Visual Studio Tool</a></h4>
 <div class="paragraph">
-<p>If you are more comfortable with Visual Studio, you will have to install the Visual Studio plugin called <em>QT Visual Studio Tool</em> which will allow you to open Qt projects. To do so, Open Visual Studio, click on <code><em>Tools</em></code> menu, then on <code><em>Extensions and Updates</em></code>. Search for <em>Qt Visual Studio Tools</em>, and install it. To complete this installation, you have to restart Visual Studio.</p>
+<p>If you are more comfortable with Visual Studio, you will have to install the Visual Studio plugin called <em>QT Visual Studio Tool</em> which will allow you to open Qt projects. To do so, Open Visual Studio, click on <code><em>Tools</em></code> menu, then on <code><em>Extensions and Updates</em></code>. Search for <em>Qt Visual Studio Tools</em>, and install it. To complete this installation, you must restart Visual Studio.</p>
 </div>
 </div>
 </div>
 <div class="sect2">
 <h3 id="install_dependencies"><a class="anchor" href="#install_dependencies"></a><a class="link" href="#install_dependencies">Install dependencies</a></h3>
 <div class="paragraph">
-<p>For downloading dependencies, the SolAR framework uses the meta dependencies management tool <a href="https://github.com/b-com-software-basis/remaken">Remaken</a> supporting <a href="https://conan.io/">Conan</a>, <a href="https://github.com/microsoft/vcpkg">VCPKG</a> and its native C++ packaging structure based on <a href="https://www.freedesktop.org/wiki/Software/pkg-config/">pkg-config</a> description files.</p>
+<p>To download dependencies, the SolAR framework uses the meta dependencies management tool <a href="https://github.com/b-com-software-basis/remaken">Remaken</a> supporting <a href="https://conan.io/">Conan</a>, <a href="https://github.com/microsoft/vcpkg">VCPKG</a> and its native C++ packaging structure based on <a href="https://www.freedesktop.org/wiki/Software/pkg-config/">pkg-config</a> description files.</p>
 </div>
-<div class="paragraph">
-<p>So start by downloading and installing <em>Remaken</em> available on the following link: <a href="https://github.com/b-com-software-basis/remaken/releases/download/win%2Fremaken-1.6.3/Setup_Remaken_1.6.3.exe">Remaken installer</a></p>
+<div class="sect3">
+<h4 id="InstallRemaken"><a class="anchor" href="#InstallRemaken"></a><a class="link" href="#InstallRemaken">Install Remaken</a></h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Start by downloading and installing <em>Remaken</em> available on the following link: <a href="https://github.com/b-com-software-basis/remaken/releases/download/1.7.1/Setup_Remaken_1.7.1.exe">Remaken installer version 1.7.1</a></p>
+</li>
+<li>
+<p>Launch the remaken installer <strong>with administrator rights</strong>. By default, the dependencies will be installed in your <code>C:/Users/%Username%</code> directory, but you can change it by setting another location for your <em>REMAKEN_PKG_ROOT</em> environement variable. By default, Remaken will install Conan, pkg_config and CMake which will be used afterwards. It will also add conan-community and bincrafters conan remotes. Conan will check these remotes for searching your dependencies.+</p>
+</li>
+<li>
+<p>SolAR has its own conan remote to store pre-built dependencies for the common configurations used by the SolAR Framework. You will need to add this conan remote with the following command in a command prompt:</p>
+</li>
+</ul>
 </div>
-<div class="paragraph">
-<p>Start the remaken installer. By default, the dependencies will be installed in your ${USER_HOME} directory, but you can change it by setting another location for your <em>REMAKEN_PKG_ROOT</em> environement variable. By default, Remaken will install Conan and pkg_config which will be used afterwards.<br></p>
+<div class="listingblock">
+<div class="content">
+<pre>conan remote add conan-solar https://artifact.b-com.com/api/conan/solar-conan-local</pre>
 </div>
-<div class="paragraph">
+</div>
+<div class="ulist">
+<ul>
+<li>
 <p>Then, open a command prompt <strong>with administrator rights</strong> and run:</p>
+</li>
+</ul>
 </div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>remaken init</pre>
+<pre>remaken init --tag latest</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>This command will install the qmake building rules in your ${USER_HOME}/.remaken/rules folder.<br></p>
+<p>This command will install the latest the qmake building rules in your <code>C:/Users/%Username%/.remaken/rules</code> folder.</p>
 </div>
 <div class="paragraph">
-<p>Remaken is compatible with Conan. As Conan will use CMake ot build your third parties, you will need to install it before using Remaken by launching the installer available <a href="https://cmake.org/download/">here</a>.</p>
+<p>Finally, you need to configure your remaken profile according to your development environment. To do so, run the following command in a command prompt:</p>
 </div>
-<div class="paragraph">
-<p>Remaken uses a file called <em>packagedependencies.txt</em> to describe which depedencies to install, in which version, where to install them, and where to download them.<br></p>
-</div>
-<div class="paragraph">
-<p>A global <em>packagedepedencies.txt</em> is available in the  parent GIT repository <em>SolAR</em>, and can be downloaded on the following link:
-<a href="https://raw.githubusercontent.com/SolarFramework/SolAR/master/packagedependencies.txt">packagedependencies.txt</a></p>
-</div>
-<div class="paragraph">
-<p>Copy this file where you want on your computer, open a command prompt in the folder where you have copied the <em>packagedependencies.txt</em> file, and run remaken with the following command:</p>
-</div>
-<div class="literalblock">
+<div class="listingblock">
 <div class="content">
-<pre>remaken install --cpp-std 17 -b cl-14.1 packagedependencies.txt</pre>
+<pre>remaken profile init --cpp-std 17 -b cl-14.1 -o win -a x86_64</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="set_conan_profile"><a class="anchor" href="#set_conan_profile"></a><a class="link" href="#set_conan_profile">Set conan profile</a></h4>
+<div class="paragraph">
+<p>As we are using conan to download dependencies, you need to configure your default conan profile. To do so, open the default file available in your <code>C:/Users/%Username%/.conan/profiles</code>, and replace the configuration by the following one before saving it:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>[settings]
+os=Windows
+os_build=Windows
+arch=x86_64
+arch_build=x86_64
+compiler=Visual Studio
+compiler.cppstd=17
+compiler.version=15
+build_type=Release
+[options]
+[build_requires]
+[env]</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>This command will install all SolAR dependencies in release mode in your <em>${REMAKEN_PKG_ROOT}</em> folder.
-To download the dependencies in debug mode, run the following command:</p>
+<p>Now, you are ready to download your dependencies with Remaken.</p>
 </div>
-<div class="literalblock">
+</div>
+<div class="sect3">
+<h4 id="use_remaken"><a class="anchor" href="#use_remaken"></a><a class="link" href="#use_remaken">Use Remaken</a></h4>
+<div class="paragraph">
+<p>Remaken uses a file called <em>packagedependencies.txt</em> to describe which depedencies to install, in which version, where to install them, where to download them, with which package manager and with which configuration.<br></p>
+</div>
+<div class="paragraph">
+<p>A global <em>packagedepedencies.txt</em> defining the common dependencies with specific <em>packagedependencies_os.txt</em> files defining dependencies which are specific for each os are available in the parent GIT repository <em>SolAR</em>, and can be downloaded on the following link:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://raw.githubusercontent.com/SolarFramework/SolAR/master/packagedependencies.txt">packagedependencies.txt</a></p>
+</li>
+<li>
+<p><a href="https://raw.githubusercontent.com/SolarFramework/SolAR/master/packagedependencies-win.txt">packagedependencies-win.txt</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Copy these files where you want on your computer, open a terminal in the folder where you have copied the <em>packagedependencies.txt</em> and <em>packagedependencies_os.txt</em> files, and run remaken with the following command:</p>
+</div>
+<div class="listingblock">
 <div class="content">
-<pre>remaken install --cpp-std 17 -b cl-14.1 -c debug packagedependencies.txt</pre>
+<pre>remaken install packagedependencies.txt</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This command will install all SolAR dependencies in release mode in your <em>C:/Users/%Username%/.remaken/packages</em> folder. You can go and have a cup of coffee while it&#8217;s downloading.</p>
+</div>
+<div class="paragraph">
+<p>To download the dependencies in debug mode, run the following command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>remaken install -c debug packagedependencies.txt</pre>
 </div>
 </div>
 <div class="paragraph">
 <p>This is done, all your dependencies are downloaded and ready to use !</p>
 </div>
 <div class="paragraph">
-<p>Some of the module will download and build third parties using Conan which requires CMake. Install the last version of CMake (minimum version 3.11) on the following <a href="https://cmake.org/download/">link</a>. Do not forget to check "Add CMake to PATH environment variable" during its installation.</p>
+<p>Some of the module will download and build third parties using Conan which requires CMake (minimum version 3.10).</p>
+</div>
 </div>
 </div>
 </div>
@@ -739,7 +813,7 @@ To download the dependencies in debug mode, run the following command:</p>
 <div class="sect2">
 <h3 id="clone_solar"><a class="anchor" href="#clone_solar"></a><a class="link" href="#clone_solar">Clone SolAR</a></h3>
 <div class="paragraph">
-<p>SolAR is made up of a multitude of projects (SolAR Framework, SolAR pipeline manager, modules, samples, etc.). To help you, we have created a parent repository with sub-modules regrouping all source codes of SolAR. You can clone it from the following url:
+<p>SolAR is made up of a multitude of projects (SolAR Framework, SolAR pipeline manager, modules, samples, etc.). To help you, we have created a parent repository with sub-modules regrouping all source codes of SolAR projects. You can clone it from the following url:
 <a href="https://github.com/SolarFramework/SolAR.git" class="bare">https://github.com/SolarFramework/SolAR.git</a></p>
 </div>
 <div class="admonitionblock warning">
@@ -786,7 +860,7 @@ git submodule update --init --recursive</pre>
 <p>Open the Qt project of your choice, for instance a sample.
 Check by clicking on the <code><em>Projects</em></code> tab, and then on the <code><em>Manage Kits&#8230;&#8203;</em></code> button that your <em>QT MSVC2017 64bit</em> kit is well configured (Microsoft Visual C++ Compiler should be in version <em>15.x.x.x (x86_amd64)</em> if your are using Visual Studio 2017).<br>
 Select <code>Release</code> or <code>Debug</code> compiler depending on the previous dependencies downloaded.
-Just run qmake, and build your project (no need to add an qmake install step).</p>
+Just run qmake, and build your project (no need to add a qmake install step).</p>
 </div>
 </div>
 <div class="sect2">
@@ -811,15 +885,7 @@ When this is done, simply open a Qt project by cliking on the <code><em>Qt VS To
 <h3 id="remaken_does_not_work"><a class="anchor" href="#remaken_does_not_work"></a><a class="link" href="#remaken_does_not_work">Remaken does not work</a></h3>
 <div class="paragraph">
 <p>Be sure to install, init and use Remaken from a command prompt with admin rights.
-You can check that <em>cmake</em> and <em>pkg-config</em> are well installed with the following command</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>choco list -l</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>you can also test if you can access remaken thrid parties by running the three following commands:</p>
+You can check that <em>cmake</em>, <em>pkg-config</em> and conan are well installed with the following command:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -837,7 +903,12 @@ You can check that <em>cmake</em> and <em>pkg-config</em> are well installed wit
 </div>
 </div>
 <div class="paragraph">
-<p>If not, check that the path of their executables has to be added to the <em>PATH</em> environment variable.</p>
+<p>If not, sometimes the remaken setup encounters conflicts with a version of Python already installed on your machine. If it is the case, install cmake by your own with pip:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>pip install cmake</pre>
+</div>
 </div>
 </div>
 </div>
