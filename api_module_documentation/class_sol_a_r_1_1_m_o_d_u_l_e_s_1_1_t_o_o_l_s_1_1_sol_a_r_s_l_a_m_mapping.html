@@ -105,12 +105,12 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_t_o_o_l_s_1_1_sol_a_r_s_l_a_m_mapping.html#a4c715e36407a36f635843d6a9972d445">~SolARSLAMMapping</a> ()=default</td></tr>
 <tr class="memdesc:a4c715e36407a36f635843d6a9972d445"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_t_o_o_l_s_1_1_sol_a_r_s_l_a_m_mapping.html" title=" SLAM mapping. UUID: c276bcb1-2ac8-42f2-806d-d4fe0ce7d4be ">SolARSLAMMapping</a> destructor;. <br /></td></tr>
 <tr class="separator:a4c715e36407a36f635843d6a9972d445"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac7b8f7598c16b12af05850ebfbf1e938"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_t_o_o_l_s_1_1_sol_a_r_s_l_a_m_mapping.html#ac7b8f7598c16b12af05850ebfbf1e938">setCameraParameters</a> (const CamCalibration &amp;intrinsicParams, const CamDistortion &amp;distorsionParams) override</td></tr>
-<tr class="memdesc:ac7b8f7598c16b12af05850ebfbf1e938"><td class="mdescLeft">&#160;</td><td class="mdescRight">this method is used to set intrinsic parameters and distorsion of the camera  <a href="#ac7b8f7598c16b12af05850ebfbf1e938">More...</a><br /></td></tr>
-<tr class="separator:ac7b8f7598c16b12af05850ebfbf1e938"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa3226087a6967a56e8a92b0487c04449"><td class="memItemLeft" align="right" valign="top">FrameworkReturnCode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_t_o_o_l_s_1_1_sol_a_r_s_l_a_m_mapping.html#aa3226087a6967a56e8a92b0487c04449">process</a> (const SRef&lt; Frame &gt; &amp;frame, SRef&lt; Keyframe &gt; &amp;keyframe) override</td></tr>
-<tr class="memdesc:aa3226087a6967a56e8a92b0487c04449"><td class="mdescLeft">&#160;</td><td class="mdescRight">this method is used to process mapping task.  <a href="#aa3226087a6967a56e8a92b0487c04449">More...</a><br /></td></tr>
-<tr class="separator:aa3226087a6967a56e8a92b0487c04449"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a692a56fe185dd33235ef8e6073b2609c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_t_o_o_l_s_1_1_sol_a_r_s_l_a_m_mapping.html#a692a56fe185dd33235ef8e6073b2609c">setCameraParameters</a> (const datastructure::CamCalibration &amp;intrinsicParams, const datastructure::CamDistortion &amp;distorsionParams) override</td></tr>
+<tr class="memdesc:a692a56fe185dd33235ef8e6073b2609c"><td class="mdescLeft">&#160;</td><td class="mdescRight">this method is used to set intrinsic parameters and distorsion of the camera  <a href="#a692a56fe185dd33235ef8e6073b2609c">More...</a><br /></td></tr>
+<tr class="separator:a692a56fe185dd33235ef8e6073b2609c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2bd3c29f6d0671d0b6f8b399519071ed"><td class="memItemLeft" align="right" valign="top">FrameworkReturnCode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_t_o_o_l_s_1_1_sol_a_r_s_l_a_m_mapping.html#a2bd3c29f6d0671d0b6f8b399519071ed">process</a> (const SRef&lt; datastructure::Frame &gt; frame, SRef&lt; datastructure::Keyframe &gt; &amp;keyframe) override</td></tr>
+<tr class="memdesc:a2bd3c29f6d0671d0b6f8b399519071ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">this method is used to process mapping task.  <a href="#a2bd3c29f6d0671d0b6f8b399519071ed">More...</a><br /></td></tr>
+<tr class="separator:a2bd3c29f6d0671d0b6f8b399519071ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9939e1a46d56c7c352bb0366e7e54874"><td class="memItemLeft" align="right" valign="top"><a id="a9939e1a46d56c7c352bb0366e7e54874"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> () override final</td></tr>
 <tr class="separator:a9939e1a46d56c7c352bb0366e7e54874"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -118,8 +118,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><b> SLAM mapping.</b> <code>UUID: c276bcb1-2ac8-42f2-806d-d4fe0ce7d4be</code> </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="aa3226087a6967a56e8a92b0487c04449"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa3226087a6967a56e8a92b0487c04449">&#9670;&nbsp;</a></span>process()</h2>
+<a id="a2bd3c29f6d0671d0b6f8b399519071ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2bd3c29f6d0671d0b6f8b399519071ed">&#9670;&nbsp;</a></span>process()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -130,13 +130,13 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
         <tr>
           <td class="memname">FrameworkReturnCode SolAR::MODULES::TOOLS::SolARSLAMMapping::process </td>
           <td>(</td>
-          <td class="paramtype">const SRef&lt; Frame &gt; &amp;&#160;</td>
+          <td class="paramtype">const SRef&lt; datastructure::Frame &gt;&#160;</td>
           <td class="paramname"><em>frame</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">SRef&lt; Keyframe &gt; &amp;&#160;</td>
+          <td class="paramtype">SRef&lt; datastructure::Keyframe &gt; &amp;&#160;</td>
           <td class="paramname"><em>keyframe</em>&#160;</td>
         </tr>
         <tr>
@@ -163,8 +163,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
 
 </div>
 </div>
-<a id="ac7b8f7598c16b12af05850ebfbf1e938"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac7b8f7598c16b12af05850ebfbf1e938">&#9670;&nbsp;</a></span>setCameraParameters()</h2>
+<a id="a692a56fe185dd33235ef8e6073b2609c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a692a56fe185dd33235ef8e6073b2609c">&#9670;&nbsp;</a></span>setCameraParameters()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -175,13 +175,13 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
         <tr>
           <td class="memname">void SolAR::MODULES::TOOLS::SolARSLAMMapping::setCameraParameters </td>
           <td>(</td>
-          <td class="paramtype">const CamCalibration &amp;&#160;</td>
+          <td class="paramtype">const datastructure::CamCalibration &amp;&#160;</td>
           <td class="paramname"><em>intrinsicParams</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const CamDistortion &amp;&#160;</td>
+          <td class="paramtype">const datastructure::CamDistortion &amp;&#160;</td>
           <td class="paramname"><em>distorsionParams</em>&#160;</td>
         </tr>
         <tr>

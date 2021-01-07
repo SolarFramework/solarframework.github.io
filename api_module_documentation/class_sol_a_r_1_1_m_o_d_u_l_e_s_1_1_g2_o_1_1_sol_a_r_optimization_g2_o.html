@@ -97,21 +97,21 @@ Collaboration diagram for SolAR::MODULES::G2O::SolAROptimizationG2O:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a7320cb7973079d9c9499f90265bb793a"><td class="memItemLeft" align="right" valign="top"><a id="a7320cb7973079d9c9499f90265bb793a"></a>
-org::bcom::xpcf::XPCFErrorCode&#160;</td><td class="memItemRight" valign="bottom"><b>onConfigured</b> () override final</td></tr>
-<tr class="separator:a7320cb7973079d9c9499f90265bb793a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e0253f21432ca62d940c554f74cc4cd"><td class="memItemLeft" align="right" valign="top">FrameworkReturnCode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_g2_o_1_1_sol_a_r_optimization_g2_o.html#a4e0253f21432ca62d940c554f74cc4cd">setMapper</a> (const SRef&lt; api::solver::map::IMapper &gt; map) override</td></tr>
+<tr class="memdesc:a4e0253f21432ca62d940c554f74cc4cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">set mapper reference to optimize  <a href="#a4e0253f21432ca62d940c554f74cc4cd">More...</a><br /></td></tr>
+<tr class="separator:a4e0253f21432ca62d940c554f74cc4cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9925b365ec7b1f66ec02513e846f270"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_g2_o_1_1_sol_a_r_optimization_g2_o.html#aa9925b365ec7b1f66ec02513e846f270">bundleAdjustment</a> (datastructure::CamCalibration &amp;K, datastructure::CamDistortion &amp;D, const std::vector&lt; uint32_t &gt; &amp;selectKeyframes={}) override</td></tr>
+<tr class="memdesc:aa9925b365ec7b1f66ec02513e846f270"><td class="mdescLeft">&#160;</td><td class="mdescRight">solve a non-linear problem related to bundle adjustement statement expressed as: minArg(pts3ds,intrinsics,extrinsics) = MIN_cam_i(MIN_3d_j(pts2d_j - reproje(pt3ds_j,intrinsics_i,extrinsics_i)),  <a href="#aa9925b365ec7b1f66ec02513e846f270">More...</a><br /></td></tr>
+<tr class="separator:aa9925b365ec7b1f66ec02513e846f270"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a891d27056161d61759bd3f48cabf3b43"><td class="memItemLeft" align="right" valign="top"><a id="a891d27056161d61759bd3f48cabf3b43"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> () override final</td></tr>
 <tr class="separator:a891d27056161d61759bd3f48cabf3b43"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abba5ecdcf719970f59edd55450a763cc"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_g2_o_1_1_sol_a_r_optimization_g2_o.html#abba5ecdcf719970f59edd55450a763cc">bundleAdjustment</a> (CamCalibration &amp;K, CamDistortion &amp;D, const std::vector&lt; uint32_t &gt; &amp;selectKeyframes={}) override</td></tr>
-<tr class="memdesc:abba5ecdcf719970f59edd55450a763cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">solve a non-linear problem related to bundle adjustement statement expressed as: minArg(pts3ds,intrinsics,extrinsics) = MIN_cam_i(MIN_3d_j(pts2d_j - reproje(pt3ds_j,intrinsics_i,extrinsics_i)),  <a href="#abba5ecdcf719970f59edd55450a763cc">More...</a><br /></td></tr>
-<tr class="separator:abba5ecdcf719970f59edd55450a763cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><b>Bundle adjustment optimization.</b> <code>UUID: 870d89ba-bb5f-460a-a817-1fcb6473df70</code> </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="abba5ecdcf719970f59edd55450a763cc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abba5ecdcf719970f59edd55450a763cc">&#9670;&nbsp;</a></span>bundleAdjustment()</h2>
+<a id="aa9925b365ec7b1f66ec02513e846f270"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9925b365ec7b1f66ec02513e846f270">&#9670;&nbsp;</a></span>bundleAdjustment()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -122,13 +122,13 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
         <tr>
           <td class="memname">double SolAR::MODULES::G2O::SolAROptimizationG2O::bundleAdjustment </td>
           <td>(</td>
-          <td class="paramtype">CamCalibration &amp;&#160;</td>
+          <td class="paramtype">datastructure::CamCalibration &amp;&#160;</td>
           <td class="paramname"><em>K</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">CamDistortion &amp;&#160;</td>
+          <td class="paramtype">datastructure::CamDistortion &amp;&#160;</td>
           <td class="paramname"><em>D</em>, </td>
         </tr>
         <tr>
@@ -160,6 +160,41 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the mean re-projection error after optimization. </dd></dl>
+
+</div>
+</div>
+<a id="a4e0253f21432ca62d940c554f74cc4cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e0253f21432ca62d940c554f74cc4cd">&#9670;&nbsp;</a></span>setMapper()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FrameworkReturnCode SolAR::MODULES::G2O::SolAROptimizationG2O::setMapper </td>
+          <td>(</td>
+          <td class="paramtype">const SRef&lt; api::solver::map::IMapper &gt;&#160;</td>
+          <td class="paramname"><em>map</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>set mapper reference to optimize </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">map</td><td>the input map. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>FrameworkReturnCode::<em>SUCCESS</em> if the map is set, else FrameworkReturnCode::_ERROR. </dd></dl>
 
 </div>
 </div>

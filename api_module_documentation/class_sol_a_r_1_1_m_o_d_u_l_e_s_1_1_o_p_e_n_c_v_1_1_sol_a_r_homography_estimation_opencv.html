@@ -97,9 +97,9 @@ Collaboration diagram for SolAR::MODULES::OPENCV::SolARHomographyEstimationOpenc
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a924641738a3c2ddb51c76f0e1d937db3"><td class="memItemLeft" align="right" valign="top">api::solver::pose::Transform2DFinder::RetCode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_o_p_e_n_c_v_1_1_sol_a_r_homography_estimation_opencv.html#a924641738a3c2ddb51c76f0e1d937db3">find</a> (const std::vector&lt; Point2Df &gt; &amp;srcPoints, const std::vector&lt; Point2Df &gt; &amp;targetPoints, Transform2Df &amp;homography) override</td></tr>
-<tr class="memdesc:a924641738a3c2ddb51c76f0e1d937db3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes an homography transformation from a set of source points and target points. [in] srcPoints: set of source points. [in] targetPints: set of target points. [out] homography: 3x3 homography matrice transformation.  <a href="#a924641738a3c2ddb51c76f0e1d937db3">More...</a><br /></td></tr>
-<tr class="separator:a924641738a3c2ddb51c76f0e1d937db3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a546b0e4eb3e796d81ca7be2d6648ba58"><td class="memItemLeft" align="right" valign="top">api::solver::pose::Transform2DFinder::RetCode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_o_p_e_n_c_v_1_1_sol_a_r_homography_estimation_opencv.html#a546b0e4eb3e796d81ca7be2d6648ba58">find</a> (const std::vector&lt; datastructure::Point2Df &gt; &amp;srcPoints, const std::vector&lt; datastructure::Point2Df &gt; &amp;targetPoints, datastructure::Transform2Df &amp;homography) override</td></tr>
+<tr class="memdesc:a546b0e4eb3e796d81ca7be2d6648ba58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes an homography transformation from a set of source points and target points. [in] srcPoints: set of source points. [in] targetPints: set of target points. [out] homography: 3x3 homography matrice transformation.  <a href="#a546b0e4eb3e796d81ca7be2d6648ba58">More...</a><br /></td></tr>
+<tr class="separator:a546b0e4eb3e796d81ca7be2d6648ba58"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aee325046ecb11bcb3bca3931e96c36ab"><td class="memItemLeft" align="right" valign="top"><a id="aee325046ecb11bcb3bca3931e96c36ab"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> () override final</td></tr>
 <tr class="separator:aee325046ecb11bcb3bca3931e96c36ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -107,8 +107,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><b>Estimates the homography between two images from their matching keypoints.</b> <code>UUID: fb9dac20-2a44-44b2-aa42-2871eec31427</code> </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a924641738a3c2ddb51c76f0e1d937db3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a924641738a3c2ddb51c76f0e1d937db3">&#9670;&nbsp;</a></span>find()</h2>
+<a id="a546b0e4eb3e796d81ca7be2d6648ba58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a546b0e4eb3e796d81ca7be2d6648ba58">&#9670;&nbsp;</a></span>find()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -119,19 +119,19 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
         <tr>
           <td class="memname">api::solver::pose::Transform2DFinder::RetCode SolAR::MODULES::OPENCV::SolARHomographyEstimationOpencv::find </td>
           <td>(</td>
-          <td class="paramtype">const std::vector&lt; Point2Df &gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; datastructure::Point2Df &gt; &amp;&#160;</td>
           <td class="paramname"><em>srcPoints</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::vector&lt; Point2Df &gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; datastructure::Point2Df &gt; &amp;&#160;</td>
           <td class="paramname"><em>targetPoints</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Transform2Df &amp;&#160;</td>
+          <td class="paramtype">datastructure::Transform2Df &amp;&#160;</td>
           <td class="paramname"><em>homography</em>&#160;</td>
         </tr>
         <tr>

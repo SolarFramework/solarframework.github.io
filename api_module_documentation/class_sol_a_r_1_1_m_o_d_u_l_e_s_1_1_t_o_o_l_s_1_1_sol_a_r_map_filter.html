@@ -97,12 +97,12 @@ Collaboration diagram for SolAR::MODULES::TOOLS::SolARMapFilter:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a69910f9599fdc1bd977ed596e889fa69"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_t_o_o_l_s_1_1_sol_a_r_map_filter.html#a69910f9599fdc1bd977ed596e889fa69">filter</a> (const Transform3Df &amp;pose1, const Transform3Df &amp;pose2, const std::vector&lt; SRef&lt; CloudPoint &gt;&gt; &amp;input, std::vector&lt; SRef&lt; CloudPoint &gt;&gt; &amp;output) override</td></tr>
-<tr class="memdesc:a69910f9599fdc1bd977ed596e889fa69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Filter point cloud reconstructed from 2 viewpoints.  <a href="#a69910f9599fdc1bd977ed596e889fa69">More...</a><br /></td></tr>
-<tr class="separator:a69910f9599fdc1bd977ed596e889fa69"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab758f277b1425c0f19868514fc22292e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_t_o_o_l_s_1_1_sol_a_r_map_filter.html#ab758f277b1425c0f19868514fc22292e">filter</a> (const Transform3Df &amp;pose1, const Transform3Df &amp;pose2, const std::vector&lt; SRef&lt; CloudPoint &gt;&gt; &amp;input, std::vector&lt; SRef&lt; CloudPoint &gt;&gt; &amp;output, std::vector&lt; int &gt; &amp;index) override</td></tr>
-<tr class="memdesc:ab758f277b1425c0f19868514fc22292e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Filter point cloud reconstructed from 2 viewpoints.  <a href="#ab758f277b1425c0f19868514fc22292e">More...</a><br /></td></tr>
-<tr class="separator:ab758f277b1425c0f19868514fc22292e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbd4c258ede5e1856594a2606dd6dc34"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_t_o_o_l_s_1_1_sol_a_r_map_filter.html#acbd4c258ede5e1856594a2606dd6dc34">filter</a> (const datastructure::Transform3Df &amp;pose1, const datastructure::Transform3Df &amp;pose2, const std::vector&lt; SRef&lt; datastructure::CloudPoint &gt;&gt; &amp;input, std::vector&lt; SRef&lt; datastructure::CloudPoint &gt;&gt; &amp;output) override</td></tr>
+<tr class="memdesc:acbd4c258ede5e1856594a2606dd6dc34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Filter point cloud reconstructed from 2 viewpoints.  <a href="#acbd4c258ede5e1856594a2606dd6dc34">More...</a><br /></td></tr>
+<tr class="separator:acbd4c258ede5e1856594a2606dd6dc34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35677ca734e81e70b4d5a42801bf1e1a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_t_o_o_l_s_1_1_sol_a_r_map_filter.html#a35677ca734e81e70b4d5a42801bf1e1a">filter</a> (const datastructure::Transform3Df &amp;pose1, const datastructure::Transform3Df &amp;pose2, const std::vector&lt; SRef&lt; datastructure::CloudPoint &gt;&gt; &amp;input, std::vector&lt; SRef&lt; datastructure::CloudPoint &gt;&gt; &amp;output, std::vector&lt; int &gt; &amp;index) override</td></tr>
+<tr class="memdesc:a35677ca734e81e70b4d5a42801bf1e1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Filter point cloud reconstructed from 2 viewpoints.  <a href="#a35677ca734e81e70b4d5a42801bf1e1a">More...</a><br /></td></tr>
+<tr class="separator:a35677ca734e81e70b4d5a42801bf1e1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa8e82bd080eec0b1434b158be58cb535"><td class="memItemLeft" align="right" valign="top"><a id="aa8e82bd080eec0b1434b158be58cb535"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> () override final</td></tr>
 <tr class="separator:aa8e82bd080eec0b1434b158be58cb535"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -111,8 +111,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
 <div class="textblock"><p><b>Filters a cloud of 3D points by removing points with a too important reporjection error or those which are behind the camera.</b> <code>UUID: 09205b96-7cba-4415-bc61-64744bc26222</code> </p>
 <p>The projection error threshold as well as the test of cheirality (removing points behind the camera) can be configured. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a69910f9599fdc1bd977ed596e889fa69"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a69910f9599fdc1bd977ed596e889fa69">&#9670;&nbsp;</a></span>filter() <span class="overload">[1/2]</span></h2>
+<a id="acbd4c258ede5e1856594a2606dd6dc34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acbd4c258ede5e1856594a2606dd6dc34">&#9670;&nbsp;</a></span>filter() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -123,25 +123,25 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
         <tr>
           <td class="memname">void SolAR::MODULES::TOOLS::SolARMapFilter::filter </td>
           <td>(</td>
-          <td class="paramtype">const Transform3Df &amp;&#160;</td>
+          <td class="paramtype">const datastructure::Transform3Df &amp;&#160;</td>
           <td class="paramname"><em>pose1</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const Transform3Df &amp;&#160;</td>
+          <td class="paramtype">const datastructure::Transform3Df &amp;&#160;</td>
           <td class="paramname"><em>pose2</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::vector&lt; SRef&lt; CloudPoint &gt;&gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; SRef&lt; datastructure::CloudPoint &gt;&gt; &amp;&#160;</td>
           <td class="paramname"><em>input</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; SRef&lt; CloudPoint &gt;&gt; &amp;&#160;</td>
+          <td class="paramtype">std::vector&lt; SRef&lt; datastructure::CloudPoint &gt;&gt; &amp;&#160;</td>
           <td class="paramname"><em>output</em>&#160;</td>
         </tr>
         <tr>
@@ -170,8 +170,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
 
 </div>
 </div>
-<a id="ab758f277b1425c0f19868514fc22292e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab758f277b1425c0f19868514fc22292e">&#9670;&nbsp;</a></span>filter() <span class="overload">[2/2]</span></h2>
+<a id="a35677ca734e81e70b4d5a42801bf1e1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35677ca734e81e70b4d5a42801bf1e1a">&#9670;&nbsp;</a></span>filter() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -182,25 +182,25 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
         <tr>
           <td class="memname">void SolAR::MODULES::TOOLS::SolARMapFilter::filter </td>
           <td>(</td>
-          <td class="paramtype">const Transform3Df &amp;&#160;</td>
+          <td class="paramtype">const datastructure::Transform3Df &amp;&#160;</td>
           <td class="paramname"><em>pose1</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const Transform3Df &amp;&#160;</td>
+          <td class="paramtype">const datastructure::Transform3Df &amp;&#160;</td>
           <td class="paramname"><em>pose2</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::vector&lt; SRef&lt; CloudPoint &gt;&gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; SRef&lt; datastructure::CloudPoint &gt;&gt; &amp;&#160;</td>
           <td class="paramname"><em>input</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; SRef&lt; CloudPoint &gt;&gt; &amp;&#160;</td>
+          <td class="paramtype">std::vector&lt; SRef&lt; datastructure::CloudPoint &gt;&gt; &amp;&#160;</td>
           <td class="paramname"><em>output</em>, </td>
         </tr>
         <tr>

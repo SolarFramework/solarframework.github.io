@@ -105,12 +105,12 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_o_p_e_n_c_v_1_1_sol_a_r_geometric_matches_filter_opencv.html#a75bc022ffb0a17071433db2958e8e152">~SolARGeometricMatchesFilterOpencv</a> ()</td></tr>
 <tr class="memdesc:a75bc022ffb0a17071433db2958e8e152"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_o_p_e_n_c_v_1_1_sol_a_r_geometric_matches_filter_opencv.html" title="Filters a set of matches based on geometric constraints. UUID: 3731691e-2c4c-4d37-a2ce-06d1918f8d41 ...">SolARGeometricMatchesFilterOpencv</a> destructor. <br /></td></tr>
 <tr class="separator:a75bc022ffb0a17071433db2958e8e152"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abb0a11309b833dab5c3a4cd01c269894"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_o_p_e_n_c_v_1_1_sol_a_r_geometric_matches_filter_opencv.html#abb0a11309b833dab5c3a4cd01c269894">filter</a> (const std::vector&lt; DescriptorMatch &gt; &amp;inputMatches, std::vector&lt; DescriptorMatch &gt; &amp;outputMatches, const std::vector&lt; Keypoint &gt; &amp;inputKeyPointsA, const std::vector&lt; Keypoint &gt; &amp;inputKeyPointsB) override</td></tr>
-<tr class="memdesc:abb0a11309b833dab5c3a4cd01c269894"><td class="mdescLeft">&#160;</td><td class="mdescRight">filter matches based fundamental matrix assumptions. This filter removes all outliers matches which give high reprojection error.  <a href="#abb0a11309b833dab5c3a4cd01c269894">More...</a><br /></td></tr>
-<tr class="separator:abb0a11309b833dab5c3a4cd01c269894"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a77f3deac764b69130bd870743d701df1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_o_p_e_n_c_v_1_1_sol_a_r_geometric_matches_filter_opencv.html#a77f3deac764b69130bd870743d701df1">filter</a> (const std::vector&lt; DescriptorMatch &gt; &amp;inputMatches, std::vector&lt; DescriptorMatch &gt; &amp;outputMatches, const std::vector&lt; Keypoint &gt; &amp;inputKeyPoints1, const std::vector&lt; Keypoint &gt; &amp;inputKeyPoints2, const Transform3Df &amp;pose1, const Transform3Df &amp;pose2, const CamCalibration &amp;intrinsicParams) override</td></tr>
-<tr class="memdesc:a77f3deac764b69130bd870743d701df1"><td class="mdescLeft">&#160;</td><td class="mdescRight">filter matches based fundamental matrix calculated from camera matrices  <a href="#a77f3deac764b69130bd870743d701df1">More...</a><br /></td></tr>
-<tr class="separator:a77f3deac764b69130bd870743d701df1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf1895d5ba22ab6d7a866416888b8f89"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_o_p_e_n_c_v_1_1_sol_a_r_geometric_matches_filter_opencv.html#acf1895d5ba22ab6d7a866416888b8f89">filter</a> (const std::vector&lt; datastructure::DescriptorMatch &gt; &amp;inputMatches, std::vector&lt; datastructure::DescriptorMatch &gt; &amp;outputMatches, const std::vector&lt; datastructure::Keypoint &gt; &amp;inputKeyPointsA, const std::vector&lt; datastructure::Keypoint &gt; &amp;inputKeyPointsB) override</td></tr>
+<tr class="memdesc:acf1895d5ba22ab6d7a866416888b8f89"><td class="mdescLeft">&#160;</td><td class="mdescRight">filter matches based fundamental matrix assumptions. This filter removes all outliers matches which give high reprojection error.  <a href="#acf1895d5ba22ab6d7a866416888b8f89">More...</a><br /></td></tr>
+<tr class="separator:acf1895d5ba22ab6d7a866416888b8f89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec7e7a29abcdc4b2e389270e9db13885"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_o_p_e_n_c_v_1_1_sol_a_r_geometric_matches_filter_opencv.html#aec7e7a29abcdc4b2e389270e9db13885">filter</a> (const std::vector&lt; datastructure::DescriptorMatch &gt; &amp;inputMatches, std::vector&lt; datastructure::DescriptorMatch &gt; &amp;outputMatches, const std::vector&lt; datastructure::Keypoint &gt; &amp;inputKeyPoints1, const std::vector&lt; datastructure::Keypoint &gt; &amp;inputKeyPoints2, const datastructure::Transform3Df &amp;pose1, const datastructure::Transform3Df &amp;pose2, const datastructure::CamCalibration &amp;intrinsicParams) override</td></tr>
+<tr class="memdesc:aec7e7a29abcdc4b2e389270e9db13885"><td class="mdescLeft">&#160;</td><td class="mdescRight">filter matches based fundamental matrix calculated from camera matrices  <a href="#aec7e7a29abcdc4b2e389270e9db13885">More...</a><br /></td></tr>
+<tr class="separator:aec7e7a29abcdc4b2e389270e9db13885"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5daeb51ed99de24e7f39183820fa2c62"><td class="memItemLeft" align="right" valign="top"><a id="a5daeb51ed99de24e7f39183820fa2c62"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> () override final</td></tr>
 <tr class="separator:a5daeb51ed99de24e7f39183820fa2c62"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -118,8 +118,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><b>Filters a set of matches based on geometric constraints.</b> <code>UUID: 3731691e-2c4c-4d37-a2ce-06d1918f8d41</code> </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="abb0a11309b833dab5c3a4cd01c269894"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abb0a11309b833dab5c3a4cd01c269894">&#9670;&nbsp;</a></span>filter() <span class="overload">[1/2]</span></h2>
+<a id="acf1895d5ba22ab6d7a866416888b8f89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf1895d5ba22ab6d7a866416888b8f89">&#9670;&nbsp;</a></span>filter() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -130,25 +130,25 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
         <tr>
           <td class="memname">void SolAR::MODULES::OPENCV::SolARGeometricMatchesFilterOpencv::filter </td>
           <td>(</td>
-          <td class="paramtype">const std::vector&lt; DescriptorMatch &gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; datastructure::DescriptorMatch &gt; &amp;&#160;</td>
           <td class="paramname"><em>inputMatches</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; DescriptorMatch &gt; &amp;&#160;</td>
+          <td class="paramtype">std::vector&lt; datastructure::DescriptorMatch &gt; &amp;&#160;</td>
           <td class="paramname"><em>outputMatches</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::vector&lt; Keypoint &gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; datastructure::Keypoint &gt; &amp;&#160;</td>
           <td class="paramname"><em>inputKeyPointsA</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::vector&lt; Keypoint &gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; datastructure::Keypoint &gt; &amp;&#160;</td>
           <td class="paramname"><em>inputKeyPointsB</em>&#160;</td>
         </tr>
         <tr>
@@ -177,8 +177,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
 
 </div>
 </div>
-<a id="a77f3deac764b69130bd870743d701df1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a77f3deac764b69130bd870743d701df1">&#9670;&nbsp;</a></span>filter() <span class="overload">[2/2]</span></h2>
+<a id="aec7e7a29abcdc4b2e389270e9db13885"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec7e7a29abcdc4b2e389270e9db13885">&#9670;&nbsp;</a></span>filter() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -189,43 +189,43 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
         <tr>
           <td class="memname">virtual void SolAR::MODULES::OPENCV::SolARGeometricMatchesFilterOpencv::filter </td>
           <td>(</td>
-          <td class="paramtype">const std::vector&lt; DescriptorMatch &gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; datastructure::DescriptorMatch &gt; &amp;&#160;</td>
           <td class="paramname"><em>inputMatches</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; DescriptorMatch &gt; &amp;&#160;</td>
+          <td class="paramtype">std::vector&lt; datastructure::DescriptorMatch &gt; &amp;&#160;</td>
           <td class="paramname"><em>outputMatches</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::vector&lt; Keypoint &gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; datastructure::Keypoint &gt; &amp;&#160;</td>
           <td class="paramname"><em>inputKeyPoints1</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::vector&lt; Keypoint &gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; datastructure::Keypoint &gt; &amp;&#160;</td>
           <td class="paramname"><em>inputKeyPoints2</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const Transform3Df &amp;&#160;</td>
+          <td class="paramtype">const datastructure::Transform3Df &amp;&#160;</td>
           <td class="paramname"><em>pose1</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const Transform3Df &amp;&#160;</td>
+          <td class="paramtype">const datastructure::Transform3Df &amp;&#160;</td>
           <td class="paramname"><em>pose2</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const CamCalibration &amp;&#160;</td>
+          <td class="paramtype">const datastructure::CamCalibration &amp;&#160;</td>
           <td class="paramname"><em>intrinsicParams</em>&#160;</td>
         </tr>
         <tr>

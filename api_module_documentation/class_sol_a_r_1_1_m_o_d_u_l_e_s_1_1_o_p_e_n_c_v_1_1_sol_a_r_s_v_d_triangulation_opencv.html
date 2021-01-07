@@ -105,33 +105,30 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_o_p_e_n_c_v_1_1_sol_a_r_s_v_d_triangulation_opencv.html#acb2aeaf211bb3e99c89d7ef1faab19bb">~SolARSVDTriangulationOpencv</a> () override</td></tr>
 <tr class="memdesc:acb2aeaf211bb3e99c89d7ef1faab19bb"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_o_p_e_n_c_v_1_1_sol_a_r_s_v_d_triangulation_opencv.html" title="Triangulates a set of corresponding 2D-2D points correspondences with known respective camera poses b...">SolARSVDTriangulationOpencv</a> destructor. <br /></td></tr>
 <tr class="separator:acb2aeaf211bb3e99c89d7ef1faab19bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaaec81e671243e9259f92ae323e781e6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_o_p_e_n_c_v_1_1_sol_a_r_s_v_d_triangulation_opencv.html#aaaec81e671243e9259f92ae323e781e6">setCameraParameters</a> (const CamCalibration &amp;intrinsicParams, const CamDistortion &amp;distorsionParams) override</td></tr>
-<tr class="memdesc:aaaec81e671243e9259f92ae323e781e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">this method is used to set intrinsic parameters and distorsion of the camera  <a href="#aaaec81e671243e9259f92ae323e781e6">More...</a><br /></td></tr>
-<tr class="separator:aaaec81e671243e9259f92ae323e781e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae10dbf4a7662606c0790cd5c3b1ee96c"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_o_p_e_n_c_v_1_1_sol_a_r_s_v_d_triangulation_opencv.html#ae10dbf4a7662606c0790cd5c3b1ee96c">getReprojectionErrorCloud</a> (const std::vector&lt; SRef&lt; CloudPoint &gt;&gt; &amp;original)</td></tr>
-<tr class="memdesc:ae10dbf4a7662606c0790cd5c3b1ee96c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert the point cloud to opencv structure for CV processing.  <a href="#ae10dbf4a7662606c0790cd5c3b1ee96c">More...</a><br /></td></tr>
-<tr class="separator:ae10dbf4a7662606c0790cd5c3b1ee96c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4ce49824c8628d88f2d7006851294f87"><td class="memItemLeft" align="right" valign="top">cv::Mat_&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_o_p_e_n_c_v_1_1_sol_a_r_s_v_d_triangulation_opencv.html#a4ce49824c8628d88f2d7006851294f87">iterativeLinearTriangulation</a> (const cv::Point3d &amp;u, const cv::Matx34d &amp;P, const cv::Point3d &amp;u1, const cv::Matx34d &amp;P1)</td></tr>
-<tr class="memdesc:a4ce49824c8628d88f2d7006851294f87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Triangulates two homogeneous 2d_points {u,v,1.0} in an iterative way based on SVD linear system solving.  <a href="#a4ce49824c8628d88f2d7006851294f87">More...</a><br /></td></tr>
-<tr class="separator:a4ce49824c8628d88f2d7006851294f87"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae051b14ccb8d1d0bd8fb385239ffa4ba"><td class="memItemLeft" align="right" valign="top">cv::Mat_&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_o_p_e_n_c_v_1_1_sol_a_r_s_v_d_triangulation_opencv.html#ae051b14ccb8d1d0bd8fb385239ffa4ba">linearTriangulation</a> (const cv::Point3d &amp;u, const cv::Matx34d &amp;P, const cv::Point3d &amp;u1, const cv::Matx34d &amp;P1)</td></tr>
-<tr class="memdesc:ae051b14ccb8d1d0bd8fb385239ffa4ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Triangulates two homogeneous 2d_points {u,v,1.0} based on SVD linear system solving (AX=B).  <a href="#ae051b14ccb8d1d0bd8fb385239ffa4ba">More...</a><br /></td></tr>
-<tr class="separator:ae051b14ccb8d1d0bd8fb385239ffa4ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae1344fae5f576c901bef63b75d4bb740"><td class="memItemLeft" align="right" valign="top">cv::Mat_&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_o_p_e_n_c_v_1_1_sol_a_r_s_v_d_triangulation_opencv.html#ae1344fae5f576c901bef63b75d4bb740">LinearLSTriangulation</a> (const cv::Point2d &amp;u, const cv::Matx34d &amp;P, const cv::Point2d &amp;u1, const cv::Matx34d &amp;P1, double &amp;error)</td></tr>
-<tr class="memdesc:ae1344fae5f576c901bef63b75d4bb740"><td class="mdescLeft">&#160;</td><td class="mdescRight">Triangulates two homogeneous 2d_points {u,v,1.0} based on SVD linear system solving (AX=0).  <a href="#ae1344fae5f576c901bef63b75d4bb740">More...</a><br /></td></tr>
-<tr class="separator:ae1344fae5f576c901bef63b75d4bb740"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a50efa0050dc9ea4df082a0c1b0dc0107"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_o_p_e_n_c_v_1_1_sol_a_r_s_v_d_triangulation_opencv.html#a50efa0050dc9ea4df082a0c1b0dc0107">triangulate</a> (const std::vector&lt; Point2Df &gt; &amp;pt2d_1, const std::vector&lt; Point2Df &gt; &amp;pt2d_2, const std::vector&lt; DescriptorMatch &gt; &amp;matches, const std::pair&lt; unsigned int, unsigned int &gt; &amp;working_views, const Transform3Df &amp;poseView1, const Transform3Df &amp;poseView2, std::vector&lt; SRef&lt; CloudPoint &gt;&gt; &amp;pcloud) override</td></tr>
-<tr class="memdesc:a50efa0050dc9ea4df082a0c1b0dc0107"><td class="mdescLeft">&#160;</td><td class="mdescRight">triangulate pairs of points 2d captured from two views with differents poses (with respect to the camera instrinsic parameters).  <a href="#a50efa0050dc9ea4df082a0c1b0dc0107">More...</a><br /></td></tr>
-<tr class="separator:a50efa0050dc9ea4df082a0c1b0dc0107"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae552915202295eb287e3c530818e5aa7"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_o_p_e_n_c_v_1_1_sol_a_r_s_v_d_triangulation_opencv.html#ae552915202295eb287e3c530818e5aa7">triangulate</a> (const std::vector&lt; Keypoint &gt; &amp;keypointsView1, const std::vector&lt; Keypoint &gt; &amp;keypointsView2, const std::vector&lt; DescriptorMatch &gt; &amp;matches, const std::pair&lt; unsigned int, unsigned int &gt; &amp;working_views, const Transform3Df &amp;poseView1, const Transform3Df &amp;poseView2, std::vector&lt; SRef&lt; CloudPoint &gt;&gt; &amp;pcloud) override</td></tr>
-<tr class="memdesc:ae552915202295eb287e3c530818e5aa7"><td class="mdescLeft">&#160;</td><td class="mdescRight">triangulate pairs of points 2d captured from two views with differents poses (with respect to the camera instrinsic parameters).  <a href="#ae552915202295eb287e3c530818e5aa7">More...</a><br /></td></tr>
-<tr class="separator:ae552915202295eb287e3c530818e5aa7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2e514316917500d96f504fbe64addb80"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_o_p_e_n_c_v_1_1_sol_a_r_s_v_d_triangulation_opencv.html#a2e514316917500d96f504fbe64addb80">triangulate</a> (const std::vector&lt; Keypoint &gt; &amp;keypointsView1, const std::vector&lt; Keypoint &gt; &amp;keypointsView2, const SRef&lt; DescriptorBuffer &gt; &amp;descriptor1, const SRef&lt; DescriptorBuffer &gt; &amp;descriptor2, const std::vector&lt; DescriptorMatch &gt; &amp;matches, const std::pair&lt; unsigned int, unsigned int &gt; &amp;working_views, const Transform3Df &amp;poseView1, const Transform3Df &amp;poseView2, std::vector&lt; SRef&lt; CloudPoint &gt;&gt; &amp;pcloud) override</td></tr>
-<tr class="memdesc:a2e514316917500d96f504fbe64addb80"><td class="mdescLeft">&#160;</td><td class="mdescRight">triangulate pairs of points 2d captured from two views with differents poses (with respect to the camera instrinsic parameters).  <a href="#a2e514316917500d96f504fbe64addb80">More...</a><br /></td></tr>
-<tr class="separator:a2e514316917500d96f504fbe64addb80"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a483b5d22c8867b701f4200fcd16ba210"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_o_p_e_n_c_v_1_1_sol_a_r_s_v_d_triangulation_opencv.html#a483b5d22c8867b701f4200fcd16ba210">triangulate</a> (const SRef&lt; Keyframe &gt; &amp;curKeyframe, const std::vector&lt; DescriptorMatch &gt; &amp;matches, std::vector&lt; SRef&lt; CloudPoint &gt;&gt; &amp;pcloud) override</td></tr>
-<tr class="memdesc:a483b5d22c8867b701f4200fcd16ba210"><td class="mdescLeft">&#160;</td><td class="mdescRight">triangulate pairs of points 2d captured from current keyframe with its reference keyframe using their poses (with respect to the camera instrinsic parameters).  <a href="#a483b5d22c8867b701f4200fcd16ba210">More...</a><br /></td></tr>
-<tr class="separator:a483b5d22c8867b701f4200fcd16ba210"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48fdba67146d734a2ce0a422087f61a6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_o_p_e_n_c_v_1_1_sol_a_r_s_v_d_triangulation_opencv.html#a48fdba67146d734a2ce0a422087f61a6">setCameraParameters</a> (const datastructure::CamCalibration &amp;intrinsicParams, const datastructure::CamDistortion &amp;distortionParams) override</td></tr>
+<tr class="memdesc:a48fdba67146d734a2ce0a422087f61a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">this method is used to set intrinsic parameters and distortion of the camera  <a href="#a48fdba67146d734a2ce0a422087f61a6">More...</a><br /></td></tr>
+<tr class="separator:a48fdba67146d734a2ce0a422087f61a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0c07a9ceed4534f572de57681ad4a8e"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_o_p_e_n_c_v_1_1_sol_a_r_s_v_d_triangulation_opencv.html#aa0c07a9ceed4534f572de57681ad4a8e">getReprojectionErrorCloud</a> (const std::vector&lt; SRef&lt; datastructure::CloudPoint &gt;&gt; &amp;original)</td></tr>
+<tr class="memdesc:aa0c07a9ceed4534f572de57681ad4a8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert the point cloud to opencv structure for CV processing.  <a href="#aa0c07a9ceed4534f572de57681ad4a8e">More...</a><br /></td></tr>
+<tr class="separator:aa0c07a9ceed4534f572de57681ad4a8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c3838b843c91ca71f40a5408df175d0"><td class="memItemLeft" align="right" valign="top">cv::Mat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_o_p_e_n_c_v_1_1_sol_a_r_s_v_d_triangulation_opencv.html#a5c3838b843c91ca71f40a5408df175d0">iterativeLinearTriangulation</a> (const cv::Point3f &amp;u1, const cv::Mat &amp;P1, const cv::Point3f &amp;u2, const cv::Mat &amp;P2)</td></tr>
+<tr class="memdesc:a5c3838b843c91ca71f40a5408df175d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Triangulates two homogeneous 2d_points {u,v,1.0} in an iterative way based on SVD linear system solving.  <a href="#a5c3838b843c91ca71f40a5408df175d0">More...</a><br /></td></tr>
+<tr class="separator:a5c3838b843c91ca71f40a5408df175d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82aa1eb871b3e2280b6e49a7c5f76568"><td class="memItemLeft" align="right" valign="top">cv::Mat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_o_p_e_n_c_v_1_1_sol_a_r_s_v_d_triangulation_opencv.html#a82aa1eb871b3e2280b6e49a7c5f76568">linearTriangulation</a> (const cv::Point3f &amp;u1, const cv::Mat &amp;P1, const cv::Point3f &amp;u2, const cv::Mat &amp;P2)</td></tr>
+<tr class="memdesc:a82aa1eb871b3e2280b6e49a7c5f76568"><td class="mdescLeft">&#160;</td><td class="mdescRight">Triangulates two homogeneous 2d_points {u,v,1.0} based on SVD linear system solving (AX=0) from "Triangulation", Hartley, R.I. and Sturm, P., Computer vision and image understanding, 1997.  <a href="#a82aa1eb871b3e2280b6e49a7c5f76568">More...</a><br /></td></tr>
+<tr class="separator:a82aa1eb871b3e2280b6e49a7c5f76568"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c888e97b0f345429e2adf99589dd88c"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_o_p_e_n_c_v_1_1_sol_a_r_s_v_d_triangulation_opencv.html#a1c888e97b0f345429e2adf99589dd88c">triangulate</a> (const std::vector&lt; datastructure::Point2Df &gt; &amp;pt2d_1, const std::vector&lt; datastructure::Point2Df &gt; &amp;pt2d_2, const std::vector&lt; datastructure::DescriptorMatch &gt; &amp;matches, const std::pair&lt; unsigned int, unsigned int &gt; &amp;working_views, const datastructure::Transform3Df &amp;poseView1, const datastructure::Transform3Df &amp;poseView2, std::vector&lt; SRef&lt; datastructure::CloudPoint &gt;&gt; &amp;pcloud) override</td></tr>
+<tr class="memdesc:a1c888e97b0f345429e2adf99589dd88c"><td class="mdescLeft">&#160;</td><td class="mdescRight">triangulate pairs of points 2d captured from two views with differents poses (with respect to the camera instrinsic parameters).  <a href="#a1c888e97b0f345429e2adf99589dd88c">More...</a><br /></td></tr>
+<tr class="separator:a1c888e97b0f345429e2adf99589dd88c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b588026a96698a43f950d1344560924"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_o_p_e_n_c_v_1_1_sol_a_r_s_v_d_triangulation_opencv.html#a0b588026a96698a43f950d1344560924">triangulate</a> (const std::vector&lt; datastructure::Keypoint &gt; &amp;keypointsView1, const std::vector&lt; datastructure::Keypoint &gt; &amp;keypointsView2, const std::vector&lt; datastructure::DescriptorMatch &gt; &amp;matches, const std::pair&lt; unsigned int, unsigned int &gt; &amp;working_views, const datastructure::Transform3Df &amp;poseView1, const datastructure::Transform3Df &amp;poseView2, std::vector&lt; SRef&lt; datastructure::CloudPoint &gt;&gt; &amp;pcloud) override</td></tr>
+<tr class="memdesc:a0b588026a96698a43f950d1344560924"><td class="mdescLeft">&#160;</td><td class="mdescRight">triangulate pairs of points 2d captured from two views with differents poses (with respect to the camera instrinsic parameters).  <a href="#a0b588026a96698a43f950d1344560924">More...</a><br /></td></tr>
+<tr class="separator:a0b588026a96698a43f950d1344560924"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cfc6437518f2e1e628cfc3fa2f34af8"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_o_p_e_n_c_v_1_1_sol_a_r_s_v_d_triangulation_opencv.html#a1cfc6437518f2e1e628cfc3fa2f34af8">triangulate</a> (const std::vector&lt; datastructure::Keypoint &gt; &amp;keypointsView1, const std::vector&lt; datastructure::Keypoint &gt; &amp;keypointsView2, const SRef&lt; datastructure::DescriptorBuffer &gt; &amp;descriptor1, const SRef&lt; datastructure::DescriptorBuffer &gt; &amp;descriptor2, const std::vector&lt; datastructure::DescriptorMatch &gt; &amp;matches, const std::pair&lt; unsigned int, unsigned int &gt; &amp;working_views, const datastructure::Transform3Df &amp;poseView1, const datastructure::Transform3Df &amp;poseView2, std::vector&lt; SRef&lt; datastructure::CloudPoint &gt;&gt; &amp;pcloud) override</td></tr>
+<tr class="memdesc:a1cfc6437518f2e1e628cfc3fa2f34af8"><td class="mdescLeft">&#160;</td><td class="mdescRight">triangulate pairs of points 2d captured from two views with differents poses (with respect to the camera instrinsic parameters).  <a href="#a1cfc6437518f2e1e628cfc3fa2f34af8">More...</a><br /></td></tr>
+<tr class="separator:a1cfc6437518f2e1e628cfc3fa2f34af8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49706e2b5b2394914554d7715af2b355"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_o_p_e_n_c_v_1_1_sol_a_r_s_v_d_triangulation_opencv.html#a49706e2b5b2394914554d7715af2b355">triangulate</a> (const SRef&lt; datastructure::Keyframe &gt; &amp;curKeyframe, const std::vector&lt; datastructure::DescriptorMatch &gt; &amp;matches, std::vector&lt; SRef&lt; datastructure::CloudPoint &gt;&gt; &amp;pcloud) override</td></tr>
+<tr class="memdesc:a49706e2b5b2394914554d7715af2b355"><td class="mdescLeft">&#160;</td><td class="mdescRight">triangulate pairs of points 2d captured from current keyframe with its reference keyframe using their poses (with respect to the camera instrinsic parameters).  <a href="#a49706e2b5b2394914554d7715af2b355">More...</a><br /></td></tr>
+<tr class="separator:a49706e2b5b2394914554d7715af2b355"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa093ef24dad7ef0b284a3e129f4f344a"><td class="memItemLeft" align="right" valign="top"><a id="aa093ef24dad7ef0b284a3e129f4f344a"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> () override final</td></tr>
 <tr class="separator:aa093ef24dad7ef0b284a3e129f4f344a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -139,16 +136,16 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><b>Triangulates a set of corresponding 2D-2D points correspondences with known respective camera poses based on opencv SVD.</b> <code>UUID: 85274ecd-2914-4f12-96de-37c6040633a4</code> </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="ae10dbf4a7662606c0790cd5c3b1ee96c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae10dbf4a7662606c0790cd5c3b1ee96c">&#9670;&nbsp;</a></span>getReprojectionErrorCloud()</h2>
+<a id="aa0c07a9ceed4534f572de57681ad4a8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0c07a9ceed4534f572de57681ad4a8e">&#9670;&nbsp;</a></span>getReprojectionErrorCloud()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">double SolAR::MODULES::OPENCV::SolARSVDTriangulationOpencv::getReprojectionErrorCloud </td>
+          <td class="memname">float SolAR::MODULES::OPENCV::SolARSVDTriangulationOpencv::getReprojectionErrorCloud </td>
           <td>(</td>
-          <td class="paramtype">const std::vector&lt; SRef&lt; CloudPoint &gt;&gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; SRef&lt; datastructure::CloudPoint &gt;&gt; &amp;&#160;</td>
           <td class="paramname"><em>original</em></td><td>)</td>
           <td></td>
         </tr>
@@ -166,35 +163,35 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
 
 </div>
 </div>
-<a id="a4ce49824c8628d88f2d7006851294f87"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4ce49824c8628d88f2d7006851294f87">&#9670;&nbsp;</a></span>iterativeLinearTriangulation()</h2>
+<a id="a5c3838b843c91ca71f40a5408df175d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c3838b843c91ca71f40a5408df175d0">&#9670;&nbsp;</a></span>iterativeLinearTriangulation()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">cv::Mat_&lt;double&gt; SolAR::MODULES::OPENCV::SolARSVDTriangulationOpencv::iterativeLinearTriangulation </td>
+          <td class="memname">cv::Mat SolAR::MODULES::OPENCV::SolARSVDTriangulationOpencv::iterativeLinearTriangulation </td>
           <td>(</td>
-          <td class="paramtype">const cv::Point3d &amp;&#160;</td>
-          <td class="paramname"><em>u</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const cv::Matx34d &amp;&#160;</td>
-          <td class="paramname"><em>P</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const cv::Point3d &amp;&#160;</td>
+          <td class="paramtype">const cv::Point3f &amp;&#160;</td>
           <td class="paramname"><em>u1</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const cv::Matx34d &amp;&#160;</td>
-          <td class="paramname"><em>P1</em>&#160;</td>
+          <td class="paramtype">const cv::Mat &amp;&#160;</td>
+          <td class="paramname"><em>P1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const cv::Point3f &amp;&#160;</td>
+          <td class="paramname"><em>u2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const cv::Mat &amp;&#160;</td>
+          <td class="paramname"><em>P2</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -216,41 +213,35 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
 
 </div>
 </div>
-<a id="ae1344fae5f576c901bef63b75d4bb740"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae1344fae5f576c901bef63b75d4bb740">&#9670;&nbsp;</a></span>LinearLSTriangulation()</h2>
+<a id="a82aa1eb871b3e2280b6e49a7c5f76568"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82aa1eb871b3e2280b6e49a7c5f76568">&#9670;&nbsp;</a></span>linearTriangulation()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">cv::Mat_&lt;double&gt; SolAR::MODULES::OPENCV::SolARSVDTriangulationOpencv::LinearLSTriangulation </td>
+          <td class="memname">cv::Mat SolAR::MODULES::OPENCV::SolARSVDTriangulationOpencv::linearTriangulation </td>
           <td>(</td>
-          <td class="paramtype">const cv::Point2d &amp;&#160;</td>
-          <td class="paramname"><em>u</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const cv::Matx34d &amp;&#160;</td>
-          <td class="paramname"><em>P</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const cv::Point2d &amp;&#160;</td>
+          <td class="paramtype">const cv::Point3f &amp;&#160;</td>
           <td class="paramname"><em>u1</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const cv::Matx34d &amp;&#160;</td>
+          <td class="paramtype">const cv::Mat &amp;&#160;</td>
           <td class="paramname"><em>P1</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double &amp;&#160;</td>
-          <td class="paramname"><em>error</em>&#160;</td>
+          <td class="paramtype">const cv::Point3f &amp;&#160;</td>
+          <td class="paramname"><em>u2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const cv::Mat &amp;&#160;</td>
+          <td class="paramname"><em>P2</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -260,58 +251,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
       </table>
 </div><div class="memdoc">
 
-<p>Triangulates two homogeneous 2d_points {u,v,1.0} based on SVD linear system solving (AX=0). </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">First</td><td>homogeneous 2d_point. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">Second</td><td>homogeneous 2d_point. </td></tr>
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">error</td><td>Triangulation </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Triangulated homogeneous 3d_point. </dd></dl>
-
-</div>
-</div>
-<a id="ae051b14ccb8d1d0bd8fb385239ffa4ba"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae051b14ccb8d1d0bd8fb385239ffa4ba">&#9670;&nbsp;</a></span>linearTriangulation()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">cv::Mat_&lt;double&gt; SolAR::MODULES::OPENCV::SolARSVDTriangulationOpencv::linearTriangulation </td>
-          <td>(</td>
-          <td class="paramtype">const cv::Point3d &amp;&#160;</td>
-          <td class="paramname"><em>u</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const cv::Matx34d &amp;&#160;</td>
-          <td class="paramname"><em>P</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const cv::Point3d &amp;&#160;</td>
-          <td class="paramname"><em>u1</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const cv::Matx34d &amp;&#160;</td>
-          <td class="paramname"><em>P1</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Triangulates two homogeneous 2d_points {u,v,1.0} based on SVD linear system solving (AX=B). </p>
+<p>Triangulates two homogeneous 2d_points {u,v,1.0} based on SVD linear system solving (AX=0) from "Triangulation", Hartley, R.I. and Sturm, P., Computer vision and image understanding, 1997. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">First</td><td>homogeneous 2d_point. </td></tr>
@@ -323,8 +263,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
 
 </div>
 </div>
-<a id="aaaec81e671243e9259f92ae323e781e6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaaec81e671243e9259f92ae323e781e6">&#9670;&nbsp;</a></span>setCameraParameters()</h2>
+<a id="a48fdba67146d734a2ce0a422087f61a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48fdba67146d734a2ce0a422087f61a6">&#9670;&nbsp;</a></span>setCameraParameters()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -335,14 +275,14 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
         <tr>
           <td class="memname">void SolAR::MODULES::OPENCV::SolARSVDTriangulationOpencv::setCameraParameters </td>
           <td>(</td>
-          <td class="paramtype">const CamCalibration &amp;&#160;</td>
+          <td class="paramtype">const datastructure::CamCalibration &amp;&#160;</td>
           <td class="paramname"><em>intrinsicParams</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const CamDistortion &amp;&#160;</td>
-          <td class="paramname"><em>distorsionParams</em>&#160;</td>
+          <td class="paramtype">const datastructure::CamDistortion &amp;&#160;</td>
+          <td class="paramname"><em>distortionParams</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -357,19 +297,19 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
 </table>
 </div><div class="memdoc">
 
-<p>this method is used to set intrinsic parameters and distorsion of the camera </p>
+<p>this method is used to set intrinsic parameters and distortion of the camera </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">Camera</td><td>calibration matrix parameters. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">Camera</td><td>distorsion parameters. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">Camera</td><td>distortion parameters. </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a id="a50efa0050dc9ea4df082a0c1b0dc0107"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a50efa0050dc9ea4df082a0c1b0dc0107">&#9670;&nbsp;</a></span>triangulate() <span class="overload">[1/4]</span></h2>
+<a id="a1c888e97b0f345429e2adf99589dd88c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c888e97b0f345429e2adf99589dd88c">&#9670;&nbsp;</a></span>triangulate() <span class="overload">[1/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -380,19 +320,19 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
         <tr>
           <td class="memname">double SolAR::MODULES::OPENCV::SolARSVDTriangulationOpencv::triangulate </td>
           <td>(</td>
-          <td class="paramtype">const std::vector&lt; Point2Df &gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; datastructure::Point2Df &gt; &amp;&#160;</td>
           <td class="paramname"><em>pt2d_1</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::vector&lt; Point2Df &gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; datastructure::Point2Df &gt; &amp;&#160;</td>
           <td class="paramname"><em>pt2d_2</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::vector&lt; DescriptorMatch &gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; datastructure::DescriptorMatch &gt; &amp;&#160;</td>
           <td class="paramname"><em>matches</em>, </td>
         </tr>
         <tr>
@@ -404,19 +344,19 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const Transform3Df &amp;&#160;</td>
+          <td class="paramtype">const datastructure::Transform3Df &amp;&#160;</td>
           <td class="paramname"><em>poseView1</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const Transform3Df &amp;&#160;</td>
+          <td class="paramtype">const datastructure::Transform3Df &amp;&#160;</td>
           <td class="paramname"><em>poseView2</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; SRef&lt; CloudPoint &gt;&gt; &amp;&#160;</td>
+          <td class="paramtype">std::vector&lt; SRef&lt; datastructure::CloudPoint &gt;&gt; &amp;&#160;</td>
           <td class="paramname"><em>pcloud</em>&#160;</td>
         </tr>
         <tr>
@@ -449,8 +389,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
 
 </div>
 </div>
-<a id="ae552915202295eb287e3c530818e5aa7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae552915202295eb287e3c530818e5aa7">&#9670;&nbsp;</a></span>triangulate() <span class="overload">[2/4]</span></h2>
+<a id="a0b588026a96698a43f950d1344560924"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b588026a96698a43f950d1344560924">&#9670;&nbsp;</a></span>triangulate() <span class="overload">[2/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -461,19 +401,19 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
         <tr>
           <td class="memname">double SolAR::MODULES::OPENCV::SolARSVDTriangulationOpencv::triangulate </td>
           <td>(</td>
-          <td class="paramtype">const std::vector&lt; Keypoint &gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; datastructure::Keypoint &gt; &amp;&#160;</td>
           <td class="paramname"><em>keypointsView1</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::vector&lt; Keypoint &gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; datastructure::Keypoint &gt; &amp;&#160;</td>
           <td class="paramname"><em>keypointsView2</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::vector&lt; DescriptorMatch &gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; datastructure::DescriptorMatch &gt; &amp;&#160;</td>
           <td class="paramname"><em>matches</em>, </td>
         </tr>
         <tr>
@@ -485,19 +425,19 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const Transform3Df &amp;&#160;</td>
+          <td class="paramtype">const datastructure::Transform3Df &amp;&#160;</td>
           <td class="paramname"><em>poseView1</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const Transform3Df &amp;&#160;</td>
+          <td class="paramtype">const datastructure::Transform3Df &amp;&#160;</td>
           <td class="paramname"><em>poseView2</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; SRef&lt; CloudPoint &gt;&gt; &amp;&#160;</td>
+          <td class="paramtype">std::vector&lt; SRef&lt; datastructure::CloudPoint &gt;&gt; &amp;&#160;</td>
           <td class="paramname"><em>pcloud</em>&#160;</td>
         </tr>
         <tr>
@@ -530,8 +470,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
 
 </div>
 </div>
-<a id="a2e514316917500d96f504fbe64addb80"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2e514316917500d96f504fbe64addb80">&#9670;&nbsp;</a></span>triangulate() <span class="overload">[3/4]</span></h2>
+<a id="a1cfc6437518f2e1e628cfc3fa2f34af8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1cfc6437518f2e1e628cfc3fa2f34af8">&#9670;&nbsp;</a></span>triangulate() <span class="overload">[3/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -542,31 +482,31 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
         <tr>
           <td class="memname">double SolAR::MODULES::OPENCV::SolARSVDTriangulationOpencv::triangulate </td>
           <td>(</td>
-          <td class="paramtype">const std::vector&lt; Keypoint &gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; datastructure::Keypoint &gt; &amp;&#160;</td>
           <td class="paramname"><em>keypointsView1</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::vector&lt; Keypoint &gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; datastructure::Keypoint &gt; &amp;&#160;</td>
           <td class="paramname"><em>keypointsView2</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const SRef&lt; DescriptorBuffer &gt; &amp;&#160;</td>
+          <td class="paramtype">const SRef&lt; datastructure::DescriptorBuffer &gt; &amp;&#160;</td>
           <td class="paramname"><em>descriptor1</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const SRef&lt; DescriptorBuffer &gt; &amp;&#160;</td>
+          <td class="paramtype">const SRef&lt; datastructure::DescriptorBuffer &gt; &amp;&#160;</td>
           <td class="paramname"><em>descriptor2</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::vector&lt; DescriptorMatch &gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; datastructure::DescriptorMatch &gt; &amp;&#160;</td>
           <td class="paramname"><em>matches</em>, </td>
         </tr>
         <tr>
@@ -578,19 +518,19 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const Transform3Df &amp;&#160;</td>
+          <td class="paramtype">const datastructure::Transform3Df &amp;&#160;</td>
           <td class="paramname"><em>poseView1</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const Transform3Df &amp;&#160;</td>
+          <td class="paramtype">const datastructure::Transform3Df &amp;&#160;</td>
           <td class="paramname"><em>poseView2</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; SRef&lt; CloudPoint &gt;&gt; &amp;&#160;</td>
+          <td class="paramtype">std::vector&lt; SRef&lt; datastructure::CloudPoint &gt;&gt; &amp;&#160;</td>
           <td class="paramname"><em>pcloud</em>&#160;</td>
         </tr>
         <tr>
@@ -625,8 +565,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
 
 </div>
 </div>
-<a id="a483b5d22c8867b701f4200fcd16ba210"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a483b5d22c8867b701f4200fcd16ba210">&#9670;&nbsp;</a></span>triangulate() <span class="overload">[4/4]</span></h2>
+<a id="a49706e2b5b2394914554d7715af2b355"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49706e2b5b2394914554d7715af2b355">&#9670;&nbsp;</a></span>triangulate() <span class="overload">[4/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -637,19 +577,19 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
         <tr>
           <td class="memname">double SolAR::MODULES::OPENCV::SolARSVDTriangulationOpencv::triangulate </td>
           <td>(</td>
-          <td class="paramtype">const SRef&lt; Keyframe &gt; &amp;&#160;</td>
+          <td class="paramtype">const SRef&lt; datastructure::Keyframe &gt; &amp;&#160;</td>
           <td class="paramname"><em>curKeyframe</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::vector&lt; DescriptorMatch &gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; datastructure::DescriptorMatch &gt; &amp;&#160;</td>
           <td class="paramname"><em>matches</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; SRef&lt; CloudPoint &gt;&gt; &amp;&#160;</td>
+          <td class="paramtype">std::vector&lt; SRef&lt; datastructure::CloudPoint &gt;&gt; &amp;&#160;</td>
           <td class="paramname"><em>pcloud</em>&#160;</td>
         </tr>
         <tr>

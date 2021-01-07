@@ -6,5 +6,5 @@ digraph "SolAR::MODULES::OPENCV::SolARKeypointDetectorOpencv"
   Node1 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node1 [label="ConfigurableBase",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
   Node2 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node2 [label="IKeypointDetector",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node2 [label="api::features::IKeypoint\lDetector",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
 }

@@ -97,12 +97,12 @@ Collaboration diagram for SolAR::MODULES::TOOLS::SolARLoopCorrector:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ad100169744b3b7b80918481d4878ca34"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_t_o_o_l_s_1_1_sol_a_r_loop_corrector.html#ad100169744b3b7b80918481d4878ca34">setCameraParameters</a> (const CamCalibration &amp;intrinsicParams, const CamDistortion &amp;distortionParams) override</td></tr>
-<tr class="memdesc:ad100169744b3b7b80918481d4878ca34"><td class="mdescLeft">&#160;</td><td class="mdescRight">this method is used to set intrinsic parameters and distorsion of the camera  <a href="#ad100169744b3b7b80918481d4878ca34">More...</a><br /></td></tr>
-<tr class="separator:ad100169744b3b7b80918481d4878ca34"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abea6dde71c1fda79ee0b4ca81ef496df"><td class="memItemLeft" align="right" valign="top">FrameworkReturnCode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_t_o_o_l_s_1_1_sol_a_r_loop_corrector.html#abea6dde71c1fda79ee0b4ca81ef496df">correct</a> (const SRef&lt; Keyframe &gt; &amp;queryKeyframe, const SRef&lt; Keyframe &gt; &amp;detectedLoopKeyframe, const Transform3Df &amp;S_wl_wc, const std::vector&lt; std::pair&lt; uint32_t, uint32_t &gt;&gt; &amp;duplicatedPointsIndices) override</td></tr>
-<tr class="memdesc:abea6dde71c1fda79ee0b4ca81ef496df"><td class="mdescLeft">&#160;</td><td class="mdescRight">corrects a loop of keyframes and their associated point clouds from a loop detection result.  <a href="#abea6dde71c1fda79ee0b4ca81ef496df">More...</a><br /></td></tr>
-<tr class="separator:abea6dde71c1fda79ee0b4ca81ef496df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad937436e033d80533f5dd380de29308a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_t_o_o_l_s_1_1_sol_a_r_loop_corrector.html#ad937436e033d80533f5dd380de29308a">setCameraParameters</a> (const datastructure::CamCalibration &amp;intrinsicParams, const datastructure::CamDistortion &amp;distortionParams) override</td></tr>
+<tr class="memdesc:ad937436e033d80533f5dd380de29308a"><td class="mdescLeft">&#160;</td><td class="mdescRight">this method is used to set intrinsic parameters and distorsion of the camera  <a href="#ad937436e033d80533f5dd380de29308a">More...</a><br /></td></tr>
+<tr class="separator:ad937436e033d80533f5dd380de29308a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86e1df9416d7563ffc01014d96aed12f"><td class="memItemLeft" align="right" valign="top">FrameworkReturnCode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_t_o_o_l_s_1_1_sol_a_r_loop_corrector.html#a86e1df9416d7563ffc01014d96aed12f">correct</a> (const SRef&lt; datastructure::Keyframe &gt; queryKeyframe, const SRef&lt; datastructure::Keyframe &gt; detectedLoopKeyframe, const datastructure::Transform3Df &amp;S_wl_wc, const std::vector&lt; std::pair&lt; uint32_t, uint32_t &gt;&gt; &amp;duplicatedPointsIndices) override</td></tr>
+<tr class="memdesc:a86e1df9416d7563ffc01014d96aed12f"><td class="mdescLeft">&#160;</td><td class="mdescRight">corrects a loop of keyframes and their associated point clouds from a loop detection result.  <a href="#a86e1df9416d7563ffc01014d96aed12f">More...</a><br /></td></tr>
+<tr class="separator:a86e1df9416d7563ffc01014d96aed12f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6418bc944fecb07b97ab2f60400ad5bd"><td class="memItemLeft" align="right" valign="top"><a id="a6418bc944fecb07b97ab2f60400ad5bd"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> () override final</td></tr>
 <tr class="separator:a6418bc944fecb07b97ab2f60400ad5bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -110,8 +110,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Corrects a loop of camera poses and updates associated geometry. <code>UUID: 1007b588-c1f2-11ea-b3de-0242ac130004</code> </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="abea6dde71c1fda79ee0b4ca81ef496df"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abea6dde71c1fda79ee0b4ca81ef496df">&#9670;&nbsp;</a></span>correct()</h2>
+<a id="a86e1df9416d7563ffc01014d96aed12f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86e1df9416d7563ffc01014d96aed12f">&#9670;&nbsp;</a></span>correct()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -122,19 +122,19 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
         <tr>
           <td class="memname">FrameworkReturnCode SolAR::MODULES::TOOLS::SolARLoopCorrector::correct </td>
           <td>(</td>
-          <td class="paramtype">const SRef&lt; Keyframe &gt; &amp;&#160;</td>
+          <td class="paramtype">const SRef&lt; datastructure::Keyframe &gt;&#160;</td>
           <td class="paramname"><em>queryKeyframe</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const SRef&lt; Keyframe &gt; &amp;&#160;</td>
+          <td class="paramtype">const SRef&lt; datastructure::Keyframe &gt;&#160;</td>
           <td class="paramname"><em>detectedLoopKeyframe</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const Transform3Df &amp;&#160;</td>
+          <td class="paramtype">const datastructure::Transform3Df &amp;&#160;</td>
           <td class="paramname"><em>S_wl_wc</em>, </td>
         </tr>
         <tr>
@@ -170,8 +170,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
 
 </div>
 </div>
-<a id="ad100169744b3b7b80918481d4878ca34"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad100169744b3b7b80918481d4878ca34">&#9670;&nbsp;</a></span>setCameraParameters()</h2>
+<a id="ad937436e033d80533f5dd380de29308a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad937436e033d80533f5dd380de29308a">&#9670;&nbsp;</a></span>setCameraParameters()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -182,13 +182,13 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
         <tr>
           <td class="memname">void SolAR::MODULES::TOOLS::SolARLoopCorrector::setCameraParameters </td>
           <td>(</td>
-          <td class="paramtype">const CamCalibration &amp;&#160;</td>
+          <td class="paramtype">const datastructure::CamCalibration &amp;&#160;</td>
           <td class="paramname"><em>intrinsicParams</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const CamDistortion &amp;&#160;</td>
+          <td class="paramtype">const datastructure::CamDistortion &amp;&#160;</td>
           <td class="paramname"><em>distortionParams</em>&#160;</td>
         </tr>
         <tr>

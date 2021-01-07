@@ -105,12 +105,12 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_o_p_e_n_c_v_1_1_sol_a_r_pose_estimation_planar_points_opencv.html#aa46290322644279acb7f5b09179740ab">~SolARPoseEstimationPlanarPointsOpencv</a> () override</td></tr>
 <tr class="memdesc:aa46290322644279acb7f5b09179740ab"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_o_p_e_n_c_v_1_1_sol_a_r_pose_estimation_planar_points_opencv.html" title="Finds the camera pose of 2D-3D planar points correspondences based on opencv homography. UUID: 9fbadf80-251f-4160-94f8-a64dc3d40a2f ">SolARPoseEstimationPlanarPointsOpencv</a> destructor;. <br /></td></tr>
 <tr class="separator:aa46290322644279acb7f5b09179740ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afcb7e779f439dea03da9114dd0b58008"><td class="memItemLeft" align="right" valign="top">FrameworkReturnCode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_o_p_e_n_c_v_1_1_sol_a_r_pose_estimation_planar_points_opencv.html#afcb7e779f439dea03da9114dd0b58008">estimate</a> (const std::vector&lt; Point2Df &gt; &amp;imagePoints, const std::vector&lt; Point3Df &gt; &amp;worldPoints, std::vector&lt; Point2Df &gt; &amp;imagePoints_inlier, std::vector&lt; Point3Df &gt; &amp;worldPoints_inlier, Transform3Df &amp;pose, const Transform3Df initialPose=Transform3Df::Identity()) override</td></tr>
-<tr class="memdesc:afcb7e779f439dea03da9114dd0b58008"><td class="mdescLeft">&#160;</td><td class="mdescRight">Estimates camera pose from a set of 2D image points of their corresponding 3D world points.  <a href="#afcb7e779f439dea03da9114dd0b58008">More...</a><br /></td></tr>
-<tr class="separator:afcb7e779f439dea03da9114dd0b58008"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a244b2d9b563d86fb41b3b24e2a688881"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_o_p_e_n_c_v_1_1_sol_a_r_pose_estimation_planar_points_opencv.html#a244b2d9b563d86fb41b3b24e2a688881">setCameraParameters</a> (const CamCalibration &amp;intrinsicParams, const CamDistortion &amp;distorsionParams) override</td></tr>
-<tr class="memdesc:a244b2d9b563d86fb41b3b24e2a688881"><td class="mdescLeft">&#160;</td><td class="mdescRight">this method is used to set intrinsic parameters and distorsion of the camera  <a href="#a244b2d9b563d86fb41b3b24e2a688881">More...</a><br /></td></tr>
-<tr class="separator:a244b2d9b563d86fb41b3b24e2a688881"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af76f6b12d450647216cc14938eb8c83d"><td class="memItemLeft" align="right" valign="top">FrameworkReturnCode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_o_p_e_n_c_v_1_1_sol_a_r_pose_estimation_planar_points_opencv.html#af76f6b12d450647216cc14938eb8c83d">estimate</a> (const std::vector&lt; datastructure::Point2Df &gt; &amp;imagePoints, const std::vector&lt; datastructure::Point3Df &gt; &amp;worldPoints, std::vector&lt; uint32_t &gt; &amp;inliers, datastructure::Transform3Df &amp;pose, const datastructure::Transform3Df initialPose=datastructure::Transform3Df::Identity()) override</td></tr>
+<tr class="memdesc:af76f6b12d450647216cc14938eb8c83d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Estimates camera pose from a set of 2D image points of their corresponding 3D world points.  <a href="#af76f6b12d450647216cc14938eb8c83d">More...</a><br /></td></tr>
+<tr class="separator:af76f6b12d450647216cc14938eb8c83d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78dc41643d2ab81ab8327f444a9865e2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_o_p_e_n_c_v_1_1_sol_a_r_pose_estimation_planar_points_opencv.html#a78dc41643d2ab81ab8327f444a9865e2">setCameraParameters</a> (const datastructure::CamCalibration &amp;intrinsicParams, const datastructure::CamDistortion &amp;distorsionParams) override</td></tr>
+<tr class="memdesc:a78dc41643d2ab81ab8327f444a9865e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">this method is used to set intrinsic parameters and distorsion of the camera  <a href="#a78dc41643d2ab81ab8327f444a9865e2">More...</a><br /></td></tr>
+<tr class="separator:a78dc41643d2ab81ab8327f444a9865e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e581922821b7228b4ee5234f25a59d7"><td class="memItemLeft" align="right" valign="top"><a id="a4e581922821b7228b4ee5234f25a59d7"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> () override final</td></tr>
 <tr class="separator:a4e581922821b7228b4ee5234f25a59d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -118,8 +118,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><b>Finds the camera pose of 2D-3D planar points correspondences based on opencv homography.</b> <code>UUID: 9fbadf80-251f-4160-94f8-a64dc3d40a2f</code> </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="afcb7e779f439dea03da9114dd0b58008"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afcb7e779f439dea03da9114dd0b58008">&#9670;&nbsp;</a></span>estimate()</h2>
+<a id="af76f6b12d450647216cc14938eb8c83d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af76f6b12d450647216cc14938eb8c83d">&#9670;&nbsp;</a></span>estimate()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -130,38 +130,32 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
         <tr>
           <td class="memname">FrameworkReturnCode SolAR::MODULES::OPENCV::SolARPoseEstimationPlanarPointsOpencv::estimate </td>
           <td>(</td>
-          <td class="paramtype">const std::vector&lt; Point2Df &gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; datastructure::Point2Df &gt; &amp;&#160;</td>
           <td class="paramname"><em>imagePoints</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::vector&lt; Point3Df &gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; datastructure::Point3Df &gt; &amp;&#160;</td>
           <td class="paramname"><em>worldPoints</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; Point2Df &gt; &amp;&#160;</td>
-          <td class="paramname"><em>imagePoints_inlier</em>, </td>
+          <td class="paramtype">std::vector&lt; uint32_t &gt; &amp;&#160;</td>
+          <td class="paramname"><em>inliers</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; Point3Df &gt; &amp;&#160;</td>
-          <td class="paramname"><em>worldPoints_inlier</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">Transform3Df &amp;&#160;</td>
+          <td class="paramtype">datastructure::Transform3Df &amp;&#160;</td>
           <td class="paramname"><em>pose</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const Transform3Df&#160;</td>
-          <td class="paramname"><em>initialPose</em> = <code>Transform3Df::Identity()</code>&#160;</td>
+          <td class="paramtype">const datastructure::Transform3Df&#160;</td>
+          <td class="paramname"><em>initialPose</em> = <code>datastructure::Transform3Df::Identity()</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -181,18 +175,17 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">imagePoints,set</td><td>of 2d_points seen in view_1. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">worldPoints,set</td><td>of 3d_points corresponding to view_1. </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">imagePoints_inlier,image</td><td>2d points that are inliers </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">worldPoints_inlier,world</td><td>3d points that are inliers. </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">pose,camera</td><td>pose (pose the camera defined in world corrdinate system) expressed as a Transform3D. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">initialPose</td><td>(Optional), a tranfsform3D to initialize the pose (reducing the convergence time and improving its success). If your world points are planar, do not use this argument. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">inliers</td><td>indices of inlier correspondences. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">pose,camera</td><td>pose (pose of the camera defined in world corrdinate system) expressed as a Transform3D. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">initialPose</td><td>(Optional), a transform3D to initialize the pose (reducing the convergence time and improving its success). </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a id="a244b2d9b563d86fb41b3b24e2a688881"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a244b2d9b563d86fb41b3b24e2a688881">&#9670;&nbsp;</a></span>setCameraParameters()</h2>
+<a id="a78dc41643d2ab81ab8327f444a9865e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78dc41643d2ab81ab8327f444a9865e2">&#9670;&nbsp;</a></span>setCameraParameters()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -203,13 +196,13 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
         <tr>
           <td class="memname">void SolAR::MODULES::OPENCV::SolARPoseEstimationPlanarPointsOpencv::setCameraParameters </td>
           <td>(</td>
-          <td class="paramtype">const CamCalibration &amp;&#160;</td>
+          <td class="paramtype">const datastructure::CamCalibration &amp;&#160;</td>
           <td class="paramname"><em>intrinsicParams</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const CamDistortion &amp;&#160;</td>
+          <td class="paramtype">const datastructure::CamDistortion &amp;&#160;</td>
           <td class="paramname"><em>distorsionParams</em>&#160;</td>
         </tr>
         <tr>

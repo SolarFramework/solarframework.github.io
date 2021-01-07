@@ -105,9 +105,9 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_o_p_e_n_c_v_1_1_sol_a_r_fundamental_matrix_estimation_opencv.html#a61bd2bd1c442c37b30e6b0428932d244">~SolARFundamentalMatrixEstimationOpencv</a> () override</td></tr>
 <tr class="memdesc:a61bd2bd1c442c37b30e6b0428932d244"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_o_p_e_n_c_v_1_1_sol_a_r_fundamental_matrix_estimation_opencv.html" title="Estimates the fundamental matrix from two set of keypoints that match together. UUID: 79b29b50-cf4d-4...">SolARFundamentalMatrixEstimationOpencv</a> destructor. <br /></td></tr>
 <tr class="separator:a61bd2bd1c442c37b30e6b0428932d244"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adde26ba0f53d482288ab55cb42c95450"><td class="memItemLeft" align="right" valign="top">api::solver::pose::Transform2DFinder::RetCode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_o_p_e_n_c_v_1_1_sol_a_r_fundamental_matrix_estimation_opencv.html#adde26ba0f53d482288ab55cb42c95450">find</a> (const std::vector&lt; Point2Df &gt; &amp;srcPoints, const std::vector&lt; Point2Df &gt; &amp;dstPoints, Transform2Df &amp;fundamental) override</td></tr>
-<tr class="memdesc:adde26ba0f53d482288ab55cb42c95450"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find fundamental matrix from 2 sets of 2d_points. Th estimation is based on the opencv findFundamental algorithm.  <a href="#adde26ba0f53d482288ab55cb42c95450">More...</a><br /></td></tr>
-<tr class="separator:adde26ba0f53d482288ab55cb42c95450"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42526a7ee2eb7c366b9aaf4f76b3f064"><td class="memItemLeft" align="right" valign="top">api::solver::pose::Transform2DFinder::RetCode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_o_p_e_n_c_v_1_1_sol_a_r_fundamental_matrix_estimation_opencv.html#a42526a7ee2eb7c366b9aaf4f76b3f064">find</a> (const std::vector&lt; datastructure::Point2Df &gt; &amp;srcPoints, const std::vector&lt; datastructure::Point2Df &gt; &amp;dstPoints, datastructure::Transform2Df &amp;fundamental) override</td></tr>
+<tr class="memdesc:a42526a7ee2eb7c366b9aaf4f76b3f064"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find fundamental matrix from 2 sets of 2d_points. Th estimation is based on the opencv findFundamental algorithm.  <a href="#a42526a7ee2eb7c366b9aaf4f76b3f064">More...</a><br /></td></tr>
+<tr class="separator:a42526a7ee2eb7c366b9aaf4f76b3f064"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6c0bea656d2709d207c0cf75a6bfa21a"><td class="memItemLeft" align="right" valign="top"><a id="a6c0bea656d2709d207c0cf75a6bfa21a"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> () override final</td></tr>
 <tr class="separator:a6c0bea656d2709d207c0cf75a6bfa21a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -115,8 +115,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><b>Estimates the fundamental matrix from two set of keypoints that match together.</b> <code>UUID: 79b29b50-cf4d-441e-b5de-1de829b91c41</code> </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="adde26ba0f53d482288ab55cb42c95450"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adde26ba0f53d482288ab55cb42c95450">&#9670;&nbsp;</a></span>find()</h2>
+<a id="a42526a7ee2eb7c366b9aaf4f76b3f064"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42526a7ee2eb7c366b9aaf4f76b3f064">&#9670;&nbsp;</a></span>find()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -127,19 +127,19 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
         <tr>
           <td class="memname">api::solver::pose::Transform2DFinder::RetCode SolAR::MODULES::OPENCV::SolARFundamentalMatrixEstimationOpencv::find </td>
           <td>(</td>
-          <td class="paramtype">const std::vector&lt; Point2Df &gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; datastructure::Point2Df &gt; &amp;&#160;</td>
           <td class="paramname"><em>srcPoints</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::vector&lt; Point2Df &gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; datastructure::Point2Df &gt; &amp;&#160;</td>
           <td class="paramname"><em>dstPoints</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Transform2Df &amp;&#160;</td>
+          <td class="paramtype">datastructure::Transform2Df &amp;&#160;</td>
           <td class="paramname"><em>fundamental</em>&#160;</td>
         </tr>
         <tr>

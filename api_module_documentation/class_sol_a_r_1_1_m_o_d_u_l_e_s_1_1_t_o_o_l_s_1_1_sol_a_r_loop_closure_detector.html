@@ -97,18 +97,22 @@ Collaboration diagram for SolAR::MODULES::TOOLS::SolARLoopClosureDetector:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a791869bc5b9e322537c941f27e33791d"><td class="memItemLeft" align="right" valign="top">FrameworkReturnCode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_t_o_o_l_s_1_1_sol_a_r_loop_closure_detector.html#a791869bc5b9e322537c941f27e33791d">detect</a> (const SRef&lt; Keyframe &gt; &amp;queryKeyframe, SRef&lt; Keyframe &gt; &amp;detectedLoopKeyframe, Transform3Df &amp;sim3Transform, std::vector&lt; std::pair&lt; uint32_t, uint32_t &gt;&gt; &amp;duplicatedPointsIndices) override</td></tr>
-<tr class="memdesc:a791869bc5b9e322537c941f27e33791d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Detect a loop closure from a given keyframe.  <a href="#a791869bc5b9e322537c941f27e33791d">More...</a><br /></td></tr>
-<tr class="separator:a791869bc5b9e322537c941f27e33791d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af999ed3d8e315bf46fb67023d323761e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_t_o_o_l_s_1_1_sol_a_r_loop_closure_detector.html#af999ed3d8e315bf46fb67023d323761e">setCameraParameters</a> (const datastructure::CamCalibration &amp;intrinsicParams, const datastructure::CamDistortion &amp;distortionParams) override</td></tr>
+<tr class="memdesc:af999ed3d8e315bf46fb67023d323761e"><td class="mdescLeft">&#160;</td><td class="mdescRight">this method is used to set intrinsic parameters and distorsion of the camera  <a href="#af999ed3d8e315bf46fb67023d323761e">More...</a><br /></td></tr>
+<tr class="separator:af999ed3d8e315bf46fb67023d323761e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1dfdde8471342823e63a49c54950719"><td class="memItemLeft" align="right" valign="top">FrameworkReturnCode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_t_o_o_l_s_1_1_sol_a_r_loop_closure_detector.html#af1dfdde8471342823e63a49c54950719">detect</a> (const SRef&lt; datastructure::Keyframe &gt; queryKeyframe, SRef&lt; datastructure::Keyframe &gt; &amp;detectedLoopKeyframe, datastructure::Transform3Df &amp;sim3Transform, std::vector&lt; std::pair&lt; uint32_t, uint32_t &gt;&gt; &amp;duplicatedPointsIndices) const override</td></tr>
+<tr class="memdesc:af1dfdde8471342823e63a49c54950719"><td class="mdescLeft">&#160;</td><td class="mdescRight">Detect a loop closure from a given keyframe.  <a href="#af1dfdde8471342823e63a49c54950719">More...</a><br /></td></tr>
+<tr class="separator:af1dfdde8471342823e63a49c54950719"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a518cf86a897e8192b004d09c4102d0b3"><td class="memItemLeft" align="right" valign="top"><a id="a518cf86a897e8192b004d09c4102d0b3"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> () override final</td></tr>
 <tr class="separator:a518cf86a897e8192b004d09c4102d0b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Detect a loop closure from a given keyframe. <code>UUID: e3d5946c-c1f1-11ea-b3de-0242ac130004</code> </p>
+<p>Detect a loop closure from a given keyframe. <code>UUID: 58087630-1376-11eb-adc1-0242ac120002</code> </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a791869bc5b9e322537c941f27e33791d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a791869bc5b9e322537c941f27e33791d">&#9670;&nbsp;</a></span>detect()</h2>
+<a id="af1dfdde8471342823e63a49c54950719"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1dfdde8471342823e63a49c54950719">&#9670;&nbsp;</a></span>detect()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -119,19 +123,19 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
         <tr>
           <td class="memname">FrameworkReturnCode SolAR::MODULES::TOOLS::SolARLoopClosureDetector::detect </td>
           <td>(</td>
-          <td class="paramtype">const SRef&lt; Keyframe &gt; &amp;&#160;</td>
+          <td class="paramtype">const SRef&lt; datastructure::Keyframe &gt;&#160;</td>
           <td class="paramname"><em>queryKeyframe</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">SRef&lt; Keyframe &gt; &amp;&#160;</td>
+          <td class="paramtype">SRef&lt; datastructure::Keyframe &gt; &amp;&#160;</td>
           <td class="paramname"><em>detectedLoopKeyframe</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Transform3Df &amp;&#160;</td>
+          <td class="paramtype">datastructure::Transform3Df &amp;&#160;</td>
           <td class="paramname"><em>sim3Transform</em>, </td>
         </tr>
         <tr>
@@ -143,7 +147,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td></td>
+          <td></td><td> const</td>
         </tr>
       </table>
   </td>
@@ -164,6 +168,51 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>FrameworkReturnCode::<em>SUCCESS if detect a loop closure, else FrameworkReturnCode::_ERROR</em> </dd></dl>
+
+</div>
+</div>
+<a id="af999ed3d8e315bf46fb67023d323761e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af999ed3d8e315bf46fb67023d323761e">&#9670;&nbsp;</a></span>setCameraParameters()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SolAR::MODULES::TOOLS::SolARLoopClosureDetector::setCameraParameters </td>
+          <td>(</td>
+          <td class="paramtype">const datastructure::CamCalibration &amp;&#160;</td>
+          <td class="paramname"><em>intrinsicParams</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const datastructure::CamDistortion &amp;&#160;</td>
+          <td class="paramname"><em>distortionParams</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>this method is used to set intrinsic parameters and distorsion of the camera </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">intrinsicParams</td><td>Camera calibration matrix parameters. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">distortionParams</td><td>Camera distortion parameters. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

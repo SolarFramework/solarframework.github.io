@@ -97,9 +97,9 @@ Collaboration diagram for SolAR::MODULES::PCL::SolARICPNormals:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a65ad6d447a5a3c19fe545ad711fe1638"><td class="memItemLeft" align="right" valign="top">FrameworkReturnCode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_p_c_l_1_1_sol_a_r_i_c_p_normals.html#a65ad6d447a5a3c19fe545ad711fe1638">estimate</a> (const SRef&lt; PointCloud &gt; sourcePointCloud, const SRef&lt; PointCloud &gt; targetPointCloud, Transform3Df &amp;pose, const Transform3Df &amp;initialPose=Transform3Df::Identity()) override final</td></tr>
-<tr class="memdesc:a65ad6d447a5a3c19fe545ad711fe1638"><td class="mdescLeft">&#160;</td><td class="mdescRight">Estimates depth sensor pose from a set of 3D points captured by the depth sensor and defined in the depth sensor coordinate and a point cloud representing the real world geometry.  <a href="#a65ad6d447a5a3c19fe545ad711fe1638">More...</a><br /></td></tr>
-<tr class="separator:a65ad6d447a5a3c19fe545ad711fe1638"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16c0fef7de18126aac875fa6af1d14f7"><td class="memItemLeft" align="right" valign="top">FrameworkReturnCode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_p_c_l_1_1_sol_a_r_i_c_p_normals.html#a16c0fef7de18126aac875fa6af1d14f7">estimate</a> (const SRef&lt; datastructure::PointCloud &gt; sourcePointCloud, const SRef&lt; datastructure::PointCloud &gt; targetPointCloud, datastructure::Transform3Df &amp;pose, const datastructure::Transform3Df &amp;initialPose=datastructure::Transform3Df::Identity()) override final</td></tr>
+<tr class="memdesc:a16c0fef7de18126aac875fa6af1d14f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Estimates depth sensor pose from a set of 3D points captured by the depth sensor and defined in the depth sensor coordinate and a point cloud representing the real world geometry.  <a href="#a16c0fef7de18126aac875fa6af1d14f7">More...</a><br /></td></tr>
+<tr class="separator:a16c0fef7de18126aac875fa6af1d14f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a97abf97759a086493055e68630f02927"><td class="memItemLeft" align="right" valign="top"><a id="a97abf97759a086493055e68630f02927"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> () override final</td></tr>
 <tr class="separator:a97abf97759a086493055e68630f02927"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -107,8 +107,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This component performs Point-To-Plane registration between two pointclouds based on Point Cloud Library (<a class="el" href="namespace_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_p_c_l.html" title="Provides a set of function to process point cloud based on the point clouds library: https://pointclo...">PCL</a>). </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a65ad6d447a5a3c19fe545ad711fe1638"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a65ad6d447a5a3c19fe545ad711fe1638">&#9670;&nbsp;</a></span>estimate()</h2>
+<a id="a16c0fef7de18126aac875fa6af1d14f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16c0fef7de18126aac875fa6af1d14f7">&#9670;&nbsp;</a></span>estimate()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -119,26 +119,26 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
         <tr>
           <td class="memname">FrameworkReturnCode SolAR::MODULES::PCL::SolARICPNormals::estimate </td>
           <td>(</td>
-          <td class="paramtype">const SRef&lt; PointCloud &gt;&#160;</td>
+          <td class="paramtype">const SRef&lt; datastructure::PointCloud &gt;&#160;</td>
           <td class="paramname"><em>sourcePointCloud</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const SRef&lt; PointCloud &gt;&#160;</td>
+          <td class="paramtype">const SRef&lt; datastructure::PointCloud &gt;&#160;</td>
           <td class="paramname"><em>targetPointCloud</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Transform3Df &amp;&#160;</td>
+          <td class="paramtype">datastructure::Transform3Df &amp;&#160;</td>
           <td class="paramname"><em>pose</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const Transform3Df &amp;&#160;</td>
-          <td class="paramname"><em>initialPose</em> = <code>Transform3Df::Identity()</code>&#160;</td>
+          <td class="paramtype">const datastructure::Transform3Df &amp;&#160;</td>
+          <td class="paramname"><em>initialPose</em> = <code>datastructure::Transform3Df::Identity()</code>&#160;</td>
         </tr>
         <tr>
           <td></td>

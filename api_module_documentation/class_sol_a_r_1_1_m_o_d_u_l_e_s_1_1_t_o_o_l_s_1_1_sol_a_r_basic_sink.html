@@ -97,21 +97,21 @@ Collaboration diagram for SolAR::MODULES::TOOLS::SolARBasicSink:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ab7f50da049b63e1ad520e8260801679d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_t_o_o_l_s_1_1_sol_a_r_basic_sink.html#ab7f50da049b63e1ad520e8260801679d">set</a> (const Transform3Df &amp;pose, const SRef&lt; Image &gt; &amp;image) override</td></tr>
-<tr class="memdesc:ab7f50da049b63e1ad520e8260801679d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a new image and pose coming from the pipeline.  <a href="#ab7f50da049b63e1ad520e8260801679d">More...</a><br /></td></tr>
-<tr class="separator:ab7f50da049b63e1ad520e8260801679d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a083ed6a1389a50b32d07583773957bf5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_t_o_o_l_s_1_1_sol_a_r_basic_sink.html#a083ed6a1389a50b32d07583773957bf5">set</a> (const SRef&lt; Image &gt; &amp;image) override</td></tr>
-<tr class="memdesc:a083ed6a1389a50b32d07583773957bf5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a new image without pose.  <a href="#a083ed6a1389a50b32d07583773957bf5">More...</a><br /></td></tr>
-<tr class="separator:a083ed6a1389a50b32d07583773957bf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8de611d3d0dd841965b25a46d9b40e9b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_t_o_o_l_s_1_1_sol_a_r_basic_sink.html#a8de611d3d0dd841965b25a46d9b40e9b">set</a> (const datastructure::Transform3Df &amp;pose, const SRef&lt; datastructure::Image &gt; image) override</td></tr>
+<tr class="memdesc:a8de611d3d0dd841965b25a46d9b40e9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a new image and pose coming from the pipeline.  <a href="#a8de611d3d0dd841965b25a46d9b40e9b">More...</a><br /></td></tr>
+<tr class="separator:a8de611d3d0dd841965b25a46d9b40e9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c3a873513bf828f377842c3102f13d8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_t_o_o_l_s_1_1_sol_a_r_basic_sink.html#a6c3a873513bf828f377842c3102f13d8">set</a> (const SRef&lt; datastructure::Image &gt; image) override</td></tr>
+<tr class="memdesc:a6c3a873513bf828f377842c3102f13d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a new image without pose.  <a href="#a6c3a873513bf828f377842c3102f13d8">More...</a><br /></td></tr>
+<tr class="separator:a6c3a873513bf828f377842c3102f13d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a44620e64d68ba4d69204db02e6140c71"><td class="memItemLeft" align="right" valign="top">FrameworkReturnCode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_t_o_o_l_s_1_1_sol_a_r_basic_sink.html#a44620e64d68ba4d69204db02e6140c71">setImageBuffer</a> (unsigned char *imageBufferPointer) override</td></tr>
 <tr class="memdesc:a44620e64d68ba4d69204db02e6140c71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a pointer to the texture buffer to update it with the new image when required.  <a href="#a44620e64d68ba4d69204db02e6140c71">More...</a><br /></td></tr>
 <tr class="separator:a44620e64d68ba4d69204db02e6140c71"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af16e23484f42da82bd70bef912bc5ee8"><td class="memItemLeft" align="right" valign="top">SinkReturnCode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_t_o_o_l_s_1_1_sol_a_r_basic_sink.html#af16e23484f42da82bd70bef912bc5ee8">get</a> (Transform3Df &amp;pose) override</td></tr>
-<tr class="memdesc:af16e23484f42da82bd70bef912bc5ee8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provide an access to the new pose and update the texture buffer with the new image. The implementation of this interface must be thread safe.  <a href="#af16e23484f42da82bd70bef912bc5ee8">More...</a><br /></td></tr>
-<tr class="separator:af16e23484f42da82bd70bef912bc5ee8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9dd686d8eec863813823adabaea0a467"><td class="memItemLeft" align="right" valign="top">SinkReturnCode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_t_o_o_l_s_1_1_sol_a_r_basic_sink.html#a9dd686d8eec863813823adabaea0a467">tryGet</a> (Transform3Df &amp;pose) override</td></tr>
-<tr class="memdesc:a9dd686d8eec863813823adabaea0a467"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provide an access to the new pose and update the texture buffer with the new image only if the image and the pose have been updated by the pipeline. The implementation of this interface must be thread safe.  <a href="#a9dd686d8eec863813823adabaea0a467">More...</a><br /></td></tr>
-<tr class="separator:a9dd686d8eec863813823adabaea0a467"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6472fc185edeac195e12be59445c68cb"><td class="memItemLeft" align="right" valign="top">api::sink::SinkReturnCode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_t_o_o_l_s_1_1_sol_a_r_basic_sink.html#a6472fc185edeac195e12be59445c68cb">get</a> (datastructure::Transform3Df &amp;pose) override</td></tr>
+<tr class="memdesc:a6472fc185edeac195e12be59445c68cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provide an access to the new pose and update the texture buffer with the new image. The implementation of this interface must be thread safe.  <a href="#a6472fc185edeac195e12be59445c68cb">More...</a><br /></td></tr>
+<tr class="separator:a6472fc185edeac195e12be59445c68cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a023205d6fcdfda8b0218b91b8ff33d8d"><td class="memItemLeft" align="right" valign="top">api::sink::SinkReturnCode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_t_o_o_l_s_1_1_sol_a_r_basic_sink.html#a023205d6fcdfda8b0218b91b8ff33d8d">tryGet</a> (datastructure::Transform3Df &amp;pose) override</td></tr>
+<tr class="memdesc:a023205d6fcdfda8b0218b91b8ff33d8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provide an access to the new pose and update the texture buffer with the new image only if the image and the pose have been updated by the pipeline. The implementation of this interface must be thread safe.  <a href="#a023205d6fcdfda8b0218b91b8ff33d8d">More...</a><br /></td></tr>
+<tr class="separator:a023205d6fcdfda8b0218b91b8ff33d8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aed45e0b8b3d59aad48ee732f9a80cf8f"><td class="memItemLeft" align="right" valign="top"><a id="aed45e0b8b3d59aad48ee732f9a80cf8f"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> () override final</td></tr>
 <tr class="separator:aed45e0b8b3d59aad48ee732f9a80cf8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -120,8 +120,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
 <div class="textblock"><p><b>A Sink for a synchronized pose and texture buffer based on an image buffer useful for AR video see-through pipelines.</b>. <code>UUID: 85db2f25-4f1c-4e06-9011-e020284bfc4f</code> </p>
 <p>This interface allows to make available a pose to a third party application and to update image buffer with a new image. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="af16e23484f42da82bd70bef912bc5ee8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af16e23484f42da82bd70bef912bc5ee8">&#9670;&nbsp;</a></span>get()</h2>
+<a id="a6472fc185edeac195e12be59445c68cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6472fc185edeac195e12be59445c68cb">&#9670;&nbsp;</a></span>get()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -130,9 +130,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">SinkReturnCode SolAR::MODULES::TOOLS::SolARBasicSink::get </td>
+          <td class="memname">api::sink::SinkReturnCode SolAR::MODULES::TOOLS::SolARBasicSink::get </td>
           <td>(</td>
-          <td class="paramtype">Transform3Df &amp;&#160;</td>
+          <td class="paramtype">datastructure::Transform3Df &amp;&#160;</td>
           <td class="paramname"><em>pose</em></td><td>)</td>
           <td></td>
         </tr>
@@ -155,8 +155,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
 
 </div>
 </div>
-<a id="ab7f50da049b63e1ad520e8260801679d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab7f50da049b63e1ad520e8260801679d">&#9670;&nbsp;</a></span>set() <span class="overload">[1/2]</span></h2>
+<a id="a8de611d3d0dd841965b25a46d9b40e9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8de611d3d0dd841965b25a46d9b40e9b">&#9670;&nbsp;</a></span>set() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -167,13 +167,13 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
         <tr>
           <td class="memname">void SolAR::MODULES::TOOLS::SolARBasicSink::set </td>
           <td>(</td>
-          <td class="paramtype">const Transform3Df &amp;&#160;</td>
+          <td class="paramtype">const datastructure::Transform3Df &amp;&#160;</td>
           <td class="paramname"><em>pose</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const SRef&lt; Image &gt; &amp;&#160;</td>
+          <td class="paramtype">const SRef&lt; datastructure::Image &gt;&#160;</td>
           <td class="paramname"><em>image</em>&#160;</td>
         </tr>
         <tr>
@@ -200,8 +200,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
 
 </div>
 </div>
-<a id="a083ed6a1389a50b32d07583773957bf5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a083ed6a1389a50b32d07583773957bf5">&#9670;&nbsp;</a></span>set() <span class="overload">[2/2]</span></h2>
+<a id="a6c3a873513bf828f377842c3102f13d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c3a873513bf828f377842c3102f13d8">&#9670;&nbsp;</a></span>set() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -212,7 +212,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
         <tr>
           <td class="memname">void SolAR::MODULES::TOOLS::SolARBasicSink::set </td>
           <td>(</td>
-          <td class="paramtype">const SRef&lt; Image &gt; &amp;&#160;</td>
+          <td class="paramtype">const SRef&lt; datastructure::Image &gt;&#160;</td>
           <td class="paramname"><em>image</em></td><td>)</td>
           <td></td>
         </tr>
@@ -269,8 +269,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
 
 </div>
 </div>
-<a id="a9dd686d8eec863813823adabaea0a467"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9dd686d8eec863813823adabaea0a467">&#9670;&nbsp;</a></span>tryGet()</h2>
+<a id="a023205d6fcdfda8b0218b91b8ff33d8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a023205d6fcdfda8b0218b91b8ff33d8d">&#9670;&nbsp;</a></span>tryGet()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -279,9 +279,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">SinkReturnCode SolAR::MODULES::TOOLS::SolARBasicSink::tryGet </td>
+          <td class="memname">api::sink::SinkReturnCode SolAR::MODULES::TOOLS::SolARBasicSink::tryGet </td>
           <td>(</td>
-          <td class="paramtype">Transform3Df &amp;&#160;</td>
+          <td class="paramtype">datastructure::Transform3Df &amp;&#160;</td>
           <td class="paramname"><em>pose</em></td><td>)</td>
           <td></td>
         </tr>

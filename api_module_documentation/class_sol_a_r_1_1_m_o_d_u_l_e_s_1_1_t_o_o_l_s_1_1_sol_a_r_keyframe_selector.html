@@ -101,15 +101,15 @@ Public Member Functions</h2></td></tr>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_t_o_o_l_s_1_1_sol_a_r_keyframe_selector.html#aa7a93a9ddb0174e445437243c2643155">~SolARKeyframeSelector</a> () override</td></tr>
 <tr class="memdesc:aa7a93a9ddb0174e445437243c2643155"><td class="mdescLeft">&#160;</td><td class="mdescRight">~SolARKeyframeSelector <br /></td></tr>
 <tr class="separator:aa7a93a9ddb0174e445437243c2643155"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a960a147fa1110807f8a24ddb9eec618c"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_t_o_o_l_s_1_1_sol_a_r_keyframe_selector.html#a960a147fa1110807f8a24ddb9eec618c">select</a> (const SRef&lt; Frame &gt; &amp;frame, const std::vector&lt; DescriptorMatch &gt; &amp;matches) override</td></tr>
-<tr class="memdesc:a960a147fa1110807f8a24ddb9eec618c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines if a frame can be a candidate for a keyframe.  <a href="#a960a147fa1110807f8a24ddb9eec618c">More...</a><br /></td></tr>
-<tr class="separator:a960a147fa1110807f8a24ddb9eec618c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afc5acf7effe1e81ad9bc37450ba609bd"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_t_o_o_l_s_1_1_sol_a_r_keyframe_selector.html#afc5acf7effe1e81ad9bc37450ba609bd">select</a> (const SRef&lt; Frame &gt; &amp;frame) override</td></tr>
-<tr class="memdesc:afc5acf7effe1e81ad9bc37450ba609bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Select if a frame can be considered as a keyframe.  <a href="#afc5acf7effe1e81ad9bc37450ba609bd">More...</a><br /></td></tr>
-<tr class="separator:afc5acf7effe1e81ad9bc37450ba609bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a07f6aa463078dd208f7cb9661494d0ac"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_t_o_o_l_s_1_1_sol_a_r_keyframe_selector.html#a07f6aa463078dd208f7cb9661494d0ac">select</a> (const SRef&lt; Frame &gt; &amp;frame, const std::function&lt; bool(const SRef&lt; Frame &gt; &amp;)&gt; &amp;func) override</td></tr>
-<tr class="memdesc:a07f6aa463078dd208f7cb9661494d0ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Select if a frame can be considered as a keyframe. It is based on a selection predicate and provides the mean to use any datastructure in the pipeline context to the decision algorithm.  <a href="#a07f6aa463078dd208f7cb9661494d0ac">More...</a><br /></td></tr>
-<tr class="separator:a07f6aa463078dd208f7cb9661494d0ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52ae0a2df2c10f0b5f260e59111eb7c5"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_t_o_o_l_s_1_1_sol_a_r_keyframe_selector.html#a52ae0a2df2c10f0b5f260e59111eb7c5">select</a> (const SRef&lt; datastructure::Frame &gt; frame, const std::vector&lt; datastructure::DescriptorMatch &gt; &amp;matches) const override</td></tr>
+<tr class="memdesc:a52ae0a2df2c10f0b5f260e59111eb7c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines if a frame can be a candidate for a keyframe.  <a href="#a52ae0a2df2c10f0b5f260e59111eb7c5">More...</a><br /></td></tr>
+<tr class="separator:a52ae0a2df2c10f0b5f260e59111eb7c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab50a8f71f1712d6132d9963d405f4077"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_t_o_o_l_s_1_1_sol_a_r_keyframe_selector.html#ab50a8f71f1712d6132d9963d405f4077">select</a> (const SRef&lt; datastructure::Frame &gt; frame) const override</td></tr>
+<tr class="memdesc:ab50a8f71f1712d6132d9963d405f4077"><td class="mdescLeft">&#160;</td><td class="mdescRight">Select if a frame can be considered as a keyframe.  <a href="#ab50a8f71f1712d6132d9963d405f4077">More...</a><br /></td></tr>
+<tr class="separator:ab50a8f71f1712d6132d9963d405f4077"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74b9df33a284c6fccf87868e3ae0e38a"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_t_o_o_l_s_1_1_sol_a_r_keyframe_selector.html#a74b9df33a284c6fccf87868e3ae0e38a">select</a> (const SRef&lt; datastructure::Frame &gt; frame, const std::function&lt; bool(const SRef&lt; datastructure::Frame &gt; &amp;)&gt; &amp;func) const override</td></tr>
+<tr class="memdesc:a74b9df33a284c6fccf87868e3ae0e38a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Select if a frame can be considered as a keyframe. It is based on a selection predicate and provides the mean to use any datastructure in the pipeline context to the decision algorithm.  <a href="#a74b9df33a284c6fccf87868e3ae0e38a">More...</a><br /></td></tr>
+<tr class="separator:a74b9df33a284c6fccf87868e3ae0e38a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a16af3d1da49cb0baccee72e6aa098111"><td class="memItemLeft" align="right" valign="top"><a id="a16af3d1da49cb0baccee72e6aa098111"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> () override final</td></tr>
 <tr class="separator:a16af3d1da49cb0baccee72e6aa098111"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -117,8 +117,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><b>Defines if a frame can be a candidate for a keyframe.</b> <code>UUID: ad59a5ba-beb8-11e8-a355-529269fb1459</code> </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a960a147fa1110807f8a24ddb9eec618c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a960a147fa1110807f8a24ddb9eec618c">&#9670;&nbsp;</a></span>select() <span class="overload">[1/3]</span></h2>
+<a id="a52ae0a2df2c10f0b5f260e59111eb7c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52ae0a2df2c10f0b5f260e59111eb7c5">&#9670;&nbsp;</a></span>select() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -129,19 +129,19 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
         <tr>
           <td class="memname">virtual bool SolAR::MODULES::TOOLS::SolARKeyframeSelector::select </td>
           <td>(</td>
-          <td class="paramtype">const SRef&lt; Frame &gt; &amp;&#160;</td>
+          <td class="paramtype">const SRef&lt; datastructure::Frame &gt;&#160;</td>
           <td class="paramname"><em>frame</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::vector&lt; DescriptorMatch &gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; datastructure::DescriptorMatch &gt; &amp;&#160;</td>
           <td class="paramname"><em>matches</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td></td>
+          <td></td><td> const</td>
         </tr>
       </table>
   </td>
@@ -163,8 +163,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
 
 </div>
 </div>
-<a id="afc5acf7effe1e81ad9bc37450ba609bd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afc5acf7effe1e81ad9bc37450ba609bd">&#9670;&nbsp;</a></span>select() <span class="overload">[2/3]</span></h2>
+<a id="ab50a8f71f1712d6132d9963d405f4077"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab50a8f71f1712d6132d9963d405f4077">&#9670;&nbsp;</a></span>select() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -175,9 +175,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
         <tr>
           <td class="memname">virtual bool SolAR::MODULES::TOOLS::SolARKeyframeSelector::select </td>
           <td>(</td>
-          <td class="paramtype">const SRef&lt; Frame &gt; &amp;&#160;</td>
+          <td class="paramtype">const SRef&lt; datastructure::Frame &gt;&#160;</td>
           <td class="paramname"><em>frame</em></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -198,8 +198,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
 
 </div>
 </div>
-<a id="a07f6aa463078dd208f7cb9661494d0ac"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a07f6aa463078dd208f7cb9661494d0ac">&#9670;&nbsp;</a></span>select() <span class="overload">[3/3]</span></h2>
+<a id="a74b9df33a284c6fccf87868e3ae0e38a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74b9df33a284c6fccf87868e3ae0e38a">&#9670;&nbsp;</a></span>select() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -210,19 +210,19 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
         <tr>
           <td class="memname">virtual bool SolAR::MODULES::TOOLS::SolARKeyframeSelector::select </td>
           <td>(</td>
-          <td class="paramtype">const SRef&lt; Frame &gt; &amp;&#160;</td>
+          <td class="paramtype">const SRef&lt; datastructure::Frame &gt;&#160;</td>
           <td class="paramname"><em>frame</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::function&lt; bool(const SRef&lt; Frame &gt; &amp;)&gt; &amp;&#160;</td>
+          <td class="paramtype">const std::function&lt; bool(const SRef&lt; datastructure::Frame &gt; &amp;)&gt; &amp;&#160;</td>
           <td class="paramname"><em>func</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td></td>
+          <td></td><td> const</td>
         </tr>
       </table>
   </td>

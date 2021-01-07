@@ -105,12 +105,12 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_t_o_o_l_s_1_1_sol_a_r_s_l_a_m_bootstrapper.html#aeb3395e403531293b0383b0bef84c2e4">~SolARSLAMBootstrapper</a> ()=default</td></tr>
 <tr class="memdesc:aeb3395e403531293b0383b0bef84c2e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">SolAR3DTransformEstimationFrom3D3D destructor;. <br /></td></tr>
 <tr class="separator:aeb3395e403531293b0383b0bef84c2e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae2443dea51ac7a004ddc2c6d1a0c2137"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_t_o_o_l_s_1_1_sol_a_r_s_l_a_m_bootstrapper.html#ae2443dea51ac7a004ddc2c6d1a0c2137">setCameraParameters</a> (const CamCalibration &amp;intrinsicParams, const CamDistortion &amp;distorsionParams) override</td></tr>
-<tr class="memdesc:ae2443dea51ac7a004ddc2c6d1a0c2137"><td class="mdescLeft">&#160;</td><td class="mdescRight">this method is used to set intrinsic parameters and distorsion of the camera  <a href="#ae2443dea51ac7a004ddc2c6d1a0c2137">More...</a><br /></td></tr>
-<tr class="separator:ae2443dea51ac7a004ddc2c6d1a0c2137"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a26f551c2494746c51495a916669e5b8a"><td class="memItemLeft" align="right" valign="top">FrameworkReturnCode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_t_o_o_l_s_1_1_sol_a_r_s_l_a_m_bootstrapper.html#a26f551c2494746c51495a916669e5b8a">run</a> () override</td></tr>
-<tr class="memdesc:a26f551c2494746c51495a916669e5b8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method applies a transformation (4x4 float matrix) to a set of 3D points.  <a href="#a26f551c2494746c51495a916669e5b8a">More...</a><br /></td></tr>
-<tr class="separator:a26f551c2494746c51495a916669e5b8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c4087652c09253a44255cac072f3ad9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_t_o_o_l_s_1_1_sol_a_r_s_l_a_m_bootstrapper.html#a3c4087652c09253a44255cac072f3ad9">setCameraParameters</a> (const datastructure::CamCalibration &amp;intrinsicParams, const datastructure::CamDistortion &amp;distorsionParams) override</td></tr>
+<tr class="memdesc:a3c4087652c09253a44255cac072f3ad9"><td class="mdescLeft">&#160;</td><td class="mdescRight">this method is used to set intrinsic parameters and distorsion of the camera  <a href="#a3c4087652c09253a44255cac072f3ad9">More...</a><br /></td></tr>
+<tr class="separator:a3c4087652c09253a44255cac072f3ad9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af97a2ce649dec39a57288d2e9a990d0f"><td class="memItemLeft" align="right" valign="top">FrameworkReturnCode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_t_o_o_l_s_1_1_sol_a_r_s_l_a_m_bootstrapper.html#af97a2ce649dec39a57288d2e9a990d0f">process</a> (const SRef&lt; datastructure::Image &gt; image, SRef&lt; datastructure::Image &gt; &amp;view, const datastructure::Transform3Df &amp;pose=datastructure::Transform3Df::Identity()) override</td></tr>
+<tr class="memdesc:af97a2ce649dec39a57288d2e9a990d0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method uses images to boostrap.  <a href="#af97a2ce649dec39a57288d2e9a990d0f">More...</a><br /></td></tr>
+<tr class="separator:af97a2ce649dec39a57288d2e9a990d0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a09f341fe12ad74e645d704bf80a9c4fc"><td class="memItemLeft" align="right" valign="top"><a id="a09f341fe12ad74e645d704bf80a9c4fc"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> () override final</td></tr>
 <tr class="separator:a09f341fe12ad74e645d704bf80a9c4fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -118,8 +118,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><b>Initialization SLAM using an image stream of a camera.</b> <code>UUID: 8f43eed0-1a2e-4c47-83f0-8dd5b259cdb0</code> </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a26f551c2494746c51495a916669e5b8a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a26f551c2494746c51495a916669e5b8a">&#9670;&nbsp;</a></span>run()</h2>
+<a id="af97a2ce649dec39a57288d2e9a990d0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af97a2ce649dec39a57288d2e9a990d0f">&#9670;&nbsp;</a></span>process()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -128,10 +128,27 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">FrameworkReturnCode SolAR::MODULES::TOOLS::SolARSLAMBootstrapper::run </td>
+          <td class="memname">FrameworkReturnCode SolAR::MODULES::TOOLS::SolARSLAMBootstrapper::process </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">const SRef&lt; datastructure::Image &gt;&#160;</td>
+          <td class="paramname"><em>image</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">SRef&lt; datastructure::Image &gt; &amp;&#160;</td>
+          <td class="paramname"><em>view</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const datastructure::Transform3Df &amp;&#160;</td>
+          <td class="paramname"><em>pose</em> = <code>datastructure::Transform3Df::Identity()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -141,13 +158,21 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
 </table>
 </div><div class="memdoc">
 
-<p>This method applies a transformation (4x4 float matrix) to a set of 3D points. </p>
+<p>This method uses images to boostrap. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">image</td><td>input image to process </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">view</td><td>output image to visualize </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pose</td><td>the pose of the input image </td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section return"><dt>Returns</dt><dd>FrameworkReturnCode::<em>SUCCESS</em> if initialization succeed, else FrameworkReturnCode::_ERROR. </dd></dl>
 
 </div>
 </div>
-<a id="ae2443dea51ac7a004ddc2c6d1a0c2137"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae2443dea51ac7a004ddc2c6d1a0c2137">&#9670;&nbsp;</a></span>setCameraParameters()</h2>
+<a id="a3c4087652c09253a44255cac072f3ad9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c4087652c09253a44255cac072f3ad9">&#9670;&nbsp;</a></span>setCameraParameters()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -158,13 +183,13 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
         <tr>
           <td class="memname">void SolAR::MODULES::TOOLS::SolARSLAMBootstrapper::setCameraParameters </td>
           <td>(</td>
-          <td class="paramtype">const CamCalibration &amp;&#160;</td>
+          <td class="paramtype">const datastructure::CamCalibration &amp;&#160;</td>
           <td class="paramname"><em>intrinsicParams</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const CamDistortion &amp;&#160;</td>
+          <td class="paramtype">const datastructure::CamDistortion &amp;&#160;</td>
           <td class="paramname"><em>distorsionParams</em>&#160;</td>
         </tr>
         <tr>

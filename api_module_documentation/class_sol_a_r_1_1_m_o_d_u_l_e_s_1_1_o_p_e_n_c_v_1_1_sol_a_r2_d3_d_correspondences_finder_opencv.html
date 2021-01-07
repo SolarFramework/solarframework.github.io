@@ -105,9 +105,9 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_o_p_e_n_c_v_1_1_sol_a_r2_d3_d_correspondences_finder_opencv.html#adb582a1f044460333d1005127af40dde">~SolAR2D3DCorrespondencesFinderOpencv</a> () override=default</td></tr>
 <tr class="memdesc:adb582a1f044460333d1005127af40dde"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_o_p_e_n_c_v_1_1_sol_a_r_pose_estimation_pnp_opencv.html" title="Finds the camera pose of 2D-3D points correspondences based on opencv Perspective-n-Points algorithm...">SolARPoseEstimationPnpOpencv</a> destructor;. <br /></td></tr>
 <tr class="separator:adb582a1f044460333d1005127af40dde"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad84a4c70006b995e7be55a2d35793a6b"><td class="memItemLeft" align="right" valign="top">FrameworkReturnCode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_o_p_e_n_c_v_1_1_sol_a_r2_d3_d_correspondences_finder_opencv.html#ad84a4c70006b995e7be55a2d35793a6b">find</a> (const SRef&lt; Frame &gt; lastFrame, const SRef&lt; Frame &gt; currentFrame, const std::vector&lt; DescriptorMatch &gt; &amp;current_matches, std::vector&lt; Point3Df &gt; &amp;shared_3dpoint, std::vector&lt; Point2Df &gt; &amp;shared_2dpoint, std::vector&lt; DescriptorMatch &gt; &amp;found_matches, std::vector&lt; DescriptorMatch &gt; &amp;remaining_matches) override</td></tr>
-<tr class="memdesc:ad84a4c70006b995e7be55a2d35793a6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define 2D-3D point correspondences of the current frame based on keypoint matches between the current frame and the last frame.  <a href="#ad84a4c70006b995e7be55a2d35793a6b">More...</a><br /></td></tr>
-<tr class="separator:ad84a4c70006b995e7be55a2d35793a6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81c16ba53137fb93a37093f57c43c84e"><td class="memItemLeft" align="right" valign="top">FrameworkReturnCode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_o_p_e_n_c_v_1_1_sol_a_r2_d3_d_correspondences_finder_opencv.html#a81c16ba53137fb93a37093f57c43c84e">find</a> (const SRef&lt; datastructure::Frame &gt; lastFrame, const SRef&lt; datastructure::Frame &gt; currentFrame, const std::vector&lt; datastructure::DescriptorMatch &gt; &amp;current_matches, std::vector&lt; datastructure::Point3Df &gt; &amp;shared_3dpoint, std::vector&lt; datastructure::Point2Df &gt; &amp;shared_2dpoint, std::vector&lt; std::pair&lt; uint32_t, SRef&lt; datastructure::CloudPoint &gt;&gt;&gt; &amp;corres2D3D, std::vector&lt; datastructure::DescriptorMatch &gt; &amp;found_matches, std::vector&lt; datastructure::DescriptorMatch &gt; &amp;remaining_matches) override</td></tr>
+<tr class="memdesc:a81c16ba53137fb93a37093f57c43c84e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define 2D-3D point correspondences of the current frame based on keypoint matches between the current frame and the last frame.  <a href="#a81c16ba53137fb93a37093f57c43c84e">More...</a><br /></td></tr>
+<tr class="separator:a81c16ba53137fb93a37093f57c43c84e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaf1e3e0ff33a9e0bf9cfdde141cec32d"><td class="memItemLeft" align="right" valign="top"><a id="aaf1e3e0ff33a9e0bf9cfdde141cec32d"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> () override final</td></tr>
 <tr class="separator:aaf1e3e0ff33a9e0bf9cfdde141cec32d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -115,8 +115,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><b>Finds the 3D correspondents of 2D keypoints.</b> <code>UUID: cedd8c47-e7b0-47bf-abb1-7fb54d198117</code> </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="ad84a4c70006b995e7be55a2d35793a6b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad84a4c70006b995e7be55a2d35793a6b">&#9670;&nbsp;</a></span>find()</h2>
+<a id="a81c16ba53137fb93a37093f57c43c84e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81c16ba53137fb93a37093f57c43c84e">&#9670;&nbsp;</a></span>find()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -127,43 +127,49 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
         <tr>
           <td class="memname">FrameworkReturnCode SolAR::MODULES::OPENCV::SolAR2D3DCorrespondencesFinderOpencv::find </td>
           <td>(</td>
-          <td class="paramtype">const SRef&lt; Frame &gt;&#160;</td>
+          <td class="paramtype">const SRef&lt; datastructure::Frame &gt;&#160;</td>
           <td class="paramname"><em>lastFrame</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const SRef&lt; Frame &gt;&#160;</td>
+          <td class="paramtype">const SRef&lt; datastructure::Frame &gt;&#160;</td>
           <td class="paramname"><em>currentFrame</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::vector&lt; DescriptorMatch &gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; datastructure::DescriptorMatch &gt; &amp;&#160;</td>
           <td class="paramname"><em>current_matches</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; Point3Df &gt; &amp;&#160;</td>
+          <td class="paramtype">std::vector&lt; datastructure::Point3Df &gt; &amp;&#160;</td>
           <td class="paramname"><em>shared_3dpoint</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; Point2Df &gt; &amp;&#160;</td>
+          <td class="paramtype">std::vector&lt; datastructure::Point2Df &gt; &amp;&#160;</td>
           <td class="paramname"><em>shared_2dpoint</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; DescriptorMatch &gt; &amp;&#160;</td>
+          <td class="paramtype">std::vector&lt; std::pair&lt; uint32_t, SRef&lt; datastructure::CloudPoint &gt;&gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>corres2D3D</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; datastructure::DescriptorMatch &gt; &amp;&#160;</td>
           <td class="paramname"><em>found_matches</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; DescriptorMatch &gt; &amp;&#160;</td>
+          <td class="paramtype">std::vector&lt; datastructure::DescriptorMatch &gt; &amp;&#160;</td>
           <td class="paramname"><em>remaining_matches</em>&#160;</td>
         </tr>
         <tr>
@@ -186,7 +192,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
     <tr><td class="paramdir">[in]</td><td class="paramname">currentFrame</td><td>The current framr for which we want to find 2D-3D correspondances. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">currentMatches</td><td>The 2D matches between the current keyframe and its reference keyframe. </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">shared_3dpoint</td><td>The 3D points visible from the current frame. </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">shared_2dpoint</td><td>The 2D point in the current frame that correspond to a 3D point. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">shared_2dpoint</td><td>The 2D points in the current frame that correspond to 3D points. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">corres2D3D</td><td>The pairs of 2D-3D correspondences. The first value is the index of keypoint in the current frame and the second one is the corresponding cloud point. </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">found_matches</td><td>The matches between the current frame and its reference keyframe which have a 3 correspondant. </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">remaining_matches</td><td>The matches between the current frame and its reference keyframe for which no 3D points have been found. </td></tr>
   </table>

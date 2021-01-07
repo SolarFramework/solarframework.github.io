@@ -97,12 +97,12 @@ Collaboration diagram for SolAR::MODULES::OPENCV::SolARHomographyMatrixDecompose
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aeda3643ec9a8d009fc90beb578d08881"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_o_p_e_n_c_v_1_1_sol_a_r_homography_matrix_decomposer_opencv.html#aeda3643ec9a8d009fc90beb578d08881">setCameraParameters</a> (const CamCalibration &amp;intrinsicParams, const CamDistortion &amp;distorsionParams) override</td></tr>
-<tr class="memdesc:aeda3643ec9a8d009fc90beb578d08881"><td class="mdescLeft">&#160;</td><td class="mdescRight">this method is used to set intrinsic parameters and distorsion of the camera  <a href="#aeda3643ec9a8d009fc90beb578d08881">More...</a><br /></td></tr>
-<tr class="separator:aeda3643ec9a8d009fc90beb578d08881"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a29744adc4042a02968ccd5b9a4312899"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_o_p_e_n_c_v_1_1_sol_a_r_homography_matrix_decomposer_opencv.html#a29744adc4042a02968ccd5b9a4312899">decompose</a> (const Transform2Df &amp;F, std::vector&lt; Transform3Df &gt; &amp;decomposedPoses) override</td></tr>
-<tr class="memdesc:a29744adc4042a02968ccd5b9a4312899"><td class="mdescLeft">&#160;</td><td class="mdescRight">decompose a transform 2d to a transform 3d (4 possible poses {R1,t1},{R1,t2}, {R2,t1}, {R2,t2}).  <a href="#a29744adc4042a02968ccd5b9a4312899">More...</a><br /></td></tr>
-<tr class="separator:a29744adc4042a02968ccd5b9a4312899"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bdccae70288003ff61b9d5e7409ee14"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_o_p_e_n_c_v_1_1_sol_a_r_homography_matrix_decomposer_opencv.html#a5bdccae70288003ff61b9d5e7409ee14">setCameraParameters</a> (const datastructure::CamCalibration &amp;intrinsicParams, const datastructure::CamDistortion &amp;distorsionParams) override</td></tr>
+<tr class="memdesc:a5bdccae70288003ff61b9d5e7409ee14"><td class="mdescLeft">&#160;</td><td class="mdescRight">this method is used to set intrinsic parameters and distorsion of the camera  <a href="#a5bdccae70288003ff61b9d5e7409ee14">More...</a><br /></td></tr>
+<tr class="separator:a5bdccae70288003ff61b9d5e7409ee14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00389975089b5bf8beb01f6fe53877b6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_o_p_e_n_c_v_1_1_sol_a_r_homography_matrix_decomposer_opencv.html#a00389975089b5bf8beb01f6fe53877b6">decompose</a> (const datastructure::Transform2Df &amp;F, std::vector&lt; datastructure::Transform3Df &gt; &amp;decomposedPoses) override</td></tr>
+<tr class="memdesc:a00389975089b5bf8beb01f6fe53877b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">decompose a transform 2d to a transform 3d (4 possible poses {R1,t1},{R1,t2}, {R2,t1}, {R2,t2}).  <a href="#a00389975089b5bf8beb01f6fe53877b6">More...</a><br /></td></tr>
+<tr class="separator:a00389975089b5bf8beb01f6fe53877b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a48441e07f412d3d8c07b79be3d47ab68"><td class="memItemLeft" align="right" valign="top"><a id="a48441e07f412d3d8c07b79be3d47ab68"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> () override final</td></tr>
 <tr class="separator:a48441e07f412d3d8c07b79be3d47ab68"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -110,8 +110,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><b>Decomposes a homography matrix to extract four possible 3D poses.</b> <code>UUID: b5fab395-2184-4123-b0d5-4af74d0a2d79</code> </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a29744adc4042a02968ccd5b9a4312899"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a29744adc4042a02968ccd5b9a4312899">&#9670;&nbsp;</a></span>decompose()</h2>
+<a id="a00389975089b5bf8beb01f6fe53877b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00389975089b5bf8beb01f6fe53877b6">&#9670;&nbsp;</a></span>decompose()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -122,13 +122,13 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
         <tr>
           <td class="memname">bool SolAR::MODULES::OPENCV::SolARHomographyMatrixDecomposerOpencv::decompose </td>
           <td>(</td>
-          <td class="paramtype">const Transform2Df &amp;&#160;</td>
+          <td class="paramtype">const datastructure::Transform2Df &amp;&#160;</td>
           <td class="paramname"><em>F</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; Transform3Df &gt; &amp;&#160;</td>
+          <td class="paramtype">std::vector&lt; datastructure::Transform3Df &gt; &amp;&#160;</td>
           <td class="paramname"><em>decomposedPoses</em>&#160;</td>
         </tr>
         <tr>
@@ -155,8 +155,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
 
 </div>
 </div>
-<a id="aeda3643ec9a8d009fc90beb578d08881"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeda3643ec9a8d009fc90beb578d08881">&#9670;&nbsp;</a></span>setCameraParameters()</h2>
+<a id="a5bdccae70288003ff61b9d5e7409ee14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5bdccae70288003ff61b9d5e7409ee14">&#9670;&nbsp;</a></span>setCameraParameters()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -167,13 +167,13 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
         <tr>
           <td class="memname">void SolAR::MODULES::OPENCV::SolARHomographyMatrixDecomposerOpencv::setCameraParameters </td>
           <td>(</td>
-          <td class="paramtype">const CamCalibration &amp;&#160;</td>
+          <td class="paramtype">const datastructure::CamCalibration &amp;&#160;</td>
           <td class="paramname"><em>intrinsicParams</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const CamDistortion &amp;&#160;</td>
+          <td class="paramtype">const datastructure::CamDistortion &amp;&#160;</td>
           <td class="paramname"><em>distorsionParams</em>&#160;</td>
         </tr>
         <tr>

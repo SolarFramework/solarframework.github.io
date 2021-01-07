@@ -105,9 +105,15 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_t_o_o_l_s_1_1_sol_a_r3_d_transform_estimation_s_a_c_from3_d3_d.html#a91d5575c98be0ef6de87dd3906564aa5">~SolAR3DTransformEstimationSACFrom3D3D</a> ()=default</td></tr>
 <tr class="memdesc:a91d5575c98be0ef6de87dd3906564aa5"><td class="mdescLeft">&#160;</td><td class="mdescRight">SolAR3DTransformEstimationFrom3D3D destructor;. <br /></td></tr>
 <tr class="separator:a91d5575c98be0ef6de87dd3906564aa5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a318f9bd103974e1f3d185072baa582d2"><td class="memItemLeft" align="right" valign="top">FrameworkReturnCode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_t_o_o_l_s_1_1_sol_a_r3_d_transform_estimation_s_a_c_from3_d3_d.html#a318f9bd103974e1f3d185072baa582d2">estimate</a> (const std::vector&lt; Point3Df &gt; &amp;firstPoints3D, const std::vector&lt; Point3Df &gt; &amp;secondPoints3D, Transform3Df &amp;pose, std::vector&lt; int &gt; &amp;inliers) override</td></tr>
-<tr class="memdesc:a318f9bd103974e1f3d185072baa582d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Estimates camera pose from a set of 3D-3D point correspondences.  <a href="#a318f9bd103974e1f3d185072baa582d2">More...</a><br /></td></tr>
-<tr class="separator:a318f9bd103974e1f3d185072baa582d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d09491987c6a5480234c61588a43b67"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_t_o_o_l_s_1_1_sol_a_r3_d_transform_estimation_s_a_c_from3_d3_d.html#a1d09491987c6a5480234c61588a43b67">setCameraParameters</a> (const datastructure::CamCalibration &amp;intrinsicParams, const datastructure::CamDistortion &amp;distortionParams) override</td></tr>
+<tr class="memdesc:a1d09491987c6a5480234c61588a43b67"><td class="mdescLeft">&#160;</td><td class="mdescRight">this method is used to set intrinsic parameters and distorsion of the camera  <a href="#a1d09491987c6a5480234c61588a43b67">More...</a><br /></td></tr>
+<tr class="separator:a1d09491987c6a5480234c61588a43b67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88e6c24c8abe5bdba96bea4a041743b6"><td class="memItemLeft" align="right" valign="top">FrameworkReturnCode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_t_o_o_l_s_1_1_sol_a_r3_d_transform_estimation_s_a_c_from3_d3_d.html#a88e6c24c8abe5bdba96bea4a041743b6">estimate</a> (const std::vector&lt; datastructure::Point3Df &gt; &amp;firstPoints3D, const std::vector&lt; datastructure::Point3Df &gt; &amp;secondPoints3D, datastructure::Transform3Df &amp;pose, std::vector&lt; int &gt; &amp;inliers) override</td></tr>
+<tr class="memdesc:a88e6c24c8abe5bdba96bea4a041743b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Estimates camera pose from a set of 3D-3D point correspondences.  <a href="#a88e6c24c8abe5bdba96bea4a041743b6">More...</a><br /></td></tr>
+<tr class="separator:a88e6c24c8abe5bdba96bea4a041743b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad61510ebb8693fbba1cc853701666010"><td class="memItemLeft" align="right" valign="top">FrameworkReturnCode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_t_o_o_l_s_1_1_sol_a_r3_d_transform_estimation_s_a_c_from3_d3_d.html#ad61510ebb8693fbba1cc853701666010">estimate</a> (const SRef&lt; datastructure::Keyframe &gt; firstKeyframe, const SRef&lt; datastructure::Keyframe &gt; secondKeyframe, const std::vector&lt; datastructure::DescriptorMatch &gt; &amp;matches, const std::vector&lt; datastructure::Point3Df &gt; &amp;firstPoints3D, const std::vector&lt; datastructure::Point3Df &gt; &amp;secondPoints3D, datastructure::Transform3Df &amp;pose, std::vector&lt; int &gt; &amp;inliers) override</td></tr>
+<tr class="memdesc:ad61510ebb8693fbba1cc853701666010"><td class="mdescLeft">&#160;</td><td class="mdescRight">Estimates camera pose from a set of 3D-3D point correspondences.  <a href="#ad61510ebb8693fbba1cc853701666010">More...</a><br /></td></tr>
+<tr class="separator:ad61510ebb8693fbba1cc853701666010"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aebf7b617ce295932c7fee4924a090e6f"><td class="memItemLeft" align="right" valign="top"><a id="aebf7b617ce295932c7fee4924a090e6f"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> () override final</td></tr>
 <tr class="separator:aebf7b617ce295932c7fee4924a090e6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -115,8 +121,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><b>Finds the 3D transform of 3D-3D points correspondences with a SAmple Consensus.</b> <code>UUID: 3b7a1117-8b59-46b1-8e0c-6e76a8377ab4</code> </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a318f9bd103974e1f3d185072baa582d2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a318f9bd103974e1f3d185072baa582d2">&#9670;&nbsp;</a></span>estimate()</h2>
+<a id="a88e6c24c8abe5bdba96bea4a041743b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88e6c24c8abe5bdba96bea4a041743b6">&#9670;&nbsp;</a></span>estimate() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -127,19 +133,19 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
         <tr>
           <td class="memname">FrameworkReturnCode SolAR::MODULES::TOOLS::SolAR3DTransformEstimationSACFrom3D3D::estimate </td>
           <td>(</td>
-          <td class="paramtype">const std::vector&lt; Point3Df &gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; datastructure::Point3Df &gt; &amp;&#160;</td>
           <td class="paramname"><em>firstPoints3D</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::vector&lt; Point3Df &gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; datastructure::Point3Df &gt; &amp;&#160;</td>
           <td class="paramname"><em>secondPoints3D</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Transform3Df &amp;&#160;</td>
+          <td class="paramtype">datastructure::Transform3Df &amp;&#160;</td>
           <td class="paramname"><em>pose</em>, </td>
         </tr>
         <tr>
@@ -168,6 +174,131 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
     <tr><td class="paramdir">[in]</td><td class="paramname">secondPoints3D</td><td>second set of 3D points. </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">pose</td><td>3D transformation maps the first set of 3D points to the second one. </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">inliers</td><td>indices of inlier correspondences. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad61510ebb8693fbba1cc853701666010"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad61510ebb8693fbba1cc853701666010">&#9670;&nbsp;</a></span>estimate() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FrameworkReturnCode SolAR::MODULES::TOOLS::SolAR3DTransformEstimationSACFrom3D3D::estimate </td>
+          <td>(</td>
+          <td class="paramtype">const SRef&lt; datastructure::Keyframe &gt;&#160;</td>
+          <td class="paramname"><em>firstKeyframe</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const SRef&lt; datastructure::Keyframe &gt;&#160;</td>
+          <td class="paramname"><em>secondKeyframe</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; datastructure::DescriptorMatch &gt; &amp;&#160;</td>
+          <td class="paramname"><em>matches</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; datastructure::Point3Df &gt; &amp;&#160;</td>
+          <td class="paramname"><em>firstPoints3D</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; datastructure::Point3Df &gt; &amp;&#160;</td>
+          <td class="paramname"><em>secondPoints3D</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">datastructure::Transform3Df &amp;&#160;</td>
+          <td class="paramname"><em>pose</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>inliers</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Estimates camera pose from a set of 3D-3D point correspondences. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">firstKeyframe</td><td>first keyframe. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">secondKeyframe</td><td>second keyframe. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">matches</td><td>matches between two keyframes. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">firstPoints3D</td><td>first set of 3D points. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">secondPoints3D</td><td>second set of 3D points. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">pose</td><td>3D transformation maps the first set of 3D points to the second one. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">inliers</td><td>indices of inlier correspondences. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a1d09491987c6a5480234c61588a43b67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d09491987c6a5480234c61588a43b67">&#9670;&nbsp;</a></span>setCameraParameters()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SolAR::MODULES::TOOLS::SolAR3DTransformEstimationSACFrom3D3D::setCameraParameters </td>
+          <td>(</td>
+          <td class="paramtype">const datastructure::CamCalibration &amp;&#160;</td>
+          <td class="paramname"><em>intrinsicParams</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const datastructure::CamDistortion &amp;&#160;</td>
+          <td class="paramname"><em>distortionParams</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>this method is used to set intrinsic parameters and distorsion of the camera </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">intrinsicParams</td><td>Camera calibration matrix parameters. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">distortionParams</td><td>Camera distortion parameters. </td></tr>
   </table>
   </dd>
 </dl>

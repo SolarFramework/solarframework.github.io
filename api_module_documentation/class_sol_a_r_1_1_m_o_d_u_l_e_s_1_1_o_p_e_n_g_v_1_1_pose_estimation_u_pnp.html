@@ -105,12 +105,12 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_o_p_e_n_g_v_1_1_pose_estimation_u_pnp.html#a2810d58e86d541a5bdbcc61fb8072c85">~PoseEstimationUPnp</a> ()</td></tr>
 <tr class="memdesc:a2810d58e86d541a5bdbcc61fb8072c85"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_o_p_e_n_g_v_1_1_pose_estimation_u_pnp.html" title="Finds the camera pose of 2D-3D points correspondences based on opengv Universal Perspective-n-Point a...">PoseEstimationUPnp</a> destructor;. <br /></td></tr>
 <tr class="separator:a2810d58e86d541a5bdbcc61fb8072c85"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a59c017d09779546a165984c77422f33d"><td class="memItemLeft" align="right" valign="top">FrameworkReturnCode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_o_p_e_n_g_v_1_1_pose_estimation_u_pnp.html#a59c017d09779546a165984c77422f33d">estimate</a> (const std::vector&lt; Point2Df &gt; &amp;imagePoints, const std::vector&lt; Point3Df &gt; &amp;worldPoints, Transform3Df &amp;pose, const Transform3Df initialPose=Transform3Df::Identity()) override</td></tr>
-<tr class="memdesc:a59c017d09779546a165984c77422f33d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Estimates camera pose from a set of 2D image points of their corresponding 3D world points.  <a href="#a59c017d09779546a165984c77422f33d">More...</a><br /></td></tr>
-<tr class="separator:a59c017d09779546a165984c77422f33d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a479b3b5d7443897e69f63c6e58877046"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_o_p_e_n_g_v_1_1_pose_estimation_u_pnp.html#a479b3b5d7443897e69f63c6e58877046">setCameraParameters</a> (const CamCalibration &amp;intrinsicParams, const CamDistortion &amp;distorsionParams) override</td></tr>
-<tr class="memdesc:a479b3b5d7443897e69f63c6e58877046"><td class="mdescLeft">&#160;</td><td class="mdescRight">this method is used to set intrinsic parameters and distorsion of the camera  <a href="#a479b3b5d7443897e69f63c6e58877046">More...</a><br /></td></tr>
-<tr class="separator:a479b3b5d7443897e69f63c6e58877046"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add256d8f1108e17813c3af71d91cc637"><td class="memItemLeft" align="right" valign="top">FrameworkReturnCode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_o_p_e_n_g_v_1_1_pose_estimation_u_pnp.html#add256d8f1108e17813c3af71d91cc637">estimate</a> (const std::vector&lt; datastructure::Point2Df &gt; &amp;imagePoints, const std::vector&lt; datastructure::Point3Df &gt; &amp;worldPoints, datastructure::Transform3Df &amp;pose, const datastructure::Transform3Df initialPose=datastructure::Transform3Df::Identity()) override</td></tr>
+<tr class="memdesc:add256d8f1108e17813c3af71d91cc637"><td class="mdescLeft">&#160;</td><td class="mdescRight">Estimates camera pose from a set of 2D image points of their corresponding 3D world points.  <a href="#add256d8f1108e17813c3af71d91cc637">More...</a><br /></td></tr>
+<tr class="separator:add256d8f1108e17813c3af71d91cc637"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52d01f17c892db3af92bed488e8a3a6e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_o_p_e_n_g_v_1_1_pose_estimation_u_pnp.html#a52d01f17c892db3af92bed488e8a3a6e">setCameraParameters</a> (const datastructure::CamCalibration &amp;intrinsicParams, const datastructure::CamDistortion &amp;distorsionParams) override</td></tr>
+<tr class="memdesc:a52d01f17c892db3af92bed488e8a3a6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">this method is used to set intrinsic parameters and distorsion of the camera  <a href="#a52d01f17c892db3af92bed488e8a3a6e">More...</a><br /></td></tr>
+<tr class="separator:a52d01f17c892db3af92bed488e8a3a6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a84c3cc39a30a74dd920b2df2d07ff767"><td class="memItemLeft" align="right" valign="top"><a id="a84c3cc39a30a74dd920b2df2d07ff767"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> () override final</td></tr>
 <tr class="separator:a84c3cc39a30a74dd920b2df2d07ff767"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -118,8 +118,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><b>Finds the camera pose of 2D-3D points correspondences based on opengv Universal Perspective-n-Point algorithm.</b> <code>UUID: 922e9db6-e424-4518-ad26-31201471ff00</code> </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a59c017d09779546a165984c77422f33d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a59c017d09779546a165984c77422f33d">&#9670;&nbsp;</a></span>estimate()</h2>
+<a id="add256d8f1108e17813c3af71d91cc637"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add256d8f1108e17813c3af71d91cc637">&#9670;&nbsp;</a></span>estimate()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -130,26 +130,26 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
         <tr>
           <td class="memname">FrameworkReturnCode SolAR::MODULES::OPENGV::PoseEstimationUPnp::estimate </td>
           <td>(</td>
-          <td class="paramtype">const std::vector&lt; Point2Df &gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; datastructure::Point2Df &gt; &amp;&#160;</td>
           <td class="paramname"><em>imagePoints</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::vector&lt; Point3Df &gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; datastructure::Point3Df &gt; &amp;&#160;</td>
           <td class="paramname"><em>worldPoints</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Transform3Df &amp;&#160;</td>
+          <td class="paramtype">datastructure::Transform3Df &amp;&#160;</td>
           <td class="paramname"><em>pose</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const Transform3Df&#160;</td>
-          <td class="paramname"><em>initialPose</em> = <code>Transform3Df::Identity()</code>&#160;</td>
+          <td class="paramtype">const datastructure::Transform3Df&#160;</td>
+          <td class="paramname"><em>initialPose</em> = <code>datastructure::Transform3Df::Identity()</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -177,8 +177,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
 
 </div>
 </div>
-<a id="a479b3b5d7443897e69f63c6e58877046"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a479b3b5d7443897e69f63c6e58877046">&#9670;&nbsp;</a></span>setCameraParameters()</h2>
+<a id="a52d01f17c892db3af92bed488e8a3a6e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52d01f17c892db3af92bed488e8a3a6e">&#9670;&nbsp;</a></span>setCameraParameters()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -189,13 +189,13 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
         <tr>
           <td class="memname">void SolAR::MODULES::OPENGV::PoseEstimationUPnp::setCameraParameters </td>
           <td>(</td>
-          <td class="paramtype">const CamCalibration &amp;&#160;</td>
+          <td class="paramtype">const datastructure::CamCalibration &amp;&#160;</td>
           <td class="paramname"><em>intrinsicParams</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const CamDistortion &amp;&#160;</td>
+          <td class="paramtype">const datastructure::CamDistortion &amp;&#160;</td>
           <td class="paramname"><em>distorsionParams</em>&#160;</td>
         </tr>
         <tr>

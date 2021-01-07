@@ -105,12 +105,18 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_t_o_o_l_s_1_1_sol_a_r_fiducial_marker_pose_estimator.html#a3b00d7dd9687391a94e1cd8ea5259857">~SolARFiducialMarkerPoseEstimator</a> ()=default</td></tr>
 <tr class="memdesc:a3b00d7dd9687391a94e1cd8ea5259857"><td class="mdescLeft">&#160;</td><td class="mdescRight">SolAR3DTransformEstimationFrom3D3D destructor;. <br /></td></tr>
 <tr class="separator:a3b00d7dd9687391a94e1cd8ea5259857"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeb83dd9761917cd2219020dba8e03499"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_t_o_o_l_s_1_1_sol_a_r_fiducial_marker_pose_estimator.html#aeb83dd9761917cd2219020dba8e03499">setCameraParameters</a> (const CamCalibration &amp;intrinsicParams, const CamDistortion &amp;distorsionParams) override</td></tr>
-<tr class="memdesc:aeb83dd9761917cd2219020dba8e03499"><td class="mdescLeft">&#160;</td><td class="mdescRight">this method is used to set intrinsic parameters and distorsion of the camera  <a href="#aeb83dd9761917cd2219020dba8e03499">More...</a><br /></td></tr>
-<tr class="separator:aeb83dd9761917cd2219020dba8e03499"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aee92175f3d23a9a248caa31ea6706132"><td class="memItemLeft" align="right" valign="top">FrameworkReturnCode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_t_o_o_l_s_1_1_sol_a_r_fiducial_marker_pose_estimator.html#aee92175f3d23a9a248caa31ea6706132">estimate</a> (const SRef&lt; Image &gt; &amp;image, Transform3Df &amp;pose) override</td></tr>
-<tr class="memdesc:aee92175f3d23a9a248caa31ea6706132"><td class="mdescLeft">&#160;</td><td class="mdescRight">Estimates camera pose based on a fiducial marker.  <a href="#aee92175f3d23a9a248caa31ea6706132">More...</a><br /></td></tr>
-<tr class="separator:aee92175f3d23a9a248caa31ea6706132"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a724b598c8e717bf69b15f3221cbfc2f1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_t_o_o_l_s_1_1_sol_a_r_fiducial_marker_pose_estimator.html#a724b598c8e717bf69b15f3221cbfc2f1">setCameraParameters</a> (const datastructure::CamCalibration &amp;intrinsicParams, const datastructure::CamDistortion &amp;distorsionParams) override</td></tr>
+<tr class="memdesc:a724b598c8e717bf69b15f3221cbfc2f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">this method is used to set intrinsic parameters and distorsion of the camera  <a href="#a724b598c8e717bf69b15f3221cbfc2f1">More...</a><br /></td></tr>
+<tr class="separator:a724b598c8e717bf69b15f3221cbfc2f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65b189a383e939788cfdaf253283c40f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_t_o_o_l_s_1_1_sol_a_r_fiducial_marker_pose_estimator.html#a65b189a383e939788cfdaf253283c40f">setMarker</a> (const SRef&lt; api::input::files::IMarker2DSquaredBinary &gt; marker) override</td></tr>
+<tr class="memdesc:a65b189a383e939788cfdaf253283c40f"><td class="mdescLeft">&#160;</td><td class="mdescRight">this method is used to set the fiducial marker  <a href="#a65b189a383e939788cfdaf253283c40f">More...</a><br /></td></tr>
+<tr class="separator:a65b189a383e939788cfdaf253283c40f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5b61dc0576534b0bf45880f11cd443b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_t_o_o_l_s_1_1_sol_a_r_fiducial_marker_pose_estimator.html#af5b61dc0576534b0bf45880f11cd443b">setMarker</a> (const SRef&lt; datastructure::FiducialMarker &gt; marker) override</td></tr>
+<tr class="memdesc:af5b61dc0576534b0bf45880f11cd443b"><td class="mdescLeft">&#160;</td><td class="mdescRight">this method is used to set the fiducial marker  <a href="#af5b61dc0576534b0bf45880f11cd443b">More...</a><br /></td></tr>
+<tr class="separator:af5b61dc0576534b0bf45880f11cd443b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc4da135a858fd464b6e19a25b2b7d5b"><td class="memItemLeft" align="right" valign="top">FrameworkReturnCode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_t_o_o_l_s_1_1_sol_a_r_fiducial_marker_pose_estimator.html#adc4da135a858fd464b6e19a25b2b7d5b">estimate</a> (const SRef&lt; datastructure::Image &gt; image, datastructure::Transform3Df &amp;pose) override</td></tr>
+<tr class="memdesc:adc4da135a858fd464b6e19a25b2b7d5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Estimates camera pose based on a fiducial marker.  <a href="#adc4da135a858fd464b6e19a25b2b7d5b">More...</a><br /></td></tr>
+<tr class="separator:adc4da135a858fd464b6e19a25b2b7d5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a073d16fa0f476d70df7d7184eb8037f0"><td class="memItemLeft" align="right" valign="top"><a id="a073d16fa0f476d70df7d7184eb8037f0"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> () override final</td></tr>
 <tr class="separator:a073d16fa0f476d70df7d7184eb8037f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -118,8 +124,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><b>Estimate camera pose based on a fiducial marker.</b> <code>UUID: cddd23c4-da4e-4c5c-b3f9-7d095d097c97</code> </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="aee92175f3d23a9a248caa31ea6706132"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aee92175f3d23a9a248caa31ea6706132">&#9670;&nbsp;</a></span>estimate()</h2>
+<a id="adc4da135a858fd464b6e19a25b2b7d5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc4da135a858fd464b6e19a25b2b7d5b">&#9670;&nbsp;</a></span>estimate()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -130,13 +136,13 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
         <tr>
           <td class="memname">FrameworkReturnCode SolAR::MODULES::TOOLS::SolARFiducialMarkerPoseEstimator::estimate </td>
           <td>(</td>
-          <td class="paramtype">const SRef&lt; Image &gt; &amp;&#160;</td>
+          <td class="paramtype">const SRef&lt; datastructure::Image &gt;&#160;</td>
           <td class="paramname"><em>image</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Transform3Df &amp;&#160;</td>
+          <td class="paramtype">datastructure::Transform3Df &amp;&#160;</td>
           <td class="paramname"><em>pose</em>&#160;</td>
         </tr>
         <tr>
@@ -164,8 +170,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
 
 </div>
 </div>
-<a id="aeb83dd9761917cd2219020dba8e03499"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeb83dd9761917cd2219020dba8e03499">&#9670;&nbsp;</a></span>setCameraParameters()</h2>
+<a id="a724b598c8e717bf69b15f3221cbfc2f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a724b598c8e717bf69b15f3221cbfc2f1">&#9670;&nbsp;</a></span>setCameraParameters()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -176,13 +182,13 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
         <tr>
           <td class="memname">void SolAR::MODULES::TOOLS::SolARFiducialMarkerPoseEstimator::setCameraParameters </td>
           <td>(</td>
-          <td class="paramtype">const CamCalibration &amp;&#160;</td>
+          <td class="paramtype">const datastructure::CamCalibration &amp;&#160;</td>
           <td class="paramname"><em>intrinsicParams</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const CamDistortion &amp;&#160;</td>
+          <td class="paramtype">const datastructure::CamDistortion &amp;&#160;</td>
           <td class="paramname"><em>distorsionParams</em>&#160;</td>
         </tr>
         <tr>
@@ -203,6 +209,74 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">Camera</td><td>calibration matrix parameters. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">Camera</td><td>distorsion parameters. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a65b189a383e939788cfdaf253283c40f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65b189a383e939788cfdaf253283c40f">&#9670;&nbsp;</a></span>setMarker() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SolAR::MODULES::TOOLS::SolARFiducialMarkerPoseEstimator::setMarker </td>
+          <td>(</td>
+          <td class="paramtype">const SRef&lt; api::input::files::IMarker2DSquaredBinary &gt;&#160;</td>
+          <td class="paramname"><em>marker</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>this method is used to set the fiducial marker </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">Fiducial</td><td>marker. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af5b61dc0576534b0bf45880f11cd443b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5b61dc0576534b0bf45880f11cd443b">&#9670;&nbsp;</a></span>setMarker() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SolAR::MODULES::TOOLS::SolARFiducialMarkerPoseEstimator::setMarker </td>
+          <td>(</td>
+          <td class="paramtype">const SRef&lt; datastructure::FiducialMarker &gt;&#160;</td>
+          <td class="paramname"><em>marker</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>this method is used to set the fiducial marker </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">Fiducial</td><td>marker. </td></tr>
   </table>
   </dd>
 </dl>

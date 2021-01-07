@@ -97,12 +97,15 @@ Collaboration diagram for SolAR::MODULES::TOOLS::SolAR3DTransform:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a729e1cc656c612e3a8737d2908ea0f76"><td class="memItemLeft" align="right" valign="top">FrameworkReturnCode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_t_o_o_l_s_1_1_sol_a_r3_d_transform.html#a729e1cc656c612e3a8737d2908ea0f76">transform</a> (const std::vector&lt; Point3Df &gt; &amp;inputPoints, const Transform3Df &amp;transformation, std::vector&lt; Point3Df &gt; &amp;outputPoints) override</td></tr>
-<tr class="memdesc:a729e1cc656c612e3a8737d2908ea0f76"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method applies a 3D transform to a set of 3D points.  <a href="#a729e1cc656c612e3a8737d2908ea0f76">More...</a><br /></td></tr>
-<tr class="separator:a729e1cc656c612e3a8737d2908ea0f76"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:addcd31a38f30d276dcf02f1ebc925088"><td class="memItemLeft" align="right" valign="top">FrameworkReturnCode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_t_o_o_l_s_1_1_sol_a_r3_d_transform.html#addcd31a38f30d276dcf02f1ebc925088">transformInPlace</a> (SRef&lt; PointCloud &gt; inputPointCloud, const Transform3Df transformation) const override</td></tr>
-<tr class="memdesc:addcd31a38f30d276dcf02f1ebc925088"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method applies a transformation (4x4 float matrix) to a point cloud.  <a href="#addcd31a38f30d276dcf02f1ebc925088">More...</a><br /></td></tr>
-<tr class="separator:addcd31a38f30d276dcf02f1ebc925088"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8da027e50614879a4006e4838b6d5b72"><td class="memItemLeft" align="right" valign="top">FrameworkReturnCode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_t_o_o_l_s_1_1_sol_a_r3_d_transform.html#a8da027e50614879a4006e4838b6d5b72">transform</a> (const std::vector&lt; datastructure::Point3Df &gt; &amp;inputPoints, const datastructure::Transform3Df &amp;transformation, std::vector&lt; datastructure::Point3Df &gt; &amp;outputPoints) override</td></tr>
+<tr class="memdesc:a8da027e50614879a4006e4838b6d5b72"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method applies a 3D transform to a set of 3D points.  <a href="#a8da027e50614879a4006e4838b6d5b72">More...</a><br /></td></tr>
+<tr class="separator:a8da027e50614879a4006e4838b6d5b72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa13f5d17c28fd55ee7753835004c92d1"><td class="memItemLeft" align="right" valign="top">FrameworkReturnCode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_t_o_o_l_s_1_1_sol_a_r3_d_transform.html#aa13f5d17c28fd55ee7753835004c92d1">transform</a> (const datastructure::Transform3Df &amp;transformation, SRef&lt; api::solver::map::IMapper &gt; map) override</td></tr>
+<tr class="memdesc:aa13f5d17c28fd55ee7753835004c92d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method applies a transformation (4x4 float matrix) to a map including point cloud and keyframes.  <a href="#aa13f5d17c28fd55ee7753835004c92d1">More...</a><br /></td></tr>
+<tr class="separator:aa13f5d17c28fd55ee7753835004c92d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff1ff374bbc3881a9795f610477ae7d9"><td class="memItemLeft" align="right" valign="top">FrameworkReturnCode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_t_o_o_l_s_1_1_sol_a_r3_d_transform.html#aff1ff374bbc3881a9795f610477ae7d9">transformInPlace</a> (SRef&lt; datastructure::PointCloud &gt; inputPointCloud, const datastructure::Transform3Df transformation) const override</td></tr>
+<tr class="memdesc:aff1ff374bbc3881a9795f610477ae7d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method applies a transformation (4x4 float matrix) to a point cloud.  <a href="#aff1ff374bbc3881a9795f610477ae7d9">More...</a><br /></td></tr>
+<tr class="separator:aff1ff374bbc3881a9795f610477ae7d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a92c75fa2de8bc9f16ed02d3401b56e91"><td class="memItemLeft" align="right" valign="top"><a id="a92c75fa2de8bc9f16ed02d3401b56e91"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> () override final</td></tr>
 <tr class="separator:a92c75fa2de8bc9f16ed02d3401b56e91"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -110,8 +113,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><b>Applies a 3D Transform to a set of 3D points.</b> <code>UUID: f05dd955-33bd-4d52-8717-93ad298ed3e3</code> </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a729e1cc656c612e3a8737d2908ea0f76"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a729e1cc656c612e3a8737d2908ea0f76">&#9670;&nbsp;</a></span>transform()</h2>
+<a id="a8da027e50614879a4006e4838b6d5b72"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8da027e50614879a4006e4838b6d5b72">&#9670;&nbsp;</a></span>transform() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -122,19 +125,19 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
         <tr>
           <td class="memname">FrameworkReturnCode SolAR::MODULES::TOOLS::SolAR3DTransform::transform </td>
           <td>(</td>
-          <td class="paramtype">const std::vector&lt; Point3Df &gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; datastructure::Point3Df &gt; &amp;&#160;</td>
           <td class="paramname"><em>inputPoints</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const Transform3Df &amp;&#160;</td>
+          <td class="paramtype">const datastructure::Transform3Df &amp;&#160;</td>
           <td class="paramname"><em>transformation</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; Point3Df &gt; &amp;&#160;</td>
+          <td class="paramtype">std::vector&lt; datastructure::Point3Df &gt; &amp;&#160;</td>
           <td class="paramname"><em>outputPoints</em>&#160;</td>
         </tr>
         <tr>
@@ -163,8 +166,54 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
 
 </div>
 </div>
-<a id="addcd31a38f30d276dcf02f1ebc925088"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#addcd31a38f30d276dcf02f1ebc925088">&#9670;&nbsp;</a></span>transformInPlace()</h2>
+<a id="aa13f5d17c28fd55ee7753835004c92d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa13f5d17c28fd55ee7753835004c92d1">&#9670;&nbsp;</a></span>transform() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FrameworkReturnCode SolAR::MODULES::TOOLS::SolAR3DTransform::transform </td>
+          <td>(</td>
+          <td class="paramtype">const datastructure::Transform3Df &amp;&#160;</td>
+          <td class="paramname"><em>transformation</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SRef&lt; api::solver::map::IMapper &gt;&#160;</td>
+          <td class="paramname"><em>map</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>This method applies a transformation (4x4 float matrix) to a map including point cloud and keyframes. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">transformation</td><td>transformation the 3D transformation to apply (a 4x4 float matrix) </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">map</td><td>the map to apply the transformation </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>FrameworkReturnCode::<em>SUCCESS</em> if 3D transformation succeed, else FrameworkReturnCode::_ERROR. </dd></dl>
+
+</div>
+</div>
+<a id="aff1ff374bbc3881a9795f610477ae7d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff1ff374bbc3881a9795f610477ae7d9">&#9670;&nbsp;</a></span>transformInPlace()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -175,13 +224,13 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
         <tr>
           <td class="memname">FrameworkReturnCode SolAR::MODULES::TOOLS::SolAR3DTransform::transformInPlace </td>
           <td>(</td>
-          <td class="paramtype">SRef&lt; PointCloud &gt;&#160;</td>
+          <td class="paramtype">SRef&lt; datastructure::PointCloud &gt;&#160;</td>
           <td class="paramname"><em>inputPointCloud</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const Transform3Df&#160;</td>
+          <td class="paramtype">const datastructure::Transform3Df&#160;</td>
           <td class="paramname"><em>transformation</em>&#160;</td>
         </tr>
         <tr>
