@@ -76,7 +76,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Allows to store a set of keyframes. This storage component can be accessed by processing components to share persistent data.  
+<p>Allows to store a set of keyframes. This storage component can be accessed by processing components to share persistent data. <code>UUID: 2c147595-6c74-4f69-b63d-91e162c311ed</code>  
  <a href="class_sol_a_r_1_1api_1_1storage_1_1_i_keyframes_manager.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_i_keyframes_manager_8h_source.html">IKeyframesManager.h</a>&gt;</code></p>
@@ -105,48 +105,48 @@ Public Member Functions</h2></td></tr>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1storage_1_1_i_keyframes_manager.html#ae720f36336f84dabe20b926af549b27e">~IKeyframesManager</a> ()=default</td></tr>
 <tr class="memdesc:ae720f36336f84dabe20b926af549b27e"><td class="mdescLeft">&#160;</td><td class="mdescRight">IKeyframesStorage default destructor. <br /></td></tr>
 <tr class="separator:ae720f36336f84dabe20b926af549b27e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5bbd338230cc79cad358a3188b702459"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1storage_1_1_i_keyframes_manager.html#a5bbd338230cc79cad358a3188b702459">addKeyframe</a> (const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keyframe.html">Keyframe</a> &gt; &amp;keyframe)=0</td></tr>
-<tr class="memdesc:a5bbd338230cc79cad358a3188b702459"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method allow to add a frame to the keyframe manager component.  <a href="#a5bbd338230cc79cad358a3188b702459">More...</a><br /></td></tr>
-<tr class="separator:a5bbd338230cc79cad358a3188b702459"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5082c07edc179271b105c45bbb9c4bf2"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1storage_1_1_i_keyframes_manager.html#a5082c07edc179271b105c45bbb9c4bf2">addKeyframe</a> (const <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keyframe.html">Keyframe</a> &amp;keyframe)=0</td></tr>
-<tr class="memdesc:a5082c07edc179271b105c45bbb9c4bf2"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method allow to add a frame to the key frame manager component.  <a href="#a5082c07edc179271b105c45bbb9c4bf2">More...</a><br /></td></tr>
-<tr class="separator:a5082c07edc179271b105c45bbb9c4bf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a55a3b61dbabaa3a3a17aacf14598b16a"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1storage_1_1_i_keyframes_manager.html#a55a3b61dbabaa3a3a17aacf14598b16a">getKeyframe</a> (uint32_t id, SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keyframe.html">Keyframe</a> &gt; &amp;keyframe)=0</td></tr>
-<tr class="memdesc:a55a3b61dbabaa3a3a17aacf14598b16a"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method allows to get a keyframe by its id.  <a href="#a55a3b61dbabaa3a3a17aacf14598b16a">More...</a><br /></td></tr>
-<tr class="separator:a55a3b61dbabaa3a3a17aacf14598b16a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a52a2ea8718d015bd8f8a5e5b2dfcce60"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1storage_1_1_i_keyframes_manager.html#a52a2ea8718d015bd8f8a5e5b2dfcce60">getKeyframes</a> (std::vector&lt; uint32_t &gt; &amp;ids, std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keyframe.html">Keyframe</a> &gt;&gt; &amp;keyframes)=0</td></tr>
-<tr class="memdesc:a52a2ea8718d015bd8f8a5e5b2dfcce60"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method allows to get a set of keyframes by their ids.  <a href="#a52a2ea8718d015bd8f8a5e5b2dfcce60">More...</a><br /></td></tr>
-<tr class="separator:a52a2ea8718d015bd8f8a5e5b2dfcce60"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a63ce97c9ada9bb562163e062a93f7432"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1storage_1_1_i_keyframes_manager.html#a63ce97c9ada9bb562163e062a93f7432">getAllKeyframes</a> (std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keyframe.html">Keyframe</a> &gt;&gt; &amp;keyframes)=0</td></tr>
-<tr class="memdesc:a63ce97c9ada9bb562163e062a93f7432"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method allows to get all keyframes.  <a href="#a63ce97c9ada9bb562163e062a93f7432">More...</a><br /></td></tr>
-<tr class="separator:a63ce97c9ada9bb562163e062a93f7432"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7471c56f04ef3e86e66376cfedaef421"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1storage_1_1_i_keyframes_manager.html#a7471c56f04ef3e86e66376cfedaef421">suppressKeyframe</a> (uint32_t id)=0</td></tr>
-<tr class="memdesc:a7471c56f04ef3e86e66376cfedaef421"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method allow to suppress a keyframe by its id.  <a href="#a7471c56f04ef3e86e66376cfedaef421">More...</a><br /></td></tr>
-<tr class="separator:a7471c56f04ef3e86e66376cfedaef421"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6f334f9d1e818831f27de14629acffb4"><td class="memItemLeft" align="right" valign="top">virtual DescriptorType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1storage_1_1_i_keyframes_manager.html#a6f334f9d1e818831f27de14629acffb4">getDescriptorType</a> ()=0</td></tr>
-<tr class="memdesc:a6f334f9d1e818831f27de14629acffb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method allows to get the descriptor type used to extract descriptor for each keyframe.  <a href="#a6f334f9d1e818831f27de14629acffb4">More...</a><br /></td></tr>
-<tr class="separator:a6f334f9d1e818831f27de14629acffb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af18fbe822b21fe6d7fa4ac0b958b9c08"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1storage_1_1_i_keyframes_manager.html#af18fbe822b21fe6d7fa4ac0b958b9c08">setDescriptorType</a> (DescriptorType type)=0</td></tr>
-<tr class="memdesc:af18fbe822b21fe6d7fa4ac0b958b9c08"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method allows to set the descriptor type used to extract descriptor for each keyframe.  <a href="#af18fbe822b21fe6d7fa4ac0b958b9c08">More...</a><br /></td></tr>
-<tr class="separator:af18fbe822b21fe6d7fa4ac0b958b9c08"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1de4362d8fa04a4cf2481c680365a6ce"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1storage_1_1_i_keyframes_manager.html#a1de4362d8fa04a4cf2481c680365a6ce">isExistKeyframe</a> (uint32_t id)=0</td></tr>
-<tr class="memdesc:a1de4362d8fa04a4cf2481c680365a6ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method allows to know if a keyframe is already stored in the component.  <a href="#a1de4362d8fa04a4cf2481c680365a6ce">More...</a><br /></td></tr>
-<tr class="separator:a1de4362d8fa04a4cf2481c680365a6ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3683ad7e2b3300cc44770fe0bf769ab4"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1storage_1_1_i_keyframes_manager.html#a3683ad7e2b3300cc44770fe0bf769ab4">getNbKeyframes</a> ()=0</td></tr>
-<tr class="memdesc:a3683ad7e2b3300cc44770fe0bf769ab4"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method allows to get the number of keyframes stored in the point cloud.  <a href="#a3683ad7e2b3300cc44770fe0bf769ab4">More...</a><br /></td></tr>
-<tr class="separator:a3683ad7e2b3300cc44770fe0bf769ab4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aab8f41c8752cfa10761770dd37c9d419"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1storage_1_1_i_keyframes_manager.html#aab8f41c8752cfa10761770dd37c9d419">saveToFile</a> (std::string file)=0</td></tr>
-<tr class="memdesc:aab8f41c8752cfa10761770dd37c9d419"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method allows to save the keyframes to the external file.  <a href="#aab8f41c8752cfa10761770dd37c9d419">More...</a><br /></td></tr>
-<tr class="separator:aab8f41c8752cfa10761770dd37c9d419"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2cbc9ffcfc34f22a8d561e8e64d21d7c"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1storage_1_1_i_keyframes_manager.html#a2cbc9ffcfc34f22a8d561e8e64d21d7c">loadFromFile</a> (std::string file)=0</td></tr>
-<tr class="memdesc:a2cbc9ffcfc34f22a8d561e8e64d21d7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method allows to load the keyframes from the external file.  <a href="#a2cbc9ffcfc34f22a8d561e8e64d21d7c">More...</a><br /></td></tr>
-<tr class="separator:a2cbc9ffcfc34f22a8d561e8e64d21d7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8bc4593a7bcea8033bc70a84867cac09"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1storage_1_1_i_keyframes_manager.html#a8bc4593a7bcea8033bc70a84867cac09">addKeyframe</a> (const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keyframe.html">datastructure::Keyframe</a> &gt; keyframe)=0</td></tr>
+<tr class="memdesc:a8bc4593a7bcea8033bc70a84867cac09"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method allow to add a frame to the keyframe manager component.  <a href="#a8bc4593a7bcea8033bc70a84867cac09">More...</a><br /></td></tr>
+<tr class="separator:a8bc4593a7bcea8033bc70a84867cac09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a655b63c7b61cd3497d0894203606bdb8"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1storage_1_1_i_keyframes_manager.html#a655b63c7b61cd3497d0894203606bdb8">addKeyframe</a> (const <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keyframe.html">datastructure::Keyframe</a> &amp;keyframe)=0</td></tr>
+<tr class="memdesc:a655b63c7b61cd3497d0894203606bdb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method allow to add a frame to the key frame manager component.  <a href="#a655b63c7b61cd3497d0894203606bdb8">More...</a><br /></td></tr>
+<tr class="separator:a655b63c7b61cd3497d0894203606bdb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2289d5994264e81181996c647161d836"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1storage_1_1_i_keyframes_manager.html#a2289d5994264e81181996c647161d836">getKeyframe</a> (const uint32_t id, SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keyframe.html">datastructure::Keyframe</a> &gt; &amp;keyframe) const =0</td></tr>
+<tr class="memdesc:a2289d5994264e81181996c647161d836"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method allows to get a keyframe by its id.  <a href="#a2289d5994264e81181996c647161d836">More...</a><br /></td></tr>
+<tr class="separator:a2289d5994264e81181996c647161d836"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd41946d52b4ae3ce112152b2eeeee5b"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1storage_1_1_i_keyframes_manager.html#afd41946d52b4ae3ce112152b2eeeee5b">getKeyframes</a> (const std::vector&lt; uint32_t &gt; &amp;ids, std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keyframe.html">datastructure::Keyframe</a> &gt;&gt; &amp;keyframes) const =0</td></tr>
+<tr class="memdesc:afd41946d52b4ae3ce112152b2eeeee5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method allows to get a set of keyframes by their ids.  <a href="#afd41946d52b4ae3ce112152b2eeeee5b">More...</a><br /></td></tr>
+<tr class="separator:afd41946d52b4ae3ce112152b2eeeee5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90c05af4211f2705792f2b6bc324169b"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1storage_1_1_i_keyframes_manager.html#a90c05af4211f2705792f2b6bc324169b">getAllKeyframes</a> (std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keyframe.html">datastructure::Keyframe</a> &gt;&gt; &amp;keyframes) const =0</td></tr>
+<tr class="memdesc:a90c05af4211f2705792f2b6bc324169b"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method allows to get all keyframes.  <a href="#a90c05af4211f2705792f2b6bc324169b">More...</a><br /></td></tr>
+<tr class="separator:a90c05af4211f2705792f2b6bc324169b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a8aeb96ff6702fa7dbd87a1a9d5ffd6"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1storage_1_1_i_keyframes_manager.html#a1a8aeb96ff6702fa7dbd87a1a9d5ffd6">suppressKeyframe</a> (const uint32_t id)=0</td></tr>
+<tr class="memdesc:a1a8aeb96ff6702fa7dbd87a1a9d5ffd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method allow to suppress a keyframe by its id.  <a href="#a1a8aeb96ff6702fa7dbd87a1a9d5ffd6">More...</a><br /></td></tr>
+<tr class="separator:a1a8aeb96ff6702fa7dbd87a1a9d5ffd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a147bb298a58a09aafe1795305139aa7e"><td class="memItemLeft" align="right" valign="top">virtual datastructure::DescriptorType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1storage_1_1_i_keyframes_manager.html#a147bb298a58a09aafe1795305139aa7e">getDescriptorType</a> () const =0</td></tr>
+<tr class="memdesc:a147bb298a58a09aafe1795305139aa7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method allows to get the descriptor type used to extract descriptor for each keyframe.  <a href="#a147bb298a58a09aafe1795305139aa7e">More...</a><br /></td></tr>
+<tr class="separator:a147bb298a58a09aafe1795305139aa7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ee14399d5bab80eeb48b73afc299d6d"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1storage_1_1_i_keyframes_manager.html#a2ee14399d5bab80eeb48b73afc299d6d">setDescriptorType</a> (const datastructure::DescriptorType &amp;type)=0</td></tr>
+<tr class="memdesc:a2ee14399d5bab80eeb48b73afc299d6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method allows to set the descriptor type used to extract descriptor for each keyframe.  <a href="#a2ee14399d5bab80eeb48b73afc299d6d">More...</a><br /></td></tr>
+<tr class="separator:a2ee14399d5bab80eeb48b73afc299d6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6ddabe634decefd106f9b05f6a7ce2c"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1storage_1_1_i_keyframes_manager.html#ab6ddabe634decefd106f9b05f6a7ce2c">isExistKeyframe</a> (const uint32_t id) const =0</td></tr>
+<tr class="memdesc:ab6ddabe634decefd106f9b05f6a7ce2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method allows to know if a keyframe is already stored in the component.  <a href="#ab6ddabe634decefd106f9b05f6a7ce2c">More...</a><br /></td></tr>
+<tr class="separator:ab6ddabe634decefd106f9b05f6a7ce2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a2e10c4f45382eb77eb387bd2cdcc3a"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1storage_1_1_i_keyframes_manager.html#a6a2e10c4f45382eb77eb387bd2cdcc3a">getNbKeyframes</a> () const =0</td></tr>
+<tr class="memdesc:a6a2e10c4f45382eb77eb387bd2cdcc3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method allows to get the number of keyframes stored in the point cloud.  <a href="#a6a2e10c4f45382eb77eb387bd2cdcc3a">More...</a><br /></td></tr>
+<tr class="separator:a6a2e10c4f45382eb77eb387bd2cdcc3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a505d7ca76876cbeef473ef4e82567c03"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1storage_1_1_i_keyframes_manager.html#a505d7ca76876cbeef473ef4e82567c03">saveToFile</a> (const std::string &amp;file) const =0</td></tr>
+<tr class="memdesc:a505d7ca76876cbeef473ef4e82567c03"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method allows to save the keyframes to the external file.  <a href="#a505d7ca76876cbeef473ef4e82567c03">More...</a><br /></td></tr>
+<tr class="separator:a505d7ca76876cbeef473ef4e82567c03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a661897fa0c5dce064365c39d1f7dbbb9"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1storage_1_1_i_keyframes_manager.html#a661897fa0c5dce064365c39d1f7dbbb9">loadFromFile</a> (const std::string &amp;file)=0</td></tr>
+<tr class="memdesc:a661897fa0c5dce064365c39d1f7dbbb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method allows to load the keyframes from the external file.  <a href="#a661897fa0c5dce064365c39d1f7dbbb9">More...</a><br /></td></tr>
+<tr class="separator:a661897fa0c5dce064365c39d1f7dbbb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Allows to store a set of keyframes. This storage component can be accessed by processing components to share persistent data. </p>
+<div class="textblock"><p>Allows to store a set of keyframes. This storage component can be accessed by processing components to share persistent data. <code>UUID: 2c147595-6c74-4f69-b63d-91e162c311ed</code> </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a5bbd338230cc79cad358a3188b702459"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5bbd338230cc79cad358a3188b702459">&#9670;&nbsp;</a></span>addKeyframe() <span class="overload">[1/2]</span></h2>
+<a id="a8bc4593a7bcea8033bc70a84867cac09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8bc4593a7bcea8033bc70a84867cac09">&#9670;&nbsp;</a></span>addKeyframe() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -157,7 +157,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
         <tr>
           <td class="memname">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a> SolAR::api::storage::IKeyframesManager::addKeyframe </td>
           <td>(</td>
-          <td class="paramtype">const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keyframe.html">Keyframe</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keyframe.html">datastructure::Keyframe</a> &gt;&#160;</td>
           <td class="paramname"><em>keyframe</em></td><td>)</td>
           <td></td>
         </tr>
@@ -180,8 +180,8 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 
 </div>
 </div>
-<a id="a5082c07edc179271b105c45bbb9c4bf2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5082c07edc179271b105c45bbb9c4bf2">&#9670;&nbsp;</a></span>addKeyframe() <span class="overload">[2/2]</span></h2>
+<a id="a655b63c7b61cd3497d0894203606bdb8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a655b63c7b61cd3497d0894203606bdb8">&#9670;&nbsp;</a></span>addKeyframe() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -192,7 +192,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
         <tr>
           <td class="memname">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a> SolAR::api::storage::IKeyframesManager::addKeyframe </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keyframe.html">Keyframe</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keyframe.html">datastructure::Keyframe</a> &amp;&#160;</td>
           <td class="paramname"><em>keyframe</em></td><td>)</td>
           <td></td>
         </tr>
@@ -215,8 +215,8 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 
 </div>
 </div>
-<a id="a63ce97c9ada9bb562163e062a93f7432"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a63ce97c9ada9bb562163e062a93f7432">&#9670;&nbsp;</a></span>getAllKeyframes()</h2>
+<a id="a90c05af4211f2705792f2b6bc324169b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90c05af4211f2705792f2b6bc324169b">&#9670;&nbsp;</a></span>getAllKeyframes()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -227,9 +227,9 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
         <tr>
           <td class="memname">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a> SolAR::api::storage::IKeyframesManager::getAllKeyframes </td>
           <td>(</td>
-          <td class="paramtype">std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keyframe.html">Keyframe</a> &gt;&gt; &amp;&#160;</td>
+          <td class="paramtype">std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keyframe.html">datastructure::Keyframe</a> &gt;&gt; &amp;&#160;</td>
           <td class="paramname"><em>keyframes</em></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -242,7 +242,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <p>This method allows to get all keyframes. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[out]</td><td class="paramname">the</td><td>set of keyframes </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">keyframes</td><td>the set of keyframes </td></tr>
   </table>
   </dd>
 </dl>
@@ -250,8 +250,8 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 
 </div>
 </div>
-<a id="a6f334f9d1e818831f27de14629acffb4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6f334f9d1e818831f27de14629acffb4">&#9670;&nbsp;</a></span>getDescriptorType()</h2>
+<a id="a147bb298a58a09aafe1795305139aa7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a147bb298a58a09aafe1795305139aa7e">&#9670;&nbsp;</a></span>getDescriptorType()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -260,10 +260,10 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual DescriptorType SolAR::api::storage::IKeyframesManager::getDescriptorType </td>
+          <td class="memname">virtual datastructure::DescriptorType SolAR::api::storage::IKeyframesManager::getDescriptorType </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -278,8 +278,8 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 
 </div>
 </div>
-<a id="a55a3b61dbabaa3a3a17aacf14598b16a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a55a3b61dbabaa3a3a17aacf14598b16a">&#9670;&nbsp;</a></span>getKeyframe()</h2>
+<a id="a2289d5994264e81181996c647161d836"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2289d5994264e81181996c647161d836">&#9670;&nbsp;</a></span>getKeyframe()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -290,19 +290,19 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
         <tr>
           <td class="memname">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a> SolAR::api::storage::IKeyframesManager::getKeyframe </td>
           <td>(</td>
-          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramtype">const uint32_t&#160;</td>
           <td class="paramname"><em>id</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keyframe.html">Keyframe</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keyframe.html">datastructure::Keyframe</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>keyframe</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td></td>
+          <td></td><td> const</td>
         </tr>
       </table>
   </td>
@@ -315,8 +315,8 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <p>This method allows to get a keyframe by its id. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">id</td><td>of the keyframe to get </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">a</td><td>keyframe stored in the keyframes manager </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">id</td><td>id of the keyframe to get </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">keyframe</td><td>a keyframe stored in the keyframes manager </td></tr>
   </table>
   </dd>
 </dl>
@@ -324,8 +324,8 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 
 </div>
 </div>
-<a id="a52a2ea8718d015bd8f8a5e5b2dfcce60"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a52a2ea8718d015bd8f8a5e5b2dfcce60">&#9670;&nbsp;</a></span>getKeyframes()</h2>
+<a id="afd41946d52b4ae3ce112152b2eeeee5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd41946d52b4ae3ce112152b2eeeee5b">&#9670;&nbsp;</a></span>getKeyframes()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -336,19 +336,19 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
         <tr>
           <td class="memname">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a> SolAR::api::storage::IKeyframesManager::getKeyframes </td>
           <td>(</td>
-          <td class="paramtype">std::vector&lt; uint32_t &gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; uint32_t &gt; &amp;&#160;</td>
           <td class="paramname"><em>ids</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keyframe.html">Keyframe</a> &gt;&gt; &amp;&#160;</td>
+          <td class="paramtype">std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keyframe.html">datastructure::Keyframe</a> &gt;&gt; &amp;&#160;</td>
           <td class="paramname"><em>keyframes</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td></td>
+          <td></td><td> const</td>
         </tr>
       </table>
   </td>
@@ -361,8 +361,8 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <p>This method allows to get a set of keyframes by their ids. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">a</td><td>vector of ids of the keyframes to get </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">a</td><td>vector of keyframes stored in the keyframe manager </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ids</td><td>a vector of ids of the keyframes to get </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">keyframes</td><td>a vector of keyframes stored in the keyframe manager </td></tr>
   </table>
   </dd>
 </dl>
@@ -370,8 +370,8 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 
 </div>
 </div>
-<a id="a3683ad7e2b3300cc44770fe0bf769ab4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3683ad7e2b3300cc44770fe0bf769ab4">&#9670;&nbsp;</a></span>getNbKeyframes()</h2>
+<a id="a6a2e10c4f45382eb77eb387bd2cdcc3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a2e10c4f45382eb77eb387bd2cdcc3a">&#9670;&nbsp;</a></span>getNbKeyframes()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -383,7 +383,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
           <td class="memname">virtual int SolAR::api::storage::IKeyframesManager::getNbKeyframes </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -398,8 +398,8 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 
 </div>
 </div>
-<a id="a1de4362d8fa04a4cf2481c680365a6ce"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1de4362d8fa04a4cf2481c680365a6ce">&#9670;&nbsp;</a></span>isExistKeyframe()</h2>
+<a id="ab6ddabe634decefd106f9b05f6a7ce2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6ddabe634decefd106f9b05f6a7ce2c">&#9670;&nbsp;</a></span>isExistKeyframe()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -410,9 +410,9 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
         <tr>
           <td class="memname">virtual bool SolAR::api::storage::IKeyframesManager::isExistKeyframe </td>
           <td>(</td>
-          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramtype">const uint32_t&#160;</td>
           <td class="paramname"><em>id</em></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -425,7 +425,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <p>This method allows to know if a keyframe is already stored in the component. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">Id</td><td>of this keyframe </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">id</td><td>id of this keyframe </td></tr>
   </table>
   </dd>
 </dl>
@@ -433,8 +433,8 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 
 </div>
 </div>
-<a id="a2cbc9ffcfc34f22a8d561e8e64d21d7c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2cbc9ffcfc34f22a8d561e8e64d21d7c">&#9670;&nbsp;</a></span>loadFromFile()</h2>
+<a id="a661897fa0c5dce064365c39d1f7dbbb9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a661897fa0c5dce064365c39d1f7dbbb9">&#9670;&nbsp;</a></span>loadFromFile()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -445,7 +445,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
         <tr>
           <td class="memname">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a> SolAR::api::storage::IKeyframesManager::loadFromFile </td>
           <td>(</td>
-          <td class="paramtype">std::string&#160;</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>file</em></td><td>)</td>
           <td></td>
         </tr>
@@ -460,7 +460,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <p>This method allows to load the keyframes from the external file. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">the</td><td>file name </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">file</td><td>the file name </td></tr>
   </table>
   </dd>
 </dl>
@@ -468,8 +468,8 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 
 </div>
 </div>
-<a id="aab8f41c8752cfa10761770dd37c9d419"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aab8f41c8752cfa10761770dd37c9d419">&#9670;&nbsp;</a></span>saveToFile()</h2>
+<a id="a505d7ca76876cbeef473ef4e82567c03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a505d7ca76876cbeef473ef4e82567c03">&#9670;&nbsp;</a></span>saveToFile()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -480,9 +480,9 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
         <tr>
           <td class="memname">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a> SolAR::api::storage::IKeyframesManager::saveToFile </td>
           <td>(</td>
-          <td class="paramtype">std::string&#160;</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>file</em></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -495,7 +495,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <p>This method allows to save the keyframes to the external file. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[out]</td><td class="paramname">the</td><td>file name </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">file</td><td>the file name </td></tr>
   </table>
   </dd>
 </dl>
@@ -503,8 +503,8 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 
 </div>
 </div>
-<a id="af18fbe822b21fe6d7fa4ac0b958b9c08"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af18fbe822b21fe6d7fa4ac0b958b9c08">&#9670;&nbsp;</a></span>setDescriptorType()</h2>
+<a id="a2ee14399d5bab80eeb48b73afc299d6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ee14399d5bab80eeb48b73afc299d6d">&#9670;&nbsp;</a></span>setDescriptorType()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -515,7 +515,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
         <tr>
           <td class="memname">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a> SolAR::api::storage::IKeyframesManager::setDescriptorType </td>
           <td>(</td>
-          <td class="paramtype">DescriptorType&#160;</td>
+          <td class="paramtype">const datastructure::DescriptorType &amp;&#160;</td>
           <td class="paramname"><em>type</em></td><td>)</td>
           <td></td>
         </tr>
@@ -528,12 +528,20 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 </div><div class="memdoc">
 
 <p>This method allows to set the descriptor type used to extract descriptor for each keyframe. </p>
-<dl class="section return"><dt>Returns</dt><dd>Descriptor type </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">type</td><td>the descriptor type </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd>
+<dd>
+FrameworkReturnCode::<em>SUCCESS</em> if succeed, else FrameworkReturnCode::_ERROR. </dd></dl>
 
 </div>
 </div>
-<a id="a7471c56f04ef3e86e66376cfedaef421"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7471c56f04ef3e86e66376cfedaef421">&#9670;&nbsp;</a></span>suppressKeyframe()</h2>
+<a id="a1a8aeb96ff6702fa7dbd87a1a9d5ffd6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a8aeb96ff6702fa7dbd87a1a9d5ffd6">&#9670;&nbsp;</a></span>suppressKeyframe()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -544,7 +552,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
         <tr>
           <td class="memname">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a> SolAR::api::storage::IKeyframesManager::suppressKeyframe </td>
           <td>(</td>
-          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramtype">const uint32_t&#160;</td>
           <td class="paramname"><em>id</em></td><td>)</td>
           <td></td>
         </tr>
@@ -559,7 +567,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <p>This method allow to suppress a keyframe by its id. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">id</td><td>of the keyframe to suppress </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">id</td><td>id of the keyframe to suppress </td></tr>
   </table>
   </dd>
 </dl>

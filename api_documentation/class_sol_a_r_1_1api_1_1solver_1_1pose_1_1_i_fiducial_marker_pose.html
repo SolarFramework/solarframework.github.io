@@ -105,18 +105,24 @@ Public Member Functions</h2></td></tr>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1pose_1_1_i_fiducial_marker_pose.html#aac3e2c87b83b3c694ba345db07f71957">~IFiducialMarkerPose</a> ()=default</td></tr>
 <tr class="memdesc:aac3e2c87b83b3c694ba345db07f71957"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1pose_1_1_i_fiducial_marker_pose.html" title="Estimate camera pose based on a fiducial marker. UUID: d5247968-b74e-4afb-9abd-546021441ad4 ...">IFiducialMarkerPose</a> default destructor. <br /></td></tr>
 <tr class="separator:aac3e2c87b83b3c694ba345db07f71957"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab7987d9d3db429310022447a7f301003"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1pose_1_1_i_fiducial_marker_pose.html#ab7987d9d3db429310022447a7f301003">setCameraParameters</a> (const <a class="el" href="_camera_definitions_8h.html#a0ea650513b55059459f5d5771c5bf5cb">CamCalibration</a> &amp;intrinsicParams, const <a class="el" href="_camera_definitions_8h.html#ad85d877532df3da45a970d47735e34bc">CamDistortion</a> &amp;distorsionParams)=0</td></tr>
-<tr class="memdesc:ab7987d9d3db429310022447a7f301003"><td class="mdescLeft">&#160;</td><td class="mdescRight">this method is used to set intrinsic parameters and distorsion of the camera  <a href="#ab7987d9d3db429310022447a7f301003">More...</a><br /></td></tr>
-<tr class="separator:ab7987d9d3db429310022447a7f301003"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0e7da8503483e1ce3ff905a9e42306a6"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1pose_1_1_i_fiducial_marker_pose.html#a0e7da8503483e1ce3ff905a9e42306a6">estimate</a> (const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt; &amp;image, <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a> &amp;pose)=0</td></tr>
-<tr class="memdesc:a0e7da8503483e1ce3ff905a9e42306a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Estimates camera pose based on a fiducial marker.  <a href="#a0e7da8503483e1ce3ff905a9e42306a6">More...</a><br /></td></tr>
-<tr class="separator:a0e7da8503483e1ce3ff905a9e42306a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e08b5a5332c11ce1a93aceeeba34332"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1pose_1_1_i_fiducial_marker_pose.html#a8e08b5a5332c11ce1a93aceeeba34332">setCameraParameters</a> (const <a class="el" href="_camera_definitions_8h.html#a0ea650513b55059459f5d5771c5bf5cb">datastructure::CamCalibration</a> &amp;intrinsicParams, const <a class="el" href="_camera_definitions_8h.html#ad85d877532df3da45a970d47735e34bc">datastructure::CamDistortion</a> &amp;distorsionParams)=0</td></tr>
+<tr class="memdesc:a8e08b5a5332c11ce1a93aceeeba34332"><td class="mdescLeft">&#160;</td><td class="mdescRight">this method is used to set intrinsic parameters and distorsion of the camera  <a href="#a8e08b5a5332c11ce1a93aceeeba34332">More...</a><br /></td></tr>
+<tr class="separator:a8e08b5a5332c11ce1a93aceeeba34332"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea5f340e99b3521682209b53e1296268"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1pose_1_1_i_fiducial_marker_pose.html#aea5f340e99b3521682209b53e1296268">setMarker</a> (const SRef&lt; <a class="el" href="class_sol_a_r_1_1api_1_1input_1_1files_1_1_i_marker2_d_squared_binary.html">api::input::files::IMarker2DSquaredBinary</a> &gt; marker)=0</td></tr>
+<tr class="memdesc:aea5f340e99b3521682209b53e1296268"><td class="mdescLeft">&#160;</td><td class="mdescRight">this method is used to set the fiducial marker  <a href="#aea5f340e99b3521682209b53e1296268">More...</a><br /></td></tr>
+<tr class="separator:aea5f340e99b3521682209b53e1296268"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc036d0ec07f6e67eab9f9d826c726c1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1pose_1_1_i_fiducial_marker_pose.html#afc036d0ec07f6e67eab9f9d826c726c1">setMarker</a> (const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_fiducial_marker.html">datastructure::FiducialMarker</a> &gt; marker)=0</td></tr>
+<tr class="memdesc:afc036d0ec07f6e67eab9f9d826c726c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">this method is used to set the fiducial marker  <a href="#afc036d0ec07f6e67eab9f9d826c726c1">More...</a><br /></td></tr>
+<tr class="separator:afc036d0ec07f6e67eab9f9d826c726c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7990644da4169d649c325e927265177b"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1pose_1_1_i_fiducial_marker_pose.html#a7990644da4169d649c325e927265177b">estimate</a> (const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">datastructure::Image</a> &gt; image, <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">datastructure::Transform3Df</a> &amp;pose)=0</td></tr>
+<tr class="memdesc:a7990644da4169d649c325e927265177b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Estimates camera pose based on a fiducial marker.  <a href="#a7990644da4169d649c325e927265177b">More...</a><br /></td></tr>
+<tr class="separator:a7990644da4169d649c325e927265177b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><b>Estimate camera pose based on a fiducial marker.</b> <code>UUID: d5247968-b74e-4afb-9abd-546021441ad4</code> </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a0e7da8503483e1ce3ff905a9e42306a6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0e7da8503483e1ce3ff905a9e42306a6">&#9670;&nbsp;</a></span>estimate()</h2>
+<a id="a7990644da4169d649c325e927265177b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7990644da4169d649c325e927265177b">&#9670;&nbsp;</a></span>estimate()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -127,13 +133,13 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
         <tr>
           <td class="memname">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a> SolAR::api::solver::pose::IFiducialMarkerPose::estimate </td>
           <td>(</td>
-          <td class="paramtype">const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">datastructure::Image</a> &gt;&#160;</td>
           <td class="paramname"><em>image</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">datastructure::Transform3Df</a> &amp;&#160;</td>
           <td class="paramname"><em>pose</em>&#160;</td>
         </tr>
         <tr>
@@ -161,8 +167,8 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 
 </div>
 </div>
-<a id="ab7987d9d3db429310022447a7f301003"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab7987d9d3db429310022447a7f301003">&#9670;&nbsp;</a></span>setCameraParameters()</h2>
+<a id="a8e08b5a5332c11ce1a93aceeeba34332"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e08b5a5332c11ce1a93aceeeba34332">&#9670;&nbsp;</a></span>setCameraParameters()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -173,13 +179,13 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
         <tr>
           <td class="memname">virtual void SolAR::api::solver::pose::IFiducialMarkerPose::setCameraParameters </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="_camera_definitions_8h.html#a0ea650513b55059459f5d5771c5bf5cb">CamCalibration</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="_camera_definitions_8h.html#a0ea650513b55059459f5d5771c5bf5cb">datastructure::CamCalibration</a> &amp;&#160;</td>
           <td class="paramname"><em>intrinsicParams</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="_camera_definitions_8h.html#ad85d877532df3da45a970d47735e34bc">CamDistortion</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="_camera_definitions_8h.html#ad85d877532df3da45a970d47735e34bc">datastructure::CamDistortion</a> &amp;&#160;</td>
           <td class="paramname"><em>distorsionParams</em>&#160;</td>
         </tr>
         <tr>
@@ -198,8 +204,76 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <p>this method is used to set intrinsic parameters and distorsion of the camera </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">Camera</td><td>calibration matrix parameters. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">Camera</td><td>distorsion parameters. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">intrinsicParams</td><td>camera calibration matrix parameters. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">distorsionParams</td><td>camera distorsion parameters. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aea5f340e99b3521682209b53e1296268"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea5f340e99b3521682209b53e1296268">&#9670;&nbsp;</a></span>setMarker() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void SolAR::api::solver::pose::IFiducialMarkerPose::setMarker </td>
+          <td>(</td>
+          <td class="paramtype">const SRef&lt; <a class="el" href="class_sol_a_r_1_1api_1_1input_1_1files_1_1_i_marker2_d_squared_binary.html">api::input::files::IMarker2DSquaredBinary</a> &gt;&#160;</td>
+          <td class="paramname"><em>marker</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>this method is used to set the fiducial marker </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">Fiducial</td><td>marker. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="afc036d0ec07f6e67eab9f9d826c726c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc036d0ec07f6e67eab9f9d826c726c1">&#9670;&nbsp;</a></span>setMarker() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void SolAR::api::solver::pose::IFiducialMarkerPose::setMarker </td>
+          <td>(</td>
+          <td class="paramtype">const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_fiducial_marker.html">datastructure::FiducialMarker</a> &gt;&#160;</td>
+          <td class="paramname"><em>marker</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>this method is used to set the fiducial marker </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">Fiducial</td><td>marker. </td></tr>
   </table>
   </dd>
 </dl>

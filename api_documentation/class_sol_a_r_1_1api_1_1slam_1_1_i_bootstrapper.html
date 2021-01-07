@@ -105,18 +105,18 @@ Public Member Functions</h2></td></tr>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1slam_1_1_i_bootstrapper.html#ab87897af9ead9ca63a403bd9727b8c50">~IBootstrapper</a> ()=default</td></tr>
 <tr class="memdesc:ab87897af9ead9ca63a403bd9727b8c50"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sol_a_r_1_1api_1_1slam_1_1_i_bootstrapper.html" title="Initialization SLAM using an image stream of a camera. UUID: b0515c62-cc81-4600-835c-8acdfedf39b5 ...">IBootstrapper</a> default destructor. <br /></td></tr>
 <tr class="separator:ab87897af9ead9ca63a403bd9727b8c50"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5351f06b016e8d4bb0dac9a05a1e957f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1slam_1_1_i_bootstrapper.html#a5351f06b016e8d4bb0dac9a05a1e957f">setCameraParameters</a> (const <a class="el" href="_camera_definitions_8h.html#a0ea650513b55059459f5d5771c5bf5cb">CamCalibration</a> &amp;intrinsicParams, const <a class="el" href="_camera_definitions_8h.html#ad85d877532df3da45a970d47735e34bc">CamDistortion</a> &amp;distorsionParams)=0</td></tr>
-<tr class="memdesc:a5351f06b016e8d4bb0dac9a05a1e957f"><td class="mdescLeft">&#160;</td><td class="mdescRight">this method is used to set intrinsic parameters and distorsion of the camera  <a href="#a5351f06b016e8d4bb0dac9a05a1e957f">More...</a><br /></td></tr>
-<tr class="separator:a5351f06b016e8d4bb0dac9a05a1e957f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2e3f08584a40283d6a3b163404ee7b0f"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1slam_1_1_i_bootstrapper.html#a2e3f08584a40283d6a3b163404ee7b0f">run</a> ()=0</td></tr>
-<tr class="memdesc:a2e3f08584a40283d6a3b163404ee7b0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method applies a transformation (4x4 float matrix) to a set of 3D points.  <a href="#a2e3f08584a40283d6a3b163404ee7b0f">More...</a><br /></td></tr>
-<tr class="separator:a2e3f08584a40283d6a3b163404ee7b0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96219d8bd0cb0e30bc1425e343e6381c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1slam_1_1_i_bootstrapper.html#a96219d8bd0cb0e30bc1425e343e6381c">setCameraParameters</a> (const <a class="el" href="_camera_definitions_8h.html#a0ea650513b55059459f5d5771c5bf5cb">datastructure::CamCalibration</a> &amp;intrinsicParams, const <a class="el" href="_camera_definitions_8h.html#ad85d877532df3da45a970d47735e34bc">datastructure::CamDistortion</a> &amp;distorsionParams)=0</td></tr>
+<tr class="memdesc:a96219d8bd0cb0e30bc1425e343e6381c"><td class="mdescLeft">&#160;</td><td class="mdescRight">this method is used to set intrinsic parameters and distorsion of the camera  <a href="#a96219d8bd0cb0e30bc1425e343e6381c">More...</a><br /></td></tr>
+<tr class="separator:a96219d8bd0cb0e30bc1425e343e6381c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea684cbf199a57d09ae3eb9212f07bb7"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1slam_1_1_i_bootstrapper.html#aea684cbf199a57d09ae3eb9212f07bb7">process</a> (const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">datastructure::Image</a> &gt; image, SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">datastructure::Image</a> &gt; &amp;view, const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">datastructure::Transform3Df</a> &amp;pose=datastructure::Transform3Df::Identity())=0</td></tr>
+<tr class="memdesc:aea684cbf199a57d09ae3eb9212f07bb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method uses images to boostrap.  <a href="#aea684cbf199a57d09ae3eb9212f07bb7">More...</a><br /></td></tr>
+<tr class="separator:aea684cbf199a57d09ae3eb9212f07bb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><b>Initialization SLAM using an image stream of a camera.</b> <code>UUID: b0515c62-cc81-4600-835c-8acdfedf39b5</code> </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a2e3f08584a40283d6a3b163404ee7b0f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2e3f08584a40283d6a3b163404ee7b0f">&#9670;&nbsp;</a></span>run()</h2>
+<a id="aea684cbf199a57d09ae3eb9212f07bb7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea684cbf199a57d09ae3eb9212f07bb7">&#9670;&nbsp;</a></span>process()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -125,10 +125,27 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a> SolAR::api::slam::IBootstrapper::run </td>
+          <td class="memname">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a> SolAR::api::slam::IBootstrapper::process </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">datastructure::Image</a> &gt;&#160;</td>
+          <td class="paramname"><em>image</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">datastructure::Image</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>view</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">datastructure::Transform3Df</a> &amp;&#160;</td>
+          <td class="paramname"><em>pose</em> = <code>datastructure::Transform3Df::Identity()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -138,13 +155,21 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 </table>
 </div><div class="memdoc">
 
-<p>This method applies a transformation (4x4 float matrix) to a set of 3D points. </p>
+<p>This method uses images to boostrap. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">image</td><td>input image to process </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">view</td><td>output image to visualize </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pose</td><td>the pose of the input image </td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section return"><dt>Returns</dt><dd>FrameworkReturnCode::<em>SUCCESS</em> if initialization succeed, else FrameworkReturnCode::_ERROR. </dd></dl>
 
 </div>
 </div>
-<a id="a5351f06b016e8d4bb0dac9a05a1e957f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5351f06b016e8d4bb0dac9a05a1e957f">&#9670;&nbsp;</a></span>setCameraParameters()</h2>
+<a id="a96219d8bd0cb0e30bc1425e343e6381c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96219d8bd0cb0e30bc1425e343e6381c">&#9670;&nbsp;</a></span>setCameraParameters()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -155,13 +180,13 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
         <tr>
           <td class="memname">virtual void SolAR::api::slam::IBootstrapper::setCameraParameters </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="_camera_definitions_8h.html#a0ea650513b55059459f5d5771c5bf5cb">CamCalibration</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="_camera_definitions_8h.html#a0ea650513b55059459f5d5771c5bf5cb">datastructure::CamCalibration</a> &amp;&#160;</td>
           <td class="paramname"><em>intrinsicParams</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="_camera_definitions_8h.html#ad85d877532df3da45a970d47735e34bc">CamDistortion</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="_camera_definitions_8h.html#ad85d877532df3da45a970d47735e34bc">datastructure::CamDistortion</a> &amp;&#160;</td>
           <td class="paramname"><em>distorsionParams</em>&#160;</td>
         </tr>
         <tr>
@@ -180,8 +205,8 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <p>this method is used to set intrinsic parameters and distorsion of the camera </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">Camera</td><td>calibration matrix parameters. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">Camera</td><td>distorsion parameters. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">intrinsicParams</td><td>camera calibration matrix parameters. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">distorsionParams</td><td>camera distorsion parameters. </td></tr>
   </table>
   </dd>
 </dl>

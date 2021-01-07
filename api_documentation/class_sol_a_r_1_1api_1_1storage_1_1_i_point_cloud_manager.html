@@ -76,7 +76,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Allows to store a point cloud. This storage component can be accessed by processing components to share persistent data.  
+<p>Allows to store a point cloud. This storage component can be accessed by processing components to share persistent data. <code>UUID: 264d4406-b726-4ce9-a430-35d8b5e70331</code>  
  <a href="class_sol_a_r_1_1api_1_1storage_1_1_i_point_cloud_manager.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_i_point_cloud_manager_8h_source.html">IPointCloudManager.h</a>&gt;</code></p>
@@ -105,57 +105,57 @@ Public Member Functions</h2></td></tr>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1storage_1_1_i_point_cloud_manager.html#aa96dc4241fb9b82ddb5d701bc5585642">~IPointCloudManager</a> ()=default</td></tr>
 <tr class="memdesc:aa96dc4241fb9b82ddb5d701bc5585642"><td class="mdescLeft">&#160;</td><td class="mdescRight">IPointCloudStorage default destructor. <br /></td></tr>
 <tr class="separator:aa96dc4241fb9b82ddb5d701bc5585642"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2bb914ef458f105613714c4a712d23b6"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1storage_1_1_i_point_cloud_manager.html#a2bb914ef458f105613714c4a712d23b6">addPoint</a> (const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">CloudPoint</a> &gt; &amp;point)=0</td></tr>
-<tr class="memdesc:a2bb914ef458f105613714c4a712d23b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method allow to add a 3D point to the point cloud.  <a href="#a2bb914ef458f105613714c4a712d23b6">More...</a><br /></td></tr>
-<tr class="separator:a2bb914ef458f105613714c4a712d23b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab5d94aefb22e3ca6e0ec5cdd985c6e77"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1storage_1_1_i_point_cloud_manager.html#ab5d94aefb22e3ca6e0ec5cdd985c6e77">addPoints</a> (const std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">CloudPoint</a> &gt;&gt; &amp;points)=0</td></tr>
-<tr class="memdesc:ab5d94aefb22e3ca6e0ec5cdd985c6e77"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method allow to add a vector of 3D points to the point cloud.  <a href="#ab5d94aefb22e3ca6e0ec5cdd985c6e77">More...</a><br /></td></tr>
-<tr class="separator:ab5d94aefb22e3ca6e0ec5cdd985c6e77"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2893007691300b06ebb84318952dbdc5"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1storage_1_1_i_point_cloud_manager.html#a2893007691300b06ebb84318952dbdc5">addPoint</a> (const <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">CloudPoint</a> &amp;point)=0</td></tr>
-<tr class="memdesc:a2893007691300b06ebb84318952dbdc5"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method allow to add a 3D point to the point cloud.  <a href="#a2893007691300b06ebb84318952dbdc5">More...</a><br /></td></tr>
-<tr class="separator:a2893007691300b06ebb84318952dbdc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7f0c75454b6b3e8e1c6666e1785d7651"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1storage_1_1_i_point_cloud_manager.html#a7f0c75454b6b3e8e1c6666e1785d7651">addPoints</a> (const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">CloudPoint</a> &gt; &amp;points)=0</td></tr>
-<tr class="memdesc:a7f0c75454b6b3e8e1c6666e1785d7651"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method allow to add a vector of 3D points to the point cloud.  <a href="#a7f0c75454b6b3e8e1c6666e1785d7651">More...</a><br /></td></tr>
-<tr class="separator:a7f0c75454b6b3e8e1c6666e1785d7651"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa568ddc0acf2a648f2967a1bec34d54a"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1storage_1_1_i_point_cloud_manager.html#aa568ddc0acf2a648f2967a1bec34d54a">getPoint</a> (uint32_t id, SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">CloudPoint</a> &gt; &amp;point)=0</td></tr>
-<tr class="memdesc:aa568ddc0acf2a648f2967a1bec34d54a"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method allows to get a 3D point stored in the point cloud by its id.  <a href="#aa568ddc0acf2a648f2967a1bec34d54a">More...</a><br /></td></tr>
-<tr class="separator:aa568ddc0acf2a648f2967a1bec34d54a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1065a2c2067de9ee52c7da59e9c8b479"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1storage_1_1_i_point_cloud_manager.html#a1065a2c2067de9ee52c7da59e9c8b479">getPoints</a> (std::vector&lt; uint32_t &gt; &amp;ids, std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">CloudPoint</a> &gt;&gt; &amp;points)=0</td></tr>
-<tr class="memdesc:a1065a2c2067de9ee52c7da59e9c8b479"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method allows to get a set of 3D points stored in the point cloud by their ids.  <a href="#a1065a2c2067de9ee52c7da59e9c8b479">More...</a><br /></td></tr>
-<tr class="separator:a1065a2c2067de9ee52c7da59e9c8b479"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5dfccde21dbcca28eb7ce63d4603de4e"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1storage_1_1_i_point_cloud_manager.html#a5dfccde21dbcca28eb7ce63d4603de4e">getAllPoints</a> (std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">CloudPoint</a> &gt;&gt; &amp;points)=0</td></tr>
-<tr class="memdesc:a5dfccde21dbcca28eb7ce63d4603de4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method allows to get all 3D points stored in the point cloud.  <a href="#a5dfccde21dbcca28eb7ce63d4603de4e">More...</a><br /></td></tr>
-<tr class="separator:a5dfccde21dbcca28eb7ce63d4603de4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a67c9fb6c0ab4a85fc79a6eceb275b9a1"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1storage_1_1_i_point_cloud_manager.html#a67c9fb6c0ab4a85fc79a6eceb275b9a1">suppressPoint</a> (uint32_t id)=0</td></tr>
-<tr class="memdesc:a67c9fb6c0ab4a85fc79a6eceb275b9a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method allow to suppress a point stored in the point cloud by its id.  <a href="#a67c9fb6c0ab4a85fc79a6eceb275b9a1">More...</a><br /></td></tr>
-<tr class="separator:a67c9fb6c0ab4a85fc79a6eceb275b9a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a35a4a5c7622edd3bfdec851d326a68f3"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1storage_1_1_i_point_cloud_manager.html#a35a4a5c7622edd3bfdec851d326a68f3">suppressPoints</a> (std::vector&lt; uint32_t &gt; &amp;ids)=0</td></tr>
-<tr class="memdesc:a35a4a5c7622edd3bfdec851d326a68f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method allow to suppress a vector of points stored in the point cloud by their ids.  <a href="#a35a4a5c7622edd3bfdec851d326a68f3">More...</a><br /></td></tr>
-<tr class="separator:a35a4a5c7622edd3bfdec851d326a68f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a155629f479bb1114b15cdb0755cc1f5a"><td class="memItemLeft" align="right" valign="top">virtual DescriptorType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1storage_1_1_i_point_cloud_manager.html#a155629f479bb1114b15cdb0755cc1f5a">getDescriptorType</a> ()=0</td></tr>
-<tr class="memdesc:a155629f479bb1114b15cdb0755cc1f5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method allows to get the descriptor type used to extract descriptor for each cloud point.  <a href="#a155629f479bb1114b15cdb0755cc1f5a">More...</a><br /></td></tr>
-<tr class="separator:a155629f479bb1114b15cdb0755cc1f5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abf521c31f6dbb9d7efb183182bb69d7a"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1storage_1_1_i_point_cloud_manager.html#abf521c31f6dbb9d7efb183182bb69d7a">setDescriptorType</a> (DescriptorType type)=0</td></tr>
-<tr class="memdesc:abf521c31f6dbb9d7efb183182bb69d7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method allows to set the descriptor type used to extract descriptor for each cloud point.  <a href="#abf521c31f6dbb9d7efb183182bb69d7a">More...</a><br /></td></tr>
-<tr class="separator:abf521c31f6dbb9d7efb183182bb69d7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4b1e64a9d9d1effe9f0ea66df17afc68"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1storage_1_1_i_point_cloud_manager.html#a4b1e64a9d9d1effe9f0ea66df17afc68">isExistPoint</a> (uint32_t id)=0</td></tr>
-<tr class="memdesc:a4b1e64a9d9d1effe9f0ea66df17afc68"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method allows to know if a point is already stored in the component.  <a href="#a4b1e64a9d9d1effe9f0ea66df17afc68">More...</a><br /></td></tr>
-<tr class="separator:a4b1e64a9d9d1effe9f0ea66df17afc68"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a63eabc0e1706075806f872e59dc9512f"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1storage_1_1_i_point_cloud_manager.html#a63eabc0e1706075806f872e59dc9512f">getNbPoints</a> ()=0</td></tr>
-<tr class="memdesc:a63eabc0e1706075806f872e59dc9512f"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method allows to get the number of points stored in the point cloud.  <a href="#a63eabc0e1706075806f872e59dc9512f">More...</a><br /></td></tr>
-<tr class="separator:a63eabc0e1706075806f872e59dc9512f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4df19934472d79fa25690edb941bd47f"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1storage_1_1_i_point_cloud_manager.html#a4df19934472d79fa25690edb941bd47f">saveToFile</a> (std::string file)=0</td></tr>
-<tr class="memdesc:a4df19934472d79fa25690edb941bd47f"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method allows to save the point cloud to the external file.  <a href="#a4df19934472d79fa25690edb941bd47f">More...</a><br /></td></tr>
-<tr class="separator:a4df19934472d79fa25690edb941bd47f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a12f58cf38dc9e1a4dba2712ebd4ac100"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1storage_1_1_i_point_cloud_manager.html#a12f58cf38dc9e1a4dba2712ebd4ac100">loadFromFile</a> (std::string file)=0</td></tr>
-<tr class="memdesc:a12f58cf38dc9e1a4dba2712ebd4ac100"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method allows to load the point cloud from the external file.  <a href="#a12f58cf38dc9e1a4dba2712ebd4ac100">More...</a><br /></td></tr>
-<tr class="separator:a12f58cf38dc9e1a4dba2712ebd4ac100"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f2d532a7d2b5848b1dffae577fd435c"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1storage_1_1_i_point_cloud_manager.html#a4f2d532a7d2b5848b1dffae577fd435c">addPoint</a> (const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">datastructure::CloudPoint</a> &gt; point)=0</td></tr>
+<tr class="memdesc:a4f2d532a7d2b5848b1dffae577fd435c"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method allow to add a 3D point to the point cloud.  <a href="#a4f2d532a7d2b5848b1dffae577fd435c">More...</a><br /></td></tr>
+<tr class="separator:a4f2d532a7d2b5848b1dffae577fd435c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6eae89f67910671b9e7f1f9179ee129"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1storage_1_1_i_point_cloud_manager.html#aa6eae89f67910671b9e7f1f9179ee129">addPoints</a> (const std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">datastructure::CloudPoint</a> &gt;&gt; &amp;points)=0</td></tr>
+<tr class="memdesc:aa6eae89f67910671b9e7f1f9179ee129"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method allow to add a vector of 3D points to the point cloud.  <a href="#aa6eae89f67910671b9e7f1f9179ee129">More...</a><br /></td></tr>
+<tr class="separator:aa6eae89f67910671b9e7f1f9179ee129"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d3e1209a0dbfa23a7aed84fab57620c"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1storage_1_1_i_point_cloud_manager.html#a4d3e1209a0dbfa23a7aed84fab57620c">addPoint</a> (const <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">datastructure::CloudPoint</a> &amp;point)=0</td></tr>
+<tr class="memdesc:a4d3e1209a0dbfa23a7aed84fab57620c"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method allow to add a 3D point to the point cloud.  <a href="#a4d3e1209a0dbfa23a7aed84fab57620c">More...</a><br /></td></tr>
+<tr class="separator:a4d3e1209a0dbfa23a7aed84fab57620c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a514e85588ecc893eb0a085515c5b4404"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1storage_1_1_i_point_cloud_manager.html#a514e85588ecc893eb0a085515c5b4404">addPoints</a> (const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">datastructure::CloudPoint</a> &gt; &amp;points)=0</td></tr>
+<tr class="memdesc:a514e85588ecc893eb0a085515c5b4404"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method allow to add a vector of 3D points to the point cloud.  <a href="#a514e85588ecc893eb0a085515c5b4404">More...</a><br /></td></tr>
+<tr class="separator:a514e85588ecc893eb0a085515c5b4404"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b6f73f74800a7a9f358ccfd7560946d"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1storage_1_1_i_point_cloud_manager.html#a1b6f73f74800a7a9f358ccfd7560946d">getPoint</a> (const uint32_t id, SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">datastructure::CloudPoint</a> &gt; &amp;point) const =0</td></tr>
+<tr class="memdesc:a1b6f73f74800a7a9f358ccfd7560946d"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method allows to get a 3D point stored in the point cloud by its id.  <a href="#a1b6f73f74800a7a9f358ccfd7560946d">More...</a><br /></td></tr>
+<tr class="separator:a1b6f73f74800a7a9f358ccfd7560946d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26b99a82727bb73f8141d5b321e6eb70"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1storage_1_1_i_point_cloud_manager.html#a26b99a82727bb73f8141d5b321e6eb70">getPoints</a> (const std::vector&lt; uint32_t &gt; &amp;ids, std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">datastructure::CloudPoint</a> &gt;&gt; &amp;points) const =0</td></tr>
+<tr class="memdesc:a26b99a82727bb73f8141d5b321e6eb70"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method allows to get a set of 3D points stored in the point cloud by their ids.  <a href="#a26b99a82727bb73f8141d5b321e6eb70">More...</a><br /></td></tr>
+<tr class="separator:a26b99a82727bb73f8141d5b321e6eb70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf768f88af565f86022dce36f385043d"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1storage_1_1_i_point_cloud_manager.html#adf768f88af565f86022dce36f385043d">getAllPoints</a> (std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">datastructure::CloudPoint</a> &gt;&gt; &amp;points) const =0</td></tr>
+<tr class="memdesc:adf768f88af565f86022dce36f385043d"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method allows to get all 3D points stored in the point cloud.  <a href="#adf768f88af565f86022dce36f385043d">More...</a><br /></td></tr>
+<tr class="separator:adf768f88af565f86022dce36f385043d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0031b8e7d73dbf3bdf4b0ecc837cb8b"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1storage_1_1_i_point_cloud_manager.html#ac0031b8e7d73dbf3bdf4b0ecc837cb8b">suppressPoint</a> (const uint32_t id)=0</td></tr>
+<tr class="memdesc:ac0031b8e7d73dbf3bdf4b0ecc837cb8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method allow to suppress a point stored in the point cloud by its id.  <a href="#ac0031b8e7d73dbf3bdf4b0ecc837cb8b">More...</a><br /></td></tr>
+<tr class="separator:ac0031b8e7d73dbf3bdf4b0ecc837cb8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1dbdc06633406e33496441329b5593f4"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1storage_1_1_i_point_cloud_manager.html#a1dbdc06633406e33496441329b5593f4">suppressPoints</a> (const std::vector&lt; uint32_t &gt; &amp;ids)=0</td></tr>
+<tr class="memdesc:a1dbdc06633406e33496441329b5593f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method allow to suppress a vector of points stored in the point cloud by their ids.  <a href="#a1dbdc06633406e33496441329b5593f4">More...</a><br /></td></tr>
+<tr class="separator:a1dbdc06633406e33496441329b5593f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5675ff78cf57eb188fffe492e4b0c56"><td class="memItemLeft" align="right" valign="top">virtual datastructure::DescriptorType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1storage_1_1_i_point_cloud_manager.html#af5675ff78cf57eb188fffe492e4b0c56">getDescriptorType</a> () const =0</td></tr>
+<tr class="memdesc:af5675ff78cf57eb188fffe492e4b0c56"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method allows to get the descriptor type used to extract descriptor for each cloud point.  <a href="#af5675ff78cf57eb188fffe492e4b0c56">More...</a><br /></td></tr>
+<tr class="separator:af5675ff78cf57eb188fffe492e4b0c56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2876dbdbf6ed90cd4c5436111ed47ba"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1storage_1_1_i_point_cloud_manager.html#ad2876dbdbf6ed90cd4c5436111ed47ba">setDescriptorType</a> (const datastructure::DescriptorType &amp;type)=0</td></tr>
+<tr class="memdesc:ad2876dbdbf6ed90cd4c5436111ed47ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method allows to set the descriptor type used to extract descriptor for each cloud point.  <a href="#ad2876dbdbf6ed90cd4c5436111ed47ba">More...</a><br /></td></tr>
+<tr class="separator:ad2876dbdbf6ed90cd4c5436111ed47ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aadccdb56ce097e44101e962be6580f67"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1storage_1_1_i_point_cloud_manager.html#aadccdb56ce097e44101e962be6580f67">isExistPoint</a> (const uint32_t id) const =0</td></tr>
+<tr class="memdesc:aadccdb56ce097e44101e962be6580f67"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method allows to know if a point is already stored in the component.  <a href="#aadccdb56ce097e44101e962be6580f67">More...</a><br /></td></tr>
+<tr class="separator:aadccdb56ce097e44101e962be6580f67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cf78ebe297774387d1306f9b4091382"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1storage_1_1_i_point_cloud_manager.html#a2cf78ebe297774387d1306f9b4091382">getNbPoints</a> () const =0</td></tr>
+<tr class="memdesc:a2cf78ebe297774387d1306f9b4091382"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method allows to get the number of points stored in the point cloud.  <a href="#a2cf78ebe297774387d1306f9b4091382">More...</a><br /></td></tr>
+<tr class="separator:a2cf78ebe297774387d1306f9b4091382"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5daa69b7f23de837a687ed59ed3b5804"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1storage_1_1_i_point_cloud_manager.html#a5daa69b7f23de837a687ed59ed3b5804">saveToFile</a> (const std::string &amp;file) const =0</td></tr>
+<tr class="memdesc:a5daa69b7f23de837a687ed59ed3b5804"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method allows to save the point cloud to the external file.  <a href="#a5daa69b7f23de837a687ed59ed3b5804">More...</a><br /></td></tr>
+<tr class="separator:a5daa69b7f23de837a687ed59ed3b5804"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81a69eed757ac23f31014b2c71da995f"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1storage_1_1_i_point_cloud_manager.html#a81a69eed757ac23f31014b2c71da995f">loadFromFile</a> (const std::string &amp;file)=0</td></tr>
+<tr class="memdesc:a81a69eed757ac23f31014b2c71da995f"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method allows to load the point cloud from the external file.  <a href="#a81a69eed757ac23f31014b2c71da995f">More...</a><br /></td></tr>
+<tr class="separator:a81a69eed757ac23f31014b2c71da995f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Allows to store a point cloud. This storage component can be accessed by processing components to share persistent data. </p>
+<div class="textblock"><p>Allows to store a point cloud. This storage component can be accessed by processing components to share persistent data. <code>UUID: 264d4406-b726-4ce9-a430-35d8b5e70331</code> </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a2bb914ef458f105613714c4a712d23b6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2bb914ef458f105613714c4a712d23b6">&#9670;&nbsp;</a></span>addPoint() <span class="overload">[1/2]</span></h2>
+<a id="a4f2d532a7d2b5848b1dffae577fd435c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f2d532a7d2b5848b1dffae577fd435c">&#9670;&nbsp;</a></span>addPoint() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -166,7 +166,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
         <tr>
           <td class="memname">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a> SolAR::api::storage::IPointCloudManager::addPoint </td>
           <td>(</td>
-          <td class="paramtype">const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">CloudPoint</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">datastructure::CloudPoint</a> &gt;&#160;</td>
           <td class="paramname"><em>point</em></td><td>)</td>
           <td></td>
         </tr>
@@ -189,8 +189,8 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 
 </div>
 </div>
-<a id="a2893007691300b06ebb84318952dbdc5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2893007691300b06ebb84318952dbdc5">&#9670;&nbsp;</a></span>addPoint() <span class="overload">[2/2]</span></h2>
+<a id="a4d3e1209a0dbfa23a7aed84fab57620c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d3e1209a0dbfa23a7aed84fab57620c">&#9670;&nbsp;</a></span>addPoint() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -201,7 +201,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
         <tr>
           <td class="memname">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a> SolAR::api::storage::IPointCloudManager::addPoint </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">CloudPoint</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">datastructure::CloudPoint</a> &amp;&#160;</td>
           <td class="paramname"><em>point</em></td><td>)</td>
           <td></td>
         </tr>
@@ -224,8 +224,8 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 
 </div>
 </div>
-<a id="ab5d94aefb22e3ca6e0ec5cdd985c6e77"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab5d94aefb22e3ca6e0ec5cdd985c6e77">&#9670;&nbsp;</a></span>addPoints() <span class="overload">[1/2]</span></h2>
+<a id="aa6eae89f67910671b9e7f1f9179ee129"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6eae89f67910671b9e7f1f9179ee129">&#9670;&nbsp;</a></span>addPoints() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -236,7 +236,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
         <tr>
           <td class="memname">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a> SolAR::api::storage::IPointCloudManager::addPoints </td>
           <td>(</td>
-          <td class="paramtype">const std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">CloudPoint</a> &gt;&gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">datastructure::CloudPoint</a> &gt;&gt; &amp;&#160;</td>
           <td class="paramname"><em>points</em></td><td>)</td>
           <td></td>
         </tr>
@@ -251,7 +251,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <p>This method allow to add a vector of 3D points to the point cloud. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">a</td><td>vector of the 3D points to add to the persistent point cloud </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">points</td><td>a vector of the 3D points to add to the persistent point cloud </td></tr>
   </table>
   </dd>
 </dl>
@@ -259,8 +259,8 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 
 </div>
 </div>
-<a id="a7f0c75454b6b3e8e1c6666e1785d7651"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7f0c75454b6b3e8e1c6666e1785d7651">&#9670;&nbsp;</a></span>addPoints() <span class="overload">[2/2]</span></h2>
+<a id="a514e85588ecc893eb0a085515c5b4404"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a514e85588ecc893eb0a085515c5b4404">&#9670;&nbsp;</a></span>addPoints() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -271,7 +271,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
         <tr>
           <td class="memname">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a> SolAR::api::storage::IPointCloudManager::addPoints </td>
           <td>(</td>
-          <td class="paramtype">const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">CloudPoint</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">datastructure::CloudPoint</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>points</em></td><td>)</td>
           <td></td>
         </tr>
@@ -286,7 +286,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <p>This method allow to add a vector of 3D points to the point cloud. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">a</td><td>vector of the 3D points to add to the persistent point cloud </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">points</td><td>a vector of the 3D points to add to the persistent point cloud </td></tr>
   </table>
   </dd>
 </dl>
@@ -294,8 +294,8 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 
 </div>
 </div>
-<a id="a5dfccde21dbcca28eb7ce63d4603de4e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5dfccde21dbcca28eb7ce63d4603de4e">&#9670;&nbsp;</a></span>getAllPoints()</h2>
+<a id="adf768f88af565f86022dce36f385043d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf768f88af565f86022dce36f385043d">&#9670;&nbsp;</a></span>getAllPoints()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -306,9 +306,9 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
         <tr>
           <td class="memname">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a> SolAR::api::storage::IPointCloudManager::getAllPoints </td>
           <td>(</td>
-          <td class="paramtype">std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">CloudPoint</a> &gt;&gt; &amp;&#160;</td>
+          <td class="paramtype">std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">datastructure::CloudPoint</a> &gt;&gt; &amp;&#160;</td>
           <td class="paramname"><em>points</em></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -321,7 +321,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <p>This method allows to get all 3D points stored in the point cloud. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[out]</td><td class="paramname">the</td><td>set of 3D point stored in the point cloud </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">points</td><td>the set of 3D point stored in the point cloud </td></tr>
   </table>
   </dd>
 </dl>
@@ -329,8 +329,8 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 
 </div>
 </div>
-<a id="a155629f479bb1114b15cdb0755cc1f5a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a155629f479bb1114b15cdb0755cc1f5a">&#9670;&nbsp;</a></span>getDescriptorType()</h2>
+<a id="af5675ff78cf57eb188fffe492e4b0c56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5675ff78cf57eb188fffe492e4b0c56">&#9670;&nbsp;</a></span>getDescriptorType()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -339,10 +339,10 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual DescriptorType SolAR::api::storage::IPointCloudManager::getDescriptorType </td>
+          <td class="memname">virtual datastructure::DescriptorType SolAR::api::storage::IPointCloudManager::getDescriptorType </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -357,8 +357,8 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 
 </div>
 </div>
-<a id="a63eabc0e1706075806f872e59dc9512f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a63eabc0e1706075806f872e59dc9512f">&#9670;&nbsp;</a></span>getNbPoints()</h2>
+<a id="a2cf78ebe297774387d1306f9b4091382"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cf78ebe297774387d1306f9b4091382">&#9670;&nbsp;</a></span>getNbPoints()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -370,7 +370,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
           <td class="memname">virtual int SolAR::api::storage::IPointCloudManager::getNbPoints </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -385,8 +385,8 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 
 </div>
 </div>
-<a id="aa568ddc0acf2a648f2967a1bec34d54a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa568ddc0acf2a648f2967a1bec34d54a">&#9670;&nbsp;</a></span>getPoint()</h2>
+<a id="a1b6f73f74800a7a9f358ccfd7560946d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b6f73f74800a7a9f358ccfd7560946d">&#9670;&nbsp;</a></span>getPoint()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -397,19 +397,19 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
         <tr>
           <td class="memname">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a> SolAR::api::storage::IPointCloudManager::getPoint </td>
           <td>(</td>
-          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramtype">const uint32_t&#160;</td>
           <td class="paramname"><em>id</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">CloudPoint</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">datastructure::CloudPoint</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>point</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td></td>
+          <td></td><td> const</td>
         </tr>
       </table>
   </td>
@@ -422,8 +422,8 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <p>This method allows to get a 3D point stored in the point cloud by its id. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">id</td><td>of the point to get </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">a</td><td>3D point stored in the point cloud </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">id</td><td>id of the point to get </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">point</td><td>a 3D point stored in the point cloud </td></tr>
   </table>
   </dd>
 </dl>
@@ -431,8 +431,8 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 
 </div>
 </div>
-<a id="a1065a2c2067de9ee52c7da59e9c8b479"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1065a2c2067de9ee52c7da59e9c8b479">&#9670;&nbsp;</a></span>getPoints()</h2>
+<a id="a26b99a82727bb73f8141d5b321e6eb70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26b99a82727bb73f8141d5b321e6eb70">&#9670;&nbsp;</a></span>getPoints()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -443,19 +443,19 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
         <tr>
           <td class="memname">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a> SolAR::api::storage::IPointCloudManager::getPoints </td>
           <td>(</td>
-          <td class="paramtype">std::vector&lt; uint32_t &gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; uint32_t &gt; &amp;&#160;</td>
           <td class="paramname"><em>ids</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">CloudPoint</a> &gt;&gt; &amp;&#160;</td>
+          <td class="paramtype">std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">datastructure::CloudPoint</a> &gt;&gt; &amp;&#160;</td>
           <td class="paramname"><em>points</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td></td>
+          <td></td><td> const</td>
         </tr>
       </table>
   </td>
@@ -468,8 +468,8 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <p>This method allows to get a set of 3D points stored in the point cloud by their ids. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">a</td><td>vector of ids of the points to get </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">a</td><td>vector of 3D points stored in the point cloud </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ids</td><td>a vector of ids of the points to get </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">points</td><td>a vector of 3D points stored in the point cloud </td></tr>
   </table>
   </dd>
 </dl>
@@ -477,8 +477,8 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 
 </div>
 </div>
-<a id="a4b1e64a9d9d1effe9f0ea66df17afc68"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4b1e64a9d9d1effe9f0ea66df17afc68">&#9670;&nbsp;</a></span>isExistPoint()</h2>
+<a id="aadccdb56ce097e44101e962be6580f67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aadccdb56ce097e44101e962be6580f67">&#9670;&nbsp;</a></span>isExistPoint()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -489,9 +489,9 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
         <tr>
           <td class="memname">virtual bool SolAR::api::storage::IPointCloudManager::isExistPoint </td>
           <td>(</td>
-          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramtype">const uint32_t&#160;</td>
           <td class="paramname"><em>id</em></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -504,7 +504,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <p>This method allows to know if a point is already stored in the component. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">Id</td><td>of this point </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">id</td><td>id of this point </td></tr>
   </table>
   </dd>
 </dl>
@@ -512,8 +512,8 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 
 </div>
 </div>
-<a id="a12f58cf38dc9e1a4dba2712ebd4ac100"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a12f58cf38dc9e1a4dba2712ebd4ac100">&#9670;&nbsp;</a></span>loadFromFile()</h2>
+<a id="a81a69eed757ac23f31014b2c71da995f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81a69eed757ac23f31014b2c71da995f">&#9670;&nbsp;</a></span>loadFromFile()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -524,7 +524,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
         <tr>
           <td class="memname">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a> SolAR::api::storage::IPointCloudManager::loadFromFile </td>
           <td>(</td>
-          <td class="paramtype">std::string&#160;</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>file</em></td><td>)</td>
           <td></td>
         </tr>
@@ -539,7 +539,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <p>This method allows to load the point cloud from the external file. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">the</td><td>file name </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">file</td><td>the file name </td></tr>
   </table>
   </dd>
 </dl>
@@ -547,8 +547,8 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 
 </div>
 </div>
-<a id="a4df19934472d79fa25690edb941bd47f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4df19934472d79fa25690edb941bd47f">&#9670;&nbsp;</a></span>saveToFile()</h2>
+<a id="a5daa69b7f23de837a687ed59ed3b5804"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5daa69b7f23de837a687ed59ed3b5804">&#9670;&nbsp;</a></span>saveToFile()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -559,9 +559,9 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
         <tr>
           <td class="memname">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a> SolAR::api::storage::IPointCloudManager::saveToFile </td>
           <td>(</td>
-          <td class="paramtype">std::string&#160;</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>file</em></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -574,7 +574,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <p>This method allows to save the point cloud to the external file. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[out]</td><td class="paramname">the</td><td>file name </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">file</td><td>the file name </td></tr>
   </table>
   </dd>
 </dl>
@@ -582,8 +582,8 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 
 </div>
 </div>
-<a id="abf521c31f6dbb9d7efb183182bb69d7a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abf521c31f6dbb9d7efb183182bb69d7a">&#9670;&nbsp;</a></span>setDescriptorType()</h2>
+<a id="ad2876dbdbf6ed90cd4c5436111ed47ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2876dbdbf6ed90cd4c5436111ed47ba">&#9670;&nbsp;</a></span>setDescriptorType()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -594,7 +594,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
         <tr>
           <td class="memname">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a> SolAR::api::storage::IPointCloudManager::setDescriptorType </td>
           <td>(</td>
-          <td class="paramtype">DescriptorType&#160;</td>
+          <td class="paramtype">const datastructure::DescriptorType &amp;&#160;</td>
           <td class="paramname"><em>type</em></td><td>)</td>
           <td></td>
         </tr>
@@ -607,12 +607,18 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 </div><div class="memdoc">
 
 <p>This method allows to set the descriptor type used to extract descriptor for each cloud point. </p>
-<dl class="section return"><dt>Returns</dt><dd>Descriptor type </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">type</td><td>Descriptor type </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>FrameworkReturnCode::<em>SUCCESS</em> if the suppression succeed, else FrameworkReturnCode::_ERROR. </dd></dl>
 
 </div>
 </div>
-<a id="a67c9fb6c0ab4a85fc79a6eceb275b9a1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a67c9fb6c0ab4a85fc79a6eceb275b9a1">&#9670;&nbsp;</a></span>suppressPoint()</h2>
+<a id="ac0031b8e7d73dbf3bdf4b0ecc837cb8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0031b8e7d73dbf3bdf4b0ecc837cb8b">&#9670;&nbsp;</a></span>suppressPoint()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -623,7 +629,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
         <tr>
           <td class="memname">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a> SolAR::api::storage::IPointCloudManager::suppressPoint </td>
           <td>(</td>
-          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramtype">const uint32_t&#160;</td>
           <td class="paramname"><em>id</em></td><td>)</td>
           <td></td>
         </tr>
@@ -646,8 +652,8 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 
 </div>
 </div>
-<a id="a35a4a5c7622edd3bfdec851d326a68f3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a35a4a5c7622edd3bfdec851d326a68f3">&#9670;&nbsp;</a></span>suppressPoints()</h2>
+<a id="a1dbdc06633406e33496441329b5593f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1dbdc06633406e33496441329b5593f4">&#9670;&nbsp;</a></span>suppressPoints()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -658,7 +664,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
         <tr>
           <td class="memname">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a> SolAR::api::storage::IPointCloudManager::suppressPoints </td>
           <td>(</td>
-          <td class="paramtype">std::vector&lt; uint32_t &gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; uint32_t &gt; &amp;&#160;</td>
           <td class="paramname"><em>ids</em></td><td>)</td>
           <td></td>
         </tr>
@@ -673,7 +679,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <p>This method allow to suppress a vector of points stored in the point cloud by their ids. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">the</td><td>vector of ids of the point to suppress </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ids</td><td>the vector of ids of the point to suppress </td></tr>
   </table>
   </dd>
 </dl>

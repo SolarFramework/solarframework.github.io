@@ -97,19 +97,26 @@ Collaboration diagram for SolAR::api::solver::map::IBundler:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ac4eeb419de2227a95848e1fe9e22eb5f"><td class="memItemLeft" align="right" valign="top"><a id="ac4eeb419de2227a95848e1fe9e22eb5f"></a>
-virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1map_1_1_i_bundler.html#ac4eeb419de2227a95848e1fe9e22eb5f">~IBundler</a> ()</td></tr>
-<tr class="memdesc:ac4eeb419de2227a95848e1fe9e22eb5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">~IBundler <br /></td></tr>
-<tr class="separator:ac4eeb419de2227a95848e1fe9e22eb5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a949ae69145aad9a5854ada4ffdf76bc7"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1map_1_1_i_bundler.html#a949ae69145aad9a5854ada4ffdf76bc7">bundleAdjustment</a> (<a class="el" href="_camera_definitions_8h.html#a0ea650513b55059459f5d5771c5bf5cb">CamCalibration</a> &amp;K, <a class="el" href="_camera_definitions_8h.html#ad85d877532df3da45a970d47735e34bc">CamDistortion</a> &amp;D, const std::vector&lt; uint32_t &gt; &amp;selectKeyframes={})=0</td></tr>
-<tr class="memdesc:a949ae69145aad9a5854ada4ffdf76bc7"><td class="mdescLeft">&#160;</td><td class="mdescRight">solve a non-linear problem related to bundle adjustement statement expressed as: minArg(pts3ds,intrinsics,extrinsics) = MIN_cam_i(MIN_3d_j(pts2d_j - reproje(pt3ds_j,intrinsics_i,extrinsics_i)),  <a href="#a949ae69145aad9a5854ada4ffdf76bc7">More...</a><br /></td></tr>
-<tr class="separator:a949ae69145aad9a5854ada4ffdf76bc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5121b36ab5bff14b22360add6fc2ea5"><td class="memItemLeft" align="right" valign="top"><a id="ae5121b36ab5bff14b22360add6fc2ea5"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1map_1_1_i_bundler.html#ae5121b36ab5bff14b22360add6fc2ea5">IBundler</a> ()=default</td></tr>
+<tr class="memdesc:ae5121b36ab5bff14b22360add6fc2ea5"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1map_1_1_i_bundler.html" title="Optimizes a system of 3D points and keyframes. UUID: 35b9bdb7-d23c-4909-984f-ae7f9a292e6c ...">IBundler</a> default constructor. <br /></td></tr>
+<tr class="separator:ae5121b36ab5bff14b22360add6fc2ea5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b4fde5e9a9b867e4c77dd16b5a36065"><td class="memItemLeft" align="right" valign="top"><a id="a4b4fde5e9a9b867e4c77dd16b5a36065"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1map_1_1_i_bundler.html#a4b4fde5e9a9b867e4c77dd16b5a36065">~IBundler</a> ()=default</td></tr>
+<tr class="memdesc:a4b4fde5e9a9b867e4c77dd16b5a36065"><td class="mdescLeft">&#160;</td><td class="mdescRight">~IBundler default destructor <br /></td></tr>
+<tr class="separator:a4b4fde5e9a9b867e4c77dd16b5a36065"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af847f008a2f899fc741255e0f0b7952a"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1map_1_1_i_bundler.html#af847f008a2f899fc741255e0f0b7952a">setMapper</a> (const SRef&lt; <a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1map_1_1_i_mapper.html">IMapper</a> &gt; map)=0</td></tr>
+<tr class="memdesc:af847f008a2f899fc741255e0f0b7952a"><td class="mdescLeft">&#160;</td><td class="mdescRight">set mapper reference to optimize  <a href="#af847f008a2f899fc741255e0f0b7952a">More...</a><br /></td></tr>
+<tr class="separator:af847f008a2f899fc741255e0f0b7952a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b1d102f02483125b7bbbbebc997a86d"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1map_1_1_i_bundler.html#a8b1d102f02483125b7bbbbebc997a86d">bundleAdjustment</a> (<a class="el" href="_camera_definitions_8h.html#a0ea650513b55059459f5d5771c5bf5cb">datastructure::CamCalibration</a> &amp;K, <a class="el" href="_camera_definitions_8h.html#ad85d877532df3da45a970d47735e34bc">datastructure::CamDistortion</a> &amp;D, const std::vector&lt; uint32_t &gt; &amp;selectKeyframes={})=0</td></tr>
+<tr class="memdesc:a8b1d102f02483125b7bbbbebc997a86d"><td class="mdescLeft">&#160;</td><td class="mdescRight">solve a non-linear problem related to bundle adjustement statement expressed as: minArg(pts3ds,intrinsics,extrinsics) = MIN_cam_i(MIN_3d_j(pts2d_j - reproje(pt3ds_j,intrinsics_i,extrinsics_i)),  <a href="#a8b1d102f02483125b7bbbbebc997a86d">More...</a><br /></td></tr>
+<tr class="separator:a8b1d102f02483125b7bbbbebc997a86d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><b>Optimizes a system of 3D points and keyframes.</b> <code>UUID: 35b9bdb7-d23c-4909-984f-ae7f9a292e6c</code> </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a949ae69145aad9a5854ada4ffdf76bc7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a949ae69145aad9a5854ada4ffdf76bc7">&#9670;&nbsp;</a></span>bundleAdjustment()</h2>
+<a id="a8b1d102f02483125b7bbbbebc997a86d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b1d102f02483125b7bbbbebc997a86d">&#9670;&nbsp;</a></span>bundleAdjustment()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -120,13 +127,13 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
         <tr>
           <td class="memname">virtual double SolAR::api::solver::map::IBundler::bundleAdjustment </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="_camera_definitions_8h.html#a0ea650513b55059459f5d5771c5bf5cb">CamCalibration</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="_camera_definitions_8h.html#a0ea650513b55059459f5d5771c5bf5cb">datastructure::CamCalibration</a> &amp;&#160;</td>
           <td class="paramname"><em>K</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="_camera_definitions_8h.html#ad85d877532df3da45a970d47735e34bc">CamDistortion</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="_camera_definitions_8h.html#ad85d877532df3da45a970d47735e34bc">datastructure::CamDistortion</a> &amp;&#160;</td>
           <td class="paramname"><em>D</em>, </td>
         </tr>
         <tr>
@@ -153,11 +160,46 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
   <table class="params">
     <tr><td class="paramdir">[in,out]</td><td class="paramname">K</td><td>camera calibration parameters responsible of 3D points generation. </td></tr>
     <tr><td class="paramdir">[in,out]</td><td class="paramname">D</td><td>camera distorsion parameters responsible of 3D points generation </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">selectKeyframes</td><td>: selected views to bundle following a given strategies. If it is empty then take all keyframes into account to perform global bundle adjustment. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">selectKeyframes</td><td>selected views to bundle following a given strategies. If it is empty then take all keyframes into account to perform global bundle adjustment. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the mean re-projection error after optimization. </dd></dl>
+
+</div>
+</div>
+<a id="af847f008a2f899fc741255e0f0b7952a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af847f008a2f899fc741255e0f0b7952a">&#9670;&nbsp;</a></span>setMapper()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a> SolAR::api::solver::map::IBundler::setMapper </td>
+          <td>(</td>
+          <td class="paramtype">const SRef&lt; <a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1map_1_1_i_mapper.html">IMapper</a> &gt;&#160;</td>
+          <td class="paramname"><em>map</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>set mapper reference to optimize </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">map</td><td>the input map. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>FrameworkReturnCode::<em>SUCCESS</em> if the map is set, else FrameworkReturnCode::_ERROR. </dd></dl>
 
 </div>
 </div>

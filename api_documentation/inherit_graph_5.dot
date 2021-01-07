@@ -3,5 +3,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node0 [label="SolAR::datastructure\l::BufferInternal",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_sol_a_r_1_1datastructure_1_1_buffer_internal.html",tooltip="A Buffer used to store any data such as descriptors. "];
+  Node0 [label="SolAR::api::solver\l::pose::Transform2DFinder",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_sol_a_r_1_1api_1_1solver_1_1pose_1_1_transform2_d_finder.html"];
 }

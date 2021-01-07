@@ -105,18 +105,21 @@ Public Member Functions</h2></td></tr>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1geom_1_1_i3_d_transform.html#a1f16841d43164a2d65f5291afa501c47">~I3DTransform</a> ()=default</td></tr>
 <tr class="memdesc:a1f16841d43164a2d65f5291afa501c47"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sol_a_r_1_1api_1_1geom_1_1_i3_d_transform.html" title="Applies a 3D transformation (e.g. an affine transformation) to a set of 3D points. UUID: 9c1052b2-46c0-467b-8363-36f19b6b445f ">I3DTransform</a> default destructor. <br /></td></tr>
 <tr class="separator:a1f16841d43164a2d65f5291afa501c47"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5dd2856dc826b037a97e5cb26fdb070b"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1geom_1_1_i3_d_transform.html#a5dd2856dc826b037a97e5cb26fdb070b">transform</a> (const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point3_df.html">Point3Df</a> &gt; &amp;inputPoints, const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a> &amp;transformation, std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point3_df.html">Point3Df</a> &gt; &amp;outputPoints)=0</td></tr>
-<tr class="memdesc:a5dd2856dc826b037a97e5cb26fdb070b"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method applies a transformation (4x4 float matrix) to a set of 3D points.  <a href="#a5dd2856dc826b037a97e5cb26fdb070b">More...</a><br /></td></tr>
-<tr class="separator:a5dd2856dc826b037a97e5cb26fdb070b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a64c76b306cd9bdd4eb0827178296f54f"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1geom_1_1_i3_d_transform.html#a64c76b306cd9bdd4eb0827178296f54f">transformInPlace</a> (SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point_cloud.html">PointCloud</a> &gt; inputPointCloud, const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a> transformation) const =0</td></tr>
-<tr class="memdesc:a64c76b306cd9bdd4eb0827178296f54f"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method applies a transformation (4x4 float matrix) to a point cloud.  <a href="#a64c76b306cd9bdd4eb0827178296f54f">More...</a><br /></td></tr>
-<tr class="separator:a64c76b306cd9bdd4eb0827178296f54f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae661722cc9d138e19ca17deacb724695"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1geom_1_1_i3_d_transform.html#ae661722cc9d138e19ca17deacb724695">transform</a> (const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point3_df.html">datastructure::Point3Df</a> &gt; &amp;inputPoints, const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">datastructure::Transform3Df</a> &amp;transformation, std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point3_df.html">datastructure::Point3Df</a> &gt; &amp;outputPoints)=0</td></tr>
+<tr class="memdesc:ae661722cc9d138e19ca17deacb724695"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method applies a transformation (4x4 float matrix) to a set of 3D points.  <a href="#ae661722cc9d138e19ca17deacb724695">More...</a><br /></td></tr>
+<tr class="separator:ae661722cc9d138e19ca17deacb724695"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b8de40299c821351c245f65dc5561f8"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1geom_1_1_i3_d_transform.html#a7b8de40299c821351c245f65dc5561f8">transform</a> (const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">datastructure::Transform3Df</a> &amp;transformation, SRef&lt; <a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1map_1_1_i_mapper.html">api::solver::map::IMapper</a> &gt; map)=0</td></tr>
+<tr class="memdesc:a7b8de40299c821351c245f65dc5561f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method applies a transformation (4x4 float matrix) to a map including point cloud and keyframes.  <a href="#a7b8de40299c821351c245f65dc5561f8">More...</a><br /></td></tr>
+<tr class="separator:a7b8de40299c821351c245f65dc5561f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69e0af5a6bcd07483abe903b8f9da5f4"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1geom_1_1_i3_d_transform.html#a69e0af5a6bcd07483abe903b8f9da5f4">transformInPlace</a> (SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point_cloud.html">datastructure::PointCloud</a> &gt; inputPointCloud, const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">datastructure::Transform3Df</a> transformation) const =0</td></tr>
+<tr class="memdesc:a69e0af5a6bcd07483abe903b8f9da5f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method applies a transformation (4x4 float matrix) to a point cloud.  <a href="#a69e0af5a6bcd07483abe903b8f9da5f4">More...</a><br /></td></tr>
+<tr class="separator:a69e0af5a6bcd07483abe903b8f9da5f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><b>Applies a 3D transformation (e.g. an affine transformation) to a set of 3D points.</b> <code>UUID: 9c1052b2-46c0-467b-8363-36f19b6b445f</code> </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a5dd2856dc826b037a97e5cb26fdb070b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5dd2856dc826b037a97e5cb26fdb070b">&#9670;&nbsp;</a></span>transform()</h2>
+<a id="ae661722cc9d138e19ca17deacb724695"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae661722cc9d138e19ca17deacb724695">&#9670;&nbsp;</a></span>transform() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -127,19 +130,19 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
         <tr>
           <td class="memname">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a> SolAR::api::geom::I3DTransform::transform </td>
           <td>(</td>
-          <td class="paramtype">const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point3_df.html">Point3Df</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point3_df.html">datastructure::Point3Df</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>inputPoints</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">datastructure::Transform3Df</a> &amp;&#160;</td>
           <td class="paramname"><em>transformation</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point3_df.html">Point3Df</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point3_df.html">datastructure::Point3Df</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>outputPoints</em>&#160;</td>
         </tr>
         <tr>
@@ -168,8 +171,54 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 
 </div>
 </div>
-<a id="a64c76b306cd9bdd4eb0827178296f54f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a64c76b306cd9bdd4eb0827178296f54f">&#9670;&nbsp;</a></span>transformInPlace()</h2>
+<a id="a7b8de40299c821351c245f65dc5561f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b8de40299c821351c245f65dc5561f8">&#9670;&nbsp;</a></span>transform() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a> SolAR::api::geom::I3DTransform::transform </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">datastructure::Transform3Df</a> &amp;&#160;</td>
+          <td class="paramname"><em>transformation</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SRef&lt; <a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1map_1_1_i_mapper.html">api::solver::map::IMapper</a> &gt;&#160;</td>
+          <td class="paramname"><em>map</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>This method applies a transformation (4x4 float matrix) to a map including point cloud and keyframes. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">transformation</td><td>transformation the 3D transformation to apply (a 4x4 float matrix) </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">map</td><td>the map to apply the transformation </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>FrameworkReturnCode::<em>SUCCESS</em> if 3D transformation succeed, else FrameworkReturnCode::_ERROR. </dd></dl>
+
+</div>
+</div>
+<a id="a69e0af5a6bcd07483abe903b8f9da5f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69e0af5a6bcd07483abe903b8f9da5f4">&#9670;&nbsp;</a></span>transformInPlace()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -180,13 +229,13 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
         <tr>
           <td class="memname">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a> SolAR::api::geom::I3DTransform::transformInPlace </td>
           <td>(</td>
-          <td class="paramtype">SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point_cloud.html">PointCloud</a> &gt;&#160;</td>
+          <td class="paramtype">SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point_cloud.html">datastructure::PointCloud</a> &gt;&#160;</td>
           <td class="paramname"><em>inputPointCloud</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">datastructure::Transform3Df</a>&#160;</td>
           <td class="paramname"><em>transformation</em>&#160;</td>
         </tr>
         <tr>

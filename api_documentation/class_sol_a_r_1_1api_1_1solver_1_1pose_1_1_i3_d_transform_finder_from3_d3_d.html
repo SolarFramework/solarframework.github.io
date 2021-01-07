@@ -105,15 +105,15 @@ Public Member Functions</h2></td></tr>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1pose_1_1_i3_d_transform_finder_from3_d3_d.html#a300a66d0f32fba9aeb422e3a8ccc23c8">~I3DTransformFinderFrom3D3D</a> ()=default</td></tr>
 <tr class="memdesc:a300a66d0f32fba9aeb422e3a8ccc23c8"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1pose_1_1_i3_d_transform_finder_from3_d3_d.html" title="Finds the 3D transform of a depth sensor from a point cloud captured by this sensor and a point cloud...">I3DTransformFinderFrom3D3D</a> default destructor. <br /></td></tr>
 <tr class="separator:a300a66d0f32fba9aeb422e3a8ccc23c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7f371f3bbd06685d6fa19f35585f618b"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1pose_1_1_i3_d_transform_finder_from3_d3_d.html#a7f371f3bbd06685d6fa19f35585f618b">estimate</a> (const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point_cloud.html">PointCloud</a> &gt; sourcePointCloud, const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point_cloud.html">PointCloud</a> &gt; targetPointCloud, <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a> &amp;pose, const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a> &amp;initialPose=Transform3Df::Identity())=0</td></tr>
-<tr class="memdesc:a7f371f3bbd06685d6fa19f35585f618b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Estimates depth sensor pose from a set of 3D points captured by the depth sensor and defined in the depth sensor coordinate and a point cloud representing the real world geometry.  <a href="#a7f371f3bbd06685d6fa19f35585f618b">More...</a><br /></td></tr>
-<tr class="separator:a7f371f3bbd06685d6fa19f35585f618b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6ed7882dfb768e8d1dbfa89d61ffa2e"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1pose_1_1_i3_d_transform_finder_from3_d3_d.html#af6ed7882dfb768e8d1dbfa89d61ffa2e">estimate</a> (const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point_cloud.html">datastructure::PointCloud</a> &gt; sourcePointCloud, const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point_cloud.html">datastructure::PointCloud</a> &gt; targetPointCloud, <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">datastructure::Transform3Df</a> &amp;pose, const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">datastructure::Transform3Df</a> &amp;initialPose=datastructure::Transform3Df::Identity())=0</td></tr>
+<tr class="memdesc:af6ed7882dfb768e8d1dbfa89d61ffa2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Estimates depth sensor pose from a set of 3D points captured by the depth sensor and defined in the depth sensor coordinate and a point cloud representing the real world geometry.  <a href="#af6ed7882dfb768e8d1dbfa89d61ffa2e">More...</a><br /></td></tr>
+<tr class="separator:af6ed7882dfb768e8d1dbfa89d61ffa2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Finds the 3D transform of a depth sensor from a point cloud captured by this sensor and a point cloud representing a geometric knowledge of the real world. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a7f371f3bbd06685d6fa19f35585f618b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7f371f3bbd06685d6fa19f35585f618b">&#9670;&nbsp;</a></span>estimate()</h2>
+<a id="af6ed7882dfb768e8d1dbfa89d61ffa2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6ed7882dfb768e8d1dbfa89d61ffa2e">&#9670;&nbsp;</a></span>estimate()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -124,26 +124,26 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
         <tr>
           <td class="memname">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a> SolAR::api::solver::pose::I3DTransformFinderFrom3D3D::estimate </td>
           <td>(</td>
-          <td class="paramtype">const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point_cloud.html">PointCloud</a> &gt;&#160;</td>
+          <td class="paramtype">const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point_cloud.html">datastructure::PointCloud</a> &gt;&#160;</td>
           <td class="paramname"><em>sourcePointCloud</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point_cloud.html">PointCloud</a> &gt;&#160;</td>
+          <td class="paramtype">const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point_cloud.html">datastructure::PointCloud</a> &gt;&#160;</td>
           <td class="paramname"><em>targetPointCloud</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">datastructure::Transform3Df</a> &amp;&#160;</td>
           <td class="paramname"><em>pose</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a> &amp;&#160;</td>
-          <td class="paramname"><em>initialPose</em> = <code>Transform3Df::Identity()</code>&#160;</td>
+          <td class="paramtype">const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">datastructure::Transform3Df</a> &amp;&#160;</td>
+          <td class="paramname"><em>initialPose</em> = <code>datastructure::Transform3Df::Identity()</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -161,13 +161,14 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <p>Estimates depth sensor pose from a set of 3D points captured by the depth sensor and defined in the depth sensor coordinate and a point cloud representing the real world geometry. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">sourcePointCloud,a</td><td>point cloud captured by the depth sensor defined in the depth sensor coordinate system. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">targetPointCloud,a</td><td>point cloud representing the geometry of the real world. </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">pose,depth</td><td>camera pose (pose of the depth camera defined in world coordinate system) expressed as a Transform3D. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">initialPose</td><td>(Optional), a transform3D to initialize the pose (reducing the convergence time and improving its success). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">sourcePointCloud</td><td>a point cloud captured by the depth sensor defined in the depth sensor coordinate system. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">targetPointCloud</td><td>a point cloud representing the geometry of the real world. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">pose</td><td>depth camera pose (pose of the depth camera defined in world coordinate system) expressed as a Transform3D. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">initialPose</td><td>(Optional) a transform3D to initialize the pose (reducing the convergence time and improving its success). </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>FrameworkReturnCode::<em>SUCCESS if succeed, else FrameworkReturnCode::_ERROR</em> </dd></dl>
 
 </div>
 </div>

@@ -105,21 +105,21 @@ Public Member Functions</h2></td></tr>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1pose_1_1_i3_d_transform_finder_from2_d2_d.html#afffc6fece255e0b82a3e843cd9ce541e">~I3DTransformFinderFrom2D2D</a> ()=default</td></tr>
 <tr class="memdesc:afffc6fece255e0b82a3e843cd9ce541e"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1pose_1_1_i3_d_transform_finder_from2_d2_d.html" title="Finds the 3D transform between two cameras knowing the keypoints that match between them...">I3DTransformFinderFrom2D2D</a> default destructor. <br /></td></tr>
 <tr class="separator:afffc6fece255e0b82a3e843cd9ce541e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6c157c37885952ddaa9f0da56cb1fd5b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1pose_1_1_i3_d_transform_finder_from2_d2_d.html#a6c157c37885952ddaa9f0da56cb1fd5b">setCameraParameters</a> (const <a class="el" href="_camera_definitions_8h.html#a0ea650513b55059459f5d5771c5bf5cb">CamCalibration</a> &amp;intrinsicParams, const <a class="el" href="_camera_definitions_8h.html#ad85d877532df3da45a970d47735e34bc">CamDistortion</a> &amp;distorsionParams)=0</td></tr>
-<tr class="memdesc:a6c157c37885952ddaa9f0da56cb1fd5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">this method is used to set intrinsic parameters and distorsion of the camera  <a href="#a6c157c37885952ddaa9f0da56cb1fd5b">More...</a><br /></td></tr>
-<tr class="separator:a6c157c37885952ddaa9f0da56cb1fd5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a244f22c3aa1d907c0cf89254358fb21e"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1pose_1_1_i3_d_transform_finder_from2_d2_d.html#a244f22c3aa1d907c0cf89254358fb21e">estimate</a> (const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point2_df.html">Point2Df</a> &gt; &amp;pointsView1, const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point2_df.html">Point2Df</a> &gt; &amp;pointsView2, const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a> &amp;poseView1, <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a> &amp;poseView2, std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_match.html">DescriptorMatch</a> &gt; &amp;inlierMatches)=0</td></tr>
-<tr class="memdesc:a244f22c3aa1d907c0cf89254358fb21e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Estimates camera pose from a set of 2D points of the first image which match with a set of 2D points of the second image.  <a href="#a244f22c3aa1d907c0cf89254358fb21e">More...</a><br /></td></tr>
-<tr class="separator:a244f22c3aa1d907c0cf89254358fb21e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aec158901b555ae1f660d8c0be5156c24"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1pose_1_1_i3_d_transform_finder_from2_d2_d.html#aec158901b555ae1f660d8c0be5156c24">estimate</a> (const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html">Keypoint</a> &gt; &amp;pointsView1, const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html">Keypoint</a> &gt; &amp;pointsView2, const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a> &amp;poseView1, <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a> &amp;poseView2, std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_match.html">DescriptorMatch</a> &gt; &amp;inlierMatches)=0</td></tr>
-<tr class="memdesc:aec158901b555ae1f660d8c0be5156c24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Estimates camera pose from a set of keypoints of the first image which match with a set of keypoints of the second image.  <a href="#aec158901b555ae1f660d8c0be5156c24">More...</a><br /></td></tr>
-<tr class="separator:aec158901b555ae1f660d8c0be5156c24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7bfe9cefeff8589c8493bdc0dad692e9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1pose_1_1_i3_d_transform_finder_from2_d2_d.html#a7bfe9cefeff8589c8493bdc0dad692e9">setCameraParameters</a> (const <a class="el" href="_camera_definitions_8h.html#a0ea650513b55059459f5d5771c5bf5cb">datastructure::CamCalibration</a> &amp;intrinsicParams, const <a class="el" href="_camera_definitions_8h.html#ad85d877532df3da45a970d47735e34bc">datastructure::CamDistortion</a> &amp;distorsionParams)=0</td></tr>
+<tr class="memdesc:a7bfe9cefeff8589c8493bdc0dad692e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">this method is used to set intrinsic parameters and distorsion of the camera  <a href="#a7bfe9cefeff8589c8493bdc0dad692e9">More...</a><br /></td></tr>
+<tr class="separator:a7bfe9cefeff8589c8493bdc0dad692e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab645de8899e149df115388c8930769e5"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1pose_1_1_i3_d_transform_finder_from2_d2_d.html#ab645de8899e149df115388c8930769e5">estimate</a> (const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point2_df.html">datastructure::Point2Df</a> &gt; &amp;pointsView1, const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point2_df.html">datastructure::Point2Df</a> &gt; &amp;pointsView2, const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">datastructure::Transform3Df</a> &amp;poseView1, <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">datastructure::Transform3Df</a> &amp;poseView2, std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_match.html">datastructure::DescriptorMatch</a> &gt; &amp;inlierMatches)=0</td></tr>
+<tr class="memdesc:ab645de8899e149df115388c8930769e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Estimates camera pose from a set of 2D points of the first image which match with a set of 2D points of the second image.  <a href="#ab645de8899e149df115388c8930769e5">More...</a><br /></td></tr>
+<tr class="separator:ab645de8899e149df115388c8930769e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62886c57751137c72a2a19eb8e1ae2fa"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1pose_1_1_i3_d_transform_finder_from2_d2_d.html#a62886c57751137c72a2a19eb8e1ae2fa">estimate</a> (const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html">datastructure::Keypoint</a> &gt; &amp;pointsView1, const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html">datastructure::Keypoint</a> &gt; &amp;pointsView2, const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">datastructure::Transform3Df</a> &amp;poseView1, <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">datastructure::Transform3Df</a> &amp;poseView2, std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_match.html">datastructure::DescriptorMatch</a> &gt; &amp;inlierMatches)=0</td></tr>
+<tr class="memdesc:a62886c57751137c72a2a19eb8e1ae2fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Estimates camera pose from a set of keypoints of the first image which match with a set of keypoints of the second image.  <a href="#a62886c57751137c72a2a19eb8e1ae2fa">More...</a><br /></td></tr>
+<tr class="separator:a62886c57751137c72a2a19eb8e1ae2fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><b>Finds the 3D transform between two cameras knowing the keypoints that match between them.</b> <code>UUID: 6063a606-9d30-11e8-98d0-529269fb1459</code> </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a244f22c3aa1d907c0cf89254358fb21e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a244f22c3aa1d907c0cf89254358fb21e">&#9670;&nbsp;</a></span>estimate() <span class="overload">[1/2]</span></h2>
+<a id="ab645de8899e149df115388c8930769e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab645de8899e149df115388c8930769e5">&#9670;&nbsp;</a></span>estimate() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -130,31 +130,31 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
         <tr>
           <td class="memname">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a> SolAR::api::solver::pose::I3DTransformFinderFrom2D2D::estimate </td>
           <td>(</td>
-          <td class="paramtype">const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point2_df.html">Point2Df</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point2_df.html">datastructure::Point2Df</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>pointsView1</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point2_df.html">Point2Df</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point2_df.html">datastructure::Point2Df</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>pointsView2</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">datastructure::Transform3Df</a> &amp;&#160;</td>
           <td class="paramname"><em>poseView1</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">datastructure::Transform3Df</a> &amp;&#160;</td>
           <td class="paramname"><em>poseView2</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_match.html">DescriptorMatch</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_match.html">datastructure::DescriptorMatch</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>inlierMatches</em>&#160;</td>
         </tr>
         <tr>
@@ -173,19 +173,20 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <p>Estimates camera pose from a set of 2D points of the first image which match with a set of 2D points of the second image. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">pointsView1,Set</td><td>of 2D points seen in view 1. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">pointsView2,Set</td><td>of 2D points seen in view 2 and matching with the 2D points of the view 1. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">poseView1,Camera</td><td>pose (3D transform of the camera of the view1 defined in world corrdinate system). </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">poseView2,Camera</td><td>pose (3D transform of the camera of the view2 defined in world corrdinate system). </td></tr>
-    <tr><td class="paramdir"></td><td class="paramname"></td><td></td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pointsView1</td><td>Set of 2D points seen in view 1. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pointsView2</td><td>Set of 2D points seen in view 2 and matching with the 2D points of the view 1. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">poseView1</td><td>Camera pose (3D transform of the camera of the view1 defined in world corrdinate system). </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">poseView2</td><td>Camera pose (3D transform of the camera of the view2 defined in world corrdinate system). </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">inlierMatches</td><td>a vector of matches that will be used for the pose estimation. This vector wll be updates as some input matches will be considered as outliers. If this vector is empty, we consider that the ith point of pointsView1 matches with the ith point of pointsView2. </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>FrameworkReturnCode::<em>SUCCESS if succeed, else FrameworkReturnCode::_ERROR</em> </dd></dl>
 
 </div>
 </div>
-<a id="aec158901b555ae1f660d8c0be5156c24"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aec158901b555ae1f660d8c0be5156c24">&#9670;&nbsp;</a></span>estimate() <span class="overload">[2/2]</span></h2>
+<a id="a62886c57751137c72a2a19eb8e1ae2fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62886c57751137c72a2a19eb8e1ae2fa">&#9670;&nbsp;</a></span>estimate() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -196,31 +197,31 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
         <tr>
           <td class="memname">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a> SolAR::api::solver::pose::I3DTransformFinderFrom2D2D::estimate </td>
           <td>(</td>
-          <td class="paramtype">const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html">Keypoint</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html">datastructure::Keypoint</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>pointsView1</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html">Keypoint</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html">datastructure::Keypoint</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>pointsView2</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">datastructure::Transform3Df</a> &amp;&#160;</td>
           <td class="paramname"><em>poseView1</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">datastructure::Transform3Df</a> &amp;&#160;</td>
           <td class="paramname"><em>poseView2</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_match.html">DescriptorMatch</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_match.html">datastructure::DescriptorMatch</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>inlierMatches</em>&#160;</td>
         </tr>
         <tr>
@@ -239,19 +240,20 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <p>Estimates camera pose from a set of keypoints of the first image which match with a set of keypoints of the second image. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">pointsView1,Set</td><td>of keypoints seen in view 1. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">pointsView2,Set</td><td>of keypoints seen in view 2 and matching with the 2D points of the view 1. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">poseView1,Camera</td><td>pose (3D transform of the camera of the view1 defined in world corrdinate system). </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">poseView2,Camera</td><td>pose (3D transform of the camera of the view2 defined in world corrdinate system). </td></tr>
-    <tr><td class="paramdir"></td><td class="paramname"></td><td></td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pointsView1</td><td>Set of keypoints seen in view 1. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pointsView2</td><td>Set of keypoints seen in view 2 and matching with the 2D points of the view 1. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">poseView1</td><td>Camera pose (3D transform of the camera of the view1 defined in world corrdinate system). </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">poseView2</td><td>Camera pose (3D transform of the camera of the view2 defined in world corrdinate system). </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">inlierMatches</td><td>a vector of matches that will be used for the pose estimation. This vector wll be updates as some input matches will be considered as outliers. If this vector is empty, we consider that the ith point of pointsView1 matches with the ith point of pointsView2. </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>FrameworkReturnCode::<em>SUCCESS if succeed, else FrameworkReturnCode::_ERROR</em> </dd></dl>
 
 </div>
 </div>
-<a id="a6c157c37885952ddaa9f0da56cb1fd5b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6c157c37885952ddaa9f0da56cb1fd5b">&#9670;&nbsp;</a></span>setCameraParameters()</h2>
+<a id="a7bfe9cefeff8589c8493bdc0dad692e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7bfe9cefeff8589c8493bdc0dad692e9">&#9670;&nbsp;</a></span>setCameraParameters()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -262,13 +264,13 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
         <tr>
           <td class="memname">virtual void SolAR::api::solver::pose::I3DTransformFinderFrom2D2D::setCameraParameters </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="_camera_definitions_8h.html#a0ea650513b55059459f5d5771c5bf5cb">CamCalibration</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="_camera_definitions_8h.html#a0ea650513b55059459f5d5771c5bf5cb">datastructure::CamCalibration</a> &amp;&#160;</td>
           <td class="paramname"><em>intrinsicParams</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="_camera_definitions_8h.html#ad85d877532df3da45a970d47735e34bc">CamDistortion</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="_camera_definitions_8h.html#ad85d877532df3da45a970d47735e34bc">datastructure::CamDistortion</a> &amp;&#160;</td>
           <td class="paramname"><em>distorsionParams</em>&#160;</td>
         </tr>
         <tr>
@@ -287,8 +289,8 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <p>this method is used to set intrinsic parameters and distorsion of the camera </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">Camera</td><td>calibration matrix parameters. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">Camera</td><td>distorsion parameters. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">intrinsicParams</td><td>camera calibration matrix parameters. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">distorsionParams</td><td>camera distorsion parameters. </td></tr>
   </table>
   </dd>
 </dl>

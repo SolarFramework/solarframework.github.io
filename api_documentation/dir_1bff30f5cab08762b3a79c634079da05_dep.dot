@@ -7,5 +7,5 @@ digraph "interfaces/api/input/devices" {
   dir_1bff30f5cab08762b3a79c634079da05 [shape=box, label="devices", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_1bff30f5cab08762b3a79c634079da05.html"];
   }
   dir_3163639002ef67c6c12f1b2ccf7afca4 [shape=box label="datastructure" URL="dir_3163639002ef67c6c12f1b2ccf7afca4.html"];
-  dir_1bff30f5cab08762b3a79c634079da05->dir_3163639002ef67c6c12f1b2ccf7afca4 [headlabel="4", labeldistance=1.5 headhref="dir_000008_000023.html"];
+  dir_1bff30f5cab08762b3a79c634079da05->dir_3163639002ef67c6c12f1b2ccf7afca4 [headlabel="5", labeldistance=1.5 headhref="dir_000008_000023.html"];
 }

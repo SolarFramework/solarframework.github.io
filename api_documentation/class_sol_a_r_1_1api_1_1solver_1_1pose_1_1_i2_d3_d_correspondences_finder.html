@@ -103,18 +103,18 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a7785c487bb393f38114bd80f737d20d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac647f9ac5815d7daf4f3f51db52291a0"><td class="memItemLeft" align="right" valign="top"><a id="ac647f9ac5815d7daf4f3f51db52291a0"></a>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1pose_1_1_i2_d3_d_correspondences_finder.html#ac647f9ac5815d7daf4f3f51db52291a0">~I2D3DCorrespondencesFinder</a> ()=default</td></tr>
-<tr class="memdesc:ac647f9ac5815d7daf4f3f51db52291a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">IFundamentalMatrixDecomposer default destructor. <br /></td></tr>
+<tr class="memdesc:ac647f9ac5815d7daf4f3f51db52291a0"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1pose_1_1_i2_d3_d_correspondences_finder.html" title="Finds the 2D-3D correspondences giving a frame and its matches with a second frame which has known 2D...">I2D3DCorrespondencesFinder</a> default destructor. <br /></td></tr>
 <tr class="separator:ac647f9ac5815d7daf4f3f51db52291a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a30d61c9b61647dde8f531a047403b245"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1pose_1_1_i2_d3_d_correspondences_finder.html#a30d61c9b61647dde8f531a047403b245">find</a> (const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_frame.html">Frame</a> &gt; lastFrame, const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_frame.html">Frame</a> &gt; currentFrame, const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_match.html">DescriptorMatch</a> &gt; &amp;current_matches, std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point3_df.html">Point3Df</a> &gt; &amp;shared_3dpoint, std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point2_df.html">Point2Df</a> &gt; &amp;shared_2dpoint, std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_match.html">DescriptorMatch</a> &gt; &amp;found_matches, std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_match.html">DescriptorMatch</a> &gt; &amp;remaining_matches)=0</td></tr>
-<tr class="memdesc:a30d61c9b61647dde8f531a047403b245"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define 2D-3D point correspondences of the current frame based on keypoint matches between the current frame and the last frame.  <a href="#a30d61c9b61647dde8f531a047403b245">More...</a><br /></td></tr>
-<tr class="separator:a30d61c9b61647dde8f531a047403b245"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb70aa768684b6c03445a0257f17880f"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1pose_1_1_i2_d3_d_correspondences_finder.html#acb70aa768684b6c03445a0257f17880f">find</a> (const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_frame.html">datastructure::Frame</a> &gt; lastFrame, const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_frame.html">datastructure::Frame</a> &gt; currentFrame, const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_match.html">datastructure::DescriptorMatch</a> &gt; &amp;current_matches, std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point3_df.html">datastructure::Point3Df</a> &gt; &amp;shared_3dpoint, std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point2_df.html">datastructure::Point2Df</a> &gt; &amp;shared_2dpoint, std::vector&lt; std::pair&lt; uint32_t, SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">datastructure::CloudPoint</a> &gt;&gt;&gt; &amp;corres2D3D, std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_match.html">datastructure::DescriptorMatch</a> &gt; &amp;found_matches, std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_match.html">datastructure::DescriptorMatch</a> &gt; &amp;remaining_matches)=0</td></tr>
+<tr class="memdesc:acb70aa768684b6c03445a0257f17880f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define 2D-3D point correspondences of the current frame based on keypoint matches between the current frame and the last frame.  <a href="#acb70aa768684b6c03445a0257f17880f">More...</a><br /></td></tr>
+<tr class="separator:acb70aa768684b6c03445a0257f17880f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><b>Finds the 2D-3D correspondences giving a frame and its matches with a second frame which has known 2D-3D correspondences.</b> <code>UUID: 0404e8b9-b824-4852-a34d-6eafa7563918</code> </p>
 <p>Knowing a frame, its reference keyframe which already has 3D correpspondences, as well the 2D matches between them, the component find the 2d-3D correspondences between the current frame and the 3D Points visible from the reference keyframe. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a30d61c9b61647dde8f531a047403b245"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a30d61c9b61647dde8f531a047403b245">&#9670;&nbsp;</a></span>find()</h2>
+<a id="acb70aa768684b6c03445a0257f17880f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb70aa768684b6c03445a0257f17880f">&#9670;&nbsp;</a></span>find()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -125,43 +125,49 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
         <tr>
           <td class="memname">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a> SolAR::api::solver::pose::I2D3DCorrespondencesFinder::find </td>
           <td>(</td>
-          <td class="paramtype">const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_frame.html">Frame</a> &gt;&#160;</td>
+          <td class="paramtype">const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_frame.html">datastructure::Frame</a> &gt;&#160;</td>
           <td class="paramname"><em>lastFrame</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_frame.html">Frame</a> &gt;&#160;</td>
+          <td class="paramtype">const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_frame.html">datastructure::Frame</a> &gt;&#160;</td>
           <td class="paramname"><em>currentFrame</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_match.html">DescriptorMatch</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_match.html">datastructure::DescriptorMatch</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>current_matches</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point3_df.html">Point3Df</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point3_df.html">datastructure::Point3Df</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>shared_3dpoint</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point2_df.html">Point2Df</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point2_df.html">datastructure::Point2Df</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>shared_2dpoint</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_match.html">DescriptorMatch</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">std::vector&lt; std::pair&lt; uint32_t, SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">datastructure::CloudPoint</a> &gt;&gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>corres2D3D</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_match.html">datastructure::DescriptorMatch</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>found_matches</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_match.html">DescriptorMatch</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_match.html">datastructure::DescriptorMatch</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>remaining_matches</em>&#160;</td>
         </tr>
         <tr>
@@ -184,12 +190,14 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
     <tr><td class="paramdir">[in]</td><td class="paramname">currentFrame</td><td>The current framr for which we want to find 2D-3D correspondances. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">currentMatches</td><td>The 2D matches between the current keyframe and its reference keyframe. </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">shared_3dpoint</td><td>The 3D points visible from the current frame. </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">shared_2dpoint</td><td>The 2D point in the current frame that correspond to a 3D point. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">shared_2dpoint</td><td>The 2D points in the current frame that correspond to 3D points. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">corres2D3D</td><td>The pairs of 2D-3D correspondences. The first value is the index of keypoint in the current frame and the second one is the corresponding cloud point. </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">found_matches</td><td>The matches between the current frame and its reference keyframe which have a 3 correspondant. </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">remaining_matches</td><td>The matches between the current frame and its reference keyframe for which no 3D points have been found. </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>FrameworkReturnCode::<em>SUCCESS if succeed, else FrameworkReturnCode::_ERROR</em> </dd></dl>
 
 </div>
 </div>

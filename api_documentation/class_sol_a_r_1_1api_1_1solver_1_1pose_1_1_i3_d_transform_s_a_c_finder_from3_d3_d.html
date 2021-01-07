@@ -105,15 +105,21 @@ Public Member Functions</h2></td></tr>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1pose_1_1_i3_d_transform_s_a_c_finder_from3_d3_d.html#a04d7a57aca8f534b82a8bf9085100ebd">~I3DTransformSACFinderFrom3D3D</a> ()=default</td></tr>
 <tr class="memdesc:a04d7a57aca8f534b82a8bf9085100ebd"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1pose_1_1_i3_d_transform_s_a_c_finder_from3_d3_d.html" title="Finds the 3D transform of 3D-3D points correspondences with a SAmple Consensus. UUID: 940bddba-da70-4...">I3DTransformSACFinderFrom3D3D</a> default destructor. <br /></td></tr>
 <tr class="separator:a04d7a57aca8f534b82a8bf9085100ebd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6b0be820af5a4afd56e0eef7336d3f3b"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1pose_1_1_i3_d_transform_s_a_c_finder_from3_d3_d.html#a6b0be820af5a4afd56e0eef7336d3f3b">estimate</a> (const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point3_df.html">Point3Df</a> &gt; &amp;firstPoints3D, const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point3_df.html">Point3Df</a> &gt; &amp;secondPoints3D, <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a> &amp;pose, std::vector&lt; int &gt; &amp;inliers)=0</td></tr>
-<tr class="memdesc:a6b0be820af5a4afd56e0eef7336d3f3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Estimates camera pose from a set of 3D-3D point correspondences.  <a href="#a6b0be820af5a4afd56e0eef7336d3f3b">More...</a><br /></td></tr>
-<tr class="separator:a6b0be820af5a4afd56e0eef7336d3f3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a685669c9419e4e15354329045d946d42"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1pose_1_1_i3_d_transform_s_a_c_finder_from3_d3_d.html#a685669c9419e4e15354329045d946d42">setCameraParameters</a> (const <a class="el" href="_camera_definitions_8h.html#a0ea650513b55059459f5d5771c5bf5cb">datastructure::CamCalibration</a> &amp;intrinsicParams, const <a class="el" href="_camera_definitions_8h.html#ad85d877532df3da45a970d47735e34bc">datastructure::CamDistortion</a> &amp;distortionParams)=0</td></tr>
+<tr class="memdesc:a685669c9419e4e15354329045d946d42"><td class="mdescLeft">&#160;</td><td class="mdescRight">this method is used to set intrinsic parameters and distorsion of the camera  <a href="#a685669c9419e4e15354329045d946d42">More...</a><br /></td></tr>
+<tr class="separator:a685669c9419e4e15354329045d946d42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afde64d51982816c0af0ba29822e79e8e"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1pose_1_1_i3_d_transform_s_a_c_finder_from3_d3_d.html#afde64d51982816c0af0ba29822e79e8e">estimate</a> (const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point3_df.html">datastructure::Point3Df</a> &gt; &amp;firstPoints3D, const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point3_df.html">datastructure::Point3Df</a> &gt; &amp;secondPoints3D, <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">datastructure::Transform3Df</a> &amp;pose, std::vector&lt; int &gt; &amp;inliers)=0</td></tr>
+<tr class="memdesc:afde64d51982816c0af0ba29822e79e8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Estimates camera pose from a set of 3D-3D point correspondences.  <a href="#afde64d51982816c0af0ba29822e79e8e">More...</a><br /></td></tr>
+<tr class="separator:afde64d51982816c0af0ba29822e79e8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a750bd6510fda26ae7dc4211890de15cc"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1pose_1_1_i3_d_transform_s_a_c_finder_from3_d3_d.html#a750bd6510fda26ae7dc4211890de15cc">estimate</a> (const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keyframe.html">datastructure::Keyframe</a> &gt; firstKeyframe, const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keyframe.html">datastructure::Keyframe</a> &gt; secondKeyframe, const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_match.html">datastructure::DescriptorMatch</a> &gt; &amp;matches, const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point3_df.html">datastructure::Point3Df</a> &gt; &amp;firstPoints3D, const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point3_df.html">datastructure::Point3Df</a> &gt; &amp;secondPoints3D, <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">datastructure::Transform3Df</a> &amp;pose, std::vector&lt; int &gt; &amp;inliers)=0</td></tr>
+<tr class="memdesc:a750bd6510fda26ae7dc4211890de15cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Estimates camera pose from a set of 3D-3D point correspondences.  <a href="#a750bd6510fda26ae7dc4211890de15cc">More...</a><br /></td></tr>
+<tr class="separator:a750bd6510fda26ae7dc4211890de15cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><b>Finds the 3D transform of 3D-3D points correspondences with a SAmple Consensus.</b> <code>UUID: 940bddba-da70-4a6e-a327-890c1e61386d</code> </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a6b0be820af5a4afd56e0eef7336d3f3b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6b0be820af5a4afd56e0eef7336d3f3b">&#9670;&nbsp;</a></span>estimate()</h2>
+<a id="afde64d51982816c0af0ba29822e79e8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afde64d51982816c0af0ba29822e79e8e">&#9670;&nbsp;</a></span>estimate() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -124,19 +130,19 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
         <tr>
           <td class="memname">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a> SolAR::api::solver::pose::I3DTransformSACFinderFrom3D3D::estimate </td>
           <td>(</td>
-          <td class="paramtype">const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point3_df.html">Point3Df</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point3_df.html">datastructure::Point3Df</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>firstPoints3D</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point3_df.html">Point3Df</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point3_df.html">datastructure::Point3Df</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>secondPoints3D</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">datastructure::Transform3Df</a> &amp;&#160;</td>
           <td class="paramname"><em>pose</em>, </td>
         </tr>
         <tr>
@@ -165,6 +171,132 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
     <tr><td class="paramdir">[in]</td><td class="paramname">secondPoints3D</td><td>second set of 3D points. </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">pose</td><td>3D transformation maps the first set of 3D points to the second one. </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">inliers</td><td>indices of inlier correspondences. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a750bd6510fda26ae7dc4211890de15cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a750bd6510fda26ae7dc4211890de15cc">&#9670;&nbsp;</a></span>estimate() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a> SolAR::api::solver::pose::I3DTransformSACFinderFrom3D3D::estimate </td>
+          <td>(</td>
+          <td class="paramtype">const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keyframe.html">datastructure::Keyframe</a> &gt;&#160;</td>
+          <td class="paramname"><em>firstKeyframe</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keyframe.html">datastructure::Keyframe</a> &gt;&#160;</td>
+          <td class="paramname"><em>secondKeyframe</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_match.html">datastructure::DescriptorMatch</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>matches</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point3_df.html">datastructure::Point3Df</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>firstPoints3D</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point3_df.html">datastructure::Point3Df</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>secondPoints3D</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">datastructure::Transform3Df</a> &amp;&#160;</td>
+          <td class="paramname"><em>pose</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>inliers</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Estimates camera pose from a set of 3D-3D point correspondences. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">firstKeyframe</td><td>first keyframe. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">secondKeyframe</td><td>second keyframe. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">matches</td><td>matches between two keyframes. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">firstPoints3D</td><td>first set of 3D points. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">secondPoints3D</td><td>second set of 3D points. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">pose</td><td>3D transformation maps the first set of 3D points to the second one. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">inliers</td><td>indices of inlier correspondences. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>FrameworkReturnCode::<em>SUCCESS if succeed, else FrameworkReturnCode::_ERROR</em> </dd></dl>
+
+</div>
+</div>
+<a id="a685669c9419e4e15354329045d946d42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a685669c9419e4e15354329045d946d42">&#9670;&nbsp;</a></span>setCameraParameters()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void SolAR::api::solver::pose::I3DTransformSACFinderFrom3D3D::setCameraParameters </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="_camera_definitions_8h.html#a0ea650513b55059459f5d5771c5bf5cb">datastructure::CamCalibration</a> &amp;&#160;</td>
+          <td class="paramname"><em>intrinsicParams</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="_camera_definitions_8h.html#ad85d877532df3da45a970d47735e34bc">datastructure::CamDistortion</a> &amp;&#160;</td>
+          <td class="paramname"><em>distortionParams</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>this method is used to set intrinsic parameters and distorsion of the camera </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">intrinsicParams</td><td>Camera calibration matrix parameters. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">distortionParams</td><td>Camera distortion parameters. </td></tr>
   </table>
   </dd>
 </dl>

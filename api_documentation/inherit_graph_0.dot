@@ -3,9 +3,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node0 [label="SharedFifo\< T \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_shared_fifo.html"];
-  Node0 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node1 [label="SharedBuffer\< T \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_shared_buffer.html"];
-  Node0 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node2 [label="SharedCircularBuffer\< T \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_shared_circular_buffer.html"];
+  Node0 [label="org::bcom::xpcf::Interface\lTraits\< SolAR::api::input\l::devices::IDevice \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structorg_1_1bcom_1_1xpcf_1_1_interface_traits_3_01_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_device_01_4.html"];
 }

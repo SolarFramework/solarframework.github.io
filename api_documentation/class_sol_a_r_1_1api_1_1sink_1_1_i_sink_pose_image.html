@@ -101,28 +101,28 @@ Public Member Functions</h2></td></tr>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1sink_1_1_i_sink_pose_image.html#a1cfa390e72df5009c122789008ec8353">~ISinkPoseImage</a> ()=default</td></tr>
 <tr class="memdesc:a1cfa390e72df5009c122789008ec8353"><td class="mdescLeft">&#160;</td><td class="mdescRight">~ISinkPoseImage <br /></td></tr>
 <tr class="separator:a1cfa390e72df5009c122789008ec8353"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9b22ad7eb54dec69e9e37cb3bccb20c0"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1sink_1_1_i_sink_pose_image.html#a9b22ad7eb54dec69e9e37cb3bccb20c0">set</a> (const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a> &amp;pose, const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt; &amp;image)=0</td></tr>
-<tr class="memdesc:a9b22ad7eb54dec69e9e37cb3bccb20c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a new image and pose coming from the pipeline.  <a href="#a9b22ad7eb54dec69e9e37cb3bccb20c0">More...</a><br /></td></tr>
-<tr class="separator:a9b22ad7eb54dec69e9e37cb3bccb20c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a17ca22771030b3477adfbad42dab9344"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1sink_1_1_i_sink_pose_image.html#a17ca22771030b3477adfbad42dab9344">set</a> (const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt; &amp;image)=0</td></tr>
-<tr class="memdesc:a17ca22771030b3477adfbad42dab9344"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a new image without pose.  <a href="#a17ca22771030b3477adfbad42dab9344">More...</a><br /></td></tr>
-<tr class="separator:a17ca22771030b3477adfbad42dab9344"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c2213cfcca4ecc0de02f224321e9e1d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1sink_1_1_i_sink_pose_image.html#a0c2213cfcca4ecc0de02f224321e9e1d">set</a> (const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">datastructure::Transform3Df</a> &amp;pose, const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">datastructure::Image</a> &gt; image)=0</td></tr>
+<tr class="memdesc:a0c2213cfcca4ecc0de02f224321e9e1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a new image and pose coming from the pipeline.  <a href="#a0c2213cfcca4ecc0de02f224321e9e1d">More...</a><br /></td></tr>
+<tr class="separator:a0c2213cfcca4ecc0de02f224321e9e1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa684264b6ecb530d826104341473e18a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1sink_1_1_i_sink_pose_image.html#aa684264b6ecb530d826104341473e18a">set</a> (const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">datastructure::Image</a> &gt; image)=0</td></tr>
+<tr class="memdesc:aa684264b6ecb530d826104341473e18a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a new image without pose.  <a href="#aa684264b6ecb530d826104341473e18a">More...</a><br /></td></tr>
+<tr class="separator:aa684264b6ecb530d826104341473e18a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acf4cd181d8be0f62c9dc4de04f0fd19f"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1sink_1_1_i_sink_pose_image.html#acf4cd181d8be0f62c9dc4de04f0fd19f">setImageBuffer</a> (unsigned char *imageBufferPointer)=0</td></tr>
 <tr class="memdesc:acf4cd181d8be0f62c9dc4de04f0fd19f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a pointer to the texture buffer to update it with the new image when required.  <a href="#acf4cd181d8be0f62c9dc4de04f0fd19f">More...</a><br /></td></tr>
 <tr class="separator:acf4cd181d8be0f62c9dc4de04f0fd19f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acd0d440803ededc9ee5230ac0bb8e13a"><td class="memItemLeft" align="right" valign="top">virtual SinkReturnCode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1sink_1_1_i_sink_pose_image.html#acd0d440803ededc9ee5230ac0bb8e13a">get</a> (<a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a> &amp;pose)=0</td></tr>
-<tr class="memdesc:acd0d440803ededc9ee5230ac0bb8e13a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provide an access to the new image and pose made available by t the pipeline. The implementation of this interface must be thread safe.  <a href="#acd0d440803ededc9ee5230ac0bb8e13a">More...</a><br /></td></tr>
-<tr class="separator:acd0d440803ededc9ee5230ac0bb8e13a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a842a4492572f760afd78f4a85e92cd0c"><td class="memItemLeft" align="right" valign="top">virtual SinkReturnCode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1sink_1_1_i_sink_pose_image.html#a842a4492572f760afd78f4a85e92cd0c">tryGet</a> (<a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a> &amp;pose)=0</td></tr>
-<tr class="memdesc:a842a4492572f760afd78f4a85e92cd0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provide an access to the new image and pose made available by the pipeline only if they have been updated by the pipeline. The implementation of this interface must be thread safe.  <a href="#a842a4492572f760afd78f4a85e92cd0c">More...</a><br /></td></tr>
-<tr class="separator:a842a4492572f760afd78f4a85e92cd0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7273398d6c2b7f32793c7dcc137586cd"><td class="memItemLeft" align="right" valign="top">virtual SinkReturnCode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1sink_1_1_i_sink_pose_image.html#a7273398d6c2b7f32793c7dcc137586cd">get</a> (<a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">datastructure::Transform3Df</a> &amp;pose)=0</td></tr>
+<tr class="memdesc:a7273398d6c2b7f32793c7dcc137586cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provide an access to the new image and pose made available by the pipeline. The implementation of this interface must be thread safe.  <a href="#a7273398d6c2b7f32793c7dcc137586cd">More...</a><br /></td></tr>
+<tr class="separator:a7273398d6c2b7f32793c7dcc137586cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7907f17772cbef7b1b3037449f7c704c"><td class="memItemLeft" align="right" valign="top">virtual SinkReturnCode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1sink_1_1_i_sink_pose_image.html#a7907f17772cbef7b1b3037449f7c704c">tryGet</a> (<a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">datastructure::Transform3Df</a> &amp;pose)=0</td></tr>
+<tr class="memdesc:a7907f17772cbef7b1b3037449f7c704c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provide an access to the new image and pose made available by the pipeline only if they have been updated by the pipeline. The implementation of this interface must be thread safe.  <a href="#a7907f17772cbef7b1b3037449f7c704c">More...</a><br /></td></tr>
+<tr class="separator:a7907f17772cbef7b1b3037449f7c704c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><b>A Sink for a synchronized pose and image useful for AR video see-through pipelines.</b> <code>UUID: c0d9fee4-d7d7-4866-a6cd-3bacac23316a</code> </p>
 <p>This interface allows to store a synchronized pose and image from the pipeline to make it available to a third party application. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="acd0d440803ededc9ee5230ac0bb8e13a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acd0d440803ededc9ee5230ac0bb8e13a">&#9670;&nbsp;</a></span>get()</h2>
+<a id="a7273398d6c2b7f32793c7dcc137586cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7273398d6c2b7f32793c7dcc137586cd">&#9670;&nbsp;</a></span>get()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -133,7 +133,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
         <tr>
           <td class="memname">virtual SinkReturnCode SolAR::api::sink::ISinkPoseImage::get </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">datastructure::Transform3Df</a> &amp;&#160;</td>
           <td class="paramname"><em>pose</em></td><td>)</td>
           <td></td>
         </tr>
@@ -145,7 +145,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 </table>
 </div><div class="memdoc">
 
-<p>Provide an access to the new image and pose made available by t the pipeline. The implementation of this interface must be thread safe. </p>
+<p>Provide an access to the new image and pose made available by the pipeline. The implementation of this interface must be thread safe. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in,out]</td><td class="paramname">pose</td><td>the new pose made available by the pipeline. </td></tr>
@@ -156,8 +156,8 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 
 </div>
 </div>
-<a id="a9b22ad7eb54dec69e9e37cb3bccb20c0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9b22ad7eb54dec69e9e37cb3bccb20c0">&#9670;&nbsp;</a></span>set() <span class="overload">[1/2]</span></h2>
+<a id="a0c2213cfcca4ecc0de02f224321e9e1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c2213cfcca4ecc0de02f224321e9e1d">&#9670;&nbsp;</a></span>set() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -168,13 +168,13 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
         <tr>
           <td class="memname">virtual void SolAR::api::sink::ISinkPoseImage::set </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">datastructure::Transform3Df</a> &amp;&#160;</td>
           <td class="paramname"><em>pose</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">datastructure::Image</a> &gt;&#160;</td>
           <td class="paramname"><em>image</em>&#160;</td>
         </tr>
         <tr>
@@ -201,8 +201,8 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 
 </div>
 </div>
-<a id="a17ca22771030b3477adfbad42dab9344"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a17ca22771030b3477adfbad42dab9344">&#9670;&nbsp;</a></span>set() <span class="overload">[2/2]</span></h2>
+<a id="aa684264b6ecb530d826104341473e18a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa684264b6ecb530d826104341473e18a">&#9670;&nbsp;</a></span>set() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -213,7 +213,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
         <tr>
           <td class="memname">virtual void SolAR::api::sink::ISinkPoseImage::set </td>
           <td>(</td>
-          <td class="paramtype">const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">datastructure::Image</a> &gt;&#160;</td>
           <td class="paramname"><em>image</em></td><td>)</td>
           <td></td>
         </tr>
@@ -270,8 +270,8 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 
 </div>
 </div>
-<a id="a842a4492572f760afd78f4a85e92cd0c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a842a4492572f760afd78f4a85e92cd0c">&#9670;&nbsp;</a></span>tryGet()</h2>
+<a id="a7907f17772cbef7b1b3037449f7c704c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7907f17772cbef7b1b3037449f7c704c">&#9670;&nbsp;</a></span>tryGet()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -282,7 +282,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
         <tr>
           <td class="memname">virtual SinkReturnCode SolAR::api::sink::ISinkPoseImage::tryGet </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">datastructure::Transform3Df</a> &amp;&#160;</td>
           <td class="paramname"><em>pose</em></td><td>)</td>
           <td></td>
         </tr>

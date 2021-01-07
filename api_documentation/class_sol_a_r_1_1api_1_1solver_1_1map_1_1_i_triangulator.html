@@ -105,27 +105,27 @@ Public Member Functions</h2></td></tr>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1map_1_1_i_triangulator.html#a00294d9a14a6b4cd871074daf8a7433e">~ITriangulator</a> ()=default</td></tr>
 <tr class="memdesc:a00294d9a14a6b4cd871074daf8a7433e"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1map_1_1_i_triangulator.html" title="Triangulates a set of 2D-2D points correspondances with known respective camera poses. UUID: 3a01b0e9-9a76-43f5-97b3-85bb6979b953 ">ITriangulator</a> default destructor. <br /></td></tr>
 <tr class="separator:a00294d9a14a6b4cd871074daf8a7433e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeac6277cb3fae4422c4a2d7eeec11090"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1map_1_1_i_triangulator.html#aeac6277cb3fae4422c4a2d7eeec11090">setCameraParameters</a> (const <a class="el" href="_camera_definitions_8h.html#a0ea650513b55059459f5d5771c5bf5cb">CamCalibration</a> &amp;intrinsicParams, const <a class="el" href="_camera_definitions_8h.html#ad85d877532df3da45a970d47735e34bc">CamDistortion</a> &amp;distorsionParams)=0</td></tr>
-<tr class="memdesc:aeac6277cb3fae4422c4a2d7eeec11090"><td class="mdescLeft">&#160;</td><td class="mdescRight">this method is used to set intrinsic parameters and distorsion of the camera  <a href="#aeac6277cb3fae4422c4a2d7eeec11090">More...</a><br /></td></tr>
-<tr class="separator:aeac6277cb3fae4422c4a2d7eeec11090"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac0600e32ea3a10b2768276319c6d717c"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1map_1_1_i_triangulator.html#ac0600e32ea3a10b2768276319c6d717c">triangulate</a> (const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point2_df.html">Point2Df</a> &gt; &amp;pointsView1, const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point2_df.html">Point2Df</a> &gt; &amp;pointView2, const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_match.html">DescriptorMatch</a> &gt; &amp;matches, const std::pair&lt; unsigned int, unsigned int &gt; &amp;working_views, const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a> &amp;poseView1, const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a> &amp;poseView2, std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">CloudPoint</a> &gt;&gt; &amp;pcloud)=0</td></tr>
-<tr class="memdesc:ac0600e32ea3a10b2768276319c6d717c"><td class="mdescLeft">&#160;</td><td class="mdescRight">triangulate pairs of points 2d captured from two views with differents poses (with respect to the camera instrinsic parameters).  <a href="#ac0600e32ea3a10b2768276319c6d717c">More...</a><br /></td></tr>
-<tr class="separator:ac0600e32ea3a10b2768276319c6d717c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad2830b9d9e6257a666c1f7afd76f2ad3"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1map_1_1_i_triangulator.html#ad2830b9d9e6257a666c1f7afd76f2ad3">triangulate</a> (const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html">Keypoint</a> &gt; &amp;keypointsView1, const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html">Keypoint</a> &gt; &amp;keypointsView2, const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_match.html">DescriptorMatch</a> &gt; &amp;matches, const std::pair&lt; unsigned int, unsigned int &gt; &amp;working_views, const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a> &amp;poseView1, const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a> &amp;poseView2, std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">CloudPoint</a> &gt;&gt; &amp;pcloud)=0</td></tr>
-<tr class="memdesc:ad2830b9d9e6257a666c1f7afd76f2ad3"><td class="mdescLeft">&#160;</td><td class="mdescRight">triangulate pairs of points 2d captured from two views with differents poses (with respect to the camera instrinsic parameters).  <a href="#ad2830b9d9e6257a666c1f7afd76f2ad3">More...</a><br /></td></tr>
-<tr class="separator:ad2830b9d9e6257a666c1f7afd76f2ad3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a30a6773cf9fbbd751bccb4f1ec28614d"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1map_1_1_i_triangulator.html#a30a6773cf9fbbd751bccb4f1ec28614d">triangulate</a> (const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html">Keypoint</a> &gt; &amp;keypointsView1, const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html">Keypoint</a> &gt; &amp;keypointsView2, const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_buffer.html">DescriptorBuffer</a> &gt; &amp;descriptor1, const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_buffer.html">DescriptorBuffer</a> &gt; &amp;descriptor2, const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_match.html">DescriptorMatch</a> &gt; &amp;matches, const std::pair&lt; unsigned int, unsigned int &gt; &amp;working_views, const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a> &amp;poseView1, const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a> &amp;poseView2, std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">CloudPoint</a> &gt;&gt; &amp;pcloud)=0</td></tr>
-<tr class="memdesc:a30a6773cf9fbbd751bccb4f1ec28614d"><td class="mdescLeft">&#160;</td><td class="mdescRight">triangulate pairs of points 2d captured from two views with differents poses (with respect to the camera instrinsic parameters).  <a href="#a30a6773cf9fbbd751bccb4f1ec28614d">More...</a><br /></td></tr>
-<tr class="separator:a30a6773cf9fbbd751bccb4f1ec28614d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8cbab8bd3f2c7ca6618fcbba48772a6f"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1map_1_1_i_triangulator.html#a8cbab8bd3f2c7ca6618fcbba48772a6f">triangulate</a> (const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keyframe.html">Keyframe</a> &gt; &amp;curKeyframe, const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_match.html">DescriptorMatch</a> &gt; &amp;matches, std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">CloudPoint</a> &gt;&gt; &amp;pcloud)=0</td></tr>
-<tr class="memdesc:a8cbab8bd3f2c7ca6618fcbba48772a6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">triangulate pairs of points 2d captured from current keyframe with its reference keyframe using their poses (with respect to the camera instrinsic parameters).  <a href="#a8cbab8bd3f2c7ca6618fcbba48772a6f">More...</a><br /></td></tr>
-<tr class="separator:a8cbab8bd3f2c7ca6618fcbba48772a6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a727e34ca5e032ca1359d138d46d718b0"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1map_1_1_i_triangulator.html#a727e34ca5e032ca1359d138d46d718b0">setCameraParameters</a> (const <a class="el" href="_camera_definitions_8h.html#a0ea650513b55059459f5d5771c5bf5cb">datastructure::CamCalibration</a> &amp;intrinsicParams, const <a class="el" href="_camera_definitions_8h.html#ad85d877532df3da45a970d47735e34bc">datastructure::CamDistortion</a> &amp;distorsionParams)=0</td></tr>
+<tr class="memdesc:a727e34ca5e032ca1359d138d46d718b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">this method is used to set intrinsic parameters and distorsion of the camera  <a href="#a727e34ca5e032ca1359d138d46d718b0">More...</a><br /></td></tr>
+<tr class="separator:a727e34ca5e032ca1359d138d46d718b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d707253855d1c2edd4edc206f455a56"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1map_1_1_i_triangulator.html#a4d707253855d1c2edd4edc206f455a56">triangulate</a> (const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point2_df.html">datastructure::Point2Df</a> &gt; &amp;pointsView1, const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point2_df.html">datastructure::Point2Df</a> &gt; &amp;pointView2, const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_match.html">datastructure::DescriptorMatch</a> &gt; &amp;matches, const std::pair&lt; unsigned int, unsigned int &gt; &amp;working_views, const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">datastructure::Transform3Df</a> &amp;poseView1, const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">datastructure::Transform3Df</a> &amp;poseView2, std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">datastructure::CloudPoint</a> &gt;&gt; &amp;pcloud)=0</td></tr>
+<tr class="memdesc:a4d707253855d1c2edd4edc206f455a56"><td class="mdescLeft">&#160;</td><td class="mdescRight">triangulate pairs of points 2d captured from two views with differents poses (with respect to the camera instrinsic parameters).  <a href="#a4d707253855d1c2edd4edc206f455a56">More...</a><br /></td></tr>
+<tr class="separator:a4d707253855d1c2edd4edc206f455a56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11bebc2d35fb2d34b63093c1d03e0d1a"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1map_1_1_i_triangulator.html#a11bebc2d35fb2d34b63093c1d03e0d1a">triangulate</a> (const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html">datastructure::Keypoint</a> &gt; &amp;keypointsView1, const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html">datastructure::Keypoint</a> &gt; &amp;keypointsView2, const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_match.html">datastructure::DescriptorMatch</a> &gt; &amp;matches, const std::pair&lt; unsigned int, unsigned int &gt; &amp;working_views, const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">datastructure::Transform3Df</a> &amp;poseView1, const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">datastructure::Transform3Df</a> &amp;poseView2, std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">datastructure::CloudPoint</a> &gt;&gt; &amp;pcloud)=0</td></tr>
+<tr class="memdesc:a11bebc2d35fb2d34b63093c1d03e0d1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">triangulate pairs of points 2d captured from two views with differents poses (with respect to the camera instrinsic parameters).  <a href="#a11bebc2d35fb2d34b63093c1d03e0d1a">More...</a><br /></td></tr>
+<tr class="separator:a11bebc2d35fb2d34b63093c1d03e0d1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20f93319accc38a25192adf6d15a5b1b"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1map_1_1_i_triangulator.html#a20f93319accc38a25192adf6d15a5b1b">triangulate</a> (const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html">datastructure::Keypoint</a> &gt; &amp;keypointsView1, const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html">datastructure::Keypoint</a> &gt; &amp;keypointsView2, const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_buffer.html">datastructure::DescriptorBuffer</a> &gt; &amp;descriptor1, const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_buffer.html">datastructure::DescriptorBuffer</a> &gt; &amp;descriptor2, const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_match.html">datastructure::DescriptorMatch</a> &gt; &amp;matches, const std::pair&lt; unsigned int, unsigned int &gt; &amp;working_views, const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">datastructure::Transform3Df</a> &amp;poseView1, const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">datastructure::Transform3Df</a> &amp;poseView2, std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">datastructure::CloudPoint</a> &gt;&gt; &amp;pcloud)=0</td></tr>
+<tr class="memdesc:a20f93319accc38a25192adf6d15a5b1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">triangulate pairs of points 2d captured from two views with differents poses (with respect to the camera instrinsic parameters).  <a href="#a20f93319accc38a25192adf6d15a5b1b">More...</a><br /></td></tr>
+<tr class="separator:a20f93319accc38a25192adf6d15a5b1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c54414951058fe75c5cf09e5dcad21b"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1map_1_1_i_triangulator.html#a6c54414951058fe75c5cf09e5dcad21b">triangulate</a> (const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keyframe.html">datastructure::Keyframe</a> &gt; &amp;curKeyframe, const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_match.html">datastructure::DescriptorMatch</a> &gt; &amp;matches, std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">datastructure::CloudPoint</a> &gt;&gt; &amp;pcloud)=0</td></tr>
+<tr class="memdesc:a6c54414951058fe75c5cf09e5dcad21b"><td class="mdescLeft">&#160;</td><td class="mdescRight">triangulate pairs of points 2d captured from current keyframe with its reference keyframe using their poses (with respect to the camera instrinsic parameters).  <a href="#a6c54414951058fe75c5cf09e5dcad21b">More...</a><br /></td></tr>
+<tr class="separator:a6c54414951058fe75c5cf09e5dcad21b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><b>Triangulates a set of 2D-2D points correspondances with known respective camera poses.</b> <code>UUID: 3a01b0e9-9a76-43f5-97b3-85bb6979b953</code> </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="aeac6277cb3fae4422c4a2d7eeec11090"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeac6277cb3fae4422c4a2d7eeec11090">&#9670;&nbsp;</a></span>setCameraParameters()</h2>
+<a id="a727e34ca5e032ca1359d138d46d718b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a727e34ca5e032ca1359d138d46d718b0">&#9670;&nbsp;</a></span>setCameraParameters()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -136,13 +136,13 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
         <tr>
           <td class="memname">virtual void SolAR::api::solver::map::ITriangulator::setCameraParameters </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="_camera_definitions_8h.html#a0ea650513b55059459f5d5771c5bf5cb">CamCalibration</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="_camera_definitions_8h.html#a0ea650513b55059459f5d5771c5bf5cb">datastructure::CamCalibration</a> &amp;&#160;</td>
           <td class="paramname"><em>intrinsicParams</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="_camera_definitions_8h.html#ad85d877532df3da45a970d47735e34bc">CamDistortion</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="_camera_definitions_8h.html#ad85d877532df3da45a970d47735e34bc">datastructure::CamDistortion</a> &amp;&#160;</td>
           <td class="paramname"><em>distorsionParams</em>&#160;</td>
         </tr>
         <tr>
@@ -161,16 +161,16 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <p>this method is used to set intrinsic parameters and distorsion of the camera </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">Camera</td><td>calibration matrix parameters. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">Camera</td><td>distorsion parameters. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">intrinsicParams</td><td>camera calibration matrix parameters. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">distorsionParams</td><td>camera distorsion parameters. </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a id="ac0600e32ea3a10b2768276319c6d717c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac0600e32ea3a10b2768276319c6d717c">&#9670;&nbsp;</a></span>triangulate() <span class="overload">[1/4]</span></h2>
+<a id="a4d707253855d1c2edd4edc206f455a56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d707253855d1c2edd4edc206f455a56">&#9670;&nbsp;</a></span>triangulate() <span class="overload">[1/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -181,19 +181,19 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
         <tr>
           <td class="memname">virtual double SolAR::api::solver::map::ITriangulator::triangulate </td>
           <td>(</td>
-          <td class="paramtype">const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point2_df.html">Point2Df</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point2_df.html">datastructure::Point2Df</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>pointsView1</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point2_df.html">Point2Df</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point2_df.html">datastructure::Point2Df</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>pointView2</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_match.html">DescriptorMatch</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_match.html">datastructure::DescriptorMatch</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>matches</em>, </td>
         </tr>
         <tr>
@@ -205,19 +205,19 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">datastructure::Transform3Df</a> &amp;&#160;</td>
           <td class="paramname"><em>poseView1</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">datastructure::Transform3Df</a> &amp;&#160;</td>
           <td class="paramname"><em>poseView2</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">CloudPoint</a> &gt;&gt; &amp;&#160;</td>
+          <td class="paramtype">std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">datastructure::CloudPoint</a> &gt;&gt; &amp;&#160;</td>
           <td class="paramname"><em>pcloud</em>&#160;</td>
         </tr>
         <tr>
@@ -236,13 +236,13 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <p>triangulate pairs of points 2d captured from two views with differents poses (with respect to the camera instrinsic parameters). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">pointsView1,set</td><td>of 2D points seen in view_1. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">pointsView2,set</td><td>of 2D points seen in view_2. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">matches,the</td><td>matches between the keypoints of the view1 and the keypoints of the view 2. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">working_views,a</td><td>pair representing the id of the two views </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">poseView1,camera</td><td>pose in the world coordinates system of the view_1 expressed as a Transform3D. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">poseView2,camera</td><td>pose in the world coordinates system of the view_2 expressed as a Transform3D.. </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">pcloud,set</td><td>of triangulated 3d_points. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pointsView1</td><td>set of 2D points seen in view_1. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pointsView2</td><td>set of 2D points seen in view_2. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">matches</td><td>the matches between the keypoints of the view1 and the keypoints of the view 2. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">working_views</td><td>a pair representing the id of the two views </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">poseView1</td><td>camera pose in the world coordinates system of the view_1 expressed as a Transform3D. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">poseView2</td><td>camera pose in the world coordinates system of the view_2 expressed as a Transform3D.. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">pcloud</td><td>set of triangulated 3d_points. </td></tr>
   </table>
   </dd>
 </dl>
@@ -250,8 +250,8 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 
 </div>
 </div>
-<a id="ad2830b9d9e6257a666c1f7afd76f2ad3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad2830b9d9e6257a666c1f7afd76f2ad3">&#9670;&nbsp;</a></span>triangulate() <span class="overload">[2/4]</span></h2>
+<a id="a11bebc2d35fb2d34b63093c1d03e0d1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11bebc2d35fb2d34b63093c1d03e0d1a">&#9670;&nbsp;</a></span>triangulate() <span class="overload">[2/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -262,19 +262,19 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
         <tr>
           <td class="memname">virtual double SolAR::api::solver::map::ITriangulator::triangulate </td>
           <td>(</td>
-          <td class="paramtype">const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html">Keypoint</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html">datastructure::Keypoint</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>keypointsView1</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html">Keypoint</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html">datastructure::Keypoint</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>keypointsView2</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_match.html">DescriptorMatch</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_match.html">datastructure::DescriptorMatch</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>matches</em>, </td>
         </tr>
         <tr>
@@ -286,19 +286,19 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">datastructure::Transform3Df</a> &amp;&#160;</td>
           <td class="paramname"><em>poseView1</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">datastructure::Transform3Df</a> &amp;&#160;</td>
           <td class="paramname"><em>poseView2</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">CloudPoint</a> &gt;&gt; &amp;&#160;</td>
+          <td class="paramtype">std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">datastructure::CloudPoint</a> &gt;&gt; &amp;&#160;</td>
           <td class="paramname"><em>pcloud</em>&#160;</td>
         </tr>
         <tr>
@@ -317,13 +317,13 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <p>triangulate pairs of points 2d captured from two views with differents poses (with respect to the camera instrinsic parameters). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">keypointsView1,set</td><td>of keypoints seen in view_1. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">keypointsView2,set</td><td>of keypoints seen in view_2. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">matches,the</td><td>matches between the keypoints of the view1 and the keypoints of the view 2. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">working_views,a</td><td>pair representing the id of the two views </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">poseView1,camera</td><td>pose in the world coordinates system of the view_1 expressed as a Transform3D. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">poseView2,camera</td><td>pose in the world coordinates system of the view_2 expressed as a Transform3D.. </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">pcloud,set</td><td>of triangulated 3d_points. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">keypointsView1</td><td>set of keypoints seen in view_1. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">keypointsView2</td><td>set of keypoints seen in view_2. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">matches</td><td>the matches between the keypoints of the view1 and the keypoints of the view 2. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">working_views</td><td>a pair representing the id of the two views </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">poseView1</td><td>camera pose in the world coordinates system of the view_1 expressed as a Transform3D. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">poseView2</td><td>camera pose in the world coordinates system of the view_2 expressed as a Transform3D.. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">pcloud</td><td>set of triangulated 3d_points. </td></tr>
   </table>
   </dd>
 </dl>
@@ -331,8 +331,8 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 
 </div>
 </div>
-<a id="a30a6773cf9fbbd751bccb4f1ec28614d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a30a6773cf9fbbd751bccb4f1ec28614d">&#9670;&nbsp;</a></span>triangulate() <span class="overload">[3/4]</span></h2>
+<a id="a20f93319accc38a25192adf6d15a5b1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20f93319accc38a25192adf6d15a5b1b">&#9670;&nbsp;</a></span>triangulate() <span class="overload">[3/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -343,31 +343,31 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
         <tr>
           <td class="memname">virtual double SolAR::api::solver::map::ITriangulator::triangulate </td>
           <td>(</td>
-          <td class="paramtype">const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html">Keypoint</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html">datastructure::Keypoint</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>keypointsView1</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html">Keypoint</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html">datastructure::Keypoint</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>keypointsView2</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_buffer.html">DescriptorBuffer</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_buffer.html">datastructure::DescriptorBuffer</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>descriptor1</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_buffer.html">DescriptorBuffer</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_buffer.html">datastructure::DescriptorBuffer</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>descriptor2</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_match.html">DescriptorMatch</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_match.html">datastructure::DescriptorMatch</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>matches</em>, </td>
         </tr>
         <tr>
@@ -379,19 +379,19 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">datastructure::Transform3Df</a> &amp;&#160;</td>
           <td class="paramname"><em>poseView1</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">datastructure::Transform3Df</a> &amp;&#160;</td>
           <td class="paramname"><em>poseView2</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">CloudPoint</a> &gt;&gt; &amp;&#160;</td>
+          <td class="paramtype">std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">datastructure::CloudPoint</a> &gt;&gt; &amp;&#160;</td>
           <td class="paramname"><em>pcloud</em>&#160;</td>
         </tr>
         <tr>
@@ -410,15 +410,15 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <p>triangulate pairs of points 2d captured from two views with differents poses (with respect to the camera instrinsic parameters). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">pointsView1,set</td><td>of keypoints seen in view_1. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">pointsView2,set</td><td>of keypoints seen in view_2. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">descriptor1,set</td><td>of descriptors in view_1. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">descriptor2,set</td><td>of descriptors in view_2. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">matches,the</td><td>matches between the keypoints of the view1 and the keypoints of the view 2. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">working_views,a</td><td>pair representing the id of the two views </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">poseView1,Camera</td><td>pose in the world coordinates system of the view_1 expressed as a Transform3D. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">poseView2,Camera</td><td>pose in the world coordinates system of the view_2 expressed as a Transform3D.. </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">pcloud,Set</td><td>of triangulated 3d_points. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pointsView1</td><td>set of keypoints seen in view_1. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pointsView2</td><td>set of keypoints seen in view_2. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">descriptor1</td><td>set of descriptors in view_1. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">descriptor2</td><td>set of descriptors in view_2. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">matches</td><td>the matches between the keypoints of the view1 and the keypoints of the view 2. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">working_views</td><td>a pair representing the id of the two views </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">poseView1</td><td>Camera pose in the world coordinates system of the view_1 expressed as a Transform3D. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">poseView2</td><td>Camera pose in the world coordinates system of the view_2 expressed as a Transform3D.. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">pcloud</td><td>Set of triangulated 3d_points. </td></tr>
   </table>
   </dd>
 </dl>
@@ -426,8 +426,8 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 
 </div>
 </div>
-<a id="a8cbab8bd3f2c7ca6618fcbba48772a6f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8cbab8bd3f2c7ca6618fcbba48772a6f">&#9670;&nbsp;</a></span>triangulate() <span class="overload">[4/4]</span></h2>
+<a id="a6c54414951058fe75c5cf09e5dcad21b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c54414951058fe75c5cf09e5dcad21b">&#9670;&nbsp;</a></span>triangulate() <span class="overload">[4/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -438,19 +438,19 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
         <tr>
           <td class="memname">virtual double SolAR::api::solver::map::ITriangulator::triangulate </td>
           <td>(</td>
-          <td class="paramtype">const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keyframe.html">Keyframe</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keyframe.html">datastructure::Keyframe</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>curKeyframe</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_match.html">DescriptorMatch</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_match.html">datastructure::DescriptorMatch</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>matches</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">CloudPoint</a> &gt;&gt; &amp;&#160;</td>
+          <td class="paramtype">std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">datastructure::CloudPoint</a> &gt;&gt; &amp;&#160;</td>
           <td class="paramname"><em>pcloud</em>&#160;</td>
         </tr>
         <tr>
@@ -469,9 +469,9 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <p>triangulate pairs of points 2d captured from current keyframe with its reference keyframe using their poses (with respect to the camera instrinsic parameters). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">curKeyframe,current</td><td>keyframe. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">matches,the</td><td>matches between the keypoints of the view1 and the keypoints of the view 2. </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">pcloud,Set</td><td>of triangulated 3d_points. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">curKeyframe</td><td>current keyframe. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">matches</td><td>the matches between the keypoints of the view1 and the keypoints of the view 2. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">pcloud</td><td>Set of triangulated 3d_points. </td></tr>
   </table>
   </dd>
 </dl>

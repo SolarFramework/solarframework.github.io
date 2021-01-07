@@ -105,15 +105,15 @@ Public Member Functions</h2></td></tr>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1features_1_1_i_s_b_pattern_re_indexer.html#a18e882b911df9168a84057fb60b1c972">~ISBPatternReIndexer</a> ()=default</td></tr>
 <tr class="memdesc:a18e882b911df9168a84057fb60b1c972"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sol_a_r_1_1api_1_1features_1_1_i_s_b_pattern_re_indexer.html" title="Gives both the 4 corners of a pattern in its reference coordinate system (pixels, cells...">ISBPatternReIndexer</a> default destructor. <br /></td></tr>
 <tr class="separator:a18e882b911df9168a84057fb60b1c972"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa9aa688224a7a8bed0f9a2957bae3523"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1features_1_1_i_s_b_pattern_re_indexer.html#aa9aa688224a7a8bed0f9a2957bae3523">reindex</a> (const std::vector&lt; <a class="el" href="_geometry_definitions_8h.html#a93a5599e3547377b68d4dc90e24a4ba1">Contour2Df</a> &gt; &amp;candidateContours, const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_match.html">DescriptorMatch</a> &gt; &amp;matches, std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point2_df.html">Point2Df</a> &gt; &amp;patternPoints, std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point2_df.html">Point2Df</a> &gt; &amp;imagePoints)=0</td></tr>
-<tr class="memdesc:aa9aa688224a7a8bed0f9a2957bae3523"><td class="mdescLeft">&#160;</td><td class="mdescRight">From a set of Squared Binary Pattern matches as well as the contours of the candidate patterns extracted from the current image, this method provides both the 4 corners of a pattern in its reference coordinate system (pixels, cells, etc.) and the 4 corners in pixels of this pattern in the current image.  <a href="#aa9aa688224a7a8bed0f9a2957bae3523">More...</a><br /></td></tr>
-<tr class="separator:aa9aa688224a7a8bed0f9a2957bae3523"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94d021a3106fdd511aa432c3bb999c66"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1features_1_1_i_s_b_pattern_re_indexer.html#a94d021a3106fdd511aa432c3bb999c66">reindex</a> (const std::vector&lt; <a class="el" href="_geometry_definitions_8h.html#a93a5599e3547377b68d4dc90e24a4ba1">datastructure::Contour2Df</a> &gt; &amp;candidateContours, const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_match.html">datastructure::DescriptorMatch</a> &gt; &amp;matches, std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point2_df.html">datastructure::Point2Df</a> &gt; &amp;patternPoints, std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point2_df.html">datastructure::Point2Df</a> &gt; &amp;imagePoints)=0</td></tr>
+<tr class="memdesc:a94d021a3106fdd511aa432c3bb999c66"><td class="mdescLeft">&#160;</td><td class="mdescRight">From a set of Squared Binary Pattern matches as well as the contours of the candidate patterns extracted from the current image, this method provides both the 4 corners of a pattern in its reference coordinate system (pixels, cells, etc.) and the 4 corners in pixels of this pattern in the current image.  <a href="#a94d021a3106fdd511aa432c3bb999c66">More...</a><br /></td></tr>
+<tr class="separator:a94d021a3106fdd511aa432c3bb999c66"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><b>Gives both the 4 corners of a pattern in its reference coordinate system (pixels, cells, etc.) and the 4 corners in pixels of this pattern in the current image.</b> <code>UUID: 79c5b810-d557-11e7-9296-cec278b6b50a</code> </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="aa9aa688224a7a8bed0f9a2957bae3523"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa9aa688224a7a8bed0f9a2957bae3523">&#9670;&nbsp;</a></span>reindex()</h2>
+<a id="a94d021a3106fdd511aa432c3bb999c66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94d021a3106fdd511aa432c3bb999c66">&#9670;&nbsp;</a></span>reindex()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -124,25 +124,25 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
         <tr>
           <td class="memname">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a> SolAR::api::features::ISBPatternReIndexer::reindex </td>
           <td>(</td>
-          <td class="paramtype">const std::vector&lt; <a class="el" href="_geometry_definitions_8h.html#a93a5599e3547377b68d4dc90e24a4ba1">Contour2Df</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="_geometry_definitions_8h.html#a93a5599e3547377b68d4dc90e24a4ba1">datastructure::Contour2Df</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>candidateContours</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_match.html">DescriptorMatch</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_match.html">datastructure::DescriptorMatch</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>matches</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point2_df.html">Point2Df</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point2_df.html">datastructure::Point2Df</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>patternPoints</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point2_df.html">Point2Df</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point2_df.html">datastructure::Point2Df</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>imagePoints</em>&#160;</td>
         </tr>
         <tr>

@@ -111,16 +111,16 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <tr class="memitem:a1a49d2dae1e46fe7efbd4af827fd0848"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_sol_a_r_1_1api_1_1features_1_1_i_keypoint_detector.html#ac4e2a7c6812f06a83fa6fe15349ee4f9">IKeypointDetector::KeypointDetectorType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1features_1_1_i_keypoint_detector_region.html#a1a49d2dae1e46fe7efbd4af827fd0848">getType</a> ()=0</td></tr>
 <tr class="memdesc:a1a49d2dae1e46fe7efbd4af827fd0848"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the type of method used to detect keypoints in the image.  <a href="#a1a49d2dae1e46fe7efbd4af827fd0848">More...</a><br /></td></tr>
 <tr class="separator:a1a49d2dae1e46fe7efbd4af827fd0848"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af01285dc4d744f019f5c86865629a103"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1features_1_1_i_keypoint_detector_region.html#af01285dc4d744f019f5c86865629a103">detect</a> (const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt; image, const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point2_df.html">Point2Df</a> &gt; &amp;contours, std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html">Keypoint</a> &gt; &amp;keypoints)=0</td></tr>
-<tr class="memdesc:af01285dc4d744f019f5c86865629a103"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method detects keypoints in an input Image.  <a href="#af01285dc4d744f019f5c86865629a103">More...</a><br /></td></tr>
-<tr class="separator:af01285dc4d744f019f5c86865629a103"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18b40cfa7e01c82e4366afdd243c92d1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1features_1_1_i_keypoint_detector_region.html#a18b40cfa7e01c82e4366afdd243c92d1">detect</a> (const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">datastructure::Image</a> &gt; image, const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point2_df.html">datastructure::Point2Df</a> &gt; &amp;contours, std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html">datastructure::Keypoint</a> &gt; &amp;keypoints)=0</td></tr>
+<tr class="memdesc:a18b40cfa7e01c82e4366afdd243c92d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method detects keypoints in an input Image.  <a href="#a18b40cfa7e01c82e4366afdd243c92d1">More...</a><br /></td></tr>
+<tr class="separator:a18b40cfa7e01c82e4366afdd243c92d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><b>Detects the keypoints from given region of an image.</b> <code>UUID: 64ccce51-b445-4ec5-a0fa-44156e8bc370</code> </p>
 <p>This class provides a method to detect the keypoint from an given region of an image using different kind of method (SURF, ORB, SIFT, etc.). </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="af01285dc4d744f019f5c86865629a103"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af01285dc4d744f019f5c86865629a103">&#9670;&nbsp;</a></span>detect()</h2>
+<a id="a18b40cfa7e01c82e4366afdd243c92d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18b40cfa7e01c82e4366afdd243c92d1">&#9670;&nbsp;</a></span>detect()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -131,19 +131,19 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
         <tr>
           <td class="memname">virtual void SolAR::api::features::IKeypointDetectorRegion::detect </td>
           <td>(</td>
-          <td class="paramtype">const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt;&#160;</td>
+          <td class="paramtype">const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">datastructure::Image</a> &gt;&#160;</td>
           <td class="paramname"><em>image</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point2_df.html">Point2Df</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point2_df.html">datastructure::Point2Df</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>contours</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html">Keypoint</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keypoint.html">datastructure::Keypoint</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>keypoints</em>&#160;</td>
         </tr>
         <tr>

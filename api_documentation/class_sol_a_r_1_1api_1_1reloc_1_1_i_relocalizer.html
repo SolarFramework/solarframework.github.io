@@ -105,19 +105,19 @@ Public Member Functions</h2></td></tr>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1reloc_1_1_i_relocalizer.html#ac62c739fa7a9ac9c3de51968f8bbaeca">~IRelocalizer</a> ()=default</td></tr>
 <tr class="memdesc:ac62c739fa7a9ac9c3de51968f8bbaeca"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sol_a_r_1_1api_1_1reloc_1_1_i_relocalizer.html" title="Returns a camera pose giving a frame. UUID: 3531a734-be88-11e8-a355-529269fb1459 ">IRelocalizer</a> default destructor. <br /></td></tr>
 <tr class="separator:ac62c739fa7a9ac9c3de51968f8bbaeca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a620dc8ae0085d8eeadd1d96ec91f18df"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1reloc_1_1_i_relocalizer.html#a620dc8ae0085d8eeadd1d96ec91f18df">addKeyframe</a> (const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keyframe.html">Keyframe</a> &gt; keyframe)=0</td></tr>
-<tr class="memdesc:a620dc8ae0085d8eeadd1d96ec91f18df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a keyframe containing a pose and its keypoints and descriptors to the relocalizer.  <a href="#a620dc8ae0085d8eeadd1d96ec91f18df">More...</a><br /></td></tr>
-<tr class="separator:a620dc8ae0085d8eeadd1d96ec91f18df"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a68b3bd96a7db96721455352f33122407"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1reloc_1_1_i_relocalizer.html#a68b3bd96a7db96721455352f33122407">relocalize</a> (const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_frame.html">Frame</a> &gt; frame, <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a> &amp;pose)=0</td></tr>
-<tr class="memdesc:a68b3bd96a7db96721455352f33122407"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the pose of the camera corresponding to the frame.  <a href="#a68b3bd96a7db96721455352f33122407">More...</a><br /></td></tr>
-<tr class="separator:a68b3bd96a7db96721455352f33122407"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f2c03db0d468914c520ae037a1263b5"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1reloc_1_1_i_relocalizer.html#a4f2c03db0d468914c520ae037a1263b5">addKeyframe</a> (const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keyframe.html">datastructure::Keyframe</a> &gt; keyframe)=0</td></tr>
+<tr class="memdesc:a4f2c03db0d468914c520ae037a1263b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a keyframe containing a pose and its keypoints and descriptors to the relocalizer.  <a href="#a4f2c03db0d468914c520ae037a1263b5">More...</a><br /></td></tr>
+<tr class="separator:a4f2c03db0d468914c520ae037a1263b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8b3f4e636708c1f57e9c20cf13a4701"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1reloc_1_1_i_relocalizer.html#ab8b3f4e636708c1f57e9c20cf13a4701">relocalize</a> (const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_frame.html">datastructure::Frame</a> &gt; frame, <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">datastructure::Transform3Df</a> &amp;pose)=0</td></tr>
+<tr class="memdesc:ab8b3f4e636708c1f57e9c20cf13a4701"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the pose of the camera corresponding to the frame.  <a href="#ab8b3f4e636708c1f57e9c20cf13a4701">More...</a><br /></td></tr>
+<tr class="separator:ab8b3f4e636708c1f57e9c20cf13a4701"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><b>Returns a camera pose giving a frame.</b> <code>UUID: 3531a734-be88-11e8-a355-529269fb1459</code> </p>
 <p>This class provides a solution to get the pose given a frame. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a620dc8ae0085d8eeadd1d96ec91f18df"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a620dc8ae0085d8eeadd1d96ec91f18df">&#9670;&nbsp;</a></span>addKeyframe()</h2>
+<a id="a4f2c03db0d468914c520ae037a1263b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f2c03db0d468914c520ae037a1263b5">&#9670;&nbsp;</a></span>addKeyframe()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -128,7 +128,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
         <tr>
           <td class="memname">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a> SolAR::api::reloc::IRelocalizer::addKeyframe </td>
           <td>(</td>
-          <td class="paramtype">const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keyframe.html">Keyframe</a> &gt;&#160;</td>
+          <td class="paramtype">const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keyframe.html">datastructure::Keyframe</a> &gt;&#160;</td>
           <td class="paramname"><em>keyframe</em></td><td>)</td>
           <td></td>
         </tr>
@@ -151,8 +151,8 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 
 </div>
 </div>
-<a id="a68b3bd96a7db96721455352f33122407"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a68b3bd96a7db96721455352f33122407">&#9670;&nbsp;</a></span>relocalize()</h2>
+<a id="ab8b3f4e636708c1f57e9c20cf13a4701"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8b3f4e636708c1f57e9c20cf13a4701">&#9670;&nbsp;</a></span>relocalize()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -163,13 +163,13 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
         <tr>
           <td class="memname">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a> SolAR::api::reloc::IRelocalizer::relocalize </td>
           <td>(</td>
-          <td class="paramtype">const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_frame.html">Frame</a> &gt;&#160;</td>
+          <td class="paramtype">const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_frame.html">datastructure::Frame</a> &gt;&#160;</td>
           <td class="paramname"><em>frame</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">datastructure::Transform3Df</a> &amp;&#160;</td>
           <td class="paramname"><em>pose</em>&#160;</td>
         </tr>
         <tr>

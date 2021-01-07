@@ -115,15 +115,15 @@ Public Member Functions</h2></td></tr>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1features_1_1_i_descriptor_matcher.html#a10167063150f983a12548f097c42f28f">~IDescriptorMatcher</a> ()</td></tr>
 <tr class="memdesc:a10167063150f983a12548f097c42f28f"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sol_a_r_1_1api_1_1features_1_1_i_descriptor_matcher.html" title="Matches two sets of descriptors together. UUID: dda38a40-c50a-4e7d-8433-0f04c7c98518 ...">IDescriptorMatcher</a> default destructor. <br /></td></tr>
 <tr class="separator:a10167063150f983a12548f097c42f28f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a518cbaba4c226ecc623a6e18064e7658"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_sol_a_r_1_1api_1_1features_1_1_i_descriptor_matcher.html#af72b90e0fac462a322b4b10854e5af13">RetCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1features_1_1_i_descriptor_matcher.html#a518cbaba4c226ecc623a6e18064e7658">match</a> (const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_buffer.html">DescriptorBuffer</a> &gt; descriptors1, const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_buffer.html">DescriptorBuffer</a> &gt; descriptors2, std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_match.html">DescriptorMatch</a> &gt; &amp;matches)=0</td></tr>
-<tr class="memdesc:a518cbaba4c226ecc623a6e18064e7658"><td class="mdescLeft">&#160;</td><td class="mdescRight">Match two sets of descriptors together.  <a href="#a518cbaba4c226ecc623a6e18064e7658">More...</a><br /></td></tr>
-<tr class="separator:a518cbaba4c226ecc623a6e18064e7658"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acf2f83149475bf7646803b916b667751"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_sol_a_r_1_1api_1_1features_1_1_i_descriptor_matcher.html#af72b90e0fac462a322b4b10854e5af13">RetCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1features_1_1_i_descriptor_matcher.html#acf2f83149475bf7646803b916b667751">match</a> (const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_buffer.html">DescriptorBuffer</a> &gt; descriptors1, const std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_buffer.html">DescriptorBuffer</a> &gt;&gt; &amp;descriptors2, std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_match.html">DescriptorMatch</a> &gt; &amp;matches)=0</td></tr>
-<tr class="memdesc:acf2f83149475bf7646803b916b667751"><td class="mdescLeft">&#160;</td><td class="mdescRight">Match two sets of descriptors together. The second set is organized in a vector of descriptors buffer and can be used if the descriptors have been extracted on subsets of an image.  <a href="#acf2f83149475bf7646803b916b667751">More...</a><br /></td></tr>
-<tr class="separator:acf2f83149475bf7646803b916b667751"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad294964f203cef9e71e8b1291e7abebd"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_sol_a_r_1_1api_1_1features_1_1_i_descriptor_matcher.html#af72b90e0fac462a322b4b10854e5af13">RetCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1features_1_1_i_descriptor_matcher.html#ad294964f203cef9e71e8b1291e7abebd">matchInRegion</a> (const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point2_df.html">Point2Df</a> &gt; &amp;points2D, const std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_buffer.html">DescriptorBuffer</a> &gt;&gt; &amp;descriptors, const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_frame.html">Frame</a> &gt; frame, std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_match.html">DescriptorMatch</a> &gt; &amp;matches, const float radius)</td></tr>
-<tr class="memdesc:ad294964f203cef9e71e8b1291e7abebd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Match each descriptor input with descriptors of a frame in a region. The searching space is a circle which is defined by a 2D center and a radius.  <a href="#ad294964f203cef9e71e8b1291e7abebd">More...</a><br /></td></tr>
-<tr class="separator:ad294964f203cef9e71e8b1291e7abebd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d5b438b4a64383910727ab13df93dc7"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_sol_a_r_1_1api_1_1features_1_1_i_descriptor_matcher.html#af72b90e0fac462a322b4b10854e5af13">RetCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1features_1_1_i_descriptor_matcher.html#a7d5b438b4a64383910727ab13df93dc7">match</a> (const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_buffer.html">datastructure::DescriptorBuffer</a> &gt; descriptors1, const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_buffer.html">datastructure::DescriptorBuffer</a> &gt; descriptors2, std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_match.html">datastructure::DescriptorMatch</a> &gt; &amp;matches)=0</td></tr>
+<tr class="memdesc:a7d5b438b4a64383910727ab13df93dc7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Match two sets of descriptors together.  <a href="#a7d5b438b4a64383910727ab13df93dc7">More...</a><br /></td></tr>
+<tr class="separator:a7d5b438b4a64383910727ab13df93dc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31270a93a2f83115da0c960f29b8519c"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_sol_a_r_1_1api_1_1features_1_1_i_descriptor_matcher.html#af72b90e0fac462a322b4b10854e5af13">RetCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1features_1_1_i_descriptor_matcher.html#a31270a93a2f83115da0c960f29b8519c">match</a> (const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_buffer.html">datastructure::DescriptorBuffer</a> &gt; descriptors1, const std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_buffer.html">datastructure::DescriptorBuffer</a> &gt;&gt; &amp;descriptors2, std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_match.html">datastructure::DescriptorMatch</a> &gt; &amp;matches)=0</td></tr>
+<tr class="memdesc:a31270a93a2f83115da0c960f29b8519c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Match two sets of descriptors together. The second set is organized in a vector of descriptors buffer and can be used if the descriptors have been extracted on subsets of an image.  <a href="#a31270a93a2f83115da0c960f29b8519c">More...</a><br /></td></tr>
+<tr class="separator:a31270a93a2f83115da0c960f29b8519c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82aa8af27cd98a72089204ee47a58d7f"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_sol_a_r_1_1api_1_1features_1_1_i_descriptor_matcher.html#af72b90e0fac462a322b4b10854e5af13">RetCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1features_1_1_i_descriptor_matcher.html#a82aa8af27cd98a72089204ee47a58d7f">matchInRegion</a> ([[maybe_unused]] const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point2_df.html">datastructure::Point2Df</a> &gt; &amp;points2D, [[maybe_unused]] const std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_buffer.html">datastructure::DescriptorBuffer</a> &gt;&gt; &amp;descriptors, [[maybe_unused]] const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_frame.html">datastructure::Frame</a> &gt; frame, [[maybe_unused]] std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_match.html">datastructure::DescriptorMatch</a> &gt; &amp;matches, [[maybe_unused]] const float radius=0.f, [[maybe_unused]] const float matchingDistanceMax=0.f)</td></tr>
+<tr class="memdesc:a82aa8af27cd98a72089204ee47a58d7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Match each descriptor input with descriptors of a frame in a region. The searching space is a circle which is defined by a 2D center and a radius.  <a href="#a82aa8af27cd98a72089204ee47a58d7f">More...</a><br /></td></tr>
+<tr class="separator:a82aa8af27cd98a72089204ee47a58d7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><b>Matches two sets of descriptors together.</b> <code>UUID: dda38a40-c50a-4e7d-8433-0f04c7c98518</code> </p>
@@ -154,8 +154,8 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a518cbaba4c226ecc623a6e18064e7658"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a518cbaba4c226ecc623a6e18064e7658">&#9670;&nbsp;</a></span>match() <span class="overload">[1/2]</span></h2>
+<a id="a7d5b438b4a64383910727ab13df93dc7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d5b438b4a64383910727ab13df93dc7">&#9670;&nbsp;</a></span>match() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -166,19 +166,19 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
         <tr>
           <td class="memname">virtual <a class="el" href="class_sol_a_r_1_1api_1_1features_1_1_i_descriptor_matcher.html#af72b90e0fac462a322b4b10854e5af13">RetCode</a> SolAR::api::features::IDescriptorMatcher::match </td>
           <td>(</td>
-          <td class="paramtype">const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_buffer.html">DescriptorBuffer</a> &gt;&#160;</td>
+          <td class="paramtype">const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_buffer.html">datastructure::DescriptorBuffer</a> &gt;&#160;</td>
           <td class="paramname"><em>descriptors1</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_buffer.html">DescriptorBuffer</a> &gt;&#160;</td>
+          <td class="paramtype">const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_buffer.html">datastructure::DescriptorBuffer</a> &gt;&#160;</td>
           <td class="paramname"><em>descriptors2</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_match.html">DescriptorMatch</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_match.html">datastructure::DescriptorMatch</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>matches</em>&#160;</td>
         </tr>
         <tr>
@@ -207,8 +207,8 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 
 </div>
 </div>
-<a id="acf2f83149475bf7646803b916b667751"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acf2f83149475bf7646803b916b667751">&#9670;&nbsp;</a></span>match() <span class="overload">[2/2]</span></h2>
+<a id="a31270a93a2f83115da0c960f29b8519c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31270a93a2f83115da0c960f29b8519c">&#9670;&nbsp;</a></span>match() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -219,19 +219,19 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
         <tr>
           <td class="memname">virtual <a class="el" href="class_sol_a_r_1_1api_1_1features_1_1_i_descriptor_matcher.html#af72b90e0fac462a322b4b10854e5af13">RetCode</a> SolAR::api::features::IDescriptorMatcher::match </td>
           <td>(</td>
-          <td class="paramtype">const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_buffer.html">DescriptorBuffer</a> &gt;&#160;</td>
+          <td class="paramtype">const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_buffer.html">datastructure::DescriptorBuffer</a> &gt;&#160;</td>
           <td class="paramname"><em>descriptors1</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_buffer.html">DescriptorBuffer</a> &gt;&gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_buffer.html">datastructure::DescriptorBuffer</a> &gt;&gt; &amp;&#160;</td>
           <td class="paramname"><em>descriptors2</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_match.html">DescriptorMatch</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_match.html">datastructure::DescriptorMatch</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>matches</em>&#160;</td>
         </tr>
         <tr>
@@ -260,8 +260,8 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 
 </div>
 </div>
-<a id="ad294964f203cef9e71e8b1291e7abebd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad294964f203cef9e71e8b1291e7abebd">&#9670;&nbsp;</a></span>matchInRegion()</h2>
+<a id="a82aa8af27cd98a72089204ee47a58d7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82aa8af27cd98a72089204ee47a58d7f">&#9670;&nbsp;</a></span>matchInRegion()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -272,32 +272,38 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
         <tr>
           <td class="memname">virtual <a class="el" href="class_sol_a_r_1_1api_1_1features_1_1_i_descriptor_matcher.html#af72b90e0fac462a322b4b10854e5af13">RetCode</a> SolAR::api::features::IDescriptorMatcher::matchInRegion </td>
           <td>(</td>
-          <td class="paramtype">const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point2_df.html">Point2Df</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">[[maybe_unused] ] const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point2_df.html">datastructure::Point2Df</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>points2D</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_buffer.html">DescriptorBuffer</a> &gt;&gt; &amp;&#160;</td>
+          <td class="paramtype">[[maybe_unused] ] const std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_buffer.html">datastructure::DescriptorBuffer</a> &gt;&gt; &amp;&#160;</td>
           <td class="paramname"><em>descriptors</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_frame.html">Frame</a> &gt;&#160;</td>
+          <td class="paramtype">[[maybe_unused] ] const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_frame.html">datastructure::Frame</a> &gt;&#160;</td>
           <td class="paramname"><em>frame</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_match.html">DescriptorMatch</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">[[maybe_unused] ] std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_descriptor_match.html">datastructure::DescriptorMatch</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>matches</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const float&#160;</td>
-          <td class="paramname"><em>radius</em>&#160;</td>
+          <td class="paramtype">[[maybe_unused] ] const float&#160;</td>
+          <td class="paramname"><em>radius</em> = <code>0.f</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">[[maybe_unused] ] const float&#160;</td>
+          <td class="paramname"><em>matchingDistanceMax</em> = <code>0.f</code>&#160;</td>
         </tr>
         <tr>
           <td></td>

@@ -92,13 +92,13 @@ Collaboration diagram for SolAR::api::input::files::IPointCloudLoader:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a35cdec293f7d6361c102bdf227722a60"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1files_1_1_i_point_cloud_loader.html#a35cdec293f7d6361c102bdf227722a60">load</a> (const std::string filepath, SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point_cloud.html">PointCloud</a> &gt; &amp;pointCloud)=0</td></tr>
-<tr class="memdesc:a35cdec293f7d6361c102bdf227722a60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load a PointCloud from a filepath (.pcd or .ply)  <a href="#a35cdec293f7d6361c102bdf227722a60">More...</a><br /></td></tr>
-<tr class="separator:a35cdec293f7d6361c102bdf227722a60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c4dba59bd8fa96932c96b346e76e4ad"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1files_1_1_i_point_cloud_loader.html#a0c4dba59bd8fa96932c96b346e76e4ad">load</a> (const std::string &amp;filepath, SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point_cloud.html">datastructure::PointCloud</a> &gt; &amp;pointCloud)=0</td></tr>
+<tr class="memdesc:a0c4dba59bd8fa96932c96b346e76e4ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load a PointCloud from a filepath (.pcd or .ply)  <a href="#a0c4dba59bd8fa96932c96b346e76e4ad">More...</a><br /></td></tr>
+<tr class="separator:a0c4dba59bd8fa96932c96b346e76e4ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a35cdec293f7d6361c102bdf227722a60"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a35cdec293f7d6361c102bdf227722a60">&#9670;&nbsp;</a></span>load()</h2>
+<a id="a0c4dba59bd8fa96932c96b346e76e4ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c4dba59bd8fa96932c96b346e76e4ad">&#9670;&nbsp;</a></span>load()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -109,13 +109,13 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a> SolAR::api::input::files::IPointCloudLoader::load </td>
           <td>(</td>
-          <td class="paramtype">const std::string&#160;</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>filepath</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point_cloud.html">PointCloud</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point_cloud.html">datastructure::PointCloud</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>pointCloud</em>&#160;</td>
         </tr>
         <tr>
@@ -135,7 +135,7 @@ Public Member Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">filepath</td><td>the path to the mesh file </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">pointCloud</td><td>to fill </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">pointCloud</td><td>the point cloud to fill </td></tr>
   </table>
   </dd>
 </dl>

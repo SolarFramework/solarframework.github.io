@@ -105,48 +105,55 @@ Public Member Functions</h2></td></tr>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera.html#aa3f5ba809fee6eaf9900806d39a0d016">~ICamera</a> ()=default</td></tr>
 <tr class="memdesc:aa3f5ba809fee6eaf9900806d39a0d016"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specify the <a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera.html" title="Grabs images captured in real-time by a video camera. UUID: 5ddc7df0-8377-437f-9c81-3643f7676a5b ...">ICamera</a> destructor class. <br /></td></tr>
 <tr class="separator:aa3f5ba809fee6eaf9900806d39a0d016"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab1b46c4dec4cd9ee198a6f977f7d7fbb"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera.html#ab1b46c4dec4cd9ee198a6f977f7d7fbb">getNextImage</a> (SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt; &amp;img)=0</td></tr>
-<tr class="memdesc:ab1b46c4dec4cd9ee198a6f977f7d7fbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fill the SRef img buffer with a new image captured by the camera device.  <a href="#ab1b46c4dec4cd9ee198a6f977f7d7fbb">More...</a><br /></td></tr>
-<tr class="separator:ab1b46c4dec4cd9ee198a6f977f7d7fbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a64862fc1b9c390d08bd28c56206b7961"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera.html#a64862fc1b9c390d08bd28c56206b7961">start</a> ()=0</td></tr>
-<tr class="memdesc:a64862fc1b9c390d08bd28c56206b7961"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start the acquisition device referenced by its device_id.  <a href="#a64862fc1b9c390d08bd28c56206b7961">More...</a><br /></td></tr>
-<tr class="separator:a64862fc1b9c390d08bd28c56206b7961"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a88aa99cb30f733032ff8ca7accb56cef"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera.html#a88aa99cb30f733032ff8ca7accb56cef">stop</a> ()=0</td></tr>
-<tr class="memdesc:a88aa99cb30f733032ff8ca7accb56cef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop the acquisition device.  <a href="#a88aa99cb30f733032ff8ca7accb56cef">More...</a><br /></td></tr>
-<tr class="separator:a88aa99cb30f733032ff8ca7accb56cef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0df17da65d1be71e79aea8a9d12bf854"><td class="memItemLeft" align="right" valign="top"><a id="a0df17da65d1be71e79aea8a9d12bf854"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera.html#a0df17da65d1be71e79aea8a9d12bf854">setResolution</a> (const <a class="el" href="struct_sol_a_r_1_1datastructure_1_1_sizei.html">Sizei</a> &amp;resolution)=0</td></tr>
-<tr class="memdesc:a0df17da65d1be71e79aea8a9d12bf854"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the acquisition device image resolution. <br /></td></tr>
-<tr class="separator:a0df17da65d1be71e79aea8a9d12bf854"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a55fe84f5c6ba7e2295bd589c84e4218d"><td class="memItemLeft" align="right" valign="top"><a id="a55fe84f5c6ba7e2295bd589c84e4218d"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera.html#a55fe84f5c6ba7e2295bd589c84e4218d">setIntrinsicParameters</a> (const <a class="el" href="_camera_definitions_8h.html#a0ea650513b55059459f5d5771c5bf5cb">CamCalibration</a> &amp;intrinsic_parameters)=0</td></tr>
-<tr class="memdesc:a55fe84f5c6ba7e2295bd589c84e4218d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the intrinsic camera parameters. <br /></td></tr>
-<tr class="separator:a55fe84f5c6ba7e2295bd589c84e4218d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa040d9c5da4582eb7b3c083ea4dff3c5"><td class="memItemLeft" align="right" valign="top"><a id="aa040d9c5da4582eb7b3c083ea4dff3c5"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera.html#aa040d9c5da4582eb7b3c083ea4dff3c5">setDistortionParameters</a> (const <a class="el" href="_camera_definitions_8h.html#ad85d877532df3da45a970d47735e34bc">CamDistortion</a> &amp;distortion_parameters)=0</td></tr>
-<tr class="memdesc:aa040d9c5da4582eb7b3c083ea4dff3c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the distortion intrinsic camera parameters. <br /></td></tr>
-<tr class="separator:aa040d9c5da4582eb7b3c083ea4dff3c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af9a3f036b3be443d0356e3c133729892"><td class="memItemLeft" align="right" valign="top"><a id="af9a3f036b3be443d0356e3c133729892"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera.html#af9a3f036b3be443d0356e3c133729892">setParameters</a> (const <a class="el" href="struct_sol_a_r_1_1datastructure_1_1_camera_parameters.html">CameraParameters</a> &amp;parameters)=0</td></tr>
-<tr class="memdesc:af9a3f036b3be443d0356e3c133729892"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the distortion and intrinsic camera parameters. <br /></td></tr>
-<tr class="separator:af9a3f036b3be443d0356e3c133729892"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6e1a9ae23a133ab78d0dcdb8677ac5ab"><td class="memItemLeft" align="right" valign="top"><a id="a6e1a9ae23a133ab78d0dcdb8677ac5ab"></a>
-virtual <a class="el" href="struct_sol_a_r_1_1datastructure_1_1_sizei.html">Sizei</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera.html#a6e1a9ae23a133ab78d0dcdb8677ac5ab">getResolution</a> ()=0</td></tr>
-<tr class="memdesc:a6e1a9ae23a133ab78d0dcdb8677ac5ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the acquisition device image resolution. <br /></td></tr>
-<tr class="separator:a6e1a9ae23a133ab78d0dcdb8677ac5ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a40046c744cd9992659763e3554818369"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="_camera_definitions_8h.html#a0ea650513b55059459f5d5771c5bf5cb">CamCalibration</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera.html#a40046c744cd9992659763e3554818369">getIntrinsicsParameters</a> ()=0</td></tr>
-<tr class="separator:a40046c744cd9992659763e3554818369"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9ac4c0f2761a18b74edfb5d1b067dc36"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="struct_sol_a_r_1_1datastructure_1_1_camera_parameters.html">CameraParameters</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera.html#a9ac4c0f2761a18b74edfb5d1b067dc36">getParameters</a> ()=0</td></tr>
-<tr class="separator:a9ac4c0f2761a18b74edfb5d1b067dc36"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a56c971491ecec29b5b5f882422b3cb80"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="_camera_definitions_8h.html#ad85d877532df3da45a970d47735e34bc">CamDistortion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera.html#a56c971491ecec29b5b5f882422b3cb80">getDistortionParameters</a> ()=0</td></tr>
-<tr class="separator:a56c971491ecec29b5b5f882422b3cb80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a5d96eb20eb8eface5220db1d84c9b0"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera.html#a6a5d96eb20eb8eface5220db1d84c9b0">getNextImage</a> (SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">datastructure::Image</a> &gt; &amp;img)=0</td></tr>
+<tr class="memdesc:a6a5d96eb20eb8eface5220db1d84c9b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fill the SRef img buffer with a new image captured by the camera device.  <a href="#a6a5d96eb20eb8eface5220db1d84c9b0">More...</a><br /></td></tr>
+<tr class="separator:a6a5d96eb20eb8eface5220db1d84c9b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fd225a776db72f94f7cc555ea229ba9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera.html#a1fd225a776db72f94f7cc555ea229ba9">setResolution</a> (const <a class="el" href="struct_sol_a_r_1_1datastructure_1_1_sizei.html">datastructure::Sizei</a> &amp;resolution)=0</td></tr>
+<tr class="memdesc:a1fd225a776db72f94f7cc555ea229ba9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the acquisition device image resolution.  <a href="#a1fd225a776db72f94f7cc555ea229ba9">More...</a><br /></td></tr>
+<tr class="separator:a1fd225a776db72f94f7cc555ea229ba9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac04dec3957b379c9115a3f1721900725"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera.html#ac04dec3957b379c9115a3f1721900725">setIntrinsicParameters</a> (const <a class="el" href="_camera_definitions_8h.html#a0ea650513b55059459f5d5771c5bf5cb">datastructure::CamCalibration</a> &amp;intrinsic_parameters)=0</td></tr>
+<tr class="memdesc:ac04dec3957b379c9115a3f1721900725"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the intrinsic camera parameters.  <a href="#ac04dec3957b379c9115a3f1721900725">More...</a><br /></td></tr>
+<tr class="separator:ac04dec3957b379c9115a3f1721900725"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab580af9d280e1eaaaab74d17f0b822c5"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera.html#ab580af9d280e1eaaaab74d17f0b822c5">setDistortionParameters</a> (const <a class="el" href="_camera_definitions_8h.html#ad85d877532df3da45a970d47735e34bc">datastructure::CamDistortion</a> &amp;distortion_parameters)=0</td></tr>
+<tr class="memdesc:ab580af9d280e1eaaaab74d17f0b822c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the distortion camera parameters.  <a href="#ab580af9d280e1eaaaab74d17f0b822c5">More...</a><br /></td></tr>
+<tr class="separator:ab580af9d280e1eaaaab74d17f0b822c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d0823a822331d803cbc3f9c2a883cd8"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera.html#a2d0823a822331d803cbc3f9c2a883cd8">setParameters</a> (const <a class="el" href="struct_sol_a_r_1_1datastructure_1_1_camera_parameters.html">datastructure::CameraParameters</a> &amp;parameters)=0</td></tr>
+<tr class="memdesc:a2d0823a822331d803cbc3f9c2a883cd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the distortion and intrinsic camera parameters.  <a href="#a2d0823a822331d803cbc3f9c2a883cd8">More...</a><br /></td></tr>
+<tr class="separator:a2d0823a822331d803cbc3f9c2a883cd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f9f7f2881fc1a8f154bc64d901f0750"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="struct_sol_a_r_1_1datastructure_1_1_sizei.html">datastructure::Sizei</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera.html#a0f9f7f2881fc1a8f154bc64d901f0750">getResolution</a> () const =0</td></tr>
+<tr class="memdesc:a0f9f7f2881fc1a8f154bc64d901f0750"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the acquisition device image resolution.  <a href="#a0f9f7f2881fc1a8f154bc64d901f0750">More...</a><br /></td></tr>
+<tr class="separator:a0f9f7f2881fc1a8f154bc64d901f0750"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31a9daf075f7cc4326c72087cdc2ecef"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="_camera_definitions_8h.html#a0ea650513b55059459f5d5771c5bf5cb">datastructure::CamCalibration</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera.html#a31a9daf075f7cc4326c72087cdc2ecef">getIntrinsicsParameters</a> () const =0</td></tr>
+<tr class="memdesc:a31a9daf075f7cc4326c72087cdc2ecef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the intrinsic camera parameters.  <a href="#a31a9daf075f7cc4326c72087cdc2ecef">More...</a><br /></td></tr>
+<tr class="separator:a31a9daf075f7cc4326c72087cdc2ecef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a386386876f607e27be4444ab6dcc83"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="struct_sol_a_r_1_1datastructure_1_1_camera_parameters.html">datastructure::CameraParameters</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera.html#a1a386386876f607e27be4444ab6dcc83">getParameters</a> () const =0</td></tr>
+<tr class="memdesc:a1a386386876f607e27be4444ab6dcc83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the camera parameters.  <a href="#a1a386386876f607e27be4444ab6dcc83">More...</a><br /></td></tr>
+<tr class="separator:a1a386386876f607e27be4444ab6dcc83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acae47847530497932e3cc518c7bbb78b"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="_camera_definitions_8h.html#ad85d877532df3da45a970d47735e34bc">datastructure::CamDistortion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera.html#acae47847530497932e3cc518c7bbb78b">getDistortionParameters</a> () const =0</td></tr>
+<tr class="memdesc:acae47847530497932e3cc518c7bbb78b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the distortion camera lens parameters.  <a href="#acae47847530497932e3cc518c7bbb78b">More...</a><br /></td></tr>
+<tr class="separator:acae47847530497932e3cc518c7bbb78b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_device"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_device')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_device.html">SolAR::api::input::devices::IDevice</a></td></tr>
+<tr class="memitem:a08f07ea4f389554861d7fa599ecac2c0 inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_device"><td class="memItemLeft" align="right" valign="top"><a id="a08f07ea4f389554861d7fa599ecac2c0"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_device.html#a08f07ea4f389554861d7fa599ecac2c0">IDevice</a> ()=default</td></tr>
+<tr class="memdesc:a08f07ea4f389554861d7fa599ecac2c0 inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specify the <a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_device.html" title="Manage any kind of device. UUID: d73c7b34-f6af-48f3-b65d-37a047929f4b ">IDevice</a> constructor class. <br /></td></tr>
+<tr class="separator:a08f07ea4f389554861d7fa599ecac2c0 inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7670fbfa23ffe86c65a4a19c1ec10701 inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_device"><td class="memItemLeft" align="right" valign="top"><a id="a7670fbfa23ffe86c65a4a19c1ec10701"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_device.html#a7670fbfa23ffe86c65a4a19c1ec10701">~IDevice</a> () override=default</td></tr>
+<tr class="memdesc:a7670fbfa23ffe86c65a4a19c1ec10701 inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specify the <a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_device.html" title="Manage any kind of device. UUID: d73c7b34-f6af-48f3-b65d-37a047929f4b ">IDevice</a> destructor class. <br /></td></tr>
+<tr class="separator:a7670fbfa23ffe86c65a4a19c1ec10701 inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f0737986f2526e7054d8032e30c31ff inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_device"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_device.html#a6f0737986f2526e7054d8032e30c31ff">start</a> ()=0</td></tr>
+<tr class="memdesc:a6f0737986f2526e7054d8032e30c31ff inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start the acquisition device referenced by its device_id.  <a href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_device.html#a6f0737986f2526e7054d8032e30c31ff">More...</a><br /></td></tr>
+<tr class="separator:a6f0737986f2526e7054d8032e30c31ff inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1d2e4e4d2542d520c18c382cc24679f inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_device"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_device.html#ae1d2e4e4d2542d520c18c382cc24679f">stop</a> ()=0</td></tr>
+<tr class="memdesc:ae1d2e4e4d2542d520c18c382cc24679f inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop the acquisition device.  <a href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_device.html#ae1d2e4e4d2542d520c18c382cc24679f">More...</a><br /></td></tr>
+<tr class="separator:ae1d2e4e4d2542d520c18c382cc24679f inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><b>Grabs images captured in real-time by a video camera.</b> <code>UUID: 5ddc7df0-8377-437f-9c81-3643f7676a5b</code> </p>
 <p>This class describes the interface of a camera capture device. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a56c971491ecec29b5b5f882422b3cb80"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a56c971491ecec29b5b5f882422b3cb80">&#9670;&nbsp;</a></span>getDistortionParameters()</h2>
+<a id="acae47847530497932e3cc518c7bbb78b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acae47847530497932e3cc518c7bbb78b">&#9670;&nbsp;</a></span>getDistortionParameters()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -155,10 +162,10 @@ virtual <a class="el" href="struct_sol_a_r_1_1datastructure_1_1_sizei.html">Size
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual const <a class="el" href="_camera_definitions_8h.html#ad85d877532df3da45a970d47735e34bc">CamDistortion</a>&amp; SolAR::api::input::devices::ICamera::getDistortionParameters </td>
+          <td class="memname">virtual const <a class="el" href="_camera_definitions_8h.html#ad85d877532df3da45a970d47735e34bc">datastructure::CamDistortion</a>&amp; SolAR::api::input::devices::ICamera::getDistortionParameters </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -167,12 +174,14 @@ virtual <a class="el" href="struct_sol_a_r_1_1datastructure_1_1_sizei.html">Size
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd>Return the distortion camera lens parameters </dd></dl>
+
+<p>Get the distortion camera lens parameters. </p>
+<dl class="section return"><dt>Returns</dt><dd>datastructure::CamDistortion the distortion camera lens parameters </dd></dl>
 
 </div>
 </div>
-<a id="a40046c744cd9992659763e3554818369"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a40046c744cd9992659763e3554818369">&#9670;&nbsp;</a></span>getIntrinsicsParameters()</h2>
+<a id="a31a9daf075f7cc4326c72087cdc2ecef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31a9daf075f7cc4326c72087cdc2ecef">&#9670;&nbsp;</a></span>getIntrinsicsParameters()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -181,10 +190,10 @@ virtual <a class="el" href="struct_sol_a_r_1_1datastructure_1_1_sizei.html">Size
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual const <a class="el" href="_camera_definitions_8h.html#a0ea650513b55059459f5d5771c5bf5cb">CamCalibration</a>&amp; SolAR::api::input::devices::ICamera::getIntrinsicsParameters </td>
+          <td class="memname">virtual const <a class="el" href="_camera_definitions_8h.html#a0ea650513b55059459f5d5771c5bf5cb">datastructure::CamCalibration</a>&amp; SolAR::api::input::devices::ICamera::getIntrinsicsParameters </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -193,12 +202,14 @@ virtual <a class="el" href="struct_sol_a_r_1_1datastructure_1_1_sizei.html">Size
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd>Return the intrinsic camera parameters </dd></dl>
+
+<p>Get the intrinsic camera parameters. </p>
+<dl class="section return"><dt>Returns</dt><dd>datastructure::CamCalibration the intrinsic camera parameters </dd></dl>
 
 </div>
 </div>
-<a id="ab1b46c4dec4cd9ee198a6f977f7d7fbb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab1b46c4dec4cd9ee198a6f977f7d7fbb">&#9670;&nbsp;</a></span>getNextImage()</h2>
+<a id="a6a5d96eb20eb8eface5220db1d84c9b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a5d96eb20eb8eface5220db1d84c9b0">&#9670;&nbsp;</a></span>getNextImage()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -209,7 +220,7 @@ virtual <a class="el" href="struct_sol_a_r_1_1datastructure_1_1_sizei.html">Size
         <tr>
           <td class="memname">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a> SolAR::api::input::devices::ICamera::getNextImage </td>
           <td>(</td>
-          <td class="paramtype">SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">datastructure::Image</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>img</em></td><td>)</td>
           <td></td>
         </tr>
@@ -222,12 +233,18 @@ virtual <a class="el" href="struct_sol_a_r_1_1datastructure_1_1_sizei.html">Size
 </div><div class="memdoc">
 
 <p>Fill the SRef img buffer with a new image captured by the camera device. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">img</td><td>the new image captured by the device </td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section return"><dt>Returns</dt><dd>FrameworkReturnCode to track sucessful or failing event. </dd></dl>
 
 </div>
 </div>
-<a id="a9ac4c0f2761a18b74edfb5d1b067dc36"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9ac4c0f2761a18b74edfb5d1b067dc36">&#9670;&nbsp;</a></span>getParameters()</h2>
+<a id="a1a386386876f607e27be4444ab6dcc83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a386386876f607e27be4444ab6dcc83">&#9670;&nbsp;</a></span>getParameters()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -236,36 +253,10 @@ virtual <a class="el" href="struct_sol_a_r_1_1datastructure_1_1_sizei.html">Size
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual const <a class="el" href="struct_sol_a_r_1_1datastructure_1_1_camera_parameters.html">CameraParameters</a>&amp; SolAR::api::input::devices::ICamera::getParameters </td>
+          <td class="memname">virtual const <a class="el" href="struct_sol_a_r_1_1datastructure_1_1_camera_parameters.html">datastructure::CameraParameters</a>&amp; SolAR::api::input::devices::ICamera::getParameters </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd>Return the camera parameters </dd></dl>
-
-</div>
-</div>
-<a id="a64862fc1b9c390d08bd28c56206b7961"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a64862fc1b9c390d08bd28c56206b7961">&#9670;&nbsp;</a></span>start()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a> SolAR::api::input::devices::ICamera::start </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -275,15 +266,13 @@ virtual <a class="el" href="struct_sol_a_r_1_1datastructure_1_1_sizei.html">Size
 </table>
 </div><div class="memdoc">
 
-<p>Start the acquisition device referenced by its device_id. </p>
-<dl class="section return"><dt>Returns</dt><dd>FrameworkReturnCode::<em>SUCCESS if sucessful, eiher FrameworkRetunrnCode::_ERROR</em>. </dd></dl>
-
-<p>Implemented in <a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_r_g_b_d_camera.html#a514a8c6818d08926fbd052b689e55be2">SolAR::api::input::devices::IRGBDCamera</a>.</p>
+<p>Get the camera parameters. </p>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="struct_sol_a_r_1_1datastructure_1_1_camera_parameters.html">datastructure::CameraParameters</a> the camera parameters </dd></dl>
 
 </div>
 </div>
-<a id="a88aa99cb30f733032ff8ca7accb56cef"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a88aa99cb30f733032ff8ca7accb56cef">&#9670;&nbsp;</a></span>stop()</h2>
+<a id="a0f9f7f2881fc1a8f154bc64d901f0750"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f9f7f2881fc1a8f154bc64d901f0750">&#9670;&nbsp;</a></span>getResolution()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -292,9 +281,38 @@ virtual <a class="el" href="struct_sol_a_r_1_1datastructure_1_1_sizei.html">Size
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a> SolAR::api::input::devices::ICamera::stop </td>
+          <td class="memname">virtual <a class="el" href="struct_sol_a_r_1_1datastructure_1_1_sizei.html">datastructure::Sizei</a> SolAR::api::input::devices::ICamera::getResolution </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the acquisition device image resolution. </p>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="struct_sol_a_r_1_1datastructure_1_1_sizei.html" title="A 2D size defined with integers. ">datastructure::Sizei</a> the acquisition device image resolution </dd></dl>
+
+</div>
+</div>
+<a id="ab580af9d280e1eaaaab74d17f0b822c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab580af9d280e1eaaaab74d17f0b822c5">&#9670;&nbsp;</a></span>setDistortionParameters()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void SolAR::api::input::devices::ICamera::setDistortionParameters </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="_camera_definitions_8h.html#ad85d877532df3da45a970d47735e34bc">datastructure::CamDistortion</a> &amp;&#160;</td>
+          <td class="paramname"><em>distortion_parameters</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -305,8 +323,115 @@ virtual <a class="el" href="struct_sol_a_r_1_1datastructure_1_1_sizei.html">Size
 </table>
 </div><div class="memdoc">
 
-<p>Stop the acquisition device. </p>
-<dl class="section return"><dt>Returns</dt><dd>FrameworkReturnCode::<em>SUCCESS if sucessful, eiher FrameworkRetunrnCode::_ERROR</em>. </dd></dl>
+<p>Set the distortion camera parameters. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">distortion_parameters</td><td>distortion camera parameters </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac04dec3957b379c9115a3f1721900725"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac04dec3957b379c9115a3f1721900725">&#9670;&nbsp;</a></span>setIntrinsicParameters()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void SolAR::api::input::devices::ICamera::setIntrinsicParameters </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="_camera_definitions_8h.html#a0ea650513b55059459f5d5771c5bf5cb">datastructure::CamCalibration</a> &amp;&#160;</td>
+          <td class="paramname"><em>intrinsic_parameters</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the intrinsic camera parameters. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">intrinsic_parameters</td><td>intrinsic camera parameters </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a2d0823a822331d803cbc3f9c2a883cd8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d0823a822331d803cbc3f9c2a883cd8">&#9670;&nbsp;</a></span>setParameters()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void SolAR::api::input::devices::ICamera::setParameters </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_sol_a_r_1_1datastructure_1_1_camera_parameters.html">datastructure::CameraParameters</a> &amp;&#160;</td>
+          <td class="paramname"><em>parameters</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the distortion and intrinsic camera parameters. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">parameters</td><td>distortion and intrinsic camera parameters </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a1fd225a776db72f94f7cc555ea229ba9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fd225a776db72f94f7cc555ea229ba9">&#9670;&nbsp;</a></span>setResolution()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void SolAR::api::input::devices::ICamera::setResolution </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_sol_a_r_1_1datastructure_1_1_sizei.html">datastructure::Sizei</a> &amp;&#160;</td>
+          <td class="paramname"><em>resolution</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the acquisition device image resolution. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">resolution</td><td>device image resolution </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

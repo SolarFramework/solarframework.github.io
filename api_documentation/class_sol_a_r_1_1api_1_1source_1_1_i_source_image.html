@@ -104,16 +104,16 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <tr class="memitem:ab718a5aaa4e0813ad0b6cc4756fa7afb"><td class="memItemLeft" align="right" valign="top">virtual SourceReturnCode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1source_1_1_i_source_image.html#ab718a5aaa4e0813ad0b6cc4756fa7afb">setInputTexture</a> (const void *sourceTexturehandle, const int width, const int height)=0</td></tr>
 <tr class="memdesc:ab718a5aaa4e0813ad0b6cc4756fa7afb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a new image coming from a third party.  <a href="#ab718a5aaa4e0813ad0b6cc4756fa7afb">More...</a><br /></td></tr>
 <tr class="separator:ab718a5aaa4e0813ad0b6cc4756fa7afb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab1c71ba15916116623303c57e6be4f41"><td class="memItemLeft" align="right" valign="top">virtual SourceReturnCode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1source_1_1_i_source_image.html#ab1c71ba15916116623303c57e6be4f41">getNextImage</a> (SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt; &amp;image)=0</td></tr>
-<tr class="memdesc:ab1c71ba15916116623303c57e6be4f41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a pointer to the texture buffer to update it with the new image when required.  <a href="#ab1c71ba15916116623303c57e6be4f41">More...</a><br /></td></tr>
-<tr class="separator:ab1c71ba15916116623303c57e6be4f41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a742239f93dfadb29b3b63847aab45de9"><td class="memItemLeft" align="right" valign="top">virtual SourceReturnCode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1source_1_1_i_source_image.html#a742239f93dfadb29b3b63847aab45de9">getNextImage</a> (SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">datastructure::Image</a> &gt; &amp;image) const =0</td></tr>
+<tr class="memdesc:a742239f93dfadb29b3b63847aab45de9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a pointer to the texture buffer to update it with the new image when required.  <a href="#a742239f93dfadb29b3b63847aab45de9">More...</a><br /></td></tr>
+<tr class="separator:a742239f93dfadb29b3b63847aab45de9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><b>A Source for an image, useful for AR video see-through pipelines.</b> <code>UUID: 06e2fc5d-39da-4486-b2a6-1d8bd788fa13</code> </p>
 <p>This interface allows to link a texture buffer from a third party to our pipeline </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="ab1c71ba15916116623303c57e6be4f41"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab1c71ba15916116623303c57e6be4f41">&#9670;&nbsp;</a></span>getNextImage()</h2>
+<a id="a742239f93dfadb29b3b63847aab45de9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a742239f93dfadb29b3b63847aab45de9">&#9670;&nbsp;</a></span>getNextImage()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -124,9 +124,9 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
         <tr>
           <td class="memname">virtual SourceReturnCode SolAR::api::source::ISourceImage::getNextImage </td>
           <td>(</td>
-          <td class="paramtype">SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">datastructure::Image</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>image</em></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -190,7 +190,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <p>Set a new image coming from a third party. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">sourceTexturehandle.</td><td>Texture buffer from third party like Unity </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">sourceTexturehandle</td><td>Texture buffer from third party like Unity </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">width</td><td>of the image coming from the third party like Unity </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">height</td><td>of the image coming from the third party like Unity </td></tr>
   </table>

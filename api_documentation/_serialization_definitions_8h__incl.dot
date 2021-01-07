@@ -22,9 +22,11 @@ digraph "interfaces/core/SerializationDefinitions.h"
   Node0 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node9 [label="boost/serialization\l/string.hpp",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
   Node0 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node10 [label="boost/uuid/uuid_serialize.hpp",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node10 [label="boost/serialization\l/binary_object.hpp",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
   Node0 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node11 [label="boost/archive/binary\l_iarchive.hpp",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node11 [label="boost/uuid/uuid_serialize.hpp",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
   Node0 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node12 [label="boost/archive/binary\l_oarchive.hpp",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node12 [label="boost/archive/binary\l_iarchive.hpp",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node0 -> Node13 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="boost/archive/binary\l_oarchive.hpp",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
 }

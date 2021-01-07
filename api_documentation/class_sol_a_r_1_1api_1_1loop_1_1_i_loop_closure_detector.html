@@ -97,19 +97,26 @@ Collaboration diagram for SolAR::api::loop::ILoopClosureDetector:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a55fae45f8dca95ca200643d975e3eb5e"><td class="memItemLeft" align="right" valign="top"><a id="a55fae45f8dca95ca200643d975e3eb5e"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1loop_1_1_i_loop_closure_detector.html#a55fae45f8dca95ca200643d975e3eb5e">ILoopClosureDetector</a> ()=default</td></tr>
+<tr class="memdesc:a55fae45f8dca95ca200643d975e3eb5e"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sol_a_r_1_1api_1_1loop_1_1_i_loop_closure_detector.html" title="Detect a loop closure from a given keyframe. UUID: a267c93a-c1c6-11ea-b3de-0242ac130004 ...">ILoopClosureDetector</a> default constructor. <br /></td></tr>
+<tr class="separator:a55fae45f8dca95ca200643d975e3eb5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7f163cfee93040fd42da251d57c0a211"><td class="memItemLeft" align="right" valign="top"><a id="a7f163cfee93040fd42da251d57c0a211"></a>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1loop_1_1_i_loop_closure_detector.html#a7f163cfee93040fd42da251d57c0a211">~ILoopClosureDetector</a> ()=default</td></tr>
-<tr class="memdesc:a7f163cfee93040fd42da251d57c0a211"><td class="mdescLeft">&#160;</td><td class="mdescRight">~ILoopClosingDetector <br /></td></tr>
+<tr class="memdesc:a7f163cfee93040fd42da251d57c0a211"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sol_a_r_1_1api_1_1loop_1_1_i_loop_closure_detector.html" title="Detect a loop closure from a given keyframe. UUID: a267c93a-c1c6-11ea-b3de-0242ac130004 ...">ILoopClosureDetector</a> default destructor. <br /></td></tr>
 <tr class="separator:a7f163cfee93040fd42da251d57c0a211"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a099a15cb5b331be4ebc75b3cda2a2742"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1loop_1_1_i_loop_closure_detector.html#a099a15cb5b331be4ebc75b3cda2a2742">detect</a> (const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keyframe.html">Keyframe</a> &gt; &amp;queryKeyframe, SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keyframe.html">Keyframe</a> &gt; &amp;detectedLoopKeyframe, <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a> &amp;sim3Transform, std::vector&lt; std::pair&lt; uint32_t, uint32_t &gt;&gt; &amp;duplicatedPointsIndices)=0</td></tr>
-<tr class="memdesc:a099a15cb5b331be4ebc75b3cda2a2742"><td class="mdescLeft">&#160;</td><td class="mdescRight">Detect a loop closure from a given keyframe.  <a href="#a099a15cb5b331be4ebc75b3cda2a2742">More...</a><br /></td></tr>
-<tr class="separator:a099a15cb5b331be4ebc75b3cda2a2742"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0bda6cfa553adc606176b72f2099b33"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1loop_1_1_i_loop_closure_detector.html#aa0bda6cfa553adc606176b72f2099b33">setCameraParameters</a> (const <a class="el" href="_camera_definitions_8h.html#a0ea650513b55059459f5d5771c5bf5cb">datastructure::CamCalibration</a> &amp;intrinsicParams, const <a class="el" href="_camera_definitions_8h.html#ad85d877532df3da45a970d47735e34bc">datastructure::CamDistortion</a> &amp;distortionParams)=0</td></tr>
+<tr class="memdesc:aa0bda6cfa553adc606176b72f2099b33"><td class="mdescLeft">&#160;</td><td class="mdescRight">this method is used to set intrinsic parameters and distorsion of the camera  <a href="#aa0bda6cfa553adc606176b72f2099b33">More...</a><br /></td></tr>
+<tr class="separator:aa0bda6cfa553adc606176b72f2099b33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b49138e3ad8d59b8ead9d38484fa528"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1loop_1_1_i_loop_closure_detector.html#a4b49138e3ad8d59b8ead9d38484fa528">detect</a> (const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keyframe.html">datastructure::Keyframe</a> &gt; queryKeyframe, SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keyframe.html">datastructure::Keyframe</a> &gt; &amp;detectedLoopKeyframe, <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">datastructure::Transform3Df</a> &amp;sim3Transform, std::vector&lt; std::pair&lt; uint32_t, uint32_t &gt;&gt; &amp;duplicatedPointsIndices) const =0</td></tr>
+<tr class="memdesc:a4b49138e3ad8d59b8ead9d38484fa528"><td class="mdescLeft">&#160;</td><td class="mdescRight">Detect a loop closure from a given keyframe.  <a href="#a4b49138e3ad8d59b8ead9d38484fa528">More...</a><br /></td></tr>
+<tr class="separator:a4b49138e3ad8d59b8ead9d38484fa528"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><b>Detect a loop closure from a given keyframe.</b> <code>UUID: a267c93a-c1c6-11ea-b3de-0242ac130004</code> </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a099a15cb5b331be4ebc75b3cda2a2742"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a099a15cb5b331be4ebc75b3cda2a2742">&#9670;&nbsp;</a></span>detect()</h2>
+<a id="a4b49138e3ad8d59b8ead9d38484fa528"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b49138e3ad8d59b8ead9d38484fa528">&#9670;&nbsp;</a></span>detect()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -120,19 +127,19 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
         <tr>
           <td class="memname">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a> SolAR::api::loop::ILoopClosureDetector::detect </td>
           <td>(</td>
-          <td class="paramtype">const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keyframe.html">Keyframe</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keyframe.html">datastructure::Keyframe</a> &gt;&#160;</td>
           <td class="paramname"><em>queryKeyframe</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keyframe.html">Keyframe</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keyframe.html">datastructure::Keyframe</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>detectedLoopKeyframe</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">datastructure::Transform3Df</a> &amp;&#160;</td>
           <td class="paramname"><em>sim3Transform</em>, </td>
         </tr>
         <tr>
@@ -144,7 +151,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td></td>
+          <td></td><td> const</td>
         </tr>
       </table>
   </td>
@@ -159,12 +166,57 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">queryKeyframe</td><td>the query keyframe. </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">detectedLoopKeyframe</td><td>the detected loop keyframe. </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">sim3Transform</td><td>: 3D similarity transformation (Sim(3)) from query keyframe to the detected loop keyframe. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">sim3Transform</td><td>3D similarity transformation (Sim(3)) from query keyframe to the detected loop keyframe. </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">duplicatedPointsIndices</td><td>indices of duplicated cloud points. The first index is the id of point cloud seen from the detected loop keyframe. The second one is id of point cloud seen from the query keyframe </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>FrameworkReturnCode::<em>SUCCESS if detect a loop closure, else FrameworkReturnCode::_ERROR</em> </dd></dl>
+
+</div>
+</div>
+<a id="aa0bda6cfa553adc606176b72f2099b33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0bda6cfa553adc606176b72f2099b33">&#9670;&nbsp;</a></span>setCameraParameters()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void SolAR::api::loop::ILoopClosureDetector::setCameraParameters </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="_camera_definitions_8h.html#a0ea650513b55059459f5d5771c5bf5cb">datastructure::CamCalibration</a> &amp;&#160;</td>
+          <td class="paramname"><em>intrinsicParams</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="_camera_definitions_8h.html#ad85d877532df3da45a970d47735e34bc">datastructure::CamDistortion</a> &amp;&#160;</td>
+          <td class="paramname"><em>distortionParams</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>this method is used to set intrinsic parameters and distorsion of the camera </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">intrinsicParams</td><td>Camera calibration matrix parameters. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">distortionParams</td><td>Camera distortion parameters. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

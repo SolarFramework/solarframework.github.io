@@ -71,12 +71,14 @@ $(function() {
   <div class="summary">
 <a href="#namespaces">Namespaces</a> &#124;
 <a href="#define-members">Macros</a> &#124;
-<a href="#typedef-members">Typedefs</a>  </div>
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">MathDefinitions.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;Eigen/Eigen&gt;</code><br />
+<code>#include &lt;<a class="el" href="_serialization_definitions_8h_source.html">core/SerializationDefinitions.h</a>&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for MathDefinitions.h:</div>
 <div class="dyncontent">
@@ -169,6 +171,17 @@ template&lt;class T &gt; </td></tr>
 typedef Quaternion&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_math_definitions_8h.html#aa494f2039a8594dddda6f12f4311d516">SolAR::datastructure::Quaternionf</a></td></tr>
 <tr class="memdesc:aa494f2039a8594dddda6f12f4311d516"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>Quaternion defined with floats.</b> <br /></td></tr>
 <tr class="separator:aa494f2039a8594dddda6f12f4311d516"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ac977c1ee7d98c451b1922ff1e87c1a15"><td class="memTemplParams" colspan="2"><a id="ac977c1ee7d98c451b1922ff1e87c1a15"></a>
+template&lt;class Archive , class S , int Rows_, int Cols_, int Ops_, int MaxRows_, int MaxCols_&gt; </td></tr>
+<tr class="memitem:ac977c1ee7d98c451b1922ff1e87c1a15"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>boost::serialization::serialize</b> (Archive &amp;ar, Eigen::Matrix&lt; S, Rows_, Cols_, Ops_, MaxRows_, MaxCols_ &gt; &amp;matrix, [[maybe_unused]] const unsigned int version)</td></tr>
+<tr class="separator:ac977c1ee7d98c451b1922ff1e87c1a15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a297307b6c1a0278913784f8ad5efa6c5"><td class="memTemplParams" colspan="2"><a id="a297307b6c1a0278913784f8ad5efa6c5"></a>
+template&lt;class Archive , class S , int Dim_, int Mode_, int Options_&gt; </td></tr>
+<tr class="memitem:a297307b6c1a0278913784f8ad5efa6c5"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>boost::serialization::serialize</b> (Archive &amp;ar, Eigen::Transform&lt; S, Dim_, Mode_, Options_ &gt; &amp;transform, const unsigned int version)</td></tr>
+<tr class="separator:a297307b6c1a0278913784f8ad5efa6c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2017 B-com <a href="http://www.b-com.com/">http://www.b-com.com/</a></dd></dl>

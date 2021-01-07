@@ -2,14 +2,14 @@ digraph "SolAR::api::input::devices::IRGBDCamera"
 {
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
-  rankdir="LR";
-  Node4 [label="SolAR::api::input::\ldevices::IRGBDCamera",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
-  Node5 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node5 [label="IComponentIntrospect",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
-  Node6 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="SolAR::api::input::\ldevices::IRGBDCamera",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node6 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node6 [label="SolAR::api::input::\ldevices::ICamera",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera.html",tooltip="Grabs images captured in real-time by a video camera. UUID: 5ddc7df0-8377-437f-9c81-3643f7676a5b ..."];
-  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node7 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node7 [label="SolAR::api::input::\ldevices::IDepthCamera",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_depth_camera.html",tooltip="Specify the IDepthCamera interface class. "];
-  Node5 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="SolAR::api::input::\ldevices::IDevice",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_device.html",tooltip="Manage any kind of device. UUID: d73c7b34-f6af-48f3-b65d-37a047929f4b "];
+  Node8 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="IComponentIntrospect",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node9 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="SolAR::api::input::\ldevices::IDepthCamera",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_depth_camera.html",tooltip="Specify the IDepthCamera interface class. "];
+  Node7 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
 }

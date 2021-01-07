@@ -105,27 +105,24 @@ Public Member Functions</h2></td></tr>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_r_g_b_d_camera.html#a21a441ac908dba0db69dae7937dc6a50">~IRGBDCamera</a> ()=default</td></tr>
 <tr class="memdesc:a21a441ac908dba0db69dae7937dc6a50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specify the <a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_r_g_b_d_camera.html" title="Specify the IRGBDCamera interface class. ">IRGBDCamera</a> destructor class. <br /></td></tr>
 <tr class="separator:a21a441ac908dba0db69dae7937dc6a50"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a514a8c6818d08926fbd052b689e55be2"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_r_g_b_d_camera.html#a514a8c6818d08926fbd052b689e55be2">start</a> ()=0</td></tr>
-<tr class="memdesc:a514a8c6818d08926fbd052b689e55be2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start the acquisition device reference.  <a href="#a514a8c6818d08926fbd052b689e55be2">More...</a><br /></td></tr>
-<tr class="separator:a514a8c6818d08926fbd052b689e55be2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6f0ea0be16470adad332d4fbc7c95c7a"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_r_g_b_d_camera.html#a6f0ea0be16470adad332d4fbc7c95c7a">getNextRGBDFrame</a> (SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt; &amp;colorImg, SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt; &amp;depthImg)=0</td></tr>
-<tr class="memdesc:a6f0ea0be16470adad332d4fbc7c95c7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides the last color image, depth image, corresponding 3D point cloud, and aligned images (RGB on depth and depth on RGB). If output parameters are null (nullptr), it means that the implementation, or the requested mode does not provide this feature.  <a href="#a6f0ea0be16470adad332d4fbc7c95c7a">More...</a><br /></td></tr>
-<tr class="separator:a6f0ea0be16470adad332d4fbc7c95c7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8a87987ab8592f8834919f8e1e766fa2"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_r_g_b_d_camera.html#a8a87987ab8592f8834919f8e1e766fa2">alignDepthToColor</a> (SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt; &amp;alignedDepthImg) const =0</td></tr>
-<tr class="memdesc:a8a87987ab8592f8834919f8e1e766fa2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides a depth image alingned on the color image.  <a href="#a8a87987ab8592f8834919f8e1e766fa2">More...</a><br /></td></tr>
-<tr class="separator:a8a87987ab8592f8834919f8e1e766fa2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a906e30af8a87591134e5580ec81b15f2"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_r_g_b_d_camera.html#a906e30af8a87591134e5580ec81b15f2">alignColorToDepth</a> (SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt; &amp;alignedColorImg) const =0</td></tr>
-<tr class="memdesc:a906e30af8a87591134e5580ec81b15f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides a color image alingned on the depth image.  <a href="#a906e30af8a87591134e5580ec81b15f2">More...</a><br /></td></tr>
-<tr class="separator:a906e30af8a87591134e5580ec81b15f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afab98e00a9fb6aa6cd39c535e91d3c81"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point3_df.html">Point3Df</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_r_g_b_d_camera.html#afab98e00a9fb6aa6cd39c535e91d3c81">getPixelToWorld</a> (const <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point2_di.html">Point2Di</a> &amp;inPixel) const =0</td></tr>
-<tr class="memdesc:afab98e00a9fb6aa6cd39c535e91d3c81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides the 3D point in the depth sensor coordinate system corresponding to a given pixel of the color image.  <a href="#afab98e00a9fb6aa6cd39c535e91d3c81">More...</a><br /></td></tr>
-<tr class="separator:afab98e00a9fb6aa6cd39c535e91d3c81"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aec2cd7b3cdcea79fc437a0075d748790"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point2_di.html">Point2Di</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_r_g_b_d_camera.html#aec2cd7b3cdcea79fc437a0075d748790">getWorldToPixel</a> (const <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">CloudPoint</a> &amp;in3DPoint) const =0</td></tr>
-<tr class="memdesc:aec2cd7b3cdcea79fc437a0075d748790"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides the pixel of the color image to the projection of a given 3D point.  <a href="#aec2cd7b3cdcea79fc437a0075d748790">More...</a><br /></td></tr>
-<tr class="separator:aec2cd7b3cdcea79fc437a0075d748790"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af7a7fac8b9364c71992971554805cd4d"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point2_df.html">Point2Df</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_r_g_b_d_camera.html#af7a7fac8b9364c71992971554805cd4d">getWorldToPixels</a> (const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">CloudPoint</a> &gt; &amp;in3DPoints) const =0</td></tr>
-<tr class="memdesc:af7a7fac8b9364c71992971554805cd4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides the pixels of the color image to the projection of given 3D points.  <a href="#af7a7fac8b9364c71992971554805cd4d">More...</a><br /></td></tr>
-<tr class="separator:af7a7fac8b9364c71992971554805cd4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab68273492d96bfe1b90fb07542841076"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_r_g_b_d_camera.html#ab68273492d96bfe1b90fb07542841076">getNextRGBDFrame</a> (SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">datastructure::Image</a> &gt; &amp;colorImg, SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">datastructure::Image</a> &gt; &amp;depthImg)=0</td></tr>
+<tr class="memdesc:ab68273492d96bfe1b90fb07542841076"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides the last color image, depth image, corresponding 3D point cloud, and aligned images (RGB on depth and depth on RGB). If output parameters are null (nullptr), it means that the implementation, or the requested mode does not provide this feature.  <a href="#ab68273492d96bfe1b90fb07542841076">More...</a><br /></td></tr>
+<tr class="separator:ab68273492d96bfe1b90fb07542841076"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a8f80e29f31ffc945a44e74cc36bb86"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_r_g_b_d_camera.html#a5a8f80e29f31ffc945a44e74cc36bb86">alignDepthToColor</a> (SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">datastructure::Image</a> &gt; &amp;alignedDepthImg) const =0</td></tr>
+<tr class="memdesc:a5a8f80e29f31ffc945a44e74cc36bb86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides a depth image alingned on the color image.  <a href="#a5a8f80e29f31ffc945a44e74cc36bb86">More...</a><br /></td></tr>
+<tr class="separator:a5a8f80e29f31ffc945a44e74cc36bb86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4e6e9237f74a8d0730ea156f9ec222d"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_r_g_b_d_camera.html#aa4e6e9237f74a8d0730ea156f9ec222d">alignColorToDepth</a> (SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">datastructure::Image</a> &gt; &amp;alignedColorImg) const =0</td></tr>
+<tr class="memdesc:aa4e6e9237f74a8d0730ea156f9ec222d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides a color image alingned on the depth image.  <a href="#aa4e6e9237f74a8d0730ea156f9ec222d">More...</a><br /></td></tr>
+<tr class="separator:aa4e6e9237f74a8d0730ea156f9ec222d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a12a6c681de169ba84b2035182662e9"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point3_df.html">datastructure::Point3Df</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_r_g_b_d_camera.html#a5a12a6c681de169ba84b2035182662e9">getPixelToWorld</a> (const <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point2_di.html">datastructure::Point2Di</a> &amp;inPixel) const =0</td></tr>
+<tr class="memdesc:a5a12a6c681de169ba84b2035182662e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides the 3D point in the depth sensor coordinate system corresponding to a given pixel of the color image.  <a href="#a5a12a6c681de169ba84b2035182662e9">More...</a><br /></td></tr>
+<tr class="separator:a5a12a6c681de169ba84b2035182662e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01c5f007129d8be66cb337de8b4ee5e2"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point2_di.html">datastructure::Point2Di</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_r_g_b_d_camera.html#a01c5f007129d8be66cb337de8b4ee5e2">getWorldToPixel</a> (const <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">datastructure::CloudPoint</a> &amp;in3DPoint) const =0</td></tr>
+<tr class="memdesc:a01c5f007129d8be66cb337de8b4ee5e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides the pixel of the color image to the projection of a given 3D point.  <a href="#a01c5f007129d8be66cb337de8b4ee5e2">More...</a><br /></td></tr>
+<tr class="separator:a01c5f007129d8be66cb337de8b4ee5e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98ee36c3f2fb25a34e1ac7556d2b548e"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point2_df.html">datastructure::Point2Df</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_r_g_b_d_camera.html#a98ee36c3f2fb25a34e1ac7556d2b548e">getWorldToPixels</a> (const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">datastructure::CloudPoint</a> &gt; &amp;in3DPoints) const =0</td></tr>
+<tr class="memdesc:a98ee36c3f2fb25a34e1ac7556d2b548e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides the pixels of the color image to the projection of given 3D points.  <a href="#a98ee36c3f2fb25a34e1ac7556d2b548e">More...</a><br /></td></tr>
+<tr class="separator:a98ee36c3f2fb25a34e1ac7556d2b548e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera.html">SolAR::api::input::devices::ICamera</a></td></tr>
 <tr class="memitem:a7cb6758d66cb09170fbb35d63de9568b inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera"><td class="memItemLeft" align="right" valign="top"><a id="a7cb6758d66cb09170fbb35d63de9568b"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera.html#a7cb6758d66cb09170fbb35d63de9568b">ICamera</a> ()=default</td></tr>
@@ -135,38 +132,48 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera.html#aa3f5ba809fee6eaf9900806d39a0d016">~ICamera</a> ()=default</td></tr>
 <tr class="memdesc:aa3f5ba809fee6eaf9900806d39a0d016 inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specify the <a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera.html" title="Grabs images captured in real-time by a video camera. UUID: 5ddc7df0-8377-437f-9c81-3643f7676a5b ...">ICamera</a> destructor class. <br /></td></tr>
 <tr class="separator:aa3f5ba809fee6eaf9900806d39a0d016 inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab1b46c4dec4cd9ee198a6f977f7d7fbb inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera.html#ab1b46c4dec4cd9ee198a6f977f7d7fbb">getNextImage</a> (SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt; &amp;img)=0</td></tr>
-<tr class="memdesc:ab1b46c4dec4cd9ee198a6f977f7d7fbb inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fill the SRef img buffer with a new image captured by the camera device.  <a href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera.html#ab1b46c4dec4cd9ee198a6f977f7d7fbb">More...</a><br /></td></tr>
-<tr class="separator:ab1b46c4dec4cd9ee198a6f977f7d7fbb inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a88aa99cb30f733032ff8ca7accb56cef inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera.html#a88aa99cb30f733032ff8ca7accb56cef">stop</a> ()=0</td></tr>
-<tr class="memdesc:a88aa99cb30f733032ff8ca7accb56cef inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop the acquisition device.  <a href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera.html#a88aa99cb30f733032ff8ca7accb56cef">More...</a><br /></td></tr>
-<tr class="separator:a88aa99cb30f733032ff8ca7accb56cef inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0df17da65d1be71e79aea8a9d12bf854 inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera"><td class="memItemLeft" align="right" valign="top"><a id="a0df17da65d1be71e79aea8a9d12bf854"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera.html#a0df17da65d1be71e79aea8a9d12bf854">setResolution</a> (const <a class="el" href="struct_sol_a_r_1_1datastructure_1_1_sizei.html">Sizei</a> &amp;resolution)=0</td></tr>
-<tr class="memdesc:a0df17da65d1be71e79aea8a9d12bf854 inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the acquisition device image resolution. <br /></td></tr>
-<tr class="separator:a0df17da65d1be71e79aea8a9d12bf854 inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a55fe84f5c6ba7e2295bd589c84e4218d inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera"><td class="memItemLeft" align="right" valign="top"><a id="a55fe84f5c6ba7e2295bd589c84e4218d"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera.html#a55fe84f5c6ba7e2295bd589c84e4218d">setIntrinsicParameters</a> (const <a class="el" href="_camera_definitions_8h.html#a0ea650513b55059459f5d5771c5bf5cb">CamCalibration</a> &amp;intrinsic_parameters)=0</td></tr>
-<tr class="memdesc:a55fe84f5c6ba7e2295bd589c84e4218d inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the intrinsic camera parameters. <br /></td></tr>
-<tr class="separator:a55fe84f5c6ba7e2295bd589c84e4218d inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa040d9c5da4582eb7b3c083ea4dff3c5 inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera"><td class="memItemLeft" align="right" valign="top"><a id="aa040d9c5da4582eb7b3c083ea4dff3c5"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera.html#aa040d9c5da4582eb7b3c083ea4dff3c5">setDistortionParameters</a> (const <a class="el" href="_camera_definitions_8h.html#ad85d877532df3da45a970d47735e34bc">CamDistortion</a> &amp;distortion_parameters)=0</td></tr>
-<tr class="memdesc:aa040d9c5da4582eb7b3c083ea4dff3c5 inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the distortion intrinsic camera parameters. <br /></td></tr>
-<tr class="separator:aa040d9c5da4582eb7b3c083ea4dff3c5 inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af9a3f036b3be443d0356e3c133729892 inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera"><td class="memItemLeft" align="right" valign="top"><a id="af9a3f036b3be443d0356e3c133729892"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera.html#af9a3f036b3be443d0356e3c133729892">setParameters</a> (const <a class="el" href="struct_sol_a_r_1_1datastructure_1_1_camera_parameters.html">CameraParameters</a> &amp;parameters)=0</td></tr>
-<tr class="memdesc:af9a3f036b3be443d0356e3c133729892 inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the distortion and intrinsic camera parameters. <br /></td></tr>
-<tr class="separator:af9a3f036b3be443d0356e3c133729892 inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6e1a9ae23a133ab78d0dcdb8677ac5ab inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera"><td class="memItemLeft" align="right" valign="top"><a id="a6e1a9ae23a133ab78d0dcdb8677ac5ab"></a>
-virtual <a class="el" href="struct_sol_a_r_1_1datastructure_1_1_sizei.html">Sizei</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera.html#a6e1a9ae23a133ab78d0dcdb8677ac5ab">getResolution</a> ()=0</td></tr>
-<tr class="memdesc:a6e1a9ae23a133ab78d0dcdb8677ac5ab inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the acquisition device image resolution. <br /></td></tr>
-<tr class="separator:a6e1a9ae23a133ab78d0dcdb8677ac5ab inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a40046c744cd9992659763e3554818369 inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="_camera_definitions_8h.html#a0ea650513b55059459f5d5771c5bf5cb">CamCalibration</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera.html#a40046c744cd9992659763e3554818369">getIntrinsicsParameters</a> ()=0</td></tr>
-<tr class="separator:a40046c744cd9992659763e3554818369 inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9ac4c0f2761a18b74edfb5d1b067dc36 inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="struct_sol_a_r_1_1datastructure_1_1_camera_parameters.html">CameraParameters</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera.html#a9ac4c0f2761a18b74edfb5d1b067dc36">getParameters</a> ()=0</td></tr>
-<tr class="separator:a9ac4c0f2761a18b74edfb5d1b067dc36 inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a56c971491ecec29b5b5f882422b3cb80 inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="_camera_definitions_8h.html#ad85d877532df3da45a970d47735e34bc">CamDistortion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera.html#a56c971491ecec29b5b5f882422b3cb80">getDistortionParameters</a> ()=0</td></tr>
-<tr class="separator:a56c971491ecec29b5b5f882422b3cb80 inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a5d96eb20eb8eface5220db1d84c9b0 inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera.html#a6a5d96eb20eb8eface5220db1d84c9b0">getNextImage</a> (SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">datastructure::Image</a> &gt; &amp;img)=0</td></tr>
+<tr class="memdesc:a6a5d96eb20eb8eface5220db1d84c9b0 inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fill the SRef img buffer with a new image captured by the camera device.  <a href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera.html#a6a5d96eb20eb8eface5220db1d84c9b0">More...</a><br /></td></tr>
+<tr class="separator:a6a5d96eb20eb8eface5220db1d84c9b0 inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fd225a776db72f94f7cc555ea229ba9 inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera.html#a1fd225a776db72f94f7cc555ea229ba9">setResolution</a> (const <a class="el" href="struct_sol_a_r_1_1datastructure_1_1_sizei.html">datastructure::Sizei</a> &amp;resolution)=0</td></tr>
+<tr class="memdesc:a1fd225a776db72f94f7cc555ea229ba9 inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the acquisition device image resolution.  <a href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera.html#a1fd225a776db72f94f7cc555ea229ba9">More...</a><br /></td></tr>
+<tr class="separator:a1fd225a776db72f94f7cc555ea229ba9 inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac04dec3957b379c9115a3f1721900725 inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera.html#ac04dec3957b379c9115a3f1721900725">setIntrinsicParameters</a> (const <a class="el" href="_camera_definitions_8h.html#a0ea650513b55059459f5d5771c5bf5cb">datastructure::CamCalibration</a> &amp;intrinsic_parameters)=0</td></tr>
+<tr class="memdesc:ac04dec3957b379c9115a3f1721900725 inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the intrinsic camera parameters.  <a href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera.html#ac04dec3957b379c9115a3f1721900725">More...</a><br /></td></tr>
+<tr class="separator:ac04dec3957b379c9115a3f1721900725 inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab580af9d280e1eaaaab74d17f0b822c5 inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera.html#ab580af9d280e1eaaaab74d17f0b822c5">setDistortionParameters</a> (const <a class="el" href="_camera_definitions_8h.html#ad85d877532df3da45a970d47735e34bc">datastructure::CamDistortion</a> &amp;distortion_parameters)=0</td></tr>
+<tr class="memdesc:ab580af9d280e1eaaaab74d17f0b822c5 inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the distortion camera parameters.  <a href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera.html#ab580af9d280e1eaaaab74d17f0b822c5">More...</a><br /></td></tr>
+<tr class="separator:ab580af9d280e1eaaaab74d17f0b822c5 inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d0823a822331d803cbc3f9c2a883cd8 inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera.html#a2d0823a822331d803cbc3f9c2a883cd8">setParameters</a> (const <a class="el" href="struct_sol_a_r_1_1datastructure_1_1_camera_parameters.html">datastructure::CameraParameters</a> &amp;parameters)=0</td></tr>
+<tr class="memdesc:a2d0823a822331d803cbc3f9c2a883cd8 inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the distortion and intrinsic camera parameters.  <a href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera.html#a2d0823a822331d803cbc3f9c2a883cd8">More...</a><br /></td></tr>
+<tr class="separator:a2d0823a822331d803cbc3f9c2a883cd8 inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f9f7f2881fc1a8f154bc64d901f0750 inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="struct_sol_a_r_1_1datastructure_1_1_sizei.html">datastructure::Sizei</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera.html#a0f9f7f2881fc1a8f154bc64d901f0750">getResolution</a> () const =0</td></tr>
+<tr class="memdesc:a0f9f7f2881fc1a8f154bc64d901f0750 inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the acquisition device image resolution.  <a href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera.html#a0f9f7f2881fc1a8f154bc64d901f0750">More...</a><br /></td></tr>
+<tr class="separator:a0f9f7f2881fc1a8f154bc64d901f0750 inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31a9daf075f7cc4326c72087cdc2ecef inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="_camera_definitions_8h.html#a0ea650513b55059459f5d5771c5bf5cb">datastructure::CamCalibration</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera.html#a31a9daf075f7cc4326c72087cdc2ecef">getIntrinsicsParameters</a> () const =0</td></tr>
+<tr class="memdesc:a31a9daf075f7cc4326c72087cdc2ecef inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the intrinsic camera parameters.  <a href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera.html#a31a9daf075f7cc4326c72087cdc2ecef">More...</a><br /></td></tr>
+<tr class="separator:a31a9daf075f7cc4326c72087cdc2ecef inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a386386876f607e27be4444ab6dcc83 inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="struct_sol_a_r_1_1datastructure_1_1_camera_parameters.html">datastructure::CameraParameters</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera.html#a1a386386876f607e27be4444ab6dcc83">getParameters</a> () const =0</td></tr>
+<tr class="memdesc:a1a386386876f607e27be4444ab6dcc83 inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the camera parameters.  <a href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera.html#a1a386386876f607e27be4444ab6dcc83">More...</a><br /></td></tr>
+<tr class="separator:a1a386386876f607e27be4444ab6dcc83 inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acae47847530497932e3cc518c7bbb78b inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="_camera_definitions_8h.html#ad85d877532df3da45a970d47735e34bc">datastructure::CamDistortion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera.html#acae47847530497932e3cc518c7bbb78b">getDistortionParameters</a> () const =0</td></tr>
+<tr class="memdesc:acae47847530497932e3cc518c7bbb78b inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the distortion camera lens parameters.  <a href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera.html#acae47847530497932e3cc518c7bbb78b">More...</a><br /></td></tr>
+<tr class="separator:acae47847530497932e3cc518c7bbb78b inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_device"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_device')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_device.html">SolAR::api::input::devices::IDevice</a></td></tr>
+<tr class="memitem:a08f07ea4f389554861d7fa599ecac2c0 inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_device"><td class="memItemLeft" align="right" valign="top"><a id="a08f07ea4f389554861d7fa599ecac2c0"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_device.html#a08f07ea4f389554861d7fa599ecac2c0">IDevice</a> ()=default</td></tr>
+<tr class="memdesc:a08f07ea4f389554861d7fa599ecac2c0 inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specify the <a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_device.html" title="Manage any kind of device. UUID: d73c7b34-f6af-48f3-b65d-37a047929f4b ">IDevice</a> constructor class. <br /></td></tr>
+<tr class="separator:a08f07ea4f389554861d7fa599ecac2c0 inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7670fbfa23ffe86c65a4a19c1ec10701 inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_device"><td class="memItemLeft" align="right" valign="top"><a id="a7670fbfa23ffe86c65a4a19c1ec10701"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_device.html#a7670fbfa23ffe86c65a4a19c1ec10701">~IDevice</a> () override=default</td></tr>
+<tr class="memdesc:a7670fbfa23ffe86c65a4a19c1ec10701 inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specify the <a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_device.html" title="Manage any kind of device. UUID: d73c7b34-f6af-48f3-b65d-37a047929f4b ">IDevice</a> destructor class. <br /></td></tr>
+<tr class="separator:a7670fbfa23ffe86c65a4a19c1ec10701 inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f0737986f2526e7054d8032e30c31ff inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_device"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_device.html#a6f0737986f2526e7054d8032e30c31ff">start</a> ()=0</td></tr>
+<tr class="memdesc:a6f0737986f2526e7054d8032e30c31ff inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start the acquisition device referenced by its device_id.  <a href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_device.html#a6f0737986f2526e7054d8032e30c31ff">More...</a><br /></td></tr>
+<tr class="separator:a6f0737986f2526e7054d8032e30c31ff inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1d2e4e4d2542d520c18c382cc24679f inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_device"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_device.html#ae1d2e4e4d2542d520c18c382cc24679f">stop</a> ()=0</td></tr>
+<tr class="memdesc:ae1d2e4e4d2542d520c18c382cc24679f inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop the acquisition device.  <a href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_device.html#ae1d2e4e4d2542d520c18c382cc24679f">More...</a><br /></td></tr>
+<tr class="separator:ae1d2e4e4d2542d520c18c382cc24679f inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_depth_camera"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_depth_camera')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_depth_camera.html">SolAR::api::input::devices::IDepthCamera</a></td></tr>
 <tr class="memitem:a936ac65e434c3559a3def96f45200bb6 inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_depth_camera"><td class="memItemLeft" align="right" valign="top"><a id="a936ac65e434c3559a3def96f45200bb6"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_depth_camera.html#a936ac65e434c3559a3def96f45200bb6">IDepthCamera</a> ()=default</td></tr>
@@ -176,43 +183,40 @@ virtual <a class="el" href="struct_sol_a_r_1_1datastructure_1_1_sizei.html">Size
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_depth_camera.html#a5294e9ea6a43bde296809c5d979be819">~IDepthCamera</a> ()=default</td></tr>
 <tr class="memdesc:a5294e9ea6a43bde296809c5d979be819 inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_depth_camera"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specify the <a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_depth_camera.html" title="Specify the IDepthCamera interface class. ">IDepthCamera</a> destructor class. <br /></td></tr>
 <tr class="separator:a5294e9ea6a43bde296809c5d979be819 inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_depth_camera"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2eabb0c71fdd6ae124c545ad2f1b2cae inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_depth_camera"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_depth_camera.html#a2eabb0c71fdd6ae124c545ad2f1b2cae">getNextDepthFrame</a> (SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt; &amp;img)=0</td></tr>
-<tr class="memdesc:a2eabb0c71fdd6ae124c545ad2f1b2cae inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_depth_camera"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides the last depth image. If output parameters are null (nullptr), it means that the implementation, or the requested mode does not provide this feature.  <a href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_depth_camera.html#a2eabb0c71fdd6ae124c545ad2f1b2cae">More...</a><br /></td></tr>
-<tr class="separator:a2eabb0c71fdd6ae124c545ad2f1b2cae inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_depth_camera"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaea51706cf9ea79acf468ccf60832922 inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_depth_camera"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_depth_camera.html#aaea51706cf9ea79acf468ccf60832922">getPointCloud</a> (SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point_cloud.html">PointCloud</a> &gt; &amp;pc)=0</td></tr>
-<tr class="memdesc:aaea51706cf9ea79acf468ccf60832922 inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_depth_camera"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides the corresponding 3D point cloud corresponding to last depth image aquiered (<a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_depth_camera.html#a2eabb0c71fdd6ae124c545ad2f1b2cae" title="Provides the last depth image. If output parameters are null (nullptr), it means that the implementat...">getNextDepthFrame()</a>) Should have no effect if the user didn't call getNextDepthFrame beforehand.  <a href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_depth_camera.html#aaea51706cf9ea79acf468ccf60832922">More...</a><br /></td></tr>
-<tr class="separator:aaea51706cf9ea79acf468ccf60832922 inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_depth_camera"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8abeb7f93ea45068398d803e02a5b188 inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_depth_camera"><td class="memItemLeft" align="right" valign="top"><a id="a8abeb7f93ea45068398d803e02a5b188"></a>
-virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_depth_camera.html#a8abeb7f93ea45068398d803e02a5b188">setDepthResolution</a> (<a class="el" href="struct_sol_a_r_1_1datastructure_1_1_sizei.html">Sizei</a> resolution)=0</td></tr>
-<tr class="memdesc:a8abeb7f93ea45068398d803e02a5b188 inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_depth_camera"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the depth image resolution of the acquisition device. <br /></td></tr>
-<tr class="separator:a8abeb7f93ea45068398d803e02a5b188 inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_depth_camera"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4cc813222e44eece2bf3ffcdf49ca67a inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_depth_camera"><td class="memItemLeft" align="right" valign="top"><a id="a4cc813222e44eece2bf3ffcdf49ca67a"></a>
-virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_depth_camera.html#a4cc813222e44eece2bf3ffcdf49ca67a">setIntrinsicDepthParameters</a> (const <a class="el" href="_camera_definitions_8h.html#a0ea650513b55059459f5d5771c5bf5cb">CamCalibration</a> &amp;intrinsic_parameters)=0</td></tr>
-<tr class="memdesc:a4cc813222e44eece2bf3ffcdf49ca67a inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_depth_camera"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the intrinsic parameters of the depth camera. <br /></td></tr>
-<tr class="separator:a4cc813222e44eece2bf3ffcdf49ca67a inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_depth_camera"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a18fe6b608103fa7f282118bb81001430 inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_depth_camera"><td class="memItemLeft" align="right" valign="top"><a id="a18fe6b608103fa7f282118bb81001430"></a>
-virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_depth_camera.html#a18fe6b608103fa7f282118bb81001430">setDistortionDepthParameters</a> (const <a class="el" href="_camera_definitions_8h.html#ad85d877532df3da45a970d47735e34bc">CamDistortion</a> &amp;distortion_parameters)=0</td></tr>
-<tr class="memdesc:a18fe6b608103fa7f282118bb81001430 inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_depth_camera"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the distortion intrinsic parameters of the depth camera. <br /></td></tr>
-<tr class="separator:a18fe6b608103fa7f282118bb81001430 inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_depth_camera"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a481e9e3b54922c6d4761082eba6b5b24 inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_depth_camera"><td class="memItemLeft" align="right" valign="top"><a id="a481e9e3b54922c6d4761082eba6b5b24"></a>
-virtual <a class="el" href="struct_sol_a_r_1_1datastructure_1_1_sizei.html">Sizei</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_depth_camera.html#a481e9e3b54922c6d4761082eba6b5b24">getDepthResolution</a> ()=0</td></tr>
-<tr class="memdesc:a481e9e3b54922c6d4761082eba6b5b24 inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_depth_camera"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the image resolution of the depth acquisition device. <br /></td></tr>
-<tr class="separator:a481e9e3b54922c6d4761082eba6b5b24 inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_depth_camera"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa4d3a6863ccec87f97b6bb8e426b9dbd inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_depth_camera"><td class="memItemLeft" align="right" valign="top"><a id="aa4d3a6863ccec87f97b6bb8e426b9dbd"></a>
-virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_depth_camera.html#aa4d3a6863ccec87f97b6bb8e426b9dbd">getDepthMinDistance</a> ()=0</td></tr>
-<tr class="memdesc:aa4d3a6863ccec87f97b6bb8e426b9dbd inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_depth_camera"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the min acquisition distance of the device. <br /></td></tr>
-<tr class="separator:aa4d3a6863ccec87f97b6bb8e426b9dbd inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_depth_camera"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1c6d2226b38ce832b9ea53edf98660d1 inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_depth_camera"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="_camera_definitions_8h.html#a0ea650513b55059459f5d5771c5bf5cb">CamCalibration</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_depth_camera.html#a1c6d2226b38ce832b9ea53edf98660d1">getIntrinsicsDepthParameters</a> () const =0</td></tr>
-<tr class="separator:a1c6d2226b38ce832b9ea53edf98660d1 inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_depth_camera"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a12ab6b28df2ab3c5bfcfcc3f72de0674 inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_depth_camera"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="_camera_definitions_8h.html#ad85d877532df3da45a970d47735e34bc">CamDistortion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_depth_camera.html#a12ab6b28df2ab3c5bfcfcc3f72de0674">getDistortionDepthParameters</a> () const =0</td></tr>
-<tr class="separator:a12ab6b28df2ab3c5bfcfcc3f72de0674 inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_depth_camera"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9854009868674908ed2d076353875cef inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_depth_camera"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_depth_camera.html#a9854009868674908ed2d076353875cef">getNextDepthFrame</a> (SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">datastructure::Image</a> &gt; &amp;img)=0</td></tr>
+<tr class="memdesc:a9854009868674908ed2d076353875cef inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_depth_camera"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides the last depth image. If output parameters are null (nullptr), it means that the implementation, or the requested mode does not provide this feature.  <a href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_depth_camera.html#a9854009868674908ed2d076353875cef">More...</a><br /></td></tr>
+<tr class="separator:a9854009868674908ed2d076353875cef inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_depth_camera"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae18b75d53b336ab63af784545fa70b18 inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_depth_camera"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_depth_camera.html#ae18b75d53b336ab63af784545fa70b18">getPointCloud</a> (SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point_cloud.html">datastructure::PointCloud</a> &gt; &amp;pc)=0</td></tr>
+<tr class="memdesc:ae18b75d53b336ab63af784545fa70b18 inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_depth_camera"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides the corresponding 3D point cloud corresponding to last depth image aquiered (<a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_depth_camera.html#a9854009868674908ed2d076353875cef" title="Provides the last depth image. If output parameters are null (nullptr), it means that the implementat...">getNextDepthFrame()</a>) Should have no effect if the user didn't call getNextDepthFrame beforehand.  <a href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_depth_camera.html#ae18b75d53b336ab63af784545fa70b18">More...</a><br /></td></tr>
+<tr class="separator:ae18b75d53b336ab63af784545fa70b18 inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_depth_camera"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac12d577f6aabe21fba6f6bdf3f17d01e inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_depth_camera"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_depth_camera.html#ac12d577f6aabe21fba6f6bdf3f17d01e">setDepthResolution</a> (<a class="el" href="struct_sol_a_r_1_1datastructure_1_1_sizei.html">datastructure::Sizei</a> resolution)=0</td></tr>
+<tr class="memdesc:ac12d577f6aabe21fba6f6bdf3f17d01e inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_depth_camera"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the depth image resolution of the acquisition device.  <a href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_depth_camera.html#ac12d577f6aabe21fba6f6bdf3f17d01e">More...</a><br /></td></tr>
+<tr class="separator:ac12d577f6aabe21fba6f6bdf3f17d01e inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_depth_camera"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c631078dac23fa2428511fd4032f2b8 inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_depth_camera"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_depth_camera.html#a3c631078dac23fa2428511fd4032f2b8">setIntrinsicDepthParameters</a> (const <a class="el" href="_camera_definitions_8h.html#a0ea650513b55059459f5d5771c5bf5cb">datastructure::CamCalibration</a> &amp;intrinsic_parameters)=0</td></tr>
+<tr class="memdesc:a3c631078dac23fa2428511fd4032f2b8 inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_depth_camera"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the intrinsic parameters of the depth camera.  <a href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_depth_camera.html#a3c631078dac23fa2428511fd4032f2b8">More...</a><br /></td></tr>
+<tr class="separator:a3c631078dac23fa2428511fd4032f2b8 inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_depth_camera"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa617229baf9180b34b206ea3f3ee7330 inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_depth_camera"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_depth_camera.html#aa617229baf9180b34b206ea3f3ee7330">setDistortionDepthParameters</a> (const <a class="el" href="_camera_definitions_8h.html#ad85d877532df3da45a970d47735e34bc">datastructure::CamDistortion</a> &amp;distortion_parameters)=0</td></tr>
+<tr class="memdesc:aa617229baf9180b34b206ea3f3ee7330 inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_depth_camera"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the distortion intrinsic parameters of the depth camera.  <a href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_depth_camera.html#aa617229baf9180b34b206ea3f3ee7330">More...</a><br /></td></tr>
+<tr class="separator:aa617229baf9180b34b206ea3f3ee7330 inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_depth_camera"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37a7d161c7a1a5880372d7dd30e536ce inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_depth_camera"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="struct_sol_a_r_1_1datastructure_1_1_sizei.html">datastructure::Sizei</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_depth_camera.html#a37a7d161c7a1a5880372d7dd30e536ce">getDepthResolution</a> () const =0</td></tr>
+<tr class="memdesc:a37a7d161c7a1a5880372d7dd30e536ce inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_depth_camera"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the image resolution of the depth acquisition device.  <a href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_depth_camera.html#a37a7d161c7a1a5880372d7dd30e536ce">More...</a><br /></td></tr>
+<tr class="separator:a37a7d161c7a1a5880372d7dd30e536ce inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_depth_camera"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52e98a0d21f90bb84661a5cbbd07afc2 inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_depth_camera"><td class="memItemLeft" align="right" valign="top">virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_depth_camera.html#a52e98a0d21f90bb84661a5cbbd07afc2">getDepthMinDistance</a> () const =0</td></tr>
+<tr class="memdesc:a52e98a0d21f90bb84661a5cbbd07afc2 inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_depth_camera"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the min acquisition distance of the device.  <a href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_depth_camera.html#a52e98a0d21f90bb84661a5cbbd07afc2">More...</a><br /></td></tr>
+<tr class="separator:a52e98a0d21f90bb84661a5cbbd07afc2 inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_depth_camera"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b405c08fa51f75dc4d4ce870f63eef1 inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_depth_camera"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="_camera_definitions_8h.html#a0ea650513b55059459f5d5771c5bf5cb">datastructure::CamCalibration</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_depth_camera.html#a3b405c08fa51f75dc4d4ce870f63eef1">getIntrinsicsDepthParameters</a> () const =0</td></tr>
+<tr class="memdesc:a3b405c08fa51f75dc4d4ce870f63eef1 inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_depth_camera"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the intrinsic depth of the device.  <a href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_depth_camera.html#a3b405c08fa51f75dc4d4ce870f63eef1">More...</a><br /></td></tr>
+<tr class="separator:a3b405c08fa51f75dc4d4ce870f63eef1 inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_depth_camera"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abde2a911a99cdc834c280330f150fc7c inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_depth_camera"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="_camera_definitions_8h.html#ad85d877532df3da45a970d47735e34bc">datastructure::CamDistortion</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_depth_camera.html#abde2a911a99cdc834c280330f150fc7c">getDistortionDepthParameters</a> () const =0</td></tr>
+<tr class="memdesc:abde2a911a99cdc834c280330f150fc7c inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_depth_camera"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the distortion depth of the camera lens.  <a href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_depth_camera.html#abde2a911a99cdc834c280330f150fc7c">More...</a><br /></td></tr>
+<tr class="separator:abde2a911a99cdc834c280330f150fc7c inherit pub_methods_class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_depth_camera"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Specify the <a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_r_g_b_d_camera.html" title="Specify the IRGBDCamera interface class. ">IRGBDCamera</a> interface class. </p>
 <p>This class describes the interface of a RGBD camera capture device. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a906e30af8a87591134e5580ec81b15f2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a906e30af8a87591134e5580ec81b15f2">&#9670;&nbsp;</a></span>alignColorToDepth()</h2>
+<a id="aa4e6e9237f74a8d0730ea156f9ec222d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4e6e9237f74a8d0730ea156f9ec222d">&#9670;&nbsp;</a></span>alignColorToDepth()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -223,7 +227,7 @@ virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
         <tr>
           <td class="memname">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a> SolAR::api::input::devices::IRGBDCamera::alignColorToDepth </td>
           <td>(</td>
-          <td class="paramtype">SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">datastructure::Image</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>alignedColorImg</em></td><td>)</td>
           <td> const</td>
         </tr>
@@ -238,15 +242,16 @@ virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
 <p>Provides a color image alingned on the depth image. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">alignedColorImg</td><td>the RGB image captured by the RGBD camera and aligned on the depth image </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">alignedColorImg</td><td>the RGB image captured by the RGBD camera and aligned on the depth image </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>FrameworkReturnCode to track sucessful or failing event. </dd></dl>
 
 </div>
 </div>
-<a id="a8a87987ab8592f8834919f8e1e766fa2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8a87987ab8592f8834919f8e1e766fa2">&#9670;&nbsp;</a></span>alignDepthToColor()</h2>
+<a id="a5a8f80e29f31ffc945a44e74cc36bb86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a8f80e29f31ffc945a44e74cc36bb86">&#9670;&nbsp;</a></span>alignDepthToColor()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -257,7 +262,7 @@ virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
         <tr>
           <td class="memname">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a> SolAR::api::input::devices::IRGBDCamera::alignDepthToColor </td>
           <td>(</td>
-          <td class="paramtype">SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">datastructure::Image</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>alignedDepthImg</em></td><td>)</td>
           <td> const</td>
         </tr>
@@ -272,15 +277,16 @@ virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
 <p>Provides a depth image alingned on the color image. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">alignedDepthImg</td><td>the depth image captured by the RGBD camera and aligned on the color image </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">alignedDepthImg</td><td>the depth image captured by the RGBD camera and aligned on the color image </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>FrameworkReturnCode to track sucessful or failing event. </dd></dl>
 
 </div>
 </div>
-<a id="a6f0ea0be16470adad332d4fbc7c95c7a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6f0ea0be16470adad332d4fbc7c95c7a">&#9670;&nbsp;</a></span>getNextRGBDFrame()</h2>
+<a id="ab68273492d96bfe1b90fb07542841076"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab68273492d96bfe1b90fb07542841076">&#9670;&nbsp;</a></span>getNextRGBDFrame()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -291,13 +297,13 @@ virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
         <tr>
           <td class="memname">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a> SolAR::api::input::devices::IRGBDCamera::getNextRGBDFrame </td>
           <td>(</td>
-          <td class="paramtype">SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">datastructure::Image</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>colorImg</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">Image</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">datastructure::Image</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>depthImg</em>&#160;</td>
         </tr>
         <tr>
@@ -316,8 +322,8 @@ virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
 <p>Provides the last color image, depth image, corresponding 3D point cloud, and aligned images (RGB on depth and depth on RGB). If output parameters are null (nullptr), it means that the implementation, or the requested mode does not provide this feature. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">colorImg</td><td>the RGB image captured by the RGBD camera </td></tr>
-    <tr><td class="paramname">depthImg</td><td>the depth image captured by the RGBD camera </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">colorImg</td><td>the RGB image captured by the RGBD camera </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">depthImg</td><td>the depth image captured by the RGBD camera </td></tr>
   </table>
   </dd>
 </dl>
@@ -325,8 +331,8 @@ virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
 
 </div>
 </div>
-<a id="afab98e00a9fb6aa6cd39c535e91d3c81"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afab98e00a9fb6aa6cd39c535e91d3c81">&#9670;&nbsp;</a></span>getPixelToWorld()</h2>
+<a id="a5a12a6c681de169ba84b2035182662e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a12a6c681de169ba84b2035182662e9">&#9670;&nbsp;</a></span>getPixelToWorld()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -335,9 +341,9 @@ virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point3_df.html">Point3Df</a> SolAR::api::input::devices::IRGBDCamera::getPixelToWorld </td>
+          <td class="memname">virtual <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point3_df.html">datastructure::Point3Df</a> SolAR::api::input::devices::IRGBDCamera::getPixelToWorld </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point2_di.html">Point2Di</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point2_di.html">datastructure::Point2Di</a> &amp;&#160;</td>
           <td class="paramname"><em>inPixel</em></td><td>)</td>
           <td> const</td>
         </tr>
@@ -352,7 +358,7 @@ virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
 <p>Provides the 3D point in the depth sensor coordinate system corresponding to a given pixel of the color image. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">inPixel</td><td>The pixel for which we want the 3 position </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">inPixel</td><td>The pixel for which we want the 3 position </td></tr>
   </table>
   </dd>
 </dl>
@@ -360,8 +366,8 @@ virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
 
 </div>
 </div>
-<a id="aec2cd7b3cdcea79fc437a0075d748790"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aec2cd7b3cdcea79fc437a0075d748790">&#9670;&nbsp;</a></span>getWorldToPixel()</h2>
+<a id="a01c5f007129d8be66cb337de8b4ee5e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01c5f007129d8be66cb337de8b4ee5e2">&#9670;&nbsp;</a></span>getWorldToPixel()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -370,9 +376,9 @@ virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point2_di.html">Point2Di</a> SolAR::api::input::devices::IRGBDCamera::getWorldToPixel </td>
+          <td class="memname">virtual <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point2_di.html">datastructure::Point2Di</a> SolAR::api::input::devices::IRGBDCamera::getWorldToPixel </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">CloudPoint</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">datastructure::CloudPoint</a> &amp;&#160;</td>
           <td class="paramname"><em>in3DPoint</em></td><td>)</td>
           <td> const</td>
         </tr>
@@ -387,7 +393,7 @@ virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
 <p>Provides the pixel of the color image to the projection of a given 3D point. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">in3DPoint</td><td>The 3D point we want to project on the color image </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">in3DPoint</td><td>The 3D point we want to project on the color image </td></tr>
   </table>
   </dd>
 </dl>
@@ -395,8 +401,8 @@ virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
 
 </div>
 </div>
-<a id="af7a7fac8b9364c71992971554805cd4d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af7a7fac8b9364c71992971554805cd4d">&#9670;&nbsp;</a></span>getWorldToPixels()</h2>
+<a id="a98ee36c3f2fb25a34e1ac7556d2b548e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98ee36c3f2fb25a34e1ac7556d2b548e">&#9670;&nbsp;</a></span>getWorldToPixels()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -405,9 +411,9 @@ virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual std::vector&lt;<a class="el" href="class_sol_a_r_1_1datastructure_1_1_point2_df.html">Point2Df</a>&gt; SolAR::api::input::devices::IRGBDCamera::getWorldToPixels </td>
+          <td class="memname">virtual std::vector&lt;<a class="el" href="class_sol_a_r_1_1datastructure_1_1_point2_df.html">datastructure::Point2Df</a>&gt; SolAR::api::input::devices::IRGBDCamera::getWorldToPixels </td>
           <td>(</td>
-          <td class="paramtype">const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">CloudPoint</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">datastructure::CloudPoint</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>in3DPoints</em></td><td>)</td>
           <td> const</td>
         </tr>
@@ -422,41 +428,11 @@ virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
 <p>Provides the pixels of the color image to the projection of given 3D points. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">in3DPoints</td><td>The 3D points we want to project on the color image </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">in3DPoints</td><td>The 3D points we want to project on the color image </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>a 2D points vector representing the pixels of the color image on which the 3D points are projected </dd></dl>
-
-</div>
-</div>
-<a id="a514a8c6818d08926fbd052b689e55be2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a514a8c6818d08926fbd052b689e55be2">&#9670;&nbsp;</a></span>start()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a> SolAR::api::input::devices::IRGBDCamera::start </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Start the acquisition device reference. </p>
-<dl class="section return"><dt>Returns</dt><dd>FrameworkReturnCode to track sucessful or failing event. </dd></dl>
-
-<p>Implements <a class="el" href="class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_camera.html#a64862fc1b9c390d08bd28c56206b7961">SolAR::api::input::devices::ICamera</a>.</p>
 
 </div>
 </div>

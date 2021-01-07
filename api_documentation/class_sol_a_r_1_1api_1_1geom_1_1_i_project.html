@@ -105,21 +105,21 @@ Public Member Functions</h2></td></tr>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1geom_1_1_i_project.html#ab0009b4a5064726030a3a55e2b84a9c0">~IProject</a> ()=default</td></tr>
 <tr class="memdesc:ab0009b4a5064726030a3a55e2b84a9c0"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sol_a_r_1_1api_1_1geom_1_1_i3_d_transform.html" title="Applies a 3D transformation (e.g. an affine transformation) to a set of 3D points. UUID: 9c1052b2-46c0-467b-8363-36f19b6b445f ">I3DTransform</a> default destructor. <br /></td></tr>
 <tr class="separator:ab0009b4a5064726030a3a55e2b84a9c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acce78104cc6ea84cc2ff768915b61de6"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1geom_1_1_i_project.html#acce78104cc6ea84cc2ff768915b61de6">setCameraParameters</a> (const <a class="el" href="_camera_definitions_8h.html#a0ea650513b55059459f5d5771c5bf5cb">CamCalibration</a> &amp;intrinsicParams, const <a class="el" href="_camera_definitions_8h.html#ad85d877532df3da45a970d47735e34bc">CamDistortion</a> &amp;distorsionParams)=0</td></tr>
-<tr class="memdesc:acce78104cc6ea84cc2ff768915b61de6"><td class="mdescLeft">&#160;</td><td class="mdescRight">this method is used to set intrinsic parameters and distorsion of the camera  <a href="#acce78104cc6ea84cc2ff768915b61de6">More...</a><br /></td></tr>
-<tr class="separator:acce78104cc6ea84cc2ff768915b61de6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab070b3e4727394e70d39e07bc5bb6cbe"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1geom_1_1_i_project.html#ab070b3e4727394e70d39e07bc5bb6cbe">project</a> (const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point3_df.html">Point3Df</a> &gt; &amp;inputPoints, std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point2_df.html">Point2Df</a> &gt; &amp;imagePoints, const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a> &amp;pose=Transform3Df::Identity())=0</td></tr>
-<tr class="memdesc:ab070b3e4727394e70d39e07bc5bb6cbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method project a set of 3D points in the image plane.  <a href="#ab070b3e4727394e70d39e07bc5bb6cbe">More...</a><br /></td></tr>
-<tr class="separator:ab070b3e4727394e70d39e07bc5bb6cbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad8160b70ff6cea5fdb103086268d3ec7"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1geom_1_1_i_project.html#ad8160b70ff6cea5fdb103086268d3ec7">project</a> (const std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">CloudPoint</a> &gt;&gt; &amp;inputPoints, std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point2_df.html">Point2Df</a> &gt; &amp;imagePoints, const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a> &amp;pose=Transform3Df::Identity())=0</td></tr>
-<tr class="memdesc:ad8160b70ff6cea5fdb103086268d3ec7"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method project a set of 3D cloud points in the image plane.  <a href="#ad8160b70ff6cea5fdb103086268d3ec7">More...</a><br /></td></tr>
-<tr class="separator:ad8160b70ff6cea5fdb103086268d3ec7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a234bb71202b6258f24172856e9a7ae"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1geom_1_1_i_project.html#a3a234bb71202b6258f24172856e9a7ae">setCameraParameters</a> (const <a class="el" href="_camera_definitions_8h.html#a0ea650513b55059459f5d5771c5bf5cb">datastructure::CamCalibration</a> &amp;intrinsicParams, const <a class="el" href="_camera_definitions_8h.html#ad85d877532df3da45a970d47735e34bc">datastructure::CamDistortion</a> &amp;distorsionParams)=0</td></tr>
+<tr class="memdesc:a3a234bb71202b6258f24172856e9a7ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">this method is used to set intrinsic parameters and distorsion of the camera  <a href="#a3a234bb71202b6258f24172856e9a7ae">More...</a><br /></td></tr>
+<tr class="separator:a3a234bb71202b6258f24172856e9a7ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a28b2cc438a01e5e5253ae92f1f801c"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1geom_1_1_i_project.html#a4a28b2cc438a01e5e5253ae92f1f801c">project</a> (const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point3_df.html">datastructure::Point3Df</a> &gt; &amp;inputPoints, std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point2_df.html">datastructure::Point2Df</a> &gt; &amp;imagePoints, const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">datastructure::Transform3Df</a> &amp;pose=datastructure::Transform3Df::Identity())=0</td></tr>
+<tr class="memdesc:a4a28b2cc438a01e5e5253ae92f1f801c"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method project a set of 3D points in the image plane.  <a href="#a4a28b2cc438a01e5e5253ae92f1f801c">More...</a><br /></td></tr>
+<tr class="separator:a4a28b2cc438a01e5e5253ae92f1f801c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb334df8921cf54062ab20a8c4db0cd6"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1geom_1_1_i_project.html#abb334df8921cf54062ab20a8c4db0cd6">project</a> (const std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">datastructure::CloudPoint</a> &gt;&gt; &amp;inputPoints, std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point2_df.html">datastructure::Point2Df</a> &gt; &amp;imagePoints, const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">datastructure::Transform3Df</a> &amp;pose=datastructure::Transform3Df::Identity())=0</td></tr>
+<tr class="memdesc:abb334df8921cf54062ab20a8c4db0cd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method project a set of 3D cloud points in the image plane.  <a href="#abb334df8921cf54062ab20a8c4db0cd6">More...</a><br /></td></tr>
+<tr class="separator:abb334df8921cf54062ab20a8c4db0cd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><b>Projects 3D points on a 2D image plane.</b> <code>UUID: b485f37d-a8ea-49f6-b361-f2b30777d9ba</code> </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="ab070b3e4727394e70d39e07bc5bb6cbe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab070b3e4727394e70d39e07bc5bb6cbe">&#9670;&nbsp;</a></span>project() <span class="overload">[1/2]</span></h2>
+<a id="a4a28b2cc438a01e5e5253ae92f1f801c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a28b2cc438a01e5e5253ae92f1f801c">&#9670;&nbsp;</a></span>project() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -130,20 +130,20 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
         <tr>
           <td class="memname">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a> SolAR::api::geom::IProject::project </td>
           <td>(</td>
-          <td class="paramtype">const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point3_df.html">Point3Df</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point3_df.html">datastructure::Point3Df</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>inputPoints</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point2_df.html">Point2Df</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point2_df.html">datastructure::Point2Df</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>imagePoints</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a> &amp;&#160;</td>
-          <td class="paramname"><em>pose</em> = <code>Transform3Df::Identity()</code>&#160;</td>
+          <td class="paramtype">const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">datastructure::Transform3Df</a> &amp;&#160;</td>
+          <td class="paramname"><em>pose</em> = <code>datastructure::Transform3Df::Identity()</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -162,8 +162,8 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">inputPoints</td><td>the set of 3D points to project </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">imagePoints</td><td>the resulting set of 2D points defined in the image coordinate systemn </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">pose</td><td>the 3D pose of the camera (a 4x4 float matrix) </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">outputPoints</td><td>the resulting set of 2D points define in the image coordinate systemn </td></tr>
   </table>
   </dd>
 </dl>
@@ -171,8 +171,8 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 
 </div>
 </div>
-<a id="ad8160b70ff6cea5fdb103086268d3ec7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad8160b70ff6cea5fdb103086268d3ec7">&#9670;&nbsp;</a></span>project() <span class="overload">[2/2]</span></h2>
+<a id="abb334df8921cf54062ab20a8c4db0cd6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb334df8921cf54062ab20a8c4db0cd6">&#9670;&nbsp;</a></span>project() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -183,20 +183,20 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
         <tr>
           <td class="memname">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a> SolAR::api::geom::IProject::project </td>
           <td>(</td>
-          <td class="paramtype">const std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">CloudPoint</a> &gt;&gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">datastructure::CloudPoint</a> &gt;&gt; &amp;&#160;</td>
           <td class="paramname"><em>inputPoints</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point2_df.html">Point2Df</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point2_df.html">datastructure::Point2Df</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>imagePoints</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a> &amp;&#160;</td>
-          <td class="paramname"><em>pose</em> = <code>Transform3Df::Identity()</code>&#160;</td>
+          <td class="paramtype">const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">datastructure::Transform3Df</a> &amp;&#160;</td>
+          <td class="paramname"><em>pose</em> = <code>datastructure::Transform3Df::Identity()</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -215,8 +215,8 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">inputPoints</td><td>the set of 3D cloud points to project </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">imagePoints</td><td>the resulting set of 2D points defined in the image coordinate systemn </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">pose</td><td>the 3D pose of the camera (a 4x4 float matrix) </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">outputPoints</td><td>the resulting set of 2D points define in the image coordinate systemn </td></tr>
   </table>
   </dd>
 </dl>
@@ -224,8 +224,8 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 
 </div>
 </div>
-<a id="acce78104cc6ea84cc2ff768915b61de6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acce78104cc6ea84cc2ff768915b61de6">&#9670;&nbsp;</a></span>setCameraParameters()</h2>
+<a id="a3a234bb71202b6258f24172856e9a7ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a234bb71202b6258f24172856e9a7ae">&#9670;&nbsp;</a></span>setCameraParameters()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -236,13 +236,13 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
         <tr>
           <td class="memname">virtual void SolAR::api::geom::IProject::setCameraParameters </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="_camera_definitions_8h.html#a0ea650513b55059459f5d5771c5bf5cb">CamCalibration</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="_camera_definitions_8h.html#a0ea650513b55059459f5d5771c5bf5cb">datastructure::CamCalibration</a> &amp;&#160;</td>
           <td class="paramname"><em>intrinsicParams</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="_camera_definitions_8h.html#ad85d877532df3da45a970d47735e34bc">CamDistortion</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="_camera_definitions_8h.html#ad85d877532df3da45a970d47735e34bc">datastructure::CamDistortion</a> &amp;&#160;</td>
           <td class="paramname"><em>distorsionParams</em>&#160;</td>
         </tr>
         <tr>
@@ -261,8 +261,8 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <p>this method is used to set intrinsic parameters and distorsion of the camera </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">Camera</td><td>calibration matrix parameters. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">Camera</td><td>distorsion parameters. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">intrinsicParams</td><td>camera calibration matrix parameters. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">distorsionParams</td><td>camera distorsion parameters. </td></tr>
   </table>
   </dd>
 </dl>

@@ -105,18 +105,18 @@ Public Member Functions</h2></td></tr>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1pose_1_1_i3_d_transform_finder_from2_d3_d.html#a1d79773dc8ce1966beade065c09e7eb4">~I3DTransformFinderFrom2D3D</a> ()=default</td></tr>
 <tr class="memdesc:a1d79773dc8ce1966beade065c09e7eb4"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1pose_1_1_i3_d_transform_finder_from2_d3_d.html" title="Finds the 3D transform of 2D-3D points correspondences. UUID: 77281cda-47c2-4bb7-bde6-5b0d02e75dae ...">I3DTransformFinderFrom2D3D</a> default destructor. <br /></td></tr>
 <tr class="separator:a1d79773dc8ce1966beade065c09e7eb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a08ea0ce86c3383361bceb35d678d1982"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1pose_1_1_i3_d_transform_finder_from2_d3_d.html#a08ea0ce86c3383361bceb35d678d1982">setCameraParameters</a> (const <a class="el" href="_camera_definitions_8h.html#a0ea650513b55059459f5d5771c5bf5cb">CamCalibration</a> &amp;intrinsicParams, const <a class="el" href="_camera_definitions_8h.html#ad85d877532df3da45a970d47735e34bc">CamDistortion</a> &amp;distorsionParams)=0</td></tr>
-<tr class="memdesc:a08ea0ce86c3383361bceb35d678d1982"><td class="mdescLeft">&#160;</td><td class="mdescRight">this method is used to set intrinsic parameters and distorsion of the camera  <a href="#a08ea0ce86c3383361bceb35d678d1982">More...</a><br /></td></tr>
-<tr class="separator:a08ea0ce86c3383361bceb35d678d1982"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5aa541556009c5eeaf3cc8261b53cecc"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1pose_1_1_i3_d_transform_finder_from2_d3_d.html#a5aa541556009c5eeaf3cc8261b53cecc">estimate</a> (const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point2_df.html">Point2Df</a> &gt; &amp;imagePoints, const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point3_df.html">Point3Df</a> &gt; &amp;worldPoints, <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a> &amp;pose, const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a> initialPose=Transform3Df::Identity())=0</td></tr>
-<tr class="memdesc:a5aa541556009c5eeaf3cc8261b53cecc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Estimates camera pose from a set of 2D image points of their corresponding 3D world points.  <a href="#a5aa541556009c5eeaf3cc8261b53cecc">More...</a><br /></td></tr>
-<tr class="separator:a5aa541556009c5eeaf3cc8261b53cecc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62ab60fea9b2241f8a54c8be7e1a7954"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1pose_1_1_i3_d_transform_finder_from2_d3_d.html#a62ab60fea9b2241f8a54c8be7e1a7954">setCameraParameters</a> (const <a class="el" href="_camera_definitions_8h.html#a0ea650513b55059459f5d5771c5bf5cb">datastructure::CamCalibration</a> &amp;intrinsicParams, const <a class="el" href="_camera_definitions_8h.html#ad85d877532df3da45a970d47735e34bc">datastructure::CamDistortion</a> &amp;distorsionParams)=0</td></tr>
+<tr class="memdesc:a62ab60fea9b2241f8a54c8be7e1a7954"><td class="mdescLeft">&#160;</td><td class="mdescRight">this method is used to set intrinsic parameters and distorsion of the camera  <a href="#a62ab60fea9b2241f8a54c8be7e1a7954">More...</a><br /></td></tr>
+<tr class="separator:a62ab60fea9b2241f8a54c8be7e1a7954"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74d154ce75e8a5041e44786f8d9aac89"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1solver_1_1pose_1_1_i3_d_transform_finder_from2_d3_d.html#a74d154ce75e8a5041e44786f8d9aac89">estimate</a> (const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point2_df.html">datastructure::Point2Df</a> &gt; &amp;imagePoints, const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point3_df.html">datastructure::Point3Df</a> &gt; &amp;worldPoints, <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">datastructure::Transform3Df</a> &amp;pose, const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">datastructure::Transform3Df</a> initialPose=datastructure::Transform3Df::Identity())=0</td></tr>
+<tr class="memdesc:a74d154ce75e8a5041e44786f8d9aac89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Estimates camera pose from a set of 2D image points of their corresponding 3D world points.  <a href="#a74d154ce75e8a5041e44786f8d9aac89">More...</a><br /></td></tr>
+<tr class="separator:a74d154ce75e8a5041e44786f8d9aac89"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><b>Finds the 3D transform of 2D-3D points correspondences.</b> <code>UUID: 77281cda-47c2-4bb7-bde6-5b0d02e75dae</code> </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a5aa541556009c5eeaf3cc8261b53cecc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5aa541556009c5eeaf3cc8261b53cecc">&#9670;&nbsp;</a></span>estimate()</h2>
+<a id="a74d154ce75e8a5041e44786f8d9aac89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74d154ce75e8a5041e44786f8d9aac89">&#9670;&nbsp;</a></span>estimate()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -127,26 +127,26 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
         <tr>
           <td class="memname">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a> SolAR::api::solver::pose::I3DTransformFinderFrom2D3D::estimate </td>
           <td>(</td>
-          <td class="paramtype">const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point2_df.html">Point2Df</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point2_df.html">datastructure::Point2Df</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>imagePoints</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point3_df.html">Point3Df</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_point3_df.html">datastructure::Point3Df</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>worldPoints</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">datastructure::Transform3Df</a> &amp;&#160;</td>
           <td class="paramname"><em>pose</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">Transform3Df</a>&#160;</td>
-          <td class="paramname"><em>initialPose</em> = <code>Transform3Df::Identity()</code>&#160;</td>
+          <td class="paramtype">const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">datastructure::Transform3Df</a>&#160;</td>
+          <td class="paramname"><em>initialPose</em> = <code>datastructure::Transform3Df::Identity()</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -164,18 +164,19 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <p>Estimates camera pose from a set of 2D image points of their corresponding 3D world points. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">imagePoints,set</td><td>of 2d_points seen in view_1. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">worldPoints,set</td><td>of 3d_points corresponding to view_1. </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">pose,camera</td><td>pose (pose of the camera defined in world corrdinate system) expressed as a Transform3D. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">initialPose</td><td>(Optional), a transform3D to initialize the pose (reducing the convergence time and improving its success). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">imagePoints</td><td>set of 2d_points seen in view_1. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">worldPoints</td><td>set of 3d_points corresponding to view_1. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">pose</td><td>camera pose (pose of the camera defined in world corrdinate system) expressed as a Transform3D. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">initialPose</td><td>(Optional) a transform3D to initialize the pose (reducing the convergence time and improving its success). </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>FrameworkReturnCode::<em>SUCCESS if succeed, else FrameworkReturnCode::_ERROR</em> </dd></dl>
 
 </div>
 </div>
-<a id="a08ea0ce86c3383361bceb35d678d1982"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a08ea0ce86c3383361bceb35d678d1982">&#9670;&nbsp;</a></span>setCameraParameters()</h2>
+<a id="a62ab60fea9b2241f8a54c8be7e1a7954"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62ab60fea9b2241f8a54c8be7e1a7954">&#9670;&nbsp;</a></span>setCameraParameters()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -186,13 +187,13 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
         <tr>
           <td class="memname">virtual void SolAR::api::solver::pose::I3DTransformFinderFrom2D3D::setCameraParameters </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="_camera_definitions_8h.html#a0ea650513b55059459f5d5771c5bf5cb">CamCalibration</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="_camera_definitions_8h.html#a0ea650513b55059459f5d5771c5bf5cb">datastructure::CamCalibration</a> &amp;&#160;</td>
           <td class="paramname"><em>intrinsicParams</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="_camera_definitions_8h.html#ad85d877532df3da45a970d47735e34bc">CamDistortion</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="_camera_definitions_8h.html#ad85d877532df3da45a970d47735e34bc">datastructure::CamDistortion</a> &amp;&#160;</td>
           <td class="paramname"><em>distorsionParams</em>&#160;</td>
         </tr>
         <tr>
@@ -211,8 +212,8 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <p>this method is used to set intrinsic parameters and distorsion of the camera </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">Camera</td><td>calibration matrix parameters. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">Camera</td><td>distorsion parameters. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">intrinsicParams</td><td>camera calibration matrix parameters. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">distorsionParams</td><td>camera distorsion parameters. </td></tr>
   </table>
   </dd>
 </dl>
