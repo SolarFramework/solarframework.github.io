@@ -636,44 +636,27 @@ As you will see later, the SolAR framework is based on <em>QMake</em> originally
 <p>As SolAR is using QMake file to setup the projects, we highly recommend to install <em>Qt Creator</em>. Moreover, you will have access to wizards which will help you create new SolAR modules, components and pipelines.</p>
 </div>
 <div class="paragraph">
-<p>Download the last version of QTCreator on the following link (scroll down to choose "Downloads for open-source users" for open-source development):
-<a href="https://www.qt.io/download">QT installer download</a></p>
+<p>Download the version 4.14.0 of QTCreator on the following link (click on `QT Creator`in the left menu):
+<a href="https://www.qt.io/offline-installers">QT installer download</a></p>
 </div>
 <div class="paragraph">
 <p>When downloaded, run the <em>Qt Installer</em><br></p>
 </div>
 <div class="paragraph">
-<p>Create a <em>Qt</em> account if not already done, select where you want to install <em>Qt</em>. You don&#8217;t need to install <em>Qt</em> SDK, just the <em>Qt Creator</em>. So just check the following components:</p>
+<p>Create a <em>Qt</em> account if not already done, select where you want to install <em>Qt</em>. You don&#8217;t need to install <em>Qt</em> SDK, just the <em>Qt Creator</em>. So just check the following components (if not available during installation, search for <code>QT maintenance tool</code> or <code>QT uninstall</code> after installation to launch the QT tools to upgrade it):</p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>Qt x.x.x (last version proposed)</p>
-<div class="ulist">
-<ul>
-<li>
-<p>with MSVC 2017 64-bit</p>
-</li>
-<li>
-<p>Android (if you want to build SolAR for Android)</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Developer and Designer Tools</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Qt Creator x.x.x CDB Debugger Support</p>
-</li>
-<li>
-<p>Debugging Tools for Windows</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
+<div class="paragraph">
+<p><strong>Preview
+<strong> QT creator 4.14.0-rc1
+</strong> QT Creator 4.14.0-rc1 CDB Debugger Support
+* Qt
+<strong> Qt 5.14.2 (last version proposed)
+</strong></strong> with MSVC 2017 64-bit
+<strong>* Android (if you want to build SolAR for Android)
+</strong> Developer and Designer Tools
+<strong>* Qt Creator 4.14.0 CDB Debugger Support
+</strong>* Debugging Tools for Windows
+<strong>*</strong> CMake 3.19.2 64-bit</p>
 </div>
 <div class="paragraph">
 <p>and start the installation.</p>
@@ -936,7 +919,7 @@ git submodule update --init --recursive</pre>
 </tbody>
 </table>
 <div class="paragraph">
-<p>Then, in the <code>Build</code> menu, click on <code>Rebuild All Projects for All Configurations</code>, and go get a cup of coffee.</p>
+<p>Then, in the <code>Build</code> menu, click on <code>Run qmake</code> on each project (right click on parent projects into teh projects view) , and when it is done, click on <code>Rebuild All Projects for All Configurations</code>, and go get a cup of coffee.</p>
 </div>
 <div class="admonitionblock note">
 <table>
