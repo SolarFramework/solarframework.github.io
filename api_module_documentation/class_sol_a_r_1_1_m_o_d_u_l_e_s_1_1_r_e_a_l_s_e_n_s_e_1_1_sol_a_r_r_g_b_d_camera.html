@@ -190,6 +190,44 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This component handles a real sense RGBD camera and provides access to the color image, the depth image, and the 3D point cloud. </p>
+<dl class="params">
+<dt>Properties </dt>
+<dd><table class="params">
+<tr>
+<td class="paramname" rowspan="2" valign="top">rgb_width  </td><td></td><td></td></tr>
+<tr>
+<td><b>type</b>: int; <b>range</b> : [0..MAX INT]; <b>default</b>: 0   </td></tr>
+<tr>
+<td class="paramname" rowspan="2" valign="top">rgb_height  </td><td></td><td></td></tr>
+<tr>
+<td><b>type</b>: int; <b>range</b> : [0..MAX INT]; <b>default</b>: 0   </td></tr>
+<tr>
+<td class="paramname" rowspan="2" valign="top">rgb_framerate  </td><td></td><td></td></tr>
+<tr>
+<td><b>type</b>: int; <b>range</b> : [0..MAX INT]; <b>default</b>: 30   </td></tr>
+<tr>
+<td class="paramname" rowspan="2" valign="top">depth_width  </td><td></td><td></td></tr>
+<tr>
+<td><b>type</b>: int; <b>range</b> : [0..MAX INT]; <b>default</b>: 0   </td></tr>
+<tr>
+<td class="paramname" rowspan="2" valign="top">depth_height  </td><td></td><td></td></tr>
+<tr>
+<td><b>type</b>: int; <b>range</b> : [0..MAX INT]; <b>default</b>: 0   </td></tr>
+<tr>
+<td class="paramname" rowspan="2" valign="top">depth_framerate  </td><td></td><td></td></tr>
+<tr>
+<td><b>type</b>: int; <b>range</b> : [0..MAX INT]; <b>default</b>: 30   </td></tr>
+<tr>
+<td class="paramname" rowspan="2" valign="top">depth_colorize  </td><td>call rs2::colorizer if &gt;= 0 </td><td></td></tr>
+<tr>
+<td><b>type</b>: int; <b>range</b> : [MIN INT..MAX INT]; <b>default</b>: -1   </td></tr>
+<tr>
+<td class="paramname" rowspan="2" valign="top">depth_minimum  </td><td></td><td></td></tr>
+<tr>
+<td><b>type</b>: float; <b>range</b> : [0..MAX FLOAT]; <b>default</b>: 0.105f   </td></tr>
+</table>
+</dd>
+</dl>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a0e49034d599643f84a83a8bc3c4ca394"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0e49034d599643f84a83a8bc3c4ca394">&#9670;&nbsp;</a></span>alignColorToDepth()</h2>

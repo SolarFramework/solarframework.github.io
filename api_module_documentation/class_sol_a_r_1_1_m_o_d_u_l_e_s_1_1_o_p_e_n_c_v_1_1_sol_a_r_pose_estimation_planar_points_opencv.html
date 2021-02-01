@@ -117,6 +117,20 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><b>Finds the camera pose of 2D-3D planar points correspondences based on opencv homography.</b> <code>UUID: 9fbadf80-251f-4160-94f8-a64dc3d40a2f</code> </p>
+<dl class="params">
+<dt>Properties </dt>
+<dd><table class="params">
+<tr>
+<td class="paramname" rowspan="2" valign="top">minNbInliers  </td><td>minimal number of inliers to validate the pose </td><td></td></tr>
+<tr>
+<td><b>type</b>: int; <b>range</b> : [0..MAX INT]; <b>default</b>: 10   </td></tr>
+<tr>
+<td class="paramname" rowspan="2" valign="top">reprojErrorThreshold  </td><td>Inlier threshold value used by the RANSAC procedure. The parameter value is the maximum allowed distance between the observed and computed point projections to consider it an inlier. </td><td></td></tr>
+<tr>
+<td><b>type</b>: float; <b>range</b> : [0..MAX FLOAT]; <b>default</b>: 0.1f   </td></tr>
+</table>
+</dd>
+</dl>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="af76f6b12d450647216cc14938eb8c83d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af76f6b12d450647216cc14938eb8c83d">&#9670;&nbsp;</a></span>estimate()</h2>

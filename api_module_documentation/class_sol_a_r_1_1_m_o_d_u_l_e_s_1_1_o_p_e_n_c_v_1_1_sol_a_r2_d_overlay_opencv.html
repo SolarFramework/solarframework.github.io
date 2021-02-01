@@ -121,6 +121,28 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><b>Draws 2D features (circles, lines, etc.) on an image.</b> <code>UUID: cc51d685-9797-4ffd-a9dd-cec4f367fa6a</code> </p>
+<dl class="params">
+<dt>Properties </dt>
+<dd><table class="params">
+<tr>
+<td class="paramname" rowspan="2" valign="top">thickness  </td><td>the thickness of the displayed features (not used for SBPattern) </td><td></td></tr>
+<tr>
+<td><b>type</b>: uint; <b>range</b> : [0..MAX UINT]; <b>default</b>: 1   </td></tr>
+<tr>
+<td class="paramname" rowspan="2" valign="top">radius  </td><td>the radius of a circle (not used for contours and SBPattern) </td><td></td></tr>
+<tr>
+<td><b>type</b>: uint; <b>range</b> : [0..MAX UINT]; <b>default</b>: 5   </td></tr>
+<tr>
+<td class="paramname" rowspan="2" valign="top">color  </td><td>The color in BGR format of the displayed features </td><td></td></tr>
+<tr>
+<td><b>size</b>: 3, <b>elem type</b>: uint; <b>range</b> : [0..255]; <b>default</b>: { 0, 255, 0 }   </td></tr>
+<tr>
+<td class="paramname" rowspan="2" valign="top">randomColor  </td><td>if not 0, the color will be randomized for each elements </td><td></td></tr>
+<tr>
+<td><b>type</b>: int; <b>range</b> : [0, 1]; <b>default</b>: 0   </td></tr>
+</table>
+</dd>
+</dl>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="af0254304aa02df47d08173743ef9b8ad"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af0254304aa02df47d08173743ef9b8ad">&#9670;&nbsp;</a></span>drawCircle()</h2>

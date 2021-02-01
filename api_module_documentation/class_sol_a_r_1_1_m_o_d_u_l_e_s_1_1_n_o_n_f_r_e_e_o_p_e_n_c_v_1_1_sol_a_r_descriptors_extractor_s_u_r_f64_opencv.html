@@ -113,6 +113,32 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><b>Extracts the SURF descriptors (size 64) for a set of keypoints.</b> <code>UUID: 1a437804-d0a3-11e7-8fab-cec278b6b50a</code> </p>
+<dl class="params">
+<dt>Properties </dt>
+<dd><table class="params">
+<tr>
+<td class="paramname" rowspan="2" valign="top">hessianThreshold  </td><td>threshold for hessian keypoint detector used in SURF </td><td></td></tr>
+<tr>
+<td><b>type</b>: double; <b>range</b> : [0..MAX DOUBLE]; <b>default</b>: 100   </td></tr>
+<tr>
+<td class="paramname" rowspan="2" valign="top">nbOctaves  </td><td>number of pyramid octaves the keypoint detector will use </td><td></td></tr>
+<tr>
+<td><b>type</b>: int; <b>range</b> : [0..MAX INT]; <b>default</b>: 4   </td></tr>
+<tr>
+<td class="paramname" rowspan="2" valign="top">nbOctaveLayers  </td><td>number of octave layers within each octave </td><td></td></tr>
+<tr>
+<td><b>type</b>: int; <b>range</b> : [0..MAX INT]; <b>default</b>: 3   </td></tr>
+<tr>
+<td class="paramname" rowspan="2" valign="top">extended  </td><td>extended descriptor flag </td><td></td></tr>
+<tr>
+<td><b>type</b>: int; <b>range</b> : [0..MAX INT]; <b>default</b>: 0   </td></tr>
+<tr>
+<td class="paramname" rowspan="2" valign="top">upright  </td><td>up-right or rotated features flag </td><td></td></tr>
+<tr>
+<td><b>type</b>: int; <b>range</b> : [0, 1]; <b>default</b>: 0   </td></tr>
+</table>
+</dd>
+</dl>
 </div><hr/>The documentation for this class was generated from the following file:<ul>
 <li>SolARModuleNonFreeOpenCV/interfaces/<a class="el" href="_sol_a_r_descriptors_extractor_s_u_r_f64_opencv_8h_source.html">SolARDescriptorsExtractorSURF64Opencv.h</a></li>
 </ul>

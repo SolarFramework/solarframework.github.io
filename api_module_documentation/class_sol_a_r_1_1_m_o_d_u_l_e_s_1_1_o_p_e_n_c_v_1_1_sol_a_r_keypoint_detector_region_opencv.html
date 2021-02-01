@@ -123,6 +123,25 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><b>Detects keypoints in an given region of an image.</b> <code>UUID: 22c2ca9f-e43b-4a88-8337-4a166a789971</code> </p>
+<dl class="params">
+<dt>Properties </dt>
+<dd><table class="params">
+<tr>
+<td class="paramname" rowspan="2" valign="top">imageRatio  </td><td>the ratio to apply to the size of the input image to compute the descriptor.<br />
+ A ratio must be less or equal to 1. A ratio less than 1 will speedup computation </td><td></td></tr>
+<tr>
+<td><b>type</b>: float; <b>range</b> : [0..1]; <b>default</b>: 1.f   </td></tr>
+<tr>
+<td class="paramname" rowspan="2" valign="top">nbDescriptors  </td><td>the number of descriptors that are selected. If negative, all extracted descriptors are selected </td><td></td></tr>
+<tr>
+<td><b>type</b>: int; <b>range</b> : [-1..MAX INT]; <b>default</b>: 10000   </td></tr>
+<tr>
+<td class="paramname" rowspan="2" valign="top">threshold  </td><td>the threshold of detector to accept a keypoint </td><td></td></tr>
+<tr>
+<td><b>type</b>: float; <b>range</b> : [0..MAX FLOAT]; <b>default</b>: 1e-3f   </td></tr>
+</table>
+</dd>
+</dl>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a371419df81a7fb6b187e5e0f78dfd719"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a371419df81a7fb6b187e5e0f78dfd719">&#9670;&nbsp;</a></span>detect()</h2>

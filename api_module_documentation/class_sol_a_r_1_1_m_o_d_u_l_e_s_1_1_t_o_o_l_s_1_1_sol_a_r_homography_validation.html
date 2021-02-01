@@ -106,6 +106,25 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><b>Checks if an homography is valid based on 4 corners of a squared marker and their projection through a given homography.</b> <code>UUID: 112f9f03-79c1-4393-b8f3-e02227bebfed</code> </p>
+<dl class="params">
+<dt>Properties </dt>
+<dd><table class="params">
+<tr>
+<td class="paramname" rowspan="2" valign="top">oppositeSideRatio  </td><td>minimum length ratio of the opposite reprojected sides of the squared marker </td><td></td></tr>
+<tr>
+<td><b>type</b>: float; <b>range</b> : [0..MAX FLOAT]; <b>default</b>: 0.5f   </td></tr>
+<tr>
+<td class="paramname" rowspan="2" valign="top">surfaceRatio  </td><td>minimum surface ratio between the squared marker and its reprojection through the homography </td><td></td></tr>
+<tr>
+<td><b>type</b>: float; <b>range</b> : [0..MAX FLOAT]; <b>default</b>: 0.15f   </td></tr>
+<tr>
+<td class="paramname" rowspan="2" valign="top">maxOppositeDotProduct  </td><td>the maximum of the dot product of the two opposite and normalized sides of the reprojected squared marker.<br />
+ Here, we check is the opposite reprojected sides of the squared marker are not to perpendicular. If the dot product is close to 1, it means that the opposite side are perpendicular and so that the homography is not good. </td><td></td></tr>
+<tr>
+<td><b>type</b>: float; <b>range</b> : [0..1]; <b>default</b>: 0.9f   </td></tr>
+</table>
+</dd>
+</dl>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ac713ebf693acf16a214a4fc20d5ca865"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac713ebf693acf16a214a4fc20d5ca865">&#9670;&nbsp;</a></span>isValid()</h2>

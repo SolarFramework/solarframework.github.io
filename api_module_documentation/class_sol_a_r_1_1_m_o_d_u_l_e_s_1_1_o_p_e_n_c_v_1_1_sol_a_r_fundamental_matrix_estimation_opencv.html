@@ -114,6 +114,23 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><b>Estimates the fundamental matrix from two set of keypoints that match together.</b> <code>UUID: 79b29b50-cf4d-441e-b5de-1de829b91c41</code> </p>
+<dl class="params">
+<dt>Properties </dt>
+<dd><table class="params">
+<tr>
+<td class="paramname" rowspan="2" valign="top">confidenceLevel  </td><td>The desirable level of confidence (propability) that the estimated matrix is correct. </td><td></td></tr>
+<tr>
+<td><b>type</b>: float; <b>range</b> : [0..1]; <b>default</b>: 0.99f   </td></tr>
+<tr>
+<td class="paramname" rowspan="2" valign="top">outlierDistanceRatio  </td><td>Here we are using a RANSAC method to remove outlier.<br />
+ This attribute is the ratio between the maximum distance in pixels between source points and the maximum distance in pixels to the epipolar line for which point is considered as a outlier.<br />
+ The higher is this ratio, the more you will keep inliers to estimate your 2D transform, but the less this estimation will be correct.<br />
+ By default, this value is set to the one proposed by [Snavely07 4.1] </td><td></td></tr>
+<tr>
+<td><b>type</b>: float; <b>range</b> : [0..MAX FLOAT]; <b>default</b>: 0.006f   </td></tr>
+</table>
+</dd>
+</dl>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a42526a7ee2eb7c366b9aaf4f76b3f064"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a42526a7ee2eb7c366b9aaf4f76b3f064">&#9670;&nbsp;</a></span>find()</h2>

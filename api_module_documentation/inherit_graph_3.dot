@@ -190,7 +190,7 @@ digraph "Graphical Class Hierarchy"
   Node168 -> Node54 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node54 [label="SolAR::MODULES::TOOLS\l::SolARMapper",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_t_o_o_l_s_1_1_sol_a_r_mapper.html",tooltip="Allow to manage all components of a map. UUID: 8e3c926a-0861-46f7-80b2-8abb5576692c ..."];
   Node168 -> Node39 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node39 [label="SolAR::MODULES::TOOLS\l::SolAROverlapDetector",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_t_o_o_l_s_1_1_sol_a_r_overlap_detector.html"];
+  Node39 [label="SolAR::MODULES::TOOLS\l::SolAROverlapDetector",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_t_o_o_l_s_1_1_sol_a_r_overlap_detector.html",tooltip="Detect a loop closure from a given keyframe. UUID: 58087630-1376-11eb-adc1-0242ac120002 ..."];
   Node168 -> Node23 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node23 [label="SolAR::MODULES::TOOLS\l::SolARSBPatternReIndexer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_t_o_o_l_s_1_1_sol_a_r_s_b_pattern_re_indexer.html",tooltip="Provides both the 4 corners of a pattern in its reference coordinate system (pixels, cells, etc.) and the 4 corners in pixels of this pattern in the current image. UUID: a2ef5542-029e-4fce-9974-0aea14b29d6f "];
   Node168 -> Node126 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];

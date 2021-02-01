@@ -109,7 +109,29 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><b>Filters a cloud of 3D points by removing points with a too important reporjection error or those which are behind the camera.</b> <code>UUID: 09205b96-7cba-4415-bc61-64744bc26222</code> </p>
-<p>The projection error threshold as well as the test of cheirality (removing points behind the camera) can be configured. </p>
+<p>The projection error threshold as well as the test of cheirality (removing points behind the camera) can be configured.</p>
+<dl class="params">
+<dt>Properties </dt>
+<dd><table class="params">
+<tr>
+<td class="paramname" rowspan="2" valign="top">reprojErrorThreshold  </td><td>maximum reprojection error to keep the triangulated 3D point </td><td></td></tr>
+<tr>
+<td><b>type</b>: float; <b>range</b> : [0..MAX FLOAT]; <b>default</b>: 0.5f   </td></tr>
+<tr>
+<td class="paramname" rowspan="2" valign="top">cheiralityCheck  </td><td>if not 0, the point reconstructed behind the camera are removed </td><td></td></tr>
+<tr>
+<td><b>type</b>: int; <b>range</b> : [0..1]; <b>default</b>: 1   </td></tr>
+<tr>
+<td class="paramname" rowspan="2" valign="top">minTriangulationAngle  </td><td>min angle between rays </td><td></td></tr>
+<tr>
+<td><b>type</b>: float; <b>range</b> : [0..MAX FLOAT]; <b>default</b>: 0.03f   </td></tr>
+<tr>
+<td class="paramname" rowspan="2" valign="top">maxTriangulationAngle  </td><td>max angle between rays </td><td></td></tr>
+<tr>
+<td><b>type</b>: float; <b>range</b> : [0..MAX FLOAT]; <b>default</b>: 0.2f   </td></tr>
+</table>
+</dd>
+</dl>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="acbd4c258ede5e1856594a2606dd6dc34"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acbd4c258ede5e1856594a2606dd6dc34">&#9670;&nbsp;</a></span>filter() <span class="overload">[1/2]</span></h2>

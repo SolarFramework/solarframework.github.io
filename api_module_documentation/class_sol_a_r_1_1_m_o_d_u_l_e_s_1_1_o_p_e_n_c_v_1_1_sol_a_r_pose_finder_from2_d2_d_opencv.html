@@ -120,7 +120,25 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><b>Finds the camera pose based on a 2D-2D points correspondences between two images.</b> <code>UUID: 52babb5e-9d33-11e8-98d0-529269fb1459</code> </p>
-<p>This component first compute the essential Matrix between the two images, and then estimate the pose of the second camera (position and orientation of the camera defined in the world coordinate system) knowing the pose of the first camera. To do so, the component needs to know the intrinsic parameter of the camera. During the essential matrix estimation, the OpenCV method filters the matches based on a RANSAC approach by removing those that are to distant to the epipolar line. The estimation of the pose of the second camera is based on the recoverPose method of OpenCV which decomposes the essential matrix and selects among the four solutions the one that have the most important number of 3D points in front of the camera (cheirality check). </p>
+<p>This component first compute the essential Matrix between the two images, and then estimate the pose of the second camera (position and orientation of the camera defined in the world coordinate system) knowing the pose of the first camera. To do so, the component needs to know the intrinsic parameter of the camera. During the essential matrix estimation, the OpenCV method filters the matches based on a RANSAC approach by removing those that are to distant to the epipolar line. The estimation of the pose of the second camera is based on the recoverPose method of OpenCV which decomposes the essential matrix and selects among the four solutions the one that have the most important number of 3D points in front of the camera (cheirality check).</p>
+<dl class="params">
+<dt>Properties </dt>
+<dd><table class="params">
+<tr>
+<td class="paramname" rowspan="2" valign="top">outlierDistanceRatio  </td><td>here we are using a RANSAC method to remove outlier.<br />
+ This attribute is the ratio between the maximum distance in pixels between source points and the maximum distance in pixels to the epipolar line for which point is considered as a outlier.<br />
+ The higher is this ratio, the more you will keep inliers to estimate your 2D transform, but the less this estimation will be correct.<br />
+ By default, this value is set to the one proposed by [Snavely07 4.1]<br />
+ </td><td></td></tr>
+<tr>
+<td><b>type</b>: float; <b>range</b> : [0..MAX FLOAT]; <b>default</b>: 0.006f   </td></tr>
+<tr>
+<td class="paramname" rowspan="2" valign="top">outlierDistanceRatio  </td><td>the probability that the algorithm produces a useful result </td><td></td></tr>
+<tr>
+<td><b>type</b>: float; <b>range</b> : [0..1]; <b>default</b>: 0.99f   </td></tr>
+</table>
+</dd>
+</dl>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="aca115a655f96ab80c468dcda93a35a80"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aca115a655f96ab80c468dcda93a35a80">&#9670;&nbsp;</a></span>estimate() <span class="overload">[1/2]</span></h2>

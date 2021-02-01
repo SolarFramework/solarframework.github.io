@@ -120,6 +120,50 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><b> SLAM tracking task.</b> <code>UUID: c45da19d-9637-48b6-ab52-33d3f0af6f72</code> </p>
+<dl class="params">
+<dt>Injectables </dt>
+<dd><table class="params">
+<tr>
+<td class="paramname">SolAR::api::solver::map::IMapper  </td></tr>
+<tr>
+<td class="paramname">SolAR::api::storage::IKeyframesManager  </td></tr>
+<tr>
+<td class="paramname">SolAR::api::features::IDescriptorMatcher  </td></tr>
+<tr>
+<td class="paramname">SolAR::api::features::IMatchesFilter  </td></tr>
+<tr>
+<td class="paramname">SolAR::api::solver::pose::I2D3DCorrespondencesFinder  </td></tr>
+<tr>
+<td class="paramname">SolAR::api::solver::pose::I3DTransformFinderFrom2D3D  </td></tr>
+<tr>
+<td class="paramname">SolAR::api::solver::pose::I3DTransformSACFinderFrom2D3D  </td></tr>
+<tr>
+<td class="paramname">SolAR::api::geom::IProject  </td></tr>
+<tr>
+<td class="paramname">SolAR::api::reloc::IKeyframeRetriever  </td></tr>
+<tr>
+<td class="paramname">SolAR::api::display::I2DOverlay  </td></tr>
+</table>
+</dd>
+</dl>
+<dl class="params">
+<dt>Properties </dt>
+<dd><table class="params">
+<tr>
+<td class="paramname" rowspan="2" valign="top">minWeightNeighbor  </td><td></td><td></td></tr>
+<tr>
+<td><b>type</b>: float; <b>range</b> : [0..MAX FLOAT]; <b>default</b>: 10.f   </td></tr>
+<tr>
+<td class="paramname" rowspan="2" valign="top">thresAngleViewDirection  </td><td></td><td></td></tr>
+<tr>
+<td><b>type</b>: float; <b>range</b> : [0..MAX FLOAT]; <b>default</b>: 0.7f   </td></tr>
+<tr>
+<td class="paramname" rowspan="2" valign="top">displayTrackedPoints  </td><td></td><td></td></tr>
+<tr>
+<td><b>type</b>: int; <b>range</b> : [0..MAX INT]; <b>default</b>: 1   </td></tr>
+</table>
+</dd>
+</dl>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a9dde6a26278a849c7247db5431e6bdb5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9dde6a26278a849c7247db5431e6bdb5">&#9670;&nbsp;</a></span>process()</h2>

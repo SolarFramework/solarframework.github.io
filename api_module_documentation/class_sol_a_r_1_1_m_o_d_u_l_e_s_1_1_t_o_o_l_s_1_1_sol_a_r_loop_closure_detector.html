@@ -109,7 +109,38 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Detect a loop closure from a given keyframe. <code>UUID: e3d5946c-c1f1-11ea-b3de-0242ac130004</code> </p>
-<p>Detect a loop closure from a given keyframe. <code>UUID: 58087630-1376-11eb-adc1-0242ac120002</code> </p>
+<dl class="params">
+<dt>Injectables </dt>
+<dd><table class="params">
+<tr>
+<td class="paramname">SolAR::api::storage::IKeyframesManager  </td></tr>
+<tr>
+<td class="paramname">SolAR::api::storage::ICovisibilityGraph  </td></tr>
+<tr>
+<td class="paramname">SolAR::api::reloc::IKeyframeRetriever  </td></tr>
+<tr>
+<td class="paramname">SolAR::api::solver::pose::I3DTransformSACFinderFrom3D3D  </td></tr>
+<tr>
+<td class="paramname">SolAR::api::features::IDescriptorMatcher  </td></tr>
+<tr>
+<td class="paramname">SolAR::api::features::IMatchesFilter  </td></tr>
+<tr>
+<td class="paramname">SolAR::api::solver::pose::I3D3DCorrespondencesFinder  </td></tr>
+<tr>
+<td class="paramname">SolAR::api::geom::I3DTransform  </td></tr>
+</table>
+</dd>
+</dl>
+<dl class="params">
+<dt>Properties </dt>
+<dd><table class="params">
+<tr>
+<td class="paramname" rowspan="2" valign="top">minNbInliers  </td><td></td><td></td></tr>
+<tr>
+<td><b>type</b>: int; <b>range</b> : [0..MAX INT]; <b>default</b>: 0   </td></tr>
+</table>
+</dd>
+</dl>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="af1dfdde8471342823e63a49c54950719"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af1dfdde8471342823e63a49c54950719">&#9670;&nbsp;</a></span>detect()</h2>

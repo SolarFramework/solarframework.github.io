@@ -109,6 +109,18 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><b>Matches descriptors based on a Hamming distance and selects the best matches of each descriptor.</b> <code>UUID: d67ce1ba-04a5-43bc-a0f8-e0c3653b32c9</code> </p>
+<dl class="params">
+<dt>Properties </dt>
+<dd><table class="params">
+<tr>
+<td class="paramname" rowspan="2" valign="top">distanceRatio  </td><td>Distance ratio used to keep good matches.<br />
+ Several matches can correspond to a given keypoint of the first image. The first match with the best score is always retained.<br />
+ But here, we can also retain the next matches if their distances or scores is greater than the score of the best match * m_distanceRatio. </td><td></td></tr>
+<tr>
+<td>type: float; range : [0..MAX FLOAT]; default: 0.75f   </td></tr>
+</table>
+</dd>
+</dl>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a1e6568a8a45932aa11f3352945d155e6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1e6568a8a45932aa11f3352945d155e6">&#9670;&nbsp;</a></span>match() <span class="overload">[1/2]</span></h2>

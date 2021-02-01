@@ -107,6 +107,26 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><b>Filters contours to select only the contours of squared binary markers.</b> <code>UUID: 4309dcc6-cc73-11e7-abc4-cec278b6b50a</code> </p>
+<dl class="params">
+<dt>Properties </dt>
+<dd><table class="params">
+<tr>
+<td class="paramname" rowspan="2" valign="top">minContourLength  </td><td>the minimum length of an edge of a contour in pixels after simplification.<br />
+ Any simplified contour which will have at least one edge that will have a length in pixel less than this value will be removed from the input filters </td><td></td></tr>
+<tr>
+<td><b>type</b>: float; <b>range</b> : [0..MAX FLOAT]; <b>default</b>: 20.f   </td></tr>
+<tr>
+<td class="paramname" rowspan="2" valign="top">epsilon  </td><td>the maximum distance between the original curve and its approximation.<br />
+ This filter first simplifies the contour if its curve is low. The simplified contour will not be more than epsilon pixels away from the original contour </td><td></td></tr>
+<tr>
+<td><b>type</b>: float; <b>range</b> : [0..MAX FLOAT]; <b>default</b>: 0.05f   </td></tr>
+<tr>
+<td class="paramname" rowspan="2" valign="top">minDistanceBetweenContourCorners  </td><td>the minimum number of edges of a contour to extract. If negative value, extract all contours </td><td></td></tr>
+<tr>
+<td><b>type</b>: float; <b>range</b> : [-1..MAX FLOAT]; <b>default</b>: 0.05f   </td></tr>
+</table>
+</dd>
+</dl>
 </div><hr/>The documentation for this class was generated from the following file:<ul>
 <li>SolARModuleOpenCV/interfaces/<a class="el" href="_sol_a_r_contours_filter_binary_marker_opencv_8h_source.html">SolARContoursFilterBinaryMarkerOpencv.h</a></li>
 </ul>

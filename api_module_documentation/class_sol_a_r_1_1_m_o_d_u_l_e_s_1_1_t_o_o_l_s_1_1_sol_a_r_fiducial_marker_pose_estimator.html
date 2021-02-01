@@ -123,6 +123,52 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><b>Estimate camera pose based on a fiducial marker.</b> <code>UUID: cddd23c4-da4e-4c5c-b3f9-7d095d097c97</code> </p>
+<dl class="params">
+<dt>Injectables </dt>
+<dd><table class="params">
+<tr>
+<td class="paramname">SolAR::api::input::files::IMarker2DSquaredBinary  </td></tr>
+<tr>
+<td class="paramname">SolAR::api::image::IImageFilter  </td></tr>
+<tr>
+<td class="paramname">SolAR::api::image::IImageConvertor  </td></tr>
+<tr>
+<td class="paramname">SolAR::api::features::IContoursExtractor  </td></tr>
+<tr>
+<td class="paramname">SolAR::api::features::IContoursFilter  </td></tr>
+<tr>
+<td class="paramname">SolAR::api::image::IPerspectiveController  </td></tr>
+<tr>
+<td class="paramname">SolAR::api::features::IDescriptorsExtractorSBPattern  </td></tr>
+<tr>
+<td class="paramname">SolAR::api::features::IDescriptorMatcher  </td></tr>
+<tr>
+<td class="paramname">SolAR::api::features::ISBPatternReIndexer  </td></tr>
+<tr>
+<td class="paramname">SolAR::api::geom::IImage2WorldMapper  </td></tr>
+<tr>
+<td class="paramname">SolAR::api::solver::pose::I3DTransformFinderFrom2D3D  </td></tr>
+</table>
+</dd>
+</dl>
+<dl class="params">
+<dt>Properties </dt>
+<dd><table class="params">
+<tr>
+<td class="paramname" rowspan="2" valign="top">nbThreshold  </td><td></td><td></td></tr>
+<tr>
+<td><b>type</b>: int; <b>range</b> : [0..MAX INT]; <b>default</b>: 3   </td></tr>
+<tr>
+<td class="paramname" rowspan="2" valign="top">minThreshold  </td><td></td><td></td></tr>
+<tr>
+<td><b>type</b>: int; <b>range</b> : [-1..MAX INT]; <b>default</b>: -1   </td></tr>
+<tr>
+<td class="paramname" rowspan="2" valign="top">maxThreshold  </td><td></td><td></td></tr>
+<tr>
+<td><b>type</b>: int; <b>range</b> : [0..MAX INT]; <b>default</b>: 220   </td></tr>
+</table>
+</dd>
+</dl>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="adc4da135a858fd464b6e19a25b2b7d5b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adc4da135a858fd464b6e19a25b2b7d5b">&#9670;&nbsp;</a></span>estimate()</h2>

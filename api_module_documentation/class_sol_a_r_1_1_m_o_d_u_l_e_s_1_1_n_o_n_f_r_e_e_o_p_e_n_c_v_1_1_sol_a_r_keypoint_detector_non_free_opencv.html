@@ -115,6 +115,24 @@ org::bcom::xpcf::XPCFErrorCode&#160;</td><td class="memItemRight" valign="bottom
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><b>Detects keypoints in an image (based on SIFT or SURF algorithm).</b> <code>UUID: d1f9317c-9519-4671-8ff5-4629773544f2</code> </p>
+<dl class="params">
+<dt>Properties </dt>
+<dd><table class="params">
+<tr>
+<td class="paramname" rowspan="2" valign="top">imageRatio  </td><td>resize image to speedup computation </td><td></td></tr>
+<tr>
+<td><b>type</b>: float; <b>range</b> : [0..MAX FLOAT]; <b>default</b>: 1.f   </td></tr>
+<tr>
+<td class="paramname" rowspan="2" valign="top">nbDescriptors  </td><td>number of best features to select </td><td></td></tr>
+<tr>
+<td><b>type</b>: int; <b>range</b> : [0..MAX INT]; <b>default</b>: 1000   </td></tr>
+<tr>
+<td class="paramname" rowspan="2" valign="top">type  </td><td>feature type (values among ["SURF"]) </td><td></td></tr>
+<tr>
+<td><b>type</b>: string; <b>default</b>: "SURF"   </td></tr>
+</table>
+</dd>
+</dl>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a3eb31579c6384dff6ba385428f1a8960"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3eb31579c6384dff6ba385428f1a8960">&#9670;&nbsp;</a></span>detect()</h2>

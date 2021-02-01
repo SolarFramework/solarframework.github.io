@@ -106,6 +106,21 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><b>Estimates the homography between two images from their matching keypoints.</b> <code>UUID: fb9dac20-2a44-44b2-aa42-2871eec31427</code> </p>
+<dl class="params">
+<dt>Properties </dt>
+<dd><table class="params">
+<tr>
+<td class="paramname" rowspan="2" valign="top">ransacReprojThreshold  </td><td>Here we are using the RANSAC to remove outlier. That is if:<br />
+ <p class="formulaDsp">
+\[ \left|| dstPoints_i - convertPointHomogenous \left( H * srcPoints_i \right) \right|| &gt; ransacReprojThreshold \]
+</p>
+<br />
+ then the point i is considered an outlier. If srcPoints and dstPoints are measured in pixels, it usually makes sense to set this parameter somewhere in the range of 1 to 10. </td><td></td></tr>
+<tr>
+<td><b>type</b>: double; <b>range</b> : [0..MAX DOUBLE]; <b>default</b>: 8   </td></tr>
+</table>
+</dd>
+</dl>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a546b0e4eb3e796d81ca7be2d6648ba58"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a546b0e4eb3e796d81ca7be2d6648ba58">&#9670;&nbsp;</a></span>find()</h2>

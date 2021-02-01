@@ -117,6 +117,50 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><b>Initialization SLAM using an image stream of a camera.</b> <code>UUID: 8f43eed0-1a2e-4c47-83f0-8dd5b259cdb0</code> </p>
+<dl class="params">
+<dt>Injectables </dt>
+<dd><table class="params">
+<tr>
+<td class="paramname">SolAR::api::solver::map::IMapper  </td></tr>
+<tr>
+<td class="paramname">SolAR::api::features::IKeypointDetector  </td></tr>
+<tr>
+<td class="paramname">SolAR::api::features::IDescriptorsExtractor  </td></tr>
+<tr>
+<td class="paramname">SolAR::api::features::IDescriptorMatcher  </td></tr>
+<tr>
+<td class="paramname">SolAR::api::features::IMatchesFilter  </td></tr>
+<tr>
+<td class="paramname">SolAR::api::solver::map::ITriangulator  </td></tr>
+<tr>
+<td class="paramname">SolAR::api::solver::map::IMapFilter  </td></tr>
+<tr>
+<td class="paramname">SolAR::api::solver::map::IKeyframeSelector  </td></tr>
+<tr>
+<td class="paramname">SolAR::api::solver::pose::I3DTransformFinderFrom2D2D  </td></tr>
+<tr>
+<td class="paramname">api::display::IMatchesOverlay  </td></tr>
+</table>
+</dd>
+</dl>
+<dl class="params">
+<dt>Properties </dt>
+<dd><table class="params">
+<tr>
+<td class="paramname" rowspan="2" valign="top">hasPose  </td><td>(0 = false, 1 = true) </td><td></td></tr>
+<tr>
+<td><b>type</b>: int; <b>range</b> : [0, 1]; <b>default</b>: 1   </td></tr>
+<tr>
+<td class="paramname" rowspan="2" valign="top">nbMinInitPointCloud  </td><td></td><td></td></tr>
+<tr>
+<td><b>type</b>: int; <b>range</b> : [0..MAX INT]; <b>default</b>: 50   </td></tr>
+<tr>
+<td class="paramname" rowspan="2" valign="top">angleThres  </td><td></td><td></td></tr>
+<tr>
+<td><b>type</b>: float; <b>range</b> : [0..2*PI]; <b>default</b>: 0.1f   </td></tr>
+</table>
+</dd>
+</dl>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="af97a2ce649dec39a57288d2e9a990d0f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af97a2ce649dec39a57288d2e9a990d0f">&#9670;&nbsp;</a></span>process()</h2>

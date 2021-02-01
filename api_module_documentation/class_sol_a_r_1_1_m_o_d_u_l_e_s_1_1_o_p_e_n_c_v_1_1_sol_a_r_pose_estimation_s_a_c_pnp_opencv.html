@@ -117,6 +117,33 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><b>Finds the camera pose of 2D-3D points correspondences based on opencv Perspective-n-Points algorithm using Ransac method.</b> <code>UUID: 4d369049-809c-4e99-9994-5e8167bab808</code> </p>
+<dl class="params">
+<dt>Properties </dt>
+<dd><table class="params">
+<tr>
+<td class="paramname" rowspan="2" valign="top">iterationsCount  </td><td>number of iterations </td><td></td></tr>
+<tr>
+<td><b>type</b>: int; <b>range</b> : [0..MAX INT]; <b>default</b>: 1000   </td></tr>
+<tr>
+<td class="paramname" rowspan="2" valign="top">reprojError  </td><td>Inlier threshold value used by the RANSAC procedure.<br />
+ The parameter value is the maximum allowed distance between the observed and computed point projections to consider it an inlier </td><td></td></tr>
+<tr>
+<td><b>type</b>: float; <b>range</b> : [0..MAX FLOAT]; <b>default</b>: 4.f   </td></tr>
+<tr>
+<td class="paramname" rowspan="2" valign="top">confidence  </td><td>the probability that the algorithm produces a useful result </td><td></td></tr>
+<tr>
+<td><b>type</b>: float; <b>range</b> : [0..1]; <b>default</b>: 0.99f   </td></tr>
+<tr>
+<td class="paramname" rowspan="2" valign="top">minNbInliers  </td><td>the minimum of number of inliers to valid a good pose estimation </td><td></td></tr>
+<tr>
+<td><b>type</b>: int; <b>range</b> : [0..MAX INT]; <b>default</b>: 10   </td></tr>
+<tr>
+<td class="paramname" rowspan="2" valign="top">method  </td><td>the method for solving the PnP problem (ITERATIVE, P3P, AP3P, EPNP, DLS, UPNP, IPPE, IPPE_SQUARE) </td><td></td></tr>
+<tr>
+<td><b>type</b>: string; <b>default</b>: "ITERATIVE"   </td></tr>
+</table>
+</dd>
+</dl>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a69e4c9a1da3dd62843baf7d506638275"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a69e4c9a1da3dd62843baf7d506638275">&#9670;&nbsp;</a></span>estimate()</h2>

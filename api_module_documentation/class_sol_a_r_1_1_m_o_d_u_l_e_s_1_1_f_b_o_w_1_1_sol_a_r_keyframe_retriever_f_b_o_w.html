@@ -130,6 +130,28 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><b>Retrieves keyframes closest to an input frame based on a Fast Bag Of Words implementaton.</b> <code>UUID: 9d1b1afa-bdbc-11e8-a355-529269fb1459</code> </p>
+<dl class="params">
+<dt>Properties </dt>
+<dd><table class="params">
+<tr>
+<td class="paramname" rowspan="2" valign="top">VOCpath  </td><td>path to the vocabulary file </td><td></td></tr>
+<tr>
+<td><b>type</b>: string; <b>default</b>: ""   </td></tr>
+<tr>
+<td class="paramname" rowspan="2" valign="top">threshold  </td><td>the threshold above which keyframes are considered valid </td><td></td></tr>
+<tr>
+<td><b>type</b>: float; <b>range</b> : [0..MAX FLOAT]; <b>default</b>: 0.f   </td></tr>
+<tr>
+<td class="paramname" rowspan="2" valign="top">matchingDistanceRatio  </td><td>distance ratio used to keep good matches </td><td></td></tr>
+<tr>
+<td><b>type</b>: float; <b>range</b> : [0..MAX FLOAT]; <b>default</b>: 0.7f   </td></tr>
+<tr>
+<td class="paramname" rowspan="2" valign="top">matchingDistanceMax  </td><td>distance max used to keep good matches </td><td></td></tr>
+<tr>
+<td><b>type</b>: float; <b>range</b> : [0..MAX FLOAT]; <b>default</b>: 100.f   </td></tr>
+</table>
+</dd>
+</dl>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ad0724e7a60f7953274ce01292293af91"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad0724e7a60f7953274ce01292293af91">&#9670;&nbsp;</a></span>addKeyframe()</h2>

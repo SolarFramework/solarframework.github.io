@@ -112,6 +112,26 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><b>Matches descriptors and selects k best matches for each descriptor.</b> <code>UUID: 7823dac8-1597-41cf-bdef-59aa22f3d40a</code> </p>
+<dl class="params">
+<dt>Properties </dt>
+<dd><table class="params">
+<tr>
+<td class="paramname" rowspan="2" valign="top">distanceRatio  </td><td>distance ratio used to keep good matches.<br />
+ Several matches can correspond to a given keypoint of the first image. The first match with the best score is always retained.<br />
+ But here, we can also retain the second match if its distance or score is greater than the score of the best match * m_distanceRatio. </td><td></td></tr>
+<tr>
+<td><b>type</b>: float; <b>range</b> : [0..MAX FLOAT]; <b>default</b>: default: 0.75f   </td></tr>
+<tr>
+<td class="paramname" rowspan="2" valign="top">radius  </td><td></td><td></td></tr>
+<tr>
+<td><b>type</b>: float; <b>range</b> : [0..MAX FLOAT]; <b>default</b>: 0.5f   </td></tr>
+<tr>
+<td class="paramname" rowspan="2" valign="top">matchingDistanceMax  </td><td></td><td></td></tr>
+<tr>
+<td><b>type</b>: float; <b>range</b> : [0..MAX FLOAT]; <b>default</b>: 500.f   </td></tr>
+</table>
+</dd>
+</dl>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a1091d4b2fd1de4df6506255d5bd3f586"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1091d4b2fd1de4df6506255d5bd3f586">&#9670;&nbsp;</a></span>match() <span class="overload">[1/2]</span></h2>

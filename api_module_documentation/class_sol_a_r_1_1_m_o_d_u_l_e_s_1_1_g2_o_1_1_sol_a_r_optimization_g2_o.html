@@ -109,6 +109,60 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><b>Bundle adjustment optimization.</b> <code>UUID: 870d89ba-bb5f-460a-a817-1fcb6473df70</code> </p>
+<dl class="params">
+<dt>Injectables </dt>
+<dd><table class="params">
+<tr>
+<td class="paramname">SolAR::api::storage::IPointCloudManager  </td></tr>
+<tr>
+<td class="paramname">SolAR::api::storage::IKeyframesManager  </td></tr>
+<tr>
+<td class="paramname">SolAR::api::storage::ICovisibilityGraph  </td></tr>
+</table>
+</dd>
+</dl>
+<dl class="params">
+<dt>Properties </dt>
+<dd><table class="params">
+<tr>
+<td class="paramname" rowspan="2" valign="top">nbIterationsLocal  </td><td></td><td></td></tr>
+<tr>
+<td><b>type</b>: int; <b>range</b> : [0..MAX INT]; <b>default</b>: 10   </td></tr>
+<tr>
+<td class="paramname" rowspan="2" valign="top">nbIterationsGlobal  </td><td></td><td></td></tr>
+<tr>
+<td><b>type</b>: int; <b>range</b> : [0..MAX INT]; <b>default</b>: 10   </td></tr>
+<tr>
+<td class="paramname" rowspan="2" valign="top">setVerbose  </td><td>(0 = false, 1 = true) </td><td></td></tr>
+<tr>
+<td><b>type</b>: int; <b>range</b> : [0, 1]; <b>default</b>: 0   </td></tr>
+<tr>
+<td class="paramname" rowspan="2" valign="top">nbMaxFixedKeyframes  </td><td></td><td></td></tr>
+<tr>
+<td><b>type</b>: int; <b>range</b> : [0..MAX INT]; <b>default</b>: 0   </td></tr>
+<tr>
+<td class="paramname" rowspan="2" valign="top">errorOutlier  </td><td></td><td></td></tr>
+<tr>
+<td><b>type</b>: float; <b>range</b> : [0..MAX FLOAT]; <b>default</b>: 3.f   </td></tr>
+<tr>
+<td class="paramname" rowspan="2" valign="top">useSpanningTree  </td><td>(0 = false, 1 = true) </td><td></td></tr>
+<tr>
+<td><b>type</b>: int; <b>range</b> : [0, 1]; <b>default</b>: 0   </td></tr>
+<tr>
+<td class="paramname" rowspan="2" valign="top">isRobust  </td><td>(0 = false, 1 = true) </td><td></td></tr>
+<tr>
+<td><b>type</b>: int; <b>range</b> : [0, 1]; <b>default</b>: 1   </td></tr>
+<tr>
+<td class="paramname" rowspan="2" valign="top">fixedMap  </td><td>(0 = false, 1 = true) </td><td></td></tr>
+<tr>
+<td><b>type</b>: int; <b>range</b> : [0, 1]; <b>default</b>: 0   </td></tr>
+<tr>
+<td class="paramname" rowspan="2" valign="top">fixedKeyframes  </td><td>(0 = false, 1 = true) </td><td></td></tr>
+<tr>
+<td><b>type</b>: int; <b>range</b> : [0, 1]; <b>default</b>: 0   </td></tr>
+</table>
+</dd>
+</dl>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="aa9925b365ec7b1f66ec02513e846f270"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa9925b365ec7b1f66ec02513e846f270">&#9670;&nbsp;</a></span>bundleAdjustment()</h2>

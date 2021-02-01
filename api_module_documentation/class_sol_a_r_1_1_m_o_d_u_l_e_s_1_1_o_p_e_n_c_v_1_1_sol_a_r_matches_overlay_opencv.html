@@ -115,6 +115,28 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><b>Displays matching keypoints between two images.</b> <code>UUID: e95302be-3fe1-44e0-97bf-a98380464af9</code> </p>
+<dl class="params">
+<dt>Properties </dt>
+<dd><table class="params">
+<tr>
+<td class="paramname" rowspan="2" valign="top">thickness  </td><td>thickness of the lines displaying the matches between the two images </td><td></td></tr>
+<tr>
+<td><b>type</b>: int; <b>range</b> : [0..MAX INT]; <b>default</b>: 1   </td></tr>
+<tr>
+<td class="paramname" rowspan="2" valign="top">color  </td><td>the color of the linse displaying the matches between the two images </td><td></td></tr>
+<tr>
+<td><b>size</b>: 3, <b>elem type</b>: uint; <b>range</b> : [0..255]; <b>default</b>: [ 0, 255, 0 ]   </td></tr>
+<tr>
+<td class="paramname" rowspan="2" valign="top">mode  </td><td>if not null, the color will be randomized for each line (values among ["COLOR", "RANDOM", "FADING"]) </td><td></td></tr>
+<tr>
+<td><b>type</b>: string; <b>default</b>: "COLOR"   </td></tr>
+<tr>
+<td class="paramname" rowspan="2" valign="top">maxMatches  </td><td>the maximum number of matches to display. If negative, all matches are displayed </td><td></td></tr>
+<tr>
+<td><b>type</b>: int; <b>range</b> : [-1..MAX INT]; <b>default</b>: -1   </td></tr>
+</table>
+</dd>
+</dl>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a6c909df903cc95718a1608f1425b2a4a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6c909df903cc95718a1608f1425b2a4a">&#9670;&nbsp;</a></span>draw() <span class="overload">[1/4]</span></h2>

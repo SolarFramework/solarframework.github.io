@@ -117,6 +117,56 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><b> SLAM mapping.</b> <code>UUID: c276bcb1-2ac8-42f2-806d-d4fe0ce7d4be</code> </p>
+<dl class="params">
+<dt>Injectables </dt>
+<dd><table class="params">
+<tr>
+<td class="paramname">SolAR::api::solver::map::IMapper  </td></tr>
+<tr>
+<td class="paramname">SolAR::api::storage::IPointCloudManager  </td></tr>
+<tr>
+<td class="paramname">SolAR::api::storage::IKeyframesManager  </td></tr>
+<tr>
+<td class="paramname">SolAR::api::storage::ICovisibilityGraph  </td></tr>
+<tr>
+<td class="paramname">SolAR::api::solver::map::IKeyframeSelector  </td></tr>
+<tr>
+<td class="paramname">SolAR::api::solver::map::IBundler  </td></tr>
+<tr>
+<td class="paramname">SolAR::api::reloc::IKeyframeRetriever  </td></tr>
+<tr>
+<td class="paramname">SolAR::api::features::IMatchesFilter  </td></tr>
+<tr>
+<td class="paramname">SolAR::api::solver::map::ITriangulator  </td></tr>
+<tr>
+<td class="paramname">SolAR::solver::map::IMapFilter  </td></tr>
+<tr>
+<td class="paramname">SolAR::api::geom::IProject  </td></tr>
+<tr>
+<td class="paramname">SolAR::api::features::IDescriptorMatcher  </td></tr>
+<tr>
+<td class="paramname">SolAR::api::solver::pose::I2D3DCorrespondencesFinder  </td></tr>
+</table>
+</dd>
+</dl>
+<dl class="params">
+<dt>Properties </dt>
+<dd><table class="params">
+<tr>
+<td class="paramname" rowspan="2" valign="top">minWeightNeighbor  </td><td></td><td></td></tr>
+<tr>
+<td><b>type</b>: float; <b>range</b> : [0..MAX FLOAT]; <b>default</b>: 1.f   </td></tr>
+<tr>
+<td class="paramname" rowspan="2" valign="top">maxNbNeighborKfs  </td><td></td><td></td></tr>
+<tr>
+<td><b>type</b>: int; <b>range</b> : [0..MAX INT]; <b>default</b>: 5   </td></tr>
+<tr>
+<td class="paramname" rowspan="2" valign="top">minTrackedPoints  </td><td></td><td></td></tr>
+<tr>
+<td><b>type</b>: int; <b>range</b> : [0..MAX INT]; <b>default</b>: 100   </td></tr>
+</table>
+</dd>
+</dl>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a2bd3c29f6d0671d0b6f8b399519071ed"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2bd3c29f6d0671d0b6f8b399519071ed">&#9670;&nbsp;</a></span>process()</h2>
@@ -156,7 +206,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">frame</td><td>the input frame. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">keyframe</td><td>new keyframe or new reference keyframe found. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">keyframe</td><td>new keyframe or new reference keyframe found. </td></tr>
   </table>
   </dd>
 </dl>

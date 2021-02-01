@@ -109,6 +109,43 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><b>Estimates the optical flow between two images based on a pyramidal Lucas Kanade approach.</b> <code>UUID: b513e9ff-d2e7-4dcf-9a29-4ed95c512158</code> </p>
+<dl class="params">
+<dt>Properties </dt>
+<dd><table class="params">
+<tr>
+<td class="paramname" rowspan="2" valign="top">searchWinWidth  </td><td>widthHeight in pixels of the search window at each pyramid level </td><td></td></tr>
+<tr>
+<td><b>type</b>: int; <b>range</b> : [0..MAX INT]; <b>default</b>: 21   </td></tr>
+<tr>
+<td class="paramname" rowspan="2" valign="top">searchWinHeight  </td><td>height in pixels of the search window at each pyramid level </td><td></td></tr>
+<tr>
+<td><b>type</b>: int; <b>range</b> : [0..MAX INT]; <b>default</b>: 21   </td></tr>
+<tr>
+<td class="paramname" rowspan="2" valign="top">maxLevel  </td><td>if set to 0, pyramids are not used (single level), if set to 1, two levels are used, and so on;<br />
+ if pyramids are passed to input then algorithm will use as many levels as pyramids have but no more than maxLevel. </td><td></td></tr>
+<tr>
+<td><b>type</b>: int; <b>range</b> : [0..MAX INT]; <b>default</b>: 3   </td></tr>
+<tr>
+<td class="paramname" rowspan="2" valign="top">minEigenThreshold  </td><td>the minimum eigen value to measure error<br />
+ The algorithm calculates the minimum eigen value of a 2x2 normal matrix of optical flow equations (this matrix is called<br />
+ a spatial gradient matrix in [16]) divided by number of pixels in a window.<br />
+ If this value is less than minEigThreshold then a corresponding feature is filtered out and its flow is not processed so it allows<br />
+ to remove bad points and get a performance boost.<br />
+ If this value is less or equal to 0 the minimum eigen values as an error measure are not used. Instead the L1 distance<br />
+ between patches around the original and a moved point divided by number of pixels in a window is used as a error measure </td><td></td></tr>
+<tr>
+<td><b>type</b>: double; <b>range</b> : [-1..MAX DOUBLE]; <b>default</b>: -1.0   </td></tr>
+<tr>
+<td class="paramname" rowspan="2" valign="top">maxSearchIterations  </td><td>the maximum iteration before iterative search algorithm stops </td><td></td></tr>
+<tr>
+<td><b>type</b>: int; <b>range</b> : [0..MAX INT]; <b>default</b>: 20   </td></tr>
+<tr>
+<td class="paramname" rowspan="2" valign="top">searchWindowAccuracy  </td><td>the desired accuracy of the search window before algorithm stops </td><td></td></tr>
+<tr>
+<td><b>type</b>: float; <b>range</b> : [0..MAX FLOAT]; <b>default</b>: 0.03f   </td></tr>
+</table>
+</dd>
+</dl>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="aefbe95d50603a709100f662a72bfa0ec"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aefbe95d50603a709100f662a72bfa0ec">&#9670;&nbsp;</a></span>estimate() <span class="overload">[1/2]</span></h2>

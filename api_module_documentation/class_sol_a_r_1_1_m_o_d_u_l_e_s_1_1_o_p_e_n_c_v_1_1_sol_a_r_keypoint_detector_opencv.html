@@ -115,6 +115,33 @@ org::bcom::xpcf::XPCFErrorCode&#160;</td><td class="memItemRight" valign="bottom
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><b>Detects keypoints in an image.</b> <code>UUID: e81c7e4e-7da6-476a-8eba-078b43071272</code> </p>
+<dl class="params">
+<dt>Properties </dt>
+<dd><table class="params">
+<tr>
+<td class="paramname" rowspan="2" valign="top">imageRatio  </td><td>the ratio to apply to the size of the input image to compute the descriptor.<br />
+ A ratio must be less or equal to 1. A ratio less than 1 will speedup computation </td><td></td></tr>
+<tr>
+<td><b>type</b>: float; <b>range</b> : [0..1]; <b>default</b>: 1.f   </td></tr>
+<tr>
+<td class="paramname" rowspan="2" valign="top">nbDescriptors  </td><td>the number of descriptors that are selected. If negative, all extracted descriptors are selected </td><td></td></tr>
+<tr>
+<td><b>type</b>: int; <b>range</b> : [-1..MAX INT]; <b>default</b>: 1000   </td></tr>
+<tr>
+<td class="paramname" rowspan="2" valign="top">threshold  </td><td>the threshold of detector to accept a keypoint </td><td></td></tr>
+<tr>
+<td><b>type</b>: float; <b>range</b> : [0..MAX FLOAT]; <b>default</b>: 1e-3f   </td></tr>
+<tr>
+<td class="paramname" rowspan="2" valign="top">nbOctaves  </td><td>the number of octaves </td><td></td></tr>
+<tr>
+<td><b>type</b>: int; <b>range</b> : [0..MAX INT]; <b>default</b>: 4   </td></tr>
+<tr>
+<td class="paramname" rowspan="2" valign="top">type  </td><td>type of descriptor used for the extraction (SIFT, AKAZE, AKAZE2, ORB, BRISK) </td><td></td></tr>
+<tr>
+<td><b>type</b>: string; <b>default</b>: "AKAZE2"   </td></tr>
+</table>
+</dd>
+</dl>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ac3345c42077aeda08c80ef127fb11810"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac3345c42077aeda08c80ef127fb11810">&#9670;&nbsp;</a></span>detect()</h2>

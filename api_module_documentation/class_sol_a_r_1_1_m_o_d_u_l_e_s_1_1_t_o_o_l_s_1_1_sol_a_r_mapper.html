@@ -166,7 +166,67 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><b>Allow to manage all components of a map.</b> <code>UUID: 8e3c926a-0861-46f7-80b2-8abb5576692c</code> </p>
-<p>Store all components of a map. </p>
+<p>Store all components of a map.</p>
+<dl class="params">
+<dt>Injectables </dt>
+<dd><table class="params">
+<tr>
+<td class="paramname">SolAR::datastructure::Identification  </td></tr>
+<tr>
+<td class="paramname">SolAR::datastructure::CoordinateSystem  </td></tr>
+<tr>
+<td class="paramname">SolAR::api::storage::IPointCloudManager  </td></tr>
+<tr>
+<td class="paramname">SolAR::api::storage::IKeyframesManager  </td></tr>
+<tr>
+<td class="paramname">SolAR::api::storage::ICovisibilityGraph  </td></tr>
+<tr>
+<td class="paramname">SolAR::api::reloc::IKeyframeRetriever  </td></tr>
+</table>
+</dd>
+</dl>
+<dl class="params">
+<dt>Properties </dt>
+<dd><table class="params">
+<tr>
+<td class="paramname" rowspan="2" valign="top">directory  </td><td></td><td></td></tr>
+<tr>
+<td><b>type</b>: string; <b>default</b>: ""   </td></tr>
+<tr>
+<td class="paramname" rowspan="2" valign="top">identificationFileName  </td><td></td><td></td></tr>
+<tr>
+<td><b>type</b>: string; <b>default</b>: ""   </td></tr>
+<tr>
+<td class="paramname" rowspan="2" valign="top">coordinateFileName  </td><td></td><td></td></tr>
+<tr>
+<td><b>type</b>: string; <b>default</b>: ""   </td></tr>
+<tr>
+<td class="paramname" rowspan="2" valign="top">pointCloudManagerFileName  </td><td></td><td></td></tr>
+<tr>
+<td><b>type</b>: string; <b>default</b>: ""   </td></tr>
+<tr>
+<td class="paramname" rowspan="2" valign="top">keyframesManagerFileName  </td><td></td><td></td></tr>
+<tr>
+<td><b>type</b>: string; <b>default</b>: ""   </td></tr>
+<tr>
+<td class="paramname" rowspan="2" valign="top">covisibilityGraphFileName  </td><td></td><td></td></tr>
+<tr>
+<td><b>type</b>: string; <b>default</b>: ""   </td></tr>
+<tr>
+<td class="paramname" rowspan="2" valign="top">keyframeRetrieverFileName  </td><td></td><td></td></tr>
+<tr>
+<td><b>type</b>: string; <b>default</b>: ""   </td></tr>
+<tr>
+<td class="paramname" rowspan="2" valign="top">reprojErrorThreshold  </td><td></td><td></td></tr>
+<tr>
+<td><b>type</b>: float; <b>range</b> : [0..MAX FLOAT]; <b>default</b>: 3.f   </td></tr>
+<tr>
+<td class="paramname" rowspan="2" valign="top">thresConfidence  </td><td></td><td></td></tr>
+<tr>
+<td><b>type</b>: float; <b>range</b> : [0..MAX FLOAT]; <b>default</b>: 3.f   </td></tr>
+</table>
+</dd>
+</dl>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a5e148ceb06f177564e7e20710848cd1e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5e148ceb06f177564e7e20710848cd1e">&#9670;&nbsp;</a></span>addCloudPoint()</h2>

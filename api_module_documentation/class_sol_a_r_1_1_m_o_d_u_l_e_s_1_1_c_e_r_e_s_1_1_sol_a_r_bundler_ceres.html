@@ -109,7 +109,56 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><b>Applies a bundle adjustment to optimize a 3D map and keyframes.</b> <code>UUID: 4897fc13-682c-4e95-8aba-abd9f7a17193</code> </p>
-<p>This Bundler component has to inject 3 storage components: -IKeyframesManager -IPointCloudManager -ICovisibilityGraph The definition of the injection of this three storage components will have to be added in the xml configuration file of your application. </p>
+<dl class="params">
+<dt>Injectables </dt>
+<dd><table class="params">
+<tr>
+<td class="paramname">SolAR::api::storage::IPointCloudManager  </td></tr>
+<tr>
+<td class="paramname">SolAR::api::storage::IKeyframesManager  </td></tr>
+<tr>
+<td class="paramname">SolAR::api::storage::ICovisibilityGraph  </td></tr>
+</table>
+</dd>
+</dl>
+<dl class="params">
+<dt>Properties </dt>
+<dd><table class="params">
+<tr>
+<td class="paramname" rowspan="2" valign="top">iterationsCount  </td><td>number of mx iterations number </td><td></td></tr>
+<tr>
+<td><b>type</b>: int; <b>range</b> : [0..MAX INT]; <b>default</b>: 10   </td></tr>
+<tr>
+<td class="paramname" rowspan="2" valign="top">fixedMap  </td><td>fixing map control (0 = false, 1 = true) </td><td></td></tr>
+<tr>
+<td><b>type</b>: int; <b>range</b> : [0,1]; <b>default</b>: 0   </td></tr>
+<tr>
+<td class="paramname" rowspan="2" valign="top">fixedKeyframes  </td><td>fixing extrinsic control (0 = false, 1 = true) </td><td></td></tr>
+<tr>
+<td><b>type</b>: int; <b>range</b> : [0,1]; <b>default</b>: 0   </td></tr>
+<tr>
+<td class="paramname" rowspan="2" valign="top">fixedIntrinsics  </td><td>fixing extrinsic control (0 = false, 1 = true) </td><td></td></tr>
+<tr>
+<td><b>type</b>: int; <b>range</b> : [0,1]; <b>default</b>: 1   </td></tr>
+<tr>
+<td class="paramname" rowspan="2" valign="top">fixedFirstPose  </td><td>fixing first pose control (0 = false, 1 = true) </td><td></td></tr>
+<tr>
+<td><b>type</b>: int; <b>range</b> : [0,1]; <b>default</b>: 1   </td></tr>
+<tr>
+<td class="paramname" rowspan="2" valign="top">fixedNeighbourKeyframes  </td><td>fixing neighbour keyframes control (0 = false, 1 = true) </td><td></td></tr>
+<tr>
+<td><b>type</b>: int; <b>range</b> : [0,1]; <b>default</b>: 1   </td></tr>
+<tr>
+<td class="paramname" rowspan="2" valign="top">nbMaxFixedKeyframes  </td><td>maximum number of fixed neighbour keyframes </td><td></td></tr>
+<tr>
+<td><b>type</b>: uint; <b>range</b> : [0..MAX UINT]; <b>default</b>: 100   </td></tr>
+<tr>
+<td class="paramname" rowspan="2" valign="top">useSpanningTree  </td><td>(0 = false, 1 = true) </td><td></td></tr>
+<tr>
+<td><b>type</b>: int; <b>range</b> : [0..MAX INT]; <b>default</b>: 0   </td></tr>
+</table>
+</dd>
+</dl>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="aca1f078bb4ffd7ffcbd70e3e4ee0b1eb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aca1f078bb4ffd7ffcbd70e3e4ee0b1eb">&#9670;&nbsp;</a></span>bundleAdjustment()</h2>

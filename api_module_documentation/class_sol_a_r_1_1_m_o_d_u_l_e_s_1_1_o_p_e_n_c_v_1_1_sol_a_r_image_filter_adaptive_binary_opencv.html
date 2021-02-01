@@ -106,6 +106,26 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><b>Filters a greyscale image to a binary image based on an adaptive threshold.</b> <code>UUID: 901e7a07-5013-4907-be41-0259fca3726c</code> </p>
+<dl class="params">
+<dt>Properties </dt>
+<dd><table class="params">
+<tr>
+<td class="paramname" rowspan="2" valign="top">max  </td><td>Non - zero value assigned to the pixels for which the condition is satisfied </td><td></td></tr>
+<tr>
+<td><b>type</b>: int; <b>range</b> : [0..255]; <b>default</b>: 255   </td></tr>
+<tr>
+<td class="paramname" rowspan="2" valign="top">blockSize  </td><td>Size of a pixel neighborhood that is used to calculate a threshold value for the<br />
+ pixel : 3, 5, 7, and so on. </td><td></td></tr>
+<tr>
+<td><b>type</b>: int; <b>range</b> : [0..MAX INT]; <b>default</b>: 11   </td></tr>
+<tr>
+<td class="paramname" rowspan="2" valign="top">C  </td><td>Constant subtracted from the mean or weighted mean(see the details below).Normally, it<br />
+ is positive but may be zero or negative as well. </td><td></td></tr>
+<tr>
+<td><b>type</b>: int; <b>range</b> : [MIN INT..MAX INT]; <b>default</b>: 2   </td></tr>
+</table>
+</dd>
+</dl>
 </div><hr/>The documentation for this class was generated from the following file:<ul>
 <li>SolARModuleOpenCV/interfaces/<a class="el" href="_sol_a_r_image_filter_adaptive_binary_opencv_8h_source.html">SolARImageFilterAdaptiveBinaryOpencv.h</a></li>
 </ul>

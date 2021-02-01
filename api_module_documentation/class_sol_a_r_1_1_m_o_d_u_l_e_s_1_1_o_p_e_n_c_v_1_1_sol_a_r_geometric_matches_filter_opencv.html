@@ -117,6 +117,27 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><b>Filters a set of matches based on geometric constraints.</b> <code>UUID: 3731691e-2c4c-4d37-a2ce-06d1918f8d41</code> </p>
+<dl class="params">
+<dt>Properties </dt>
+<dd><table class="params">
+<tr>
+<td class="paramname" rowspan="2" valign="top">confidence  </td><td>The desirable level of confidence (propability) that the estimated matrix is correct. </td><td></td></tr>
+<tr>
+<td><b>type</b>: float; <b>range</b> : [0..1]; <b>default</b>: 0.99f   </td></tr>
+<tr>
+<td class="paramname" rowspan="2" valign="top">outlierDistanceRatio  </td><td>Here we are using a RANSAC method to keep only inliers matches.<br />
+ This attribute is the ratio between the maximum distance in pixels between source points and the maximum distance in pixels to the epipolar line for which point is considered as a outlier.<br />
+ The higher is this ratio, the more you will keep inliers to estimate your 2D transform, but the less this estimation will be correct.<br />
+ By default, this value is set to the one proposed by [Snavely07 4.1] </td><td></td></tr>
+<tr>
+<td><b>type</b>: float; <b>range</b> : [0..MAX FLOAT]; <b>default</b>: 0.006f   </td></tr>
+<tr>
+<td class="paramname" rowspan="2" valign="top">epilinesDistance  </td><td>threshold to valid matches based on distance to epilines </td><td></td></tr>
+<tr>
+<td><b>type</b>: float; <b>range</b> : [0..MAX_FLOAT]; <b>default</b>: 10.f   </td></tr>
+</table>
+</dd>
+</dl>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="acf1895d5ba22ab6d7a866416888b8f89"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acf1895d5ba22ab6d7a866416888b8f89">&#9670;&nbsp;</a></span>filter() <span class="overload">[1/2]</span></h2>
