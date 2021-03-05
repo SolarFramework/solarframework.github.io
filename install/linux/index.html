@@ -681,20 +681,32 @@ You don&#8217;t need to install <em>Qt</em> SDK, just the <em>Qt Creator</em>. S
 <pre>conan remote add conan-solar https://artifact.b-com.com/api/conan/solar-conan-local --insert 0</pre>
 </div>
 </div>
-<div class="ulist">
-<ul>
-<li>
+<div class="paragraph">
 <p>Then, open a command prompt <strong>with administrator rights</strong> and run:</p>
-</li>
-</ul>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>remaken init --tag latest</pre>
+<pre>remaken init -e -f</pre>
 </div>
 </div>
 <div class="paragraph">
 <p>This command will install the latest version of qmake building rules in your ${USER_HOME}/.remaken/rules folder.</p>
+</div>
+<div class="paragraph">
+<p>Permanently add the <code>PKG_CONFIG_PATH</code> environment variable pointing to the folders where .pc files can be found:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>test -r ~/.profile &amp;&amp; echo "export PKG_CONFIG_PATH=/usr/lib/x86_64-linux-gnu/pkgconfig:/usr/share/pkgconfig" &gt;&gt;~/.profile</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>and reload your .profile:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>source ~/.profile</pre>
+</div>
 </div>
 <div class="paragraph">
 <p>Finally, you need to configure your remaken profile according to your development environment. To do so, run the following command in a command prompt:</p>
@@ -708,7 +720,24 @@ You don&#8217;t need to install <em>Qt</em> SDK, just the <em>Qt Creator</em>. S
 <div class="sect3">
 <h4 id="set_conan_profile"><a class="anchor" href="#set_conan_profile"></a><a class="link" href="#set_conan_profile">Set conan profile</a></h4>
 <div class="paragraph">
-<p>As we are using conan to download dependencies, you need to configure your default conan profile. To do so, open the default file available in your ${HOME}/.conan/profiles, and replace the configuration by the following one before saving it:</p>
+<p>As we are using conan to download dependencies, you need to configure your default conan profile. To do so, create a new default profile with the following command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>conan profile new default --detect</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Then, update your default profile with the two following commands:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>conan profile update settings.compiler.libcxx=libstdc++11 default
+conan profile update settings.compiler.cppstd=17 default</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Your default profile file available in your ${HOME}/.conan/profiles should looks like the following one:</p>
 </div>
 <div class="listingblock">
 <div class="content">
