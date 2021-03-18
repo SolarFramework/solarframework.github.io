@@ -672,13 +672,14 @@ You don&#8217;t need to install <em>Qt</em> SDK, just the <em>Qt Creator</em>. S
 <p>Use the following script to install and configure <em>Remaken</em>: <a href="https://raw.githubusercontent.com/b-com-software-basis/remaken/master/scripts/install.sh">Remaken installer</a>. By default, <em>Remaken</em> installer will also install <em>Conan</em>, <em>cmake</em> and <em>pkg_config</em> which will be used afterwards. Try <code>remaken --help</code>, <code>conan -h</code>, and <code>cmake -h</code> commands in a terminal to check installation. This script will also add conan-community and bincrafters conan remotes. Conan will check these remotes for searching your dependencies.</p>
 </li>
 <li>
-<p>SolAR has its own conan remote to store pre-built dependencies for the common configurations used by the SolAR Framework. You will need to add this conan remote with the following command in a command prompt:</p>
+<p>SolAR has its own conan remote to store pre-built dependencies for the common configurations used by the SolAR Framework. You will need to add these conan remotee with the following commande in a command prompt:</p>
 </li>
 </ul>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>conan remote add conan-solar https://artifact.b-com.com/api/conan/solar-conan-local --insert 0</pre>
+<pre>conan remote add conan-solar https://artifact.b-com.com/api/conan/solar-conan-local --insert 0
+conan remote add bincrafters https://api.bintray.com/conan/bincrafters/public-conan</pre>
 </div>
 </div>
 <div class="paragraph">
