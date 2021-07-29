@@ -846,11 +846,11 @@ No space in the path of the folder where you are cloning SolAR !
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>git clone https://github.com/SolarFramework/SolAR.git</pre>
+<pre>git clone --recurse-submodules https://github.com/SolarFramework/SolAR.git</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Do not forget to install and update recursively the submodules:</p>
+<p>If you forgot to use <code>--recurse-submodules</code>, you can initialize the submodules afterwards with:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -859,11 +859,12 @@ git submodule update --init --recursive</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>If you want to move all submodules on Master, launch the following command</p>
+<p>If you want to move all submodules on HEAD of <code>master</code>, launch the following commands</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>git submodule foreach git pull origin master</pre>
+<pre>git submodule foreach --recursive git checkout master
+git submodule foreach --recursive git pull</pre>
 </div>
 </div>
 <div class="paragraph">
