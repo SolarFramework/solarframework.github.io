@@ -576,19 +576,19 @@ window.cookieconsent.initialise({
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Natural Image Marker</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/SolarFramework/NaturalImageMarker/releases" class="bare">https://github.com/SolarFramework/NaturalImageMarker/releases</a>, V0.9.0 coming soon</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/SolarFramework/NaturalImageMarker/releases" class="bare">https://github.com/SolarFramework/NaturalImageMarker/releases</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Fiducial Marker</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/SolarFramework/FiducialMarker/releases" class="bare">https://github.com/SolarFramework/FiducialMarker/releases</a>, V0.9.0 coming soon</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/SolarFramework/FiducialMarker/releases" class="bare">https://github.com/SolarFramework/FiducialMarker/releases</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"> Sample-Slam</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/SolarFramework/Sample-Slam/releases" class="bare">https://github.com/SolarFramework/Sample-Slam/releases</a>, V0.9.0 coming soon</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/SolarFramework/Sample-Slam/releases" class="bare">https://github.com/SolarFramework/Sample-Slam/releases</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Sample-Triangulation</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/SolarFramework/Sample-Triangulation/releases" class="bare">https://github.com/SolarFramework/Sample-Triangulation/releases</a>, V0.9.0 coming soon</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/SolarFramework/Sample-Triangulation/releases" class="bare">https://github.com/SolarFramework/Sample-Triangulation/releases</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -672,6 +672,20 @@ You don&#8217;t need to install <em>Qt</em> SDK, just the <em>Qt Creator</em>. S
 <p>Use the following script to install and configure <em>Remaken</em>: <a href="https://raw.githubusercontent.com/b-com-software-basis/remaken/master/scripts/install.sh">Remaken installer</a>. By default, <em>Remaken</em> installer will also install <em>Conan</em>, <em>cmake</em> and <em>pkg_config</em> which will be used afterwards. Try <code>remaken --help</code>, <code>conan -h</code>, and <code>cmake -h</code> commands in a terminal to check installation. This script will also add conan-community and bincrafters conan remotes. Conan will check these remotes for searching your dependencies.</p>
 </li>
 <li>
+<p>This should install remaken 1.7.2. If you face some issues with this version, you can try a more recent revision that has not yet been made available via <em>Homebrew</em>:</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>wget https://github.com/b-com-software-basis/remaken/releases/download/1.7.3/remaken-Ubuntu1804 -O ~/remaken
+chmod +x ~/remaken
+sudo mv ~/remaken /usr/local/bin</pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
 <p>SolAR has its own conan remote to store pre-built dependencies for the common configurations used by the SolAR Framework. You will need to add these conan remotee with the following commande in a command prompt:</p>
 </li>
 </ul>
@@ -679,7 +693,28 @@ You don&#8217;t need to install <em>Qt</em> SDK, just the <em>Qt Creator</em>. S
 <div class="listingblock">
 <div class="content">
 <pre>conan remote add conan-solar https://artifact.b-com.com/api/conan/solar-conan-local --insert 0
-conan remote add bincrafters https://api.bintray.com/conan/bincrafters/public-conan</pre>
+conan remote add conan-bcom https://artifact.b-com.com/api/conan/bcom-conan-local --insert 1
+conan remote add bincrafters https://bincrafters.jfrog.io/artifactory/api/conan/public-conan</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You should obtain a list of conan remotes that looks like this:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ conan remote list
+conan-solar: https://artifact.b-com.com/api/conan/solar-conan-local [Verify SSL: True]
+conan-bcom: https://artifact.b-com.com/api/conan/bcom-conan-local [Verify SSL: True]
+conancenter:: https://center.conan.io [Verify SSL: True]
+bincrafters: https://bincrafters.jfrog.io/artifactory/api/conan/public-conan [Verify SSL: True]</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Note: <em>bincrafters</em> URL changed recently (see <a href="https://bincrafters.github.io/2020/04/19/infrastructure-changes-and-required-actions/">here</a>), if you haven&#8217;t already done so, you may need to enable revisions:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>conan config set general.revisions_enabled=1</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -772,13 +807,13 @@ build_type=Release
 <div class="ulist">
 <ul>
 <li>
-<p><a href="https://raw.githubusercontent.com/SolarFramework/SolAR/master/packagedependencies.txt">packagedependencies.txt</a></p>
+<p><a href="https://raw.githubusercontent.com/SolarFramework/SolAR/release/0.9.1/packagedependencies.txt">packagedependencies.txt</a></p>
 </li>
 <li>
-<p><a href="https://raw.githubusercontent.com/SolarFramework/SolAR/master/packagedependencies-linux.txt">packagedependencies-linux.txt</a></p>
+<p><a href="https://raw.githubusercontent.com/SolarFramework/SolAR/release/0.9.1/packagedependencies-linux.txt">packagedependencies-linux.txt</a></p>
 </li>
 <li>
-<p><a href="https://raw.githubusercontent.com/SolarFramework/SolAR/master/packagedependencies-android.txt">packagedependencies-android.txt</a> (optionnal, required for android cross building)</p>
+<p><a href="https://raw.githubusercontent.com/SolarFramework/SolAR/release/0.9.1/packagedependencies-android.txt">packagedependencies-android.txt</a> (optionnal, required for android cross building)</p>
 </li>
 </ul>
 </div>

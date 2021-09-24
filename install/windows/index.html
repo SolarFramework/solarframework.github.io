@@ -569,19 +569,19 @@ window.cookieconsent.initialise({
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Natural Image Marker</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/SolarFramework/NaturalImageMarker/releases/download/NaturalImageMarker%2F0.7.0%2Fwin/SolAR_Natural_0_7_0.zip">v0.7.0 download link</a> (v0.9.0 coming soon)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/SolarFramework/Sample-NaturalImageMarker/releases/download/SolARSample_NaturalImageMarker%2F0.9.1%2Fwin/SolARSample_NaturalImageMarker_0.9.1_release.zip">v0.9.1 download link</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Fiducial Marker</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/SolarFramework/FiducialMarker/releases/download/FiducialMarker%2F0.7.0%2Fwin/SolAR_Fiducial_0_7_0.zip">v0.7.0 download link</a> (v0.9.0 coming soon)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/SolarFramework/Sample-FiducialMarker/releases/download/SolARSample_FiducialMarker%2F0.9.1%2Fwin/SolARSample_FiducialMarker_0.9.1_release.zip">v0.9.1 download link</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"> SLAM</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/SolarFramework/Sample-Slam/releases/download/SLAM%2F0.7.0%2Fwin/SolAR_SLAM_0_7_0.zip">v0.7.0 download link</a> (v0.9.0 coming soon)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/SolarFramework/Sample-Slam/releases/download/SolARSample_SLAM%2F0.9.1%2Fwin/SolARSample_SLAM_0.9.1_release.zip">v0.9.1 download link</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Triangulation</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/SolarFramework/Sample-Triangulation/releases/download/Triangulation%2F0.7.0%2Fwin/SolAR_Triangulation_0_7_0.zip">v0.7.0 download link</a> (v0.9.0 coming soon)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/SolarFramework/Sample-Triangulation/releases/download/SolARSample_Triangulation%2F0.9.1%2Fwin/SolARSample_Triangulation_0.9.1_release.zip">v0.9.1 download link</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -718,7 +718,7 @@ As you will see later, the SolAR framework is based on <em>QMake</em> originally
 <div class="ulist">
 <ul>
 <li>
-<p>Start by downloading and installing <em>Remaken</em> available on the following link: <a href="https://github.com/b-com-software-basis/remaken/releases/download/1.7.2/Setup_Remaken_1.7.2.exe">Remaken installer version 1.7.2</a></p>
+<p>Start by downloading and installing <em>Remaken</em> available on the following link: <a href="https://github.com/b-com-software-basis/remaken/releases/download/1.7.3/Setup_Remaken_1.7.3.exe">Remaken installer version 1.7.3</a></p>
 </li>
 <li>
 <p>Launch the remaken installer <strong>with administrator rights</strong>. By default, the dependencies will be installed in your <code>C:/Users/%Username%</code> directory, but you can change it by setting another location for your <em>REMAKEN_PKG_ROOT</em> environement variable. By default, Remaken will install Conan, pkg_config and CMake which will be used afterwards. It will also add conan-community and bincrafters conan remotes. Conan will check these remotes for searching your dependencies.+</p>
@@ -730,7 +730,28 @@ As you will see later, the SolAR framework is based on <em>QMake</em> originally
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>conan remote add conan-solar https://artifact.b-com.com/api/conan/solar-conan-local --insert 0</pre>
+<pre>conan remote add conan-solar https://artifact.b-com.com/api/conan/solar-conan-local --insert 0
+conan remote add conan-bcom https://artifact.b-com.com/api/conan/bcom-conan-local --insert 1</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You should obtain a list of conan remotes that looks like this:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&gt; conan remote list
+conan-solar: https://artifact.b-com.com/api/conan/solar-conan-local [Verify SSL: True]
+conan-bcom: https://artifact.b-com.com/api/conan/bcom-conan-local [Verify SSL: True]
+conancenter:: https://center.conan.io [Verify SSL: True]
+bincrafters: https://bincrafters.jfrog.io/artifactory/api/conan/public-conan [Verify SSL: True]</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Note: <em>bincrafters</em> URL changed recently (see <a href="https://bincrafters.github.io/2020/04/19/infrastructure-changes-and-required-actions/">here</a>), if you haven&#8217;t already done so, you may need to enable revisions:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>conan config set general.revisions_enabled=1</pre>
 </div>
 </div>
 <div class="ulist">
@@ -793,10 +814,10 @@ build_type=Release
 <div class="ulist">
 <ul>
 <li>
-<p><a href="https://raw.githubusercontent.com/SolarFramework/SolAR/master/packagedependencies.txt">packagedependencies.txt</a></p>
+<p><a href="https://raw.githubusercontent.com/SolarFramework/SolAR/release/0.9.1/packagedependencies.txt">packagedependencies.txt</a></p>
 </li>
 <li>
-<p><a href="https://raw.githubusercontent.com/SolarFramework/SolAR/master/packagedependencies-win.txt">packagedependencies-win.txt</a></p>
+<p><a href="https://raw.githubusercontent.com/SolarFramework/SolAR/release/0.9.1/packagedependencies-win.txt">packagedependencies-win.txt</a></p>
 </li>
 </ul>
 </div>
@@ -826,7 +847,7 @@ build_type=Release
 <i class="fa icon-caution" title="Caution"></i>
 </td>
 <td class="content">
-You do not need to launch <code>remaken install</code> on <code>packagedependencies_win</code>. <code>remaken install packagedependencies.txt</code> will automatically load it depending on the platform you are executing it.
+You do not need to launch <code>remaken install</code> on <code>packagedependencies-win.txt</code>. <code>remaken install packagedependencies.txt</code> will automatically load it depending on the platform you are executing it.
 </td>
 </tr>
 </table>
