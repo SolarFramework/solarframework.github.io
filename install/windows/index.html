@@ -721,7 +721,7 @@ As you will see later, the SolAR framework is based on <em>QMake</em> originally
 <p>Start by downloading and installing <em>Remaken</em> available on the following link: <a href="https://github.com/b-com-software-basis/remaken/releases/download/1.7.3/Setup_Remaken_1.7.3.exe">Remaken installer version 1.7.3</a></p>
 </li>
 <li>
-<p>Launch the remaken installer <strong>with administrator rights</strong>. By default, the dependencies will be installed in your <code>C:/Users/%Username%</code> directory, but you can change it by setting another location for your <em>REMAKEN_PKG_ROOT</em> environement variable. By default, Remaken will install Conan, pkg_config and CMake which will be used afterwards. It will also add conan-community and bincrafters conan remotes. Conan will check these remotes for searching your dependencies.+</p>
+<p>Launch the remaken installer <strong>with administrator rights</strong>. By default, the dependencies will be installed in your <code>C:/Users/%Username%</code> directory, but you can change it by setting another location for your <em>REMAKEN_PKG_ROOT</em> environement variable. By default, Remaken will install Conan, pkg_config and CMake which will be used afterwards. Conan will check these remotes for searching your dependencies.+</p>
 </li>
 <li>
 <p>SolAR has its own conan remote to store pre-built dependencies for the common configurations used by the SolAR Framework. You will need to add this conan remote with the following command in a command prompt:</p>
@@ -742,16 +742,7 @@ conan remote add conan-bcom https://artifact.b-com.com/api/conan/bcom-conan-loca
 <pre>&gt; conan remote list
 conan-solar: https://artifact.b-com.com/api/conan/solar-conan-local [Verify SSL: True]
 conan-bcom: https://artifact.b-com.com/api/conan/bcom-conan-local [Verify SSL: True]
-conancenter:: https://center.conan.io [Verify SSL: True]
-bincrafters: https://bincrafters.jfrog.io/artifactory/api/conan/public-conan [Verify SSL: True]</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Note: <em>bincrafters</em> URL changed recently (see <a href="https://bincrafters.github.io/2020/04/19/infrastructure-changes-and-required-actions/">here</a>), if you haven&#8217;t already done so, you may need to enable revisions:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>conan config set general.revisions_enabled=1</pre>
+conancenter:: https://center.conan.io [Verify SSL: True]</pre>
 </div>
 </div>
 <div class="ulist">

@@ -669,7 +669,7 @@ You don&#8217;t need to install <em>Qt</em> SDK, just the <em>Qt Creator</em>. S
 <p><code>source ~/.profile</code> to update brew eval modification to your ${HOME}/.profile. Try <code>brew --version</code> commands in terminal to check installation</p>
 </li>
 <li>
-<p>Use the following script to install and configure <em>Remaken</em>: <a href="https://raw.githubusercontent.com/b-com-software-basis/remaken/master/scripts/install.sh">Remaken installer</a>. By default, <em>Remaken</em> installer will also install <em>Conan</em>, <em>cmake</em> and <em>pkg_config</em> which will be used afterwards. Try <code>remaken --help</code>, <code>conan -h</code>, and <code>cmake -h</code> commands in a terminal to check installation. This script will also add conan-community and bincrafters conan remotes. Conan will check these remotes for searching your dependencies.</p>
+<p>Use the following script to install and configure <em>Remaken</em>: <a href="https://raw.githubusercontent.com/b-com-software-basis/remaken/master/scripts/install.sh">Remaken installer</a>. By default, <em>Remaken</em> installer will also install <em>Conan</em>, <em>cmake</em> and <em>pkg_config</em> which will be used afterwards. Try <code>remaken --help</code>, <code>conan -h</code>, and <code>cmake -h</code> commands in a terminal to check installation. Conan will check these remotes for searching your dependencies.</p>
 </li>
 <li>
 <p>This should install remaken 1.7.2. If you face some issues with this version, you can try a more recent revision that has not yet been made available via <em>Homebrew</em>:</p>
@@ -693,8 +693,7 @@ sudo mv ~/remaken /usr/local/bin</pre>
 <div class="listingblock">
 <div class="content">
 <pre>conan remote add conan-solar https://artifact.b-com.com/api/conan/solar-conan-local --insert 0
-conan remote add conan-bcom https://artifact.b-com.com/api/conan/bcom-conan-local --insert 1
-conan remote add bincrafters https://bincrafters.jfrog.io/artifactory/api/conan/public-conan</pre>
+conan remote add conan-bcom https://artifact.b-com.com/api/conan/bcom-conan-local --insert 1</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -705,16 +704,7 @@ conan remote add bincrafters https://bincrafters.jfrog.io/artifactory/api/conan/
 <pre>$ conan remote list
 conan-solar: https://artifact.b-com.com/api/conan/solar-conan-local [Verify SSL: True]
 conan-bcom: https://artifact.b-com.com/api/conan/bcom-conan-local [Verify SSL: True]
-conancenter:: https://center.conan.io [Verify SSL: True]
-bincrafters: https://bincrafters.jfrog.io/artifactory/api/conan/public-conan [Verify SSL: True]</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Note: <em>bincrafters</em> URL changed recently (see <a href="https://bincrafters.github.io/2020/04/19/infrastructure-changes-and-required-actions/">here</a>), if you haven&#8217;t already done so, you may need to enable revisions:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>conan config set general.revisions_enabled=1</pre>
+conancenter: https://center.conan.io [Verify SSL: True]</pre>
 </div>
 </div>
 <div class="paragraph">
