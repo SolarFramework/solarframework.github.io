@@ -4,7 +4,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node194 [label="ceres::LocalParameterization",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
-  Node194 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node0 [label="SolAR::MODULES::CERES\l::Fixed3DNormParametrization",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_c_e_r_e_s_1_1_fixed3_d_norm_parametrization.html",tooltip=" "];
+  Node0 [label="org::bcom::xpcf::Component\lTraits\< SolAR::MODULES\l::POPSIFT::SolARDescriptorsExtractor\lFromImagePopSift \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structorg_1_1bcom_1_1xpcf_1_1_component_traits_3_01_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_p_o_p_s_i_f_t_6a14d06bce7a94e28a5b62d81041850e.html",tooltip=" "];
 }
