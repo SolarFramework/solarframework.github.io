@@ -4,5 +4,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node0 [label="IMappingPipeline",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_i_mapping_pipeline.html",tooltip="Defines a mapping pipeline. UUID: 2dc3cd33-5a11-4748-94a3-e7ab40462097"];
+  Node0 [label="org::bcom::xpcf::Interface\lTraits\< SolAR::api::features\l::IImageMatcher \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structorg_1_1bcom_1_1xpcf_1_1_interface_traits_3_01_sol_a_r_1_1api_1_1features_1_1_i_image_matcher_01_4.html",tooltip=" "];
 }

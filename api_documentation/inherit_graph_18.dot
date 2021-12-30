@@ -4,5 +4,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node0 [label="SolAR::datastructure\l::Edge2Di",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_sol_a_r_1_1datastructure_1_1_edge2_di.html",tooltip="A 2D edge with coordinates defined with integers."];
+  Node0 [label="SolAR::datastructure\l::Image",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_sol_a_r_1_1datastructure_1_1_image.html",tooltip="A 2D image.."];
 }
