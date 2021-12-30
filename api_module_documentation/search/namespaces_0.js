@@ -8,7 +8,8 @@ var searchData=
   ['opengl_5',['OPENGL',['../namespace_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_o_p_e_n_g_l.html',1,'SolAR::MODULES']]],
   ['opengv_6',['OPENGV',['../namespace_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_o_p_e_n_g_v.html',1,'SolAR::MODULES']]],
   ['pcl_7',['PCL',['../namespace_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_p_c_l.html',1,'SolAR::MODULES']]],
-  ['realsense_8',['REALSENSE',['../namespace_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_r_e_a_l_s_e_n_s_e.html',1,'SolAR::MODULES']]],
-  ['solar_9',['SolAR',['../namespace_sol_a_r.html',1,'']]],
-  ['tools_10',['TOOLS',['../namespace_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_t_o_o_l_s.html',1,'SolAR::MODULES']]]
+  ['popsift_8',['POPSIFT',['../namespace_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_p_o_p_s_i_f_t.html',1,'SolAR::MODULES']]],
+  ['realsense_9',['REALSENSE',['../namespace_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_r_e_a_l_s_e_n_s_e.html',1,'SolAR::MODULES']]],
+  ['solar_10',['SolAR',['../namespace_sol_a_r.html',1,'']]],
+  ['tools_11',['TOOLS',['../namespace_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_t_o_o_l_s.html',1,'SolAR::MODULES']]]
 ];
