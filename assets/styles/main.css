@@ -83,6 +83,8 @@ h1 {
     border-bottom: 2px solid rgba(0, 205, 120, 0.5); }
   .navbar #navbar li.yellow a:hover, .navbar #navbar li.yellow a:focus {
     border-bottom: 2px solid rgba(255, 180, 0, 0.5); }
+  .navbar #navbar li.gray a:hover, .navbar #navbar li.gray a:focus {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5); }
   .navbar #navbar li.active.blue a, .navbar #navbar li.active.blue a:active, .navbar #navbar li.active.blue a:hover, .navbar #navbar li.active.blue a:focus {
     border-bottom: 2px solid #00bee6; }
   .navbar #navbar li.active.purple a, .navbar #navbar li.active.purple a:active, .navbar #navbar li.active.purple a:hover, .navbar #navbar li.active.purple a:focus {
@@ -93,6 +95,8 @@ h1 {
     border-bottom: 2px solid #00cd78; }
   .navbar #navbar li.active.yellow a, .navbar #navbar li.active.yellow a:active, .navbar #navbar li.active.yellow a:hover, .navbar #navbar li.active.yellow a:focus {
     border-bottom: 2px solid #ffb400; }
+  .navbar #navbar li.active.gray a, .navbar #navbar li.active.gray a:active, .navbar #navbar li.active.gray a:hover, .navbar #navbar li.active.gray a:focus {
+    border-bottom: 2px solid #666666; }
   .navbar .navbar-header ul {
     padding: 0px; }
   .navbar .logo {
@@ -285,6 +289,8 @@ h1 {
     border-bottom: 2px solid rgba(0, 205, 120, 0.5); }
   .navbar .submenu.active.yellow > .nav > li a:active, .navbar .submenu.active.yellow > .nav > li a:hover, .navbar .submenu.active.yellow > .nav > li a:focus, .navbar .submenu.active.yellow > .nav > li.active a, .navbar .submenu.active.yellow > .nav > li.active a:active, .navbar .submenu.active.yellow > .nav > li.active a:hover, .navbar .submenu.active.yellow > .nav > li.active a:focus {
     border-bottom: 2px solid rgba(255, 180, 0, 0.5); }
+  .navbar .submenu.active.gray > .nav > li a:active, .navbar .submenu.active.gray > .nav > li a:hover, .navbar .submenu.active.gray > .nav > li a:focus, .navbar .submenu.active.gray > .nav > li.active a, .navbar .submenu.active.gray > .nav > li.active a:active, .navbar .submenu.active.gray > .nav > li.active a:hover, .navbar .submenu.active.gray > .nav > li.active a:focus {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5); }
   .navbar .submenu.active.blue > .nav > li.active a, .navbar .submenu.active.blue > .nav > li.active a:active, .navbar .submenu.active.blue > .nav > li.active a:hover, .navbar .submenu.active.blue > .nav > li.active a:focus {
     border-bottom: 2px solid #00bee6; }
   .navbar .submenu.active.purple > .nav > li.active a, .navbar .submenu.active.purple > .nav > li.active a:active, .navbar .submenu.active.purple > .nav > li.active a:hover, .navbar .submenu.active.purple > .nav > li.active a:focus {
@@ -295,6 +301,8 @@ h1 {
     border-bottom: 2px solid #00cd78; }
   .navbar .submenu.active.yellow > .nav > li.active a, .navbar .submenu.active.yellow > .nav > li.active a:active, .navbar .submenu.active.yellow > .nav > li.active a:hover, .navbar .submenu.active.yellow > .nav > li.active a:focus {
     border-bottom: 2px solid #ffb400; }
+  .navbar .submenu.active.gray > .nav > li.active a, .navbar .submenu.active.gray > .nav > li.active a:active, .navbar .submenu.active.gray > .nav > li.active a:hover, .navbar .submenu.active.gray > .nav > li.active a:focus {
+    border-bottom: 2px solid #666666; }
 
 /* end of submenu display part */
 /* per page color management */
@@ -371,6 +379,18 @@ h1 {
 .well.yellow h2 {
   background-color: #ffb400; }
 
+.navbar .submenu.gray > h4, .well.gray .quoteblock blockquote::before, .well.gray .admonitionblock td.icon .icon-note::before, .well.gray a:not(.link), .well.gray a:not(.link):hover, .well.gray a:not(.link):focus, .well.gray .listingblock > .title, .well.gray #toc > ul > li:nth-child(1) a {
+  color: #666666; }
+
+.well.gray h3::before, .well.gray h3::after {
+  background-image: url("../images/bullet_point_gray.png"); }
+.well.gray .sect1 + .sect1 {
+  border: 1px solid rgba(255, 255, 255, 0.5); }
+.well.gray #toc li:hover, .well.gray #toc li:active {
+  border-left: 2px solid #666666; }
+.well.gray h2 {
+  background-color: #666666; }
+
 .well #toc > ul > li:first-child:hover, .well #toc > ul > li:first-child:active {
   border-left: none; }
 
@@ -386,6 +406,9 @@ h1 {
 
 .fa-user.green {
   color: #00cd78; }
+
+.fa-user.gray {
+  color: #666666; }
 
 .well header {
   /* trick to stick header image to navbar in home */
@@ -498,6 +521,9 @@ footer {
 
 .users-body.green {
   border-color: #00cd78; }
+
+.users-body.gray {
+  border-color: #666666; }
 
 /* computer resolution */
 @media screen and (min-width: 968px) {

@@ -1,4 +1,4 @@
-.well.blue, .well.blue h2 a, .well.purple, .well.purple h2 a, .well.red, .well.red h2 a, .well.green, .well.green h2 a, .well.yellow, .well.yellow h2 a {
+.well.blue, .well.blue h2 a, .well.purple, .well.purple h2 a, .well.red, .well.red h2 a, .well.green, .well.green h2 a, .well.yellow, .well.yellow h2 a, .well.gray, .well.gray h2 a{
   color: white; 
 }
 /* overrides asciidoctor.css */

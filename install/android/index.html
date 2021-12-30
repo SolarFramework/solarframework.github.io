@@ -239,6 +239,30 @@ window.cookieconsent.initialise({
 
 
 
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+    <li id="documentation" class=" gray">
+      <a href="/documentation/">
+        <img src="/assets/images/navbar/documentation.svg" alt="documentation" height="42" width="42">
+        Documentation
+      </a>
+    </li>
+    
+    
+
+  
+
+
+
 
 
                 <li>
@@ -315,6 +339,17 @@ window.cookieconsent.initialise({
 	
 
 		<li >
+			<a href="/use/get_samples/">
+				Get samples
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
 			<a href="/use/unity/">
 				Unity
 				
@@ -327,7 +362,18 @@ window.cookieconsent.initialise({
 
 		<li >
 			<a href="/use/cplusplus/">
-				C++
+				Pipelines
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/use/services/">
+				Services
 				
 			</a>
 		</li>
@@ -447,17 +493,6 @@ window.cookieconsent.initialise({
 	
 
 		<li >
-			<a href="/create/tests/">
-				Tests
-				
-			</a>
-		</li>
-	
-
-	
-	
-
-		<li >
 			<a href="/create/api/">
 				API
 				
@@ -514,6 +549,28 @@ window.cookieconsent.initialise({
       <div class="submenuHelper">&gt;</div>
     </div>
     
+    <div class="submenu gray">
+      <div class="submenuHelper">&lt;</div>
+      <ul class="nav" aria-expanded="false">
+        
+        
+
+	
+	
+
+		<li >
+			<a href="/documentation/architecture/">
+				Architecture
+				
+			</a>
+		</li>
+	
+
+
+      </ul>
+      <div class="submenuHelper">&gt;</div>
+    </div>
+    
         
     </div>
 
@@ -534,7 +591,7 @@ window.cookieconsent.initialise({
 <li><a href="#configure_qt_android_kit">Configure Qt Android Kit</a></li>
 </ul>
 </li>
-<li><a href="#build_solar_v0_9_0">Build SolAR v0.9.0</a>
+<li><a href="#build_solar_v0_10_0">Build SolAR v0.10.0</a>
 <ul class="sectlevel2">
 <li><a href="#clone_solar">Clone SolAR</a></li>
 <li><a href="#build_on_qt_creator">Build on Qt Creator</a></li>
@@ -631,7 +688,7 @@ It is recommended to install IDE for your own OS to test directly your pipeline 
 <i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
-We recommend you to install this dependencies using Unity Android build support module (available from Unity HUB, <a href="#unityhubandroid">see build support</a>)<br>
+We recommend you to install these dependencies using Unity Android build support module (available from Unity HUB, <a href="#unityhubandroid">see build support</a>)<br>
 Otherwise you can also directly download the dependencies in Qt Creator from SDKManager in Android tab of <code>Tools&gt;Options&gt;Devices</code>
 </td>
 </tr>
@@ -694,24 +751,19 @@ Then fill required path and check if your Android kit is valid :</p>
 <div class="sect3">
 <h4 id="set_conan_profile_for_android"><a class="anchor" href="#set_conan_profile_for_android"></a><a class="link" href="#set_conan_profile_for_android">Set Conan profile for Android</a></h4>
 <div class="paragraph">
-<p>As we are using Conan to download dependencies, you need to configure your default conan profile. To do so, open the default file available in your <code>${HOME}/.conan/profiles</code>, and replace the configuration by the following one before saving it:</p>
+<p>As we are using Conan to download dependencies, you need to configure a conan profile for Android. Remaken uses the following naming convention for the conan profile: <em>os-compiler-arch</em>. Thus, when Remaken calls <em>conan install</em>, it can pass the good profile to conan according to the targeted os, compiler and architecture.
+If you want to create a conan profile for android, with clang compiler and arm64_v8a architecture, run the following command:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>[settings]
-os=Android
-os_build=Linux
-arch=armv8
-arch_build=x86_64
-compiler=clang
-compiler.version=8
-compiler.libcxx=libc++
-build_type=Release
-os.api_level=21
-compiler.cppstd=17
-[options]
-[build_requires]
-[env]</pre>
+<pre>conan profile new --force --detect android-clang-arm64-v8a ;
+conan profile update settings.os=Android android-clang-arm64-v8a ;
+conan profile update settings.arch=armv8 android-clang-arm64-v8a ;
+conan profile update settings.compiler=clang android-clang-arm64-v8a ;
+conan profile update settings.compiler.version=8 android-clang-arm64-v8a ;
+conan profile update settings.compiler.libcxx=libc++ android-clang-arm64-v8a ;
+conan profile update settings.os.api_level=21 android-clang-arm64-v8a ;
+conan profile update settings.compiler.cppstd=17 android-clang-arm64-v8a</pre>
 </div>
 </div>
 <div class="admonitionblock important">
@@ -727,6 +779,38 @@ os_build should match your OS (Windows or Linux)
 </table>
 </div>
 <div class="paragraph">
+<p>If you show your profile by running:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>conan profile show android-clang-arm64-v8a</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You should obtain the following result:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>Configuration for profile android-clang-arm64-v8a:
+
+[settings]
+os=Android
+os_build=Linux
+arch=armv8
+arch_build=x86_64
+compiler=clang
+compiler.version=8
+compiler.libcxx=libc++
+build_type=Release
+os.api_level=21
+compiler.cppstd=17
+[options]
+[conf]
+[build_requires]
+[env]</pre>
+</div>
+</div>
+<div class="paragraph">
 <p>Now, you are ready to download your dependencies with Remaken.</p>
 </div>
 </div>
@@ -736,20 +820,20 @@ os_build should match your OS (Windows or Linux)
 <p>Remaken uses a file called <em>packagedependencies.txt</em> to describe which depedencies to install, in which version, where to install them, where to download them, with which package manager and with which configuration.<br></p>
 </div>
 <div class="paragraph">
-<p>A global <em>packagedepedencies.txt</em> defining the common dependencies with specific <em>packagedependencies_os.txt</em> files defining dependencies which are specific for each os are available in the parent GIT repository <em>SolAR</em>, and can be downloaded on the following link:</p>
+<p>A global <em>packagedepedencies.txt</em> defining the common dependencies with specific <em>packagedependencies-&lt;os&gt;.txt</em> files defining dependencies which are specific for each os are available in the parent GIT repository <em>SolAR</em>, and can be downloaded on the following link:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="https://raw.githubusercontent.com/SolarFramework/SolAR/release/0.9.1/packagedependencies.txt">packagedependencies.txt</a></p>
+<p><a href="https://raw.githubusercontent.com/SolarFramework/SolAR/release/0.10.0/packagedependencies.txt">packagedependencies.txt</a></p>
 </li>
 <li>
-<p><a href="https://raw.githubusercontent.com/SolarFramework/SolAR/release/0.9.1/packagedependencies-android.txt">packagedependencies-android.txt</a></p>
+<p><a href="https://raw.githubusercontent.com/SolarFramework/SolAR/release/0.10.0/packagedependencies-android.txt">packagedependencies-android.txt</a></p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>Copy these files where you want on your computer, open a command prompt in the folder where you have copied the <em>packagedependencies.txt</em> and <em>packagedependencies_os.txt</em> files, and run remaken with the following command:</p>
+<p>Copy these files where you want on your computer, open a command prompt in the folder where you have copied the <em>packagedependencies.txt</em> and <em>packagedependencies-&lt;os&gt;.txt</em> files, and run remaken with the following command:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -776,7 +860,7 @@ Some of the module will download and build third parties using Conan which requi
 </div>
 </div>
 <div class="sect1">
-<h2 id="build_solar_v0_9_0"><a class="anchor" href="#build_solar_v0_9_0"></a><a class="link" href="#build_solar_v0_9_0">Build SolAR v0.9.0</a></h2>
+<h2 id="build_solar_v0_10_0"><a class="anchor" href="#build_solar_v0_10_0"></a><a class="link" href="#build_solar_v0_10_0">Build SolAR v0.10.0</a></h2>
 <div class="sectionbody">
 <div class="sect2">
 <h3 id="clone_solar"><a class="anchor" href="#clone_solar"></a><a class="link" href="#clone_solar">Clone SolAR</a></h3>
@@ -826,7 +910,7 @@ git submodule foreach --recursive git pull</pre>
 <div class="sect2">
 <h3 id="build_on_qt_creator"><a class="anchor" href="#build_on_qt_creator"></a><a class="link" href="#build_on_qt_creator">Build on Qt Creator</a></h3>
 <div class="paragraph">
-<p>Counting the framework, the pipeline manager, modules, module tests, samples, pipelines, pipeline tests, there are more than 60 QT projects on GitHub. In order to ease the building of all this projects, they are grouped in the following parent QT projects available into the root folder of SolAR:</p>
+<p>Counting the framework, the pipeline manager, modules, module tests, samples, pipelines, pipeline tests, there are more than 60 QT projects on GitHub. In order to ease the building of all these projects, they are grouped in the following parent QT projects available into the root folder of SolAR:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -847,6 +931,12 @@ git submodule foreach --recursive git pull</pre>
 </li>
 <li>
 <p>SolARAllPipelineTests</p>
+</li>
+<li>
+<p>SolARAllServices</p>
+</li>
+<li>
+<p>SolARAllServicesTests</p>
 </li>
 </ul>
 </div>
@@ -878,6 +968,12 @@ git submodule foreach --recursive git pull</pre>
 </li>
 <li>
 <p>SolARAllPipelineTests: <code>install</code> and <code>install_deps</code></p>
+</li>
+<li>
+<p>SolARAllServices: <code>install</code></p>
+</li>
+<li>
+<p>SolARAllServicesTests: <code>install</code> and <code>install_deps</code></p>
 </li>
 </ul>
 </div>
@@ -915,7 +1011,7 @@ Since QT Creator 4.14.0, we highly recommand to set the project option <code>qma
 <div class="title">Figure 2. Edit build settings</div>
 </div>
 <div class="paragraph">
-<p>If you open several projects, you will have to set their build order. You can do it in QT Creator by defining the dependencies of each project in the <code>Projects</code> menu, select your project, click and Dependencies, and check the projects that depend directly on the selected project (checking `Synchronize configuration' will synchronize all projects in Debug or Release configuration).</p>
+<p>If you open several projects, you will have to set their build order. You can do it in QT Creator by defining the dependencies of each project in the <code>Projects</code> menu, select your project, click on Dependencies, and check the projects that depend directly on the selected project (checking `Synchronize configuration' will synchronize all projects in Debug or Release configuration).</p>
 </div>
 <div class="imageblock" style="text-align: center">
 <div class="content">
@@ -969,7 +1065,7 @@ Since QT Creator 4.14.0, we highly recommand to set the project option <code>qma
 <i class="fa icon-caution" title="Caution"></i>
 </td>
 <td class="content">
-If you have not yet run a qmake on each project, some error could appear concerning the fact thta <code>conanbuildinfo.pri</code> files do not exist. This is normal, <code>run qmake</code> on each project will create these files, and the error message will no longer appear.
+If you have not yet run a qmake on each project, some error could appear concerning the fact that <code>conanbuildinfo.pri</code> files do not exist. This is normal, <code>run qmake</code> on each project will create these files, and the error message will no longer appear.
 </td>
 </tr>
 </table>
@@ -1022,10 +1118,10 @@ SolAR modules provide support for AArch64 instruction sets through <a href="http
 <div class="ulist">
 <ul>
 <li>
-<p>If you haven&#8217;t build or download modules and dependencies for Android, execute <code>./plugin/unity/SolARUnityPlugin/Install.bat</code>.</p>
+<p>If you haven&#8217;t built or downloaded modules and dependencies for Android, execute <code>./plugin/unity/SolARUnityPlugin/Install.bat</code>.</p>
 </li>
 <li>
-<p>Otherwise you could simply execute <code>./plugin/unity/SolARUnityPlugin/Bundle.bat</code> to bundle .so of your Remaken packages and wrap SWIG.</p>
+<p>Otherwise you could simply execute <code>./plugin/unity/SolARUnityPlugin/Bundle.bat</code> to bundle all of your Remaken packages and wrap SWIG.</p>
 </li>
 </ul>
 </div>

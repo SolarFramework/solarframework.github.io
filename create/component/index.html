@@ -239,6 +239,30 @@ window.cookieconsent.initialise({
 
 
 
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+    <li id="documentation" class=" gray">
+      <a href="/documentation/">
+        <img src="/assets/images/navbar/documentation.svg" alt="documentation" height="42" width="42">
+        Documentation
+      </a>
+    </li>
+    
+    
+
+  
+
+
+
 
 
                 <li>
@@ -315,6 +339,17 @@ window.cookieconsent.initialise({
 	
 
 		<li >
+			<a href="/use/get_samples/">
+				Get samples
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
 			<a href="/use/unity/">
 				Unity
 				
@@ -327,7 +362,18 @@ window.cookieconsent.initialise({
 
 		<li >
 			<a href="/use/cplusplus/">
-				C++
+				Pipelines
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/use/services/">
+				Services
 				
 			</a>
 		</li>
@@ -447,17 +493,6 @@ window.cookieconsent.initialise({
 	
 
 		<li >
-			<a href="/create/tests/">
-				Tests
-				
-			</a>
-		</li>
-	
-
-	
-	
-
-		<li >
 			<a href="/create/api/">
 				API
 				
@@ -514,6 +549,28 @@ window.cookieconsent.initialise({
       <div class="submenuHelper">&gt;</div>
     </div>
     
+    <div class="submenu gray">
+      <div class="submenuHelper">&lt;</div>
+      <ul class="nav" aria-expanded="false">
+        
+        
+
+	
+	
+
+		<li >
+			<a href="/documentation/architecture/">
+				Architecture
+				
+			</a>
+		</li>
+	
+
+
+      </ul>
+      <div class="submenuHelper">&gt;</div>
+    </div>
+    
         
     </div>
 
@@ -550,7 +607,7 @@ window.cookieconsent.initialise({
 <h2 id="what_is_a_component"><a class="anchor" href="#what_is_a_component"></a><a class="link" href="#what_is_a_component">What is a component ?</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>A SolAR component is element embedding processing (and soon storage) capabilities. Components are designed to be connected together in order to create a full pipeline. For this reason, a component defines ideally one (potentially several) processing function defining input (the data to process) and ouptut (the processed data). For interoperability issues, the component has to implement a SolAR component interface defined by the SolAR Framework API available  <a href="../api/index.html#SolAR_API">here</a>.</p>
+<p>A SolAR component is an element embedding processing (and soon storage) capabilities. Components are designed to be connected together in order to create a full pipeline. For this reason, a component ideally contains one (potentially several) processing function defining the input (the data to process) and the ouptut (the processing result). For interoperability issues, the component has to implement a SolAR component interface defined by the SolAR Framework API available  <a href="../api/index.html#SolAR_API">here</a>.</p>
 </div>
 <div class="paragraph">
 <p>As each component implementation can require dedicated configuration parameters, the SolAR framework provides an easy-to-use mechanism to initialize them at load-time with a external xml configuration file.</p>
@@ -567,18 +624,18 @@ window.cookieconsent.initialise({
 <h3 id="download_qtcreator_wizards_for_xpcf"><a class="anchor" href="#download_qtcreator_wizards_for_xpcf"></a><a class="link" href="#download_qtcreator_wizards_for_xpcf">Download QTCreator wizards for XPCF</a></h3>
 <div class="paragraph">
 <p>Creating a new component from scratch can be a little bit tricky. To help you, a QTCreator wizard is available and will make the task much easier.<br>
-Start by installing this wizard by launching the <em>install.bat</em> on Windows (in your ${REMAKEN_PKG_ROOT}/packages/win-cl-14.1/xpcf/[version]/wizards/qtcreator) or <em>install.sh</em> on Linux (in your ${REMAKEN_PKG_ROOT}/packages/linux-gcc/xpcf/[version]/wizards/qtcreator).<br></p>
+Start by installing this wizard by launching the <em>install.bat</em> on Windows or <em>install.sh</em> on Linux (in your ${XPCF_MODULE_ROOT}/xpcf/[version]/wizards/qtcreator).<br></p>
 </div>
 <div class="paragraph">
 <p>You can also download the wizard on the following link:<br>
-<a href="https://github.com/SolarFramework/Tools/releases/download/XPCFWizard_2_3_4/XPCF_qtcreator_wizards.zip" class="bare">https://github.com/SolarFramework/Tools/releases/download/XPCFWizard_2_3_4/XPCF_qtcreator_wizards.zip</a><br>
+<a href="https://github.com/SolarFramework/Tools/releases/download/XPCFWizard_2_5_0/XPCF_qtcreator_wizards.zip" class="bare">https://github.com/SolarFramework/Tools/releases/download/XPCFWizard_2_5_0/XPCF_qtcreator_wizards.zip</a><br>
 Then unzip the downloaded file, and run the <em>install.bat</em> on Windows or the <em>install.sh</em> on Linux.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="create_a_solar_component_in_qtcreator"><a class="anchor" href="#create_a_solar_component_in_qtcreator"></a><a class="link" href="#create_a_solar_component_in_qtcreator">Create a SolAR component in QTCreator</a></h3>
 <div class="paragraph">
-<p>Open QTCreator and create the project of your module for which you want to add a new component<br></p>
+<p>Open QTCreator and create the project of your module for which you want to add a new component.<br></p>
 </div>
 <div class="paragraph">
 <p>Right click on your <em>Sources</em> folder, and click on <code><em>Add New&#8230;&#8203;</em></code> in the contextual menu.</p>
@@ -590,7 +647,7 @@ Then unzip the downloaded file, and run the <em>install.bat</em> on Windows or t
 <div class="title">Figure 1. Add a new component in QT</div>
 </div>
 <div class="paragraph">
-<p>Select <code><em>XPCF</em></code> and <code><em>XPCF Component class</em></code> and click on <code><em>Choose</em></code> button.<br></p>
+<p>Select <code><em>XPCF</em></code> and <code><em>XPCF Component Class</em></code> and click on <code><em>Choose</em></code> button.<br></p>
 </div>
 <div class="imageblock" style="text-align: center">
 <div class="content">
@@ -599,7 +656,7 @@ Then unzip the downloaded file, and run the <em>install.bat</em> on Windows or t
 <div class="title">Figure 2. Create an SolAR Component in QT</div>
 </div>
 <div class="paragraph">
-<p>Then, set the name of your component, inspired by the name of the SolAR interface you will implement. Do not forget to specifiy the namespace of your component based on the common namespace used for your module. In addition, you will have defined the SolAR interface that your component will inherit. Again, do not forget the namespace of the interface. If you need more information about the interfaces available in SolAR, check its <a href="../api/index.html#SolAR_API">API documentation</a>. Finally, you can define if your component is configurable. If yes, you will be able to easily configure it in a dedicated file attached to your pipeline.</p>
+<p>Then, set the name of your component, inspired by the name of the SolAR interface you will implement. Do not forget to specifiy the namespace of your component based on the common namespace used for your module. In addition, you will have to define the SolAR interface that your component will inherit. Again, do not forget the namespace of this interface. If you need more information about the interfaces available in SolAR, check its <a href="../api/index.html#SolAR_API">API documentation</a>. Finally, you can define if your component is configurable. If yes, you will be able to easily configure it in a dedicated file attached to your pipeline.</p>
 </div>
 <div class="imageblock" style="text-align: center">
 <div class="content">
@@ -900,13 +957,13 @@ XPCF_END_COMPONENTS_DECLARATION</code></pre>
 <div class="sect2">
 <h3 id="add_your_component_to_your_registry_file"><a class="anchor" href="#add_your_component_to_your_registry_file"></a><a class="link" href="#add_your_component_to_your_registry_file">Add your component to your registry file</a></h3>
 <div class="paragraph">
-<p>Finally, edit the <em>xpcf_MyModule_registry.xml</em> that should be at the root folder of your module project. Add a decsription for each component you want to embed in your module as follows:</p>
+<p>Finally, edit the <em>xpcf_MyModule_registry.xml</em> that should be at the root folder of your module project. Add a description for each component you want to embed in your module as follows:</p>
 </div>
 <div class="listingblock">
 <div class="title">xpcf_MyModule_registry.xml</div>
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;xpcf-registry&gt;</span>
-<span class="tag">&lt;module</span> <span class="attribute-name">uuid</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">5b066de7-2a9f-4dff-a730-ce82adafe2f6</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">MyModule</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">description</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">MyModule_Description</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">path</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">$REMAKEN_PKG_ROOT/packages/SolARBuild/win-cl-14.1/MyModule/1.0.0/lib/x86_64/shared</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+<span class="tag">&lt;module</span> <span class="attribute-name">uuid</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">5b066de7-2a9f-4dff-a730-ce82adafe2f6</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">MyModule</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">description</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">MyModule_Description</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">path</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">$XPCF_MODULE_ROOT/SolARBuild/MyModule/1.0.0/lib/x86_64/shared</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
 
 <span class="tag">&lt;component</span> <span class="attribute-name">uuid</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">4bc8c7d0-9e57-4816-8e92-e26103cc43f7</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">MyDesrciptorsExtractor</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">description</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">MyDesrciptorsExtractor Description</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span> <i class="conum" data-value="1"></i><b>(1)</b>
         <span class="tag">&lt;interface</span> <span class="attribute-name">uuid</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">125f2007-1bf9-421d-9367-fbdc1210d006</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">IComponentIntrospect</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">description</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">IComponentIntrospect</span><span class="delimiter">&quot;</span></span><span class="tag">/&gt;</span> <i class="conum" data-value="2"></i><b>(2)</b>

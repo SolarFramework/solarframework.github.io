@@ -239,6 +239,30 @@ window.cookieconsent.initialise({
 
 
 
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+    <li id="documentation" class=" gray">
+      <a href="/documentation/">
+        <img src="/assets/images/navbar/documentation.svg" alt="documentation" height="42" width="42">
+        Documentation
+      </a>
+    </li>
+    
+    
+
+  
+
+
+
 
 
                 <li>
@@ -315,6 +339,17 @@ window.cookieconsent.initialise({
 	
 
 		<li >
+			<a href="/use/get_samples/">
+				Get samples
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
 			<a href="/use/unity/">
 				Unity
 				
@@ -327,7 +362,18 @@ window.cookieconsent.initialise({
 
 		<li >
 			<a href="/use/cplusplus/">
-				C++
+				Pipelines
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/use/services/">
+				Services
 				
 			</a>
 		</li>
@@ -447,17 +493,6 @@ window.cookieconsent.initialise({
 	
 
 		<li >
-			<a href="/create/tests/">
-				Tests
-				
-			</a>
-		</li>
-	
-
-	
-	
-
-		<li >
 			<a href="/create/api/">
 				API
 				
@@ -504,6 +539,28 @@ window.cookieconsent.initialise({
 		<li  class="active currentPage">
 			<a href="/community/best_practices/">
 				Best practices
+				
+			</a>
+		</li>
+	
+
+
+      </ul>
+      <div class="submenuHelper">&gt;</div>
+    </div>
+    
+    <div class="submenu gray">
+      <div class="submenuHelper">&lt;</div>
+      <ul class="nav" aria-expanded="false">
+        
+        
+
+	
+	
+
+		<li >
+			<a href="/documentation/architecture/">
+				Architecture
 				
 			</a>
 		</li>
@@ -902,7 +959,7 @@ Please refer to existing SolAR component interfaces and take them as examples.
 <div class="sect2">
 <h3 id="component_implementations"><a class="anchor" href="#component_implementations"></a><a class="link" href="#component_implementations">Component Implementations</a></h3>
 <div class="paragraph">
-<p>A component implements a low-level vision processing in order to offer much more flexibility. They can be be interconnected together to create  high-level and real-time vision pipeline (localization, 3D reconstruction, etc.).</p>
+<p>A component implements a low-level vision processing in order to offer much more flexibility. They can be interconnected together to create  high-level and real-time vision pipeline (localization, 3D reconstruction, etc.).</p>
 </div>
 <div class="paragraph">
 <p>That is why a component should take in parameters and deliver out data structures to ease their connection (data flow).</p>
@@ -914,7 +971,7 @@ Please refer to existing SolAR component interfaces and take them as examples.
 <ul>
 <li>
 <p><strong>a SolAR interface already exists for your kind of components</strong>. If so, please use the specified interface.
-if no, or if you think the existing interfaces do not totally fit your need, please contact the SolAR team.</p>
+if not, or if you think the existing interfaces do not totally fit your need, please contact the SolAR team.</p>
 </li>
 </ul>
 </div>
@@ -928,7 +985,7 @@ if no, or if you think the existing interfaces do not totally fit your need, ple
 <p>3.2. Your components should have explicit names (that means, that ideally, we do not need to read documentation to understands what it is for and on which third party it is based). Please refer to existing components for naming examples.</p>
 </div>
 <div class="paragraph">
-<p>3.3. Your components must inherit from component interfaces defined by the SolARFramework. If no component interface fit your need or if you think an existing interface should be extended, please contact the SolAR team.</p>
+<p>3.3. Your components must inherit from component interfaces defined by the SolARFramework. If no component interface fits your need or if you think an existing interface should be extended, please contact the SolAR team.</p>
 </div>
 <div class="paragraph">
 <p>3.4. Your components can define their own attributes which should be defined as private. No attributes can be shared by other components. If you want to shared data between components, pass them as attribute of the processing method.</p>
@@ -1155,8 +1212,8 @@ Please be aware that components must be interoperable thanks to XPCF, and that i
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C++/C modules</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">- Project-wide definitions must be in a dedicated header file (for instance definitions.h)
-- Each module may have a common .h file that contains all common constants, macros, enum, structures… It should not contain elements that are not common to classes in the module.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">- Project-wide definitions must be in a dedicated header file (for instance definitions.h)</p>
+<p class="tableblock">- Each module may have a common .h file that contains all common constants, macros, enum, structures… It should not contain elements that are not common to classes in the module.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C++/C source files</p></td>
@@ -1178,19 +1235,6 @@ See <a href="#naming_conventions">Naming conventions</a> for naming conventions.
 </div>
 <div class="sect2">
 <h3 id="c_c_coding_rules"><a class="anchor" href="#c_c_coding_rules"></a><a class="link" href="#c_c_coding_rules">C / C++ Coding Rules</a></h3>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-NOT VALIDATED
-TIP: Write here if you validate with your name and your comment
-</td>
-</tr>
-</table>
-</div>
 <div class="paragraph">
 <p><strong><em>Why restricting C++?</em></strong></p>
 </div>
@@ -1201,14 +1245,16 @@ TIP: Write here if you validate with your name and your comment
 <p><strong><em>Why restricting C?</em></strong></p>
 </div>
 <div class="paragraph">
-<p>C can be written in many ways to do the same things but some ways are more obfuscated and offers less robustness.</p>
+<p>C can be written in many ways to do the same things but some ways are more obfuscated and offer less robustness.</p>
 </div>
 <div class="paragraph">
-<p><strong><em>Then, what language to use?</em></strong>
-<strong>b&lt;&gt;com</strong> is using a mix of C and C++ based on existing code, external dependencies (like platform types, SDK, etc).</p>
+<p><strong><em>Then, what language to use?</em></strong></p>
 </div>
 <div class="paragraph">
-<p>That’s why the following rules makes sense in our environment and, in order to facilitate porting and code review, developers must use the set of rules defined below. An example of code and header can be found in annexes A1 and A2.</p>
+<p><strong>b&lt;&gt;com</strong> is using a mix of C and C++ based on existing code, external dependencies (like platform types, SDK, etc).</p>
+</div>
+<div class="paragraph">
+<p>That’s why the following rules make sense in our environment and, in order to facilitate porting and code review, developers must use the set of rules defined below. An example of code and header can be found in annexes A1 and A2.</p>
 </div>
 </div>
 <div class="sect2">
@@ -1426,19 +1472,6 @@ If an array is needed at some point during the execution of the program, this ne
 </div>
 <div class="sect2">
 <h3 id="naming_conventions"><a class="anchor" href="#naming_conventions"></a><a class="link" href="#naming_conventions">Naming conventions</a></h3>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-NOT VALIDATED
-TIP: Write here if you validate with your name and your comment
-</td>
-</tr>
-</table>
-</div>
 <table class="tableblock frame-all grid-cols spread">
 <colgroup>
 <col style="width: 20%;">
@@ -1447,11 +1480,11 @@ TIP: Write here if you validate with your name and your comment
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">About names</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">- Words must be in English.
-- Words inside the name must start with an uppercase letter. Other letters of the word must be lowercase letters (except for constants).
-- Names should not contain underscores '_' (except for constants and the prefixes as specified bellow).
-- Names should not contain abbreviations (except if the abbreviation is widely used in the particular field, such as ESDescriptor for “elementary stream descriptor”).
-- Names should be explicit according to what they will do, avoid generic names (like i, a, x…).</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">- Words must be in English.</p>
+<p class="tableblock">- Words inside the name must start with an uppercase letter. Other letters of the word must be lowercase letters (except for constants).</p>
+<p class="tableblock">- Names should not contain underscores '_' (except for constants and the prefixes as specified bellow).</p>
+<p class="tableblock">- Names should not contain abbreviations (except if the abbreviation is widely used in the particular field, such as ESDescriptor for “elementary stream descriptor”).</p>
+<p class="tableblock">- Names should be explicit according to what they will do, avoid generic names (like i, a, x…).</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">C++ source files</p></td>
@@ -1932,7 +1965,7 @@ For C++, to improve performance, classes must act as evolved structures/handlers
 <td class="tableblock halign-left valign-top"><p class="tableblock">Recursive code must not be used for performance reasons and lack of control over the code and because no parallelization and optimization are possible.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>?No class as class member?</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No class as class member</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">A class must not contain another class as a member except through pointers.</p></td>
 </tr>
 <tr>
@@ -1993,7 +2026,7 @@ Refer to the online manual (<a href="http://www.stack.nl/~dimitri/doxygen/index.
 <div class="sect2">
 <h3 id="ii_deviation"><a class="anchor" href="#ii_deviation"></a><a class="link" href="#ii_deviation">II.	Deviation</a></h3>
 <div class="paragraph">
-<p>Any <strong>b&lt;&gt;com</strong> source code must follow these rules. Third party package follow their own rules and should not be modified to follow these rules.</p>
+<p>Any <strong>b&lt;&gt;com</strong> source code must follow these rules. Third party packages follow their own rules and should not be modified to follow these rules.</p>
 </div>
 </div>
 <div class="sect2">

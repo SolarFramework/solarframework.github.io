@@ -239,6 +239,30 @@ window.cookieconsent.initialise({
 
 
 
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+    <li id="documentation" class=" gray">
+      <a href="/documentation/">
+        <img src="/assets/images/navbar/documentation.svg" alt="documentation" height="42" width="42">
+        Documentation
+      </a>
+    </li>
+    
+    
+
+  
+
+
+
 
 
                 <li>
@@ -315,6 +339,17 @@ window.cookieconsent.initialise({
 	
 
 		<li >
+			<a href="/use/get_samples/">
+				Get samples
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
 			<a href="/use/unity/">
 				Unity
 				
@@ -327,7 +362,18 @@ window.cookieconsent.initialise({
 
 		<li >
 			<a href="/use/cplusplus/">
-				C++
+				Pipelines
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/use/services/">
+				Services
 				
 			</a>
 		</li>
@@ -447,17 +493,6 @@ window.cookieconsent.initialise({
 	
 
 		<li >
-			<a href="/create/tests/">
-				Tests
-				
-			</a>
-		</li>
-	
-
-	
-	
-
-		<li >
 			<a href="/create/api/">
 				API
 				
@@ -504,6 +539,28 @@ window.cookieconsent.initialise({
 		<li >
 			<a href="/community/best_practices/">
 				Best practices
+				
+			</a>
+		</li>
+	
+
+
+      </ul>
+      <div class="submenuHelper">&gt;</div>
+    </div>
+    
+    <div class="submenu gray">
+      <div class="submenuHelper">&lt;</div>
+      <ul class="nav" aria-expanded="false">
+        
+        
+
+	
+	
+
+		<li >
+			<a href="/documentation/architecture/">
+				Architecture
 				
 			</a>
 		</li>
@@ -606,7 +663,7 @@ Cflags: -I${includedir}</code></pre>
 <div class="sect3">
 <h4 id="packagedependencies_txt"><a class="anchor" href="#packagedependencies_txt"></a><a class="link" href="#packagedependencies_txt">packageDependencies.txt</a></h4>
 <div class="paragraph">
-<p>Remaken and the SolAR build pipeline support the recursive dependency download, link, and installation. But in order to do so, your package must inform its own dependencies in the <em>packageDependencies.txt</em>.
+<p>Remaken and the SolAR build pipeline support the recursive dependency download, link, and installation. But in order to do so, your package must precise its own dependencies in the <em>packageDependencies.txt</em>.
 To know how to add a sub-dependency to your dependency, take a look to the <a href="https://github.com/b-com-software-basis/remaken">Remaken documentation</a> on github, or check the numerous samples of <em>packagedependencies.txt</em> available in the SolAR framework.</p>
 </div>
 </div>
@@ -677,7 +734,7 @@ On GitHub, when a new release or a new dependency is published, we respect for e
 <div class="sect2">
 <h3 id="conan"><a class="anchor" href="#conan"></a><a class="link" href="#conan">Conan</a></h3>
 <div class="paragraph">
-<p>Third party packaging can quickly become tedious, especially when source package manager such as Conan already provide you a solution to download ready-to-use packages for a large range of popular third parties hosted on public repositories (<a href="https://center.conan.io">Conan center</a>).</p>
+<p>Third party packaging can quickly become tedious, especially when source package managers, such as Conan, already provide you a solution to download ready-to-use packages for a large range of popular third parties hosted on public repositories (<a href="https://center.conan.io">Conan center</a>).</p>
 </div>
 <div class="paragraph">
 <p>To add your Conan package to your solution using Remaken, you can take a look at the <a href="https://github.com/b-com-software-basis/remaken">Remaken documentation</a>.</p>

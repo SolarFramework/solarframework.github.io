@@ -239,6 +239,30 @@ window.cookieconsent.initialise({
 
 
 
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+    <li id="documentation" class=" gray">
+      <a href="/documentation/">
+        <img src="/assets/images/navbar/documentation.svg" alt="documentation" height="42" width="42">
+        Documentation
+      </a>
+    </li>
+    
+    
+
+  
+
+
+
 
 
                 <li>
@@ -314,6 +338,17 @@ window.cookieconsent.initialise({
 	
 	
 
+		<li >
+			<a href="/use/get_samples/">
+				Get samples
+				
+			</a>
+		</li>
+	
+
+	
+	
+
 		<li  class="active currentPage">
 			<a href="/use/unity/">
 				Unity
@@ -327,7 +362,18 @@ window.cookieconsent.initialise({
 
 		<li >
 			<a href="/use/cplusplus/">
-				C++
+				Pipelines
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/use/services/">
+				Services
 				
 			</a>
 		</li>
@@ -447,17 +493,6 @@ window.cookieconsent.initialise({
 	
 
 		<li >
-			<a href="/create/tests/">
-				Tests
-				
-			</a>
-		</li>
-	
-
-	
-	
-
-		<li >
 			<a href="/create/api/">
 				API
 				
@@ -514,6 +549,28 @@ window.cookieconsent.initialise({
       <div class="submenuHelper">&gt;</div>
     </div>
     
+    <div class="submenu gray">
+      <div class="submenuHelper">&lt;</div>
+      <ul class="nav" aria-expanded="false">
+        
+        
+
+	
+	
+
+		<li >
+			<a href="/documentation/architecture/">
+				Architecture
+				
+			</a>
+		</li>
+	
+
+
+      </ul>
+      <div class="submenuHelper">&gt;</div>
+    </div>
+    
         
     </div>
 
@@ -534,8 +591,14 @@ window.cookieconsent.initialise({
 <li><a href="#for_whom">For whom ?</a></li>
 <li><a href="#download">Download</a></li>
 <li><a href="#project_structure">Project Structure</a></li>
-<li><a href="#how_works_the_solar_plugin_for_unity">How works the SolAR Plugin for Unity ?</a></li>
+<li><a href="#how_does_the_solar_plugin_for_unity_work">How does the SolAR Plugin for Unity work ?</a></li>
 <li><a href="#test_solar_pipelines">Test SolAR pipelines</a></li>
+</ul>
+</li>
+<li><a href="#troubleshooting">Troubleshooting</a>
+<ul class="sectlevel2">
+<li><a href="#i_have_selected_another_pipeline_but_the_application_still_uses_the_old_one">I have selected another pipeline but the application still uses the old one</a></li>
+<li><a href="#the_camera_viewport_is_blank_on_android">The camera viewport is blank on Android</a></li>
 </ul>
 </li>
 </ul>
@@ -550,8 +613,8 @@ window.cookieconsent.initialise({
 <h2 id="unity"><a class="anchor" href="#unity"></a><a class="link" href="#unity">Unity</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Integrate SolAR pipelines in Unity Engine give opportunities to developers of
-AR services to get access to fully configurable SolAR based solutions to design AR applications.<br></p>
+<p>Integrating SolAR pipelines in Unity Engine gives opportunities to developers of
+AR services to get access to fully configurable SolAR-based solutions to design AR applications.<br></p>
 </div>
 <div class="paragraph">
 <p>SolAR has now a <strong>Plugin for Unity</strong></p>
@@ -570,7 +633,7 @@ AR services to get access to fully configurable SolAR based solutions to design 
 <p><strong>Download the last version of Unity Hub</strong>. The hub gives you the possibility to get access to different versions of Unity.</p>
 </li>
 <li>
-<p>Our actual version (our test are based on)  is <strong>2019.4.15f1</strong></p>
+<p>Our current version (our tests are based on) is <strong>2019.4.15f1</strong></p>
 </li>
 </ul>
 </div>
@@ -610,9 +673,13 @@ It&#8217;s recommended that you use a 3D project set-up.
 <ul>
 <li>
 <p><strong>Documentation</strong></p>
-</li>
+<div class="ulist">
+<ul>
 <li>
 <p>All documentation for Unity is available here : <a href="https://docs.unity3d.com/2019.4/Documentation/Manual/" class="bare">https://docs.unity3d.com/2019.4/Documentation/Manual/</a></p>
+</li>
+</ul>
+</div>
 </li>
 </ul>
 </div>
@@ -623,7 +690,7 @@ It&#8217;s recommended that you use a 3D project set-up.
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-If you are a Unity newbie, check tutos online to help you.
+If you are new to Unity, check online tutorials to help you.
 </td>
 </tr>
 </table>
@@ -649,15 +716,18 @@ If you are a Unity newbie, check tutos online to help you.
 <div class="ulist">
 <ul>
 <li>
-<p>go on <a href="https://github.com/SolarFramework/SolARUnityPlugin/releases/tag/0.9.0" class="bare">https://github.com/SolarFramework/SolARUnityPlugin/releases/tag/0.9.0</a></p>
+<p>go on <a href="https://github.com/SolarFramework/SolARUnityPlugin/releases/tag/0.9.1" class="bare">https://github.com/SolarFramework/SolARUnityPlugin/releases/tag/0.9.1</a></p>
 </li>
 <li>
 <p>click on <em>SolARUnityPackage.unitypackage</em></p>
 </li>
+<li>
+<p>the file is downloaded, all you have left to do is to import it into Unity</p>
+</li>
 </ul>
 </div>
 <div class="paragraph">
-<p>This package provides user with the minimum requirements to load a SolAR pipeline in Unity and include three pipelines (Fiducial marker, natural image marker, and a SLAM).</p>
+<p>This package provides user with the minimum requirements to load a SolAR pipeline in Unity and includes three pipelines (Fiducial marker, natural image marker, and a SLAM).</p>
 </div>
 </div>
 <div class="sect2">
@@ -745,7 +815,7 @@ If you are a Unity newbie, check tutos online to help you.
 </div>
 </div>
 <div class="sect2">
-<h3 id="how_works_the_solar_plugin_for_unity"><a class="anchor" href="#how_works_the_solar_plugin_for_unity"></a><a class="link" href="#how_works_the_solar_plugin_for_unity">How works the SolAR Plugin for Unity ?</a></h3>
+<h3 id="how_does_the_solar_plugin_for_unity_work"><a class="anchor" href="#how_does_the_solar_plugin_for_unity_work"></a><a class="link" href="#how_does_the_solar_plugin_for_unity_work">How does the SolAR Plugin for Unity work ?</a></h3>
 <div class="paragraph">
 <p>The SolAR plugin for Unity is a simple interface to load any SolAR pipelines assembled by the SolAR pipeline assemblers and use them to design AR services with Unity.<br>
 <br>
@@ -760,7 +830,7 @@ To load a SolAR pipeline in Unity, simply drag and drop the <em>SolARPipelineLoa
 <p><strong>Use Unity Webcam</strong>: Check it if you want to replace the camera used by the pipeline by a Unity camera. If checked, you will be able to select a camera among those available on your computer. For a better experience, you can set the intrinsic parameters of the camera. For that, you will need to calibrate it (see <a href="../tools/index.html#CameraCalibration">Camera Calibration</a>).</p>
 </li>
 <li>
-<p><strong>Custom_Canvas</strong>: For video see-through AR, the system has to display the video stream of the camera on background. If unchecked, a Canvas with the video stream of the selected camera will be automatically created when the application will start. If you want to manage yor canvas by yourself, you can check this option and drag and drop your canvas and its material.</p>
+<p><strong>Custom_Canvas</strong>: For video see-through AR, the system has to display the video stream of the camera on background. If unchecked, a Canvas with the video stream of the selected camera will be automatically created when the application will start. If you want to manage your canvas by yourself, you can check this option and drag and drop your canvas and its material.</p>
 </li>
 <li>
 <p><strong>Select Pipeline Folder</strong>: A button to select the folder where the available SolAR pipelines are stored in your Unity project. These pipelines must be stored anywhere under the folder <em>Assets/SolAR/Pipelines/</em>.</p>
@@ -838,6 +908,26 @@ For a better AR experience, it is preferable to enter the actual size of the mar
 </td>
 </tr>
 </table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="troubleshooting"><a class="anchor" href="#troubleshooting"></a><a class="link" href="#troubleshooting">Troubleshooting</a></h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="i_have_selected_another_pipeline_but_the_application_still_uses_the_old_one"><a class="anchor" href="#i_have_selected_another_pipeline_but_the_application_still_uses_the_old_one"></a><a class="link" href="#i_have_selected_another_pipeline_but_the_application_still_uses_the_old_one">I have selected another pipeline but the application still uses the old one</a></h3>
+<div class="paragraph">
+<p>This might mean your selection hasn&#8217;t been saved. This is a known issue that remain to be fixed.</p>
+</div>
+<div class="paragraph">
+<p>A workaround is to select a value in a pipeline parameter, erase it, write the same value again, and then save.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="the_camera_viewport_is_blank_on_android"><a class="anchor" href="#the_camera_viewport_is_blank_on_android"></a><a class="link" href="#the_camera_viewport_is_blank_on_android">The camera viewport is blank on Android</a></h3>
+<div class="paragraph">
+<p>When targetting Android, you <strong>MUST</strong> check the <strong>Use Unity Webcam</strong> box. Let the camera selected by default in the dropdown menu.</p>
 </div>
 </div>
 </div>

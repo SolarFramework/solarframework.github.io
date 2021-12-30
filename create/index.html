@@ -239,6 +239,30 @@ window.cookieconsent.initialise({
 
 
 
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+    <li id="documentation" class=" gray">
+      <a href="/documentation/">
+        <img src="/assets/images/navbar/documentation.svg" alt="documentation" height="42" width="42">
+        Documentation
+      </a>
+    </li>
+    
+    
+
+  
+
+
+
 
 
                 <li>
@@ -315,6 +339,17 @@ window.cookieconsent.initialise({
 	
 
 		<li >
+			<a href="/use/get_samples/">
+				Get samples
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
 			<a href="/use/unity/">
 				Unity
 				
@@ -327,7 +362,18 @@ window.cookieconsent.initialise({
 
 		<li >
 			<a href="/use/cplusplus/">
-				C++
+				Pipelines
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/use/services/">
+				Services
 				
 			</a>
 		</li>
@@ -447,17 +493,6 @@ window.cookieconsent.initialise({
 	
 
 		<li >
-			<a href="/create/tests/">
-				Tests
-				
-			</a>
-		</li>
-	
-
-	
-	
-
-		<li >
 			<a href="/create/api/">
 				API
 				
@@ -514,6 +549,28 @@ window.cookieconsent.initialise({
       <div class="submenuHelper">&gt;</div>
     </div>
     
+    <div class="submenu gray">
+      <div class="submenuHelper">&lt;</div>
+      <ul class="nav" aria-expanded="false">
+        
+        
+
+	
+	
+
+		<li >
+			<a href="/documentation/architecture/">
+				Architecture
+				
+			</a>
+		</li>
+	
+
+
+      </ul>
+      <div class="submenuHelper">&gt;</div>
+    </div>
+    
         
     </div>
 
@@ -541,7 +598,7 @@ window.cookieconsent.initialise({
 <h2 id="why_create_solar_components"><a class="anchor" href="#why_create_solar_components"></a><a class="link" href="#why_create_solar_components">Why create SolAR components ?</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The SolAR framework has been designed to easily assemble a set of SolAR vision components to build vision pipelines adressing AR services. To ensure the interoperability, a concrete vision component must implement one of the more than 50 interfaces currently defined in the SolAR framework. Thus, a SolAR pipeline assembler can easily choose and connect SolAR vision components together to assemble a vision pipeline, and he can easily swap on component by another one to improve or adapt the pipeline to a dedicated device or task. This modularity aims at creating an ecosystem where researchers and vision expert will be able to easily share, promote or make their research results accessible to a large community to help the adoption of augmented reality.</p>
+<p>The SolAR framework has been designed to easily assemble a set of SolAR vision components to build vision pipelines adressing AR services. To ensure the interoperability, a concrete vision component must implement one of the interfaces among more than 50 currently defined in the SolAR framework. Thus, a SolAR pipeline assembler can easily choose and connect SolAR vision components together to assemble a vision pipeline, and he can easily swap one component by another one to improve or adapt the pipeline to a dedicated device or task. This modularity aims to create an ecosystem where researchers and vision experts will be able to easily share, promote or make their research results accessible to a large community to help the adoption of augmented reality.</p>
 </div>
 </div>
 </div>
@@ -549,10 +606,10 @@ window.cookieconsent.initialise({
 <h2 id="what_is_a_solar_component"><a class="anchor" href="#what_is_a_solar_component"></a><a class="link" href="#what_is_a_solar_component">What is a SolAR component ?</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Each component processes input data and streams the processing output to feed the input of other components. Thus, each processing can be performed in parallel by buffering data between components to optimize the global vision pipeline. Components exchange data with strong types defined by the data structures available in the framework to ensure strong interfaces and avoid the connection of components with incompatible data.</p>
+<p>Each component processes input data and streams the processing results to feed the input of other components. Thus, each processing can be performed in parallel by buffering data between components to optimize the global vision pipeline. Components exchange data with strong types defined by the data structures available in the framework to ensure strong interfaces and avoid the connection of components with incompatible data.</p>
 </div>
 <div class="paragraph">
-<p>Also, each concrete implementation of a SolAR component can define its own parameters to provide configuration genericity. This configuration is very simple with SolAR and allow to configure the pipeline at load time thanks to a simple xml file, and even at runtime through the SolAR API.</p>
+<p>Also, each concrete implementation of a SolAR component can define its own parameters to provide configuration genericity. This configuration is very simple with SolAR and allows to configure the pipeline at load time thanks to a simple xml file, and even at runtime through the SolAR API.</p>
 </div>
 </div>
 </div>
@@ -560,7 +617,7 @@ window.cookieconsent.initialise({
 <h2 id="what_is_a_solar_module"><a class="anchor" href="#what_is_a_solar_module"></a><a class="link" href="#what_is_a_solar_module">what is a SolAR module ?</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>As it is difficult to manage tens, hundreds or even thousands of components independently (i.e. one shared library per component), SolAR components must be grouped into SolAR modules (i.e. a unique shared library embedded a set of concrete implementation of SolAR components). Thus, it will be much more easy to manage the publication of modules which can be organized according to the creator&#8217;s choice (a module dedicated to a third party such as OpenCV, to a research institution, to a company, to a dedicated pipeline assembly, etc.).</p>
+<p>As it is difficult to manage tens, hundreds or even thousands of components independently (i.e. one shared library per component), SolAR components must be grouped into SolAR modules (i.e. a unique shared library embedded a set of concrete implementation of SolAR components). Thus, it will be much easier to manage the publication of modules which can be organized according to the creator&#8217;s choice (a module dedicated to a third party such as OpenCV, to a research institution, to a company, to a dedicated pipeline assembly, etc.).</p>
 </div>
 </div>
 </div>

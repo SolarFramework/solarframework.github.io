@@ -239,6 +239,30 @@ window.cookieconsent.initialise({
 
 
 
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+    <li id="documentation" class=" gray">
+      <a href="/documentation/">
+        <img src="/assets/images/navbar/documentation.svg" alt="documentation" height="42" width="42">
+        Documentation
+      </a>
+    </li>
+    
+    
+
+  
+
+
+
 
 
                 <li>
@@ -315,6 +339,17 @@ window.cookieconsent.initialise({
 	
 
 		<li >
+			<a href="/use/get_samples/">
+				Get samples
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
 			<a href="/use/unity/">
 				Unity
 				
@@ -327,7 +362,18 @@ window.cookieconsent.initialise({
 
 		<li >
 			<a href="/use/cplusplus/">
-				C++
+				Pipelines
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/use/services/">
+				Services
 				
 			</a>
 		</li>
@@ -447,17 +493,6 @@ window.cookieconsent.initialise({
 	
 
 		<li >
-			<a href="/create/tests/">
-				Tests
-				
-			</a>
-		</li>
-	
-
-	
-	
-
-		<li >
 			<a href="/create/api/">
 				API
 				
@@ -514,6 +549,28 @@ window.cookieconsent.initialise({
       <div class="submenuHelper">&gt;</div>
     </div>
     
+    <div class="submenu gray">
+      <div class="submenuHelper">&lt;</div>
+      <ul class="nav" aria-expanded="false">
+        
+        
+
+	
+	
+
+		<li >
+			<a href="/documentation/architecture/">
+				Architecture
+				
+			</a>
+		</li>
+	
+
+
+      </ul>
+      <div class="submenuHelper">&gt;</div>
+    </div>
+    
         
     </div>
 
@@ -526,14 +583,13 @@ window.cookieconsent.initialise({
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
 <li><a href="#install_on_windows">Install On Windows</a></li>
-<li><a href="#test_solar">Test SolAR</a></li>
 <li><a href="#InstalDevEnv">Install development environment</a>
 <ul class="sectlevel2">
 <li><a href="#install_your_ides">Install your IDEs</a></li>
 <li><a href="#install_dependencies">Install dependencies</a></li>
 </ul>
 </li>
-<li><a href="#build_solar_v0_9_0">Build SolAR v0.9.0</a>
+<li><a href="#build_solar_v0_10_0">Build SolAR v0.10.0</a>
 <ul class="sectlevel2">
 <li><a href="#clone_solar">Clone SolAR</a></li>
 <li><a href="#build_on_qt_creator">Build on Qt Creator</a></li>
@@ -552,51 +608,6 @@ window.cookieconsent.initialise({
 <h2 id="install_on_windows"><a class="anchor" href="#install_on_windows"></a><a class="link" href="#install_on_windows">Install On Windows</a></h2>
 <div class="sectionbody">
 
-</div>
-</div>
-<div class="sect1">
-<h2 id="test_solar"><a class="anchor" href="#test_solar"></a><a class="link" href="#test_solar">Test SolAR</a></h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>We provide you with a set of samples to test the possibilities of the SolAR framework. Each .zip file corresponds to stand-alone applications, including all necessary SolAR .dll and .exe files.</p>
-</div>
-<table class="tableblock frame-all grid-all spread">
-<caption class="title">Table 1. Available Samples</caption>
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Natural Image Marker</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/SolarFramework/Sample-NaturalImageMarker/releases/download/SolARSample_NaturalImageMarker%2F0.9.1%2Fwin/SolARSample_NaturalImageMarker_0.9.1_release.zip">v0.9.1 download link</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Fiducial Marker</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/SolarFramework/Sample-FiducialMarker/releases/download/SolARSample_FiducialMarker%2F0.9.1%2Fwin/SolARSample_FiducialMarker_0.9.1_release.zip">v0.9.1 download link</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"> SLAM</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/SolarFramework/Sample-Slam/releases/download/SolARSample_SLAM%2F0.9.1%2Fwin/SolARSample_SLAM_0.9.1_release.zip">v0.9.1 download link</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Triangulation</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/SolarFramework/Sample-Triangulation/releases/download/SolARSample_Triangulation%2F0.9.1%2Fwin/SolARSample_Triangulation_0.9.1_release.zip">v0.9.1 download link</a></p></td>
-</tr>
-</tbody>
-</table>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-important" title="Important"></i>
-</td>
-<td class="content">
-Print the marker image included in .zip file to perform the test.
-</td>
-</tr>
-</table>
-</div>
 </div>
 </div>
 <div class="sect1">
@@ -636,7 +647,7 @@ As you will see later, the SolAR framework is based on <em>QMake</em> originally
 <p>As SolAR is using QMake file to setup the projects, we highly recommend to install <em>Qt Creator</em>. Moreover, you will have access to wizards which will help you create new SolAR modules, components and pipelines.</p>
 </div>
 <div class="paragraph">
-<p>Download the last version of QTCreator on the following link (scroll down to choose "Downloads for open-source users" for open-source development):</p>
+<p>Download the latest version of QTCreator on the following link (scroll down to choose "Downloads for open-source users" for open-source development):</p>
 </div>
 <div class="paragraph">
 <p><a href="https://www.qt.io/download">Qt installer download</a></p>
@@ -718,10 +729,10 @@ As you will see later, the SolAR framework is based on <em>QMake</em> originally
 <div class="ulist">
 <ul>
 <li>
-<p>Start by downloading and installing <em>Remaken</em> available on the following link: <a href="https://github.com/b-com-software-basis/remaken/releases/download/1.7.3/Setup_Remaken_1.7.3.exe">Remaken installer version 1.7.3</a></p>
+<p>Start by downloading and installing <em>Remaken</em> available on the following link: <a href="https://github.com/b-com-software-basis/remaken/releases/tag/1.8.1">Remaken installer version 1.8.1</a></p>
 </li>
 <li>
-<p>Launch the remaken installer <strong>with administrator rights</strong>. By default, the dependencies will be installed in your <code>C:/Users/%Username%</code> directory, but you can change it by setting another location for your <em>REMAKEN_PKG_ROOT</em> environement variable. By default, Remaken will install Conan, pkg_config and CMake which will be used afterwards. Conan will check these remotes for searching your dependencies.+</p>
+<p>Launch the remaken installer <strong>with administrator rights</strong>. By default, the dependencies will be installed in your <code>C:/Users/%Username%</code> directory, but you can change it by setting another location for your <em>REMAKEN_PKG_ROOT</em> environment variable. By default, Remaken will install Conan, pkg_config and CMake which will be used afterwards. Conan will check these remotes for searching your dependencies.</p>
 </li>
 <li>
 <p>SolAR has its own conan remote to store pre-built dependencies for the common configurations used by the SolAR Framework. You will need to add this conan remote with the following command in a command prompt:</p>
@@ -742,7 +753,7 @@ conan remote add conan-bcom https://artifact.b-com.com/api/conan/bcom-conan-loca
 <pre>&gt; conan remote list
 conan-solar: https://artifact.b-com.com/api/conan/solar-conan-local [Verify SSL: True]
 conan-bcom: https://artifact.b-com.com/api/conan/bcom-conan-local [Verify SSL: True]
-conancenter:: https://center.conan.io [Verify SSL: True]</pre>
+conancenter: https://center.conan.io [Verify SSL: True]</pre>
 </div>
 </div>
 <div class="ulist">
@@ -800,20 +811,20 @@ build_type=Release
 <p>Remaken uses a file called <em>packagedependencies.txt</em> to describe which depedencies to install, in which version, where to install them, where to download them, with which package manager and with which configuration.<br></p>
 </div>
 <div class="paragraph">
-<p>A global <em>packagedepedencies.txt</em> defining the common dependencies with specific <em>packagedependencies_os.txt</em> files defining dependencies which are specific for each os are available in the parent GIT repository <em>SolAR</em>, and can be downloaded on the following link:</p>
+<p>A global <em>packagedepedencies.txt</em> defining the common dependencies with specific <em>packagedependencies-&lt;os&gt;.txt</em> files defining dependencies which are specific for each os are available in the parent GIT repository <em>SolAR</em>, and can be downloaded on the following link:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="https://raw.githubusercontent.com/SolarFramework/SolAR/release/0.9.1/packagedependencies.txt">packagedependencies.txt</a></p>
+<p><a href="https://raw.githubusercontent.com/SolarFramework/SolAR/release/0.10.0/packagedependencies.txt">packagedependencies.txt</a></p>
 </li>
 <li>
-<p><a href="https://raw.githubusercontent.com/SolarFramework/SolAR/release/0.9.1/packagedependencies-win.txt">packagedependencies-win.txt</a></p>
+<p><a href="https://raw.githubusercontent.com/SolarFramework/SolAR/release/0.10.0/packagedependencies-win.txt">packagedependencies-win.txt</a></p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>Copy these files where you want on your computer, open a terminal in the folder where you have copied the <em>packagedependencies.txt</em> and <em>packagedependencies_os.txt</em> files, and run remaken with the following command:</p>
+<p>Copy these files where you want on your computer, open a terminal in the folder where you have copied the <em>packagedependencies.txt</em> and <em>packagedependencies-&lt;os&gt;.txt</em> files, and run remaken with the following command:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -854,7 +865,7 @@ You do not need to launch <code>remaken install</code> on <code>packagedependenc
 </div>
 </div>
 <div class="sect1">
-<h2 id="build_solar_v0_9_0"><a class="anchor" href="#build_solar_v0_9_0"></a><a class="link" href="#build_solar_v0_9_0">Build SolAR v0.9.0</a></h2>
+<h2 id="build_solar_v0_10_0"><a class="anchor" href="#build_solar_v0_10_0"></a><a class="link" href="#build_solar_v0_10_0">Build SolAR v0.10.0</a></h2>
 <div class="sectionbody">
 <div class="sect2">
 <h3 id="clone_solar"><a class="anchor" href="#clone_solar"></a><a class="link" href="#clone_solar">Clone SolAR</a></h3>
@@ -904,7 +915,7 @@ git submodule foreach --recursive git pull</pre>
 <div class="sect2">
 <h3 id="build_on_qt_creator"><a class="anchor" href="#build_on_qt_creator"></a><a class="link" href="#build_on_qt_creator">Build on Qt Creator</a></h3>
 <div class="paragraph">
-<p>Counting the framework, the pipeline manager, modules, module tests, samples, pipelines, pipeline tests, there are more than 60 QT projects on GitHub. In order to ease the building of all this projects, they are grouped in the following parent QT projects available into the root folder of SolAR:</p>
+<p>Counting the framework, the pipeline manager, modules, module tests, samples, pipelines, pipeline tests, there are more than 60 QT projects on GitHub. In order to ease the building of all these projects, they are grouped in the following parent QT projects available in the root folder of SolAR:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -925,6 +936,12 @@ git submodule foreach --recursive git pull</pre>
 </li>
 <li>
 <p>SolARAllPipelineTests</p>
+</li>
+<li>
+<p>SolARAllServices</p>
+</li>
+<li>
+<p>SolARAllServicesTests</p>
 </li>
 </ul>
 </div>
@@ -965,7 +982,7 @@ Since QT Creator 4.14.0, we highly recommand to set the project option <code>qma
 <div class="title">Figure 1. Set <code>qmake system() behavior when parsing</code> to <code>Ignore</code> for Debug and Release mode.</div>
 </div>
 <div class="paragraph">
-<p>If you open several projects, you will have to set their build order. You can do it in QT Creator by defining the dependencies of each project in the <code>Projects</code> menu, select your project, click and Dependencies, and check the projects that depend directly on the selected project (checking `Synchronize configuration' will synchronize all projects in Debug or Release configuration).</p>
+<p>If you open several projects, you will have to set their build order. You can do it in QT Creator by defining the dependencies of each project in the <code>Projects</code> menu, select your project, click on Dependencies, and check the projects that depend directly on the selected project (checking `Synchronize configuration' will synchronize all projects in Debug or Release configuration).</p>
 </div>
 <div class="imageblock" style="text-align: center">
 <div class="content">
@@ -974,7 +991,7 @@ Since QT Creator 4.14.0, we highly recommand to set the project option <code>qma
 <div class="title">Figure 2. Project dependencies settings</div>
 </div>
 <table class="tableblock frame-all grid-all spread">
-<caption class="title">Table 2. Project dependencies</caption>
+<caption class="title">Table 1. Project dependencies</caption>
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -1013,7 +1030,7 @@ Since QT Creator 4.14.0, we highly recommand to set the project option <code>qma
 </tbody>
 </table>
 <div class="paragraph">
-<p>Then, in the <code>Build</code> menu, click on <code>Run qmake</code> on each project (right click on parent projects into teh projects view) , and when it is done, click on <code>Rebuild All Projects for All Configurations</code>, and go get a cup of coffee.</p>
+<p>Then, in the <code>Build</code> menu, click on <code>Run qmake</code> on each project (right click on the parent project in the projects view) , and when it is done, click on <code>Rebuild All Projects for All Configurations</code>, and go get a cup of coffee.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -1043,7 +1060,7 @@ When this is done, simply open the Qt parent projects by cliking on the <code><e
 <div class="sect2">
 <h3 id="conan_error_when_installing_dependencies_permissionerror_winerror_5"><a class="anchor" href="#conan_error_when_installing_dependencies_permissionerror_winerror_5"></a><a class="link" href="#conan_error_when_installing_dependencies_permissionerror_winerror_5">Conan Error when installing dependencies: PermissionError: [WinError 5]</a></h3>
 <div class="paragraph">
-<p>Some Conan recipes are renaming the unzipped folders embedding the source code of the dependence as soon as they are downloaded locally. Unfortunately, your antivirus or the Windows Search Indexing can lock it. We recommend to deactivate Windows Search Indexing on Conan folders, and check your antivirus to avoid any control after unzipping the conan package. If you have still a problem, you will have to add <em>time.sleep()</em> before renaming your unzipped folder in your problematic conan recipes (see the following thread for more details: <a href="https://github.com/conan-io/conan/issues/5205" class="bare">https://github.com/conan-io/conan/issues/5205</a>).</p>
+<p>Some Conan recipes are renaming the unzipped folders embedding the source code of the dependence as soon as they are downloaded locally. Unfortunately, your antivirus or the Windows Search Indexing can lock it. We recommend to deactivate Windows Search Indexing on Conan folders, and check your antivirus to avoid any control after unzipping the conan package. If you still have a problem, you will have to add <em>time.sleep()</em> before renaming your unzipped folder in your problematic conan recipes (see the following thread for more details: <a href="https://github.com/conan-io/conan/issues/5205" class="bare">https://github.com/conan-io/conan/issues/5205</a>).</p>
 </div>
 </div>
 <div class="sect2">
