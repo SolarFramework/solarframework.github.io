@@ -675,28 +675,26 @@ You don&#8217;t need to install <em>Qt</em> SDK, just the <em>Qt Creator</em>. S
 <div class="ulist">
 <ul>
 <li>
-<p>If <em>Homebrew</em> is not installed on your machine, you can use the following script to install it: <a href="https://raw.githubusercontent.com/b-com-software-basis/remaken/master/scripts/install_brew.sh">Homebrew installer</a>. Homebrew is used to install the last release of <em>Remaken</em>.</p>
+<p>Download the <a href="https://github.com/SolarFramework/Tools/releases/download/XPCF_Linux_Installer/XPCF_Linux_Installer.zip">XPCF Linux Installer</a> zip file.</p>
 </li>
 <li>
-<p><code>source ~/.profile</code> to update brew eval modification to your ${HOME}/.profile. Try <code>brew --version</code> commands in terminal to check installation</p>
+<p>Uncompress this zip file.</p>
 </li>
 <li>
-<p>Use the following script to install and configure <em>Remaken</em>: <a href="https://raw.githubusercontent.com/b-com-software-basis/remaken/master/scripts/install.sh">Remaken installer</a>. By default, <em>Remaken</em> installer will also install <em>Conan</em>, <em>cmake</em> and <em>pkg_config</em> which will be used afterwards. Try <code>remaken --help</code>, <code>conan -h</code>, and <code>cmake -h</code> commands in a terminal to check installation. Conan will check these remotes when searching for your dependencies.</p>
+<p>If <em>Homebrew</em> is not installed on your machine, you can run the following script <code>./installBrew.sh</code>. Homebrew is used to install <em>Remaken</em>.</p>
 </li>
 <li>
-<p>This should install remaken 1.8.1. If you face some issues with this version, you can try a more recent revision that has not yet been made available via <em>Homebrew</em>:</p>
+<p>run <code>source ~/.profile</code> to update brew eval modification to your ${HOME}/.profile. Try <code>brew --version</code> commands in terminal to check installation</p>
 </li>
-</ul>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>wget https://github.com/b-com-software-basis/remaken/releases/download/1.8.1/remaken-Ubuntu1804 -O ~/remaken
-chmod +x ~/remaken
-sudo mv ~/remaken /usr/local/bin</pre>
-</div>
-</div>
-<div class="ulist">
-<ul>
+<li>
+<p>Then, run <code>.\installRemaken.sh 1.8</code>. This will install the version 1.8 of remaken on your machine. If you want to install the latest version, just run <code>.\installRemaken.sh</code>. Recent version have not been yet validated for SolAR 0.10.0.</p>
+</li>
+<li>
+<p>run again <code>source ~/.profile</code> to update your ${HOME}/.profile.</p>
+</li>
+<li>
+<p>By default, <em>Remaken</em> installer will also install <em>Conan</em>, <em>cmake</em> and <em>pkg_config</em> which will be used afterwards. Try <code>remaken --help</code>, <code>conan -h</code>, and <code>cmake -h</code> commands in a terminal to check installation. Conan will check these remotes when searching for your dependencies.</p>
+</li>
 <li>
 <p>SolAR has its own conan remote to store pre-built dependencies for the common configurations used by the SolAR Framework. You will need to add these conan remotes with the following commands in a command prompt:</p>
 </li>
@@ -718,6 +716,9 @@ conan-solar: https://artifact.b-com.com/api/conan/solar-conan-local [Verify SSL:
 conan-bcom: https://artifact.b-com.com/api/conan/bcom-conan-local [Verify SSL: True]
 conancenter: https://center.conan.io [Verify SSL: True]</pre>
 </div>
+</div>
+<div class="paragraph">
+<p>If other remote are installed, such as <code>conan-center</code> or <code>bincrafters</code> (both deprecated), you can remove them by running <code>conan remote remove name_of_the_remote</code>, or just disable them by running <code>conan remote disable name_of_the_remote</code>.</p>
 </div>
 <div class="paragraph">
 <p>Then, open a command prompt <strong>with administrator rights</strong> and run:</p>
