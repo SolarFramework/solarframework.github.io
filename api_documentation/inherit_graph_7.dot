@@ -116,7 +116,7 @@ digraph "Graphical Class Hierarchy"
   Node21 -> Node66 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node66 [label="SolAR::api::input::\ldevices::IStereoCameraCalibration",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_stereo_camera_calibration.html",tooltip="Calibrate and rectify a stereo camera. UUID: b4fad0ff-c636-492e-ba12-710927a760c7"];
   Node21 -> Node67 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node67 [label="SolAR::api::input::\lfiles::IPointCloudLoader",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_sol_a_r_1_1api_1_1input_1_1files_1_1_i_point_cloud_loader.html",tooltip=" "];
+  Node67 [label="SolAR::api::input::\lfiles::IPointCloudLoader",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_sol_a_r_1_1api_1_1input_1_1files_1_1_i_point_cloud_loader.html",tooltip="Loads a point cloud from a file. UUID: 1abd8117-87d3-4c6c-8fb6-c2fdb7359ee2"];
   Node21 -> Node68 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node68 [label="SolAR::api::input::\lfiles::ITrackableLoader",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_sol_a_r_1_1api_1_1input_1_1files_1_1_i_trackable_loader.html",tooltip="Loads a general Trackable object. UUID: 8e54d5d0-f7a3-4d62-b012-728e5704b46a"];
   Node21 -> Node69 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
@@ -132,9 +132,9 @@ digraph "Graphical Class Hierarchy"
   Node72 -> Node74 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node74 [label="SolAR::api::pipeline\l::IRelocalizationPipeline",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_sol_a_r_1_1api_1_1pipeline_1_1_i_relocalization_pipeline.html",tooltip="Defines a relocalization pipeline. UUID: ef2a631d-93c9-4979-ad1e-5fa16d5d00ef"];
   Node21 -> Node75 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node75 [label="SolAR::api::pointCloud\l::IPCFilter",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_sol_a_r_1_1api_1_1point_cloud_1_1_i_p_c_filter.html",tooltip="filters a point cloud"];
+  Node75 [label="SolAR::api::pointCloud\l::IPCFilter",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_sol_a_r_1_1api_1_1point_cloud_1_1_i_p_c_filter.html",tooltip="Filters a point cloud UUID: 3e068943-5230-4e6c-abd7-959f293f9829"];
   Node21 -> Node76 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node76 [label="SolAR::api::pointCloud\l::IPCFilterCentroid",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_sol_a_r_1_1api_1_1point_cloud_1_1_i_p_c_filter_centroid.html",tooltip="filters a point cloud according a given 3D point"];
+  Node76 [label="SolAR::api::pointCloud\l::IPCFilterCentroid",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_sol_a_r_1_1api_1_1point_cloud_1_1_i_p_c_filter_centroid.html",tooltip="Filters a point cloud according a given 3D point UUID: b293048a-1b04-4598-b2e5-7f485402acc0"];
   Node21 -> Node77 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node77 [label="SolAR::api::reloc::\lIKeyframeRetriever",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_sol_a_r_1_1api_1_1reloc_1_1_i_keyframe_retriever.html",tooltip="Recovers a set of pre-recorded keyframes close to a given frame. UUID: f60980ce-bdbd-11e8-a355-529269..."];
   Node21 -> Node78 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
@@ -190,13 +190,13 @@ digraph "Graphical Class Hierarchy"
   Node21 -> Node103 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node103 [label="SolAR::api::source\l::ISourceImage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_sol_a_r_1_1api_1_1source_1_1_i_source_image.html",tooltip="A Source for an image, useful for AR video see-through pipelines. UUID: 06e2fc5d-39da-4486-b2a6-1d8bd..."];
   Node21 -> Node104 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node104 [label="SolAR::api::storage\l::ICovisibilityGraphManager",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_sol_a_r_1_1api_1_1storage_1_1_i_covisibility_graph_manager.html",tooltip="Allows to store the covisibility graph between keyframes. This storage component can be accessed by p..."];
+  Node104 [label="SolAR::api::storage\l::ICovisibilityGraphManager",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_sol_a_r_1_1api_1_1storage_1_1_i_covisibility_graph_manager.html",tooltip="Allows to store the covisibility graph between keyframes. UUID: 15455f5a-0e99-49e5-a3fb-39de3eeb5b9b"];
   Node21 -> Node105 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node105 [label="SolAR::api::storage\l::IKeyframesManager",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_sol_a_r_1_1api_1_1storage_1_1_i_keyframes_manager.html",tooltip="Allows to store a set of keyframes. This storage component can be accessed by processing components t..."];
+  Node105 [label="SolAR::api::storage\l::IKeyframesManager",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_sol_a_r_1_1api_1_1storage_1_1_i_keyframes_manager.html",tooltip="Allows to store a set of keyframes. UUID: 2c147595-6c74-4f69-b63d-91e162c311ed"];
   Node21 -> Node106 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node106 [label="SolAR::api::storage\l::IMapManager",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_sol_a_r_1_1api_1_1storage_1_1_i_map_manager.html",tooltip="Allow to manage all components of a map. UUID: 90075c1b-915b-469d-b92d-41c5d575bf15"];
   Node21 -> Node107 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node107 [label="SolAR::api::storage\l::IPointCloudManager",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_sol_a_r_1_1api_1_1storage_1_1_i_point_cloud_manager.html",tooltip="Allows to store a point cloud. This storage component can be accessed by processing components to sha..."];
+  Node107 [label="SolAR::api::storage\l::IPointCloudManager",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_sol_a_r_1_1api_1_1storage_1_1_i_point_cloud_manager.html",tooltip="Allows to store a point cloud. UUID: 264d4406-b726-4ce9-a430-35d8b5e70331"];
   Node21 -> Node108 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node108 [label="SolAR::api::tracking\l::IOpticalFlowEstimator",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_sol_a_r_1_1api_1_1tracking_1_1_i_optical_flow_estimator.html",tooltip="Estimates the optical flow between two images. UUID: 3c74cd7f-950c-43ee-8886-9f4ddf763c27"];
 }

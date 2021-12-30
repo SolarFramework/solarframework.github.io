@@ -3,7 +3,7 @@ digraph "SolAR::api::storage::IPointCloudManager"
  // LATEX_PDF_SIZE
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
-  Node1 [label="SolAR::api::storage\l::IPointCloudManager",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Allows to store a point cloud. This storage component can be accessed by processing components to sha..."];
+  Node1 [label="SolAR::api::storage\l::IPointCloudManager",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Allows to store a point cloud. UUID: 264d4406-b726-4ce9-a430-35d8b5e70331"];
   Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node2 [label="org::bcom::xpcf::IComponent\lIntrospect",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
 }
