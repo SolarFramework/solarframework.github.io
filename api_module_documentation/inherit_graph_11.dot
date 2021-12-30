@@ -1,0 +1,10 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node13 [label="base::geom::AReprojection\lStereo",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node13 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node0 [label="SolAR::MODULES::TOOLS\l::SolARStereoReprojection",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_t_o_o_l_s_1_1_sol_a_r_stereo_reprojection.html",tooltip="Reproject keypoints with estimating depth to 3D cloud points. UUID: 6f0c5373-1b00-41ce-ab1b-a845b83f6..."];
+}

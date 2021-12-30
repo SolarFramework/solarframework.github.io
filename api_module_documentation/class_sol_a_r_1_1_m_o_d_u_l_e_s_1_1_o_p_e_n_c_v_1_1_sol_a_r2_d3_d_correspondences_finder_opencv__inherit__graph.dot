@@ -1,10 +1,11 @@
 digraph "SolAR::MODULES::OPENCV::SolAR2D3DCorrespondencesFinderOpencv"
 {
+ // LATEX_PDF_SIZE
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
-  Node0 [label="SolAR::MODULES::OPENCV\l::SolAR2D3DCorrespondencesFinder\lOpencv",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
-  Node1 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node1 [label="ComponentBase",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
-  Node2 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node2 [label="api::solver::pose::\lI2D3DCorrespondencesFinder",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node1 [label="SolAR::MODULES::OPENCV\l::SolAR2D3DCorrespondencesFinder\lOpencv",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Finds the 3D correspondents of 2D keypoints. UUID: cedd8c47-e7b0-47bf-abb1-7fb54d198117"];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="org::bcom::xpcf::ComponentBase",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node3 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="api::solver::pose::\lI2D3DCorrespondencesFinder",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
 }

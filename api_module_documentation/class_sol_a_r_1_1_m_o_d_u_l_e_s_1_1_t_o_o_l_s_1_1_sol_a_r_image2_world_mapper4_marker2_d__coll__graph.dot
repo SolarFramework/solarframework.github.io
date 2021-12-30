@@ -1,10 +1,11 @@
 digraph "SolAR::MODULES::TOOLS::SolARImage2WorldMapper4Marker2D"
 {
+ // LATEX_PDF_SIZE
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
-  Node3 [label="SolAR::MODULES::TOOLS\l::SolARImage2WorldMapper4Marker2D",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
-  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node4 [label="ConfigurableBase",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
-  Node5 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node5 [label="api::geom::IImage2WorldMapper",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node1 [label="SolAR::MODULES::TOOLS\l::SolARImage2WorldMapper4Marker2D",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Retrieves the 3D correspondences of pixels of a 2D marker. UUID: 6fed0169-4f01-4545-842a-3e2425bee248"];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="org::bcom::xpcf::ConfigurableBase",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node3 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="SolAR::api::geom::IImage2\lWorldMapper",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
 }

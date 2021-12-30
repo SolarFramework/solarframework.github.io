@@ -1,0 +1,11 @@
+digraph "SolAR::MODULES::TOOLS::SolARStereoDepthEstimation"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="SolAR::MODULES::TOOLS\l::SolARStereoDepthEstimation",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Depth estimation based on disparity of matched features. UUID: 153ffeaf-7583-44a7-bb7a-3474ba7d99cb"];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="org::bcom::xpcf::ConfigurableBase",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node3 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="api::geom::IDepthEstimation",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+}

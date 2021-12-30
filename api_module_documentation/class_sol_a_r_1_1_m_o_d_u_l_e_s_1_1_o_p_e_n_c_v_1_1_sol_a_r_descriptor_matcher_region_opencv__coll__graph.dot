@@ -1,0 +1,9 @@
+digraph "SolAR::MODULES::OPENCV::SolARDescriptorMatcherRegionOpencv"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="SolAR::MODULES::OPENCV\l::SolARDescriptorMatcherRegion\lOpencv",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Matches two sets of descriptors based on region constraints. UUID: a12a8706-299b-4981-b12b-60717ef3b1..."];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="base::features::ADescriptor\lMatcherRegion",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+}

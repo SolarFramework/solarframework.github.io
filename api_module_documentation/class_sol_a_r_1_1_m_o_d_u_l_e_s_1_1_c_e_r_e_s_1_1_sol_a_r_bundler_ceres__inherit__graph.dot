@@ -1,10 +1,11 @@
 digraph "SolAR::MODULES::CERES::SolARBundlerCeres"
 {
+ // LATEX_PDF_SIZE
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
-  Node0 [label="SolAR::MODULES::CERES\l::SolARBundlerCeres",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
-  Node1 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node1 [label="ConfigurableBase",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
-  Node2 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node2 [label="IBundler",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node1 [label="SolAR::MODULES::CERES\l::SolARBundlerCeres",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Applies a bundle adjustment to optimize a 3D map and keyframes. UUID: 4897fc13-682c-4e95-8aba-abd9f7a..."];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="org::bcom::xpcf::ConfigurableBase",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node3 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="api::solver::map::IBundler",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
 }

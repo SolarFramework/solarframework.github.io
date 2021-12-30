@@ -1,10 +1,12 @@
 digraph "SolAR::MODULES::TOOLS::SolAR3D3DCorrespondencesFinder"
 {
+ // LATEX_PDF_SIZE
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
-  Node3 [label="SolAR::MODULES::TOOLS\l::SolAR3D3DCorrespondencesFinder",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
-  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node4 [label="ComponentBase",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
-  Node5 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node5 [label="api::solver::pose::\lI3D3DCorrespondencesFinder",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  rankdir="LR";
+  Node1 [label="SolAR::MODULES::TOOLS\l::SolAR3D3DCorrespondencesFinder",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Finds the 3D-3D correspondences from feature matches of two keyframes. UUID: 978068ef-7f93-41ef-8e24-..."];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="org::bcom::xpcf::ComponentBase",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node3 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="SolAR::api::solver\l::pose::I3D3DCorrespondences\lFinder",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
 }

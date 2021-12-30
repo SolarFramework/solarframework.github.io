@@ -1,0 +1,11 @@
+digraph "SolAR::MODULES::TOOLS::SolARMapUpdate"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="SolAR::MODULES::TOOLS\l::SolARMapUpdate",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Update the global map after merging a local map into the global map. UUID: 3960331a-9190-48f4-aeba-e2..."];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="org::bcom::xpcf::ConfigurableBase",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node3 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="api::solver::map::IMapUpdate",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+}

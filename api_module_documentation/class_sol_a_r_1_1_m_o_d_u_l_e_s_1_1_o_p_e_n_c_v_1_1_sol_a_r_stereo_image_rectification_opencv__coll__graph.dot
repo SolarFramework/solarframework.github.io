@@ -1,0 +1,11 @@
+digraph "SolAR::MODULES::OPENCV::SolARStereoImageRectificationOpencv"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="SolAR::MODULES::OPENCV\l::SolARStereoImageRectification\lOpencv",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Rectify image. UUID: 427cbbb8-6afe-4b3b-8b04-cb93ed925b40"];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="org::bcom::xpcf::ConfigurableBase",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node3 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="api::image::IImageRectification",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+}

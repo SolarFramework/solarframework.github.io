@@ -1,12 +1,13 @@
 digraph "SolAR::MODULES::OPENCV::SolARImagesAsCameraOpencv"
 {
+ // LATEX_PDF_SIZE
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
-  Node0 [label="SolAR::MODULES::OPENCV\l::SolARImagesAsCameraOpencv",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
-  Node1 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node1 [label="SolAR::MODULES::OPENCV\l::SolARBaseCameraOpencv",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_o_p_e_n_c_v_1_1_sol_a_r_base_camera_opencv.html",tooltip="Grabs current image captured by a RGB camera. UUID: 5b7396f4-a804-4f3c-a0eb-fb1d56042bb4 ..."];
+  Node1 [label="SolAR::MODULES::OPENCV\l::SolARImagesAsCameraOpencv",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Loads an image sequence stored in a dedicated folder. UUID: b8a8b963-ba55-4ea4-b045-d9e7e8f6db02"];
   Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node2 [label="ConfigurableBase",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
-  Node3 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node3 [label="api::input::devices\l::ICamera",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node2 [label="SolAR::MODULES::OPENCV\l::SolARBaseCameraOpencv",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_o_p_e_n_c_v_1_1_sol_a_r_base_camera_opencv.html",tooltip="Grabs current image captured by a RGB camera. UUID: 5b7396f4-a804-4f3c-a0eb-fb1d56042bb4"];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="org::bcom::xpcf::ConfigurableBase",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node4 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="api::input::devices\l::ICamera",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
 }
