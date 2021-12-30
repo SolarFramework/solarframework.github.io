@@ -1,8 +1,9 @@
 digraph "SolAR::api::solver::pose::I2D3DCorrespondencesFinder"
 {
+ // LATEX_PDF_SIZE
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
-  Node2 [label="SolAR::api::solver\l::pose::I2D3DCorrespondences\lFinder",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
-  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node3 [label="IComponentIntrospect",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node1 [label="SolAR::api::solver\l::pose::I2D3DCorrespondences\lFinder",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Finds the 2D-3D correspondences giving a frame and its matches with a second frame which has known 2D..."];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="org::bcom::xpcf::IComponent\lIntrospect",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
 }

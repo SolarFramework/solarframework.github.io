@@ -4,8 +4,8 @@ digraph "interfaces/datastructure" {
   edge [ labelfontsize="10", labelfontname="Helvetica"];
   subgraph clusterdir_ff6b5900125bb0123025c1cb24bdc726 {
     graph [ bgcolor="#ddddee", pencolor="black", label="interfaces" fontname="Helvetica", fontsize="10", URL="dir_ff6b5900125bb0123025c1cb24bdc726.html"]
+  dir_77ad411c1185b239213b2b94f266553b [shape=box label="core" URL="dir_77ad411c1185b239213b2b94f266553b.html"];
   dir_3163639002ef67c6c12f1b2ccf7afca4 [shape=box, label="datastructure", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_3163639002ef67c6c12f1b2ccf7afca4.html"];
   }
-  dir_77ad411c1185b239213b2b94f266553b [shape=box label="core" URL="dir_77ad411c1185b239213b2b94f266553b.html"];
-  dir_3163639002ef67c6c12f1b2ccf7afca4->dir_77ad411c1185b239213b2b94f266553b [headlabel="16", labeldistance=1.5 headhref="dir_000023_000022.html"];
+  dir_3163639002ef67c6c12f1b2ccf7afca4->dir_77ad411c1185b239213b2b94f266553b [headlabel="15", labeldistance=1.5 headhref="dir_000027_000026.html"];
 }

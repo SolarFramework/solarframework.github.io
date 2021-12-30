@@ -7,11 +7,10 @@ digraph "interfaces/api/input" {
   subgraph clusterdir_ce220005e573b530971a540db913291c {
     graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_ce220005e573b530971a540db913291c.html"];
     dir_ce220005e573b530971a540db913291c [shape=plaintext label="input"];
-    dir_1bff30f5cab08762b3a79c634079da05 [shape=box label="devices" color="black" fillcolor="white" style="filled" URL="dir_1bff30f5cab08762b3a79c634079da05.html"];
-    dir_4cfdd344abec543b5685e34d19ce1f0a [shape=box label="files" color="black" fillcolor="white" style="filled" URL="dir_4cfdd344abec543b5685e34d19ce1f0a.html"];
+  dir_1bff30f5cab08762b3a79c634079da05 [shape=box label="devices" fillcolor="white" style="filled" URL="dir_1bff30f5cab08762b3a79c634079da05.html"];
+  dir_4cfdd344abec543b5685e34d19ce1f0a [shape=box label="files" fillcolor="white" style="filled" URL="dir_4cfdd344abec543b5685e34d19ce1f0a.html"];
   }
   }
   dir_3163639002ef67c6c12f1b2ccf7afca4 [shape=box label="datastructure" URL="dir_3163639002ef67c6c12f1b2ccf7afca4.html"];
-  dir_4cfdd344abec543b5685e34d19ce1f0a->dir_3163639002ef67c6c12f1b2ccf7afca4 [headlabel="1", labeldistance=1.5 headhref="dir_000009_000023.html"];
-  dir_1bff30f5cab08762b3a79c634079da05->dir_3163639002ef67c6c12f1b2ccf7afca4 [headlabel="5", labeldistance=1.5 headhref="dir_000008_000023.html"];
+  dir_1bff30f5cab08762b3a79c634079da05->dir_3163639002ef67c6c12f1b2ccf7afca4 [headlabel="7", labeldistance=1.5 headhref="dir_000009_000027.html"];
 }

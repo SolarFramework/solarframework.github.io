@@ -1,12 +1,13 @@
 digraph "SolAR::api::input::devices::ICamera"
 {
+ // LATEX_PDF_SIZE
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
-  Node0 [label="SolAR::api::input::\ldevices::ICamera",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
-  Node1 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node1 [label="SolAR::api::input::\ldevices::IDevice",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_device.html",tooltip="Manage any kind of device. UUID: d73c7b34-f6af-48f3-b65d-37a047929f4b "];
+  Node1 [label="SolAR::api::input::\ldevices::ICamera",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Grabs images captured in real-time by a video camera. UUID: 5ddc7df0-8377-437f-9c81-3643f7676a5b"];
   Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node2 [label="IComponentIntrospect",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
-  Node0 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node3 [label="SolAR::api::input::\ldevices::IRGBDCamera",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_r_g_b_d_camera.html",tooltip="Specify the IRGBDCamera interface class. "];
+  Node2 [label="SolAR::api::input::\ldevices::IDevice",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_device.html",tooltip="Manage any kind of device. UUID: d73c7b34-f6af-48f3-b65d-37a047929f4b"];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="org::bcom::xpcf::IComponent\lIntrospect",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="SolAR::api::input::\ldevices::IRGBDCamera",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_sol_a_r_1_1api_1_1input_1_1devices_1_1_i_r_g_b_d_camera.html",tooltip="Specify the IRGBDCamera interface class."];
 }

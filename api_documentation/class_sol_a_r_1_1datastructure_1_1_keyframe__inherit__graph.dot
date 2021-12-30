@@ -1,10 +1,11 @@
 digraph "SolAR::datastructure::Keyframe"
 {
+ // LATEX_PDF_SIZE
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
-  Node0 [label="SolAR::datastructure\l::Keyframe",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
-  Node1 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node1 [label="SolAR::datastructure\l::Frame",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_sol_a_r_1_1datastructure_1_1_frame.html",tooltip="A frame. "];
-  Node2 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node2 [label="SolAR::datastructure\l::PrimitiveInformation",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_sol_a_r_1_1datastructure_1_1_primitive_information.html",tooltip="This component includes primitive informations such as confident score, semantic. ..."];
+  Node1 [label="SolAR::datastructure\l::Keyframe",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="A keyframe."];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="SolAR::datastructure\l::Frame",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_sol_a_r_1_1datastructure_1_1_frame.html",tooltip="A frame."];
+  Node3 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="SolAR::datastructure\l::PrimitiveInformation",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_sol_a_r_1_1datastructure_1_1_primitive_information.html",tooltip="This component includes primitive informations such as confident score, semantic."];
 }

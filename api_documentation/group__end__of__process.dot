@@ -1,9 +1,9 @@
 digraph "End_of_process"
 {
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
-  node [fontname="Helvetica",fontsize="10",shape=record];
+  node [fontname="Helvetica",fontsize="10",shape=box];
   rankdir=LR;
-  Node1 [label="MACROS",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group___m_a_c_r_o_s.html"];
-  Node0 [label="End_of_process",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
-  Node1->Node0 [shape=plaintext, dir="back", style="solid"];
+  Node2 [label="MACROS",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group___m_a_c_r_o_s.html",tooltip=" "];
+  Node1 [label="End_of_process",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node2->Node1 [shape=plaintext, dir="back", style="solid"];
 }

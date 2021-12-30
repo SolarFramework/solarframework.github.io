@@ -1,21 +1,9 @@
 var searchData=
 [
-  ['layout_5fbgr',['LAYOUT_BGR',['../class_sol_a_r_1_1datastructure_1_1_image.html#a1203358adec459284a7eaecd4ec63041ac2e3f8c84f5792dfd8b4bed61227199e',1,'SolAR::datastructure::Image']]],
-  ['layout_5fgrb',['LAYOUT_GRB',['../class_sol_a_r_1_1datastructure_1_1_image.html#a1203358adec459284a7eaecd4ec63041a9ffbbb33db28949a97f08d1e9b0c50ca',1,'SolAR::datastructure::Image']]],
-  ['layout_5fgrey',['LAYOUT_GREY',['../class_sol_a_r_1_1datastructure_1_1_image.html#a1203358adec459284a7eaecd4ec63041aa7cc168a651615bfddf192b50e25a3d6',1,'SolAR::datastructure::Image']]],
-  ['layout_5frgb',['LAYOUT_RGB',['../class_sol_a_r_1_1datastructure_1_1_image.html#a1203358adec459284a7eaecd4ec63041a1f94cc84dea3df7e6b8f8d7e5bc40f3f',1,'SolAR::datastructure::Image']]],
-  ['layout_5frgba',['LAYOUT_RGBA',['../class_sol_a_r_1_1datastructure_1_1_image.html#a1203358adec459284a7eaecd4ec63041ace9f2c065b035b0b06108dde9aed5258',1,'SolAR::datastructure::Image']]],
-  ['layout_5frgbx',['LAYOUT_RGBX',['../class_sol_a_r_1_1datastructure_1_1_image.html#a1203358adec459284a7eaecd4ec63041a7fed849ce4ce914dd8661c1b703b5437',1,'SolAR::datastructure::Image']]],
-  ['load',['load',['../class_sol_a_r_1_1api_1_1input_1_1files_1_1_i_point_cloud_loader.html#a0c4dba59bd8fa96932c96b346e76e4ad',1,'SolAR::api::input::files::IPointCloudLoader']]],
-  ['loadfromfile',['loadFromFile',['../class_sol_a_r_1_1api_1_1reloc_1_1_i_keyframe_retriever.html#ae0eece135e8ac6582e1c376ba63bc2bc',1,'SolAR::api::reloc::IKeyframeRetriever::loadFromFile()'],['../class_sol_a_r_1_1api_1_1solver_1_1map_1_1_i_mapper.html#a40900f574f462721d0f1941b787b960c',1,'SolAR::api::solver::map::IMapper::loadFromFile()'],['../class_sol_a_r_1_1api_1_1storage_1_1_i_covisibility_graph.html#a86f7dac730d1a59f2338ba9dfecd9ba4',1,'SolAR::api::storage::ICovisibilityGraph::loadFromFile()'],['../class_sol_a_r_1_1api_1_1storage_1_1_i_keyframes_manager.html#a661897fa0c5dce064365c39d1f7dbbb9',1,'SolAR::api::storage::IKeyframesManager::loadFromFile()'],['../class_sol_a_r_1_1api_1_1storage_1_1_i_point_cloud_manager.html#a81a69eed757ac23f31014b2c71da995f',1,'SolAR::api::storage::IPointCloudManager::loadFromFile()']]],
-  ['loadmarker',['loadMarker',['../class_sol_a_r_1_1api_1_1input_1_1files_1_1_i_marker.html#af8103dcebefb9b38ff84118c261d1e74',1,'SolAR::api::input::files::IMarker']]],
-  ['loadsourceimage',['loadSourceImage',['../class_sol_a_r_1_1api_1_1pipeline_1_1_i_pose_estimation_pipeline.html#a6a10879f4cd6ef2ba3dbf0176ad38c3e',1,'SolAR::api::pipeline::IPoseEstimationPipeline']]],
-  ['loadtrackable',['loadTrackable',['../class_sol_a_r_1_1api_1_1input_1_1files_1_1_i_trackable_loader.html#a39854e76c2dd6df35f4f2e0b1ad1de89',1,'SolAR::api::input::files::ITrackableLoader']]],
-  ['log',['Log',['../class_sol_a_r_1_1_log.html',1,'SolAR']]],
-  ['log_5fadd_5flog_5fto_5fconsole',['LOG_ADD_LOG_TO_CONSOLE',['../group___add__sinks.html#gad989c446239ed24c50cee71b2aecb8f0',1,'Log.h']]],
-  ['log_5fadd_5flog_5fto_5ffile',['LOG_ADD_LOG_TO_FILE',['../group___add__sinks.html#gad494a667e35cce192543c30ddf3c77eb',1,'Log.h']]],
-  ['log_5fflush',['LOG_FLUSH',['../group___flush__logs.html#ga245e36f418d6ccfb4d876393916e6f4c',1,'Log.h']]],
-  ['log_5flevels',['Log_levels',['../group___log__levels.html',1,'']]],
-  ['log_5frelease',['LOG_RELEASE',['../group__end__of__process.html#ga0d5795316ecfccc7b40b43c01bf62b0e',1,'Log.h']]],
-  ['log_5fstyles',['Log_styles',['../group___log__styles.html',1,'']]]
+  ['keyframe_0',['Keyframe',['../class_sol_a_r_1_1datastructure_1_1_keyframe.html',1,'SolAR::datastructure']]],
+  ['keyframecollection_1',['KeyframeCollection',['../class_sol_a_r_1_1datastructure_1_1_keyframe_collection.html#a9cb214bbcd5999d25e2d20bbe6711bc4',1,'SolAR::datastructure::KeyframeCollection::KeyframeCollection()'],['../class_sol_a_r_1_1datastructure_1_1_keyframe_collection.html',1,'SolAR::datastructure::KeyframeCollection']]],
+  ['keyframepruning_2',['keyframePruning',['../class_sol_a_r_1_1api_1_1storage_1_1_i_map_manager.html#a575b205c56b29ece3334224006d8713d',1,'SolAR::api::storage::IMapManager']]],
+  ['keyframeretrieval_3',['KeyframeRetrieval',['../class_sol_a_r_1_1datastructure_1_1_keyframe_retrieval.html#a550ab670e63efc78c66973219819d6da',1,'SolAR::datastructure::KeyframeRetrieval::KeyframeRetrieval()'],['../class_sol_a_r_1_1datastructure_1_1_keyframe_retrieval.html',1,'SolAR::datastructure::KeyframeRetrieval']]],
+  ['keypoint_4',['Keypoint',['../class_sol_a_r_1_1datastructure_1_1_keypoint.html#a5509f39ee090e818ed970f037644a7ca',1,'SolAR::datastructure::Keypoint::Keypoint()=default'],['../class_sol_a_r_1_1datastructure_1_1_keypoint.html#a1e60b92e942f77da5257b2e5c0acb66c',1,'SolAR::datastructure::Keypoint::Keypoint(unsigned int id, float x, float y, float r, float g, float b, float size, float angle=-1.0f, float response=0.0f, int octave=0, int class_id=-1)'],['../class_sol_a_r_1_1datastructure_1_1_keypoint.html',1,'SolAR::datastructure::Keypoint']]],
+  ['keypointdetectortype_5',['KeypointDetectorType',['../class_sol_a_r_1_1api_1_1features_1_1_i_keypoint_detector.html#ac4e2a7c6812f06a83fa6fe15349ee4f9',1,'SolAR::api::features::IKeypointDetector']]]
 ];

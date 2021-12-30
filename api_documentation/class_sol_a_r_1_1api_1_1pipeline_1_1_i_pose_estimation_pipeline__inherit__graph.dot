@@ -1,10 +1,11 @@
 digraph "SolAR::api::pipeline::IPoseEstimationPipeline"
 {
+ // LATEX_PDF_SIZE
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
-  Node0 [label="SolAR::api::pipeline\l::IPoseEstimationPipeline",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
-  Node1 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node1 [label="SolAR::api::pipeline\l::IPipeline",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_sol_a_r_1_1api_1_1pipeline_1_1_i_pipeline.html",tooltip="Abstract class defining a generic pipeline object. UUID: b636f583-4f1e-41c9-94da-9d0eac82aa02 ..."];
+  Node1 [label="SolAR::api::pipeline\l::IPoseEstimationPipeline",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Defines a pose estimation pipeline. UUID: b5a6225e-6a91-4050-b298-886f4c17d9d2"];
   Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node2 [label="IComponentIntrospect",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node2 [label="SolAR::api::pipeline\l::IPipeline",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_sol_a_r_1_1api_1_1pipeline_1_1_i_pipeline.html",tooltip="Abstract class defining a generic pipeline object. UUID: b636f583-4f1e-41c9-94da-9d0eac82aa02"];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="org::bcom::xpcf::IComponent\lIntrospect",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
 }

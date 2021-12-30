@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['quadcontour2df',['QuadContour2Df',['../_geometry_definitions_8h.html#af1018d2fa44fc593ef318854ed8531a4',1,'SolAR::datastructure']]],
-  ['quadcontour2di',['QuadContour2Di',['../_geometry_definitions_8h.html#a4ff5d5154ed9fb851a4d917ce398853a',1,'SolAR::datastructure']]],
-  ['quaternionf',['Quaternionf',['../_math_definitions_8h.html#aa494f2039a8594dddda6f12f4311d516',1,'SolAR::datastructure']]]
+  ['optimizesim3_0',['optimizeSim3',['../class_sol_a_r_1_1api_1_1solver_1_1map_1_1_i_bundler.html#a5518092acd822f6792efdabe574c9be0',1,'SolAR::api::solver::map::IBundler']]]
 ];

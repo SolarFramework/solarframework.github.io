@@ -1,7 +1,8 @@
 digraph "Graphical Class Hierarchy"
 {
+ // LATEX_PDF_SIZE
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node0 [label="SolAR::datastructure\l::Sizei",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_sol_a_r_1_1datastructure_1_1_sizei.html",tooltip="A 2D size defined with integers. "];
+  Node0 [label="SolAR::datastructure\l::Rectanglei",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_sol_a_r_1_1datastructure_1_1_rectanglei.html",tooltip="A 2D rectangle which size in defined with integers."];
 }
