@@ -74,9 +74,9 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#friends">Friends</a> &#124;
 <a href="class_sol_a_r_1_1datastructure_1_1_image-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">SolAR::datastructure::Image Class Reference</div></div>
@@ -88,12 +88,6 @@ $(function() {
 
 <p><code>#include &lt;<a class="el" href="_image_8h_source.html">Image.h</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1datastructure_1_1_image_1_1_image_internal.html">ImageInternal</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><b>A 2D image buffer.</b>.  <a href="class_sol_a_r_1_1datastructure_1_1_image_1_1_image_internal.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr class="memitem:a863dd3e35b420333f053825a2d3b2263"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html#a863dd3e35b420333f053825a2d3b2263">DataType</a> { <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html#a863dd3e35b420333f053825a2d3b2263a8f02ed60b874228af68eef07f6ef1d99">TYPE_8U</a>
@@ -104,12 +98,11 @@ Public Types</h2></td></tr>
 <tr class="separator:a863dd3e35b420333f053825a2d3b2263"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1203358adec459284a7eaecd4ec63041"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html#a1203358adec459284a7eaecd4ec63041">ImageLayout</a> { <br />
 &#160;&#160;<a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html#a1203358adec459284a7eaecd4ec63041a1f94cc84dea3df7e6b8f8d7e5bc40f3f">LAYOUT_RGB</a> =0
-, <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html#a1203358adec459284a7eaecd4ec63041a9ffbbb33db28949a97f08d1e9b0c50ca">LAYOUT_GRB</a>
 , <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html#a1203358adec459284a7eaecd4ec63041ac2e3f8c84f5792dfd8b4bed61227199e">LAYOUT_BGR</a>
 , <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html#a1203358adec459284a7eaecd4ec63041aa7cc168a651615bfddf192b50e25a3d6">LAYOUT_GREY</a>
+, <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html#a1203358adec459284a7eaecd4ec63041ace9f2c065b035b0b06108dde9aed5258">LAYOUT_RGBA</a>
 , <br />
-&#160;&#160;<a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html#a1203358adec459284a7eaecd4ec63041ace9f2c065b035b0b06108dde9aed5258">LAYOUT_RGBA</a>
-, <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html#a1203358adec459284a7eaecd4ec63041a7fed849ce4ce914dd8661c1b703b5437">LAYOUT_RGBX</a>
+&#160;&#160;<a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html#a1203358adec459284a7eaecd4ec63041a7fed849ce4ce914dd8661c1b703b5437">LAYOUT_RGBX</a>
 , <b>LAYOUT_UNDEFINED</b>
 <br />
  }</td></tr>
@@ -123,6 +116,11 @@ Public Types</h2></td></tr>
 , <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html#a2aca93da4bee9657e2d3181fae2a317fa6a092f9654c79948ed71d67081ac0704">PER_CHANNEL</a>
  }</td></tr>
 <tr class="separator:a2aca93da4bee9657e2d3181fae2a317f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57a03e1d8b54affe759cd87909059505"><td class="memItemLeft" align="right" valign="top"><a id="a57a03e1d8b54affe759cd87909059505" name="a57a03e1d8b54affe759cd87909059505"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>ImageEncoding</b> { <b>ENCODING_NONE</b> =0
+, <b>ENCODING_JPEG</b>
+, <b>ENCODING_PNG</b>
+ }</td></tr>
+<tr class="separator:a57a03e1d8b54affe759cd87909059505"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -132,9 +130,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ad5cb8457bb2566b1cad22183f020353d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html#ad5cb8457bb2566b1cad22183f020353d">Image</a> (uint32_t width, uint32_t height, enum <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html#a1203358adec459284a7eaecd4ec63041">ImageLayout</a> pixLayout, enum <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html#a2aca93da4bee9657e2d3181fae2a317f">PixelOrder</a> pixOrder, <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html#a863dd3e35b420333f053825a2d3b2263">DataType</a> type)</td></tr>
 <tr class="memdesc:ad5cb8457bb2566b1cad22183f020353d"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html" title="A 2D image..">Image</a>.  <a href="class_sol_a_r_1_1datastructure_1_1_image.html#ad5cb8457bb2566b1cad22183f020353d">More...</a><br /></td></tr>
 <tr class="separator:ad5cb8457bb2566b1cad22183f020353d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a63be5e98899f94db22c71103eb6af730"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html#a63be5e98899f94db22c71103eb6af730">Image</a> (void *imageData, uint32_t width, uint32_t height, enum <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html#a1203358adec459284a7eaecd4ec63041">ImageLayout</a> pixLayout, enum <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html#a2aca93da4bee9657e2d3181fae2a317f">PixelOrder</a> pixOrder, <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html#a863dd3e35b420333f053825a2d3b2263">DataType</a> type)</td></tr>
-<tr class="memdesc:a63be5e98899f94db22c71103eb6af730"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html" title="A 2D image..">Image</a> built from a raw data pointer.  <a href="class_sol_a_r_1_1datastructure_1_1_image.html#a63be5e98899f94db22c71103eb6af730">More...</a><br /></td></tr>
-<tr class="separator:a63be5e98899f94db22c71103eb6af730"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad505827d77d9c72016ebe65ac1a97a27"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html#ad505827d77d9c72016ebe65ac1a97a27">Image</a> (void *imageData, uint32_t width, uint32_t height, enum <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html#a1203358adec459284a7eaecd4ec63041">ImageLayout</a> pixLayout, enum <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html#a2aca93da4bee9657e2d3181fae2a317f">PixelOrder</a> pixOrder, <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html#a863dd3e35b420333f053825a2d3b2263">DataType</a> type, ImageEncoding encoding=ENCODING_NONE)</td></tr>
+<tr class="memdesc:ad505827d77d9c72016ebe65ac1a97a27"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html" title="A 2D image..">Image</a> built from a raw data pointer.  <a href="class_sol_a_r_1_1datastructure_1_1_image.html#ad505827d77d9c72016ebe65ac1a97a27">More...</a><br /></td></tr>
+<tr class="separator:ad505827d77d9c72016ebe65ac1a97a27"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9d38cf043e9424bdf011e2da40d7e731"><td class="memItemLeft" align="right" valign="top"><a id="a9d38cf043e9424bdf011e2da40d7e731" name="a9d38cf043e9424bdf011e2da40d7e731"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>~Image</b> ()=default</td></tr>
 <tr class="memdesc:a9d38cf043e9424bdf011e2da40d7e731"><td class="mdescLeft">&#160;</td><td class="mdescRight">~Image <br /></td></tr>
@@ -201,10 +199,47 @@ uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>getHeight</b> () 
 <tr class="memitem:ae0793fafd0f9d4b05f097709c6ffc3a9"><td class="memItemLeft" align="right" valign="top"><a id="ae0793fafd0f9d4b05f097709c6ffc3a9" name="ae0793fafd0f9d4b05f097709c6ffc3a9"></a>
 uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>getStep</b> () const</td></tr>
 <tr class="separator:ae0793fafd0f9d4b05f097709c6ffc3a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a41c6172c22b8cdd333df379a00539b14"><td class="memTemplParams" colspan="2"><a id="a41c6172c22b8cdd333df379a00539b14" name="a41c6172c22b8cdd333df379a00539b14"></a>
-template&lt;typename Archive &gt; </td></tr>
-<tr class="memitem:a41c6172c22b8cdd333df379a00539b14"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>serialize</b> (Archive &amp;ar, ATTRIBUTE(maybe_unused) const unsigned int version)</td></tr>
-<tr class="separator:a41c6172c22b8cdd333df379a00539b14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a7f4f12b0a6397c966365df869cb635"><td class="memItemLeft" align="right" valign="top"><a id="a2a7f4f12b0a6397c966365df869cb635" name="a2a7f4f12b0a6397c966365df869cb635"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setImageEncoding</b> (enum ImageEncoding encoding)</td></tr>
+<tr class="memdesc:a2a7f4f12b0a6397c966365df869cb635"><td class="mdescLeft">&#160;</td><td class="mdescRight">set encoding for the image <br /></td></tr>
+<tr class="separator:a2a7f4f12b0a6397c966365df869cb635"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea448b392b21cb80bbc9b939a36a4d4e"><td class="memItemLeft" align="right" valign="top"><a id="aea448b392b21cb80bbc9b939a36a4d4e" name="aea448b392b21cb80bbc9b939a36a4d4e"></a>
+enum ImageEncoding&#160;</td><td class="memItemRight" valign="bottom"><b>getImageEncoding</b> () const</td></tr>
+<tr class="memdesc:aea448b392b21cb80bbc9b939a36a4d4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns encoding of the image <br /></td></tr>
+<tr class="separator:aea448b392b21cb80bbc9b939a36a4d4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a57fc479d274783283b9cabcf2ce073"><td class="memItemLeft" align="right" valign="top"><a id="a8a57fc479d274783283b9cabcf2ce073" name="a8a57fc479d274783283b9cabcf2ce073"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setImageEncodingQuality</b> (uint8_t encodingQuality)</td></tr>
+<tr class="memdesc:a8a57fc479d274783283b9cabcf2ce073"><td class="mdescLeft">&#160;</td><td class="mdescRight">set encoding quality for the image Must be set between 100 and 0: 100 for loseless compression, 0 to low quality and high compression rate <br /></td></tr>
+<tr class="separator:a8a57fc479d274783283b9cabcf2ce073"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d85936ad4473fa5de9674651306875e"><td class="memItemLeft" align="right" valign="top"><a id="a0d85936ad4473fa5de9674651306875e" name="a0d85936ad4473fa5de9674651306875e"></a>
+uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>getImageEncodingQuality</b> () const</td></tr>
+<tr class="memdesc:a0d85936ad4473fa5de9674651306875e"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns encoding quality of the image <br /></td></tr>
+<tr class="separator:a0d85936ad4473fa5de9674651306875e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b9fc9f8cbe3455dde0b8e882f470133"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a9b9fc9f8cbe3455dde0b8e882f470133"><td class="memTemplItemLeft" align="right" valign="top">T &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html#a9b9fc9f8cbe3455dde0b8e882f470133">getPixel</a> (int row, int col)</td></tr>
+<tr class="memdesc:a9b9fc9f8cbe3455dde0b8e882f470133"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get pixel value.  <a href="class_sol_a_r_1_1datastructure_1_1_image.html#a9b9fc9f8cbe3455dde0b8e882f470133">More...</a><br /></td></tr>
+<tr class="separator:a9b9fc9f8cbe3455dde0b8e882f470133"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a384e5f7389347f8d4841fe022b29a877"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a384e5f7389347f8d4841fe022b29a877"><td class="memTemplItemLeft" align="right" valign="top">const T &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html#a384e5f7389347f8d4841fe022b29a877">getPixel</a> (int row, int col) const</td></tr>
+<tr class="memdesc:a384e5f7389347f8d4841fe022b29a877"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get pixel value.  <a href="class_sol_a_r_1_1datastructure_1_1_image.html#a384e5f7389347f8d4841fe022b29a877">More...</a><br /></td></tr>
+<tr class="separator:a384e5f7389347f8d4841fe022b29a877"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a2dcf4e0dbae5f50e1edb4f48327ccb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html#a8a2dcf4e0dbae5f50e1edb4f48327ccb">save</a> (std::string imagePath) const</td></tr>
+<tr class="memdesc:a8a2dcf4e0dbae5f50e1edb4f48327ccb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save the image in a file.  <a href="class_sol_a_r_1_1datastructure_1_1_image.html#a8a2dcf4e0dbae5f50e1edb4f48327ccb">More...</a><br /></td></tr>
+<tr class="separator:a8a2dcf4e0dbae5f50e1edb4f48327ccb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab14bdcd926448194895ce7bc273520cc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html#ab14bdcd926448194895ce7bc273520cc">load</a> (std::string imagePath)</td></tr>
+<tr class="memdesc:ab14bdcd926448194895ce7bc273520cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load an image from a file.  <a href="class_sol_a_r_1_1datastructure_1_1_image.html#ab14bdcd926448194895ce7bc273520cc">More...</a><br /></td></tr>
+<tr class="separator:ab14bdcd926448194895ce7bc273520cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:a6824495957ac238af7afe2ae446dd76d"><td class="memTemplParams" colspan="2"><a id="a6824495957ac238af7afe2ae446dd76d" name="a6824495957ac238af7afe2ae446dd76d"></a>
+template&lt;class Archive &gt; </td></tr>
+<tr class="memitem:a6824495957ac238af7afe2ae446dd76d"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>save</b> (Archive &amp;ar, const unsigned int version) const</td></tr>
+<tr class="separator:a6824495957ac238af7afe2ae446dd76d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31373781addcce11eb89ba62a2ba8f21"><td class="memTemplParams" colspan="2"><a id="a31373781addcce11eb89ba62a2ba8f21" name="a31373781addcce11eb89ba62a2ba8f21"></a>
+template&lt;class Archive &gt; </td></tr>
+<tr class="memitem:a31373781addcce11eb89ba62a2ba8f21"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>load</b> (Archive &amp;ar, const unsigned int version)</td></tr>
+<tr class="separator:a31373781addcce11eb89ba62a2ba8f21"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
 Friends</h2></td></tr>
@@ -273,8 +308,6 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>boost::serialization
 </div><div class="memdoc">
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a1203358adec459284a7eaecd4ec63041a1f94cc84dea3df7e6b8f8d7e5bc40f3f" name="a1203358adec459284a7eaecd4ec63041a1f94cc84dea3df7e6b8f8d7e5bc40f3f"></a>LAYOUT_RGB&#160;</td><td class="fielddoc"><p >means 3 channels per pixel : Red, Green, Blue </p>
-</td></tr>
-<tr><td class="fieldname"><a id="a1203358adec459284a7eaecd4ec63041a9ffbbb33db28949a97f08d1e9b0c50ca" name="a1203358adec459284a7eaecd4ec63041a9ffbbb33db28949a97f08d1e9b0c50ca"></a>LAYOUT_GRB&#160;</td><td class="fielddoc"><p >means 3 channels per pixel : Green,Red, Blue (this is opencv model) </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a1203358adec459284a7eaecd4ec63041ac2e3f8c84f5792dfd8b4bed61227199e" name="a1203358adec459284a7eaecd4ec63041ac2e3f8c84f5792dfd8b4bed61227199e"></a>LAYOUT_BGR&#160;</td><td class="fielddoc"><p >means 3 channels per pixel : Green,Red, Blue (this is opencv model) </p>
 </td></tr>
@@ -411,8 +444,8 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>boost::serialization
 
 </div>
 </div>
-<a id="a63be5e98899f94db22c71103eb6af730" name="a63be5e98899f94db22c71103eb6af730"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a63be5e98899f94db22c71103eb6af730">&#9670;&nbsp;</a></span>Image() <span class="overload">[3/3]</span></h2>
+<a id="ad505827d77d9c72016ebe65ac1a97a27" name="ad505827d77d9c72016ebe65ac1a97a27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad505827d77d9c72016ebe65ac1a97a27">&#9670;&nbsp;</a></span>Image() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -451,7 +484,13 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>boost::serialization
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html#a863dd3e35b420333f053825a2d3b2263">DataType</a>&#160;</td>
-          <td class="paramname"><em>type</em>&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ImageEncoding&#160;</td>
+          <td class="paramname"><em>encoding</em> = <code>ENCODING_NONE</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -470,6 +509,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>boost::serialization
     <tr><td class="paramname">pixLayout</td><td>defined by ImageLayout </td></tr>
     <tr><td class="paramname">pixOrder</td><td>defined if the data are stored interleaved RGB,RGB or as a planar representation RRR,GGG,BBB </td></tr>
     <tr><td class="paramname">type</td><td>defined by DataType </td></tr>
+    <tr><td class="paramname">encoding</td><td>image encoding (PNG, JPG or NONE by default) </td></tr>
   </table>
   </dd>
 </dl>
@@ -563,6 +603,156 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>boost::serialization
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a9b9fc9f8cbe3455dde0b8e882f470133" name="a9b9fc9f8cbe3455dde0b8e882f470133"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b9fc9f8cbe3455dde0b8e882f470133">&#9670;&nbsp;</a></span>getPixel() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T &amp; SolAR::datastructure::Image::getPixel </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>row</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>col</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get pixel value. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">row</td><td>row index. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">col</td><td>column index. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the pixel value </dd></dl>
+
+</div>
+</div>
+<a id="a384e5f7389347f8d4841fe022b29a877" name="a384e5f7389347f8d4841fe022b29a877"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a384e5f7389347f8d4841fe022b29a877">&#9670;&nbsp;</a></span>getPixel() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const T &amp; SolAR::datastructure::Image::getPixel </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>row</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>col</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get pixel value. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">row</td><td>row index. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">col</td><td>column index. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the pixel value </dd></dl>
+
+</div>
+</div>
+<a id="ab14bdcd926448194895ce7bc273520cc" name="ab14bdcd926448194895ce7bc273520cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab14bdcd926448194895ce7bc273520cc">&#9670;&nbsp;</a></span>load()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a> SolAR::datastructure::Image::load </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>imagePath</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Load an image from a file. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">imagePath</td><td>path to the file with suffix .jpg, .jpeg or .png. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><em>SUCCESS if the image is saved, _ERROR</em> otherwise. </dd></dl>
+
+</div>
+</div>
+<a id="a8a2dcf4e0dbae5f50e1edb4f48327ccb" name="a8a2dcf4e0dbae5f50e1edb4f48327ccb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a2dcf4e0dbae5f50e1edb4f48327ccb">&#9670;&nbsp;</a></span>save()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a> SolAR::datastructure::Image::save </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>imagePath</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Save the image in a file. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">imagePath</td><td>path to the file with suffix .jpg, .jpeg or .png. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><em>SUCCESS if the image is saved, _ERROR</em> otherwise. </dd></dl>
 
 </div>
 </div>

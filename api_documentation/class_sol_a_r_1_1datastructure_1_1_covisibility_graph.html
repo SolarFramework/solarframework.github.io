@@ -133,9 +133,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af2b17ddf9ad22c040e7a34d7cbe60bb3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1datastructure_1_1_covisibility_graph.html#af2b17ddf9ad22c040e7a34d7cbe60bb3">suppressNode</a> (const uint32_t node_id)</td></tr>
 <tr class="memdesc:af2b17ddf9ad22c040e7a34d7cbe60bb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method allow to suppress a node of the graph.  <a href="class_sol_a_r_1_1datastructure_1_1_covisibility_graph.html#af2b17ddf9ad22c040e7a34d7cbe60bb3">More...</a><br /></td></tr>
 <tr class="separator:af2b17ddf9ad22c040e7a34d7cbe60bb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a45d369d9e2e5c439857e028c8cc98c1e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1datastructure_1_1_covisibility_graph.html#a45d369d9e2e5c439857e028c8cc98c1e">getNeighbors</a> (const uint32_t node_id, const float minWeight, std::vector&lt; uint32_t &gt; &amp;neighbors) const</td></tr>
-<tr class="memdesc:a45d369d9e2e5c439857e028c8cc98c1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method allow to get neighbors of a node in the graph.  <a href="class_sol_a_r_1_1datastructure_1_1_covisibility_graph.html#a45d369d9e2e5c439857e028c8cc98c1e">More...</a><br /></td></tr>
-<tr class="separator:a45d369d9e2e5c439857e028c8cc98c1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98ccf104d3223dd34bff1ed6147c574a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1datastructure_1_1_covisibility_graph.html#a98ccf104d3223dd34bff1ed6147c574a">getNeighbors</a> (const uint32_t node_id, const float minWeight, std::vector&lt; uint32_t &gt; &amp;neighbors, const uint32_t maxNbNeighbors=0) const</td></tr>
+<tr class="memdesc:a98ccf104d3223dd34bff1ed6147c574a"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method allow to get neighbors of a node in the graph.  <a href="class_sol_a_r_1_1datastructure_1_1_covisibility_graph.html#a98ccf104d3223dd34bff1ed6147c574a">More...</a><br /></td></tr>
+<tr class="separator:a98ccf104d3223dd34bff1ed6147c574a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aadcde09d60bc721a19c8f3028871801d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1datastructure_1_1_covisibility_graph.html#aadcde09d60bc721a19c8f3028871801d">minimalSpanningTree</a> (std::vector&lt; std::tuple&lt; uint32_t, uint32_t, float &gt; &gt; &amp;edges_weights, float &amp;minTotalWeights)</td></tr>
 <tr class="memdesc:aadcde09d60bc721a19c8f3028871801d"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method allow to get minimal spanning tree of the graph.  <a href="class_sol_a_r_1_1datastructure_1_1_covisibility_graph.html#aadcde09d60bc721a19c8f3028871801d">More...</a><br /></td></tr>
 <tr class="separator:aadcde09d60bc721a19c8f3028871801d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -297,8 +297,8 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>boost::serialization
 
 </div>
 </div>
-<a id="a45d369d9e2e5c439857e028c8cc98c1e" name="a45d369d9e2e5c439857e028c8cc98c1e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a45d369d9e2e5c439857e028c8cc98c1e">&#9670;&nbsp;</a></span>getNeighbors()</h2>
+<a id="a98ccf104d3223dd34bff1ed6147c574a" name="a98ccf104d3223dd34bff1ed6147c574a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98ccf104d3223dd34bff1ed6147c574a">&#9670;&nbsp;</a></span>getNeighbors()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -319,7 +319,13 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>boost::serialization
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">std::vector&lt; uint32_t &gt; &amp;&#160;</td>
-          <td class="paramname"><em>neighbors</em>&#160;</td>
+          <td class="paramname"><em>neighbors</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint32_t&#160;</td>
+          <td class="paramname"><em>maxNbNeighbors</em> = <code>0</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -332,9 +338,10 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>boost::serialization
 <p>This method allow to get neighbors of a node in the graph. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">id</td><td>of the node to get neighbors </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">min</td><td>value between this node and a neighbor to accept </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">a</td><td>vector of neighbors sorted to greater weighted edge. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">node_id</td><td>id of the node to get neighbors </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">minWeight</td><td>min value between this node and a neighbor to accept </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">neighbors</td><td>a vector of neighbors sorted to greater weighted edge. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">maxNbNeighbors</td><td>the maximum number of neighbors. If it is zero, find all neighbors. </td></tr>
   </table>
   </dd>
 </dl>

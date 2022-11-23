@@ -1,0 +1,15 @@
+digraph "SolAR::base::pipeline::AMappingPipeline"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="SolAR::base::pipeline\l::AMappingPipeline",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="org::bcom::xpcf::ConfigurableBase",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node3 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="SolAR::api::pipeline\l::IMappingPipeline",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_sol_a_r_1_1api_1_1pipeline_1_1_i_mapping_pipeline.html",tooltip="Defines a mapping pipeline. UUID: 2dc3cd33-5a11-4748-94a3-e7ab40462097"];
+  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="SolAR::api::pipeline\l::IPipeline",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_sol_a_r_1_1api_1_1pipeline_1_1_i_pipeline.html",tooltip="Abstract class defining a generic pipeline object. UUID: b636f583-4f1e-41c9-94da-9d0eac82aa02"];
+  Node5 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="org::bcom::xpcf::IComponent\lIntrospect",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+}

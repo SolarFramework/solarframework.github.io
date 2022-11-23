@@ -7,5 +7,5 @@ digraph "interfaces/api/storage" {
   dir_3feef5f54a6a2af70813cef6ef51d7b2 [shape=box, label="storage", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_3feef5f54a6a2af70813cef6ef51d7b2.html"];
   }
   dir_3163639002ef67c6c12f1b2ccf7afca4 [shape=box label="datastructure" URL="dir_3163639002ef67c6c12f1b2ccf7afca4.html"];
-  dir_3feef5f54a6a2af70813cef6ef51d7b2->dir_3163639002ef67c6c12f1b2ccf7afca4 [headlabel="3", labeldistance=1.5 headhref="dir_000021_000027.html"];
+  dir_3feef5f54a6a2af70813cef6ef51d7b2->dir_3163639002ef67c6c12f1b2ccf7afca4 [headlabel="3", labeldistance=1.5 headhref="dir_000022_000029.html"];
 }

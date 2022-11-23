@@ -1,0 +1,11 @@
+digraph "interfaces/api/segm" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_5ccb2e05c35c6d85a94d42568a113e58 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="api" fontname="Helvetica", fontsize="10", URL="dir_5ccb2e05c35c6d85a94d42568a113e58.html"]
+  dir_f50fb692259d389c9d8442a233852ef0 [shape=box, label="segm", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_f50fb692259d389c9d8442a233852ef0.html"];
+  }
+  dir_3163639002ef67c6c12f1b2ccf7afca4 [shape=box label="datastructure" URL="dir_3163639002ef67c6c12f1b2ccf7afca4.html"];
+  dir_f50fb692259d389c9d8442a233852ef0->dir_3163639002ef67c6c12f1b2ccf7afca4 [headlabel="2", labeldistance=1.5 headhref="dir_000015_000029.html"];
+}

@@ -101,32 +101,35 @@ $(function() {
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="class_sol_a_r_1_1api_1_1slam_1_1_i_mapping.html#a7cbc01d7e53f78d0cbcf37f187b606a7">   49</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_sol_a_r_1_1api_1_1slam_1_1_i_mapping.html#a7cbc01d7e53f78d0cbcf37f187b606a7">setCameraParameters</a>(<span class="keyword">const</span> <a class="code hl_struct" href="struct_sol_a_r_1_1datastructure_1_1_camera_parameters.html">SolAR::datastructure::CameraParameters</a> &amp; camParams) = 0;</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="class_sol_a_r_1_1api_1_1slam_1_1_i_mapping.html#a923b208072350e70d15f523ec8de66ef">   54</a></span>    <span class="keyword">virtual</span> <a class="code hl_enumeration" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a> <a class="code hl_function" href="class_sol_a_r_1_1api_1_1slam_1_1_i_mapping.html#a923b208072350e70d15f523ec8de66ef">process</a>(<span class="keyword">const</span> SRef&lt;SolAR::datastructure::Frame&gt; frame, SRef&lt;SolAR::datastructure::Keyframe&gt; &amp; keyframe) = 0;</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>};</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>}</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>}</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>}</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="class_sol_a_r_1_1api_1_1slam_1_1_i_mapping.html#a0c70493570c86020511d35e21f3bc7c6">   53</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="class_sol_a_r_1_1api_1_1slam_1_1_i_mapping.html#a0c70493570c86020511d35e21f3bc7c6">idle</a>() = 0;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="class_sol_a_r_1_1api_1_1slam_1_1_i_mapping.html#a923b208072350e70d15f523ec8de66ef">   58</a></span>    <span class="keyword">virtual</span> <a class="code hl_enumeration" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a> <a class="code hl_function" href="class_sol_a_r_1_1api_1_1slam_1_1_i_mapping.html#a923b208072350e70d15f523ec8de66ef">process</a>(<span class="keyword">const</span> SRef&lt;SolAR::datastructure::Frame&gt; frame, SRef&lt;SolAR::datastructure::Keyframe&gt; &amp; keyframe) = 0;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>};</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>XPCF_DEFINE_INTERFACE_TRAITS(<a class="code hl_class" href="class_sol_a_r_1_1api_1_1slam_1_1_i_mapping.html">SolAR::api::slam::IMapping</a>,</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="stringliteral">&quot;33db5a56-9be2-4e5a-8fdc-de25e1633cf6&quot;</span>,</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="stringliteral">&quot;IMapping&quot;</span>,</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="stringliteral">&quot;SolAR::api::slam::IMapping&quot;</span>);</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="preprocessor">#endif </span><span class="comment">//SOLAR_IMAPPING_H</span></div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>}</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>}</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>}</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>XPCF_DEFINE_INTERFACE_TRAITS(<a class="code hl_class" href="class_sol_a_r_1_1api_1_1slam_1_1_i_mapping.html">SolAR::api::slam::IMapping</a>,</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="stringliteral">&quot;33db5a56-9be2-4e5a-8fdc-de25e1633cf6&quot;</span>,</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="stringliteral">&quot;IMapping&quot;</span>,</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="stringliteral">&quot;SolAR::api::slam::IMapping&quot;</span>);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="preprocessor">#endif </span><span class="comment">//SOLAR_IMAPPING_H</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
 <div class="ttc" id="a_camera_definitions_8h_html"><div class="ttname"><a href="_camera_definitions_8h.html">CameraDefinitions.h</a></div></div>
 <div class="ttc" id="a_geometry_definitions_8h_html"><div class="ttname"><a href="_geometry_definitions_8h.html">GeometryDefinitions.h</a></div></div>
 <div class="ttc" id="a_math_definitions_8h_html"><div class="ttname"><a href="_math_definitions_8h.html">MathDefinitions.h</a></div></div>
 <div class="ttc" id="aclass_sol_a_r_1_1api_1_1slam_1_1_i_mapping_html"><div class="ttname"><a href="class_sol_a_r_1_1api_1_1slam_1_1_i_mapping.html">SolAR::api::slam::IMapping</a></div><div class="ttdoc">SLAM mapping. UUID: 33db5a56-9be2-4e5a-8fdc-de25e1633cf6</div><div class="ttdef"><b>Definition:</b> IMapping.h:39</div></div>
+<div class="ttc" id="aclass_sol_a_r_1_1api_1_1slam_1_1_i_mapping_html_a0c70493570c86020511d35e21f3bc7c6"><div class="ttname"><a href="class_sol_a_r_1_1api_1_1slam_1_1_i_mapping.html#a0c70493570c86020511d35e21f3bc7c6">SolAR::api::slam::IMapping::idle</a></div><div class="ttdeci">virtual bool idle()=0</div><div class="ttdoc">check the mapping process is idle</div></div>
 <div class="ttc" id="aclass_sol_a_r_1_1api_1_1slam_1_1_i_mapping_html_a7aac64cc087d8b8c60a8d6f6174dce30"><div class="ttname"><a href="class_sol_a_r_1_1api_1_1slam_1_1_i_mapping.html#a7aac64cc087d8b8c60a8d6f6174dce30">SolAR::api::slam::IMapping::~IMapping</a></div><div class="ttdeci">virtual ~IMapping()=default</div><div class="ttdoc">IMapping default destructor.</div></div>
 <div class="ttc" id="aclass_sol_a_r_1_1api_1_1slam_1_1_i_mapping_html_a7cbc01d7e53f78d0cbcf37f187b606a7"><div class="ttname"><a href="class_sol_a_r_1_1api_1_1slam_1_1_i_mapping.html#a7cbc01d7e53f78d0cbcf37f187b606a7">SolAR::api::slam::IMapping::setCameraParameters</a></div><div class="ttdeci">virtual void setCameraParameters(const SolAR::datastructure::CameraParameters &amp;camParams)=0</div><div class="ttdoc">this method is used to set intrinsic parameters and distorsion of the camera</div></div>
 <div class="ttc" id="aclass_sol_a_r_1_1api_1_1slam_1_1_i_mapping_html_a923b208072350e70d15f523ec8de66ef"><div class="ttname"><a href="class_sol_a_r_1_1api_1_1slam_1_1_i_mapping.html#a923b208072350e70d15f523ec8de66ef">SolAR::api::slam::IMapping::process</a></div><div class="ttdeci">virtual FrameworkReturnCode process(const SRef&lt; SolAR::datastructure::Frame &gt; frame, SRef&lt; SolAR::datastructure::Keyframe &gt; &amp;keyframe)=0</div><div class="ttdoc">this method is used to process mapping task.</div></div>
 <div class="ttc" id="aclass_sol_a_r_1_1api_1_1slam_1_1_i_mapping_html_abc9d37876707c080375cd11e92ddc9ae"><div class="ttname"><a href="class_sol_a_r_1_1api_1_1slam_1_1_i_mapping.html#abc9d37876707c080375cd11e92ddc9ae">SolAR::api::slam::IMapping::IMapping</a></div><div class="ttdeci">IMapping()=default</div><div class="ttdoc">IMapping default constructor.</div></div>
 <div class="ttc" id="anamespace_sol_a_r_html"><div class="ttname"><a href="namespace_sol_a_r.html">SolAR</a></div><div class="ttdef"><b>Definition:</b> I2DOverlay.h:27</div></div>
 <div class="ttc" id="anamespace_sol_a_r_html_a077933d114a617bc6d017d59f547c4b1"><div class="ttname"><a href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">SolAR::FrameworkReturnCode</a></div><div class="ttdeci">FrameworkReturnCode</div><div class="ttdef"><b>Definition:</b> Messages.h:22</div></div>
-<div class="ttc" id="astruct_sol_a_r_1_1datastructure_1_1_camera_parameters_html"><div class="ttname"><a href="struct_sol_a_r_1_1datastructure_1_1_camera_parameters.html">SolAR::datastructure::CameraParameters</a></div><div class="ttdef"><b>Definition:</b> CameraDefinitions.h:102</div></div>
+<div class="ttc" id="astruct_sol_a_r_1_1datastructure_1_1_camera_parameters_html"><div class="ttname"><a href="struct_sol_a_r_1_1datastructure_1_1_camera_parameters.html">SolAR::datastructure::CameraParameters</a></div><div class="ttdef"><b>Definition:</b> CameraDefinitions.h:103</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

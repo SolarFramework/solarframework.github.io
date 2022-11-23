@@ -3,6 +3,7 @@ digraph "SolAR::datastructure::Trackable2D"
  // LATEX_PDF_SIZE
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
   Node1 [label="SolAR::datastructure\l::Trackable2D",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="This abstract class defines the generic 2D trackable datastructure."];
   Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node2 [label="SolAR::datastructure\l::Trackable",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_sol_a_r_1_1datastructure_1_1_trackable.html",tooltip="This abstract class defines the generic trackable datastructure."];
@@ -10,4 +11,6 @@ digraph "SolAR::datastructure::Trackable2D"
   Node3 [label="SolAR::datastructure\l::FiducialMarker",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_sol_a_r_1_1datastructure_1_1_fiducial_marker.html",tooltip="This class defines a fiducial marker datastructure."];
   Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node4 [label="SolAR::datastructure\l::ImageMarker",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_sol_a_r_1_1datastructure_1_1_image_marker.html",tooltip="This class defines a fiducial marker datastructure."];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="SolAR::datastructure\l::QRCode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_sol_a_r_1_1datastructure_1_1_q_r_code.html",tooltip="This class defines a QR code datastructure."];
 }

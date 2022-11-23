@@ -7,5 +7,5 @@ digraph "interfaces/api/image" {
   dir_d7ab704cfa178c3d68294b2a690ac246 [shape=box, label="image", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_d7ab704cfa178c3d68294b2a690ac246.html"];
   }
   dir_3163639002ef67c6c12f1b2ccf7afca4 [shape=box label="datastructure" URL="dir_3163639002ef67c6c12f1b2ccf7afca4.html"];
-  dir_d7ab704cfa178c3d68294b2a690ac246->dir_3163639002ef67c6c12f1b2ccf7afca4 [headlabel="2", labeldistance=1.5 headhref="dir_000007_000027.html"];
+  dir_d7ab704cfa178c3d68294b2a690ac246->dir_3163639002ef67c6c12f1b2ccf7afca4 [headlabel="2", labeldistance=1.5 headhref="dir_000007_000029.html"];
 }

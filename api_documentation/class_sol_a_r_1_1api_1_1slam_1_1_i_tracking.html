@@ -108,9 +108,12 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~ITracking</b> ()=
 <tr class="memitem:a066c0744a859218c234779faa64a6f3d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1slam_1_1_i_tracking.html#a066c0744a859218c234779faa64a6f3d">setCameraParameters</a> (const <a class="el" href="_camera_definitions_8h.html#a0ea650513b55059459f5d5771c5bf5cb">SolAR::datastructure::CamCalibration</a> &amp;intrinsicParams, const <a class="el" href="_camera_definitions_8h.html#ad85d877532df3da45a970d47735e34bc">SolAR::datastructure::CamDistortion</a> &amp;distorsionParams)=0</td></tr>
 <tr class="memdesc:a066c0744a859218c234779faa64a6f3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">this method is used to set intrinsic parameters and distorsion of the camera  <a href="class_sol_a_r_1_1api_1_1slam_1_1_i_tracking.html#a066c0744a859218c234779faa64a6f3d">More...</a><br /></td></tr>
 <tr class="separator:a066c0744a859218c234779faa64a6f3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a553f990c2321fa33ad5ced20be26eb31"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1slam_1_1_i_tracking.html#a553f990c2321fa33ad5ced20be26eb31">updateReferenceKeyframe</a> (const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keyframe.html">SolAR::datastructure::Keyframe</a> &gt; refKeyframe)=0</td></tr>
-<tr class="memdesc:a553f990c2321fa33ad5ced20be26eb31"><td class="mdescLeft">&#160;</td><td class="mdescRight">this method is used to update reference keyframe to track  <a href="class_sol_a_r_1_1api_1_1slam_1_1_i_tracking.html#a553f990c2321fa33ad5ced20be26eb31">More...</a><br /></td></tr>
-<tr class="separator:a553f990c2321fa33ad5ced20be26eb31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1b7dba3401178a5a21631f4d54038d5"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1slam_1_1_i_tracking.html#ae1b7dba3401178a5a21631f4d54038d5">setNewKeyframe</a> (const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keyframe.html">SolAR::datastructure::Keyframe</a> &gt; newKeyframe)=0</td></tr>
+<tr class="memdesc:ae1b7dba3401178a5a21631f4d54038d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">this method is used to set new keyframe for tracking process  <a href="class_sol_a_r_1_1api_1_1slam_1_1_i_tracking.html#ae1b7dba3401178a5a21631f4d54038d5">More...</a><br /></td></tr>
+<tr class="separator:ae1b7dba3401178a5a21631f4d54038d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05518c6d2a424fd81f610b9cf7bd0268"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1slam_1_1_i_tracking.html#a05518c6d2a424fd81f610b9cf7bd0268">checkNeedNewKeyframe</a> ()=0</td></tr>
+<tr class="memdesc:a05518c6d2a424fd81f610b9cf7bd0268"><td class="mdescLeft">&#160;</td><td class="mdescRight">check need to create a new keyframe  <a href="class_sol_a_r_1_1api_1_1slam_1_1_i_tracking.html#a05518c6d2a424fd81f610b9cf7bd0268">More...</a><br /></td></tr>
+<tr class="separator:a05518c6d2a424fd81f610b9cf7bd0268"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7409a3635fbbb11b99e1d3ece0c5cfd7"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1slam_1_1_i_tracking.html#a7409a3635fbbb11b99e1d3ece0c5cfd7">process</a> (const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_frame.html">SolAR::datastructure::Frame</a> &gt; frame, SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">SolAR::datastructure::Image</a> &gt; &amp;displayImage)=0</td></tr>
 <tr class="memdesc:a7409a3635fbbb11b99e1d3ece0c5cfd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">this method is used to process tracking  <a href="class_sol_a_r_1_1api_1_1slam_1_1_i_tracking.html#a7409a3635fbbb11b99e1d3ece0c5cfd7">More...</a><br /></td></tr>
 <tr class="separator:a7409a3635fbbb11b99e1d3ece0c5cfd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -118,6 +121,34 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~ITracking</b> ()=
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p ><b> SLAM tracking task.</b> <code>UUID: c2182b8e-03e9-43a3-a5b9-326e80554cf8</code> </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a05518c6d2a424fd81f610b9cf7bd0268" name="a05518c6d2a424fd81f610b9cf7bd0268"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05518c6d2a424fd81f610b9cf7bd0268">&#9670;&nbsp;</a></span>checkNeedNewKeyframe()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool SolAR::api::slam::ITracking::checkNeedNewKeyframe </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>check need to create a new keyframe </p>
+<dl class="section return"><dt>Returns</dt><dd>true if need to create a new keyframe, else false </dd></dl>
+
+</div>
+</div>
 <a id="a7409a3635fbbb11b99e1d3ece0c5cfd7" name="a7409a3635fbbb11b99e1d3ece0c5cfd7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7409a3635fbbb11b99e1d3ece0c5cfd7">&#9670;&nbsp;</a></span>process()</h2>
 
@@ -209,8 +240,8 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~ITracking</b> ()=
 
 </div>
 </div>
-<a id="a553f990c2321fa33ad5ced20be26eb31" name="a553f990c2321fa33ad5ced20be26eb31"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a553f990c2321fa33ad5ced20be26eb31">&#9670;&nbsp;</a></span>updateReferenceKeyframe()</h2>
+<a id="ae1b7dba3401178a5a21631f4d54038d5" name="ae1b7dba3401178a5a21631f4d54038d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1b7dba3401178a5a21631f4d54038d5">&#9670;&nbsp;</a></span>setNewKeyframe()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -219,10 +250,10 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~ITracking</b> ()=
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void SolAR::api::slam::ITracking::updateReferenceKeyframe </td>
+          <td class="memname">virtual void SolAR::api::slam::ITracking::setNewKeyframe </td>
           <td>(</td>
           <td class="paramtype">const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keyframe.html">SolAR::datastructure::Keyframe</a> &gt;&#160;</td>
-          <td class="paramname"><em>refKeyframe</em></td><td>)</td>
+          <td class="paramname"><em>newKeyframe</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -233,10 +264,10 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~ITracking</b> ()=
 </table>
 </div><div class="memdoc">
 
-<p>this method is used to update reference keyframe to track </p>
+<p>this method is used to set new keyframe for tracking process </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">refKeyframe</td><td>the new reference keyframe. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">newKeyframme</td><td>the new keyframe </td></tr>
   </table>
   </dd>
 </dl>

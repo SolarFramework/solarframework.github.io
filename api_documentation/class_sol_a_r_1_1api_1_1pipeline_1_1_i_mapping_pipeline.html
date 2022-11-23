@@ -108,9 +108,15 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~IMappingPipeline<
 <tr class="memitem:a1166ed9883b558adbdbb039f905c1230"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1pipeline_1_1_i_mapping_pipeline.html#a1166ed9883b558adbdbb039f905c1230">setCameraParameters</a> (const <a class="el" href="struct_sol_a_r_1_1datastructure_1_1_camera_parameters.html">SolAR::datastructure::CameraParameters</a> &amp;cameraParams)=0</td></tr>
 <tr class="memdesc:a1166ed9883b558adbdbb039f905c1230"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the camera parameters.  <a href="class_sol_a_r_1_1api_1_1pipeline_1_1_i_mapping_pipeline.html#a1166ed9883b558adbdbb039f905c1230">More...</a><br /></td></tr>
 <tr class="separator:a1166ed9883b558adbdbb039f905c1230"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad25478b565f33c55eb4cfabb06608e5a"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1pipeline_1_1_i_mapping_pipeline.html#ad25478b565f33c55eb4cfabb06608e5a">mappingProcessRequest</a> (const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">SolAR::datastructure::Image</a> &gt; image, const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">SolAR::datastructure::Transform3Df</a> &amp;pose)=0</td></tr>
-<tr class="memdesc:ad25478b565f33c55eb4cfabb06608e5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Request to the mapping pipeline to process a new image/pose Retrieve the new image (and pose) to process, in the current pipeline context (camera configuration, fiducial marker, point cloud, key frames, key points)  <a href="class_sol_a_r_1_1api_1_1pipeline_1_1_i_mapping_pipeline.html#ad25478b565f33c55eb4cfabb06608e5a">More...</a><br /></td></tr>
-<tr class="separator:ad25478b565f33c55eb4cfabb06608e5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62436e9aace3fe63559779b9df686c5e"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1pipeline_1_1_i_mapping_pipeline.html#a62436e9aace3fe63559779b9df686c5e">mappingProcessRequest</a> (const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">SolAR::datastructure::Image</a> &gt; image, const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">SolAR::datastructure::Transform3Df</a> &amp;pose, const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">SolAR::datastructure::Transform3Df</a> &amp;transform, <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">SolAR::datastructure::Transform3Df</a> &amp;updatedTransform, MappingStatus &amp;status)=0</td></tr>
+<tr class="memdesc:a62436e9aace3fe63559779b9df686c5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Request to the mapping pipeline to process a new image/pose.  <a href="class_sol_a_r_1_1api_1_1pipeline_1_1_i_mapping_pipeline.html#a62436e9aace3fe63559779b9df686c5e">More...</a><br /></td></tr>
+<tr class="separator:a62436e9aace3fe63559779b9df686c5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65d2d386a206e0950680dd975e533e84"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1pipeline_1_1_i_mapping_pipeline.html#a65d2d386a206e0950680dd975e533e84">mappingProcessRequest</a> (const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">SolAR::datastructure::Image</a> &gt; image, const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">SolAR::datastructure::Transform3Df</a> &amp;pose, MappingStatus &amp;status)=0</td></tr>
+<tr class="memdesc:a65d2d386a206e0950680dd975e533e84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Request to the mapping pipeline to process a new image/pose.  <a href="class_sol_a_r_1_1api_1_1pipeline_1_1_i_mapping_pipeline.html#a65d2d386a206e0950680dd975e533e84">More...</a><br /></td></tr>
+<tr class="separator:a65d2d386a206e0950680dd975e533e84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a903016d5da76d1ceb8be5a6234a891d3"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1pipeline_1_1_i_mapping_pipeline.html#a903016d5da76d1ceb8be5a6234a891d3">mappingProcessRequest</a> (const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">SolAR::datastructure::Image</a> &gt; image, const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">SolAR::datastructure::Transform3Df</a> &amp;pose, <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">SolAR::datastructure::Transform3Df</a> &amp;updatedTransform, MappingStatus &amp;status)=0</td></tr>
+<tr class="memdesc:a903016d5da76d1ceb8be5a6234a891d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Request to the mapping pipeline to process a new image/pose.  <a href="class_sol_a_r_1_1api_1_1pipeline_1_1_i_mapping_pipeline.html#a903016d5da76d1ceb8be5a6234a891d3">More...</a><br /></td></tr>
+<tr class="separator:a903016d5da76d1ceb8be5a6234a891d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9a3c7001547b4d42d5dfe96fc274663d"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1pipeline_1_1_i_mapping_pipeline.html#a9a3c7001547b4d42d5dfe96fc274663d">getDataForVisualization</a> (std::vector&lt; SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_cloud_point.html">SolAR::datastructure::CloudPoint</a> &gt; &gt; &amp;outputPointClouds, std::vector&lt; <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">SolAR::datastructure::Transform3Df</a> &gt; &amp;keyframePoses) const =0</td></tr>
 <tr class="memdesc:a9a3c7001547b4d42d5dfe96fc274663d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provide the current data from the mapping pipeline context for visualization (resulting from all mapping processing since the start of the pipeline)  <a href="class_sol_a_r_1_1api_1_1pipeline_1_1_i_mapping_pipeline.html#a9a3c7001547b4d42d5dfe96fc274663d">More...</a><br /></td></tr>
 <tr class="separator:a9a3c7001547b4d42d5dfe96fc274663d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -173,10 +179,12 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~IMappingPipeline<
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>FrameworkReturnCode::<em>SUCCESS if data are available, else FrameworkReturnCode::_ERROR</em> </dd></dl>
 
+<p>Implemented in <a class="el" href="class_sol_a_r_1_1base_1_1pipeline_1_1_a_mapping_pipeline.html#aa5f3634cde6454f3db3cf1e621f7d81d">SolAR::base::pipeline::AMappingPipeline</a>.</p>
+
 </div>
 </div>
-<a id="ad25478b565f33c55eb4cfabb06608e5a" name="ad25478b565f33c55eb4cfabb06608e5a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad25478b565f33c55eb4cfabb06608e5a">&#9670;&nbsp;</a></span>mappingProcessRequest()</h2>
+<a id="a62436e9aace3fe63559779b9df686c5e" name="a62436e9aace3fe63559779b9df686c5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62436e9aace3fe63559779b9df686c5e">&#9670;&nbsp;</a></span>mappingProcessRequest() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -194,7 +202,25 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~IMappingPipeline<
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">SolAR::datastructure::Transform3Df</a> &amp;&#160;</td>
-          <td class="paramname"><em>pose</em>&#160;</td>
+          <td class="paramname"><em>pose</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">SolAR::datastructure::Transform3Df</a> &amp;&#160;</td>
+          <td class="paramname"><em>transform</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">SolAR::datastructure::Transform3Df</a> &amp;&#160;</td>
+          <td class="paramname"><em>updatedTransform</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">MappingStatus &amp;&#160;</td>
+          <td class="paramname"><em>status</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -209,15 +235,137 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~IMappingPipeline<
 </table>
 </div><div class="memdoc">
 
-<p>Request to the mapping pipeline to process a new image/pose Retrieve the new image (and pose) to process, in the current pipeline context (camera configuration, fiducial marker, point cloud, key frames, key points) </p>
+<p>Request to the mapping pipeline to process a new image/pose. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">image</td><td>the input image to process </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">pose</td><td>the input pose to process </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pose</td><td>the input pose in the device coordinate system </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">transform</td><td>the transformation matrix from the device coordinate system to the world coordinate system </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">updatedTransform</td><td>the refined transformation by a loop closure detection </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">status</td><td>the current status of the mapping pipeline </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>FrameworkReturnCode::<em>SUCCESS if the data are ready to be processed, else FrameworkReturnCode::_ERROR</em> </dd></dl>
+
+<p>Implemented in <a class="el" href="class_sol_a_r_1_1base_1_1pipeline_1_1_a_mapping_pipeline.html#a4613999a1aa09c66b42e5e67d2fcbeab">SolAR::base::pipeline::AMappingPipeline</a>.</p>
+
+</div>
+</div>
+<a id="a65d2d386a206e0950680dd975e533e84" name="a65d2d386a206e0950680dd975e533e84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65d2d386a206e0950680dd975e533e84">&#9670;&nbsp;</a></span>mappingProcessRequest() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a> SolAR::api::pipeline::IMappingPipeline::mappingProcessRequest </td>
+          <td>(</td>
+          <td class="paramtype">const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">SolAR::datastructure::Image</a> &gt;&#160;</td>
+          <td class="paramname"><em>image</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">SolAR::datastructure::Transform3Df</a> &amp;&#160;</td>
+          <td class="paramname"><em>pose</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">MappingStatus &amp;&#160;</td>
+          <td class="paramname"><em>status</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Request to the mapping pipeline to process a new image/pose. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">image</td><td>the input image to process </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pose</td><td>the input pose in the world coordinate system </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">status</td><td>the current status of the mapping pipeline </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>FrameworkReturnCode::<em>SUCCESS if the data are ready to be processed, else FrameworkReturnCode::_ERROR</em> </dd></dl>
+
+<p>Implemented in <a class="el" href="class_sol_a_r_1_1base_1_1pipeline_1_1_a_mapping_pipeline.html#a2dda7e6be4fb1d80fd409da9761619d7">SolAR::base::pipeline::AMappingPipeline</a>.</p>
+
+</div>
+</div>
+<a id="a903016d5da76d1ceb8be5a6234a891d3" name="a903016d5da76d1ceb8be5a6234a891d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a903016d5da76d1ceb8be5a6234a891d3">&#9670;&nbsp;</a></span>mappingProcessRequest() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a> SolAR::api::pipeline::IMappingPipeline::mappingProcessRequest </td>
+          <td>(</td>
+          <td class="paramtype">const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_image.html">SolAR::datastructure::Image</a> &gt;&#160;</td>
+          <td class="paramname"><em>image</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">SolAR::datastructure::Transform3Df</a> &amp;&#160;</td>
+          <td class="paramname"><em>pose</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_math_definitions_8h.html#a6d83c076567e6d7ea5bb7007b4595483">SolAR::datastructure::Transform3Df</a> &amp;&#160;</td>
+          <td class="paramname"><em>updatedTransform</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">MappingStatus &amp;&#160;</td>
+          <td class="paramname"><em>status</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Request to the mapping pipeline to process a new image/pose. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">image</td><td>the input image to process </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pose</td><td>the input pose in the world coordinate system </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">updatedTransform</td><td>the refined transformation by a loop closure detection </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">status</td><td>the current status of the mapping pipeline </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>FrameworkReturnCode::<em>SUCCESS if the data are ready to be processed, else FrameworkReturnCode::_ERROR</em> </dd></dl>
+
+<p>Implemented in <a class="el" href="class_sol_a_r_1_1base_1_1pipeline_1_1_a_mapping_pipeline.html#a7a10850d69ee4a99bfa53fc439111d2a">SolAR::base::pipeline::AMappingPipeline</a>.</p>
 
 </div>
 </div>
@@ -253,6 +401,8 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~IMappingPipeline<
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>FrameworkReturnCode::<em>SUCCESS if the camera parameters are correctly set, else FrameworkReturnCode::_ERROR</em> </dd></dl>
+
+<p>Implemented in <a class="el" href="class_sol_a_r_1_1base_1_1pipeline_1_1_a_mapping_pipeline.html#a4eb3dd2fc828984476f330901975260c">SolAR::base::pipeline::AMappingPipeline</a>.</p>
 
 </div>
 </div>

@@ -108,6 +108,9 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~IMapping</b> ()=d
 <tr class="memitem:a7cbc01d7e53f78d0cbcf37f187b606a7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1slam_1_1_i_mapping.html#a7cbc01d7e53f78d0cbcf37f187b606a7">setCameraParameters</a> (const <a class="el" href="struct_sol_a_r_1_1datastructure_1_1_camera_parameters.html">SolAR::datastructure::CameraParameters</a> &amp;camParams)=0</td></tr>
 <tr class="memdesc:a7cbc01d7e53f78d0cbcf37f187b606a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">this method is used to set intrinsic parameters and distorsion of the camera  <a href="class_sol_a_r_1_1api_1_1slam_1_1_i_mapping.html#a7cbc01d7e53f78d0cbcf37f187b606a7">More...</a><br /></td></tr>
 <tr class="separator:a7cbc01d7e53f78d0cbcf37f187b606a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c70493570c86020511d35e21f3bc7c6"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1slam_1_1_i_mapping.html#a0c70493570c86020511d35e21f3bc7c6">idle</a> ()=0</td></tr>
+<tr class="memdesc:a0c70493570c86020511d35e21f3bc7c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">check the mapping process is idle  <a href="class_sol_a_r_1_1api_1_1slam_1_1_i_mapping.html#a0c70493570c86020511d35e21f3bc7c6">More...</a><br /></td></tr>
+<tr class="separator:a0c70493570c86020511d35e21f3bc7c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a923b208072350e70d15f523ec8de66ef"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_sol_a_r.html#a077933d114a617bc6d017d59f547c4b1">FrameworkReturnCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1api_1_1slam_1_1_i_mapping.html#a923b208072350e70d15f523ec8de66ef">process</a> (const SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_frame.html">SolAR::datastructure::Frame</a> &gt; frame, SRef&lt; <a class="el" href="class_sol_a_r_1_1datastructure_1_1_keyframe.html">SolAR::datastructure::Keyframe</a> &gt; &amp;keyframe)=0</td></tr>
 <tr class="memdesc:a923b208072350e70d15f523ec8de66ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">this method is used to process mapping task.  <a href="class_sol_a_r_1_1api_1_1slam_1_1_i_mapping.html#a923b208072350e70d15f523ec8de66ef">More...</a><br /></td></tr>
 <tr class="separator:a923b208072350e70d15f523ec8de66ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -115,6 +118,34 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~IMapping</b> ()=d
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p ><b> SLAM mapping.</b> <code>UUID: 33db5a56-9be2-4e5a-8fdc-de25e1633cf6</code> </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a0c70493570c86020511d35e21f3bc7c6" name="a0c70493570c86020511d35e21f3bc7c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c70493570c86020511d35e21f3bc7c6">&#9670;&nbsp;</a></span>idle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool SolAR::api::slam::IMapping::idle </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>check the mapping process is idle </p>
+<dl class="section return"><dt>Returns</dt><dd>true if the mapping process is idle, else false </dd></dl>
+
+</div>
+</div>
 <a id="a923b208072350e70d15f523ec8de66ef" name="a923b208072350e70d15f523ec8de66ef"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a923b208072350e70d15f523ec8de66ef">&#9670;&nbsp;</a></span>process()</h2>
 
