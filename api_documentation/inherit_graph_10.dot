@@ -4,5 +4,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node0 [label="SolAR::datastructure\l::DescriptorBuffer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_sol_a_r_1_1datastructure_1_1_descriptor_buffer.html",tooltip="A buffer to store a set of descriptors."];
+  Node0 [label="SolAR::datastructure\l::DescriptorMatch",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_sol_a_r_1_1datastructure_1_1_descriptor_match.html",tooltip="A match between two descriptors."];
 }

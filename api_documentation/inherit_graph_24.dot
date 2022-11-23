@@ -4,5 +4,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node0 [label="SolAR::datastructure::Map",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_sol_a_r_1_1datastructure_1_1_map.html",tooltip="A generic map composed of an identification and a coordinate system. This class provides a generic ma..."];
+  Node0 [label="SolAR::datastructure\l::RectificationParameters",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_sol_a_r_1_1datastructure_1_1_rectification_parameters.html",tooltip=" "];
 }
