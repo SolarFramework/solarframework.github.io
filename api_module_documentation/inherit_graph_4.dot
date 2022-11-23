@@ -4,5 +4,7 @@ digraph "Graphical Class Hierarchy"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node0 [label="SolAR::MODULES::NONFREEOPENCV\l::SolARNonFreeOpenCVHelper",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_n_o_n_f_r_e_e_o_p_e_n_c_v_1_1_sol_a_r_non_free_open_c_v_helper.html",tooltip="A toolbox to convert OpenCV structures to SolAR structures and respectively."];
+  Node7 [label="base::features::ADescriptor\lMatcherGeometric",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node7 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node0 [label="SolAR::MODULES::OPENCV\l::SolARDescriptorMatcherGeometric\lOpencv",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_o_p_e_n_c_v_1_1_sol_a_r_descriptor_matcher_geometric_opencv.html",tooltip="Matches two sets of descriptors based on geometric constraints. UUID: 389ece8b-9e29-45ae-bd60-de1784f..."];
 }
