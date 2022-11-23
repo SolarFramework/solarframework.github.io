@@ -119,9 +119,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a6a51529a0b94971046d069111a0207b9"><td class="memItemLeft" align="right" valign="top">FrameworkReturnCode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_t_o_o_l_s_1_1_sol_a_r_boost_covisibility_graph.html#a6a51529a0b94971046d069111a0207b9">suppressNode</a> (const uint32_t node_id) override</td></tr>
 <tr class="memdesc:a6a51529a0b94971046d069111a0207b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method allow to suppress a node of the graph.  <a href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_t_o_o_l_s_1_1_sol_a_r_boost_covisibility_graph.html#a6a51529a0b94971046d069111a0207b9">More...</a><br /></td></tr>
 <tr class="separator:a6a51529a0b94971046d069111a0207b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a78afa4f7e598074fb06a2728d70a785b"><td class="memItemLeft" align="right" valign="top">FrameworkReturnCode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_t_o_o_l_s_1_1_sol_a_r_boost_covisibility_graph.html#a78afa4f7e598074fb06a2728d70a785b">getNeighbors</a> (const uint32_t node_id, const float minWeight, std::vector&lt; uint32_t &gt; &amp;neighbors) const override</td></tr>
-<tr class="memdesc:a78afa4f7e598074fb06a2728d70a785b"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method allow to get neighbors of a node in the graph.  <a href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_t_o_o_l_s_1_1_sol_a_r_boost_covisibility_graph.html#a78afa4f7e598074fb06a2728d70a785b">More...</a><br /></td></tr>
-<tr class="separator:a78afa4f7e598074fb06a2728d70a785b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a028f9182e02f8c06b70373baf045d2f2"><td class="memItemLeft" align="right" valign="top">FrameworkReturnCode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_t_o_o_l_s_1_1_sol_a_r_boost_covisibility_graph.html#a028f9182e02f8c06b70373baf045d2f2">getNeighbors</a> (const uint32_t node_id, const float minWeight, std::vector&lt; uint32_t &gt; &amp;neighbors, const uint32_t maxNbNeighbors=0) const override</td></tr>
+<tr class="memdesc:a028f9182e02f8c06b70373baf045d2f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method allow to get neighbors of a node in the graph.  <a href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_t_o_o_l_s_1_1_sol_a_r_boost_covisibility_graph.html#a028f9182e02f8c06b70373baf045d2f2">More...</a><br /></td></tr>
+<tr class="separator:a028f9182e02f8c06b70373baf045d2f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8f6f2b0c0f7913bc41c15071d6ad9cb9"><td class="memItemLeft" align="right" valign="top">FrameworkReturnCode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_t_o_o_l_s_1_1_sol_a_r_boost_covisibility_graph.html#a8f6f2b0c0f7913bc41c15071d6ad9cb9">minimalSpanningTree</a> (std::vector&lt; std::tuple&lt; uint32_t, uint32_t, float &gt; &gt; &amp;edges_weights, float &amp;minTotalWeights) override</td></tr>
 <tr class="memdesc:a8f6f2b0c0f7913bc41c15071d6ad9cb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method allow to get minimal spanning tree of the graph.  <a href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_t_o_o_l_s_1_1_sol_a_r_boost_covisibility_graph.html#a8f6f2b0c0f7913bc41c15071d6ad9cb9">More...</a><br /></td></tr>
 <tr class="separator:a8f6f2b0c0f7913bc41c15071d6ad9cb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -444,8 +444,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
 
 </div>
 </div>
-<a id="a78afa4f7e598074fb06a2728d70a785b" name="a78afa4f7e598074fb06a2728d70a785b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a78afa4f7e598074fb06a2728d70a785b">&#9670;&nbsp;</a></span>getNeighbors()</h2>
+<a id="a028f9182e02f8c06b70373baf045d2f2" name="a028f9182e02f8c06b70373baf045d2f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a028f9182e02f8c06b70373baf045d2f2">&#9670;&nbsp;</a></span>getNeighbors()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -469,7 +469,13 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">std::vector&lt; uint32_t &gt; &amp;&#160;</td>
-          <td class="paramname"><em>neighbors</em>&#160;</td>
+          <td class="paramname"><em>neighbors</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint32_t&#160;</td>
+          <td class="paramname"><em>maxNbNeighbors</em> = <code>0</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -487,13 +493,14 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
 <p>This method allow to get neighbors of a node in the graph. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">id</td><td>of the node to get neighbors </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">min</td><td>value between this node and a neighbor to accept </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">a</td><td>vector of neighbors sorted to greater weighted edge. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">node_id</td><td>id of the node to get neighbors </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">minWeight</td><td>min value between this node and a neighbor to accept </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">neighbors</td><td>a vector of neighbors sorted to greater weighted edge. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">maxNbNeighbors</td><td>the maximum number of neighbors. If it is zero, find all neighbors. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>FrameworkReturnCode::<em>SUCCESS</em> if the execution succeed, else FrameworkReturnCode::_ERROR. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>FrameworkReturnCode::<em>SUCCESS</em> if the addition succeed, else FrameworkReturnCode::_ERROR. </dd></dl>
 
 </div>
 </div>

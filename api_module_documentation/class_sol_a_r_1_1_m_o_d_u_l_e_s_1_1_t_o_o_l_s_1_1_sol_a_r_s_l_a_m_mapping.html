@@ -108,6 +108,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a847cacb3d001a4952266c95781b1a191"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_t_o_o_l_s_1_1_sol_a_r_s_l_a_m_mapping.html#a847cacb3d001a4952266c95781b1a191">setCameraParameters</a> (const SolAR::datastructure::CameraParameters &amp;camParams) override</td></tr>
 <tr class="memdesc:a847cacb3d001a4952266c95781b1a191"><td class="mdescLeft">&#160;</td><td class="mdescRight">this method is used to set intrinsic parameters and distorsion of the camera  <a href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_t_o_o_l_s_1_1_sol_a_r_s_l_a_m_mapping.html#a847cacb3d001a4952266c95781b1a191">More...</a><br /></td></tr>
 <tr class="separator:a847cacb3d001a4952266c95781b1a191"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b446cf7538938aacc369a6b1e0d14a8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_t_o_o_l_s_1_1_sol_a_r_s_l_a_m_mapping.html#a8b446cf7538938aacc369a6b1e0d14a8">idle</a> () override</td></tr>
+<tr class="memdesc:a8b446cf7538938aacc369a6b1e0d14a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">check the mapping process is idle  <a href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_t_o_o_l_s_1_1_sol_a_r_s_l_a_m_mapping.html#a8b446cf7538938aacc369a6b1e0d14a8">More...</a><br /></td></tr>
+<tr class="separator:a8b446cf7538938aacc369a6b1e0d14a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a881d208fbf13ca7fe4fc3f425ef05b61"><td class="memItemLeft" align="right" valign="top">FrameworkReturnCode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_t_o_o_l_s_1_1_sol_a_r_s_l_a_m_mapping.html#a881d208fbf13ca7fe4fc3f425ef05b61">process</a> (const SRef&lt; SolAR::datastructure::Frame &gt; frame, SRef&lt; SolAR::datastructure::Keyframe &gt; &amp;keyframe) override</td></tr>
 <tr class="memdesc:a881d208fbf13ca7fe4fc3f425ef05b61"><td class="mdescLeft">&#160;</td><td class="mdescRight">this method is used to process mapping task.  <a href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_t_o_o_l_s_1_1_sol_a_r_s_l_a_m_mapping.html#a881d208fbf13ca7fe4fc3f425ef05b61">More...</a><br /></td></tr>
 <tr class="separator:a881d208fbf13ca7fe4fc3f425ef05b61"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -129,21 +132,13 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
 <tr>
 <td class="paramname">SolAR::api::storage::ICovisibilityGraphManager   </td></tr>
 <tr>
-<td class="paramname">SolAR::api::solver::map::IKeyframeSelector   </td></tr>
-<tr>
-<td class="paramname">SolAR::api::solver::map::IBundler   </td></tr>
-<tr>
 <td class="paramname">SolAR::api::reloc::IKeyframeRetriever   </td></tr>
 <tr>
 <td class="paramname">SolAR::api::solver::map::ITriangulator   </td></tr>
 <tr>
 <td class="paramname">SolAR::solver::map::IMapFilter   </td></tr>
 <tr>
-<td class="paramname">SolAR::api::geom::IProject   </td></tr>
-<tr>
 <td class="paramname">SolAR::api::features::IDescriptorMatcherGeometric   </td></tr>
-<tr>
-<td class="paramname">SolAR::api::solver::pose::I2D3DCorrespondencesFinder   </td></tr>
 </table>
 </dd>
 </dl>
@@ -166,6 +161,34 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
 </dd>
 </dl>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a8b446cf7538938aacc369a6b1e0d14a8" name="a8b446cf7538938aacc369a6b1e0d14a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b446cf7538938aacc369a6b1e0d14a8">&#9670;&nbsp;</a></span>idle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SolAR::MODULES::TOOLS::SolARSLAMMapping::idle </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>check the mapping process is idle </p>
+<dl class="section return"><dt>Returns</dt><dd>true if the mapping process is idle, else false </dd></dl>
+
+</div>
+</div>
 <a id="a881d208fbf13ca7fe4fc3f425ef05b61" name="a881d208fbf13ca7fe4fc3f425ef05b61"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a881d208fbf13ca7fe4fc3f425ef05b61">&#9670;&nbsp;</a></span>process()</h2>
 

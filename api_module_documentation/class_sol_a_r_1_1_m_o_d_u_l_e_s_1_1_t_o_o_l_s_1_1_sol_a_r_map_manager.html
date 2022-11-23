@@ -103,6 +103,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a20121968c50069b92d424aefe01a0648"><td class="memItemLeft" align="right" valign="top">FrameworkReturnCode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_t_o_o_l_s_1_1_sol_a_r_map_manager.html#a20121968c50069b92d424aefe01a0648">getMap</a> (SRef&lt; SolAR::datastructure::Map &gt; &amp;map) override</td></tr>
 <tr class="memdesc:a20121968c50069b92d424aefe01a0648"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the map.  <a href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_t_o_o_l_s_1_1_sol_a_r_map_manager.html#a20121968c50069b92d424aefe01a0648">More...</a><br /></td></tr>
 <tr class="separator:a20121968c50069b92d424aefe01a0648"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add75b45365967f0d016e11bac01aa233"><td class="memItemLeft" align="right" valign="top">FrameworkReturnCode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_t_o_o_l_s_1_1_sol_a_r_map_manager.html#add75b45365967f0d016e11bac01aa233">getSubmap</a> (uint32_t idCenteredKeyframe, uint32_t nbKeyframes, SRef&lt; SolAR::datastructure::Map &gt; &amp;submap) override</td></tr>
+<tr class="memdesc:add75b45365967f0d016e11bac01aa233"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the submap around a centered keyframe.  <a href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_t_o_o_l_s_1_1_sol_a_r_map_manager.html#add75b45365967f0d016e11bac01aa233">More...</a><br /></td></tr>
+<tr class="separator:add75b45365967f0d016e11bac01aa233"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a580a138e3b956dafe8d89e492a3dd905"><td class="memItemLeft" align="right" valign="top">FrameworkReturnCode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_t_o_o_l_s_1_1_sol_a_r_map_manager.html#a580a138e3b956dafe8d89e492a3dd905">getLocalPointCloud</a> (const std::vector&lt; SRef&lt; SolAR::datastructure::Keyframe &gt; &gt; &amp;keyframes, std::vector&lt; SRef&lt; SolAR::datastructure::CloudPoint &gt; &gt; &amp;localPointCloud) const override</td></tr>
+<tr class="memdesc:a580a138e3b956dafe8d89e492a3dd905"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get local point cloud seen from the keyframes.  <a href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_t_o_o_l_s_1_1_sol_a_r_map_manager.html#a580a138e3b956dafe8d89e492a3dd905">More...</a><br /></td></tr>
+<tr class="separator:a580a138e3b956dafe8d89e492a3dd905"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad28eab514053ec10f02d2bc6098fe4ed"><td class="memItemLeft" align="right" valign="top">FrameworkReturnCode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_t_o_o_l_s_1_1_sol_a_r_map_manager.html#ad28eab514053ec10f02d2bc6098fe4ed">getLocalPointCloud</a> (const SRef&lt; SolAR::datastructure::Keyframe &gt; keyframe, const float minWeightNeighbor, std::vector&lt; SRef&lt; SolAR::datastructure::CloudPoint &gt; &gt; &amp;localPointCloud) const override</td></tr>
 <tr class="memdesc:ad28eab514053ec10f02d2bc6098fe4ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get local point cloud seen from the keyframe and its neighbors.  <a href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_t_o_o_l_s_1_1_sol_a_r_map_manager.html#ad28eab514053ec10f02d2bc6098fe4ed">More...</a><br /></td></tr>
 <tr class="separator:ad28eab514053ec10f02d2bc6098fe4ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -130,6 +136,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a61509e0cc230605dbccc796356c29a5a"><td class="memItemLeft" align="right" valign="top">FrameworkReturnCode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_t_o_o_l_s_1_1_sol_a_r_map_manager.html#a61509e0cc230605dbccc796356c29a5a">loadFromFile</a> () override</td></tr>
 <tr class="memdesc:a61509e0cc230605dbccc796356c29a5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load the map from the external file.  <a href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_t_o_o_l_s_1_1_sol_a_r_map_manager.html#a61509e0cc230605dbccc796356c29a5a">More...</a><br /></td></tr>
 <tr class="separator:a61509e0cc230605dbccc796356c29a5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae78e8a5c8429dd6d40a5187c67774d7c"><td class="memItemLeft" align="right" valign="top">FrameworkReturnCode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_t_o_o_l_s_1_1_sol_a_r_map_manager.html#ae78e8a5c8429dd6d40a5187c67774d7c">deleteFile</a> () override</td></tr>
+<tr class="memdesc:ae78e8a5c8429dd6d40a5187c67774d7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delete the map in external file.  <a href="class_sol_a_r_1_1_m_o_d_u_l_e_s_1_1_t_o_o_l_s_1_1_sol_a_r_map_manager.html#ae78e8a5c8429dd6d40a5187c67774d7c">More...</a><br /></td></tr>
+<tr class="separator:ae78e8a5c8429dd6d40a5187c67774d7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8c85333622d63a5676fba275cdeaf3e3"><td class="memItemLeft" align="right" valign="top"><a id="a8c85333622d63a5676fba275cdeaf3e3" name="a8c85333622d63a5676fba275cdeaf3e3"></a>
 org::bcom::xpcf::XPCFErrorCode&#160;</td><td class="memItemRight" valign="bottom"><b>onConfigured</b> () override final</td></tr>
 <tr class="separator:a8c85333622d63a5676fba275cdeaf3e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -267,8 +276,36 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
 
 </div>
 </div>
+<a id="ae78e8a5c8429dd6d40a5187c67774d7c" name="ae78e8a5c8429dd6d40a5187c67774d7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae78e8a5c8429dd6d40a5187c67774d7c">&#9670;&nbsp;</a></span>deleteFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FrameworkReturnCode SolAR::MODULES::TOOLS::SolARMapManager::deleteFile </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Delete the map in external file. </p>
+<dl class="section return"><dt>Returns</dt><dd>FrameworkReturnCode::<em>SUCCESS</em> if the deletion succeeds, else FrameworkReturnCode::_ERROR. </dd></dl>
+
+</div>
+</div>
 <a id="ad28eab514053ec10f02d2bc6098fe4ed" name="ad28eab514053ec10f02d2bc6098fe4ed"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad28eab514053ec10f02d2bc6098fe4ed">&#9670;&nbsp;</a></span>getLocalPointCloud()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ad28eab514053ec10f02d2bc6098fe4ed">&#9670;&nbsp;</a></span>getLocalPointCloud() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -320,6 +357,52 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
 
 </div>
 </div>
+<a id="a580a138e3b956dafe8d89e492a3dd905" name="a580a138e3b956dafe8d89e492a3dd905"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a580a138e3b956dafe8d89e492a3dd905">&#9670;&nbsp;</a></span>getLocalPointCloud() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FrameworkReturnCode SolAR::MODULES::TOOLS::SolARMapManager::getLocalPointCloud </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; SRef&lt; SolAR::datastructure::Keyframe &gt; &gt; &amp;&#160;</td>
+          <td class="paramname"><em>keyframes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; SRef&lt; SolAR::datastructure::CloudPoint &gt; &gt; &amp;&#160;</td>
+          <td class="paramname"><em>localPointCloud</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get local point cloud seen from the keyframes. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">keyframes</td><td>the keyframes to get local point cloud </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">localPointCloud</td><td>the local point cloud seen by the keyframes </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>FrameworkReturnCode::<em>SUCCESS if succeed, else FrameworkReturnCode::_ERROR</em> </dd></dl>
+
+</div>
+</div>
 <a id="a20121968c50069b92d424aefe01a0648" name="a20121968c50069b92d424aefe01a0648"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a20121968c50069b92d424aefe01a0648">&#9670;&nbsp;</a></span>getMap()</h2>
 
@@ -348,6 +431,59 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[out]</td><td class="paramname">map</td><td>the data of map </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>FrameworkReturnCode::<em>SUCCESS</em> if successfully, else FrameworkReturnCode::_ERROR. </dd></dl>
+
+</div>
+</div>
+<a id="add75b45365967f0d016e11bac01aa233" name="add75b45365967f0d016e11bac01aa233"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add75b45365967f0d016e11bac01aa233">&#9670;&nbsp;</a></span>getSubmap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FrameworkReturnCode SolAR::MODULES::TOOLS::SolARMapManager::getSubmap </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>idCenteredKeyframe</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>nbKeyframes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SRef&lt; SolAR::datastructure::Map &gt; &amp;&#160;</td>
+          <td class="paramname"><em>submap</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the submap around a centered keyframe. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">idCenteredKeyframe</td><td>the id of the centered keyframe </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">nbKeyframes</td><td>the maximum number of keyframes of the submap </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">submap</td><td>the submap </td></tr>
   </table>
   </dd>
 </dl>
@@ -413,7 +549,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
 </div><div class="memdoc">
 
 <p>Load the map from the external file. </p>
-<dl class="section return"><dt>Returns</dt><dd>FrameworkReturnCode::<em>SUCCESS</em> if the suppression succeed, else FrameworkReturnCode::_ERROR. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>FrameworkReturnCode::<em>SUCCESS</em> if the loading succeeds, else FrameworkReturnCode::_ERROR. </dd></dl>
 
 </div>
 </div>
@@ -545,7 +681,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>unloadComponent</b> (
 </div><div class="memdoc">
 
 <p>Save the map to the external file. </p>
-<dl class="section return"><dt>Returns</dt><dd>FrameworkReturnCode::<em>SUCCESS</em> if the suppression succeed, else FrameworkReturnCode::_ERROR. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>FrameworkReturnCode::<em>SUCCESS</em> if the backup succeeds, else FrameworkReturnCode::_ERROR. </dd></dl>
 
 </div>
 </div>
