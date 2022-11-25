@@ -559,8 +559,30 @@ window.cookieconsent.initialise({
 	
 
 		<li >
-			<a href="/documentation/architecture/">
-				Architecture
+			<a href="/documentation/framework_architecture">
+				Framework architecture
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/documentation/cloud_architecture">
+				Cloud platform
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/documentation/arcloud_services">
+				ARCloud services
 				
 			</a>
 		</li>
@@ -586,6 +608,7 @@ window.cookieconsent.initialise({
     </div>
   </div>
 </header>
+
 <section class="row">
   <article class="col-md-6">
     <h2>What is SolAR?</h2>
@@ -604,7 +627,19 @@ window.cookieconsent.initialise({
     </p>
   </article>
   <article class="col-md-5 whatsnew">
-    <h2>What's new in SolAR framework? <br /> (<a href="https://github.com/SolarFramework/SolAR/blob/release/0.10.0/ReleaseNotes.md" target="_blank" rel="noopener noreferrer">Release notes</a>)</h2>
+    <h2>What's new in SolAR framework? <br /> (<a href="https://github.com/SolarFramework/SolAR/blob/release/0.11.0/ReleaseNotes.md" target="_blank" rel="noopener noreferrer">Release notes</a>)</h2>
+    <p>v0.11.0 (2022/11/15) </p>
+      <div class="container">
+        <ul>
+          <li> Support of QR Code for relocalization </li>
+          <li> Support of PNG and JPEG decoding </li>
+          <li> New Front End service (for cloud deployment) </li>
+          <li> New Relocalization Markers pipeline and service </li>
+          <li> Optimization of Map Update, Mapping and Relocalization pipelines </li>
+          <li> CUDA versions of Map Update, Mapping and Relocalization services </li>
+          <li> Bug fixes, optimizations </li>
+        </ul>
+      </div>
     <p>v0.10.0 (2021/12/30) </p>
       <div class="container">
         <ul>
@@ -616,33 +651,57 @@ window.cookieconsent.initialise({
           <li> Add module PopSift for CUDA optimized SIFT feature detection and extraction.</li>
         </ul>
       </div>
-    <p>v0.9.1 (2021/08/30) </p>
-      <div class="container">
-        <ul>
-          <li> Bug fix and optimizations </li>
-        </ul>
-      </div>
-    <p>v0.9.0 (2021/01/07) </p>
-      <div class="container">
-        <ul>
-          <li> Map overlap detection and merging </li>
-          <li> Move to XPCF 2.5.0 to use remoting feature for creating communication layer of cloud services </li>
-        </ul>
-      </div>    
   </article>
 </section>
-<section>
-  <article>
-    <div class="videoblock col-md-8">
-      <h2>SolAR framework Overview</h2>
-      <div class="content">
-        <video src="homePage/videos/SolAROverview_0_7_0.mp4" width="960px" controls="">
-          Your browser does not support the video tag.
-        </video>
-      </div>
+
+<section class="row">
+  <h3>SolAR framework Overview</h3>      
+    <article class="col-md-6">
+      <p>An overview of our SolAR framework, an open-source solution dedicated to build Augmented Reality applications that offers cloud services.</p>
+    </article>
+    <article class="col-md-6">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/UrANRdLtdhA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+  </article>
+</section>
+
+<section class="row">
+    <h3>SolAR ARCloud Services</h3>
+  <article class="col-md-6">
+    <div>
+      <h2>First step - map initialization</h2>
+      <p>This video shows the map creation process, using the 'SolaR ARCloud MapInit Service'.</p> 
+      <p>Wearing a Hololens 2 headset, an operator is able to create the first part of the future global map. A fiducial marker is used only once, during this first initialization of the map, to define the 'World reference point' of the map.</p>
     </div>
   </article>
+  <article class="col-md-6">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/TWdfySqj4lo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+  </article>
 </section>
+<section class="row">
+  <article class="col-md-6">
+    <div>
+      <h2>Second step - map extension </h2>
+      <p>In this video, an operator launches the 'SolaR ARCloud MapExtend Service' from an already mapped area and can explore a new area to extend the existing map.</p> 
+      <p>Once the MapExtend Service has located the user in a previously mapped area, a corresponding portion of the global map  is sent to the device.  Then, the service is able to extend the extracted map according to the user's movement. The merging of this new extended map with the global map is done later in the background.</p>
+    </div>
+  </article>
+  <article class="col-md-6">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/CzCQ9EnhkWs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+  </article>
+</section>
+
+<section class="row">
+  <article class="col-md-6">
+    <div>
+      <h2>Relocalization service </h2>
+      <p>This video presents the positioning service 'SolAR ARCloud Reloc Service' which is a service to quickly locate the user on the global map and track his movements.</p>
+    </div>
+  </article>
+  <article class="col-md-6">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Yi9pWnbDs74" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+  </article>
+</section>
+
 <section class="row">
   <article class="col-md-12">
     <h2>Who needs SolAR?</h2>

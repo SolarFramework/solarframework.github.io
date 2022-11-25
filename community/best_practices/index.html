@@ -559,8 +559,30 @@ window.cookieconsent.initialise({
 	
 
 		<li >
-			<a href="/documentation/architecture/">
-				Architecture
+			<a href="/documentation/framework_architecture">
+				Framework architecture
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/documentation/cloud_architecture">
+				Cloud platform
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/documentation/arcloud_services">
+				ARCloud services
 				
 			</a>
 		</li>
@@ -673,6 +695,10 @@ This encompasses the SolAR framework and the GUI interface and unless otherwise 
 <td class="tableblock halign-left valign-top"><p class="tableblock">SolAR::api::features</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SolARFramework/interfaces/api/fusion</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SolAR::api::fusion</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">SolARFramework/interfaces/api/geom</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">SolAR::api::geom</p></td>
 </tr>
@@ -689,8 +715,36 @@ This encompasses the SolAR framework and the GUI interface and unless otherwise 
 <td class="tableblock halign-left valign-top"><p class="tableblock">SolAR::api::input::files</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SolARFramework/interfaces/api/loop</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SolAR::api::input::loop</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SolARFramework/interfaces/api/output/files</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SolAR::api::input::output::files</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SolARFramework/interfaces/api/pipeline</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SolAR::api::input::pipeline</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SolARFramework/interfaces/api/pointcloud</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SolAR::api::input::pointcloud</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SolARFramework/interfaces/api/reloc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SolAR::api::input::reloc</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SolARFramework/interfaces/api/segm</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SolAR::api::input::segm</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">SolARFramework/interfaces/api/sink</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">SolAR::api::sink</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SolARFramework/interfaces/api/slam</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SolAR::api::slam</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">SolARFramework/interfaces/api/solver/map</p></td>
@@ -699,6 +753,14 @@ This encompasses the SolAR framework and the GUI interface and unless otherwise 
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">SolARFramework/interfaces/api/solver/pose</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">SolAR::api::solver::pose</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SolARFramework/interfaces/api/source</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SolAR::api::solver::source</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SolARFramework/interfaces/api/tracking</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SolAR::api::solver::tracking</p></td>
 </tr>
 </tbody>
 </table>
@@ -714,7 +776,7 @@ This encompasses the SolAR framework and the GUI interface and unless otherwise 
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="cpp"><span class="directive">virtual</span> <span class="directive">void</span> drawCircle(SRef&lt;Point2Df&gt; point, <span class="predefined-type">unsigned</span> <span class="predefined-type">int</span> radius, <span class="predefined-type">int</span> thickness, std::vector&lt;<span class="predefined-type">unsigned</span> <span class="predefined-type">int</span>&gt; &amp; bgrValues, SRef&lt;Image&gt; displayImage) = <span class="integer">0</span>;
- <span class="directive">virtual</span> <span class="directive">void</span> drawCircles(std::vector&lt;SRef&lt;Point2Df&gt;&gt;&amp; points, <span class="predefined-type">unsigned</span> <span class="predefined-type">int</span> radius, <span class="predefined-type">int</span> thickness, SRef&lt;Image&gt; displayImage) = <span class="integer">0</span>;</code></pre>
+<span class="directive">virtual</span> <span class="directive">void</span> drawCircles(std::vector&lt;SRef&lt;Point2Df&gt;&gt;&amp; points, <span class="predefined-type">unsigned</span> <span class="predefined-type">int</span> radius, <span class="predefined-type">int</span> thickness, SRef&lt;Image&gt; displayImage) = <span class="integer">0</span>;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -736,6 +798,7 @@ This encompasses the SolAR framework and the GUI interface and unless otherwise 
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="cpp">XPCF_DEFINE_INTERFACE_TRAITS(SolARnamespaces::IInterfaceClassName,
                              <span class="string"><span class="delimiter">&quot;</span><span class="content">aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee</span><span class="delimiter">&quot;</span></span>,
+                             <span class="string"><span class="delimiter">&quot;</span><span class="content">Interface name</span><span class="delimiter">&quot;</span></span>,
                              <span class="string"><span class="delimiter">&quot;</span><span class="content">Interface description</span><span class="delimiter">&quot;</span></span>);</code></pre>
 </div>
 </div>
@@ -746,6 +809,7 @@ This encompasses the SolAR framework and the GUI interface and unless otherwise 
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="cpp">XPCF_DEFINE_INTERFACE_TRAITS(SolAR::api::display::I2DOverlay,
                              <span class="string"><span class="delimiter">&quot;</span><span class="content">62b8b0b5-9344-40e6-a288-e609eb3ff0f1</span><span class="delimiter">&quot;</span></span>,
+                             <span class="string"><span class="delimiter">&quot;</span><span class="content">I2DOverlay</span><span class="delimiter">&quot;</span></span>,
                              <span class="string"><span class="delimiter">&quot;</span><span class="content">SolAR::I2DOverlay interface</span><span class="delimiter">&quot;</span></span>);</code></pre>
 </div>
 </div>
@@ -850,11 +914,13 @@ class Component2;
 
 XPCF_DEFINE_COMPONENT_TRAITS(SolAR::MODULES::NAME::Component1,
                              <span class="string"><span class="delimiter">&quot;</span><span class="content">aaaaaaaa-bbbb-cccc-dddd-eeeeeeee</span><span class="delimiter">&quot;</span></span>,
+                             <span class="string"><span class="delimiter">&quot;</span><span class="content">Component1</span><span class="delimiter">&quot;</span></span>,
                              <span class="string"><span class="delimiter">&quot;</span><span class="content">SolAR::MODULES::NAME::Component1 definition</span><span class="delimiter">&quot;</span></span>)
 
 
 XPCF_DEFINE_COMPONENT_TRAITS(SolAR::MODULES::NAME::Component1,
                              <span class="string"><span class="delimiter">&quot;</span><span class="content">ffffffff-gggg-hhhh-iiii-jjjjjjjj</span><span class="delimiter">&quot;</span></span>,
+                             <span class="string"><span class="delimiter">&quot;</span><span class="content">Component2</span><span class="delimiter">&quot;</span></span>,
                               <span class="string"><span class="delimiter">&quot;</span><span class="content">SolAR::MODULES::NAME::Component2 definition</span><span class="delimiter">&quot;</span></span>)
 
 
@@ -878,7 +944,7 @@ NameOfModule.cpp:</p>
 
 namespace xpcf=org::bcom::xpcf;
 
-XPCF_DECLARE_MODULE("kkkkkkkk-llll-mmmm-nnnn-oooooooo", "ModuleName")
+XPCF_DECLARE_MODULE("kkkkkkkk-llll-mmmm-nnnn-oooooooo", "ModuleName", "ModuleDescription")
 
 
 extern "C" XPCF_MODULEHOOKS_API xpcf::XPCFErrorCode XPCF_getComponent(const boost::uuids::uuid&amp; componentUUID,SRef&lt;xpcf::IComponentIntrospect&gt;&amp; interfaceRef)
@@ -988,7 +1054,7 @@ if not, or if you think the existing interfaces do not totally fit your need, pl
 <p>3.3. Your components must inherit from component interfaces defined by the SolARFramework. If no component interface fits your need or if you think an existing interface should be extended, please contact the SolAR team.</p>
 </div>
 <div class="paragraph">
-<p>3.4. Your components can define their own attributes which should be defined as private. No attributes can be shared by other components. If you want to shared data between components, pass them as attribute of the processing method.</p>
+<p>3.4. Your components can define their own attributes which should be defined as private. No attributes can be shared by other components. If you want to share data between components, pass them as attributes of the processing method.</p>
 </div>
 <div class="paragraph">
 <p>3.5. Your components can define their own methods which should be defined as private. The only public methods should be the ones defined by the abstract interfaces.</p>
@@ -1009,7 +1075,7 @@ if not, or if you think the existing interfaces do not totally fit your need, pl
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="cpp">SolARImageFilterBinaryOpencv::SolARImageFilterBinaryOpencv():ConfigurableBase(xpcf::toUUID&lt;SolARImageFilterBinaryOpencv&gt;())
 {
-    addInterface&lt;api::image::IImageFilter&gt;(<span class="local-variable">this</span>);
+    declareInterface&lt;api::image::IImageFilter&gt;(<span class="local-variable">this</span>);
 }</code></pre>
 </div>
 </div>
@@ -1019,7 +1085,7 @@ example :</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="cpp">    params-&gt;wrapInteger(<span class="string"><span class="delimiter">&quot;</span><span class="content">min</span><span class="delimiter">&quot;</span></span>, min);</code></pre>
+<pre class="CodeRay highlight"><code data-lang="cpp">    declareProperty(<span class="string"><span class="delimiter">&quot;</span><span class="content">min</span><span class="delimiter">&quot;</span></span>, m_min);</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1030,9 +1096,8 @@ example :</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="cpp"><span class="directive">auto</span> rIConfigurable_imageFilterBinary = imageFilterBinary-&gt;bindTo&lt;xpcf::IConfigurable&gt;();
-<span class="directive">auto</span> imageFilterBinary_property=rIConfigurable_imageFilterBinary-&gt;getProperty(<span class="string"><span class="delimiter">&quot;</span><span class="content">min</span><span class="delimiter">&quot;</span></span>);
-imageFilterBinary_property-&gt;setIntegerValue(-<span class="integer">1</span>);</code></pre>
+<pre class="CodeRay highlight"><code data-lang="cpp"><span class="directive">auto</span> imageFilterBinary =xpcfComponentManager-&gt;resolve&lt;image::IImageFilter&gt;();
+imageFilterBinary-&gt;bindTo&lt;xpcf::IConfigurable&gt;()-&gt;getProperty(<span class="string"><span class="delimiter">&quot;</span><span class="content">min</span><span class="delimiter">&quot;</span></span>)-&gt;setIntegerValue(-<span class="integer">1</span>);</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1043,7 +1108,7 @@ imageFilterBinary_property-&gt;setIntegerValue(-<span class="integer">1</span>);
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="cpp"><span class="directive">virtual</span> FrameworkReturnCode convert(SRef&lt;Image&gt; imgSrc, SRef&lt;Image&gt;&amp; imgDst) = <span class="integer">0</span>;</code></pre>
+<pre class="CodeRay highlight"><code data-lang="cpp"><span class="directive">virtual</span> FrameworkReturnCode convert(<span class="directive">const</span> SRef&lt;Image&gt; imgSrc, SRef&lt;Image&gt;&amp; imgDst) = <span class="integer">0</span>;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1105,7 +1170,7 @@ Please refer to existing SolAR components and take them as examples.
 </ul>
 </div>
 <div class="paragraph">
-<p>4.2. For each module, there should be a XML file describing the components with their UID. Please refer to SolarModuleTools example, and XPCF documentation to do it.</p>
+<p>4.2. For each module, there should be an XML file describing the components with their UID. Please refer to SolarModuleTools example, and XPCF documentation to do it.</p>
 </div>
 <div class="paragraph">
 <p>4.3. In each module, there should be a Module unit test project, gathering the unit tests of all components.</p>
@@ -1115,7 +1180,7 @@ Please refer to existing SolAR components and take them as examples.
 <h3 id="pipepline_management"><a class="anchor" href="#pipepline_management"></a><a class="link" href="#pipepline_management">Pipepline Management</a></h3>
 <div class="paragraph">
 <p>SolAR architecture is based on a pipeline manager called XPCF and implemented by b&lt;&gt;com.
-Please refer to the XPCF github project link: <a href="https://github.com/b-com-software-basis/xpcf" class="bare">https://github.com/b-com-software-basis/xpcf</a> [XPCF GITHUB repository] to know more about XPCF.</p>
+Please refer to the XPCF github project link: <a href="https://github.com/b-com-software-basis/xpcf">XPCF GITHUB repository</a> to know more about XPCF.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -1915,7 +1980,7 @@ A method that is already sufficiently documented in the superclass may omit the 
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Comments</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Comments are written in English. Do not use accented characters in source files.
-All comments should be “DOxygen” compatible (see <a href="#tools">Tools</a>). All tags must start with ‘@’ and not ‘\’.
+All comments should be “Doxygen” compatible (see <a href="#tools">Tools</a>). All tags must start with ‘@’ and not ‘\’.
 Each block of code should be commented. Algorithms must be commented.
 Bugs from Bugzilla must not be referenced in the code.</p></td>
 </tr>
@@ -2005,8 +2070,8 @@ Local arrays are tolerated if they are small in size (no more than 16-32 values)
 <td class="tableblock halign-left valign-top"><p class="tableblock">Most of the code formatting rules described in this document can be enforced using “uncrustify”.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">DOxygen</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">DOxygen extract comments from the source code and generates documentation. It is recommended to check the comment structure with this tool.
+<td class="tableblock halign-left valign-top"><p class="tableblock">Doxygen</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Doxygen extract comments from the source code and generates documentation. It is recommended to check the comment structure with this tool.
 Refer to the online manual (<a href="http://www.stack.nl/~dimitri/doxygen/index.html" class="bare">http://www.stack.nl/~dimitri/doxygen/index.html</a>) for a complete description of DOxygen rules.</p></td>
 </tr>
 </tbody>

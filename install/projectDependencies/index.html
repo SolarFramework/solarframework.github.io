@@ -559,8 +559,30 @@ window.cookieconsent.initialise({
 	
 
 		<li >
-			<a href="/documentation/architecture/">
-				Architecture
+			<a href="/documentation/framework_architecture">
+				Framework architecture
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/documentation/cloud_architecture">
+				Cloud platform
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/documentation/arcloud_services">
+				ARCloud services
 				
 			</a>
 		</li>
@@ -602,7 +624,15 @@ window.cookieconsent.initialise({
 </thead>
 <tbody>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SolARCore</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No dependency</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">SolARAllModules</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SolARCore</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SolARAllModulesCuda</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">SolARCore</p></td>
 </tr>
 <tr>
@@ -622,8 +652,12 @@ window.cookieconsent.initialise({
 <td class="tableblock halign-left valign-top"><p class="tableblock">SolARAllModules</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">SolARCore</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">No dependency</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SolARAllServices</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SolARAllPipelines</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SolARAllServicesTests</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SolARAllServices</p></td>
 </tr>
 </tbody>
 </table>

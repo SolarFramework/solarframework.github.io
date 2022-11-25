@@ -559,8 +559,30 @@ window.cookieconsent.initialise({
 	
 
 		<li >
-			<a href="/documentation/architecture/">
-				Architecture
+			<a href="/documentation/framework_architecture">
+				Framework architecture
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/documentation/cloud_architecture">
+				Cloud platform
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/documentation/arcloud_services">
+				ARCloud services
 				
 			</a>
 		</li>
@@ -591,9 +613,10 @@ window.cookieconsent.initialise({
 <li><a href="#configure_qt_android_kit">Configure Qt Android Kit</a></li>
 </ul>
 </li>
-<li><a href="#build_solar_v0_10_0">Build SolAR v0.10.0</a>
+<li><a href="#build_solar">Build SolAR</a>
 <ul class="sectlevel2">
 <li><a href="#clone_solar">Clone SolAR</a></li>
+<li><a href="#build_with_scripts">Build with scripts</a></li>
 <li><a href="#build_on_qt_creator">Build on Qt Creator</a></li>
 </ul>
 </li>
@@ -621,7 +644,7 @@ window.cookieconsent.initialise({
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">SolAR Demo (Fiducial, Natural, SLAM)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/SolarFramework/SolARUnityPlugin/releases/tag/0.9.1">v0.9.1 download link</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/SolarFramework/SolARUnityPlugin/releases/tag/0.11.0">v0.11.0 download link</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -763,7 +786,8 @@ conan profile update settings.compiler=clang android-clang-arm64-v8a ;
 conan profile update settings.compiler.version=8 android-clang-arm64-v8a ;
 conan profile update settings.compiler.libcxx=libc++ android-clang-arm64-v8a ;
 conan profile update settings.os.api_level=21 android-clang-arm64-v8a ;
-conan profile update settings.compiler.cppstd=17 android-clang-arm64-v8a</pre>
+conan profile update settings.compiler.cppstd=17 android-clang-arm64-v8a
+conan profile update settings.ceres-solver.build_type=Release</pre>
 </div>
 </div>
 <div class="admonitionblock important">
@@ -813,6 +837,18 @@ compiler.cppstd=17
 <div class="paragraph">
 <p>Now, you are ready to download your dependencies with Remaken.</p>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+ceres_solver package has problems with glog in debug mode, that is why Release build_type is forced for it in the conan profile.
+</td>
+</tr>
+</table>
+</div>
 </div>
 <div class="sect3">
 <h4 id="use_remaken"><a class="anchor" href="#use_remaken"></a><a class="link" href="#use_remaken">Use Remaken</a></h4>
@@ -860,7 +896,7 @@ Some of the module will download and build third parties using Conan which requi
 </div>
 </div>
 <div class="sect1">
-<h2 id="build_solar_v0_10_0"><a class="anchor" href="#build_solar_v0_10_0"></a><a class="link" href="#build_solar_v0_10_0">Build SolAR v0.10.0</a></h2>
+<h2 id="build_solar"><a class="anchor" href="#build_solar"></a><a class="link" href="#build_solar">Build SolAR</a></h2>
 <div class="sectionbody">
 <div class="sect2">
 <h3 id="clone_solar"><a class="anchor" href="#clone_solar"></a><a class="link" href="#clone_solar">Clone SolAR</a></h3>
@@ -908,6 +944,25 @@ git submodule foreach --recursive git pull</pre>
 </div>
 </div>
 <div class="sect2">
+<h3 id="build_with_scripts"><a class="anchor" href="#build_with_scripts"></a><a class="link" href="#build_with_scripts">Build with scripts</a></h3>
+<div class="paragraph">
+<p>Build scripts are available in the <em>scripts</em> folder.
+Just run <em>build_all.*</em> to rebuild the SolAR framework, the modules and their tests, the pipelines and their tests, the samples, the services and their tests. If you want to rebuild them seprately, use the corresponding script. Check with <em>build_all.* --help</em> the different options such as the cross-build for Android, the number of processors to use, the version of Qt, the path to SolAR root folder, etc.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Linux is the prefered platform to perform an Android cross-build.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
 <h3 id="build_on_qt_creator"><a class="anchor" href="#build_on_qt_creator"></a><a class="link" href="#build_on_qt_creator">Build on Qt Creator</a></h3>
 <div class="paragraph">
 <p>Counting the framework, the pipeline manager, modules, module tests, samples, pipelines, pipeline tests, there are more than 60 QT projects on GitHub. In order to ease the building of all these projects, they are grouped in the following parent QT projects available into the root folder of SolAR:</p>
@@ -947,38 +1002,7 @@ git submodule foreach --recursive git pull</pre>
 <p>Check by clicking on the <code><em>Projects</em></code> tab, and then on the <code><em>Manage Kits&#8230;&#8203;</em></code> button that your <em>Qt x.x.x Android for arm64-v8a</em> kit is well configured</p>
 </div>
 <div class="paragraph">
-<p>Now, you have to configure your parent project before building them. In your project build settings of your kit, for each configuration (release and debug), add the following argument to the <em>Builds Steps &gt; Make</em> step:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>SolARCore: <code>install</code></p>
-</li>
-<li>
-<p>SolARAllModules: <code>install</code> and <code>install_deps</code></p>
-</li>
-<li>
-<p>SolARAllModulesTests: <code>install</code> and <code>install_deps</code></p>
-</li>
-<li>
-<p>SolARAllSamples: <code>install</code> and <code>install_deps</code></p>
-</li>
-<li>
-<p>SolARAllPipelines: <code>install</code></p>
-</li>
-<li>
-<p>SolARAllPipelineTests: <code>install</code> and <code>install_deps</code></p>
-</li>
-<li>
-<p>SolARAllServices: <code>install</code></p>
-</li>
-<li>
-<p>SolARAllServicesTests: <code>install</code> and <code>install_deps</code></p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>The <code>install</code> step  will copy the built binaries into <em>${HOME}/.remaken/packages</em>, and the <code>install_deps</code> step will also copy its dependencies.</p>
+<p>The <code>build</code> step  will copy the built binaries into <em>${HOME}/.remaken/packages</em>.</p>
 </div>
 <div class="admonitionblock important">
 <table>
@@ -1033,7 +1057,15 @@ Since QT Creator 4.14.0, we highly recommand to set the project option <code>qma
 </thead>
 <tbody>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SolARCore</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No dependency</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">SolARAllModules</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SolARCore</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SolARAllModulesCuda</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">SolARCore</p></td>
 </tr>
 <tr>
@@ -1053,8 +1085,12 @@ Since QT Creator 4.14.0, we highly recommand to set the project option <code>qma
 <td class="tableblock halign-left valign-top"><p class="tableblock">SolARAllModules</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">SolARCore</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">No dependency</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SolARAllServices</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SolARAllPipelines</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SolARAllServicesTests</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SolARAllServices</p></td>
 </tr>
 </tbody>
 </table>

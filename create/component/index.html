@@ -559,8 +559,30 @@ window.cookieconsent.initialise({
 	
 
 		<li >
-			<a href="/documentation/architecture/">
-				Architecture
+			<a href="/documentation/framework_architecture">
+				Framework architecture
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/documentation/cloud_architecture">
+				Cloud platform
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/documentation/arcloud_services">
+				ARCloud services
 				
 			</a>
 		</li>
@@ -624,12 +646,7 @@ window.cookieconsent.initialise({
 <h3 id="download_qtcreator_wizards_for_xpcf"><a class="anchor" href="#download_qtcreator_wizards_for_xpcf"></a><a class="link" href="#download_qtcreator_wizards_for_xpcf">Download QTCreator wizards for XPCF</a></h3>
 <div class="paragraph">
 <p>Creating a new component from scratch can be a little bit tricky. To help you, a QTCreator wizard is available and will make the task much easier.<br>
-Start by installing this wizard by launching the <em>install.bat</em> on Windows or <em>install.sh</em> on Linux (in your ${XPCF_MODULE_ROOT}/xpcf/[version]/wizards/qtcreator).<br></p>
-</div>
-<div class="paragraph">
-<p>You can also download the wizard on the following link:<br>
-<a href="https://github.com/SolarFramework/Tools/releases/download/XPCFWizard_2_5_0/XPCF_qtcreator_wizards.zip" class="bare">https://github.com/SolarFramework/Tools/releases/download/XPCFWizard_2_5_0/XPCF_qtcreator_wizards.zip</a><br>
-Then unzip the downloaded file, and run the <em>install.bat</em> on Windows or the <em>install.sh</em> on Linux.</p>
+Start by installing this wizard by launching the <em>install.bat</em> on Windows or <em>install.sh</em> on Linux (in your ${XPCF_MODULE_ROOT}/xpcf/[version]/wizards/qtcreator).</p>
 </div>
 </div>
 <div class="sect2">
@@ -963,7 +980,7 @@ XPCF_END_COMPONENTS_DECLARATION</code></pre>
 <div class="title">xpcf_MyModule_registry.xml</div>
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="xml"><span class="tag">&lt;xpcf-registry&gt;</span>
-<span class="tag">&lt;module</span> <span class="attribute-name">uuid</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">5b066de7-2a9f-4dff-a730-ce82adafe2f6</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">MyModule</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">description</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">MyModule_Description</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">path</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">$XPCF_MODULE_ROOT/SolARBuild/MyModule/1.0.0/lib/x86_64/shared</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
+<span class="tag">&lt;module</span> <span class="attribute-name">uuid</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">5b066de7-2a9f-4dff-a730-ce82adafe2f6</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">MyModule</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">description</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">MyModule_Description</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">path</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">$XPCF_MODULE_ROOT/SolARBuild/MyModule/0.11.0/lib/x86_64/shared</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
 
 <span class="tag">&lt;component</span> <span class="attribute-name">uuid</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">4bc8c7d0-9e57-4816-8e92-e26103cc43f7</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">MyDesrciptorsExtractor</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">description</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">MyDesrciptorsExtractor Description</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span> <i class="conum" data-value="1"></i><b>(1)</b>
         <span class="tag">&lt;interface</span> <span class="attribute-name">uuid</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">125f2007-1bf9-421d-9367-fbdc1210d006</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">name</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">IComponentIntrospect</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">description</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">IComponentIntrospect</span><span class="delimiter">&quot;</span></span><span class="tag">/&gt;</span> <i class="conum" data-value="2"></i><b>(2)</b>

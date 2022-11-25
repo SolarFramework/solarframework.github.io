@@ -559,8 +559,30 @@ window.cookieconsent.initialise({
 	
 
 		<li >
-			<a href="/documentation/architecture/">
-				Architecture
+			<a href="/documentation/framework_architecture">
+				Framework architecture
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/documentation/cloud_architecture">
+				Cloud platform
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/documentation/arcloud_services">
+				ARCloud services
 				
 			</a>
 		</li>
@@ -589,9 +611,10 @@ window.cookieconsent.initialise({
 <li><a href="#install_dependencies">Install dependencies</a></li>
 </ul>
 </li>
-<li><a href="#build_solar_v0_10_0">Build SolAR v0.10.0</a>
+<li><a href="#build_solar">Build SolAR</a>
 <ul class="sectlevel2">
 <li><a href="#clone_solar">Clone SolAR</a></li>
+<li><a href="#build_with_scripts">Build with scripts</a></li>
 <li><a href="#build_on_qt_creator">Build on Qt Creator</a></li>
 <li><a href="#build_on_visual_studio">Build on Visual Studio</a></li>
 </ul>
@@ -662,10 +685,10 @@ As you will see later, the SolAR framework is based on <em>QMake</em> originally
 <div class="ulist">
 <ul>
 <li>
-<p>QT creator 4.14.0</p>
+<p>QT creator</p>
 </li>
 <li>
-<p>QT Creator 4.14.0 CDB Debugger Support</p>
+<p>QT Creator CDB Debugger Support</p>
 </li>
 </ul>
 </div>
@@ -675,7 +698,7 @@ As you will see later, the SolAR framework is based on <em>QMake</em> originally
 <div class="ulist">
 <ul>
 <li>
-<p>Qt 5.14.2 (last version proposed)</p>
+<p>Qt</p>
 <div class="ulist">
 <ul>
 <li>
@@ -692,13 +715,13 @@ As you will see later, the SolAR framework is based on <em>QMake</em> originally
 <div class="ulist">
 <ul>
 <li>
-<p>Qt Creator 4.14.0 CDB Debugger Support</p>
+<p>Qt Creator CDB Debugger Support</p>
 </li>
 <li>
 <p>Debugging Tools for Windows</p>
 </li>
 <li>
-<p>CMake 3.19.2 64-bit</p>
+<p>CMake 64-bit</p>
 </li>
 </ul>
 </div>
@@ -729,10 +752,13 @@ As you will see later, the SolAR framework is based on <em>QMake</em> originally
 <div class="ulist">
 <ul>
 <li>
-<p>Start by downloading and installing <em>Remaken</em> available on the following link: <a href="https://github.com/b-com-software-basis/remaken/releases/tag/1.8.1">Remaken installer version 1.8.1</a></p>
+<p>Start by downloading and installing the latest version of <em>Remaken</em> available on the following link: <a href="https://github.com/b-com-software-basis/remaken/releases/">Remaken installer</a></p>
 </li>
 <li>
-<p>Launch the remaken installer <strong>with administrator rights</strong>. By default, the dependencies will be installed in your <code>C:/Users/%Username%</code> directory, but you can change it by setting another location for your <em>REMAKEN_PKG_ROOT</em> environment variable. By default, Remaken will install Conan, pkg_config and CMake which will be used afterwards. Conan will check these remotes for searching your dependencies.</p>
+<p>Launch the remaken installer <strong>with administrator rights</strong>. By default, the dependencies will be installed in your <code>C:/Users/%Username%/.remaken/packages</code> directory, but you can change it by setting another location for your <em>REMAKEN_PKG_ROOT</em> environment variable. By default, Remaken will install Conan, pkg_config and CMake which will be used afterwards. Conan will check these remotes for searching your dependencies.</p>
+</li>
+<li>
+<p>Set XPCF_MODULE_ROOT environment variable to <code>C:/Users/%Username%/.remaken/packages/win-cl-14.1</code> (if <em>REMAKEN_PKG_ROOT</em> is set to its default value)</p>
 </li>
 <li>
 <p>SolAR has its own conan remote to store pre-built dependencies for the common configurations used by the SolAR Framework. You will need to add this conan remote with the following command in a command prompt:</p>
@@ -796,13 +822,39 @@ compiler=Visual Studio
 compiler.cppstd=17
 compiler.version=15
 build_type=Release
+ceres-solver:build_type=Release
+ceres-solver:compiler.runtime=MD
 [options]
 [build_requires]
 [env]</pre>
 </div>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+ceres_solver package has problems with glog in debug mode, that is why Release build_type is forced for it in the conan profile.
+</td>
+</tr>
+</table>
+</div>
 <div class="paragraph">
 <p>Now, you are ready to download your dependencies with Remaken.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="install_cuda"><a class="anchor" href="#install_cuda"></a><a class="link" href="#install_cuda">Install CUDA</a></h4>
+<div class="paragraph">
+<p>If you want to build or run SolAR pipelines with CUDA optimizations, you will need to install CUDA.</p>
+</div>
+<div class="paragraph">
+<p>Follow the Nvidia instructions available here: <a href="https://docs.nvidia.com/cuda/cuda-installation-guide-microsoft-windows/index.html" class="bare">https://docs.nvidia.com/cuda/cuda-installation-guide-microsoft-windows/index.html</a></p>
+</div>
+<div class="paragraph">
+<p>You will also need to install cuDNN to run deepl learning inference by following the Nvidia instructions: <a href="https://docs.nvidia.com/deeplearning/cudnn/install-guide/index.html#install-windows" class="bare">https://docs.nvidia.com/deeplearning/cudnn/install-guide/index.html#install-windows</a></p>
 </div>
 </div>
 <div class="sect3">
@@ -816,10 +868,10 @@ build_type=Release
 <div class="ulist">
 <ul>
 <li>
-<p><a href="https://raw.githubusercontent.com/SolarFramework/SolAR/release/0.10.0/packagedependencies.txt">packagedependencies.txt</a></p>
+<p><a href="https://raw.githubusercontent.com/SolarFramework/SolAR/release/0.11.0/packagedependencies.txt">packagedependencies.txt</a></p>
 </li>
 <li>
-<p><a href="https://raw.githubusercontent.com/SolarFramework/SolAR/release/0.10.0/packagedependencies-win.txt">packagedependencies-win.txt</a></p>
+<p><a href="https://raw.githubusercontent.com/SolarFramework/SolAR/release/0.11.0/packagedependencies-win.txt">packagedependencies-win.txt</a></p>
 </li>
 </ul>
 </div>
@@ -865,7 +917,7 @@ You do not need to launch <code>remaken install</code> on <code>packagedependenc
 </div>
 </div>
 <div class="sect1">
-<h2 id="build_solar_v0_10_0"><a class="anchor" href="#build_solar_v0_10_0"></a><a class="link" href="#build_solar_v0_10_0">Build SolAR v0.10.0</a></h2>
+<h2 id="build_solar"><a class="anchor" href="#build_solar"></a><a class="link" href="#build_solar">Build SolAR</a></h2>
 <div class="sectionbody">
 <div class="sect2">
 <h3 id="clone_solar"><a class="anchor" href="#clone_solar"></a><a class="link" href="#clone_solar">Clone SolAR</a></h3>
@@ -910,6 +962,25 @@ git submodule foreach --recursive git pull</pre>
 </div>
 <div class="paragraph">
 <p>If you do not want to download all the source codes of SolAR, you can have a look to the different repositories available on Github on the <a href="../../community/GIT/index.html#GIT repositories">Community/Git page</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="build_with_scripts"><a class="anchor" href="#build_with_scripts"></a><a class="link" href="#build_with_scripts">Build with scripts</a></h3>
+<div class="paragraph">
+<p>For Windows, build scripts are available in the <em>scripts</em> folder.
+Just run <em>build_all.bat</em> to rebuild the SolAR framework, the modules and their tests, the pipelines and their tests, the samples, the services and their tests. If you want to rebuild them seprately, use the corresponding script. Check with <em>build_all.bat --help</em> the different options such as the cross-build for Android, the number of processors to use, the version of Qt, the path to SolAR root folder, etc.</p>
+</div>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-caution" title="Caution"></i>
+</td>
+<td class="content">
+<em>build_all.bat</em> will not build modules PopSift, FBOW and OpenCV with CUDA optimization. To do it, launch <em>build_allModulesCuda.bat</em>.
+</td>
+</tr>
+</table>
 </div>
 </div>
 <div class="sect2">
@@ -1004,7 +1075,15 @@ Since QT Creator 4.14.0, we highly recommand to set the project option <code>qma
 </thead>
 <tbody>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SolARCore</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No dependency</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">SolARAllModules</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SolARCore</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SolARAllModulesCuda</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">SolARCore</p></td>
 </tr>
 <tr>
@@ -1024,8 +1103,12 @@ Since QT Creator 4.14.0, we highly recommand to set the project option <code>qma
 <td class="tableblock halign-left valign-top"><p class="tableblock">SolARAllModules</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">SolARCore</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">No dependency</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SolARAllServices</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SolARAllPipelines</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SolARAllServicesTests</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SolARAllServices</p></td>
 </tr>
 </tbody>
 </table>

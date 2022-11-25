@@ -559,8 +559,30 @@ window.cookieconsent.initialise({
 	
 
 		<li >
-			<a href="/documentation/architecture/">
-				Architecture
+			<a href="/documentation/framework_architecture">
+				Framework architecture
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/documentation/cloud_architecture">
+				Cloud platform
+				
+			</a>
+		</li>
+	
+
+	
+	
+
+		<li >
+			<a href="/documentation/arcloud_services">
+				ARCloud services
 				
 			</a>
 		</li>
@@ -614,24 +636,26 @@ window.cookieconsent.initialise({
 <div class="paragraph">
 <p>To create your package, you have to create the following folder structure:</p>
 </div>
-<div class="paragraph">
-<p>-DependencyName<br>
---DependencyVersion (X.X.X)<br>
----interfaces<br>
-----<em>here your header files</em><br>
----lib<br>
-----architecture (x86_64, arm64, &#8230;&#8203;)<br>
------mode (shared or static)<br>
-------release<br>
--------<em>your libraries here in release mode</em><br>
-------debug<br>
--------<em>your libraries here in debug mode</em><br>
----bcom-DependencyName.pc<br>
----packageDependencies.txt (if your Dependency requires third-parties)<br>
----DependencyName_remakeninfo.txt<br></p>
+<div class="listingblock">
+<div class="content">
+<pre>DependencyName
+|- DependencyVersion (X.X.X)
+|-- interfaces
+|--- [here your header files]
+|-- lib
+|--- architecture (x86_64, arm64, ...)
+|---- mode (shared or static)
+|----- release
+|------ [your libraries here in release mode]
+|----- debug
+|------ [your libraries here in debug mode]
+|-- remaken-DependencyName.pc
+|-- packagedependencies.txt (if your Dependency requires third-parties)
+|-- DependencyName-DependencyVersion_remakeninfo.txt</pre>
+</div>
 </div>
 <div class="sect3">
-<h4 id="bcom_dependencyname_pc"><a class="anchor" href="#bcom_dependencyname_pc"></a><a class="link" href="#bcom_dependencyname_pc">bcom-DependencyName.pc</a></h4>
+<h4 id="remaken_dependencyname_pc"><a class="anchor" href="#remaken_dependencyname_pc"></a><a class="link" href="#remaken_dependencyname_pc">remaken-DependencyName.pc</a></h4>
 <div class="paragraph">
 <p>This file is used by pkg-config to provide the necessary details for compilng and linking a program to a library.</p>
 </div>
@@ -639,17 +663,16 @@ window.cookieconsent.initialise({
 <p>If this file is not already provided with your third party, you will have to create it:</p>
 </div>
 <div class="listingblock">
-<div class="title">bcom-DependencyName.pc</div>
+<div class="title">remaken-DependencyName.pc</div>
 <div class="content">
 <pre class="CodeRay highlight"><code>libname=DependencyName
 prefix=/usr/local
 exec_prefix=${prefix}
-includedir=${prefix}/include
 libdir=${exec_prefix}/lib
-
+includedir=${prefix}/interfaces
 Name: DependencyName
 Description: The DependencyName library
-Version: 1.0.0
+Version: DependencyVersion
 Requires:
 Libs: -L${libdir} -l${libname}
 Libs.private: ${libdir}/${pfx}${libname}.${lext}
@@ -661,23 +684,22 @@ Cflags: -I${includedir}</code></pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="packagedependencies_txt"><a class="anchor" href="#packagedependencies_txt"></a><a class="link" href="#packagedependencies_txt">packageDependencies.txt</a></h4>
+<h4 id="packagedependencies_txt"><a class="anchor" href="#packagedependencies_txt"></a><a class="link" href="#packagedependencies_txt">packagedependencies.txt</a></h4>
 <div class="paragraph">
-<p>Remaken and the SolAR build pipeline support the recursive dependency download, link, and installation. But in order to do so, your package must precise its own dependencies in the <em>packageDependencies.txt</em>.
+<p>Remaken and the SolAR build pipeline support the recursive dependency download, link, and installation. But in order to do so, your package must precise its own dependencies in the <em>packagedependencies.txt</em>.
 To know how to add a sub-dependency to your dependency, take a look to the <a href="https://github.com/b-com-software-basis/remaken">Remaken documentation</a> on github, or check the numerous samples of <em>packagedependencies.txt</em> available in the SolAR framework.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="dependencyname_remakeninfo_txt"><a class="anchor" href="#dependencyname_remakeninfo_txt"></a><a class="link" href="#dependencyname_remakeninfo_txt">DependencyName_remakeninfo.txt</a></h4>
+<h4 id="dependencyname_dependencyversion_remakeninfo_txt"><a class="anchor" href="#dependencyname_dependencyversion_remakeninfo_txt"></a><a class="link" href="#dependencyname_dependencyversion_remakeninfo_txt">DependencyName-DependencyVersion_remakeninfo.txt</a></h4>
 <div class="paragraph">
 <p>This file is specific to remaken, and define the platform, the C++ version and the runtime version used to build your dependency. This file is similar to the <em>conaninfo.txt</em> used by conan.</p>
 </div>
 <div class="listingblock">
-<div class="title">DependencyName_remakeninfo.txt</div>
+<div class="title">DependencyName-DependencyVersion_remakeninfo.txt</div>
 <div class="content">
 <pre>platform=win-cl-14.1
-cppstd=17
-runtime=dynamicCRT</pre>
+cppstd=17</pre>
 </div>
 </div>
 </div>
@@ -734,7 +756,7 @@ On GitHub, when a new release or a new dependency is published, we respect for e
 <div class="sect2">
 <h3 id="conan"><a class="anchor" href="#conan"></a><a class="link" href="#conan">Conan</a></h3>
 <div class="paragraph">
-<p>Third party packaging can quickly become tedious, especially when source package managers, such as Conan, already provide you a solution to download ready-to-use packages for a large range of popular third parties hosted on public repositories (<a href="https://center.conan.io">Conan center</a>).</p>
+<p>Third party packaging can quickly become tedious, especially when source package managers, such as Conan, already provide you a solution to download ready-to-use packages for a large range of popular third parties hosted on public repositories (<a href="https://conan.io/center/">Conan center</a>).</p>
 </div>
 <div class="paragraph">
 <p>To add your Conan package to your solution using Remaken, you can take a look at the <a href="https://github.com/b-com-software-basis/remaken">Remaken documentation</a>.</p>
