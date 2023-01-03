@@ -664,7 +664,7 @@ window.cookieconsent.initialise({
   },
   &quot;insecure-registries&quot;: [
     ...
-    &quot;solar-docker-local.artifact.b-com.com&quot;
+    &quot;repository.solarframework.org&quot;
   ],
   &quot;registry-mirrors&quot;: []
 }</code></pre>
@@ -683,7 +683,7 @@ window.cookieconsent.initialise({
 </td>
 <td class="content">
 check the available versions of the ARCloud Services on our public repository to be able to pull their images to your local Docker engine:<br>
-<a href="https://artifact.b-com.com/webapp/#/artifacts/browse/tree/General/solar-docker-local" class="bare">https://artifact.b-com.com/webapp/#/artifacts/browse/tree/General/solar-docker-local</a>
+<a href="https://repository.solarframework.org/generic/solar-services-delivery/Docker_images_index.txt" class="bare">https://repository.solarframework.org/generic/solar-services-delivery/Docker_images_index.txt</a>
 </td>
 </tr>
 </table>
@@ -696,11 +696,11 @@ check the available versions of the ARCloud Services on our public repository to
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="cmd">docker pull solar-docker-local.artifact.b-com.com/mapupdate/0.11.0/mapupdate-service:w.x.y.z
-docker pull solar-docker-local.artifact.b-com.com/relocalization/0.11.0/relocalization-service:w.x.y.z
-docker pull solar-docker-local.artifact.b-com.com/relocalization/0.11.0/relocalization-markers-service:w.x.y.z
-docker pull solar-docker-local.artifact.b-com.com/mapping/0.11.0/mapping-multi-service:w.x.y.z
-docker pull solar-docker-local.artifact.b-com.com/relocalization/0.11.0/mappingandrelocalizationfrontend-service:w.x.y.z</code></pre>
+<pre class="CodeRay highlight"><code data-lang="cmd">docker pull repository.solarframework.org/docker/mapupdate/1.0.0/mapupdate-service:w.x.y.z
+docker pull repository.solarframework.org/docker/relocalization/1.0.0/relocalization-service:w.x.y.z
+docker pull repository.solarframework.org/docker/relocalization/1.0.0/relocalization-markers-service:w.x.y.z
+docker pull repository.solarframework.org/docker/mapping/1.0.0/mapping-multi-service:w.x.y.z
+docker pull repository.solarframework.org/docker/relocalization/1.0.0/mappingandrelocalizationfrontend-service:w.x.y.z</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -708,9 +708,9 @@ docker pull solar-docker-local.artifact.b-com.com/relocalization/0.11.0/mappinga
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="cmd">docker pull solar-docker-local.artifact.b-com.com/mapupdate/0.11.0/mapupdate-cuda-service:w.x.y.z
-docker pull solar-docker-local.artifact.b-com.com/relocalization/0.11.0/relocalization-cuda-service:w.x.y.z
-docker pull solar-docker-local.artifact.b-com.com/mapping/0.11.0/mapping-multi-cuda-service:w.x.y.z</code></pre>
+<pre class="CodeRay highlight"><code data-lang="cmd">docker pull repository.solarframework.org/docker/mapupdate/1.0.0/mapupdate-cuda-service:w.x.y.z
+docker pull repository.solarframework.org/docker/relocalization/1.0.0/relocalization-cuda-service:w.x.y.z
+docker pull repository.solarframework.org/docker/mapping/1.0.0/mapping-multi-cuda-service:w.x.y.z</code></pre>
 </div>
 </div>
 </div>
@@ -726,7 +726,7 @@ docker pull solar-docker-local.artifact.b-com.com/mapping/0.11.0/mapping-multi-c
 </td>
 <td class="content">
 check the available versions of the ARCloud test clients on our public repository to be able to pull their images to your local Docker engine:<br>
-<a href="https://artifact.b-com.com/webapp/#/artifacts/browse/tree/General/solar-docker-local/tests/" class="bare">https://artifact.b-com.com/webapp/#/artifacts/browse/tree/General/solar-docker-local/tests/</a>
+<a href="https://repository.solarframework.org/generic/solar-services-delivery/Docker_images_index.txt" class="bare">https://repository.solarframework.org/generic/solar-services-delivery/Docker_images_index.txt</a>
 </td>
 </tr>
 </table>
@@ -736,12 +736,12 @@ check the available versions of the ARCloud test clients on our public repositor
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="cmd">docker pull solar-docker-local.artifact.b-com.com/tests/0.11.0/map-update-client:w.x.y.z
-docker pull solar-docker-local.artifact.b-com.com/tests/0.11.0/map-update-displaymap-client:w.x.y.z
-docker pull solar-docker-local.artifact.b-com.com/tests/0.11.0/mapping-multi-producer:w.x.y.z
-docker pull solar-docker-local.artifact.b-com.com/tests/0.11.0/mapping-multi-viewer:w.x.y.z
-docker pull solar-docker-local.artifact.b-com.com/tests/0.11.0/mappingandrelocalizationfrontend-client:w.x.y.z
-docker pull solar-docker-local.artifact.b-com.com/tests/0.11.0/mappingandrelocalizationfrontend-relocviewer:w.x.y.z</code></pre>
+<pre class="CodeRay highlight"><code data-lang="cmd">docker pull repository.solarframework.org/docker/tests/1.0.0/map-update-client:w.x.y.z
+docker pull repository.solarframework.org/docker/tests/1.0.0/map-update-displaymap-client:w.x.y.z
+docker pull repository.solarframework.org/docker/tests/1.0.0/mapping-multi-producer:w.x.y.z
+docker pull repository.solarframework.org/docker/tests/1.0.0/mapping-multi-viewer:w.x.y.z
+docker pull repository.solarframework.org/docker/tests/1.0.0/mappingandrelocalizationfrontend-client:w.x.y.z
+docker pull repository.solarframework.org/docker/tests/1.0.0/mappingandrelocalizationfrontend-relocviewer:w.x.y.z</code></pre>
 </div>
 </div>
 </div>
@@ -753,7 +753,7 @@ docker pull solar-docker-local.artifact.b-com.com/tests/0.11.0/mappingandrelocal
 <p>Those scripts are available on our public repository, for Windows (".bat" files) and for Linux (".sh" files):</p>
 </div>
 <div class="paragraph">
-<p><a href="https://artifact.b-com.com/webapp/#/artifacts/browse/tree/General/solar-generic-local/solar-service-scripts/services" class="bare">https://artifact.b-com.com/webapp/#/artifacts/browse/tree/General/solar-generic-local/solar-service-scripts/services</a></p>
+<p><a href="https://repository.solarframework.org/generic/solar-services-delivery/Scripts_index.txt" class="bare">https://repository.solarframework.org/generic/solar-services-delivery/Scripts_index.txt</a></p>
 </div>
 <div class="admonitionblock warning">
 <table>
@@ -776,7 +776,7 @@ docker pull solar-docker-local.artifact.b-com.com/tests/0.11.0/mappingandrelocal
 <p>Those scripts are available on our public repository, for Windows (".bat" files) and for Linux (".sh" files):</p>
 </div>
 <div class="paragraph">
-<p><a href="https://artifact.b-com.com/webapp/#/artifacts/browse/tree/General/solar-generic-local/solar-service-scripts/clients" class="bare">https://artifact.b-com.com/webapp/#/artifacts/browse/tree/General/solar-generic-local/solar-service-scripts/clients</a></p>
+<p><a href="https://repository.solarframework.org/generic/solar-services-delivery/Scripts_index.txt" class="bare">https://repository.solarframework.org/generic/solar-services-delivery/Scripts_index.txt</a></p>
 </div>
 <div class="admonitionblock warning">
 <table>
