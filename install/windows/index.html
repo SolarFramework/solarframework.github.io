@@ -645,7 +645,7 @@ As you will see later, the SolAR framework is based on <em>QMake</em> originally
 <div class="sect3">
 <h4 id="visual_studio"><a class="anchor" href="#visual_studio"></a><a class="link" href="#visual_studio">Visual Studio</a></h4>
 <div class="paragraph">
-<p>You will have to install Visual Studio to get the corresponding compiler and debugger on your machine. The community version 2017 has been tested and is available on the following link: <a href="https://my.visualstudio.com/Downloads?q=visual%20studio%202017&amp;wt.mc_id=o~msft~vscom~older-downloads">Visual Studio installer</a></p>
+<p>You will have to install Visual Studio to get the corresponding compiler and debugger on your machine. If you will use Visual Studio only to carry out academic research, or to contribute to open source projects, you can download the community version 2017 which has been tested and is available on the following link: <a href="https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Community&amp;rel=15">Visual Studio installer</a></p>
 </div>
 <div class="paragraph">
 <p>We recommend to install at least the following features:</p>
@@ -657,9 +657,6 @@ As you will see later, the SolAR framework is based on <em>QMake</em> originally
 </li>
 <li>
 <p>Game development with Unity (useful to develop and debug Unity applications)</p>
-</li>
-<li>
-<p>Mobile development in C++ (to build for Android)</p>
 </li>
 </ul>
 </div>
@@ -676,7 +673,9 @@ As you will see later, the SolAR framework is based on <em>QMake</em> originally
 <p><a href="https://www.qt.io/download">Qt installer download</a></p>
 </div>
 <div class="paragraph">
-<p>Create a <em>Qt</em> account if not already done, select where you want to install <em>Qt</em>. You don&#8217;t need to install <em>Qt</em> SDK, just the <em>Qt Creator</em>. So just check the following components (if not available during installation, search for <code>QT maintenance tool</code> or <code>QT uninstall</code> after installation to launch the QT tools to upgrade it):</p>
+<p>Create a <em>Qt</em> account if not already done, select where you want to install <em>Qt</em>.
+Then, when the list of all components to install is displayed, check the box <code>Archive</code> to display old versions of Qt supporting MSVC 2017.
+You don&#8217;t need to install <em>Qt</em> SDK, just the <em>Qt Creator</em>. So just check the following components (if not available during installation, search for <code>QT maintenance tool</code> or <code>QT uninstall</code> after installation to launch the QT tools to upgrade it):</p>
 </div>
 <div class="ulist">
 <ul>
@@ -698,7 +697,7 @@ As you will see later, the SolAR framework is based on <em>QMake</em> originally
 <div class="ulist">
 <ul>
 <li>
-<p>Qt</p>
+<p>Qt 5.14.2</p>
 <div class="ulist">
 <ul>
 <li>
@@ -722,6 +721,9 @@ As you will see later, the SolAR framework is based on <em>QMake</em> originally
 </li>
 <li>
 <p>CMake 64-bit</p>
+</li>
+<li>
+<p>Ninja</p>
 </li>
 </ul>
 </div>
@@ -807,7 +809,36 @@ conancenter: https://center.conan.io [Verify SSL: True]</pre>
 <div class="sect3">
 <h4 id="set_conan_profile"><a class="anchor" href="#set_conan_profile"></a><a class="link" href="#set_conan_profile">Set conan profile</a></h4>
 <div class="paragraph">
-<p>As we are using conan to download dependencies, you need to configure your default conan profile. To do so, open the default file available in your <code>C:/Users/%Username%/.conan/profiles</code>, and replace the configuration by the following one before saving it:</p>
+<p>As we are using conan to download dependencies, you need to configure your default conan profile. To do so, create a new default profile with the following command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>conan profile new default --detect</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Do not take care about the warning !<br>
+Then, update your default conan profile with the following commands:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>conan profile update settings.compiler.libcxx=libstdc++11 default
+conan profile update settings.compiler.cppstd=17 default
+conan profile update settings.compiler.version=15 default
+conan profile update settings.ceres-solver:build_type=Release default
+conan profile update settings.ceres-solver:compiler.runtime=MD default</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Check that your default conan profile is well set by running:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>conan profile show default</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>It should look like the following one:</p>
 </div>
 <div class="listingblock">
 <div class="content">
